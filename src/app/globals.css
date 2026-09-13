@@ -76,3 +76,87 @@
 .brand svg{display:block;width:100%;max-width:172px;height:auto}
 .footer .brand svg{max-width:190px}
 @media(max-width:800px){.brand svg{max-width:132px}.footer .brand svg{max-width:150px}}
+
+/* ——— Aire: la jerarquía la resuelven espacio, tamaño y peso; las líneas quedan sólo donde ordenan datos ——— */
+:root{--rule:rgba(16,18,19,.09);--rule-inverse:rgba(255,255,255,.1)}
+/* Cabecera */
+.masthead{border-bottom:1px solid var(--rule)}
+.brand,.clock{border-right:0}
+.site-nav{border-top:0;gap:4px}
+.site-nav a{border-right:0;padding:10px 14px 12px;color:var(--muted);box-shadow:inset 0 -3px 0 transparent}
+.site-nav a:hover{color:var(--ink)}
+.site-nav a.active{background:transparent;color:var(--ink);box-shadow:inset 0 -3px 0 var(--blue)}
+.menu-toggle{border-left:0}
+/* Bloques y títulos de sección */
+.weekend-head,.event-hero,.season-ribbon,.system-head,.system-section{border-bottom:0}
+.section-title,.section-title.inverse{border-bottom:0;padding-bottom:0;margin-bottom:28px}
+.empty-state{border-top:0}
+.footer{border-top:1px solid var(--rule)}
+/* Etiquetas de estado: fondo suave; sólo el vivo lleva marca de color */
+.state{border-left:0;border-radius:2px;padding:3px 8px;justify-self:start;width:fit-content}
+.state.live{border-left:4px solid var(--red)}
+/* Los nuestros */
+.arg-runners{border-top:0;gap:0 48px;margin-top:28px}
+.runner-feature{border:0;padding:0 0 8px}
+.runner-feature>.state{align-self:start}
+.runner-line{border-bottom:0;padding:0 0 22px}
+.runner-line+.runner-line{padding-top:22px;border-top:1px solid var(--rule)}
+/* Agenda */
+.filters{gap:4px}
+.filters button,.filters a:last-child button,.filters button:last-child{border:0;border-radius:2px;background:rgba(16,18,19,.05)}
+.day-tabs{border-bottom:0;gap:8px}
+.day-tabs button{border-right:0;border-radius:2px;background:rgba(16,18,19,.04)}
+.schedule-row{border-bottom:1px solid var(--rule)}
+.schedule-row:last-child{border-bottom:0}
+/* Resultados (fondo tinta) */
+.result-layout{border-bottom:0;gap:0 32px}
+.podium,.podium.compact,.arg-highlight{border-right:0}
+.podium-head{border-bottom:0;padding:0 0 16px}
+.podium li{border-bottom:1px solid var(--rule-inverse);padding:14px 0}
+.result-notes a{border-bottom:1px solid var(--rule-inverse);padding:0 0 20px;margin-bottom:20px}
+.result-notes a:last-child{border-bottom:0}
+.session-result,.full-results{border:0}
+.session-result .podium li,.full-results li{padding:14px 20px}
+.ranking{border-top:0}
+.rank-row{border-bottom:1px solid var(--rule-inverse)}
+/* Lo que viene y cintas */
+.date-strip{border-top:0;gap:32px;margin-top:24px}
+.date-strip article{border-right:0;padding:0}
+.race-strip{border-top:0;gap:8px}
+.race-strip article{border-right:0;background:#fff}
+.season-ribbon>div,.season-ribbon>div:first-child{border:0}
+/* Evento */
+.event-id{border-right:0}
+.event-days h3{border-top:1px solid var(--rule)}
+.session{border-top:1px solid var(--rule)}
+.weather{border-top:0}
+.broadcast>div{border-top:1px solid rgba(16,18,19,.15)}
+/* Pilotos, categorías e historias */
+.duel,.gains{border-top:0}
+.driver-editorial aside a,.calendar-tape li{border-top:1px solid var(--rule)}
+.timeline article{border-left:1px solid var(--rule)}
+.champ-row{border-bottom:1px solid var(--rule)}
+.champ-row.leader{border-top:0}
+.record-grid article{border-right:0}
+.champion-years{border-top:0;gap:1px 24px}
+.champion-years article{border:0;border-bottom:1px solid var(--rule);padding:16px 0}
+.chapter-nav{border-bottom:1px solid var(--rule)}
+.chapter-nav a{border-right:0}
+.story-stats{border-top:0;border-bottom:0}
+.story-stats div{border-right:0}
+.pull-data{border-top:0}
+.pull-data span,.pull-data b{border-bottom:1px solid var(--rule)}
+.race-recap{border-top:0}
+.race-recap div{border-right:0}
+@media(max-width:800px){
+  .site-nav{gap:0}
+  .site-nav a{border-top:0;box-shadow:none;padding:14px 16px}
+  .site-nav a.active{box-shadow:inset 4px 0 0 var(--blue)}
+  .live-main,.timing-mini{border-bottom:1px solid var(--rule)}
+  .arg-runners{gap:0}
+  .runner-feature{padding-bottom:24px;margin-bottom:22px;border-bottom:1px solid var(--rule)}
+  .podium,.arg-highlight{border-bottom:0;margin-bottom:24px}
+  .date-strip{gap:20px}
+  .date-strip article{border-bottom:0}
+  .pole,.season-ribbon>div,.record-grid article,.race-recap div{border-bottom:0}
+}
