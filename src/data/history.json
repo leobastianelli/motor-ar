@@ -1,0 +1,3927 @@
+{
+  "generatedAt": "2026-09-13T18:14:54.165Z",
+  "series": {
+    "tc": {
+      "source": {
+        "label": "Wikipedia · Turismo Carretera",
+        "url": "https://es.wikipedia.org/wiki/Turismo_Carretera",
+        "license": "CC BY-SA 4.0"
+      },
+      "champions": [
+        {
+          "year": 1937,
+          "driver": "Eduardo Pedrazzini",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1938,
+          "driver": "Ricardo Risatti I",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1939,
+          "driver": "Ángel Lo Valvo",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1940,
+          "driver": "Juan Manuel Fangio",
+          "detail": "Chevrolet Master",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1941,
+          "driver": "Juan Manuel Fangio",
+          "detail": "Chevrolet Master",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1942,
+          "driver": "Desierto",
+          "detail": "Desierto",
+          "make": "Desierto"
+        },
+        {
+          "year": 1947,
+          "driver": "Oscar Alfredo Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1948,
+          "driver": "Oscar Alfredo Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1949,
+          "driver": "Juan Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1950,
+          "driver": "Juan Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1951,
+          "driver": "Juan Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1952,
+          "driver": "Juan Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1953,
+          "driver": "Oscar Alfredo Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1954,
+          "driver": "Oscar Alfredo Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1955,
+          "driver": "Juan Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1956,
+          "driver": "Juan Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1957,
+          "driver": "Juan Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1958,
+          "driver": "Juan Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1959,
+          "driver": "Rodolfo De Álzaga",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1960,
+          "driver": "Juan Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1961,
+          "driver": "Oscar Alfredo Gálvez",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1962,
+          "driver": "Dante Emiliozzi",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1963,
+          "driver": "Dante Emiliozzi",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1964,
+          "driver": "Dante Emiliozzi",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1965,
+          "driver": "Dante Emiliozzi",
+          "detail": "Ford V8",
+          "make": "Ford"
+        },
+        {
+          "year": 1966,
+          "driver": "Juan Manuel Bordeu",
+          "detail": "Chevrolet Master",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1967,
+          "driver": "Eduardo Copello",
+          "detail": "Liebre Mk II Torino",
+          "make": "Liebre"
+        },
+        {
+          "year": 1968,
+          "driver": "Carlos Pairetti",
+          "detail": "Fast-Chevrolet",
+          "make": "Fast-Chevrolet"
+        },
+        {
+          "year": 1969,
+          "driver": "Gastón Perkins",
+          "detail": "Liebre Mk III Torino",
+          "make": "Liebre"
+        },
+        {
+          "year": 1970,
+          "driver": "Luis Rubén Di Palma (Fórmula A)",
+          "detail": "Torino 380 W",
+          "make": "Torino"
+        },
+        {
+          "year": 1970,
+          "driver": "Eduardo Copello (Fórmula B)",
+          "detail": "Liebre Mk II Torino",
+          "make": "Liebre"
+        },
+        {
+          "year": 1971,
+          "driver": "Luis Rubén Di Palma",
+          "detail": "Torino 380 W",
+          "make": "Torino"
+        },
+        {
+          "year": 1972,
+          "driver": "Héctor Luis Gradassi",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1973,
+          "driver": "Nasif Estéfano",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1974,
+          "driver": "Héctor Luis Gradassi",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1975,
+          "driver": "Héctor Luis Gradassi",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1976,
+          "driver": "Héctor Luis Gradassi",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1977,
+          "driver": "Juan María Traverso",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1978,
+          "driver": "Juan María Traverso",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1981,
+          "driver": "Roberto Mouras",
+          "detail": "Dodge GTX",
+          "make": "Dodge"
+        },
+        {
+          "year": 1982,
+          "driver": "Jorge Martínez Boero",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1983,
+          "driver": "Roberto Mouras",
+          "detail": "Dodge GTX",
+          "make": "Dodge"
+        },
+        {
+          "year": 1984,
+          "driver": "Roberto Mouras",
+          "detail": "Dodge GTX",
+          "make": "Dodge"
+        },
+        {
+          "year": 1985,
+          "driver": "Roberto Mouras",
+          "detail": "Dodge GTX",
+          "make": "Dodge"
+        },
+        {
+          "year": 1986,
+          "driver": "Oscar Angeletti",
+          "detail": "Dodge GTX",
+          "make": "Dodge"
+        },
+        {
+          "year": 1987,
+          "driver": "Oscar Castellano",
+          "detail": "Dodge GTX",
+          "make": "Dodge"
+        },
+        {
+          "year": 1988,
+          "driver": "Oscar Castellano",
+          "detail": "Dodge GTX",
+          "make": "Dodge"
+        },
+        {
+          "year": 1989,
+          "driver": "Oscar Castellano",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1990,
+          "driver": "Emilio Satriano",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1991,
+          "driver": "Oscar Aventín",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1992,
+          "driver": "Oscar Aventín",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1993,
+          "driver": "Walter Hernández",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1994,
+          "driver": "Eduardo Ramos",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 1995,
+          "driver": "Juan María Traverso",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1996,
+          "driver": "Juan María Traverso",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1997,
+          "driver": "Juan María Traverso",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1998,
+          "driver": "Guillermo Ortelli",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1999,
+          "driver": "Juan María Traverso",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 2000,
+          "driver": "Guillermo Ortelli",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2001,
+          "driver": "Guillermo Ortelli",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2002,
+          "driver": "Guillermo Ortelli",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2003,
+          "driver": "Ernesto Bessone II",
+          "detail": "Dodge Cherokee",
+          "make": "Dodge"
+        },
+        {
+          "year": 2004,
+          "driver": "Omar Martínez",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 2005,
+          "driver": "Juan Manuel Silva",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 2006,
+          "driver": "Norberto Fontana",
+          "detail": "Dodge Cherokee",
+          "make": "Dodge"
+        },
+        {
+          "year": 2007,
+          "driver": "Christian Ledesma",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2008,
+          "driver": "Guillermo Ortelli",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2009,
+          "driver": "Emanuel Moriatis",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 2010,
+          "driver": "Agustín Canapino",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2011,
+          "driver": "Guillermo Ortelli",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2012,
+          "driver": "Mauro Giallombardo",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 2013,
+          "driver": "Diego Aventín",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 2014,
+          "driver": "Matias Rossi",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2015,
+          "driver": "Omar Martínez",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 2016,
+          "driver": "Guillermo Ortelli",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2017,
+          "driver": "Agustín Canapino",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2018,
+          "driver": "Agustín Canapino",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2019,
+          "driver": "Agustín Canapino",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2020,
+          "driver": "Mariano Werner",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 2021,
+          "driver": "Mariano Werner",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 2022,
+          "driver": "José Manuel Urcera",
+          "detail": "Torino Cherokee",
+          "make": "Torino"
+        },
+        {
+          "year": 2023,
+          "driver": "Mariano Werner",
+          "detail": "Ford Falcon",
+          "make": "Ford"
+        },
+        {
+          "year": 2024,
+          "driver": "Julián Santero",
+          "detail": "Ford Mustang Mach I",
+          "make": "Ford"
+        },
+        {
+          "year": 2025,
+          "driver": "Agustín Canapino",
+          "detail": "Chevrolet Camaro ZL1",
+          "make": "Chevrolet"
+        }
+      ],
+      "winsLeaders": [
+        {
+          "driver": "Juan Gálvez",
+          "wins": 56
+        },
+        {
+          "driver": "Roberto Mouras",
+          "wins": 50
+        },
+        {
+          "driver": "Juan María Traverso",
+          "wins": 46
+        },
+        {
+          "driver": "Óscar Gálvez",
+          "wins": 43
+        },
+        {
+          "driver": "Dante Emiliozzi",
+          "wins": 42
+        }
+      ],
+      "firstYear": 1937,
+      "lastYear": 2025,
+      "seasons": 83,
+      "distinctChampions": 41,
+      "topChampions": [
+        {
+          "driver": "Juan Gálvez",
+          "titles": 9,
+          "years": [
+            1949,
+            1950,
+            1951,
+            1952,
+            1955,
+            1956,
+            1957,
+            1958,
+            1960
+          ]
+        },
+        {
+          "driver": "Guillermo Ortelli",
+          "titles": 7,
+          "years": [
+            1998,
+            2000,
+            2001,
+            2002,
+            2008,
+            2011,
+            2016
+          ]
+        },
+        {
+          "driver": "Juan María Traverso",
+          "titles": 6,
+          "years": [
+            1977,
+            1978,
+            1995,
+            1996,
+            1997,
+            1999
+          ]
+        },
+        {
+          "driver": "Oscar Alfredo Gálvez",
+          "titles": 5,
+          "years": [
+            1947,
+            1948,
+            1953,
+            1954,
+            1961
+          ]
+        },
+        {
+          "driver": "Agustín Canapino",
+          "titles": 5,
+          "years": [
+            2010,
+            2017,
+            2018,
+            2019,
+            2025
+          ]
+        },
+        {
+          "driver": "Dante Emiliozzi",
+          "titles": 4,
+          "years": [
+            1962,
+            1963,
+            1964,
+            1965
+          ]
+        }
+      ],
+      "makeLabel": "Marcas campeonas",
+      "topMakes": [
+        {
+          "name": "Ford",
+          "titles": 46
+        },
+        {
+          "name": "Chevrolet",
+          "titles": 21
+        },
+        {
+          "name": "Dodge",
+          "titles": 9
+        },
+        {
+          "name": "Liebre",
+          "titles": 3
+        },
+        {
+          "name": "Torino",
+          "titles": 3
+        },
+        {
+          "name": "Desierto",
+          "titles": 1
+        }
+      ]
+    },
+    "tc2000": {
+      "source": {
+        "label": "Wikipedia · Turismo Competición 2000",
+        "url": "https://es.wikipedia.org/wiki/Turismo_Competición_2000",
+        "license": "CC BY-SA 4.0"
+      },
+      "champions": [
+        {
+          "year": 1979,
+          "driver": "Osvaldo Abel López",
+          "detail": "Peugeot 504 · Osvaldo Lopez Competición",
+          "make": "Peugeot"
+        },
+        {
+          "year": 1980,
+          "driver": "Jorge Omar del Río",
+          "detail": "Dodge 1500 1.8 · Pianetto Competición",
+          "make": "Dodge"
+        },
+        {
+          "year": 1981,
+          "driver": "Jorge Omar del Río",
+          "detail": "Dodge 1500 1.8 · Pianetto Competición",
+          "make": "Dodge"
+        },
+        {
+          "year": 1982,
+          "driver": "Jorge Omar del Río",
+          "detail": "Dodge 1500 1.8 · Pianetto Competición",
+          "make": "Dodge"
+        },
+        {
+          "year": 1983,
+          "driver": "Luis Rubén Di Palma",
+          "detail": "Volkswagen VW 1500 1.8 · Pianetto Competición",
+          "make": "Volkswagen"
+        },
+        {
+          "year": 1984,
+          "driver": "Mario Gayraud",
+          "detail": "Ford Taunus GT · Herceg Competición",
+          "make": "Ford"
+        },
+        {
+          "year": 1985,
+          "driver": "Rubén Daray",
+          "detail": "Ford Sierra XR4 · Akel Competición",
+          "make": "Ford"
+        },
+        {
+          "year": 1986,
+          "driver": "Juan María Traverso",
+          "detail": "Renault Fuego GTX · Berta Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 1987,
+          "driver": "Silvio Oltra",
+          "detail": "Renault Fuego GTX · Benavídez Competición",
+          "make": "Renault"
+        },
+        {
+          "year": 1988,
+          "driver": "Juan María Traverso",
+          "detail": "Renault Fuego GTX · Berta Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 1989,
+          "driver": "Miguel Ángel Guerra",
+          "detail": "Renault Fuego GTA · Berta Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 1990,
+          "driver": "Juan María Traverso",
+          "detail": "Renault Fuego GTA · Berta Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 1991,
+          "driver": "Juan María Traverso",
+          "detail": "Renault Fuego GTA · Berta Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 1992,
+          "driver": "Juan María Traverso",
+          "detail": "Renault Fuego GTA · Berta Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 1993,
+          "driver": "Juan María Traverso",
+          "detail": "Renault Fuego GTA · Berta Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 1994,
+          "driver": "Guillermo Maldonado",
+          "detail": "Volkswagen Gol 1.8 · VW YPF Motorsports",
+          "make": "Volkswagen"
+        },
+        {
+          "year": 1995,
+          "driver": "Juan María Traverso",
+          "detail": "Peugeot 405 · Peugeot Sport",
+          "make": "Peugeot"
+        },
+        {
+          "year": 1996,
+          "driver": "Ernesto Bessone II",
+          "detail": "Ford Escort Ghía · Esso Competición",
+          "make": "Ford"
+        },
+        {
+          "year": 1997,
+          "driver": "Henry Martin",
+          "detail": "Ford Escort LX Zetec · Ford YPF Berta Motorsport",
+          "make": "Ford"
+        },
+        {
+          "year": 1998,
+          "driver": "Omar Martínez",
+          "detail": "Honda Civic Coupé · Honda Team Pro Racing",
+          "make": "Honda"
+        },
+        {
+          "year": 1999,
+          "driver": "Juan Manuel Silva",
+          "detail": "Honda Civic · Honda Team Pro Racing",
+          "make": "Honda"
+        },
+        {
+          "year": 2000,
+          "driver": "Daniel Cingolani",
+          "detail": "Ford Escort LX Zetec · Ford YPF Berta Motorsport",
+          "make": "Ford"
+        },
+        {
+          "year": 2001,
+          "driver": "Gabriel Ponce de León",
+          "detail": "Ford Escort LX Zetec · Ford YPF Berta Motorsport",
+          "make": "Ford"
+        },
+        {
+          "year": 2002,
+          "driver": "Norberto Fontana",
+          "detail": "Toyota Corolla · Toyota Team Argentina",
+          "make": "Toyota"
+        },
+        {
+          "year": 2003,
+          "driver": "Gabriel Ponce de León",
+          "detail": "Ford Focus I · Ford YPF Berta Motorsport",
+          "make": "Ford"
+        },
+        {
+          "year": 2004,
+          "driver": "Christian Ledesma",
+          "detail": "Chevrolet Astra · Chevrolet Pro Racing",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2005,
+          "driver": "Gabriel Ponce de León",
+          "detail": "Ford Focus I · Ford YPF Berta Motorsport",
+          "make": "Ford"
+        },
+        {
+          "year": 2006,
+          "driver": "Matías Rossi",
+          "detail": "Chevrolet Astra · Chevrolet Elaion Pro Racing",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2007,
+          "driver": "Matías Rossi",
+          "detail": "Chevrolet Astra · Chevrolet Elaion Pro Racing",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2008,
+          "driver": "José María López",
+          "detail": "Honda New Civic · Honda Racing Petrobras",
+          "make": "Honda"
+        },
+        {
+          "year": 2009,
+          "driver": "José María López",
+          "detail": "Honda New Civic · Honda Racing Petrobras",
+          "make": "Honda"
+        },
+        {
+          "year": 2010,
+          "driver": "Norberto Fontana",
+          "detail": "Ford Focus II · YPF Ford",
+          "make": "Ford"
+        },
+        {
+          "year": 2011,
+          "driver": "Matías Rossi",
+          "detail": "Toyota Corolla · Toyota Team Argentina",
+          "make": "Toyota"
+        },
+        {
+          "year": 2022,
+          "driver": "Leonel Pernía",
+          "detail": "Renault Fluence GT · Axion Energy Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 2023,
+          "driver": "Leonel Pernía",
+          "detail": "Renault Fluence GT · Axion Energy Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 2024,
+          "driver": "Leonel Pernía",
+          "detail": "Renault Fluence GT · Axion Energy Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 2025,
+          "driver": "Matías Rossi",
+          "detail": "Toyota Corolla Cross GR-S · Toyota Gazoo Racing YPF Infinia",
+          "make": "Toyota"
+        }
+      ],
+      "firstYear": 1979,
+      "lastYear": 2025,
+      "seasons": 37,
+      "distinctChampions": 20,
+      "topChampions": [
+        {
+          "driver": "Juan María Traverso",
+          "titles": 7,
+          "years": [
+            1986,
+            1988,
+            1990,
+            1991,
+            1992,
+            1993,
+            1995
+          ]
+        },
+        {
+          "driver": "Matías Rossi",
+          "titles": 4,
+          "years": [
+            2006,
+            2007,
+            2011,
+            2025
+          ]
+        },
+        {
+          "driver": "Jorge Omar del Río",
+          "titles": 3,
+          "years": [
+            1980,
+            1981,
+            1982
+          ]
+        },
+        {
+          "driver": "Gabriel Ponce de León",
+          "titles": 3,
+          "years": [
+            2001,
+            2003,
+            2005
+          ]
+        },
+        {
+          "driver": "Leonel Pernía",
+          "titles": 3,
+          "years": [
+            2022,
+            2023,
+            2024
+          ]
+        },
+        {
+          "driver": "Norberto Fontana",
+          "titles": 2,
+          "years": [
+            2002,
+            2010
+          ]
+        }
+      ],
+      "makeLabel": "Marcas campeonas",
+      "topMakes": [
+        {
+          "name": "Renault",
+          "titles": 11
+        },
+        {
+          "name": "Ford",
+          "titles": 9
+        },
+        {
+          "name": "Honda",
+          "titles": 4
+        },
+        {
+          "name": "Dodge",
+          "titles": 3
+        },
+        {
+          "name": "Toyota",
+          "titles": 3
+        },
+        {
+          "name": "Chevrolet",
+          "titles": 3
+        }
+      ]
+    },
+    "tn": {
+      "source": {
+        "label": "Wikipedia · Turismo Nacional",
+        "url": "https://es.wikipedia.org/wiki/Turismo_Nacional",
+        "license": "CC BY-SA 4.0"
+      },
+      "champions": [
+        {
+          "year": 1961,
+          "driver": "Heriberto Bohnen",
+          "detail": "Clase A · NSU Prinz",
+          "make": "NSU",
+          "group": "Clase A"
+        },
+        {
+          "year": 1961,
+          "driver": "Vicente Formisano",
+          "detail": "Clase B · Auto Union 1000",
+          "make": "Auto",
+          "group": "Clase B"
+        },
+        {
+          "year": 1962,
+          "driver": "Remigio Caldara",
+          "detail": "Clase A · Isard 700",
+          "make": "Isard",
+          "group": "Clase A"
+        },
+        {
+          "year": 1962,
+          "driver": "Gonzalo Gainza Paz",
+          "detail": "Clase B · Auto Union 1000",
+          "make": "Auto",
+          "group": "Clase B"
+        },
+        {
+          "year": 1962,
+          "driver": "José Migliore",
+          "detail": "Clase C · Peugeot 403",
+          "make": "Peugeot",
+          "group": "Clase C"
+        },
+        {
+          "year": 1963,
+          "driver": "Domingo López Oribe",
+          "detail": "Clase A · NSU Prinz",
+          "make": "NSU",
+          "group": "Clase A"
+        },
+        {
+          "year": 1963,
+          "driver": "Gastón Perkins",
+          "detail": "Clase B · Renault Gordini",
+          "make": "Renault",
+          "group": "Clase B"
+        },
+        {
+          "year": 1963,
+          "driver": "Ernesto Santamarina",
+          "detail": "Clase C · Peugeot 404",
+          "make": "Peugeot",
+          "group": "Clase C"
+        },
+        {
+          "year": 1964,
+          "driver": "José Calduch",
+          "detail": "Clase A · De Carlo 700",
+          "make": "De",
+          "group": "Clase A"
+        },
+        {
+          "year": 1964,
+          "driver": "Gastón Perkins",
+          "detail": "Clase B · Renault Gordini",
+          "make": "Renault",
+          "group": "Clase B"
+        },
+        {
+          "year": 1964,
+          "driver": "Eduardo Rodríguez Canedo",
+          "detail": "Clase C · Fiat 1500",
+          "make": "Fiat",
+          "group": "Clase C"
+        },
+        {
+          "year": 1965,
+          "driver": "Rogelio Scaramella",
+          "detail": "Clase A · De Carlo 700",
+          "make": "De",
+          "group": "Clase A"
+        },
+        {
+          "year": 1965,
+          "driver": "Gastón Perkins",
+          "detail": "Clase B · Renault Gordini",
+          "make": "Renault",
+          "group": "Clase B"
+        },
+        {
+          "year": 1965,
+          "driver": "Rosmualdo Visintini",
+          "detail": "Clase C · Auto Union 1000",
+          "make": "Auto",
+          "group": "Clase C"
+        },
+        {
+          "year": 1965,
+          "driver": "Nasif Estéfano",
+          "detail": "Clase D · Alfa Romeo Giulia",
+          "make": "Alfa",
+          "group": "Clase D"
+        },
+        {
+          "year": 1966,
+          "driver": "Rogelio Scaramella",
+          "detail": "Clase A · De Carlo 700",
+          "make": "De",
+          "group": "Clase A"
+        },
+        {
+          "year": 1966,
+          "driver": "Carlos Ruesch",
+          "detail": "Clase B · Renault Gordini",
+          "make": "Renault",
+          "group": "Clase B"
+        },
+        {
+          "year": 1966,
+          "driver": "Rosmualdo Visintini",
+          "detail": "Clase C · Auto Union 1000",
+          "make": "Auto",
+          "group": "Clase C"
+        },
+        {
+          "year": 1966,
+          "driver": "Carlos Reutemann",
+          "detail": "Clase D · Fiat 1500",
+          "make": "Fiat",
+          "group": "Clase D"
+        },
+        {
+          "year": 1967,
+          "driver": "Rogelio Scaramella",
+          "detail": "Clase A · De Carlo 700",
+          "make": "De",
+          "group": "Clase A"
+        },
+        {
+          "year": 1967,
+          "driver": "Danilo Bonamicci",
+          "detail": "Clase B · Renault Gordini",
+          "make": "Renault",
+          "group": "Clase B"
+        },
+        {
+          "year": 1967,
+          "driver": "Rosmualdo Visintini",
+          "detail": "Clase C · Auto Union 1000",
+          "make": "Auto",
+          "group": "Clase C"
+        },
+        {
+          "year": 1967,
+          "driver": "Carlos Reutemann",
+          "detail": "Clase D · Fiat 1500",
+          "make": "Fiat",
+          "group": "Clase D"
+        },
+        {
+          "year": 1967,
+          "driver": "Eduardo Rodríguez Canedo",
+          "detail": "Clase E · Torino 380 W",
+          "make": "Torino",
+          "group": "Clase E"
+        },
+        {
+          "year": 1968,
+          "driver": "Ángel Monguzzi",
+          "detail": "Clase B · Renault Gordini",
+          "make": "Renault",
+          "group": "Clase B"
+        },
+        {
+          "year": 1968,
+          "driver": "Rosmualdo Visintini",
+          "detail": "Clase C · Auto Union 1000",
+          "make": "Auto",
+          "group": "Clase C"
+        },
+        {
+          "year": 1968,
+          "driver": "Norberto Castañón",
+          "detail": "Clase D · Peugeot 404",
+          "make": "Peugeot",
+          "group": "Clase D"
+        },
+        {
+          "year": 1969,
+          "driver": "Emilio Parisi",
+          "detail": "Clase B · Renault Gordini",
+          "make": "Renault",
+          "group": "Clase B"
+        },
+        {
+          "year": 1969,
+          "driver": "Norberto Castañón",
+          "detail": "Clase C · Peugeot 404",
+          "make": "Peugeot",
+          "group": "Clase C"
+        },
+        {
+          "year": 1969,
+          "driver": "Alberto Rodríguez Larreta",
+          "detail": "Clase D · Torino 380 W",
+          "make": "Torino",
+          "group": "Clase D"
+        },
+        {
+          "year": 1970,
+          "driver": "Rosmualdo Visintini",
+          "detail": "Clase C · Auto Union 1000",
+          "make": "Auto",
+          "group": "Clase C"
+        },
+        {
+          "year": 1970,
+          "driver": "José Migliore",
+          "detail": "Clase D · Peugeot 504",
+          "make": "Peugeot",
+          "group": "Clase D"
+        },
+        {
+          "year": 1971,
+          "driver": "Eduardo Giordano",
+          "detail": "Clase B · Renault Gordini",
+          "make": "Renault",
+          "group": "Clase B"
+        },
+        {
+          "year": 1971,
+          "driver": "Danilo Bonamici",
+          "detail": "Clase C · Fiat 1600",
+          "make": "Fiat",
+          "group": "Clase C"
+        },
+        {
+          "year": 1971,
+          "driver": "José Migliore",
+          "detail": "Clase D · Peugeot 504",
+          "make": "Peugeot",
+          "group": "Clase D"
+        },
+        {
+          "year": 1972,
+          "driver": "Aldo Caldarella",
+          "detail": "Clase B · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase B"
+        },
+        {
+          "year": 1972,
+          "driver": "Francisco Mayorga",
+          "detail": "Clase C · Peugeot 504",
+          "make": "Peugeot",
+          "group": "Clase C"
+        },
+        {
+          "year": 1973,
+          "driver": "José Carlomagno",
+          "detail": "Clase B · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase B"
+        },
+        {
+          "year": 1973,
+          "driver": "Francisco Mayorga",
+          "detail": "Clase C · Peugeot 504",
+          "make": "Peugeot",
+          "group": "Clase C"
+        },
+        {
+          "year": 1974,
+          "driver": "Luis Macri",
+          "detail": "Clase B · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase B"
+        },
+        {
+          "year": 1974,
+          "driver": "Jorge Recalde",
+          "detail": "Clase C · Fiat 125",
+          "make": "Fiat",
+          "group": "Clase C"
+        },
+        {
+          "year": 1975,
+          "driver": "Juan Pablo Zampa",
+          "detail": "Clase B · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase B"
+        },
+        {
+          "year": 1975,
+          "driver": "Ricardo Zunino",
+          "detail": "Clase C · Fiat 125",
+          "make": "Fiat",
+          "group": "Clase C"
+        },
+        {
+          "year": 1976,
+          "driver": "Jorge Spinetto",
+          "detail": "Clase B · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase B"
+        },
+        {
+          "year": 1976,
+          "driver": "Ricardo Zunino",
+          "detail": "Clase C · Fiat 125",
+          "make": "Fiat",
+          "group": "Clase C"
+        },
+        {
+          "year": 1977,
+          "driver": "Jorge Spinetto",
+          "detail": "Clase B · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase B"
+        },
+        {
+          "year": 1977,
+          "driver": "Rubén Daray",
+          "detail": "Clase C · Fiat 125",
+          "make": "Fiat",
+          "group": "Clase C"
+        },
+        {
+          "year": 1978,
+          "driver": "Osvaldo Morresi",
+          "detail": "Clase B · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase B"
+        },
+        {
+          "year": 1978,
+          "driver": "Francisco Alcuaz",
+          "detail": "Clase C · Peugeot 504",
+          "make": "Peugeot",
+          "group": "Clase C"
+        },
+        {
+          "year": 1978,
+          "driver": "Gabriel Raies",
+          "detail": "Clase B · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase B"
+        },
+        {
+          "year": 1978,
+          "driver": "Carlos Garro",
+          "detail": "Clase C · Peugeot 504",
+          "make": "Peugeot",
+          "group": "Clase C"
+        },
+        {
+          "year": 1979,
+          "driver": "Julio Pardo",
+          "detail": "Clase B · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase B"
+        },
+        {
+          "year": 1979,
+          "driver": "Carlos Garro",
+          "detail": "Clase C · Peugeot 504",
+          "make": "Peugeot",
+          "group": "Clase C"
+        },
+        {
+          "year": 1980,
+          "driver": "Jorge Serafini",
+          "detail": "Clase B · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase B"
+        },
+        {
+          "year": 1980,
+          "driver": "Juan Carlos Rizzuto",
+          "detail": "Clase C · Fiat 125",
+          "make": "Fiat",
+          "group": "Clase C"
+        },
+        {
+          "year": 1981,
+          "driver": "Marcelo Raies",
+          "detail": "Clase A · Fiat 147",
+          "make": "Fiat",
+          "group": "Clase A"
+        },
+        {
+          "year": 1981,
+          "driver": "Jorge Bescham",
+          "detail": "Clase B · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase B"
+        },
+        {
+          "year": 1981,
+          "driver": "Gabriel Raies",
+          "detail": "Clase C · Fiat 125",
+          "make": "Fiat",
+          "group": "Clase C"
+        },
+        {
+          "year": 1981,
+          "driver": "Francisco Alcuaz",
+          "detail": "Clase D · Peugeot 504",
+          "make": "Peugeot",
+          "group": "Clase D"
+        },
+        {
+          "year": 1982,
+          "driver": "Julio Pardo-Gustavo Der Ohanessian",
+          "detail": "Clase 5 · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase 5"
+        },
+        {
+          "year": 1982,
+          "driver": "Jorge Bescham",
+          "detail": "Clase 6 · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase 6"
+        },
+        {
+          "year": 1982,
+          "driver": "Daniel Mustafá-Ángel Monguzzi",
+          "detail": "Clase 7 · Renault 18",
+          "make": "Renault",
+          "group": "Clase 7"
+        },
+        {
+          "year": 1982,
+          "driver": "Francisco Mayorga",
+          "detail": "Clase 8 · Datsun 280ZX",
+          "make": "Datsun",
+          "group": "Clase 8"
+        },
+        {
+          "year": 1982,
+          "driver": "Jorge Cecchetto-Elvio Borgioli",
+          "detail": "Clase 9 · Daihatsu Charade",
+          "make": "Daihatsu",
+          "group": "Clase 9"
+        },
+        {
+          "year": 1982,
+          "driver": "Alberto Baldinelli",
+          "detail": "Clase 10 · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase 10"
+        },
+        {
+          "year": 1982,
+          "driver": "Néstor Percaz",
+          "detail": "Clase 11 · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase 11"
+        },
+        {
+          "year": 1982,
+          "driver": "José Fortunato",
+          "detail": "Clase 12 · Peugeot 504",
+          "make": "Peugeot",
+          "group": "Clase 12"
+        },
+        {
+          "year": 1983,
+          "driver": "Carlos Rosati",
+          "detail": "Clase 1 · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase 1"
+        },
+        {
+          "year": 1983,
+          "driver": "Carlos Zabala",
+          "detail": "Clase 2 · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1983,
+          "driver": "Arnoldo Capra",
+          "detail": "Clase 3 · Peugeot 504",
+          "make": "Peugeot",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1984,
+          "driver": "Hugo Olmi",
+          "detail": "Clase 2 · Fiat 128",
+          "make": "Fiat",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1984,
+          "driver": "José Cano",
+          "detail": "Clase 3 · Renault 18",
+          "make": "Renault",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1985,
+          "driver": "Ernesto Bessone I",
+          "detail": "Clase 2 · Alfa Romeo Sprint",
+          "make": "Alfa",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1985,
+          "driver": "Eduardo García Gómez",
+          "detail": "Clase 3 · Renault 18",
+          "make": "Renault",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1986,
+          "driver": "Omar Darío Bonomo",
+          "detail": "Clase 2 · Volkswagen Gacel",
+          "make": "Volkswagen",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1986,
+          "driver": "Jorge Maggi",
+          "detail": "Clase 3 · Alfa Romeo GTV",
+          "make": "Alfa",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1986,
+          "driver": "Oscar Fineschi",
+          "detail": "Monomarca Sierra · Ford Sierra",
+          "make": "Ford",
+          "group": "Monomarca Sierra"
+        },
+        {
+          "year": 1987,
+          "driver": "Omar Darío Bonomo",
+          "detail": "Clase 2 · Volkswagen Gacel",
+          "make": "Volkswagen",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1987,
+          "driver": "Jorge Maggi",
+          "detail": "Clase 3 · Alfa Romeo GTV",
+          "make": "Alfa",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1987,
+          "driver": "Jorge Guiral",
+          "detail": "Monomarca Sierra · Ford Sierra",
+          "make": "Ford",
+          "group": "Monomarca Sierra"
+        },
+        {
+          "year": 1988,
+          "driver": "Ernesto Rodríguez",
+          "detail": "Clase 2 · Volkswagen Gacel",
+          "make": "Volkswagen",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1988,
+          "driver": "Fernando Adba",
+          "detail": "Clase 3 · Renault 18",
+          "make": "Renault",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1988,
+          "driver": "Oscar Fineschi",
+          "detail": "Monomarca Sierra · Ford Sierra",
+          "make": "Ford",
+          "group": "Monomarca Sierra"
+        },
+        {
+          "year": 1989,
+          "driver": "Rafael Verna",
+          "detail": "Clase 2 · Volkswagen Gacel",
+          "make": "Volkswagen",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1989,
+          "driver": "Ricardo Albertengo",
+          "detail": "Clase 3 · Renault 18",
+          "make": "Renault",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1989,
+          "driver": "Jorge Eidilstein",
+          "detail": "Monomarca Sierra · Ford Sierra",
+          "make": "Ford",
+          "group": "Monomarca Sierra"
+        },
+        {
+          "year": 1990,
+          "driver": "René Zanatta",
+          "detail": "Clase 2 · Volkswagen Gacel",
+          "make": "Volkswagen",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1990,
+          "driver": "Pablo Peón",
+          "detail": "Clase 3 · Renault 18",
+          "make": "Renault",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1990,
+          "driver": "Gerardo del Campo",
+          "detail": "Monomarca Sierra · Ford Sierra",
+          "make": "Ford",
+          "group": "Monomarca Sierra"
+        },
+        {
+          "year": 1991,
+          "driver": "René Zanatta",
+          "detail": "Clase 2 · Volkswagen Gacel",
+          "make": "Volkswagen",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1991,
+          "driver": "Pablo Peón",
+          "detail": "Clase 3 · Renault 18",
+          "make": "Renault",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1991,
+          "driver": "Gerardo del Campo",
+          "detail": "Monomarca Sierra · Ford Sierra",
+          "make": "Ford",
+          "group": "Monomarca Sierra"
+        },
+        {
+          "year": 1992,
+          "driver": "Rafael Verna",
+          "detail": "Clase 2 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1992,
+          "driver": "Omar Bonomo",
+          "detail": "Clase 3 · Volkswagen Carat",
+          "make": "Volkswagen",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1992,
+          "driver": "Pablo Rafú",
+          "detail": "Monomarca Sierra · Ford Sierra",
+          "make": "Ford",
+          "group": "Monomarca Sierra"
+        },
+        {
+          "year": 1993,
+          "driver": "Rafael Verna",
+          "detail": "Clase 2 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1993,
+          "driver": "Gerardo del Campo",
+          "detail": "Clase 3 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1993,
+          "driver": "Norberto della Santina",
+          "detail": "Clase 4 · Ford Sierra",
+          "make": "Ford",
+          "group": "Clase 4"
+        },
+        {
+          "year": 1994,
+          "driver": "Rafael Verna",
+          "detail": "Clase 2 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1994,
+          "driver": "Gerardo del Campo",
+          "detail": "Clase 3 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1994,
+          "driver": "Carlos Rossetti",
+          "detail": "Clase 4 · Ford Sierra",
+          "make": "Ford",
+          "group": "Clase 4"
+        },
+        {
+          "year": 1995,
+          "driver": "Carlos Míguez",
+          "detail": "Clase 2 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1995,
+          "driver": "Rafael Verna",
+          "detail": "Clase 3 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1995,
+          "driver": "Diego Ponte",
+          "detail": "Clase 4 · Ford Sierra",
+          "make": "Ford",
+          "group": "Clase 4"
+        },
+        {
+          "year": 1996,
+          "driver": "Hugo Lepphaille",
+          "detail": "Clase 2 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1996,
+          "driver": "Omar Suriani",
+          "detail": "Clase 3 · Renault 18",
+          "make": "Renault",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1997,
+          "driver": "Julio Catalán Magni",
+          "detail": "Clase 2 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1997,
+          "driver": "Norberto della Santina",
+          "detail": "Clase 3 · Volkswagen Gol",
+          "make": "Volkswagen",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1998,
+          "driver": "Claudio Bisceglia",
+          "detail": "Clase 2 · Volkswagen Gol",
+          "make": "Volkswagen",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1998,
+          "driver": "Omar Bonomo",
+          "detail": "Clase 3 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 3"
+        },
+        {
+          "year": 1999,
+          "driver": "Adrián Hang",
+          "detail": "Clase 2 · Volkswagen Gol",
+          "make": "Volkswagen",
+          "group": "Clase 2"
+        },
+        {
+          "year": 1999,
+          "driver": "Oscar Canela",
+          "detail": "Clase 3 · Volkswagen Polo",
+          "make": "Volkswagen",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2000,
+          "driver": "Nicolás Vuyovich",
+          "detail": "Clase 2 · Volkswagen Gol",
+          "make": "Volkswagen",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2000,
+          "driver": "Walter Tanoni",
+          "detail": "Clase 3 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2001,
+          "driver": "Javier Romera",
+          "detail": "Clase 2 · Volkswagen Gol",
+          "make": "Volkswagen",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2001,
+          "driver": "Lucas Armellini",
+          "detail": "Clase 3 · Honda Civic",
+          "make": "Honda",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2002,
+          "driver": "Néstor Percaz",
+          "detail": "Clase 2 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2002,
+          "driver": "Nicolás Vuyovich",
+          "detail": "Clase 3 · Honda Civic",
+          "make": "Honda",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2003,
+          "driver": "Néstor Percaz",
+          "detail": "Clase 2 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2003,
+          "driver": "Ernesto Bessone II",
+          "detail": "Clase 3 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2004,
+          "driver": "Juan Pedro Heguy",
+          "detail": "Clase 2 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2004,
+          "driver": "Pablo Redolfi",
+          "detail": "Clase 3 · Honda Civic",
+          "make": "Honda",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2005,
+          "driver": "Juan Pedro Heguy",
+          "detail": "Clase 2 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2005,
+          "driver": "Patricio Di Palma",
+          "detail": "Clase 3 · Ford Escort",
+          "make": "Ford",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2006,
+          "driver": "Iván Saturni",
+          "detail": "Clase 2 · Renault Clio",
+          "make": "Renault",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2006,
+          "driver": "Hugo Lepphaille",
+          "detail": "Clase 3 · Honda Civic",
+          "make": "Honda",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2007,
+          "driver": "Joaquin Volpi",
+          "detail": "Clase 2 · Ford Fiesta",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2007,
+          "driver": "Ezequiel Bosio",
+          "detail": "Clase 3 · Renault Clio",
+          "make": "Renault",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2008,
+          "driver": "Leandro Vallasciani",
+          "detail": "Clase 2 · Renault Clio",
+          "make": "Renault",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2008,
+          "driver": "Esteban Tuero",
+          "detail": "Clase 3 · Ford Focus",
+          "make": "Ford",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2009,
+          "driver": "Ivan Ciccarelli",
+          "detail": "Clase 2 · Renault Clio",
+          "make": "Renault",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2009,
+          "driver": "Marcelo Bugliotti",
+          "detail": "Clase 3 · Chevrolet Astra",
+          "make": "Chevrolet",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2010,
+          "driver": "Adrián Percaz",
+          "detail": "Clase 2 · Peugeot 206",
+          "make": "Peugeot",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2010,
+          "driver": "Carlos Okulovich",
+          "detail": "Clase 3 · Honda New Civic",
+          "make": "Honda",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2011,
+          "driver": "Bruno Bosio",
+          "detail": "Clase 2 · Chevrolet Corsa",
+          "make": "Chevrolet",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2011,
+          "driver": "Fabián Yannantuoni",
+          "detail": "Clase 3 · Peugeot 307",
+          "make": "Peugeot",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2012,
+          "driver": "Facundo Chapur",
+          "detail": "Clase 2 · Ford Fiesta",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2012,
+          "driver": "Emanuel Moriatis",
+          "detail": "Clase 3 · Ford Focus II",
+          "make": "Ford",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2013,
+          "driver": "Matias Machuca",
+          "detail": "Clase 2 · Renault Clio",
+          "make": "Renault",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2013,
+          "driver": "Facundo Chapur",
+          "detail": "Clase 3 · Peugeot 308",
+          "make": "Peugeot",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2014,
+          "driver": "Hanna Abdallah",
+          "detail": "Clase 2 · Renault Clio",
+          "make": "Renault",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2014,
+          "driver": "Matías Rossi",
+          "detail": "Clase 3 · Citroën C4",
+          "make": "Citroën",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2015,
+          "driver": "Adrián Percaz",
+          "detail": "Clase 2 · Peugeot 207 Compact",
+          "make": "Peugeot",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2015,
+          "driver": "Facundo Chapur",
+          "detail": "Clase 3 · Peugeot 308",
+          "make": "Peugeot",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2016,
+          "driver": "Alfonso Domenech",
+          "detail": "Clase 2 · Renault Clio",
+          "make": "Renault",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2016,
+          "driver": "Emanuel Moriatis",
+          "detail": "Clase 3 · Ford Focus",
+          "make": "Ford",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2017,
+          "driver": "Alejandro Bucci",
+          "detail": "Clase 2 · Ford Fiesta KD",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2017,
+          "driver": "Mariano Werner",
+          "detail": "Clase 3 · Fiat Linea",
+          "make": "Fiat",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2018,
+          "driver": "Nicolás Posco",
+          "detail": "Clase 2 · Ford Fiesta KD",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2018,
+          "driver": "Leonel Pernía",
+          "detail": "Clase 3 · Honda All New Civic",
+          "make": "Honda",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2019,
+          "driver": "Ever Franetovich",
+          "detail": "Clase 2 · Fiat Palio",
+          "make": "Fiat",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2019,
+          "driver": "José Manuel Urcera",
+          "detail": "Clase 3 · Honda All New Civic",
+          "make": "Honda",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2020,
+          "driver": "Nicolás Posco",
+          "detail": "Clase 2 · Ford Fiesta KD",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2020,
+          "driver": "José Manuel Urcera",
+          "detail": "Clase 3 · Honda All New Civic",
+          "make": "Honda",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2021,
+          "driver": "Emanuel Abdala",
+          "detail": "Clase 2 · Ford Fiesta KD",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2021,
+          "driver": "Julián Santero",
+          "detail": "Clase 3 · Toyota Corolla E210",
+          "make": "Toyota",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2022,
+          "driver": "Matías Cravero",
+          "detail": "Clase 2 · Ford Fiesta KD",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2022,
+          "driver": "Jonatan Castellano",
+          "detail": "Clase 3 · Chevrolet Cruze II",
+          "make": "Chevrolet",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2023,
+          "driver": "Thiago Martínez",
+          "detail": "Clase 2 · Ford Fiesta KD",
+          "make": "Ford",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2023,
+          "driver": "Leonel Pernía",
+          "detail": "Clase 3 · Ford Focus III",
+          "make": "Ford",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2024,
+          "driver": "Thiago Martínez",
+          "detail": "Clase 2 · Toyota Etios",
+          "make": "Toyota",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2024,
+          "driver": "Alfonso Domenech",
+          "detail": "Clase 3 · Volkswagen Virtus",
+          "make": "Volkswagen",
+          "group": "Clase 3"
+        },
+        {
+          "year": 2025,
+          "driver": "Bautista Damiani",
+          "detail": "Clase 2 · Toyota Yaris",
+          "make": "Toyota",
+          "group": "Clase 2"
+        },
+        {
+          "year": 2025,
+          "driver": "Julián Santero",
+          "detail": "Clase 3 · Toyota Corolla E210",
+          "make": "Toyota",
+          "group": "Clase 3"
+        }
+      ],
+      "note": "Campeones de todas las clases. Hoy se corren la Clase 2 y la Clase 3.",
+      "firstYear": 1961,
+      "lastYear": 2025,
+      "seasons": 65,
+      "distinctChampions": 114,
+      "topChampions": [
+        {
+          "driver": "Rosmualdo Visintini",
+          "titles": 5,
+          "years": [
+            1965,
+            1966,
+            1967,
+            1968,
+            1970
+          ]
+        },
+        {
+          "driver": "Rafael Verna",
+          "titles": 5,
+          "years": [
+            1989,
+            1992,
+            1993,
+            1994,
+            1995
+          ]
+        },
+        {
+          "driver": "Gerardo del Campo",
+          "titles": 4,
+          "years": [
+            1990,
+            1991,
+            1993,
+            1994
+          ]
+        },
+        {
+          "driver": "José Migliore",
+          "titles": 3,
+          "years": [
+            1962,
+            1970,
+            1971
+          ]
+        },
+        {
+          "driver": "Gastón Perkins",
+          "titles": 3,
+          "years": [
+            1963,
+            1964,
+            1965
+          ]
+        },
+        {
+          "driver": "Rogelio Scaramella",
+          "titles": 3,
+          "years": [
+            1965,
+            1966,
+            1967
+          ]
+        }
+      ],
+      "makeLabel": "Marcas campeonas",
+      "topMakes": [
+        {
+          "name": "Ford",
+          "titles": 39
+        },
+        {
+          "name": "Fiat",
+          "titles": 31
+        },
+        {
+          "name": "Renault",
+          "titles": 23
+        },
+        {
+          "name": "Peugeot",
+          "titles": 19
+        },
+        {
+          "name": "Volkswagen",
+          "titles": 14
+        },
+        {
+          "name": "Honda",
+          "titles": 8
+        }
+      ]
+    },
+    "f1": {
+      "source": {
+        "label": "Jolpica-F1 API",
+        "url": "https://api.jolpi.ca/ergast/f1/",
+        "license": "Datos abiertos"
+      },
+      "champions": [
+        {
+          "year": 1950,
+          "driver": "Nino Farina",
+          "detail": "Alfa Romeo",
+          "make": "Alfa Romeo",
+          "argentine": false
+        },
+        {
+          "year": 1951,
+          "driver": "Juan Fangio",
+          "detail": "Alfa Romeo",
+          "make": "Alfa Romeo",
+          "argentine": true
+        },
+        {
+          "year": 1952,
+          "driver": "Alberto Ascari",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 1953,
+          "driver": "Alberto Ascari",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 1954,
+          "driver": "Juan Fangio",
+          "detail": "Mercedes",
+          "make": "Mercedes",
+          "argentine": true
+        },
+        {
+          "year": 1955,
+          "driver": "Juan Fangio",
+          "detail": "Mercedes",
+          "make": "Mercedes",
+          "argentine": true
+        },
+        {
+          "year": 1956,
+          "driver": "Juan Fangio",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": true
+        },
+        {
+          "year": 1957,
+          "driver": "Juan Fangio",
+          "detail": "Maserati",
+          "make": "Maserati",
+          "argentine": true
+        },
+        {
+          "year": 1958,
+          "driver": "Mike Hawthorn",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 1959,
+          "driver": "Jack Brabham",
+          "detail": "Cooper-Climax",
+          "make": "Cooper-Climax",
+          "argentine": false
+        },
+        {
+          "year": 1960,
+          "driver": "Jack Brabham",
+          "detail": "Cooper-Climax",
+          "make": "Cooper-Climax",
+          "argentine": false
+        },
+        {
+          "year": 1961,
+          "driver": "Phil Hill",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 1962,
+          "driver": "Graham Hill",
+          "detail": "BRM",
+          "make": "BRM",
+          "argentine": false
+        },
+        {
+          "year": 1963,
+          "driver": "Jim Clark",
+          "detail": "Lotus-Climax",
+          "make": "Lotus-Climax",
+          "argentine": false
+        },
+        {
+          "year": 1964,
+          "driver": "John Surtees",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 1965,
+          "driver": "Jim Clark",
+          "detail": "Lotus-Climax",
+          "make": "Lotus-Climax",
+          "argentine": false
+        },
+        {
+          "year": 1966,
+          "driver": "Jack Brabham",
+          "detail": "Brabham-Repco",
+          "make": "Brabham-Repco",
+          "argentine": false
+        },
+        {
+          "year": 1967,
+          "driver": "Denny Hulme",
+          "detail": "Brabham-Repco",
+          "make": "Brabham-Repco",
+          "argentine": false
+        },
+        {
+          "year": 1968,
+          "driver": "Graham Hill",
+          "detail": "Lotus-Ford",
+          "make": "Lotus-Ford",
+          "argentine": false
+        },
+        {
+          "year": 1969,
+          "driver": "Jackie Stewart",
+          "detail": "Matra-Ford",
+          "make": "Matra-Ford",
+          "argentine": false
+        },
+        {
+          "year": 1970,
+          "driver": "Jochen Rindt",
+          "detail": "Team Lotus",
+          "make": "Team Lotus",
+          "argentine": false
+        },
+        {
+          "year": 1971,
+          "driver": "Jackie Stewart",
+          "detail": "Tyrrell",
+          "make": "Tyrrell",
+          "argentine": false
+        },
+        {
+          "year": 1972,
+          "driver": "Emerson Fittipaldi",
+          "detail": "Team Lotus",
+          "make": "Team Lotus",
+          "argentine": false
+        },
+        {
+          "year": 1973,
+          "driver": "Jackie Stewart",
+          "detail": "Tyrrell",
+          "make": "Tyrrell",
+          "argentine": false
+        },
+        {
+          "year": 1974,
+          "driver": "Emerson Fittipaldi",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        },
+        {
+          "year": 1975,
+          "driver": "Niki Lauda",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 1976,
+          "driver": "James Hunt",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        },
+        {
+          "year": 1977,
+          "driver": "Niki Lauda",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 1978,
+          "driver": "Mario Andretti",
+          "detail": "Team Lotus",
+          "make": "Team Lotus",
+          "argentine": false
+        },
+        {
+          "year": 1979,
+          "driver": "Jody Scheckter",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 1980,
+          "driver": "Alan Jones",
+          "detail": "Williams",
+          "make": "Williams",
+          "argentine": false
+        },
+        {
+          "year": 1981,
+          "driver": "Nelson Piquet",
+          "detail": "Brabham",
+          "make": "Brabham",
+          "argentine": false
+        },
+        {
+          "year": 1982,
+          "driver": "Keke Rosberg",
+          "detail": "Williams",
+          "make": "Williams",
+          "argentine": false
+        },
+        {
+          "year": 1983,
+          "driver": "Nelson Piquet",
+          "detail": "Brabham",
+          "make": "Brabham",
+          "argentine": false
+        },
+        {
+          "year": 1984,
+          "driver": "Niki Lauda",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        },
+        {
+          "year": 1985,
+          "driver": "Alain Prost",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        },
+        {
+          "year": 1986,
+          "driver": "Alain Prost",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        },
+        {
+          "year": 1987,
+          "driver": "Nelson Piquet",
+          "detail": "Williams",
+          "make": "Williams",
+          "argentine": false
+        },
+        {
+          "year": 1988,
+          "driver": "Ayrton Senna",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        },
+        {
+          "year": 1989,
+          "driver": "Alain Prost",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        },
+        {
+          "year": 1990,
+          "driver": "Ayrton Senna",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        },
+        {
+          "year": 1991,
+          "driver": "Ayrton Senna",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        },
+        {
+          "year": 1992,
+          "driver": "Nigel Mansell",
+          "detail": "Williams",
+          "make": "Williams",
+          "argentine": false
+        },
+        {
+          "year": 1993,
+          "driver": "Alain Prost",
+          "detail": "Williams",
+          "make": "Williams",
+          "argentine": false
+        },
+        {
+          "year": 1994,
+          "driver": "Michael Schumacher",
+          "detail": "Benetton",
+          "make": "Benetton",
+          "argentine": false
+        },
+        {
+          "year": 1995,
+          "driver": "Michael Schumacher",
+          "detail": "Benetton",
+          "make": "Benetton",
+          "argentine": false
+        },
+        {
+          "year": 1996,
+          "driver": "Damon Hill",
+          "detail": "Williams",
+          "make": "Williams",
+          "argentine": false
+        },
+        {
+          "year": 1997,
+          "driver": "Jacques Villeneuve",
+          "detail": "Williams",
+          "make": "Williams",
+          "argentine": false
+        },
+        {
+          "year": 1998,
+          "driver": "Mika HÃ¤kkinen",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        },
+        {
+          "year": 1999,
+          "driver": "Mika HÃ¤kkinen",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        },
+        {
+          "year": 2000,
+          "driver": "Michael Schumacher",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 2001,
+          "driver": "Michael Schumacher",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 2002,
+          "driver": "Michael Schumacher",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 2003,
+          "driver": "Michael Schumacher",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 2004,
+          "driver": "Michael Schumacher",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 2005,
+          "driver": "Fernando Alonso",
+          "detail": "Renault",
+          "make": "Renault",
+          "argentine": false
+        },
+        {
+          "year": 2006,
+          "driver": "Fernando Alonso",
+          "detail": "Renault",
+          "make": "Renault",
+          "argentine": false
+        },
+        {
+          "year": 2007,
+          "driver": "Kimi RÃ¤ikkÃ¶nen",
+          "detail": "Ferrari",
+          "make": "Ferrari",
+          "argentine": false
+        },
+        {
+          "year": 2008,
+          "driver": "Lewis Hamilton",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        },
+        {
+          "year": 2009,
+          "driver": "Jenson Button",
+          "detail": "Brawn",
+          "make": "Brawn",
+          "argentine": false
+        },
+        {
+          "year": 2010,
+          "driver": "Sebastian Vettel",
+          "detail": "Red Bull",
+          "make": "Red Bull",
+          "argentine": false
+        },
+        {
+          "year": 2011,
+          "driver": "Sebastian Vettel",
+          "detail": "Red Bull",
+          "make": "Red Bull",
+          "argentine": false
+        },
+        {
+          "year": 2012,
+          "driver": "Sebastian Vettel",
+          "detail": "Red Bull",
+          "make": "Red Bull",
+          "argentine": false
+        },
+        {
+          "year": 2013,
+          "driver": "Sebastian Vettel",
+          "detail": "Red Bull",
+          "make": "Red Bull",
+          "argentine": false
+        },
+        {
+          "year": 2014,
+          "driver": "Lewis Hamilton",
+          "detail": "Mercedes",
+          "make": "Mercedes",
+          "argentine": false
+        },
+        {
+          "year": 2015,
+          "driver": "Lewis Hamilton",
+          "detail": "Mercedes",
+          "make": "Mercedes",
+          "argentine": false
+        },
+        {
+          "year": 2016,
+          "driver": "Nico Rosberg",
+          "detail": "Mercedes",
+          "make": "Mercedes",
+          "argentine": false
+        },
+        {
+          "year": 2017,
+          "driver": "Lewis Hamilton",
+          "detail": "Mercedes",
+          "make": "Mercedes",
+          "argentine": false
+        },
+        {
+          "year": 2018,
+          "driver": "Lewis Hamilton",
+          "detail": "Mercedes",
+          "make": "Mercedes",
+          "argentine": false
+        },
+        {
+          "year": 2019,
+          "driver": "Lewis Hamilton",
+          "detail": "Mercedes",
+          "make": "Mercedes",
+          "argentine": false
+        },
+        {
+          "year": 2020,
+          "driver": "Lewis Hamilton",
+          "detail": "Mercedes",
+          "make": "Mercedes",
+          "argentine": false
+        },
+        {
+          "year": 2021,
+          "driver": "Max Verstappen",
+          "detail": "Red Bull",
+          "make": "Red Bull",
+          "argentine": false
+        },
+        {
+          "year": 2022,
+          "driver": "Max Verstappen",
+          "detail": "Red Bull",
+          "make": "Red Bull",
+          "argentine": false
+        },
+        {
+          "year": 2023,
+          "driver": "Max Verstappen",
+          "detail": "Red Bull",
+          "make": "Red Bull",
+          "argentine": false
+        },
+        {
+          "year": 2024,
+          "driver": "Max Verstappen",
+          "detail": "Red Bull",
+          "make": "Red Bull",
+          "argentine": false
+        },
+        {
+          "year": 2025,
+          "driver": "Lando Norris",
+          "detail": "McLaren",
+          "make": "McLaren",
+          "argentine": false
+        }
+      ],
+      "argentineTitles": 5,
+      "firstYear": 1950,
+      "lastYear": 2025,
+      "seasons": 76,
+      "distinctChampions": 35,
+      "topChampions": [
+        {
+          "driver": "Michael Schumacher",
+          "titles": 7,
+          "years": [
+            1994,
+            1995,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004
+          ]
+        },
+        {
+          "driver": "Lewis Hamilton",
+          "titles": 7,
+          "years": [
+            2008,
+            2014,
+            2015,
+            2017,
+            2018,
+            2019,
+            2020
+          ]
+        },
+        {
+          "driver": "Juan Fangio",
+          "titles": 5,
+          "years": [
+            1951,
+            1954,
+            1955,
+            1956,
+            1957
+          ]
+        },
+        {
+          "driver": "Alain Prost",
+          "titles": 4,
+          "years": [
+            1985,
+            1986,
+            1989,
+            1993
+          ]
+        },
+        {
+          "driver": "Sebastian Vettel",
+          "titles": 4,
+          "years": [
+            2010,
+            2011,
+            2012,
+            2013
+          ]
+        },
+        {
+          "driver": "Max Verstappen",
+          "titles": 4,
+          "years": [
+            2021,
+            2022,
+            2023,
+            2024
+          ]
+        }
+      ],
+      "makeLabel": "Equipos campeones",
+      "topMakes": [
+        {
+          "name": "Ferrari",
+          "titles": 15
+        },
+        {
+          "name": "McLaren",
+          "titles": 13
+        },
+        {
+          "name": "Mercedes",
+          "titles": 9
+        },
+        {
+          "name": "Red Bull",
+          "titles": 8
+        },
+        {
+          "name": "Williams",
+          "titles": 7
+        },
+        {
+          "name": "Team Lotus",
+          "titles": 3
+        }
+      ]
+    },
+    "f2": {
+      "source": {
+        "label": "Wikipedia · FIA Formula 2 Championship",
+        "url": "https://en.wikipedia.org/wiki/FIA_Formula_2_Championship",
+        "license": "CC BY-SA 4.0"
+      },
+      "champions": [
+        {
+          "year": 2017,
+          "driver": "Charles Leclerc",
+          "detail": "Prema Racing",
+          "make": "Prema Racing",
+          "argentine": false,
+          "wins": 7
+        },
+        {
+          "year": 2018,
+          "driver": "George Russell",
+          "detail": "ART Grand Prix",
+          "make": "ART Grand Prix",
+          "argentine": false,
+          "wins": 7
+        },
+        {
+          "year": 2019,
+          "driver": "Nyck de Vries",
+          "detail": "ART Grand Prix",
+          "make": "ART Grand Prix",
+          "argentine": false,
+          "wins": 4
+        },
+        {
+          "year": 2020,
+          "driver": "Mick Schumacher",
+          "detail": "Prema Racing",
+          "make": "Prema Racing",
+          "argentine": false,
+          "wins": 2
+        },
+        {
+          "year": 2021,
+          "driver": "Oscar Piastri",
+          "detail": "Prema Racing",
+          "make": "Prema Racing",
+          "argentine": false,
+          "wins": 6
+        },
+        {
+          "year": 2022,
+          "driver": "Felipe Drugovich",
+          "detail": "MP Motorsport",
+          "make": "MP Motorsport",
+          "argentine": false,
+          "wins": 5
+        },
+        {
+          "year": 2023,
+          "driver": "Théo Pourchaire",
+          "detail": "ART Grand Prix",
+          "make": "ART Grand Prix",
+          "argentine": false,
+          "wins": 1
+        },
+        {
+          "year": 2024,
+          "driver": "Gabriel Bortoleto",
+          "detail": "Invicta Racing",
+          "make": "Invicta Racing",
+          "argentine": false,
+          "wins": 2
+        },
+        {
+          "year": 2025,
+          "driver": "Leonardo Fornaroli",
+          "detail": "Invicta Racing",
+          "make": "Invicta Racing",
+          "argentine": false,
+          "wins": 4
+        }
+      ],
+      "firstYear": 2017,
+      "lastYear": 2025,
+      "seasons": 9,
+      "distinctChampions": 9,
+      "topChampions": [
+        {
+          "driver": "Charles Leclerc",
+          "titles": 1,
+          "years": [
+            2017
+          ]
+        },
+        {
+          "driver": "George Russell",
+          "titles": 1,
+          "years": [
+            2018
+          ]
+        },
+        {
+          "driver": "Nyck de Vries",
+          "titles": 1,
+          "years": [
+            2019
+          ]
+        },
+        {
+          "driver": "Mick Schumacher",
+          "titles": 1,
+          "years": [
+            2020
+          ]
+        },
+        {
+          "driver": "Oscar Piastri",
+          "titles": 1,
+          "years": [
+            2021
+          ]
+        },
+        {
+          "driver": "Felipe Drugovich",
+          "titles": 1,
+          "years": [
+            2022
+          ]
+        }
+      ],
+      "makeLabel": "Equipos campeones",
+      "topMakes": [
+        {
+          "name": "Prema Racing",
+          "titles": 3
+        },
+        {
+          "name": "ART Grand Prix",
+          "titles": 3
+        },
+        {
+          "name": "Invicta Racing",
+          "titles": 2
+        },
+        {
+          "name": "MP Motorsport",
+          "titles": 1
+        }
+      ]
+    },
+    "indycar": {
+      "source": {
+        "label": "Wikipedia · IndyCar Series",
+        "url": "https://en.wikipedia.org/wiki/IndyCar_Series",
+        "license": "CC BY-SA 4.0"
+      },
+      "champions": [
+        {
+          "year": 1996,
+          "label": "1996",
+          "driver": "Scott Sharp",
+          "detail": "A. J. Foyt Enterprises",
+          "make": "A. J. Foyt Enterprises",
+          "argentine": false
+        },
+        {
+          "year": 1996,
+          "label": "1996–97",
+          "driver": "Tony Stewart",
+          "detail": "Team Menard",
+          "make": "Team Menard",
+          "argentine": false
+        },
+        {
+          "year": 1998,
+          "label": "1998",
+          "driver": "Kenny Bräck",
+          "detail": "A. J. Foyt Enterprises",
+          "make": "A. J. Foyt Enterprises",
+          "argentine": false
+        },
+        {
+          "year": 1999,
+          "label": "1999",
+          "driver": "Greg Ray",
+          "detail": "Team Menard",
+          "make": "Team Menard",
+          "argentine": false
+        },
+        {
+          "year": 2000,
+          "label": "2000",
+          "driver": "Buddy Lazier",
+          "detail": "Hemelgarn Racing",
+          "make": "Hemelgarn Racing",
+          "argentine": false
+        },
+        {
+          "year": 2001,
+          "label": "2001",
+          "driver": "Sam Hornish Jr.",
+          "detail": "Panther Racing",
+          "make": "Panther Racing",
+          "argentine": false
+        },
+        {
+          "year": 2002,
+          "label": "2002",
+          "driver": "Sam Hornish Jr.",
+          "detail": "Panther Racing",
+          "make": "Panther Racing",
+          "argentine": false
+        },
+        {
+          "year": 2003,
+          "label": "2003",
+          "driver": "Scott Dixon",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2004,
+          "label": "2004",
+          "driver": "Tony Kanaan",
+          "detail": "Andretti Green Racing",
+          "make": "Andretti Green Racing",
+          "argentine": false
+        },
+        {
+          "year": 2005,
+          "label": "2005",
+          "driver": "Dan Wheldon",
+          "detail": "Andretti Green Racing",
+          "make": "Andretti Green Racing",
+          "argentine": false
+        },
+        {
+          "year": 2006,
+          "label": "2006",
+          "driver": "Sam Hornish Jr.",
+          "detail": "Penske Racing",
+          "make": "Penske Racing",
+          "argentine": false
+        },
+        {
+          "year": 2007,
+          "label": "2007",
+          "driver": "Dario Franchitti",
+          "detail": "Andretti Green Racing",
+          "make": "Andretti Green Racing",
+          "argentine": false
+        },
+        {
+          "year": 2008,
+          "label": "2008",
+          "driver": "Scott Dixon",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2009,
+          "label": "2009",
+          "driver": "Dario Franchitti",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2010,
+          "label": "2010",
+          "driver": "Dario Franchitti",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2011,
+          "label": "2011",
+          "driver": "Dario Franchitti",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2012,
+          "label": "2012",
+          "driver": "Ryan Hunter-Reay",
+          "detail": "Andretti Autosport",
+          "make": "Andretti Autosport",
+          "argentine": false
+        },
+        {
+          "year": 2013,
+          "label": "2013",
+          "driver": "Scott Dixon",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2014,
+          "label": "2014",
+          "driver": "Will Power",
+          "detail": "Team Penske",
+          "make": "Team Penske",
+          "argentine": false
+        },
+        {
+          "year": 2015,
+          "label": "2015",
+          "driver": "Scott Dixon",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2016,
+          "label": "2016",
+          "driver": "Simon Pagenaud",
+          "detail": "Team Penske",
+          "make": "Team Penske",
+          "argentine": false
+        },
+        {
+          "year": 2017,
+          "label": "2017",
+          "driver": "Josef Newgarden",
+          "detail": "Team Penske",
+          "make": "Team Penske",
+          "argentine": false
+        },
+        {
+          "year": 2018,
+          "label": "2018",
+          "driver": "Scott Dixon",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2019,
+          "label": "2019",
+          "driver": "Josef Newgarden",
+          "detail": "Team Penske",
+          "make": "Team Penske",
+          "argentine": false
+        },
+        {
+          "year": 2020,
+          "label": "2020",
+          "driver": "Scott Dixon",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2021,
+          "label": "2021",
+          "driver": "Álex Palou",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2022,
+          "label": "2022",
+          "driver": "Will Power",
+          "detail": "Team Penske",
+          "make": "Team Penske",
+          "argentine": false
+        },
+        {
+          "year": 2023,
+          "label": "2023",
+          "driver": "Álex Palou",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2024,
+          "label": "2024",
+          "driver": "Álex Palou",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2025,
+          "label": "2025",
+          "driver": "Álex Palou",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        },
+        {
+          "year": 2026,
+          "label": "2026",
+          "driver": "Álex Palou",
+          "detail": "Chip Ganassi Racing",
+          "make": "Chip Ganassi Racing",
+          "argentine": false
+        }
+      ],
+      "note": "Campeones desde la creación de la Indy Racing League (1996).",
+      "firstYear": 1996,
+      "lastYear": 2026,
+      "seasons": 30,
+      "distinctChampions": 15,
+      "topChampions": [
+        {
+          "driver": "Scott Dixon",
+          "titles": 6,
+          "years": [
+            2003,
+            2008,
+            2013,
+            2015,
+            2018,
+            2020
+          ]
+        },
+        {
+          "driver": "Álex Palou",
+          "titles": 5,
+          "years": [
+            2021,
+            2023,
+            2024,
+            2025,
+            2026
+          ]
+        },
+        {
+          "driver": "Dario Franchitti",
+          "titles": 4,
+          "years": [
+            2007,
+            2009,
+            2010,
+            2011
+          ]
+        },
+        {
+          "driver": "Sam Hornish Jr.",
+          "titles": 3,
+          "years": [
+            2001,
+            2002,
+            2006
+          ]
+        },
+        {
+          "driver": "Will Power",
+          "titles": 2,
+          "years": [
+            2014,
+            2022
+          ]
+        },
+        {
+          "driver": "Josef Newgarden",
+          "titles": 2,
+          "years": [
+            2017,
+            2019
+          ]
+        }
+      ],
+      "makeLabel": "Equipos campeones",
+      "topMakes": [
+        {
+          "name": "Chip Ganassi Racing",
+          "titles": 14
+        },
+        {
+          "name": "Team Penske",
+          "titles": 5
+        },
+        {
+          "name": "Andretti Green Racing",
+          "titles": 3
+        },
+        {
+          "name": "A. J. Foyt Enterprises",
+          "titles": 2
+        },
+        {
+          "name": "Team Menard",
+          "titles": 2
+        },
+        {
+          "name": "Panther Racing",
+          "titles": 2
+        }
+      ]
+    },
+    "nascar": {
+      "source": {
+        "label": "Wikipedia · List of NASCAR Cup Series champions",
+        "url": "https://en.wikipedia.org/wiki/List_of_NASCAR_Cup_Series_champions",
+        "license": "CC BY-SA 4.0"
+      },
+      "champions": [
+        {
+          "year": 1949,
+          "driver": "Red Byron",
+          "detail": "Oldsmobile",
+          "make": "Oldsmobile"
+        },
+        {
+          "year": 1950,
+          "driver": "Bill Rexford",
+          "detail": "Oldsmobile",
+          "make": "Oldsmobile"
+        },
+        {
+          "year": 1951,
+          "driver": "Herb Thomas",
+          "detail": "Plymouth Hudson Oldsmobile",
+          "make": "Plymouth"
+        },
+        {
+          "year": 1952,
+          "driver": "Tim Flock",
+          "detail": "Hudson",
+          "make": "Hudson"
+        },
+        {
+          "year": 1953,
+          "driver": "Herb Thomas",
+          "detail": "Hudson (3)",
+          "make": "Hudson"
+        },
+        {
+          "year": 1954,
+          "driver": "Lee Petty",
+          "detail": "Chrysler Dodge",
+          "make": "Chrysler"
+        },
+        {
+          "year": 1955,
+          "driver": "Tim Flock",
+          "detail": "Chrysler",
+          "make": "Chrysler"
+        },
+        {
+          "year": 1956,
+          "driver": "Buck Baker",
+          "detail": "Chrysler Dodge",
+          "make": "Chrysler"
+        },
+        {
+          "year": 1957,
+          "driver": "Buck Baker",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1958,
+          "driver": "Lee Petty",
+          "detail": "Oldsmobile",
+          "make": "Oldsmobile"
+        },
+        {
+          "year": 1959,
+          "driver": "Lee Petty",
+          "detail": "Oldsmobile Plymouth",
+          "make": "Oldsmobile"
+        },
+        {
+          "year": 1960,
+          "driver": "Rex White",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1961,
+          "driver": "Ned Jarrett",
+          "detail": "Ford Chevrolet",
+          "make": "Ford"
+        },
+        {
+          "year": 1962,
+          "driver": "Joe Weatherly",
+          "detail": "Pontiac",
+          "make": "Pontiac"
+        },
+        {
+          "year": 1963,
+          "driver": "Joe Weatherly",
+          "detail": "Mercury Pontiac",
+          "make": "Mercury"
+        },
+        {
+          "year": 1964,
+          "driver": "Richard Petty",
+          "detail": "Plymouth",
+          "make": "Plymouth"
+        },
+        {
+          "year": 1965,
+          "driver": "Ned Jarrett",
+          "detail": "Ford",
+          "make": "Ford"
+        },
+        {
+          "year": 1966,
+          "driver": "David Pearson",
+          "detail": "Dodge",
+          "make": "Dodge"
+        },
+        {
+          "year": 1967,
+          "driver": "Richard Petty",
+          "detail": "Plymouth",
+          "make": "Plymouth"
+        },
+        {
+          "year": 1968,
+          "driver": "David Pearson",
+          "detail": "Ford",
+          "make": "Ford"
+        },
+        {
+          "year": 1969,
+          "driver": "David Pearson",
+          "detail": "Ford",
+          "make": "Ford"
+        },
+        {
+          "year": 1970,
+          "driver": "Bobby Isaac",
+          "detail": "Dodge",
+          "make": "Dodge"
+        },
+        {
+          "year": 1971,
+          "driver": "Richard Petty",
+          "detail": "Plymouth",
+          "make": "Plymouth"
+        },
+        {
+          "year": 1972,
+          "driver": "Richard Petty",
+          "detail": "Dodge Plymouth (7)",
+          "make": "Dodge"
+        },
+        {
+          "year": 1973,
+          "driver": "Benny Parsons",
+          "detail": "Chevrolet Mercury (2)",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1974,
+          "driver": "Richard Petty",
+          "detail": "Dodge",
+          "make": "Dodge"
+        },
+        {
+          "year": 1975,
+          "driver": "Richard Petty",
+          "detail": "Dodge",
+          "make": "Dodge"
+        },
+        {
+          "year": 1976,
+          "driver": "Cale Yarborough",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1977,
+          "driver": "Cale Yarborough",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1978,
+          "driver": "Cale Yarborough",
+          "detail": "Oldsmobile",
+          "make": "Oldsmobile"
+        },
+        {
+          "year": 1979,
+          "driver": "Richard Petty",
+          "detail": "Chevrolet Oldsmobile",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1980,
+          "driver": "Dale Earnhardt",
+          "detail": "Chevrolet Oldsmobile (9)",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1981,
+          "driver": "Darrell Waltrip",
+          "detail": "Chevrolet Buick",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1982,
+          "driver": "Darrell Waltrip",
+          "detail": "Buick",
+          "make": "Buick"
+        },
+        {
+          "year": 1983,
+          "driver": "Bobby Allison",
+          "detail": "Chevrolet Buick (3)",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1984,
+          "driver": "Terry Labonte",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1985,
+          "driver": "Darrell Waltrip",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1986,
+          "driver": "Dale Earnhardt",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1987,
+          "driver": "Dale Earnhardt",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1988,
+          "driver": "Bill Elliott",
+          "detail": "Ford",
+          "make": "Ford"
+        },
+        {
+          "year": 1989,
+          "driver": "Rusty Wallace",
+          "detail": "Pontiac",
+          "make": "Pontiac"
+        },
+        {
+          "year": 1990,
+          "driver": "Dale Earnhardt",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1991,
+          "driver": "Dale Earnhardt",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1992,
+          "driver": "Alan Kulwicki",
+          "detail": "Ford",
+          "make": "Ford"
+        },
+        {
+          "year": 1993,
+          "driver": "Dale Earnhardt",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1994,
+          "driver": "Dale Earnhardt",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1995,
+          "driver": "Jeff Gordon",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1996,
+          "driver": "Terry Labonte",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1997,
+          "driver": "Jeff Gordon",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1998,
+          "driver": "Jeff Gordon",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 1999,
+          "driver": "Dale Jarrett",
+          "detail": "Ford",
+          "make": "Ford"
+        },
+        {
+          "year": 2000,
+          "driver": "Bobby Labonte",
+          "detail": "Pontiac",
+          "make": "Pontiac"
+        },
+        {
+          "year": 2001,
+          "driver": "Jeff Gordon",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2002,
+          "driver": "Tony Stewart",
+          "detail": "Pontiac (9)",
+          "make": "Pontiac"
+        },
+        {
+          "year": 2003,
+          "driver": "Matt Kenseth",
+          "detail": "Ford",
+          "make": "Ford"
+        },
+        {
+          "year": 2004,
+          "driver": "Kurt Busch",
+          "detail": "Ford",
+          "make": "Ford"
+        },
+        {
+          "year": 2005,
+          "driver": "Tony Stewart",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2006,
+          "driver": "Jimmie Johnson",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2007,
+          "driver": "Jimmie Johnson",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2008,
+          "driver": "Jimmie Johnson",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2009,
+          "driver": "Jimmie Johnson",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2010,
+          "driver": "Jimmie Johnson",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2011,
+          "driver": "Tony Stewart",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2012,
+          "driver": "Brad Keselowski",
+          "detail": "Dodge (18)",
+          "make": "Dodge"
+        },
+        {
+          "year": 2013,
+          "driver": "Jimmie Johnson",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2014,
+          "driver": "Kevin Harvick",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2015,
+          "driver": "Kyle Busch",
+          "detail": "Toyota",
+          "make": "Toyota"
+        },
+        {
+          "year": 2016,
+          "driver": "Jimmie Johnson",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2017,
+          "driver": "Martin Truex Jr.",
+          "detail": "Toyota",
+          "make": "Toyota"
+        },
+        {
+          "year": 2018,
+          "driver": "Joey Logano",
+          "detail": "Ford",
+          "make": "Ford"
+        },
+        {
+          "year": 2019,
+          "driver": "Kyle Busch",
+          "detail": "Toyota (3)",
+          "make": "Toyota"
+        },
+        {
+          "year": 2020,
+          "driver": "Chase Elliott",
+          "detail": "Chevrolet",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2021,
+          "driver": "Kyle Larson",
+          "detail": "Chevrolet (41)",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2022,
+          "driver": "Joey Logano",
+          "detail": "Ford",
+          "make": "Ford"
+        },
+        {
+          "year": 2023,
+          "driver": "Ryan Blaney",
+          "detail": "Ford",
+          "make": "Ford"
+        },
+        {
+          "year": 2024,
+          "driver": "Joey Logano",
+          "detail": "Ford (15)",
+          "make": "Ford"
+        },
+        {
+          "year": 2025,
+          "driver": "Kyle Larson",
+          "detail": "Chevrolet (42)",
+          "make": "Chevrolet"
+        }
+      ],
+      "firstYear": 1949,
+      "lastYear": 2025,
+      "seasons": 77,
+      "distinctChampions": 36,
+      "topChampions": [
+        {
+          "driver": "Richard Petty",
+          "titles": 7,
+          "years": [
+            1964,
+            1967,
+            1971,
+            1972,
+            1974,
+            1975,
+            1979
+          ]
+        },
+        {
+          "driver": "Dale Earnhardt",
+          "titles": 7,
+          "years": [
+            1980,
+            1986,
+            1987,
+            1990,
+            1991,
+            1993,
+            1994
+          ]
+        },
+        {
+          "driver": "Jimmie Johnson",
+          "titles": 7,
+          "years": [
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2013,
+            2016
+          ]
+        },
+        {
+          "driver": "Jeff Gordon",
+          "titles": 4,
+          "years": [
+            1995,
+            1997,
+            1998,
+            2001
+          ]
+        },
+        {
+          "driver": "Lee Petty",
+          "titles": 3,
+          "years": [
+            1954,
+            1958,
+            1959
+          ]
+        },
+        {
+          "driver": "David Pearson",
+          "titles": 3,
+          "years": [
+            1966,
+            1968,
+            1969
+          ]
+        }
+      ],
+      "makeLabel": "Marcas campeonas",
+      "topMakes": [
+        {
+          "name": "Chevrolet",
+          "titles": 35
+        },
+        {
+          "name": "Ford",
+          "titles": 13
+        },
+        {
+          "name": "Dodge",
+          "titles": 6
+        },
+        {
+          "name": "Oldsmobile",
+          "titles": 5
+        },
+        {
+          "name": "Plymouth",
+          "titles": 4
+        },
+        {
+          "name": "Pontiac",
+          "titles": 4
+        }
+      ]
+    }
+  }
+}

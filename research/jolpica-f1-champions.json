@@ -1,0 +1,610 @@
+[
+    {
+        "season":  1950,
+        "driver":  "Nino Farina",
+        "nationality":  "Italian",
+        "team":  "Alfa Romeo",
+        "points":  30,
+        "wins":  3
+    },
+    {
+        "season":  1951,
+        "driver":  "Juan Fangio",
+        "nationality":  "Argentine",
+        "team":  "Alfa Romeo",
+        "points":  31,
+        "wins":  3
+    },
+    {
+        "season":  1952,
+        "driver":  "Alberto Ascari",
+        "nationality":  "Italian",
+        "team":  "Ferrari",
+        "points":  36,
+        "wins":  6
+    },
+    {
+        "season":  1953,
+        "driver":  "Alberto Ascari",
+        "nationality":  "Italian",
+        "team":  "Ferrari",
+        "points":  34.5,
+        "wins":  5
+    },
+    {
+        "season":  1954,
+        "driver":  "Juan Fangio",
+        "nationality":  "Argentine",
+        "team":  "Mercedes",
+        "points":  42,
+        "wins":  6
+    },
+    {
+        "season":  1955,
+        "driver":  "Juan Fangio",
+        "nationality":  "Argentine",
+        "team":  "Mercedes",
+        "points":  40,
+        "wins":  4
+    },
+    {
+        "season":  1956,
+        "driver":  "Juan Fangio",
+        "nationality":  "Argentine",
+        "team":  "Ferrari",
+        "points":  30,
+        "wins":  3
+    },
+    {
+        "season":  1957,
+        "driver":  "Juan Fangio",
+        "nationality":  "Argentine",
+        "team":  "Maserati",
+        "points":  40,
+        "wins":  4
+    },
+    {
+        "season":  1958,
+        "driver":  "Mike Hawthorn",
+        "nationality":  "British",
+        "team":  "Ferrari",
+        "points":  42,
+        "wins":  1
+    },
+    {
+        "season":  1959,
+        "driver":  "Jack Brabham",
+        "nationality":  "Australian",
+        "team":  "Cooper-Climax",
+        "points":  31,
+        "wins":  2
+    },
+    {
+        "season":  1960,
+        "driver":  "Jack Brabham",
+        "nationality":  "Australian",
+        "team":  "Cooper-Climax",
+        "points":  43,
+        "wins":  5
+    },
+    {
+        "season":  1961,
+        "driver":  "Phil Hill",
+        "nationality":  "American",
+        "team":  "Ferrari",
+        "points":  34,
+        "wins":  2
+    },
+    {
+        "season":  1962,
+        "driver":  "Graham Hill",
+        "nationality":  "British",
+        "team":  "BRM",
+        "points":  42,
+        "wins":  4
+    },
+    {
+        "season":  1963,
+        "driver":  "Jim Clark",
+        "nationality":  "British",
+        "team":  "Lotus-Climax",
+        "points":  54,
+        "wins":  7
+    },
+    {
+        "season":  1964,
+        "driver":  "John Surtees",
+        "nationality":  "British",
+        "team":  "Ferrari",
+        "points":  40,
+        "wins":  2
+    },
+    {
+        "season":  1965,
+        "driver":  "Jim Clark",
+        "nationality":  "British",
+        "team":  "Lotus-Climax",
+        "points":  54,
+        "wins":  6
+    },
+    {
+        "season":  1966,
+        "driver":  "Jack Brabham",
+        "nationality":  "Australian",
+        "team":  "Brabham-Repco",
+        "points":  42,
+        "wins":  4
+    },
+    {
+        "season":  1967,
+        "driver":  "Denny Hulme",
+        "nationality":  "New Zealander",
+        "team":  "Brabham-Repco",
+        "points":  51,
+        "wins":  2
+    },
+    {
+        "season":  1968,
+        "driver":  "Graham Hill",
+        "nationality":  "British",
+        "team":  "Lotus-Ford",
+        "points":  48,
+        "wins":  3
+    },
+    {
+        "season":  1969,
+        "driver":  "Jackie Stewart",
+        "nationality":  "British",
+        "team":  "Matra-Ford",
+        "points":  63,
+        "wins":  6
+    },
+    {
+        "season":  1970,
+        "driver":  "Jochen Rindt",
+        "nationality":  "Austrian",
+        "team":  "Team Lotus",
+        "points":  45,
+        "wins":  5
+    },
+    {
+        "season":  1971,
+        "driver":  "Jackie Stewart",
+        "nationality":  "British",
+        "team":  "Tyrrell",
+        "points":  62,
+        "wins":  6
+    },
+    {
+        "season":  1972,
+        "driver":  "Emerson Fittipaldi",
+        "nationality":  "Brazilian",
+        "team":  "Team Lotus",
+        "points":  61,
+        "wins":  5
+    },
+    {
+        "season":  1973,
+        "driver":  "Jackie Stewart",
+        "nationality":  "British",
+        "team":  "Tyrrell",
+        "points":  71,
+        "wins":  5
+    },
+    {
+        "season":  1974,
+        "driver":  "Emerson Fittipaldi",
+        "nationality":  "Brazilian",
+        "team":  "McLaren",
+        "points":  55,
+        "wins":  3
+    },
+    {
+        "season":  1975,
+        "driver":  "Niki Lauda",
+        "nationality":  "Austrian",
+        "team":  "Ferrari",
+        "points":  64.5,
+        "wins":  5
+    },
+    {
+        "season":  1976,
+        "driver":  "James Hunt",
+        "nationality":  "British",
+        "team":  "McLaren",
+        "points":  69,
+        "wins":  6
+    },
+    {
+        "season":  1977,
+        "driver":  "Niki Lauda",
+        "nationality":  "Austrian",
+        "team":  "Ferrari",
+        "points":  70,
+        "wins":  3
+    },
+    {
+        "season":  1978,
+        "driver":  "Mario Andretti",
+        "nationality":  "American",
+        "team":  "Team Lotus",
+        "points":  64,
+        "wins":  6
+    },
+    {
+        "season":  1979,
+        "driver":  "Jody Scheckter",
+        "nationality":  "South African",
+        "team":  "Ferrari",
+        "points":  51,
+        "wins":  3
+    },
+    {
+        "season":  1980,
+        "driver":  "Alan Jones",
+        "nationality":  "Australian",
+        "team":  "Williams",
+        "points":  67,
+        "wins":  5
+    },
+    {
+        "season":  1981,
+        "driver":  "Nelson Piquet",
+        "nationality":  "Brazilian",
+        "team":  "Brabham",
+        "points":  50,
+        "wins":  3
+    },
+    {
+        "season":  1982,
+        "driver":  "Keke Rosberg",
+        "nationality":  "Finnish",
+        "team":  "Williams",
+        "points":  44,
+        "wins":  1
+    },
+    {
+        "season":  1983,
+        "driver":  "Nelson Piquet",
+        "nationality":  "Brazilian",
+        "team":  "Brabham",
+        "points":  59,
+        "wins":  3
+    },
+    {
+        "season":  1984,
+        "driver":  "Niki Lauda",
+        "nationality":  "Austrian",
+        "team":  "McLaren",
+        "points":  72,
+        "wins":  5
+    },
+    {
+        "season":  1985,
+        "driver":  "Alain Prost",
+        "nationality":  "French",
+        "team":  "McLaren",
+        "points":  73,
+        "wins":  5
+    },
+    {
+        "season":  1986,
+        "driver":  "Alain Prost",
+        "nationality":  "French",
+        "team":  "McLaren",
+        "points":  72,
+        "wins":  4
+    },
+    {
+        "season":  1987,
+        "driver":  "Nelson Piquet",
+        "nationality":  "Brazilian",
+        "team":  "Williams",
+        "points":  73,
+        "wins":  3
+    },
+    {
+        "season":  1988,
+        "driver":  "Ayrton Senna",
+        "nationality":  "Brazilian",
+        "team":  "McLaren",
+        "points":  90,
+        "wins":  8
+    },
+    {
+        "season":  1989,
+        "driver":  "Alain Prost",
+        "nationality":  "French",
+        "team":  "McLaren",
+        "points":  76,
+        "wins":  4
+    },
+    {
+        "season":  1990,
+        "driver":  "Ayrton Senna",
+        "nationality":  "Brazilian",
+        "team":  "McLaren",
+        "points":  78,
+        "wins":  6
+    },
+    {
+        "season":  1991,
+        "driver":  "Ayrton Senna",
+        "nationality":  "Brazilian",
+        "team":  "McLaren",
+        "points":  96,
+        "wins":  7
+    },
+    {
+        "season":  1992,
+        "driver":  "Nigel Mansell",
+        "nationality":  "British",
+        "team":  "Williams",
+        "points":  108,
+        "wins":  9
+    },
+    {
+        "season":  1993,
+        "driver":  "Alain Prost",
+        "nationality":  "French",
+        "team":  "Williams",
+        "points":  99,
+        "wins":  7
+    },
+    {
+        "season":  1994,
+        "driver":  "Michael Schumacher",
+        "nationality":  "German",
+        "team":  "Benetton",
+        "points":  92,
+        "wins":  8
+    },
+    {
+        "season":  1995,
+        "driver":  "Michael Schumacher",
+        "nationality":  "German",
+        "team":  "Benetton",
+        "points":  102,
+        "wins":  9
+    },
+    {
+        "season":  1996,
+        "driver":  "Damon Hill",
+        "nationality":  "British",
+        "team":  "Williams",
+        "points":  97,
+        "wins":  8
+    },
+    {
+        "season":  1997,
+        "driver":  "Jacques Villeneuve",
+        "nationality":  "Canadian",
+        "team":  "Williams",
+        "points":  81,
+        "wins":  7
+    },
+    {
+        "season":  1998,
+        "driver":  "Mika HÃ¤kkinen",
+        "nationality":  "Finnish",
+        "team":  "McLaren",
+        "points":  100,
+        "wins":  8
+    },
+    {
+        "season":  1999,
+        "driver":  "Mika HÃ¤kkinen",
+        "nationality":  "Finnish",
+        "team":  "McLaren",
+        "points":  76,
+        "wins":  5
+    },
+    {
+        "season":  2000,
+        "driver":  "Michael Schumacher",
+        "nationality":  "German",
+        "team":  "Ferrari",
+        "points":  108,
+        "wins":  9
+    },
+    {
+        "season":  2001,
+        "driver":  "Michael Schumacher",
+        "nationality":  "German",
+        "team":  "Ferrari",
+        "points":  123,
+        "wins":  9
+    },
+    {
+        "season":  2002,
+        "driver":  "Michael Schumacher",
+        "nationality":  "German",
+        "team":  "Ferrari",
+        "points":  144,
+        "wins":  11
+    },
+    {
+        "season":  2003,
+        "driver":  "Michael Schumacher",
+        "nationality":  "German",
+        "team":  "Ferrari",
+        "points":  93,
+        "wins":  6
+    },
+    {
+        "season":  2004,
+        "driver":  "Michael Schumacher",
+        "nationality":  "German",
+        "team":  "Ferrari",
+        "points":  148,
+        "wins":  13
+    },
+    {
+        "season":  2005,
+        "driver":  "Fernando Alonso",
+        "nationality":  "Spanish",
+        "team":  "Renault",
+        "points":  133,
+        "wins":  7
+    },
+    {
+        "season":  2006,
+        "driver":  "Fernando Alonso",
+        "nationality":  "Spanish",
+        "team":  "Renault",
+        "points":  134,
+        "wins":  7
+    },
+    {
+        "season":  2007,
+        "driver":  "Kimi RÃ¤ikkÃ¶nen",
+        "nationality":  "Finnish",
+        "team":  "Ferrari",
+        "points":  110,
+        "wins":  6
+    },
+    {
+        "season":  2008,
+        "driver":  "Lewis Hamilton",
+        "nationality":  "British",
+        "team":  "McLaren",
+        "points":  98,
+        "wins":  5
+    },
+    {
+        "season":  2009,
+        "driver":  "Jenson Button",
+        "nationality":  "British",
+        "team":  "Brawn",
+        "points":  95,
+        "wins":  6
+    },
+    {
+        "season":  2010,
+        "driver":  "Sebastian Vettel",
+        "nationality":  "German",
+        "team":  "Red Bull",
+        "points":  256,
+        "wins":  5
+    },
+    {
+        "season":  2011,
+        "driver":  "Sebastian Vettel",
+        "nationality":  "German",
+        "team":  "Red Bull",
+        "points":  392,
+        "wins":  11
+    },
+    {
+        "season":  2012,
+        "driver":  "Sebastian Vettel",
+        "nationality":  "German",
+        "team":  "Red Bull",
+        "points":  281,
+        "wins":  5
+    },
+    {
+        "season":  2013,
+        "driver":  "Sebastian Vettel",
+        "nationality":  "German",
+        "team":  "Red Bull",
+        "points":  397,
+        "wins":  13
+    },
+    {
+        "season":  2014,
+        "driver":  "Lewis Hamilton",
+        "nationality":  "British",
+        "team":  "Mercedes",
+        "points":  384,
+        "wins":  11
+    },
+    {
+        "season":  2015,
+        "driver":  "Lewis Hamilton",
+        "nationality":  "British",
+        "team":  "Mercedes",
+        "points":  381,
+        "wins":  10
+    },
+    {
+        "season":  2016,
+        "driver":  "Nico Rosberg",
+        "nationality":  "German",
+        "team":  "Mercedes",
+        "points":  385,
+        "wins":  9
+    },
+    {
+        "season":  2017,
+        "driver":  "Lewis Hamilton",
+        "nationality":  "British",
+        "team":  "Mercedes",
+        "points":  363,
+        "wins":  9
+    },
+    {
+        "season":  2018,
+        "driver":  "Lewis Hamilton",
+        "nationality":  "British",
+        "team":  "Mercedes",
+        "points":  408,
+        "wins":  11
+    },
+    {
+        "season":  2019,
+        "driver":  "Lewis Hamilton",
+        "nationality":  "British",
+        "team":  "Mercedes",
+        "points":  413,
+        "wins":  11
+    },
+    {
+        "season":  2020,
+        "driver":  "Lewis Hamilton",
+        "nationality":  "British",
+        "team":  "Mercedes",
+        "points":  347,
+        "wins":  11
+    },
+    {
+        "season":  2021,
+        "driver":  "Max Verstappen",
+        "nationality":  "Dutch",
+        "team":  "Red Bull",
+        "points":  395.5,
+        "wins":  10
+    },
+    {
+        "season":  2022,
+        "driver":  "Max Verstappen",
+        "nationality":  "Dutch",
+        "team":  "Red Bull",
+        "points":  454,
+        "wins":  15
+    },
+    {
+        "season":  2023,
+        "driver":  "Max Verstappen",
+        "nationality":  "Dutch",
+        "team":  "Red Bull",
+        "points":  575,
+        "wins":  19
+    },
+    {
+        "season":  2024,
+        "driver":  "Max Verstappen",
+        "nationality":  "Dutch",
+        "team":  "Red Bull",
+        "points":  437,
+        "wins":  9
+    },
+    {
+        "season":  2025,
+        "driver":  "Lando Norris",
+        "nationality":  "British",
+        "team":  "McLaren",
+        "points":  423,
+        "wins":  7
+    }
+]

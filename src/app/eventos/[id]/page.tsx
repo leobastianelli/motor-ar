@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CatMark, SectionTitle, StateTag } from "@/components/pista";
-import { getAllEvents, getEvent, getSeries, NOW } from "@/lib/data";
-import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtRange, fmtTime, fmtWeekday, sessionState, sessionStatus } from "@/lib/format";
+import { broadcastsBySeries } from "@/data/broadcasts";
+import { getAllEvents, getEvent, getNow, getSeries } from "@/lib/data";
+import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtRange, fmtWeekday, sessionState, sessionStatus, sessionTime } from "@/lib/format";
 import type { Broadcast } from "@/lib/types";
+
+export const revalidate = 60;
 
 export function generateStaticParams() {
   return getAllEvents().map((e) => ({ id: e.id }));
@@ -20,13 +23,16 @@ const RACE_KINDS = ["carrera", "final", "sprint", "serie"];
 export default async function EventPage(props: PageProps<"/eventos/[id]">) {
   const event = getEvent((await props.params).id);
   if (!event) notFound();
+  const now = getNow();
   const series = getSeries(event.seriesId)!;
 
   const byDay = Map.groupBy(event.sessions, (s) => dayKey(s.start));
-  const last = event.sessions.filter((s) => s.results?.length && sessionStatus(s, NOW) === "done").at(-1);
+  const last = event.sessions.filter((s) => s.results?.length && sessionStatus(s, now) === "done").at(-1);
   const rows = last?.results ?? [];
   const isRace = last ? RACE_KINDS.includes(last.kind) : false;
-  const streamUrl = event.sessions.find((s) => s.youtube)?.youtube ?? event.broadcasts.find((b) => b.url)?.url;
+  const streamUrl = event.broadcasts.find((b) => b.url)?.url;
+  const broadcastSource = broadcastsBySeries[event.seriesId]?.source;
+  const timesUnknown = event.sessions.some((s) => s.timeKnown === false);
 
   return (
     <>
@@ -46,7 +52,10 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
         <div className="event-meta">
           <p>{event.circuit.name}</p>
           <b>{event.sessions.length}</b>
-          <span>sesiones · {event.circuit.country}</span>
+          <span>
+            {event.sessions.length === 1 ? "sesión" : "sesiones"}
+            {event.circuit.province ? ` · ${event.circuit.province}` : event.circuit.country ? ` · ${event.circuit.country}` : ""}
+          </span>
         </div>
       </section>
 
@@ -61,17 +70,17 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                 </h3>
                 <div>
                   {sessions.map((s) => {
-                    const status = sessionStatus(s, NOW);
-                    const state = sessionState(s, NOW);
+                    const status = sessionStatus(s, now);
+                    const state = sessionState(s, now);
                     const top = s.results?.[0];
                     return (
                       <div key={s.id} className={`session${status === "live" ? " live-session" : ""}${status === "done" ? " done" : ""}`}>
-                        <time dateTime={s.start}>{fmtTime(s.start)}</time>
+                        <time dateTime={s.start}>{sessionTime(s)}</time>
                         <div>
                           <strong>{s.name}</strong>
                           <span>
                             {status === "live" && "En curso"}
-                            {status === "upcoming" && `${s.durationMin} min estimados`}
+                            {status === "upcoming" && (s.timeKnown === false ? "Horario a confirmar" : `${s.durationMin} min estimados`)}
                             {status === "done" && (top ? (s.id === last?.id ? <a href="#resultados">Terminó · ver resultados</a> : "Terminó") : "Terminó · sin resultados cargados")}
                           </span>
                         </div>
@@ -104,7 +113,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
           {event.broadcasts.length === 0 && (
             <div>
               <span>Sin datos</span>
-              <strong>Todavía no hay transmisión confirmada</strong>
+              <strong>No tenemos una transmisión confirmada en Argentina</strong>
             </div>
           )}
           {streamUrl && (
@@ -112,7 +121,18 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
               Abrir transmisión <span aria-hidden="true">↗</span>
             </a>
           )}
-          <p>Los horarios ya están convertidos a Argentina.</p>
+          <p>
+            {timesUnknown ? "La fuente todavía no publica los horarios de esta fecha." : "Los horarios ya están convertidos a Argentina."}
+            {event.source && ` Datos: ${event.source}.`}
+            {broadcastSource && (
+              <>
+                {" "}
+                <a href={broadcastSource} target="_blank" rel="noreferrer">
+                  Fuente de la transmisión
+                </a>
+              </>
+            )}
+          </p>
         </aside>
       </section>
 
@@ -120,9 +140,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
         <section className="classification-wrap" id="resultados">
           <div className="section-block">
             <SectionTitle title={last.name} inverse>
-              <time dateTime={last.start}>
-                {fmtDayShort(last.start)} {fmtTime(last.start)}
-              </time>
+              <time dateTime={last.start}>{fmtDayShort(last.start)}</time>
             </SectionTitle>
             <div className="session-result">
               <div className="pole">
@@ -130,7 +148,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                 <div>
                   <p>{isRace ? "Ganador" : "Mejor tiempo"}</p>
                   <h3>{rows[0].driver}</h3>
-                  <b>{rows[0].gap}</b>
+                  <b>{rows[0].gap || rows[0].team}</b>
                 </div>
               </div>
               <ol className="podium compact">
@@ -153,7 +171,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                 </summary>
                 <div className="ranking">
                   {rows.slice(3).map((r) => (
-                    <div key={r.pos} className={`rank-row${r.driverSlug ? " argentine" : ""}`}>
+                    <div key={`${r.pos}-${r.driver}`} className={`rank-row${r.driverSlug ? " argentine" : ""}`}>
                       <b>{r.pos}</b>
                       <span className="driver-code">{driverCode(r)}</span>
                       <strong>{r.driver}</strong>

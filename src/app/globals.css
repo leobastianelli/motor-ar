@@ -60,3 +60,5 @@
 @media(max-width:800px){.story-stats{grid-template-columns:1fr 1fr}}
 .timing-mini li:has(.state.no-data){display:block}
 .gains li{grid-template-columns:110px 1fr 36px}
+.source-note{font-size:13px;color:var(--muted);margin-top:14px}
+.broadcast>p a{color:inherit}

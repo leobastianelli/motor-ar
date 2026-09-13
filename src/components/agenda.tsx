@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import type { FeedItem } from "@/lib/data";
-import { dayKey, fmtDayNum, fmtTime, fmtWeekday, sessionState } from "@/lib/format";
+import { dayKey, fmtDayNum, fmtWeekday, sessionState, sessionTime } from "@/lib/format";
 import type { Scope } from "@/lib/types";
 import { Code, SectionTitle, StateTag } from "./pista";
 
@@ -44,7 +44,9 @@ export function Agenda({ items, days, today, now }: { items: FeedItem[]; days: {
           const state = sessionState(session, now);
           return (
             <Link key={session.id} href={`/eventos/${event.id}`} className={`schedule-row list-link${state.kind === "live" ? " current" : ""}`}>
-              <time dateTime={session.start}>{fmtTime(session.start)}</time>
+              <time dateTime={session.start} title={session.timeKnown === false ? "Horario a confirmar" : undefined}>
+                {sessionTime(session)}
+              </time>
               <Code series={series} />
               <div>
                 <strong>{series.name}</strong>
@@ -52,12 +54,12 @@ export function Agenda({ items, days, today, now }: { items: FeedItem[]; days: {
                   {session.name} · {event.circuit.city}
                 </span>
               </div>
-              <b className="channel">{event.broadcasts[0]?.name ?? "Sin transmisión"}</b>
+              <b className="channel">{event.broadcasts[0]?.name ?? "Sin datos de transmisión"}</b>
               <StateTag kind={state.kind}>{state.label}</StateTag>
             </Link>
           );
         })}
-        {rows.length === 0 && <p className="empty-state">No hay sesiones para este día con este filtro.</p>}
+        {rows.length === 0 && <p className="empty-state">No hay sesiones cargadas para este día con este filtro.</p>}
       </div>
     </section>
   );

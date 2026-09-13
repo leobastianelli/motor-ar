@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync:wiki": "node scripts/fetch-wiki.mjs",
+    "sync:history": "node scripts/sync-history.mjs",
+    "sync:season": "node scripts/sync-season-2026.mjs",
+    "sync": "npm run sync:wiki && npm run sync:history && npm run sync:season"
   },
   "dependencies": {
     "next": "16.3.5",

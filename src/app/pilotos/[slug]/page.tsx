@@ -17,9 +17,11 @@ import {
   standings2026,
   statusLabel,
 } from "@/lib/colapinto";
-import { getAllDrivers, getDriver, getNextRace, getSeries, NOW } from "@/lib/data";
+import { getAllDrivers, getDriver, getNextRace, getNow, getSeasonMeta, getSeries, getStandingPosition } from "@/lib/data";
 import { fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/format";
 import type { Driver } from "@/lib/types";
+
+export const revalidate = 60;
 
 export function generateStaticParams() {
   return getAllDrivers().map((d) => ({ slug: d.slug }));
@@ -29,24 +31,24 @@ export async function generateMetadata(props: PageProps<"/pilotos/[slug]">): Pro
   return { title: getDriver((await props.params).slug)?.name ?? "Piloto" };
 }
 
-function age(born: string) {
+function age(born: string, now: string) {
   const m = born.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
   if (!m) return null;
-  const now = new Date(NOW);
-  let years = now.getFullYear() - Number(m[3]);
-  if (now.getMonth() + 1 < Number(m[2]) || (now.getMonth() + 1 === Number(m[2]) && now.getDate() < Number(m[1]))) years--;
+  const today = new Date(now);
+  let years = today.getFullYear() - Number(m[3]);
+  if (today.getMonth() + 1 < Number(m[2]) || (today.getMonth() + 1 === Number(m[2]) && today.getDate() < Number(m[1]))) years--;
   return years;
 }
 
-function NextRace({ driver }: { driver: Driver }) {
-  const next = getNextRace(driver.seriesId);
+function NextRace({ driver, now }: { driver: Driver; now: string }) {
+  const next = getNextRace(driver.seriesId, now);
   if (!next) return null;
   return (
     <div className="next-race">
       <span>Próxima carrera</span>
       <strong>{next.event.name}</strong>
       <time dateTime={next.session.start}>
-        {fmtDayShort(next.session.start)} · {fmtTime(next.session.start)}
+        {fmtDayShort(next.session.start)} · {next.session.timeKnown === false ? "horario a confirmar" : fmtTime(next.session.start)}
       </time>
       <Link href={`/eventos/${next.event.id}`}>Ver evento</Link>
     </div>
@@ -212,25 +214,37 @@ function ColapintoSections() {
 export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
   const driver = getDriver((await props.params).slug);
   if (!driver) notFound();
+  const now = getNow();
   const series = getSeries(driver.seriesId)!;
   const isColapinto = driver.slug === "franco-colapinto";
-  const years = age(driver.born);
+  const years = age(driver.born, now);
 
   const stages = isColapinto
     ? careerStages()
-    : [...driver.career].reverse().map((c) => ({ years: c.year, title: c.series, text: c.highlight, stat: c.team, major: false }));
+    : driver.career.map((c) => ({ years: c.year, title: c.series, text: c.highlight, stat: c.team, major: false })).reverse();
 
-  const trend = isColapinto ? championshipTrend() : null;
-  const stats = isColapinto ? seasonStats(2026) : null;
-  const ribbon = isColapinto
-    ? [
-        { label: "Temporada", value: "2026" },
-        { label: "Campeonato", value: `${trend!.position}.º`, note: trend!.label },
-        { label: "Puntos", value: String(stats!.points) },
-        { label: "Mejor resultado", value: `${stats!.best?.finishPos}.º`, note: stats!.best ? raceName(stats!.best.race) : undefined },
-        { label: `Vs. ${stats!.teammate}`, value: `${stats!.raceDuel.ahead}–${stats!.raceDuel.behind}`, note: "en carrera" },
-      ]
-    : [{ label: "Temporada", value: "2026" }, ...driver.seasonStats.map((s) => ({ label: s.label, value: s.value, note: undefined }))];
+  let ribbon: { label: string; value: string; note?: string }[];
+  if (isColapinto) {
+    const trend = championshipTrend();
+    const stats = seasonStats(2026);
+    ribbon = [
+      { label: "Temporada", value: "2026" },
+      { label: "Campeonato", value: `${trend.position}.º`, note: trend.label },
+      { label: "Puntos", value: String(stats.points) },
+      { label: "Mejor resultado", value: `${stats.best?.finishPos}.º`, note: stats.best ? raceName(stats.best.race) : undefined },
+      { label: `Vs. ${stats.teammate}`, value: `${stats.raceDuel.ahead}–${stats.raceDuel.behind}`, note: "en carrera" },
+    ];
+  } else {
+    const standing = getStandingPosition(driver);
+    const label = getSeasonMeta(driver.seriesId).standingsLabel;
+    ribbon = [
+      { label: "Temporada", value: "2026" },
+      { label: "Campeonato", value: standing ? `${standing.position}.º` : "—", note: label },
+      { label: "Puntos", value: standing ? String(standing.points) : "—" },
+      { label: "Victorias", value: standing?.wins === undefined ? "—" : String(standing.wins) },
+      { label: "Categoría", value: series.short, note: driver.team },
+    ];
+  }
 
   return (
     <>
@@ -253,7 +267,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
           </h1>
           {driver.number !== undefined && <b className="mega-number">{driver.number}</b>}
         </div>
-        <NextRace driver={driver} />
+        <NextRace driver={driver} now={now} />
       </section>
 
       <section className="season-ribbon">
@@ -268,26 +282,28 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
 
       {isColapinto && <ColapintoSections />}
 
-      <section className="career">
-        <div className="section-block">
-          <SectionTitle title="Trayectoria" inverse />
-          <div className="timeline" style={{ "--n": stages.length } as CSSProperties}>
-            {stages.map((s) => (
-              <article key={`${s.years}-${s.title}`} className={s.major ? "major" : undefined}>
-                <time>{s.years}</time>
-                <b>{s.title}</b>
-                <p>{s.text}</p>
-                <span>{s.stat}</span>
-              </article>
-            ))}
+      {stages.length > 0 && (
+        <section className="career">
+          <div className="section-block">
+            <SectionTitle title="Trayectoria" inverse />
+            <div className="timeline" style={{ "--n": stages.length } as CSSProperties}>
+              {stages.map((s) => (
+                <article key={`${s.years}-${s.title}`} className={s.major ? "major" : undefined}>
+                  <time>{s.years}</time>
+                  <b>{s.title}</b>
+                  <p>{s.text}</p>
+                  <span>{s.stat}</span>
+                </article>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {!isColapinto && (
         <section className="section-block">
           <p className="empty-state">
-            Todavía no cargamos el carrera a carrera de {driver.name}. {series.name} · {driver.team}.
+            Todavía no cargamos el carrera a carrera de {driver.name}. Los resultados de {series.name} aparecen en cada evento.
           </p>
         </section>
       )}

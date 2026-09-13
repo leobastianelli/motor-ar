@@ -20,6 +20,7 @@ export interface Circuit {
   name: string;
   city: string;
   country: string;
+  province?: string;
   /** Código ISO 3166-1 alfa-2. Los emojis de bandera no se ven en Windows. */
   flag: string;
 }
@@ -41,18 +42,18 @@ export interface ResultRow {
   team: string;
   gap: string;
   points?: number;
-  flag?: string;
+  grid?: number;
 }
 
 export interface Session {
   id: string;
   kind: SessionKind;
   name: string;
-  /** ISO 8601 con offset. */
+  /** ISO 8601 con offset. Si `timeKnown` es falso, sólo la fecha es confiable. */
   start: string;
+  timeKnown?: boolean;
   durationMin: number;
   results?: ResultRow[];
-  youtube?: string;
 }
 
 export interface Broadcast {
@@ -69,6 +70,17 @@ export interface RaceEvent {
   circuit: Circuit;
   sessions: Session[];
   broadcasts: Broadcast[];
+  /** De dónde salen los datos del evento. */
+  source?: string;
+}
+
+export interface StandingRow {
+  pos: number;
+  driver: string;
+  team: string;
+  points: number;
+  wins?: number;
+  driverSlug?: string;
 }
 
 export interface CareerStint {
@@ -76,20 +88,19 @@ export interface CareerStint {
   series: string;
   team: string;
   highlight: string;
-  stats?: { label: string; value: string }[];
 }
 
 export interface Driver {
   slug: string;
   name: string;
-  nickname?: string;
+  /** Otras formas en que las fuentes escriben el nombre. */
+  aliases?: string[];
   number?: number;
   seriesId: string;
   team: string;
   hometown: string;
   born: string;
   tagline: string;
-  seasonStats: { label: string; value: string }[];
   career: CareerStint[];
 }
 
@@ -108,4 +119,29 @@ export interface Legend {
   tagline: string;
   keyStats: { label: string; value: string }[];
   chapters: LegendChapter[];
+}
+
+export interface ChampionEntry {
+  year: number;
+  label?: string;
+  driver: string;
+  detail?: string;
+  make?: string;
+  argentine?: boolean;
+  group?: string;
+}
+
+export interface CategoryHistory {
+  source: { label: string; url: string; license: string };
+  champions: ChampionEntry[];
+  winsLeaders?: { driver: string; wins: number }[];
+  note?: string;
+  argentineTitles?: number;
+  firstYear: number;
+  lastYear: number;
+  seasons: number;
+  distinctChampions: number;
+  topChampions: { driver: string; titles: number; years: number[] }[];
+  makeLabel: string;
+  topMakes: { name: string; titles: number }[];
 }

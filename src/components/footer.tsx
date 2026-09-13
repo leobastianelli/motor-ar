@@ -10,7 +10,7 @@ export function Footer() {
       <p>
         Automovilismo en hora argentina.
         <br />
-        Agenda y resultados de muestra; datos de Colapinto verificados.
+        Datos: Jolpica-F1, Wikipedia, ACTC y APAT.
       </p>
       <nav aria-label="Pie de página">
         <Link href="/calendario">Calendario</Link>

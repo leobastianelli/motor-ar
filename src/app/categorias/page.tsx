@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Code, SectionTitle, StateTag } from "@/components/pista";
-import { getAllSeries, getEventsForSeries, getNextSession } from "@/lib/data";
+import { getAllSeries, getEventsForSeries, getNextSession, getNow } from "@/lib/data";
 import { fmtDayNum, fmtMonthShort } from "@/lib/format";
 import type { Scope } from "@/lib/types";
 
 export const metadata: Metadata = { title: "Categorías" };
+export const revalidate = 60;
 
 const GROUPS: { scope: Scope; title: string }[] = [
   { scope: "nacional", title: "Nacionales" },
@@ -14,6 +15,7 @@ const GROUPS: { scope: Scope; title: string }[] = [
 ];
 
 export default function CategoriesPage() {
+  const now = getNow();
   const all = getAllSeries();
   return (
     <>
@@ -30,7 +32,7 @@ export default function CategoriesPage() {
             {all
               .filter((s) => s.scope === g.scope)
               .map((s) => {
-                const next = getEventsForSeries(s.id).find((e) => getNextSession(e));
+                const next = getEventsForSeries(s.id).find((e) => getNextSession(e, now));
                 const date = next?.sessions.at(-1)!.start;
                 return (
                   <Link key={s.id} href={`/categorias/${s.id}`} className="schedule-row list-link">

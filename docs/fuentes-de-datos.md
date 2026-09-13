@@ -95,3 +95,29 @@ Relevado el 2026-09-13. "Verificado" = hicimos una consulta real y respondió co
 | Declaraciones recientes | — | Curaduría | ⏳ pendiente de definir el flujo |
 
 Pendiente de revisar: Jolpica muestra el campeonato 2026 tras la fecha 14 (Madrid), pero todavía no publicó el resultado de carrera de Colapinto en esa fecha.
+
+## Sincronización implementada (2026-09-13)
+
+`npm run sync` baja Wikipedia, arma el archivo histórico y la temporada 2026. El sitio lee dos instantáneas versionadas:
+
+| Archivo | Script | Contenido |
+|---|---|---|
+| `src/data/history.json` | `scripts/sync-history.mjs` | Campeones por año y récords de TC, TC2000, TN, F1, F2, IndyCar y NASCAR |
+| `src/data/season-2026.json` | `scripts/sync-season-2026.mjs` | Calendario, resultados y campeonato 2026 de 8 categorías |
+
+| Categoría | Calendario | Horarios | Resultados | Campeonato |
+|---|---|---|---|---|
+| F1 | Jolpica | ✅ por sesión | ✅ carrera, clasificación y sprint | ✅ |
+| F2 | Wikipedia | ❌ sólo fecha | ✅ posición de todos (desde la tabla de campeonato) | ✅ |
+| IndyCar | Wikipedia | ✅ (hora del Este convertida) | ✅ | ✅ |
+| NASCAR Cup | Wikipedia | ✅ (hora del Este convertida) | ✅ | ✅ |
+| TC | ACTC oficial | ❌ sólo fecha | Podio (Wikipedia) | ✅ Copa de Oro (Wikipedia) |
+| TC Pista | ACTC oficial | ❌ sólo fecha | ❌ | ❌ |
+| TN APAT | APAT oficial | ❌ sólo fecha | ✅ finales Clase 2 y 3 completas | ✅ Clase 3 (Clase 2 en `meta`) |
+| TC2000 | Wikipedia (incompleto) | ❌ | Sólo ganador | ✅ parcial |
+
+- Sesiones sin horario (`timeKnown: false`) nunca se muestran "en vivo": pasan de "Hoy" a "Terminó" o "Sin datos".
+- Si una fuente falla, el sincronizador conserva los datos anteriores de esa categoría.
+- Las páginas de APAT se cachean en `research/html/` y se piden con pausas de 1,5 s.
+- Dónde ver: `src/data/broadcasts.ts`, sólo con fuente. NASCAR, GT3 y zonales quedan "sin datos".
+- Pendiente: automatizar `npm run sync` (cron), horarios de categorías nacionales, resultados de TC Pista y TC2000, GT3 y zonales.

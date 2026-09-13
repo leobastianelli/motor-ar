@@ -1,0 +1,710 @@
+{{Evento actual|deporte|motor}}
+{| class="toccolours" style="margin: 0 0 1em 1em; float:right; text-align:center; width: 20em;"
+|colspan="2" style="padding:0 1em;border-bottom:1px #aaa solid;"| '''Temporada 2026 de [[Turismo Competición 2000|TC2000]]'''
+|-
+|Anterior: [[Anexo:Temporada 2025 de TC2000|2025]]
+|Siguiente: [[Anexo:Temporada 2027 de TC2000|2027]]
+|}
+La '''temporada 2026 de TC2000''' es la 48.ª edición de [[Turismo Competición 2000]] y la quinta del renombrado TC2000. Inició el 15 de marzo en el [[circuito callejero de la Ciudad de Buenos Aires]].
+
+== Equipos y pilotos ==
+{|
+|
+{| class="wikitable" style="font-size: 90%;
+! Equipo
+! Automóvil
+! {{Abreviatura|N.º|Número del piloto}}
+! Pilotos
+! Carreras
+! Clase
+|-
+!colspan="6"| Equipos oficiales
+|-
+| rowspan="3" | [[Toyota Gazoo Racing Argentina|Toyota Gazoo Racing YPF Infinia]] <ref>{{Cita web|url=https://campeones.com.ar/valentin-yankelevich-se-suma-al-toyota-gazoo-racing/|título=Valentin Yankelevich se suma al Toyota Gazoo Racing|fechaacceso=2026-03-06|apellido=Bretto|nombre=Ignacio|fecha=2026-02-19|sitioweb=Campeones|idioma=es}}</ref>
+| rowspan="3" | [[Toyota Corolla Cross]]
+|162
+| {{bandera|ARG}} Emiliano Stang
+|1-4
+|
+|-
+|1
+| {{bandera|ARG}} [[Matías Rossi]]
+|1-4
+|
+|-
+|5
+|{{bandera|ARG}} Valentín Yankelevich
+|1-4
+|align="center"| '''<span style="padding:1px 4px; color:white; background-color:red;">CRL</span>'''
+|-
+| rowspan="2" | [[RV Racing Sport|YPF Honda RV Racing]] <ref>{{Cita web|url=https://campeones.com.ar/tc2000-facundo-aldrighetti-y-francisco-monarca-con-equipo-confirmado/|título=TC2000: Facundo Aldrighetti y Francisco Monarca, con equipo confirmado|fechaacceso=2026-03-06|apellido=Cinti|nombre=Iván|fecha=2026-03-05|sitioweb=Campeones|idioma=es}}</ref>
+| rowspan="2" | [[Honda ZR-V]]
+|83
+| {{bandera|ARG}} [[Facundo Aldrighetti]]
+|1-4
+|
+|-
+|23
+| {{bandera|ARG}} Francisco Monarca
+|1-3
+|align="center"| '''<span style="padding:1px 4px; color:white; background-color:red;">CRL</span>'''
+|-
+| rowspan="2" |[[Pro Racing|YPF Elaion Auro Pro Racing]] 
+| rowspan="2" |[[Chevrolet Tracker (2019)|Chevrolet Tracker]] 
+|57
+|{{bandera|ARG}}  [[Franco Vivian]]
+|1, 3-4
+|
+|-
+|64
+|{{bandera|ARG}} [[Franco Morillo]]
+|1-4
+|
+|-
+!colspan="6"| Equipos particulares
+|-
+| rowspan="2" |[[Pro Racing]]
+| rowspan="2" |[[Chevrolet Cruze]]
+|7
+|{{bandera|ARG}} Nicolás Traut
+|1-4
+|
+|-
+|78
+|{{bandera|ARG}} Franco Riva
+|1-4
+|
+|-
+| rowspan="2" |Corsi Sport <ref>{{Cita web|url=https://www.carburando.com/notas/tc2000-el-corsi-sport-apuntala-su-proyecto-2026-y-trabaja-para-sostener-el-nivel-de-las-corolla-cross|título=TC2000: el Corsi Sport apuntala su proyecto 2026 y trabaja para sostener el nivel de las Corolla Cross|fechaacceso=2026-03-11|fecha=2026-01-18|sitioweb=Carburando|idioma=es}}</ref><ref>{{Cita web|url=https://campeones.com.ar/proyecto-ruso-en-el-tc2000/|título=Rusia tendrá un piloto en el TC2000|fechaacceso=2026-03-06|apellido=Acosta|nombre=Gino Nicolás|fecha=2026-03-04|sitioweb=Campeones|idioma=es}}</ref>
+| rowspan="3" |[[Toyota Corolla Cross]]
+|32
+|{{bandera|ARG}}  [[Gabriel Ponce de León]]
+|1-4
+|
+|-
+|11
+| {{bandera|ARG}}  Tomás Fernández
+|1-4
+|align="center"| '''<span style="padding:1px 4px; color:white; background-color:red;">CRL</span>'''
+|-
+|Corsi Sport 2
+|16
+|{{bandera|RUS}} Evgeny Leonov
+|1
+|
+|-
+|Pfening Competición <ref>{{Cita web|url=https://campeones.com.ar/la-segunda-nissan-kicks-de-tc2000-toma-forma/|título=La segunda Nissan Kicks de TC2000 toma forma|fechaacceso=2026-03-06|apellido=Cinti|nombre=Iván|fecha=2026-02-13|sitioweb=Campeones|idioma=es}}</ref>
+|[[Nissan Kicks]]
+|115
+|{{bandera|ARG}}  [[Diego Ciantini]]
+|1-3
+|align="center"| '''<span style="padding:1px 4px; color:white; background-color:red;">CRL</span>'''
+|-
+| rowspan="2" |ATR Racing <ref>{{Cita web|url=https://campeones.com.ar/tc2000-el-fiat-pulse-se-suma-a-la-categoria/|título=Un nuevo SUV se suma al TC2000|fechaacceso=2026-03-06|apellido=Bretto|nombre=Ignacio|fecha=2026-01-08|sitioweb=Campeones|idioma=es}}</ref>
+|[[Fiat Pulse]]
+|25
+|{{bandera|ARG}} [[Marcelo Ciarrochi]]
+|1-4
+|
+|-
+|[[Fiat Cronos]]
+|86
+|{{bandera|ARG}}  Benjamín Squaglia
+|1-4
+|align="center"| '''<span style="padding:1px 4px; color:white; background-color:red;">CRL</span>'''
+|-
+|ATR Racing 2
+|[[Toyota Corolla]]
+|19
+|{{bandera|ARG}}  Nicolás Ginés
+|1-2
+|
+|-
+| rowspan="2" |Halcón Motorsport
+| rowspan="2" |[[Volkswagen Nivus/Taigo|Volkswagen Nivus]]
+|96
+|{{bandera|ARG}}  Nicolás Palau
+|1-3
+|align="center"| '''<span style="padding:1px 4px; color:white; background-color:red;">CRL</span>'''
+|-
+|99
+|{{bandera|ARG}}  Matías Capurro
+|1
+|align="center"| '''<span style="padding:1px 4px; color:white; background-color:red;">CRL</span>'''
+|}
+|valign="top"|
+{| class="wikitable" style="font-size: 85%;"
+! Icono
+! Clase
+|-
+|align="center"| '''<span style="padding:1px 4px; color:white; background-color:red;">CRL</span>'''
+| Copa Rookie Latam
+|}
+|}
+
+== Calendario ==
+{| class="wikitable" border="1" style="font-size: 90%"
+! Ronda
+! Circuito
+! Fecha
+|-
+! 1
+| {{bandera|Ciudad de Buenos Aires}} [[Circuito callejero de la Ciudad de Buenos Aires]]
+| 15 de marzo
+|-
+! 2
+| {{bandera|Provincia de San Juan}} [[Autódromo Eduardo Copello]]
+| 12 de abril
+|-
+! 3
+| {{bandera|Provincia de Santa Fe}} [[Autódromo Municipal Juan Manuel Fangio]]
+| 3 de mayo
+|-
+! 4
+| {{bandera|Provincia de Salta}} [[Autódromo Martín Miguel de Güemes]]
+| 24 de mayo
+|-
+! 5
+| {{bandera|Ciudad de Buenos Aires}} [[Autódromo San Nicolás|Autódromo Juan María Traverso]] 
+| 28 de junio
+|-
+! 6
+| {{bandera|}} Por anunciar
+| Por anunciar
+|-
+! 7
+| {{bandera|}} Por anunciar
+| Por anunciar
+|-
+! 8
+| {{bandera|}} Por anunciar
+| Por anunciar
+|-
+! 9
+| {{bandera|}} Por anunciar
+| Por anunciar
+|-
+! 10
+| {{bandera|}} Por anunciar
+| Por anunciar
+|-
+! 11
+| {{bandera|}} Por anunciar
+| Por anunciar
+|-
+! 12
+| {{bandera|}} Por anunciar
+| Por anunciar
+|-
+!colspan="3"| Fuentes:<ref>{{Cita web|título=PLAZAS CONFIRMADAS|url=https://tc2000.com.ar/noticias.php?accion=detalle&id=56336|obra=[[Turismo Competición 2000|TC2000]]|fecha=17 de marzo de 2026|fechaacceso=18 de marzo de 2026}}</ref><ref>{{Cita web|url=https://www.carburando.com/notas/tc2000-confirmado-la-segunda-fecha-de-la-temporada-2026-sera-en-el-zonda-de-san-juan|título=TC2000: ¡Confirmado! La segunda fecha de la temporada 2026 será en El Zonda de San Juan|fechaacceso=2026-03-16|fecha=2026-03-15|sitioweb=Carburando|idioma=es}}</ref><ref>{{Cita web|título=TC2000 Calendario 2026|url=https://campeones.com.ar/super-tc2000-calendario-2022/|obra=[[Campeones (programa de radio y televisión)|Campeones]]|fechaacceso=18 de marzo de 2026}}</ref>
+|}
+
+== Resultados ==
+{| class="wikitable" style="font-size:85%"
+!colspan="2"| Ronda
+! ''Pole Position''
+! Vuelta rápida
+! Piloto ganador
+! Equipo ganador
+! Resultados
+! {{Abreviatura|Ref.|Referencias}}
+|-
+! 1
+| Buenos Aires
+| {{bandera|ARG}} [[Matías Rossi]]
+| {{bandera|ARG}} Valentín Yankelevich
+| {{bandera|ARG}} Franco Riva
+| [[Pro Racing]]
+| Resultados
+|align="center"| <ref>{{Cita web|url=https://campeones.com.ar/tc2000-franco-riva-el-dueno-de-las-calles-portenas/|título=TC2000: Franco Riva, el dueño de las calles porteñas|fechaacceso=2026-03-16|apellido=Cinti|nombre=Iván|fecha=2026-03-15|sitioweb=Campeones|idioma=es}}</ref>
+|}
+
+== Clasificaciones ==
+=== Puntuaciones ===
+{| class="wikitable" style="font-size:85%; text-align:center"
+! Posición
+|style="background:#ffffbf;"| '''1.º'''
+|style="background:#dfdfdf;"| '''2.º'''
+|style="background:#ffdf9f;"| '''3.º'''
+|style="background:#dfffdf;"| '''4.º'''
+|style="background:#dfffdf;"| '''5.º'''
+|style="background:#dfffdf;"| '''6.º'''
+|style="background:#dfffdf;"| '''7.º'''
+|style="background:#dfffdf;"| '''8.º'''
+|style="background:#dfffdf;"| '''9.º'''
+|style="background:#dfffdf;"| '''10.º'''
+|style="background:#dfffdf;"| '''11.º'''
+|style="background:#dfffdf;"| '''12.º'''
+|-
+! Clasificación evento regular
+|style="background:#ffffbf;"| 12
+|style="background:#dfdfdf;"| 9
+|style="background:#ffdf9f;"| 6
+|style="background:#dfffdf;"| 3
+|style="background:#dfffdf;"| 1
+|colspan="7"|
+|-
+! Sprint evento regular
+|style="background:#ffffbf;"| 8
+|style="background:#dfdfdf;"| 7
+|style="background:#ffdf9f;"| 6
+|style="background:#dfffdf;"| 5
+|style="background:#dfffdf;"| 4
+|style="background:#dfffdf;"| 3
+|style="background:#dfffdf;"| 2
+|style="background:#dfffdf;"| 1
+|colspan="4"|
+|-
+! Carrera evento regular
+|style="background:#ffffbf;"| 20
+|style="background:#dfdfdf;"| 15
+|style="background:#ffdf9f;"| 12
+|style="background:#dfffdf;"| 10
+|style="background:#dfffdf;"| 8
+|style="background:#dfffdf;"| 6
+|style="background:#dfffdf;"| 4
+|style="background:#dfffdf;"| 3
+|style="background:#dfffdf;"| 2
+|style="background:#dfffdf;"| 1
+|colspan="2"|
+|-
+! Clasificación 200 km
+|style="background:#ffffbf;"| 12
+|style="background:#dfdfdf;"| 9
+|style="background:#ffdf9f;"| 6
+|style="background:#dfffdf;"| 3
+|style="background:#dfffdf;"| 1
+|colspan="7"|
+|-
+! Sprint 200 km
+|style="background:#ffffbf;"| 8
+|style="background:#dfdfdf;"| 7
+|style="background:#ffdf9f;"| 6
+|style="background:#dfffdf;"| 5
+|style="background:#dfffdf;"| 4
+|style="background:#dfffdf;"| 3
+|style="background:#dfffdf;"| 2
+|style="background:#dfffdf;"| 1
+|colspan="4"|
+|-
+! Carrera 200 km
+|style="background:#ffffbf;"| 25
+|style="background:#dfdfdf;"| 20
+|style="background:#ffdf9f;"| 18
+|style="background:#dfffdf;"| 16
+|style="background:#dfffdf;"| 13
+|style="background:#dfffdf;"| 10
+|style="background:#dfffdf;"| 8
+|style="background:#dfffdf;"| 6
+|style="background:#dfffdf;"| 4
+|style="background:#dfffdf;"| 3
+|style="background:#dfffdf;"| 2
+|style="background:#dfffdf;"| 1
+|-
+!colspan="13"| Fuente:<ref>{{Cita web|título=CAMPEONATO ARGENTINO DE TC2000 REGLAMENTO DEPORTIVO TEMPORADA 2026|url=https://tc2000.com.ar/archivos/tc2000/tc2000-2026-reglamento-deportivo.pdf|obra=[[Turismo Competición 2000|TC2000]]|fechaacceso=18 de marzo de 2026|formato=PDF}}</ref>
+|}
+
+=== Campeonato de Pilotos ===
+{|
+|style="vertical-align:top; text-align:center"|
+{| class="wikitable" style="font-size: 85%;"
+|- valign="middle"
+! {{Abreviatura|Pos.|Posición}}
+! Piloto
+! [[Circuito callejero de la Ciudad de Buenos Aires|BUE]]<br>{{bandera|Ciudad de Buenos Aires}}
+! [[Autódromo Eduardo Copello|SJU]]<br>{{bandera|Provincia de San Juan}}
+! [[Autódromo Municipal Juan Manuel Fangio|ROS]]<br>{{bandera|Provincia de Santa Fe}}
+! [[Autódromo Martín Miguel de Güemes|SAL]]<br>{{bandera|Provincia de Salta}}
+! TBA<br>{{bandera|Ciudad de Buenos Aires}}
+! TBA<br>{{bandera|}}
+! TBA<br>{{bandera|}}
+! TBA<br>{{bandera|}}
+! TBA<br>{{bandera|}}
+! TBA<br>{{bandera|}}
+! TBA<br>{{bandera|}}
+! TBA<br>{{bandera|}}
+! Puntos
+|-
+! 1
+|align="left"| {{bandera|ARG}} Emiliano Stang
+|bgcolor="#DFDFDF"| 2
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 26
+|-
+! 2
+|align="left"| {{bandera|ARG}} Franco Riva
+|bgcolor="#FFFFBF"| 1
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 25
+|-
+! 3
+|align="left"| {{bandera|ARG}} Valentín Yankelevich
+|bgcolor="#FFDF9F"| ''3''
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 18
+|-
+! 4
+|align="left"| {{bandera|ARG}} [[Diego Ciantini]]
+|bgcolor="#DFFFDF"| 5
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 16
+|-
+! 5
+|align="left"| {{bandera|ARG}} [[Franco Morillo]]
+|bgcolor="#DFFFDF"| 4
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 16
+|-
+! 6
+|align="left"| {{bandera|ARG}} [[Gabriel Ponce de León]]
+|bgcolor="#DFFFDF"| 9
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 13
+|-
+! 7
+|align="left"| {{bandera|ARG}} [[Matías Rossi]]
+|bgcolor="#EFCFFF"| '''Ret'''
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 12
+|-
+! 8
+|align="left"| {{bandera|ARG}} Benjamín Squaglia
+|bgcolor="#DFFFDF"| 6
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 10
+|-
+! 9
+|align="left"| {{bandera|ARG}} Tomás Fernández
+|bgcolor="#DFFFDF"| 7
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 8
+|-
+! 10
+|align="left"| {{bandera|ARG}} Matías Capurro
+|bgcolor="#DFFFDF"| 8
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 6
+|-
+! 11
+|align="left"| {{bandera|ARG}} Nicolás Traut
+|bgcolor="#DFFFDF"| 10
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 3
+|-
+! 12
+|align="left"| {{bandera|ARG}} [[Facundo Aldrighetti]]
+|bgcolor="#CFCFFF"| 11
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 2
+|-
+! 13
+|align="left"| {{bandera|ARG}} Nicolás Ginés
+|bgcolor="#CFCFFF"| 12
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 1
+|-
+! 14
+|align="left"| {{bandera|ARG}} Nicolás Palau
+|bgcolor="#EFCFFF"| Ret
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 1
+|-
+! 15
+|align="left"| {{bandera|RUS}} Evgeny Leonov
+|bgcolor="#CFCFFF"| 13
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 0
+|-
+! 16
+|align="left"| {{bandera|ARG}} [[Franco Vivian]]
+|bgcolor="#CFCFFF"| 17
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 0
+|-
+! 17
+|align="left"| {{bandera|ARG}} [[Marcelo Ciarrochi]]
+|bgcolor="#CFCFFF"| 14
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 0
+|-
+! NC
+|align="left"| {{bandera|ARG}} Francisco Monarca
+|bgcolor="#EFCFFF"| Ret
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! 0
+|-
+! {{Abreviatura|Pos.|Posición}}
+! Piloto
+! [[Circuito callejero de la Ciudad de Buenos Aires|BUE]]<br>{{bandera|Ciudad de Buenos Aires}}
+! [[Autódromo Eduardo Copello|SJU]]<br>{{bandera|Provincia de San Juan}}
+! [[Autódromo Municipal Juan Manuel Fangio|ROS]]<br>{{bandera|Provincia de Santa Fe}}
+! [[Autódromo Martín Miguel de Güemes|SAL]]<br>{{bandera|Provincia de Salta}}
+! TBA<br>{{bandera|Ciudad de Buenos Aires}}
+! TBA<br>{{bandera|}}
+! TBA<br>{{bandera|}}
+! TBA<br>{{bandera|}}
+! TBA<br>{{bandera|}}
+! TBA<br>{{bandera|}}
+! TBA<br>{{bandera|}}
+! TBA<br>{{bandera|}}
+! Puntos
+|}
+{{Leyenda de resultados de carreras de motor}}
+|}
+
+=== Copa Rookie Latam ===
+{| class="wikitable" style="text-align:center; font-size: 85%"
+! Pos.
+! Piloto
+! Puntos
+|-
+! 1
+|align="left"| {{bandera|ARG}} Valentín Yankelevich
+! 9
+|-
+! 2
+|align="left"| {{bandera|ARG}} [[Diego Ciantini]]
+! 6
+|-
+! 3
+|align="left"| {{bandera|ARG}} Benjamín Squaglia
+! 4
+|-
+! 4
+|align="left"| {{bandera|ARG}} Tomás Fernández
+! 3
+|-
+! 5
+|align="left"| {{bandera|ARG}} Matías Capurro
+! 2
+|-
+! 6
+|align="left"| {{bandera|ARG}} Francisco Monarca
+! 0
+|-
+! 7
+|align="left"| {{bandera|ARG}} Nicolás Palau
+! 0
+|}
+
+=== Campeonato de Marcas ===
+{| class="wikitable" style="text-align:center; font-size: 85%"
+! Pos.
+! Marca
+! Puntos
+|-
+! 1
+|align="left"| {{bandera|JPN}} [[Toyota]]
+! 26
+|-
+! 2
+|align="left"| {{bandera|USA}} [[Chevrolet]]
+! 16
+|-
+! 3
+|align="left"| {{bandera|JPN}} [[Nissan]]
+! 16
+|-
+! 4
+|align="left"| {{bandera|GER}} [[Volkswagen]]
+! 6
+|-
+! 5
+|align="left"| {{bandera|JPN}} [[Honda]]
+! 2
+|-
+! 6
+|align="left"| {{bandera|ITA}} [[Fiat]]
+! 0
+|}
+
+== Referencias ==
+{{listaref|2}}
+
+== Enlaces externos ==
+* {{Página web|https://tc2000.com.ar/}}
+
+{{Control de autoridades}}
+[[Categoría:Temporadas de Turismo Competición 2000|2026]]
+[[Categoría:Deportes de motor en 2026]]
+[[Categoría:Deporte en Argentina en 2026]]

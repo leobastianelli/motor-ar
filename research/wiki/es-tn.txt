@@ -1,0 +1,923 @@
+{{Ficha de competición a motor
+|nombre         = TN APAT<ref name=TNAPAT>{{citaweb|url=https://www.carburando.com/notas/tn-las-autoridades-de-apat-hablaron-del-cambio-de-nombre-de-la-categoria|título=TN: las autoridades de APAT hablaron del cambio de nombre de la categoría.|sitioweb=[[Carburando]]|fecha=2024-11-16|fechaacceso=2025-03-17}}</ref> 
+|temporada      = [[Anexo:Temporada 2026 de TN APAT|2026]]
+|imagen         = TN APAT 200 Pilotos 2025. Sábado, Carrera de invitados Clase 2 - 32.jpg
+|imagen_tamaño  = 
+|imagen_pie     = TN APAT en 2025.
+|categoría      = [[Automóvil de turismo|Turismos]]
+|ubicación      = {{ARG}}
+|fundación      = 1961
+|gerente        = [[Emanuel Moriatis]]<ref>{{cita web|url=https://campeones.com.ar/articulo/5317|título=Emanuel Moriatis es el nuevo presidente de Turismo Nacional|sitio web=[[Campeones (programa de radio y televisión)|Campeones]]|fecha=2021-04-22|fechaacceso=2021-08-31|fechaarchivo=24 de abril de 2021|urlarchivo=https://web.archive.org/web/20210424231836/http://campeones.com.ar/articulo/5317|deadurl=yes}}</ref>
+|lema           = Tu auto también corre<ref>{{Cita web|url=http://neuquentur.gob.ar/es/noticias-turisticas/28500/llega-a-neuquen-el-turismo-nacional-donde-tu-auto-tambien-corre/|título=Llega a Neuquén el Turismo Nacional donde “tu auto también corre”|fechaacceso=16 de octubre de 2019|sitioweb=Neuquén es tu Destino|idioma=es-ES}}</ref>
+|inaugural      = 
+|difunta        = 
+|ámbito         = 
+|vueltas        = 
+|dist_vuelta    = 
+|dist_vuelta_mi = 
+|dist_total     = 
+|dist_total_mi  = 
+|piloto campeón = Copa Abarth: Tomás Di Salvia ([[Fiat 500|Abarth 595]])<br>Clase 2: Bautista Damiani ([[Toyota Yaris]])<br>Clase 3: [[Julián Santero]] ([[Toyota Corolla E210]])
+|escudería campeona = 
+|ganador_añoX   = 
+|ganadorX      = 
+|pilotos        = 
+|escuderías     = 
+|constructores  = 
+|motores        = 
+|neumáticos     = 
+|web            = www.apat.org.ar/index.asp
+}}
+El '''Turismo Nacional''' (desde 2025 y por motivos legales, '''TN APAT'''),<ref name=TNAPAT/><ref>{{citaweb|url=https://www.carburando.com/notas/el-turismo-nacional-ya-no-podra-utilizar-ni-mostrar-logos-con-esta-denominacion|título=El Turismo Nacional ya no podrá utilizar ni mostrar logos con esta denominación|sitioweb=[[Carburando]]|fecha=2024-11-16|fechaacceso=2025-03-17}}</ref> es un campeonato [[argentina|argentino]] de [[Automovilismo|automovilismo de velocidad]] que se desarrolla desde el año 1961, con antecedentes sin puntaje desde el año 1956, hasta la instauración oficial del campeonato. Originalmente la categoría estaba regida por la Comisión Deportiva Automovilística (CDA) del [[Automóvil Club Argentino]], pero desde 2024 la misma está regida y fiscalizada por la [[Asociación Corredores de Turismo Carretera|Asociación Corredores de Turismo Carretera (ACTC)]], mientras que la administración legal y deportiva de la categoría, y la organización de los eventos y campeonatos corre por cuenta de su propia Asociación, conocida como la Asociación de Pilotos de Automóviles de Turismo (APAT).<ref>{{Cita web|url=http://www.polepositionweb.net/2023/12/12/la-actc-fiscalizara-al-turismo-nacional-y-turismo-pista-en-2024/|título=La ACTC fiscalizará al Turismo Nacional y Turismo Pista en 2024|fechaacceso=12 de marzo de 2024|sitioweb=polepositionweb.net}}</ref><ref>{{Cita web|url=https://aptpweb.com.ar/la-actc-fiscalizara-al-turismo-pista-a-partir-del-2024/|título=La ACTC fiscalizará al Turismo Pista a partir de 2024|fechaacceso=12 de marzo de 2024|sitioweb=aptpweb.com.ar}}</ref> Los automóviles que participan son [[automóvil de turismo|turismos]] de preparación casi estándar, es decir prácticamente un coche de calle preparado para competencias. En principio competían autos de origen europeo, y en los GP se agregaban autos americanos. A partir de 1971 sólo se permitían modelos fabricados en Argentina (de ahí el nombre, es decir de fabricación nacional), en la década del 80, con la apertura comercial nuevamente se permitió la participación de autos importados, y después de la entrada de Argentina al [[Mercosur]] se pasaron a permitir también modelos [[brasileños]].
+
+En la actualidad, el Turismo Nacional se compone de dos divisiones, que comparten el calendario pero disputan las carreras por separarado. En la Clase 2 se permiten modelos del [[segmento B]] con motores de hasta 1.6 litros de cilindrada. Los automóviles de la Clase 3 están limitados a 2.0 litros de cilindrada; se permiten principalmente modelos del [[segmento C]].
+
+== Historia ==
+El Turismo Nacional fue gestado en sí a finales de la década de 1950, cuando el [[Automóvil Club Argentino]] habilitó la participación en los Grandes Premios de [[Turismo Carretera]] a los automóviles de preparación estándar de todas las marcas de la industria automovilística nacional. Esto provocó que unos años más tarde los pilotos de estas unidades decidan agruparse bajo una entidad diferente, creando en 1963 la [[Asociación de Pilotos de Automóviles de Turismo]] (APAT), entidad que hasta la actualidad se encargaría de la organización de las competencias del TN, sin perder su dependencia del [[Automóvil Club Argentino]]. Su primera sede social, tuvo lugar en el local de Gurruchaga 2064, en Palermo Viejo, siendo esta la sede actual del organismo.
+
+Cabe recordar que en esa época solo existían las asistencias mecánicas oficiales que muchas veces se veían limitadas en su trabajo por lo inhóspito de los lugares donde se llevaban a cabo las competencias, y los pilotos particulares debían llevar consigo infinidad de repuestos y herramientas para poder auto ayudarse junto con su copiloto en caso de roturas, esto sin dejar de lado que además de pilotos estos debían tener grandes conocimientos mecánicos, sin los cuales era prácticamente imposible poder competir.
+
+En 1961, esta camada de pilotos decidió reunirse con el objetivo de poder organizar carreras donde se compita con automóviles de producción nacional y preparación estándar o bien que mantengan sus líneas originales, sin ningún tipo de implemento aerodinámico, con el fin de poder mantener al público identificado con el vehículo original. Esta filosofía fue mantenida a lo largo de los años de existencia de esta categoría, lo que terminaría dando origen al lema de la categoría: ''Tu auto también corre''. Esta frase intentaba reflejarle al aficionado la posibilidad de identificarse con los modelos que corrían, comparándolos con su coche particular ya que estos no eran otra cosa que autos originales, preparados para competencias.
+[[Archivo:Buenos Aires TN 1974 largada.jpg|miniaturadeimagen|Largada en Buenos Aires en 1974.]]
+Estas competencias hacían que la categoría poco a poco vaya consolidándose, recibiendo en ese momento los nombres de Turismo Standard, Turismo Mejorado, Anexo J, Grupo 2 o Turismo Pista. Su participación en las diferentes competencias organizadas en el país, le hacían sumar diferentes representantes de las 23 provincias de Argentina y de la Capital Federal, quienes esperaban la organización de los Grandes Premios para ir a mostrarse ante su gente.
+
+Asimismo, comenzaba la disputa entre los concesionarios, lo que terminaría generando un nuevo duelo de marcas en el país, fuera del clásico [[Chevrolet]] vs. [[Ford]] del [[Turismo Carretera]]: nacía la rivalidad [[Fiat]] vs. [[Peugeot]]. La masiva concurrencia a las competencias de automóviles de dichas marcas, dejó una impronta imborrable en el automovilismo argentino, corriendo ya sea en pista como en montaña. Este último escenario, sería desprendido en 1980 del TN cuando se creó el [[Campeonato Argentino de Rally]], donde la dicotomía Fiat-Peugeot siguió su historia aparte.
+
+En 1996, el TN dejó de ser fiscalizado por el [[Automóvil Club Argentino|ACA]], y pasó a la órbita de la [[ACTC]]. En 2002 la categoría volvió a ser fiscalizada por el ACA.
+
+Durante la mayor parte del 2023, la Comisión Directiva de la APAT, encabezada por [[Emanuel Moriatis]], manifestó una creciente insatisfacción con la fiscalización y el apoyo de la CDA, lo que llevó a finales de ese año 2023 a iniciar conversaciones con la CD de la [[Asociación Corredores de Turismo Carretera]] para lograr el traspaso de la fiscalización de las clases 2 y 3 a la órbita de la ACTC, rompiendo lazos con la CDA del ACA. Las negociaciones con ACTC llegaron a buen puerto y a partir de la temporada 2024, y luego de más de 21 años (ACTC dejó de fiscalizar al TN en 2002), la ACTC, a través de su Comisión Asesora de Fiscalización (CAF), volvió a hacerse cargo de la fiscalización de las competencias del Turismo Nacional.<ref>{{Cita web|url=http://www.polepositionweb.net/2023/12/12/la-actc-fiscalizara-al-turismo-nacional-y-turismo-pista-en-2024/|título=La ACTC fiscalizará al Turismo Nacional y Turismo Pista en 2024|fechaacceso=19 de diciembre de 2023|sitioweb=polepositionweb.net}}</ref>
+
+A partir del anuncio de la APAT de traspasar la fiscalización de las Clases 2 y 3 del TN a la órbita de la ACTC, desde la CDA se decidió el inicio de acciones legales contra APAT por los derechos y la propiedad intelectual de la marca de la categoría "Turismo Nacional", con el argumento de que la misma había sido registrada por el ACA en el [[Instituto Nacional de la Propiedad Industrial]] (INPI) a partir de 1975.<ref>{{Cita web|url=https://campeones.com.ar/el-aca-inhibe-a-apat-de-usar-la-denominacion-turismo-nacional/|título=El ACA inhibe a APAT de usar la denominación “Turismo Nacional”|fechaacceso=12 de marzo de 2024|sitioweb=campeones.com.ar}}</ref> Pese a las amenazas del ACA del inicio de acciones judiciales, el nombre "Turismo Nacional" seguiría utilizándose para las categorías que están nucleadas históricamente en la APAT, dejando en claro que no se renunciaría a esa denominación para las actuales Clases 2 y 3.<ref>{{Cita web|url=https://campeones.com.ar/y-turismo-nacional-no-perdera-su-denominacion/|título=El Turismo Nacional no perderá su denominación|fechaacceso=12 de marzo de 2024|sitioweb=campeones.com.ar}}</ref> Aún así el ACA no estuvo dispuesto a ceder, continuando con la batalla legal contra APAT por la denominación de la categoría.<ref>{{citaweb|url=https://www.tycsports.com/automovilismo/la-cda-del-aca-le-prohibio-a-apat-usar-el-nombre-turismo-nacional-id555402.html|título=La CDA del ACA le prohibió a APAT usar el nombre Turismo Nacional.|sitioweb=[[Carburando]]|fecha=2023-12-28|fechaacceso=2025-01-15}}</ref> Finalmente, y tras un fallo favorable para la CDA, la Asociación de Pilotos de Automóviles de Turismo finalmente optaron por solamente dar a conocer a la categoría por sus siglas '''"TN"'''.<ref>{{citaweb|url=https://www.carburando.com/notas/el-turismo-nacional-ya-no-podra-utilizar-ni-mostrar-logos-con-esta-denominacion#:~:text=TN%20APAT-,El%20Turismo%20Nacional%20ya%20no%20podr%C3%A1%20utilizar%20ni%20mostrar%20logos,denominada%20por%20su%20nombre%20original|título=El Turismo Nacional ya no podrá utilizar ni mostrar logos con esta denominación.|sitioweb=[[Carburando]]|fecha=2024-11-16|fechaacceso=2025-01-15}}</ref>
+
+Luego de producirse la alianza entre la APAT y la ACTC, y como categoría fiscalizada por la ACTC, el TN APAT fue incorporado al organigrama de ascensos de la entidad "teceísta", para lo cual se dispuso un cupo en el [[Turismo Carretera]] para aquel piloto que se consagre campeón en la Clase 3, y un cupo para el [[TC Pista]] para quien obtenga el título en la Clase 2. En el caso del ascenso desde la Clase 3 al TC se dispuso que tal ascenso sea transferible, en caso de que quien se consagre campeón ya se encuentre compitiendo en dicha categoría, recayendo dicho cupo en el primer piloto que, estando en los primeros puestos en las posiciones del campeonato, no se encuentre compitiendo en el TC. Esta modificación al sistema de ascensos se aplicó por primera vez en la [[Anexo:Temporada 2025 de Turismo Carretera|Temporada 2025 del TC]] con el desembarco en dicha categoría del campeón 2024 del TN, [[Alfonso Domenech]].<ref>{{citaweb|url=https://www.solotc.com.ar/nuevo-beneficio-sistema-ascenso-tc-tc-pista/|título=Nuevo beneficio en el sistema de ascenso|sitioweb=SoloTC|fechaacceso=2025-08-08}}</ref><ref>{{citaweb|url=https://www.solotc.com.ar/alfonso-domenech-campeon-tn-logro-ascenso-tc-2025/|título=Alfonso Domenech habilitado a correr en el TC|sitioweb=SoloTC|fecha=2024-12-09|fechaacceso=2025-01-22}}</ref> Sin embargo en enero de 2026, la Comisión Asesora de Fiscalización de ACTC, por diversas críticas recibidas debido principalmente a los criterios de evaluación nunca explicados por la CAF, que llevó a autorizar ascensos a pilotos cuyo desempeño deportivo distaba de lo exhibido principalmente por alguno de los campeones que aspiraban al mismo derecho, decidió que tanto los campeones de las clases 2 y 3 del TN APAT tendrán el pase al TC y el TCP, pero previamente tendrán que competir durante un año en el TCP y en el [[TC Mouras]], y finalizar entre los primeros 6 de cada una de las categorías mencionadas.<ref>{{citaweb|url=https://www.solotc.com.ar/actc-endurece-sistema-ascensos-turismo-carretera-categorias/|título=La ACTC endurece el sistema de ascensos al Turismo Carretera.|sitioweb=SoloTC|fecha=2026-01-13|fechaacceso=2026-01-15}}</ref>
+
+=== Radio ===
+
+En la década de 1970, las carreras del Turismo Nacional eran transmitidas en vivo por la emisora radial [[Radio Splendid|Splendid]].<ref>{{citaweb|apellido=Di Benedetto|nombre=María Mercedes|url=https://argentores.org.ar/notas-revista-fd/radio-splendid-donde-las-estrellas-brillaban-mas/|título=Radio Splendid: donde las estrellas brillaban más|sitioweb=argentores.org.ar|fecha=2024-01-29|fechaacceso=2026-05-26}}</ref>
+
+=== Televisión ===
+
+En la década de 1980, el Turismo Nacional se transmitía en directo por televisión por el [[Canal 7 (Argentina)|Canal 7]] estatal, primero con producción de Coche a la Vista y a partir de 1989 con [[Campeones del Camino|Campeones]]. En 1994, el campeonato pasó a ser transmitida en directo por [[América TV (Argentina)|América 2]], [[América Sports|CV Sports]] y [[Plus Satelital|CV-Sat]]. En 1996, el campeonato pasó a ser televisada en vivo por [[Canal 13 (Argentina)|Canal 13]], [[TyC Sports]], [[TyC Sports Internacional]], [[Televisa Deportes Network]], [[Univision Deportes Network]], [[TyC Max]], [[Multideporte]], [[Sky Deportes]], [[Telecel Deportes]], [[TyC Max Satelital]], [[Multideporte Cableada]], [[Sky Deportes Satelital]], [[Unicable]] y [[Galavisión]], con la producción de Mundoshow Producciones & el equipo periodístico de [[Carburando]]. Entre 2012 y 2025, el TN formó parte del programa [[Carreras Argentinas]]. En 2026, ACTC Media TV, la productora de medios oficial de la ACTC anunció que había llegado a un acuerdo con [[Canal 9 (Buenos Aires)|El Nueve]] para que las carreras de todas las categorías de la entidad "teceísta", incluyendo al TN APAT, sean transmitidas a través de dicho canal.<ref>{{citaweb|url=https://www.solotc.com.ar/actc-tv-canal-9-mazzacane-acuerdo-2026/|título=Mazzacane y el acuerdo de la ACTC con Canal 9|sitioweb=SoloTC|fecha=2026-01-19|fechaacceso=2026-05-26}}</ref>
+
+== Clases ==
+Desde sus comienzos, la categoría organizaba sus competencias, dividiendo su parque automotor en clases, para las cuales se debía tener en cuenta el tamaño del vehículo y la cilindrada de los motores. Inicialmente, se llegaron a organizar 5 clases del TN.
+
+Actualmente, la categoría está dividida en dos divisiones bien diferenciadas. La división menor, es conocida como Clase 2, la cual está destinada a aquellos automóviles de producción nacional, preparación estándar y de una cilindrada máxima de 1600&nbsp;cm<small>3</small>. Mientras que la división mayor es conocida como Clase 3, la cual admite las mismas condiciones de la Clase 2, pero difiriendo en su cilindrada, la cual está permitida hasta un techo de 2000&nbsp;cm<sup>3</sup>.
+
+Con la eliminación de las restricciones de importación debido a la creación del [[Mercosur]], fueron admitidos en la categoría modelos producidos en [[Brasil]].<ref>{{Cita web|url=http://www.apat.org.ar/index.php?acc=elemento&id=15|título=Turismo Nacional - APAT|fechaacceso=2020-11-09|apellido=www.proyecto81.com.ar|sitioweb=Turismo Nacional - APAT|idioma=español}}</ref>
+
+=== Clase 2 ===
+[[Archivo:Darío Ippolito Onix TN Paraná 2018 (2).jpg|miniaturadeimagen|Chevrolet Onix de Clase 2.]]
+La Clase 2 del Turismo Nacional, es la denominada clase menor de la categoría, ya que de la misma está reglamentada la participación de automóviles de motorización con tope hasta los 1600&nbsp;cm³. En la misma ingresan habitualmente automóviles del [[segmento B]], generalmente de carrocería hatchback, aunque también está permitido el uso de modelos sedan como el [[Chevrolet Classic]]. para la homologación de los coches utilizados en esta divisional se tiene en cuenta además del origen de las unidades, su stock de producción por el cual se esté asegurado la normal provisión de componentes y repuestos, convirtiendo a la divisional en una categoría relativamente accesible por sus bajos costos.
+
+El campeonato de esta categoría, otorga la posibilidad a su campeón y subcampeón de poder realizar una temporada entera en la Clase 3 en el campeonato siguiente.
+
+==== Modelos ====
+* [[Audi A1]]
+* [[Chevrolet Onix]]
+* [[Chevrolet Classic]]
+* [[Fiat Palio]]
+* [[Fiat Argo]] 
+* [[Ford Fiesta Kinetic]]
+* [[Renault Clio]]
+* [[Renault Kwid]]
+* [[Renault Sandero]]
+* [[Nissan March]]
+* [[Peugeot 208]]
+* [[Volkswagen Gol Trend]]
+* [[Toyota Yaris]]
+* [[Toyota Etios]]
+* [[Citroën DS3]]<ref>{{Cita noticia|apellidos=www.proyecto81.com.ar|título=Turismo Nacional - APAT|url=http://www.apat.org.ar/posiciones/2|fechaacceso=6 de junio de 2017|periódico=Turismo Nacional - APAT|idioma=es-AR}}</ref>
+
+=== Clase 3 ===
+[[Archivo:Tuero TN.jpg|miniaturadeimagen|[[Ford Focus]] de [[Esteban Tuero]] en 2008.]]
+[[Archivo:Juampy Koch TN 2013.jpg|miniaturadeimagen|220x220px|[[Citroën C4]] conducido por [[Juan Pablo Koch]] (2013).]][[Archivo:Facundo Chapur Peugeot 308.jpg|mini|220x220px|[[Peugeot 308]] de [[Facundo Chapur]], campeón de la Clase 3 en 2013.]]La Clase 3 del Turismo Nacional, es la denominada clase mayor, ya que de la misma está reglamentada la participación de automóviles de motorización con tope hasta los 2000&nbsp;cm³. En la misma ingresan habitualmente automóviles del [[segmento C]], aunque a diferencia de la clase menor, en esta categoría está permitida la entrada de modelos de producción extranjera, con el fin de emparentar a la categoría con las marcas que más popularidad tienen en la sociedad y cuyos productos en algunos casos no se fabriquen ni en Argentina ni en el Mercosur, tales son los casos de los modelos [[Alfa Romeo 147]] o [[Seat León]], cuyas factorias se ubican en [[Italia]] y [[España]] respectivamente. En esta divisional, la categoría busca familiarizar más al público con las marcas de mayor representación en el mercado argentino, y que de alguna forma hayan tenido historia dentro de la categoría. De la misma, participan marcas reconocidas a nivel nacional como [[Chevrolet]], [[Fiat]], [[Ford]], [[Peugeot]], [[Renault]] o [[Volkswagen]], como así también marcas con presencia nacional reciente ([[Honda]]), marcas históricas ([[Alfa Romeo]] y [[Citroën]]) y otras con producción fuera de [[Sudamérica]] ([[Mitsubishi]] y [[SEAT]]). De esta forma, y con la filosofía de respetar el diseño original de sus coches, la categoría exhibe un importante parque automotor de unidades las cuales son muy identificadas con los aficionados bajo el lema de la categoría: "Tu auto también corre".
+
+Debido al crecimiento de su popularidad dentro del ambiente automovilístico argentino y al hecho de la participación de pilotos de renombre en sus filas, la Clase 3 del Turismo Nacional está considerada como una de las cuatro categorías más importantes del país, siendo a la vez catalogada como uno de los tres torneos anuales más importantes del país que debería ganar un piloto argentino para declararse ganador de la [[triple corona del automovilismo argentino]], galardón tal que se obtiene de la combinación de este título con el del [[Turismo Carretera]] y el del [[Turismo Competición 2000]].
+
+==== Modelos ====
+
+* [[Chevrolet Cruze]]
+* [[Citroën C-Elysée]]
+* [[Fiat Tipo]]
+* [[Ford Focus III]]
+* [[Honda Civic#Octava generación (2006-2011) FK/FN/FD/FA|Honda Civic VIII]]
+* [[Honda Civic IX]]
+* [[Kia Cerato]]
+* [[Mitsubishi Lancer GT]]
+* [[Peugeot 408]]
+* [[Renault Fluence]]
+* [[Nissan Sentra]]
+* [[Toyota Corolla]]
+* [[Volkswagen Vento II]]
+* [[Volkswagen Virtus]]
+* [[Hyundai Veloster]]<ref>{{Cita noticia|apellidos=www.proyecto81.com.ar|título=Turismo Nacional - APAT|url=http://www.apat.org.ar/posiciones/3|fechaacceso=6 de junio de 2017|periódico=Turismo Nacional - APAT|idioma=es-AR}}</ref>
+
+== Copa Abarth Argentina ==
+En el año 2022, la Asociación de Pilotos de Automóviles de Turismo arribó a un acuerdo con representantes de la marca [[Abarth]] en [[Argentina]], para promover el desarrollo de la categoría '''Copa Abarth Argentina'''. La misma reviste un carácter promocional y tiene como objetivo el desarrollo de nuevos talentos para el automovilismo argentino. El acuerdo entre APAT y la representación de Abarth en Argentina, contempló el desarrollo de los campeonatos de dicha Copa, compartiendo calendario con determinadas fechas del Turismo Nacional. Esta categoría tuvo su debut oficial el 24 de abril de 2022 y su parque automotor se compone exclusivamente de unidades [[Fiat 500 (2007)|Fiat 500]], modificadas por la firma Abarth, siendo estas unidades de la versión '''Abarth 595''', equipadas con un motor 1.4 turbo de 16 válvulas, con una erogación de hasta 175 CV. La transmisión es manual de C510 de seis velocidades, suspensión McPherson y frenos a disco autoventilados de 284 x 22.<ref>{{citaweb|url=https://altooctanaje.com.ar/copa-abarth-confirmo-su-primera-presentacion/|título=Copa Abarth confirmó su primera presentación.|sitioweb=Alto Octanaje|fecha=2022-04-20|fechaacceso=2025-01-23}}</ref>
+
+{| class="wikitable" border="0" style="background:#ffffff" align="center" style="font-size:95%;"
+! Año
+! Campeones
+! Automóvil
+!{{Abreviatura|Ref.|Referencias}}
+|-
+|[[Anexo:Temporada 2022 de Turismo Nacional|2022]]
+|[[Figgo Bessone]]
+|Abarth 595
+|<ref>{{citaweb|url=https://vertigomotorsport.com/vm/2022/12/05/en-el-primer-campeonato-escribieron-su-historia/|título=En el primer campeonato, escribieron su historia.|sitioweb=Vértigo Motorsport|fecha=2022-12-05|fechaacceso=2025-01-23}}</ref>
+|-
+|[[Anexo:Temporada 2023 de Turismo Nacional|2023]]
+|Joaquín Naranjo
+|Abarth 595
+|<ref>{{citaweb|url=https://sisanjuan.gob.ar/alto-rendimiento/2023-09-25/51778-joaquin-naranjo-se-consagro-campeon-en-el-automovilismo-nacional|título=Joaquín Naranjo se consagró campeón en el automovilismo nacional.|sitioweb=SÍ, San Juan|fecha=2023-09-25|fechaacceso=2025-01-23}}</ref>
+|-
+|[[Anexo:Temporada 2024 de Turismo Nacional|2024]]
+|Santiago Vaira
+|Abarth 595
+|<ref>{{citaweb|url=https://www.lavozdesanjusto.com.ar/santiago-vaira-un-campeon-que-hizo-historia|título=Santiago Vaira: un campeón que hizo historia.|sitioweb=La Voz de San Justo|fecha=2024-12-21|fechaacceso=2025-01-23}}</ref>
+|-
+|[[Anexo:Temporada 2025 de TN APAT|2025]]
+|Tomás Di Salvia
+|Abarth 595
+|
+|-
+|}
+
+== Campeones ==
+[[Archivo:Reutemann 1981.jpg|miniaturadeimagen|
+[[Carlos Reutemann]], campeón de la Clase D de la [[Anexo:Temporada 1966 de Turismo Nacional|Temporada 1966]].
+]]
+[[Archivo:Carlos Okulovich TC 2012.jpg|miniaturadeimagen| [[Carlos Okulovich]], campeón en 2010 de la Clase 3.]]
+[[Archivo:Facundo Chapur.JPG|miniaturadeimagen| [[Facundo Chapur]], campeón de la Clase 3 del 2013 y 2015.]]
+Hasta el año 2021, se realizaron 61 temporadas de Turismo Nacional, divididas en distintas clases. Cada clase, ha sabido desarrollar determinadas cantidades de sus respectivos campeonatos. De estas 61 ediciones, solamente una tuvo la realización de una temporada doble: la correspondiente al año 1978, la cual tuvo un torneo paralelo, como consecuencia del enfrentamiento institucional entre [[Automóvil Club Argentino|ACA]] y CADAD. A pesar de ello, APAT reconoce ambos campeonatos como oficiales.
+
+Las primeras clases en que se dividía la categoría, eran identificadas con letras, habiéndose identificado clases de la A a la E. A partir de 1982, las clases eran identificadas con números, habiéndose organizado hasta 12 clases a lo largo de la historia. Al año 2021, las únicas clases que subsisten son las clases 2 y 3.
+
+{| class="wikitable" border="0" style="background:#ffffff" align="center" style="font-size:95%;"
+! Año
+! Clase
+! Campeones
+! Automóvil
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1961 de Turismo Nacional|1961]]
+| Clase A 
+| Heriberto Bohnen
+| [[NSU Prinz]]
+|-
+| Clase B
+| Vicente Formisano
+| [[Auto Union 1000]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1962 de Turismo Nacional|1962]]
+| Clase A 
+| Remigio Caldara
+| [[Isard Royal T-700|Isard 700]]
+|-
+| Clase B
+| Gonzalo Gainza Paz
+| [[Auto Union 1000]]
+|-
+| Clase C
+| [[José Migliore]]
+| [[Peugeot 403]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1963 de Turismo Nacional|1963]]
+| Clase A 
+| Domingo López Oribe
+| [[NSU Prinz]]
+|-
+| Clase B
+| [[Gastón Perkins]]
+| [[Renault Gordini]]
+|-
+| Clase C
+| Ernesto Santamarina
+| [[Peugeot 404]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1964 de Turismo Nacional|1964]]
+| Clase A 
+| José Calduch
+| [[BMW 700|De Carlo 700]]
+|-
+| Clase B
+| [[Gastón Perkins]]
+| [[Renault Gordini]]
+|-
+| Clase C
+| [[Eduardo Rodríguez Canedo]]
+| [[Fiat 1500]]
+|-
+|rowspan=4 align="center"|[[Anexo:Temporada 1965 de Turismo Nacional|1965]]
+| Clase A 
+| Rogelio Scaramella
+| [[BMW 700|De Carlo 700]]
+|-
+| Clase B
+| [[Gastón Perkins]]
+| [[Renault Gordini]]
+|-
+| Clase C
+| [[Rosmualdo Visintini]]
+| [[Auto Union 1000]]
+|-
+| Clase D
+| [[Nasif Estéfano]]
+| [[Alfa Romeo Giulia]]
+|-
+|rowspan=4 align="center"|[[Anexo:Temporada 1966 de Turismo Nacional|1966]]
+| Clase A 
+| Rogelio Scaramella
+| [[BMW 700|De Carlo 700]]
+|-
+| Clase B
+| [[Carlos Ruesch]]
+| [[Renault Gordini]]
+|-
+| Clase C
+| [[Rosmualdo Visintini]]
+| [[Auto Union 1000]]
+|-
+| Clase D
+| [[Carlos Reutemann]]
+| [[Fiat 1500]]
+|-
+|rowspan=5 align="center"|[[Anexo:Temporada 1967 de Turismo Nacional|1967]]
+| Clase A 
+| Rogelio Scaramella
+| [[BMW 700|De Carlo 700]]
+|-
+| Clase B
+| Danilo Bonamicci
+| [[Renault Gordini]]
+|-
+| Clase C
+| [[Rosmualdo Visintini]]
+| [[Auto Union 1000]]
+|-
+| Clase D
+| [[Carlos Reutemann]]
+| [[Fiat 1500]]
+|-
+| Clase E
+| [[Eduardo Rodríguez Canedo]]
+| [[Torino 380 W]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1968 de Turismo Nacional|1968]]
+| Clase B
+| [[Ángel Monguzzi]]
+| [[Renault Gordini]]
+|-
+| Clase C
+| [[Rosmualdo Visintini]]
+| [[Auto Union 1000]]
+|-
+| Clase D
+| [[Norberto Castañón]]
+| [[Peugeot 404]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1969 de Turismo Nacional|1969]]
+| Clase B
+| Emilio Parisi
+| [[Renault Gordini]]
+|-
+| Clase C
+| [[Norberto Castañón]]
+| [[Peugeot 404]]
+|-
+| Clase D
+| [[Alberto Rodríguez Larreta]]
+| [[Torino 380 W]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1970 de Turismo Nacional|1970]]
+| Clase C
+| [[Rosmualdo Visintini]]
+| [[Auto Union 1000]]
+|-
+| Clase D
+| [[José Migliore]]
+| [[Peugeot 504]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1971 de Turismo Nacional|1971]]
+| Clase B
+| Eduardo Giordano
+| [[Renault Gordini]]
+|-
+| Clase C
+| Danilo Bonamici
+| [[Fiat 1600]]
+|-
+| Clase D
+| José Migliore
+| [[Peugeot 504]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1972 de Turismo Nacional|1972]]
+| Clase B
+| Aldo Caldarella
+| [[Fiat 128]]
+|-
+| Clase C
+| [[Francisco Mayorga (piloto)|Francisco Mayorga]]
+| [[Peugeot 504]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1973 de Turismo Nacional|1973]]
+| Clase B
+| José Carlomagno
+| [[Fiat 128]]
+|-
+| Clase C
+| [[Francisco Mayorga (piloto)|Francisco Mayorga]]
+| [[Peugeot 504]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1974 de Turismo Nacional|1974]]
+| Clase B
+| Luis Macri
+| [[Fiat 128]]
+|-
+| Clase C
+| [[Jorge Recalde]]
+| [[Fiat 125]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1975 de Turismo Nacional|1975]]
+| Clase B
+| Juan Pablo Zampa
+| [[Fiat 128]]
+|-
+| Clase C
+| [[Ricardo Zunino]]
+| [[Fiat 125]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1976 de Turismo Nacional|1976]]
+| Clase B
+| Jorge Spinetto
+| [[Fiat 128]]
+|-
+| Clase C
+| [[Ricardo Zunino]]
+| [[Fiat 125]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1977 de Turismo Nacional|1977]]
+| Clase B
+| Jorge Spinetto
+| [[Fiat 128]]
+|-
+| Clase C
+| [[Rubén Daray]]
+| [[Fiat 125]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1978 de Turismo Nacional_(CADAD)|1978 (CADAD)]]
+| Clase B
+| [[Osvaldo Morresi]]
+| [[Fiat 128]]
+|-
+| Clase C
+| [[Francisco Alcuaz]]
+| [[Peugeot 504]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1978 de Turismo Nacional_(ACA)|1978 (ACA)]]
+| Clase B
+| [[Gabriel Raies]]
+| [[Fiat 128]]
+|-
+| Clase C
+| Carlos Garro
+| [[Peugeot 504]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1979 de Turismo Nacional|1979]]
+| Clase B
+| [[Julio Pardo (piloto)|Julio Pardo]]
+| [[Fiat 128]]
+|-
+| Clase C
+| Carlos Garro
+| [[Peugeot 504]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1980 de Turismo Nacional|1980]]
+| Clase B
+| [[Jorge Serafini]]
+| [[Fiat 128]]
+|-
+| Clase C
+| Juan Carlos Rizzuto
+| [[Fiat 125]]
+|-
+|rowspan=4 align="center"|[[Anexo:Temporada 1981 de Turismo Nacional|1981]]
+| Clase A
+| Marcelo Raies
+| [[Fiat 147]]
+|-
+| Clase B
+| [[Jorge Bescham]]
+| [[Fiat 128]]
+|-
+| Clase C
+| [[Gabriel Raies]]
+| [[Fiat 125]]
+|-
+| Clase D
+| [[Francisco Alcuaz]]
+| [[Peugeot 504]]
+|-
+|rowspan=8 align="center"|[[Anexo:Temporada 1982 de Turismo Nacional|1982]]
+| Clase 5
+| [[Julio Pardo (piloto)|Julio Pardo]]-[[Gustavo Der Ohanessian]]
+| [[Fiat 128]]
+|-
+| Clase 6
+| [[Jorge Bescham]]
+| [[Fiat 128]]
+|-
+| Clase 7
+| Daniel Mustafá-[[Ángel Monguzzi]]
+| [[Renault 18]]
+|-
+| Clase 8
+| [[Francisco Mayorga (piloto)|Francisco Mayorga]]
+| [[Datsun 280ZX]]
+|-
+| Clase 9
+| Jorge Cecchetto-Elvio Borgioli
+| [[Daihatsu Charade]]
+|-
+| Clase 10
+| Alberto Baldinelli
+| [[Fiat 128]]
+|-
+| Clase 11
+| [[Néstor Percaz]]
+| [[Fiat 128]]
+|-
+| Clase 12
+| [[José Fortunato]]
+| [[Peugeot 504]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1983 de Turismo Nacional|1983]]
+| Clase 1
+| Carlos Rosati
+| [[Fiat 128]]
+|-
+| Clase 2
+| Carlos Zabala
+| [[Fiat 128]]
+|-
+| Clase 3
+| Arnoldo Capra
+| [[Peugeot 504]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1984 de Turismo Nacional|1984]]
+| Clase 2
+| [[Hugo Olmi]]
+| [[Fiat 128]]
+|-
+| Clase 3
+| José Cano
+| [[Renault 18]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1985 de Turismo Nacional|1985]]
+| Clase 2
+| [[Ernesto Bessone I]]
+| [[Alfa Romeo Sprint]]
+|-
+| Clase 3
+| Eduardo García Gómez
+| [[Renault 18]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1986 de Turismo Nacional|1986]]
+| Clase 2
+| [[Omar Darío Bonomo]]
+| [[Volkswagen Gacel]]
+|-
+| Clase 3
+| [[Jorge Maggi]]
+| [[Alfa Romeo GTV]]
+|-
+| Monomarca Sierra
+| [[Oscar Fineschi]]
+| [[Ford Sierra]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1987 de Turismo Nacional|1987]]
+| Clase 2
+| [[Omar Darío Bonomo]]
+| [[Volkswagen Gacel]]
+|-
+| Clase 3
+| [[Jorge Maggi]]
+| [[Alfa Romeo GTV]]
+|-
+| Monomarca Sierra
+| Jorge Guiral
+| [[Ford Sierra]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1988 de Turismo Nacional|1988]]
+| Clase 2
+| Ernesto Rodríguez
+| [[Volkswagen Gacel]]
+|-
+| Clase 3
+| Fernando Adba
+| [[Renault 18]]
+|-
+| Monomarca Sierra
+| [[Oscar Fineschi]]
+| [[Ford Sierra]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1989 de Turismo Nacional|1989]]
+| Clase 2
+| [[Rafael Verna]]
+| [[Volkswagen Gacel]]
+|-
+| Clase 3
+| Ricardo Albertengo
+| [[Renault 18]]
+|-
+| Monomarca Sierra
+| Jorge Eidilstein
+| [[Ford Sierra]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1990 de Turismo Nacional|1990]]
+| Clase 2
+| [[René Zanatta]]
+| [[Volkswagen Gacel]]
+|-
+| Clase 3
+| [[Pablo Peón]]
+| [[Renault 18]]
+|-
+| Monomarca Sierra
+| Gerardo del Campo
+| [[Ford Sierra]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1991 de Turismo Nacional|1991]]
+| Clase 2
+| [[René Zanatta]]
+| [[Volkswagen Gacel]]
+|-
+| Clase 3
+| [[Pablo Peón]]
+| [[Renault 18]]
+|-
+| Monomarca Sierra
+| Gerardo del Campo
+| [[Ford Sierra]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1992 de Turismo Nacional|1992]]
+| Clase 2
+| [[Rafael Verna]]
+| [[Ford Escort]]
+|-
+| Clase 3
+| [[Omar Bonomo]]
+| [[Volkswagen Carat]]
+|-
+| Monomarca Sierra
+| Pablo Rafú
+| [[Ford Sierra]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1993 de Turismo Nacional|1993]]
+| Clase 2
+| [[Rafael Verna]]
+| [[Ford Escort]]
+|-
+| Clase 3
+| Gerardo del Campo
+| [[Ford Escort]]
+|-
+| Clase 4
+| Norberto della Santina
+| [[Ford Sierra]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1994 de Turismo Nacional|1994]]
+| Clase 2
+| [[Rafael Verna]]
+| [[Ford Escort]]
+|-
+| Clase 3
+| Gerardo del Campo
+| [[Ford Escort]]
+|-
+| Clase 4
+| Carlos Rossetti
+| [[Ford Sierra]]
+|-
+|rowspan=3 align="center"|[[Anexo:Temporada 1995 de Turismo Nacional|1995]]
+| Clase 2
+| Carlos Míguez
+| [[Ford Escort]]
+|-
+| Clase 3
+| [[Rafael Verna]]
+| [[Ford Escort]]
+|-
+| Clase 4
+| [[Diego Ponte]]
+| [[Ford Sierra]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1996 de Turismo Nacional|1996]]
+| Clase 2
+| Hugo Lepphaille
+| [[Ford Escort]]
+|-
+| Clase 3
+| [[Omar Suriani]]
+| [[Renault 18]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1997 de Turismo Nacional|1997]]
+| Clase 2
+| [[Julio Catalán Magni]]
+| [[Ford Escort]]
+|-
+| Clase 3
+| Norberto della Santina
+| [[Volkswagen Gol]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1998 de Turismo Nacional|1998]]
+| Clase 2
+| [[Claudio Bisceglia]]
+| [[Volkswagen Gol]]
+|-
+| Clase 3
+| [[Omar Bonomo]]
+| [[Ford Escort]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 1999 de Turismo Nacional|1999]]
+| Clase 2
+| [[Adrián Hang]]
+| [[Volkswagen Gol]]
+|-
+| Clase 3
+| [[Oscar Canela]]
+| [[Volkswagen Polo]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2000 de Turismo Nacional|2000]]
+| Clase 2
+| [[Nicolás Vuyovich]]
+| [[Volkswagen Gol]]
+|-
+| Clase 3
+| [[Walter Tanoni]]
+| [[Ford Escort]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2001 de Turismo Nacional|2001]]
+| Clase 2
+| Javier Romera
+| [[Volkswagen Gol]]
+|-
+| Clase 3
+| [[Lucas Armellini]]
+| [[Honda Civic]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2002 de Turismo Nacional|2002]]
+| Clase 2
+| [[Néstor Percaz]]
+| [[Ford Escort]]
+|-
+| Clase 3
+| [[Nicolás Vuyovich]]
+| [[Honda Civic]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2003 de Turismo Nacional|2003]]
+| Clase 2
+| [[Néstor Percaz]]
+| [[Ford Escort]]
+|-
+| Clase 3
+| [[Ernesto Bessone II]]
+| [[Ford Escort]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2004 de Turismo Nacional|2004]]
+| Clase 2
+| [[Juan Pedro Heguy]]
+| [[Ford Escort]]
+|-
+| Clase 3
+| Pablo Redolfi
+| [[Honda Civic]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2005 de Turismo Nacional|2005]]
+| Clase 2
+| [[Juan Pedro Heguy]]
+| [[Ford Escort]]
+|-
+| Clase 3
+| [[Patricio Di Palma]]
+| [[Ford Escort]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2006 de Turismo Nacional|2006]]
+| Clase 2
+|[[Iván Saturni]]
+| [[Renault Clio]]
+|-
+| Clase 3
+| [[Hugo Lepphaille]]
+| [[Honda Civic]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2007 de Turismo Nacional|2007]]
+| Clase 2
+| Joaquin Volpi
+| [[Ford Fiesta]]
+|-
+| Clase 3
+| [[Ezequiel Bosio]]
+| [[Renault Clio]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2008 de Turismo Nacional|2008]]
+| Clase 2
+| Leandro Vallasciani
+| [[Renault Clio]]
+|-
+| Clase 3
+| [[Esteban Tuero]]
+| [[Ford Focus]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2009 de Turismo Nacional|2009]]
+| Clase 2
+| Ivan Ciccarelli
+| [[Renault Clio]]
+|-
+| Clase 3
+| [[Marcelo Bugliotti]]
+| [[Chevrolet Astra]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2010 de Turismo Nacional|2010]]
+| Clase 2
+| [[Adrián Percaz]]
+| [[Peugeot 206]]
+|-
+| Clase 3
+| [[Carlos Okulovich]]
+| [[Honda New Civic]]
+|-
+|rowspan=2 align="center"|[[Temporada 2011 de Turismo Nacional|2011]]
+| Clase 2
+| [[Bruno Bosio]]
+| [[Chevrolet Corsa]]
+|-
+| Clase 3
+| [[Fabián Yannantuoni]]
+| [[Peugeot 307]]
+|-
+|rowspan=2 align="center"|[[Temporada 2012 de Turismo Nacional|2012]]
+| Clase 2
+| [[Facundo Chapur]]
+| [[Ford Fiesta]]
+|-
+| Clase 3
+| [[Emanuel Moriatis]]
+| [[Ford Focus II]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2013 de Turismo Nacional|2013]]
+| Clase 2
+| [[Matias Machuca]]
+| [[Renault Clio]]
+|-
+| Clase 3
+| [[Facundo Chapur]]
+| [[Peugeot 308]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2014 de Turismo Nacional|2014]]
+| Clase 2
+| [[Hanna Abdallah]]
+| [[Renault Clio]]
+|-
+| Clase 3
+| [[Matías Rossi]]
+| [[Citroën C4]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2015 de Turismo Nacional|2015]]
+| Clase 2
+| [[Adrián Percaz]]
+| [[Peugeot 207 Compact]]
+|-
+| Clase 3
+| [[Facundo Chapur]]
+| [[Peugeot 308]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2016 de Turismo Nacional|2016]]
+| Clase 2
+| [[Alfonso Domenech]]<ref>{{Cita web|url=http://carburando.com/notas/domenech-campeon|título=Domenech campeón|sitioweb=Carburando|fechaacceso=20 de noviembre de 2016}}</ref>
+| [[Renault Clio]]
+|-
+| Clase 3
+| [[Emanuel Moriatis]]<ref>{{Cita web|url=http://www.polepositionweb.net/2016/11/20/moriatis-festejo-campeon-y-saturni-logro-el-triunfo/|título=Moriatis gritó campeón y Saturni logró el triunfo|fechaacceso=20 de noviembre de 2016|fecha=20 de noviembre de 2016|sitioweb=Pole Position}}</ref>
+| [[Ford Focus]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2017 de Turismo Nacional|2017]]
+| Clase 2
+| [[Alejandro Bucci]]
+| [[Ford Fiesta KD]]
+|-
+| Clase 3
+| [[Mariano Werner]]
+| [[Fiat Linea]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2018 de Turismo Nacional|2018]]
+| Clase 2
+| [[Nicolás Posco]]
+| [[Ford Fiesta KD]]
+|-
+| Clase 3
+| [[Leonel Pernía]]
+| [[Honda All New Civic]]
+|-
+|rowspan=2 align="center"|[[Temporada 2019 de Turismo Nacional|2019]]
+| Clase 2
+| [[Ever Franetovich]]
+| [[Fiat Palio]]
+|-
+| Clase 3
+| [[José Manuel Urcera]]
+| [[Honda All New Civic]]
+|-
+|rowspan=2 align="center"|[[Temporada 2020 de Turismo Nacional|2020]]
+| Clase 2
+| [[Nicolás Posco]]
+| [[Ford Fiesta KD]]
+|-
+| Clase 3
+| [[José Manuel Urcera]]
+| [[Honda All New Civic]]
+|-
+|rowspan=2 align="center"|[[Temporada 2021 de Turismo Nacional|2021]]
+| Clase 2
+| [[Emanuel Abdala]]
+| [[Ford Fiesta KD]]
+|-
+| Clase 3
+| [[Julián Santero]]
+| [[Toyota Corolla E210]]
+|-
+|-
+|rowspan=2 align="center"|[[Temporada 2022 de Turismo Nacional|2022]]
+| Clase 2
+| [[Matías Cravero]]
+| [[Ford Fiesta KD]]
+|-
+| Clase 3
+| [[Jonatan Castellano]]
+| [[Chevrolet Cruze II]]
+|-
+|rowspan=2 align="center"|[[Temporada 2023 de Turismo Nacional|2023]]
+| Clase 2
+| [[Thiago Martínez]]
+| [[Ford Fiesta KD]]
+|-
+| Clase 3
+| [[Leonel Pernía]]
+| [[Ford Focus III]]
+|-
+|rowspan=2 align="center"|[[Temporada 2024 de Turismo Nacional|2024]]
+| Clase 2
+| [[Thiago Martínez]]
+| [[Toyota Etios]]
+|-
+| Clase 3
+| [[Alfonso Domenech]]
+| [[Volkswagen Virtus]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2025 de TN APAT|2025]]<br>{{refn|group=lower-alpha|Por cuestiones legales, a partir de esta temporada el campeonato comenzó a ser conocido como '''TN APAT'''.}}
+| Clase 2
+| Bautista Damiani
+| [[Toyota Yaris]]
+|-
+| Clase 3
+| [[Julián Santero]]
+| [[Toyota Corolla E210]]
+|-
+|rowspan=2 align="center"|[[Anexo:Temporada 2026 de TN APAT|2026]]
+| Clase 2
+|
+|
+|-
+| Clase 3
+|
+|
+|-
+! colspan="4" |Fuente:<ref>{{Cita noticia|apellidos=www.proyecto81.com.ar|título=Campeones|url=http://www.apat.org.ar/articulo/579/campeones|fechaacceso=20 de noviembre de 2016|periódico=Turismo Nacional - APAT|idioma=es-AR}}</ref><ref>{{Cita web|url=http://www.apat.org.ar/posiciones/2|título=Turismo Nacional - APAT|fechaacceso=8 de diciembre de 2019|apellido=www.proyecto81.com.ar|sitioweb=Turismo Nacional - APAT|idioma=español}}</ref><ref>{{Cita web|url=http://www.apat.org.ar/posiciones/3|título=Turismo Nacional - APAT|fechaacceso=8 de diciembre de 2019|apellido=www.proyecto81.com.ar|sitioweb=Turismo Nacional - APAT|idioma=español}}</ref>
+|}
+
+== Notas ==
+{{listaref|group=lower-alpha}}
+
+== Referencias ==
+{{listaref|2}}
+
+== Enlaces externos ==
+* [http://www.apat.org.ar/ Sitio oficial del Turismo Nacional]
+* [https://www.facebook.com/prensatn/ Cuenta oficial] en [[Facebook]]
+* [https://twitter.com/prensatn Cuenta oficial] en [[Twitter]]
+* [https://www.youtube.com/channel/UC_--clV1CMMdoorMbc9z_Uw Cuenta oficial] en [[YouTube]]
+* [https://www.instagram.com/prensatn/ Cuenta oficial] en [[Instagram]]
+* [https://vimeo.com/user3723531 Cuenta oficial] en [[Vimeo]]
+
+{{ sucesión
+| predecesor = -
+| título = Escalafón de la
+| período = '''[[Asociación Corredores de Turismo Carretera]]'''
+| sucesor = [[Turismo Carretera]]<br>[[TC Pista]]
+}}
+
+{{Control de autoridades}}
+[[Categoría:Turismo Nacional]]
+[[Categoría:Competiciones de automovilismo de Argentina]]
+[[Categoría:Competiciones de turismos]]
+[[Categoría:Asociación Corredores de Turismo Carretera]]

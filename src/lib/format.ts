@@ -51,8 +51,16 @@ export function relative(iso: string, nowIso: string): string {
 
 export type SessionStatus = "live" | "upcoming" | "done";
 
+const dayStart = (iso: string) => new Date(`${dayKey(iso)}T00:00:00-03:00`).getTime();
+
 export function sessionStatus(session: Session, nowIso: string): SessionStatus {
   const now = new Date(nowIso).getTime();
+  if (session.timeKnown === false) {
+    // Sin horario: nunca "en vivo". Se da por terminada con resultados o al terminar el día.
+    const start = dayStart(session.start);
+    if (now < start) return "upcoming";
+    return session.results?.length || now >= start + 86400000 ? "done" : "upcoming";
+  }
   const start = new Date(session.start).getTime();
   const end = start + session.durationMin * 60000;
   if (now < start) return "upcoming";
@@ -67,11 +75,18 @@ export function sessionState(session: Session, nowIso: string): { kind: StateKin
   const status = sessionStatus(session, nowIso);
   if (status === "live") return { kind: "live", label: "En vivo" };
   if (status === "upcoming") {
+    if (session.timeKnown === false) {
+      const days = Math.round((dayStart(session.start) - dayStart(nowIso)) / 86400000);
+      return { kind: "upcoming", label: days <= 0 ? "Hoy" : days === 1 ? "Mañana" : days <= 6 ? `En ${days} días` : "Próxima" };
+    }
     const minutes = (new Date(session.start).getTime() - new Date(nowIso).getTime()) / 60000;
     return { kind: "upcoming", label: minutes <= 180 ? capitalize(relative(session.start, nowIso)) : "Próxima" };
   }
   return session.results?.length ? { kind: "finished", label: "Terminó" } : { kind: "no-data", label: "Sin datos" };
 }
+
+/** Hora para mostrar; "—" cuando la fuente no publica el horario. */
+export const sessionTime = (session: Session) => (session.timeKnown === false ? "—" : fmtTime(session.start));
 
 export const minutesLeft = (session: Session, nowIso: string) =>
   Math.max(0, Math.round((new Date(session.start).getTime() + session.durationMin * 60000 - new Date(nowIso).getTime()) / 60000));

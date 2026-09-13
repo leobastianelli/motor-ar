@@ -6,42 +6,52 @@ import {
   getArgentineHighlights,
   getDriversAbroad,
   getLiveItems,
+  getNextArgentineSession,
+  getNow,
   getRecentResults,
   getRunnerStatus,
   getSeries,
   getStandingPosition,
-  getNextArgentineSession,
   getUpcomingEvents,
-  getWeekendDays,
   getWeekendItems,
   ms,
-  NOW,
-  WEEKEND_TO,
+  weekendWindow,
 } from "@/lib/data";
-import {
-  dayKey,
-  driverCode,
-  fmtDayNum,
-  fmtMonthLong,
-  fmtMonthShort,
-  fmtTime,
-  minutesLeft,
-  surname,
-} from "@/lib/format";
+import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthLong, fmtMonthShort, fmtTime, minutesLeft, surname } from "@/lib/format";
+
+export const revalidate = 60;
 
 export default function Home() {
-  const items = getWeekendItems();
-  const days = getWeekendDays();
-  const live = getLiveItems()[0];
-  const remainingToday = items.filter((i) => dayKey(i.session.start) === dayKey(NOW) && i.status !== "done").length;
-  const nextArg = getNextArgentineSession();
+  const now = getNow();
+  const { days, to } = weekendWindow(now);
+  const items = getWeekendItems(now);
+  const live = getLiveItems(now)[0];
+  const todayKey = dayKey(now);
+  const isWeekend = days.some((d) => d.key === todayKey);
+  const remaining = items.filter((i) => i.status !== "done" && (!isWeekend || dayKey(i.session.start) === todayKey)).length;
+  const nextArg = getNextArgentineSession(now);
 
-  const runners = getDriversAbroad().map((driver) => ({ driver, series: getSeries(driver.seriesId)!, status: getRunnerStatus(driver), standing: getStandingPosition(driver) }));
+  const runners = getDriversAbroad().map((driver) => ({
+    driver,
+    series: getSeries(driver.seriesId)!,
+    status: getRunnerStatus(driver, now),
+    standing: getStandingPosition(driver),
+  }));
   const [feature, ...lines] = runners;
 
-  const podium = getRecentResults("nacional")[0];
-  const [highlight, ...notes] = getArgentineHighlights();
-  const nextEvents = getUpcomingEvents().filter((e) => ms(eventStart(e)) >= ms(WEEKEND_TO)).slice(0, 3);
+  const podium = getRecentResults(now, "nacional")[0];
+  const [highlight, ...notes] = getArgentineHighlights(now);
+  const nextEvents = getUpcomingEvents(now).filter((e) => ms(eventStart(e)) >= ms(to)).slice(0, 3);
+  const liveUrl = live?.event.broadcasts.find((b) => b.url)?.url;
+
+  let lede = items.length === 0 ? "No hay carreras cargadas para este fin de semana." : isWeekend ? `Quedan ${remaining} sesiones hoy.` : `Hay ${items.length} sesiones este fin de semana.`;
+  if (nextArg) {
+    const sameDay = dayKey(nextArg.session.start) === todayKey;
+    lede +=
+      nextArg.session.timeKnown === false
+        ? ` La próxima con un argentino es ${sameDay ? "hoy" : `el ${fmtDayShort(nextArg.session.start).toLowerCase()}`}.`
+        : ` La próxima con un argentino arranca ${sameDay ? "a las" : `el ${fmtDayShort(nextArg.session.start).toLowerCase()} a las`} ${fmtTime(nextArg.session.start)}.`;
+  }
 
   return (
     <>
@@ -54,15 +64,12 @@ export default function Home() {
           </h1>
           <p className="hero-date">
             <b>
-              {fmtDayNum(days[0].iso)}–{fmtDayNum(days.at(-1)!.iso)}
+              {fmtDayNum(days[0].iso)}–{fmtDayNum(days[2].iso)}
             </b>{" "}
-            {fmtMonthLong(days.at(-1)!.iso)}
+            {fmtMonthLong(days[2].iso)}
           </p>
         </div>
-        <p className="lede">
-          Quedan {remainingToday} sesiones hoy.
-          {nextArg && ` La próxima con un argentino arranca a las ${fmtTime(nextArg.session.start)}.`} Todos los horarios son de Argentina.
-        </p>
+        <p className="lede">{lede} Todos los horarios son de Argentina.</p>
       </section>
 
       {live && (
@@ -70,7 +77,7 @@ export default function Home() {
           <div className="live-flag">
             <span className="pulse" />
             <span id="live-title">En vivo</span>
-            <b>{minutesLeft(live.session, NOW)}′</b>
+            <b>{minutesLeft(live.session, now)}′</b>
           </div>
           <div className="live-main">
             <CatMark series={live.series} />
@@ -80,7 +87,7 @@ export default function Home() {
               </p>
               <h2>{live.session.name}</h2>
               <p className="lap">
-                Faltan {minutesLeft(live.session, NOW)} min <span>largó {fmtTime(live.session.start)}</span>
+                Faltan {minutesLeft(live.session, now)} min <span>largó {fmtTime(live.session.start)}</span>
               </p>
             </div>
           </div>
@@ -101,9 +108,9 @@ export default function Home() {
           </ol>
           <div className="watch">
             <span>Se ve por</span>
-            <strong>{live.event.broadcasts.map((b) => b.name).join(" · ") || "Sin transmisión"}</strong>
-            {(live.session.youtube ?? live.event.broadcasts.find((b) => b.url)?.url) && (
-              <a href={live.session.youtube ?? live.event.broadcasts.find((b) => b.url)!.url} target="_blank" rel="noreferrer">
+            <strong>{live.event.broadcasts.map((b) => b.name).join(" · ") || "Sin datos de transmisión"}</strong>
+            {liveUrl && (
+              <a href={liveUrl} target="_blank" rel="noreferrer">
                 Abrir transmisión <span aria-hidden="true">↗</span>
               </a>
             )}
@@ -132,7 +139,7 @@ export default function Home() {
                 </h3>
                 {feature.standing && (
                   <p>
-                    Llega {feature.standing.position}.º en el campeonato con {feature.standing.points} puntos.
+                    Va {feature.standing.position}.º en el campeonato con {feature.standing.points} puntos.
                   </p>
                 )}
               </div>
@@ -156,7 +163,7 @@ export default function Home() {
         </section>
       )}
 
-      <Agenda items={items} days={days} today={dayKey(NOW)} now={NOW} />
+      <Agenda items={items} days={days} today={todayKey} now={now} />
 
       <section className="results-band">
         <div className="section-block">
@@ -204,7 +211,7 @@ export default function Home() {
                 <p>
                   {highlight.session.name} de {highlight.series.name} en {highlight.event.circuit.city}.
                 </p>
-                {highlight.row.points !== undefined && (
+                {highlight.row.points !== undefined && highlight.row.points > 0 && (
                   <div className="delta positive">
                     +{highlight.row.points} <small>puntos</small>
                   </div>
@@ -213,7 +220,7 @@ export default function Home() {
             ) : (
               <div className="arg-highlight">
                 <span>Argentino destacado afuera</span>
-                <p>Sin resultados esta semana.</p>
+                <p>Sin resultados de argentinos afuera en la última semana.</p>
               </div>
             )}
 

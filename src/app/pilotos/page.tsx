@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { SectionTitle, StateTag } from "@/components/pista";
-import { getAllDrivers, getDriversAbroad, getRunnerStatus, getSeries } from "@/lib/data";
+import { getAllDrivers, getDriversAbroad, getNow, getRunnerStatus, getSeries } from "@/lib/data";
 
 export const metadata: Metadata = { title: "Pilotos argentinos" };
+export const revalidate = 60;
 
 export default function DriversPage() {
+  const now = getNow();
   const abroad = getDriversAbroad();
   const home = getAllDrivers().filter((d) => !abroad.includes(d));
 
@@ -13,7 +15,7 @@ export default function DriversPage() {
     <div className="arg-runners" style={{ display: "block" }}>
       {drivers.map((d) => {
         const series = getSeries(d.seriesId)!;
-        const status = getRunnerStatus(d);
+        const status = getRunnerStatus(d, now);
         return (
           <Link key={d.slug} href={`/pilotos/${d.slug}`} className="runner-line list-link">
             <b>{d.number ?? "—"}</b>
@@ -24,7 +26,7 @@ export default function DriversPage() {
               </span>
             </div>
             <p>
-              <StateTag kind={status.state}>{status.stateLabel}</StateTag> {d.tagline}
+              <StateTag kind={status.state}>{status.stateLabel}</StateTag> {status.headline}
             </p>
           </Link>
         );
