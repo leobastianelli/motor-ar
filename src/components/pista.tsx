@@ -1,6 +1,27 @@
 import type { ReactNode } from "react";
 import type { StateKind } from "@/lib/format";
+import type { Photo } from "@/lib/photos";
 import type { Series } from "@/lib/types";
+
+/** Crédito obligatorio de las fotos con licencia Creative Commons. */
+export function PhotoCredit({ photo }: { photo: Photo }) {
+  return (
+    <p className="photo-credit">
+      Foto:{" "}
+      <a href={photo.sourceUrl} target="_blank" rel="noreferrer">
+        {photo.author}
+      </a>{" "}
+      ·{" "}
+      {photo.licenseUrl ? (
+        <a href={photo.licenseUrl} target="_blank" rel="noreferrer license">
+          {photo.license}
+        </a>
+      ) : (
+        photo.license
+      )}
+    </p>
+  );
+}
 
 /** Sello de categoría: código corto + color propio. */
 export function Code({ series }: { series: Pick<Series, "code" | "color" | "name"> }) {

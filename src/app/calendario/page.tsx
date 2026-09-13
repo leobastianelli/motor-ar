@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Code, SectionTitle } from "@/components/pista";
-import { getNow, getSeries, getUpcomingEvents } from "@/lib/data";
+import { getNow, getSeason, getSeries } from "@/lib/data";
 import { capitalize, fmtDayNum, fmtMonth, fmtMonthShort } from "@/lib/format";
 import type { Scope } from "@/lib/types";
 
@@ -16,7 +16,7 @@ const FILTERS: { id?: Scope; label: string }[] = [
 
 export default async function CalendarPage(props: PageProps<"/calendario">) {
   const { ambito } = await props.searchParams;
-  const events = getUpcomingEvents(getNow()).filter((e) => !ambito || getSeries(e.seriesId)?.scope === ambito);
+  const events = (await getSeason()).getUpcomingEvents(getNow()).filter((e) => !ambito || getSeries(e.seriesId)?.scope === ambito);
   const byMonth = Map.groupBy(events, (e) => capitalize(fmtMonth(e.sessions.at(-1)!.start)));
 
   return (

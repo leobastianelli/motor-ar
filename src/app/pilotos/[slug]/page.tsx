@@ -3,22 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
-import { SectionTitle } from "@/components/pista";
-import {
-  careerStages,
-  championshipTrend,
-  finishLabel,
-  quotes,
-  raceCode,
-  raceName,
-  recentMilestones,
-  seasonRaces,
-  seasonStats,
-  standings2026,
-  statusLabel,
-} from "@/lib/colapinto";
-import { getAllDrivers, getDriver, getNextRace, getNow, getSeasonMeta, getSeries, getStandingPosition } from "@/lib/data";
+import { PhotoCredit, SectionTitle } from "@/components/pista";
+import { colapintoData, finishLabel, quotes, raceCode, raceName, recentMilestones, statusLabel, type ColapintoData } from "@/lib/colapinto";
+import { getAllDrivers, getDriver, getNow, getSeason, getSeries, type Season } from "@/lib/data";
 import { fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/format";
+import { getPhoto } from "@/lib/photos";
 import type { Driver } from "@/lib/types";
 
 export const revalidate = 60;
@@ -40,8 +29,8 @@ function age(born: string, now: string) {
   return years;
 }
 
-function NextRace({ driver, now }: { driver: Driver; now: string }) {
-  const next = getNextRace(driver.seriesId, now);
+function NextRace({ driver, now, season }: { driver: Driver; now: string; season: Season }) {
+  const next = season.getNextRace(driver.seriesId, now);
   if (!next) return null;
   return (
     <div className="next-race">
@@ -110,10 +99,9 @@ function DuelBar({ label, mine, theirs }: { label: string; mine: number; theirs:
 
 const milestoneDate = (date: string) => (date.length === 4 ? date : `${fmtDayNum(`${date}T12:00:00-03:00`).padStart(2, "0")} ${fmtMonthShort(`${date}T12:00:00-03:00`)}`);
 
-function ColapintoSections() {
-  const season = 2026;
-  const stats = seasonStats(season);
-  const races = seasonRaces(season);
+function ColapintoSections({ data }: { data: ColapintoData }) {
+  const stats = data.seasonStats(2026);
+  const races = data.seasonRaces(2026);
   const maxGain = stats.topGains[0]?.gain ?? 1;
   const quote = quotes.at(-1);
 
@@ -131,14 +119,14 @@ function ColapintoSections() {
             const gain = classified && r.grid > 0 ? r.grid - r.finishPos! : null;
             const isBest = stats.best?.round === r.round;
             return (
-              <article key={r.round} className={isBest ? "best" : !classified ? "loss" : undefined} title={`${raceName(r.race)} · largó ${r.grid}.º, terminó ${finishLabel(r)}`}>
+              <article key={r.round} className={isBest ? "best" : !classified ? "loss" : undefined} title={`${raceName(r.race)} · largó ${r.grid || "desde boxes"}, terminó ${finishLabel(r)}`}>
                 <span>{raceCode(r.race)}</span>
                 <b>{r.grid || "PL"}</b>
                 <em>→</em>
                 <strong>{finishLabel(r)}</strong>
                 <small>
                   {classified
-                    ? `${gain! > 0 ? `+${gain}` : gain! < 0 ? `−${-gain!}` : "="} · ${r.points} ${r.points === 1 ? "pt" : "pts"}`
+                    ? `${gain === null ? "" : gain > 0 ? `+${gain} · ` : gain < 0 ? `−${-gain} · ` : "= · "}${r.points} ${r.points === 1 ? "pt" : "pts"}`
                     : statusLabel(r.status)}
                 </small>
               </article>
@@ -151,7 +139,7 @@ function ColapintoSections() {
         <div className="section-block">
           <SectionTitle title="Progreso" inverse />
           <div className="chart-grid">
-            <ChampionshipChart points={standings2026} />
+            <ChampionshipChart points={data.standings2026} />
             <div className="duel">
               <h3>Contra {stats.teammate}</h3>
               <DuelBar label="Clasificación" mine={stats.qualiDuel.ahead} theirs={stats.qualiDuel.behind} />
@@ -215,28 +203,31 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
   const driver = getDriver((await props.params).slug);
   if (!driver) notFound();
   const now = getNow();
+  const season = await getSeason();
   const series = getSeries(driver.seriesId)!;
+  const photo = getPhoto(driver.slug);
   const isColapinto = driver.slug === "franco-colapinto";
+  const data = isColapinto ? colapintoData(season) : null;
   const years = age(driver.born, now);
 
-  const stages = isColapinto
-    ? careerStages()
+  const stages = data
+    ? data.careerStages()
     : driver.career.map((c) => ({ years: c.year, title: c.series, text: c.highlight, stat: c.team, major: false })).reverse();
 
   let ribbon: { label: string; value: string; note?: string }[];
-  if (isColapinto) {
-    const trend = championshipTrend();
-    const stats = seasonStats(2026);
+  if (data) {
+    const trend = data.championshipTrend();
+    const stats = data.seasonStats(2026);
     ribbon = [
       { label: "Temporada", value: "2026" },
       { label: "Campeonato", value: `${trend.position}.º`, note: trend.label },
       { label: "Puntos", value: String(stats.points) },
-      { label: "Mejor resultado", value: `${stats.best?.finishPos}.º`, note: stats.best ? raceName(stats.best.race) : undefined },
+      { label: "Mejor resultado", value: stats.best ? `${stats.best.finishPos}.º` : "—", note: stats.best ? raceName(stats.best.race) : undefined },
       { label: `Vs. ${stats.teammate}`, value: `${stats.raceDuel.ahead}–${stats.raceDuel.behind}`, note: "en carrera" },
     ];
   } else {
-    const standing = getStandingPosition(driver);
-    const label = getSeasonMeta(driver.seriesId).standingsLabel;
+    const standing = season.getStandingPosition(driver);
+    const label = season.getSeasonMeta(driver.seriesId).standingsLabel;
     ribbon = [
       { label: "Temporada", value: "2026" },
       { label: "Campeonato", value: standing ? `${standing.position}.º` : "—", note: label },
@@ -248,11 +239,11 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
 
   return (
     <>
-      <section className={`driver-hero${isColapinto ? "" : " no-photo"}`}>
-        {isColapinto && (
+      <section className={`driver-hero${photo ? "" : " no-photo"}`}>
+        {photo && (
           <div className="driver-photo">
-            <Image src="/img/colapinto-editorial.png" alt="Ilustración provisoria de un piloto junto a un monoplaza" width={1536} height={1024} sizes="(max-width: 800px) 100vw, 56vw" priority />
-            <span className="placeholder-tag">Ilustración provisoria · no es una foto real</span>
+            <Image src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} sizes="(max-width: 800px) 100vw, 56vw" priority />
+            <PhotoCredit photo={photo} />
           </div>
         )}
         <div className="driver-title">
@@ -267,7 +258,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
           </h1>
           {driver.number !== undefined && <b className="mega-number">{driver.number}</b>}
         </div>
-        <NextRace driver={driver} now={now} />
+        <NextRace driver={driver} now={now} season={season} />
       </section>
 
       <section className="season-ribbon">
@@ -280,7 +271,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
         ))}
       </section>
 
-      {isColapinto && <ColapintoSections />}
+      {data && <ColapintoSections data={data} />}
 
       {stages.length > 0 && (
         <section className="career">
@@ -300,7 +291,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
         </section>
       )}
 
-      {!isColapinto && (
+      {!data && (
         <section className="section-block">
           <p className="empty-state">
             Todavía no cargamos el carrera a carrera de {driver.name}. Los resultados de {series.name} aparecen en cada evento.

@@ -1,0 +1,72 @@
+{
+  "franco-colapinto": {
+    "src": "/img/commons/franco-colapinto.jpg",
+    "width": 1920,
+    "height": 1280,
+    "alt": "El Alpine número 43 de Franco Colapinto en Monza, 2025",
+    "author": "Eustace Bagge",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Franco_Colapinto_2025_Italian_Grand_Prix_FP3.jpg"
+  },
+  "nicolas-varrone": {
+    "src": "/img/commons/nicolas-varrone.jpg",
+    "width": 1920,
+    "height": 1357,
+    "alt": "Nicolás Varrone celebra en el podio de las 24 Horas de Le Mans 2023",
+    "author": "Martin Lee from London, UK",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Winners_in_GTEAm,_Nico_Varrone,_Nicky_Catsburg_%26_Ben_Keating_-_Chevrolet_Corvette_C8.R_on_the_podium_at_the_2023_Le_Mans_(53468549675).jpg"
+  },
+  "agustin-canapino": {
+    "src": "/img/commons/agustin-canapino.jpg",
+    "width": 1920,
+    "height": 1440,
+    "alt": "Agustín Canapino en boxes, 2017",
+    "author": "Diego HC",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Agust%C3%ADn_Canapino_2017.jpg"
+  },
+  "juan-manuel-fangio": {
+    "src": "/img/commons/juan-manuel-fangio.jpg",
+    "width": 1920,
+    "height": 1500,
+    "alt": "Juan Manuel Fangio conversa con Alfred Neubauer en el GP de Países Bajos de 1955",
+    "author": "Joop van Bilsen for Anefo",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Juan_Manuel_Fangio_and_Alfred_Neubauer_1955_Dutch_GP.jpg"
+  },
+  "carlos-reutemann": {
+    "src": "/img/commons/carlos-reutemann.jpg",
+    "width": 1920,
+    "height": 1276,
+    "alt": "Carlos Reutemann en un circuito en los años setenta",
+    "author": "Gillfoto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Carlos_Reutemann_7os_46.jpg"
+  },
+  "juan-maria-traverso": {
+    "src": "/img/commons/juan-maria-traverso.jpg",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Juan María Traverso junto a un fanático con una bandera de Chevrolet",
+    "author": "Diego HC",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Juan_Mar%C3%ADa_Traverso_y_fan%C3%A1tico.jpg"
+  },
+  "series-tc": {
+    "src": "/img/commons/series-tc.jpg",
+    "width": 1920,
+    "height": 997,
+    "alt": "Un auto de Turismo Carretera en clasificación, Gran Premio Coronación 2025",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TC_Gran_Premio_Coronaci%C3%B3n_2025._S%C3%A1bado,_Clasificaci%C3%B3n_-_06.jpg"
+  }
+}

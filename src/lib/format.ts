@@ -94,7 +94,8 @@ export const minutesLeft = (session: Session, nowIso: string) =>
 /** Código de tres letras del piloto (oficial si existe, si no, derivado del apellido). */
 export function driverCode(row: Pick<ResultRow, "driver" | "code">) {
   if (row.code) return row.code;
-  const surname = row.driver.split(" ").at(-1) ?? row.driver;
+  const parts = row.driver.split(" ").filter((p) => !/^(jr\.?|sr\.?|ii|iii|iv)$/i.test(p));
+  const surname = parts.at(-1) ?? row.driver;
   return surname.normalize("NFD").replace(/[̀-ͯ]/g, "").slice(0, 3).toUpperCase();
 }
 

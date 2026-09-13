@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { SectionTitle } from "@/components/pista";
-import { getAllSeries, getEventsForSeries, getHistory, getNextSession, getNow, getSeasonMeta, getSeries, getStandings } from "@/lib/data";
+import { PhotoCredit, SectionTitle } from "@/components/pista";
+import { getAllSeries, getHistory, getNow, getSeason, getSeries } from "@/lib/data";
+import { getPhoto } from "@/lib/photos";
 import { fmtDayNum, fmtMonthShort, surname } from "@/lib/format";
 import type { CategoryHistory } from "@/lib/types";
 
@@ -121,15 +122,16 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
   const series = getSeries((await props.params).slug);
   if (!series) notFound();
   const now = getNow();
+  const season = await getSeason();
 
-  const events = getEventsForSeries(series.id);
-  const done = events.filter((e) => !getNextSession(e, now));
-  const next = events.find((e) => getNextSession(e, now));
-  const table = getStandings(series.id).slice(0, 10);
+  const events = season.getEventsForSeries(series.id);
+  const done = events.filter((e) => !season.getNextSession(e, now));
+  const next = events.find((e) => season.getNextSession(e, now));
+  const table = season.getStandings(series.id).slice(0, 10);
   const [leader, second] = table;
-  const meta = getSeasonMeta(series.id);
+  const meta = season.getSeasonMeta(series.id);
   const history = getHistory(series.id);
-  const hasPhoto = series.id === "tc";
+  const photo = getPhoto(`series-${series.id}`);
   const nameParts = series.name.split(" ");
 
   return (
@@ -156,7 +158,12 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
             {history ? ` y ${history.seasons} temporadas de archivo` : ""}, siempre en hora argentina.
           </p>
         </div>
-        {hasPhoto && <Image src="/img/tc-action.png" alt="Auto de turismo doblando a alta velocidad" width={1536} height={1024} sizes="(max-width: 800px) 100vw, 46vw" priority />}
+        {photo && (
+          <>
+            <Image src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} sizes="(max-width: 800px) 100vw, 46vw" priority />
+            <PhotoCredit photo={photo} />
+          </>
+        )}
       </section>
 
       <section className="season-ribbon category-stats">
@@ -214,7 +221,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
           {events.length > 0 ? (
             <ol>
               {events.map((e) => (
-                <li key={e.id} className={getNextSession(e, now) ? undefined : "done"}>
+                <li key={e.id} className={season.getNextSession(e, now) ? undefined : "done"}>
                   <b>{String(e.round).padStart(2, "0")}</b>
                   <span>
                     <Link href={`/eventos/${e.id}`} className="list-link">

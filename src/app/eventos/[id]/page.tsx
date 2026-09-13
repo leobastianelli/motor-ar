@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CatMark, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
-import { getAllEvents, getEvent, getNow, getSeries } from "@/lib/data";
+import { getNow, getSeason, getSeries } from "@/lib/data";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtRange, fmtWeekday, sessionState, sessionStatus, sessionTime } from "@/lib/format";
 import type { Broadcast } from "@/lib/types";
 
 export const revalidate = 60;
 
-export function generateStaticParams() {
-  return getAllEvents().map((e) => ({ id: e.id }));
+export async function generateStaticParams() {
+  return (await getSeason()).getAllEvents().map((e) => ({ id: e.id }));
 }
 
 export async function generateMetadata(props: PageProps<"/eventos/[id]">): Promise<Metadata> {
-  const event = getEvent((await props.params).id);
+  const event = (await getSeason()).getEvent((await props.params).id);
   return { title: event?.name ?? "Evento" };
 }
 
@@ -21,7 +21,7 @@ const BROADCAST_KIND: Record<Broadcast["kind"], string> = { tv: "TV", streaming:
 const RACE_KINDS = ["carrera", "final", "sprint", "serie"];
 
 export default async function EventPage(props: PageProps<"/eventos/[id]">) {
-  const event = getEvent((await props.params).id);
+  const event = (await getSeason()).getEvent((await props.params).id);
   if (!event) notFound();
   const now = getNow();
   const series = getSeries(event.seriesId)!;

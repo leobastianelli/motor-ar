@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Fragment, type CSSProperties } from "react";
+import { PhotoCredit } from "@/components/pista";
 import { legendBySlug, legends } from "@/data/legends";
+import { getPhoto } from "@/lib/photos";
 import { surname } from "@/lib/format";
 
 export function generateStaticParams() {
@@ -18,18 +20,14 @@ const yearOf = (period: string) => period.match(/\d{4}/)?.[0] ?? period.replace(
 export default async function LegendPage(props: PageProps<"/historicos/[slug]">) {
   const legend = legendBySlug[(await props.params).slug];
   if (!legend) notFound();
-  const hasPhoto = legend.slug === "juan-manuel-fangio";
+  const photo = getPhoto(legend.slug);
 
   return (
     <article>
-      <header className={`story-hero${hasPhoto ? "" : " no-photo"}`}>
-        {hasPhoto && (
-          <>
-            <Image src="/img/fangio-archive.png" alt="Ilustración provisoria de un piloto en los boxes de un Gran Premio de los años cincuenta" width={1536} height={1024} sizes="100vw" priority />
-            <span className="placeholder-tag">Ilustración provisoria · no es una foto de archivo</span>
-          </>
-        )}
+      <header className={`story-hero${photo ? "" : " no-photo"}`}>
+        {photo && <Image src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} sizes="100vw" priority />}
         <div className="story-shade" />
+        {photo && <PhotoCredit photo={photo} />}
         <div className="story-title">
           <p>Historias</p>
           <h1>{surname(legend.name)}</h1>

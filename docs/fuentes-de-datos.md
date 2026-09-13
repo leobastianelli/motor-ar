@@ -120,4 +120,24 @@ Pendiente de revisar: Jolpica muestra el campeonato 2026 tras la fecha 14 (Madri
 - Si una fuente falla, el sincronizador conserva los datos anteriores de esa categoría.
 - Las páginas de APAT se cachean en `research/html/` y se piden con pausas de 1,5 s.
 - Dónde ver: `src/data/broadcasts.ts`, sólo con fuente. NASCAR, GT3 y zonales quedan "sin datos".
-- Pendiente: automatizar `npm run sync` (cron), horarios de categorías nacionales, resultados de TC Pista y TC2000, GT3 y zonales.
+- Pendiente: horarios de categorías nacionales, resultados de TC Pista y TC2000, GT3 y zonales.
+
+## Actualización automática en producción
+
+Las fuentes viven en `src/lib/sources/` y las usan tanto los scripts como el sitio:
+
+- **Compilación:** usa la instantánea `src/data/season-2026.json` (no sale a la red).
+- **Producción:** `getSeason()` reconstruye la temporada desde las fuentes. Cada URL tiene su propia caché de datos: Jolpica 15 min, Wikipedia y calendarios 1 h, páginas de F2 6 h, resultados viejos de APAT 30 días. Las páginas se regeneran cada 60 s y, si una fuente falla, se usa la instantánea.
+- **Cron diario** (`vercel.json` → `/api/refresh`): regenera las páginas aunque no haya visitas. En el plan Hobby Vercel permite un cron por día; el resto lo cubre la revalidación por visitas. Si se define `CRON_SECRET`, la ruta lo exige.
+- `npm run sync` sigue sirviendo para actualizar la instantánea del repo.
+
+Otros cambios de esta etapa:
+
+- **F2:** horarios oficiales por sesión desde los datos estructurados de fiaformula2.com (las fechas futuras sin cronograma publicado quedan "horario a confirmar").
+- **Colapinto 2026:** se calcula en vivo desde la F1 (carrera, clasificación, sprint, duelo con Gasly y campeonato oficial tras cada fecha). 2024–2025 siguen en `src/data/colapinto/f1-races.json`.
+- **ACTC:** el portal de tiempos tiene una API que exige autorización y la vista pública carga sólo parte de cada clasificación, así que no se usa.
+- **TC2000:** su sitio bloquea clientes automatizados; no se evade.
+
+## Fotos
+
+`npm run sync:photos` descarga desde Wikimedia Commons sólo imágenes CC BY, CC BY-SA, CC0 o dominio público y guarda autor, licencia y enlace en `src/data/photos.json`. Cada foto muestra su crédito en el sitio. Las ilustraciones generadas del mockup se quitaron.

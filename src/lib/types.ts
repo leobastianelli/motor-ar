@@ -43,6 +43,9 @@ export interface ResultRow {
   gap: string;
   points?: number;
   grid?: number;
+  /** Posición tal como la publica la fuente ("R" = abandono, etc.). */
+  positionText?: string;
+  status?: string;
 }
 
 export interface Session {
@@ -67,6 +70,8 @@ export interface RaceEvent {
   seriesId: string;
   round: number;
   name: string;
+  /** Nombre original en la fuente (p. ej. "Spanish Grand Prix"). */
+  officialName?: string;
   circuit: Circuit;
   sessions: Session[];
   broadcasts: Broadcast[];

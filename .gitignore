@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Descargas crudas: se regeneran con los scripts de sincronización
+/research/html/
+/research/wiki/

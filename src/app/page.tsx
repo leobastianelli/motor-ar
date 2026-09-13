@@ -1,47 +1,33 @@
 import Link from "next/link";
 import { Agenda } from "@/components/agenda";
 import { CatMark, Code, SectionTitle, StateTag } from "@/components/pista";
-import {
-  eventStart,
-  getArgentineHighlights,
-  getDriversAbroad,
-  getLiveItems,
-  getNextArgentineSession,
-  getNow,
-  getRecentResults,
-  getRunnerStatus,
-  getSeries,
-  getStandingPosition,
-  getUpcomingEvents,
-  getWeekendItems,
-  ms,
-  weekendWindow,
-} from "@/lib/data";
+import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, ms, weekendWindow } from "@/lib/data";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthLong, fmtMonthShort, fmtTime, minutesLeft, surname } from "@/lib/format";
 
 export const revalidate = 60;
 
-export default function Home() {
+export default async function Home() {
   const now = getNow();
+  const season = await getSeason();
   const { days, to } = weekendWindow(now);
-  const items = getWeekendItems(now);
-  const live = getLiveItems(now)[0];
+  const items = season.getWeekendItems(now);
+  const live = season.getLiveItems(now)[0];
   const todayKey = dayKey(now);
   const isWeekend = days.some((d) => d.key === todayKey);
   const remaining = items.filter((i) => i.status !== "done" && (!isWeekend || dayKey(i.session.start) === todayKey)).length;
-  const nextArg = getNextArgentineSession(now);
+  const nextArg = season.getNextArgentineSession(now);
 
   const runners = getDriversAbroad().map((driver) => ({
     driver,
     series: getSeries(driver.seriesId)!,
-    status: getRunnerStatus(driver, now),
-    standing: getStandingPosition(driver),
+    status: season.getRunnerStatus(driver, now),
+    standing: season.getStandingPosition(driver),
   }));
   const [feature, ...lines] = runners;
 
-  const podium = getRecentResults(now, "nacional")[0];
-  const [highlight, ...notes] = getArgentineHighlights(now);
-  const nextEvents = getUpcomingEvents(now).filter((e) => ms(eventStart(e)) >= ms(to)).slice(0, 3);
+  const podium = season.getRecentResults(now, "nacional")[0];
+  const [highlight, ...notes] = season.getArgentineHighlights(now);
+  const nextEvents = season.getUpcomingEvents(now).filter((e) => ms(eventStart(e)) >= ms(to)).slice(0, 3);
   const liveUrl = live?.event.broadcasts.find((b) => b.url)?.url;
 
   let lede = items.length === 0 ? "No hay carreras cargadas para este fin de semana." : isWeekend ? `Quedan ${remaining} sesiones hoy.` : `Hay ${items.length} sesiones este fin de semana.`;
