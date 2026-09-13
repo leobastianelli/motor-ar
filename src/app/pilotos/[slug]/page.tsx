@@ -77,9 +77,7 @@ function ChampionshipChart({ points }: { points: { round: number; position: numb
           {ticks.map((t) => (
             <g key={t}>
               <path d={`M55 ${y(t)}H650`} />
-              <text x="12" y={y(t) + 5}>
-                {t}.º
-              </text>
+              <text x="12" y={y(t) + 5}>{`${t}.º`}</text>
             </g>
           ))}
         </g>
@@ -87,9 +85,7 @@ function ChampionshipChart({ points }: { points: { round: number; position: numb
         <g className="chart-points">
           {points.map((p, i) => (
             <circle key={p.round} cx={x(i)} cy={y(p.position)} r={i === points.length - 1 ? 9 : 7}>
-              <title>
-                Fecha {p.round}: {p.position}.º
-              </title>
+              <title>{`Fecha ${p.round}: ${p.position}.º`}</title>
             </circle>
           ))}
         </g>

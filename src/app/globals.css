@@ -58,3 +58,5 @@
 .arg-highlight{display:block}
 .result-notes a:hover strong,.schedule-row:hover strong,.runner-line:hover strong{text-decoration:underline}
 @media(max-width:800px){.story-stats{grid-template-columns:1fr 1fr}}
+.timing-mini li:has(.state.no-data){display:block}
+.gains li{grid-template-columns:110px 1fr 36px}
