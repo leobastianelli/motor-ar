@@ -138,6 +138,24 @@ Otros cambios de esta etapa:
 - **ACTC:** el portal de tiempos tiene una API que exige autorización y la vista pública carga sólo parte de cada clasificación, así que no se usa.
 - **TC2000:** su sitio bloquea clientes automatizados; no se evade.
 
+## Horarios de categorías nacionales (notas de cronograma)
+
+Las categorías nacionales no publican horarios en formato de datos, pero sí notas de cronograma antes de cada fecha.
+`src/lib/sources/schedule-notes.mjs` las convierte en sesiones con horario y las verifica con más de una fuente.
+
+1. **Adaptadores de fuentes** (una función por fuente que devuelve el texto de las notas):
+   - `solotcNotes`: API de WordPress de SoloTC (robots.txt permite todo), categorías TC, TC Pista, TC Mouras, TC Pista Mouras y Pick Up.
+   - `actcOfficialSchedules` (`actc-official.mjs`): notas de horarios de actc.org.ar → PDF oficial → horarios por día y tipo de sesión. El PDF no trae la categoría en cada fila, por eso se usa para verificar.
+2. **Lector común** (`parseSchedule`): reconoce encabezados de día ("Sábado 12 de septiembre", "Sábado 27/06:") y líneas "9.25 a 9.55 – 1° Entrenamiento TCP (Grupo A)". Detecta categoría y tipo de sesión, ignora la grilla de TV y une tandas partidas (grupos, tercios, cuartos).
+3. **Consenso** (`buildConsensus`): una sesión es **confirmada** si la publica una fuente oficial, si coincide con el PDF de la ACTC o si dos fuentes coinciden; si no, se muestra "según <fuente>". Se registran conflictos.
+4. **Aplicación** (`applySchedules`): reemplaza la sesión sin horario de cada fecha por entrenamientos, clasificación, series y final con horario, y conserva los resultados.
+
+Corre en cada actualización de la temporada (producción y `npm run sync:season`). Si las notas no se pueden leer, se mantienen los horarios ya publicados.
+
+**Para sumar una fuente:** escribir un adaptador que devuelva `{ source: { id, name, official }, url, published, text }` y agregarlo en `withSchedules` (`season.mjs`). El lector y el consenso no cambian.
+
+Fuentes evaluadas y descartadas por ahora: Carburando (sin feed, sitemap ni buscador para descubrir notas), Campeones (el cronograma de TC2000 viene como imagen; robots.txt pide 60 s entre pedidos). TN APAT y TC2000 siguen sin una fuente de horarios en texto.
+
 ## Fotos
 
 `npm run sync:photos` descarga desde Wikimedia Commons sólo imágenes CC BY, CC BY-SA, CC0 o dominio público y guarda autor, licencia y enlace en `src/data/photos.json`. Cada foto muestra su crédito en el sitio. Las ilustraciones generadas del mockup se quitaron.

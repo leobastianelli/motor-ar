@@ -8,10 +8,10 @@ import { wikiRawUrl } from "../src/lib/sources/wiki-pages.mjs";
 const UA = { "User-Agent": "pista-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function text(url) {
+async function text(url, options = {}) {
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
-      const res = await fetch(url, { headers: UA });
+      const res = await fetch(url, { headers: { ...UA, ...options.headers } });
       if (res.ok) return await res.text();
     } catch {
       // reintento
@@ -21,7 +21,13 @@ async function text(url) {
   throw new Error(`No se pudo descargar ${url}`);
 }
 
-const io = { text, json: async (url) => JSON.parse(await text(url)), wiki: (key) => text(wikiRawUrl(key)), sleep };
+async function bytes(url) {
+  const res = await fetch(url, { headers: UA });
+  if (!res.ok) throw new Error(`${res.status} al pedir ${url}`);
+  return res.arrayBuffer();
+}
+
+const io = { text, bytes, json: async (url, options) => JSON.parse(await text(url, options)), wiki: (key) => text(wikiRawUrl(key)), sleep };
 
 const OUTPUT = "src/data/season-2026.json";
 const previous = fs.existsSync(OUTPUT) ? JSON.parse(fs.readFileSync(OUTPUT, "utf8")) : undefined;

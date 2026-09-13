@@ -55,6 +55,9 @@ export interface Session {
   /** ISO 8601 con offset. Si `timeKnown` es falso, sólo la fecha es confiable. */
   start: string;
   timeKnown?: boolean;
+  /** "confirmed": fuente oficial o dos fuentes coinciden; "tentative": una sola fuente. */
+  timeStatus?: "confirmed" | "tentative";
+  timeSources?: { name: string; url: string; start: string }[];
   durationMin: number;
   results?: ResultRow[];
 }

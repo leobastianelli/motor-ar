@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T18:59:58.067Z",
+  "generatedAt": "2026-09-13T20:11:23.060Z",
   "events": [
     {
       "id": "tn-2026-1",
@@ -1937,6 +1937,263 @@
       "source": "Jolpica-F1"
     },
     {
+      "id": "tcp-2026-2",
+      "seriesId": "tc-pista",
+      "round": 2,
+      "name": "Fecha 2 · Viedma",
+      "circuit": {
+        "name": "Viedma",
+        "city": "Viedma",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Rio Negro"
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-2-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-03-07T09:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "09:25"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-2-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-03-07T11:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "11:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-2-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-03-07T15:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 34,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "15:20"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-2-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-03-08T10:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "10:05"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-2-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-03-08T10:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "10:30"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-2-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-03-08T12:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "12:55"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
+      "id": "tc-2026-2",
+      "seriesId": "tc",
+      "round": 2,
+      "name": "Fecha 2 · Viedma",
+      "circuit": {
+        "name": "Ciudad de Viedma",
+        "city": "Viedma",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Rio Negro"
+      },
+      "sessions": [
+        {
+          "id": "tc-2026-2-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-03-07T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "11:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-2-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-03-07T13:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "13:20"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-2-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-03-07T16:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 47,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "16:00"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-2-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-03-08T10:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "10:55"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-2-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-03-08T11:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "11:20"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-2-serie-serie3",
+          "kind": "serie",
+          "name": "Serie 3",
+          "start": "2026-03-08T11:45:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "11:45"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-2-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-03-08T14:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "14:00"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Julián Santero",
+              "team": "BMW M4 G82"
+            },
+            {
+              "pos": 2,
+              "driver": "Mauricio Lambiris",
+              "team": "Ford Mustang Mach I"
+            },
+            {
+              "pos": 3,
+              "driver": "Elio Craparo",
+              "team": "Ford Mustang Mach I"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario) · Wikipedia (podios)"
+    },
+    {
       "id": "indycar-2026-2",
       "seriesId": "indycar",
       "round": 2,
@@ -2085,71 +2342,6 @@
         }
       ],
       "source": "Wikipedia · 2026 IndyCar Series"
-    },
-    {
-      "id": "tc-2026-2",
-      "seriesId": "tc",
-      "round": 2,
-      "name": "Fecha 2 · Viedma",
-      "circuit": {
-        "name": "Ciudad de Viedma",
-        "city": "Viedma",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Rio Negro"
-      },
-      "sessions": [
-        {
-          "id": "tc-2026-2-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-03-08T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
-          "results": [
-            {
-              "pos": 1,
-              "driver": "Julián Santero",
-              "team": "BMW M4 G82"
-            },
-            {
-              "pos": 2,
-              "driver": "Mauricio Lambiris",
-              "team": "Ford Mustang Mach I"
-            },
-            {
-              "pos": 3,
-              "driver": "Elio Craparo",
-              "team": "Ford Mustang Mach I"
-            }
-          ]
-        }
-      ],
-      "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
-      "id": "tcp-2026-2",
-      "seriesId": "tc-pista",
-      "round": 2,
-      "name": "Fecha 2 · Viedma",
-      "circuit": {
-        "name": "Viedma",
-        "city": "Viedma",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Rio Negro"
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-2-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-03-08T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
     },
     {
       "id": "nascar-2026-4",
@@ -4518,6 +4710,118 @@
       "source": "Jolpica-F1"
     },
     {
+      "id": "tcp-2026-3",
+      "seriesId": "tc-pista",
+      "round": 3,
+      "name": "Fecha 3 · Neuquén",
+      "circuit": {
+        "name": "Parque Provincia de Neuquén",
+        "city": "Centenario",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Neuquén"
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-3-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-03-28T09:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "09:00"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-3-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-03-28T11:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "11:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-3-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-03-28T15:29:00-03:00",
+          "timeKnown": true,
+          "durationMin": 32,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "15:29"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-3-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-03-29T09:15:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "09:15"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-3-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-03-29T09:40:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "09:40"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-3-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-03-29T12:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "12:55"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tc-2026-3",
       "seriesId": "tc",
       "round": 3,
@@ -4531,12 +4835,116 @@
       },
       "sessions": [
         {
-          "id": "tc-2026-3-final",
+          "id": "tc-2026-3-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-03-28T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "11:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-3-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-03-28T13:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "13:35"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-3-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-03-28T16:06:00-03:00",
+          "timeKnown": true,
+          "durationMin": 44,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "16:06"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-3-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-03-29T10:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "10:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-3-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-03-29T10:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "10:30"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-3-serie-serie3",
+          "kind": "serie",
+          "name": "Serie 3",
+          "start": "2026-03-29T10:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "10:55"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-3-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-03-29T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
+          "start": "2026-03-29T14:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "14:00"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -4557,30 +4965,6 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
-      "id": "tcp-2026-3",
-      "seriesId": "tc-pista",
-      "round": 3,
-      "name": "Fecha 3 · Neuquén",
-      "circuit": {
-        "name": "Parque Provincia de Neuquén",
-        "city": "Centenario",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Neuquén"
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-3-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-03-29T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
     },
     {
       "id": "indycar-2026-4",
@@ -5596,6 +5980,118 @@
       "source": "Wikipedia · 2026 NASCAR Cup Series"
     },
     {
+      "id": "tcp-2026-4",
+      "seriesId": "tc-pista",
+      "round": 4,
+      "name": "Fecha 4 · Concepción Del Uruguay",
+      "circuit": {
+        "name": "Concepción del Uruguay",
+        "city": "Entre Rios",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": ""
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-4-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-04-18T09:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 90,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "09:25"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-4-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-04-18T11:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "11:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-4-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-04-18T15:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 34,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "15:20"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-4-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-04-19T10:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "10:05"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-4-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-04-19T10:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "10:30"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-4-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-04-19T12:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "12:55"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tc-2026-4",
       "seriesId": "tc",
       "round": 4,
@@ -5609,12 +6105,116 @@
       },
       "sessions": [
         {
-          "id": "tc-2026-4-final",
+          "id": "tc-2026-4-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-04-18T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "11:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-4-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-04-18T13:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "13:20"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-4-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-04-18T16:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 47,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "16:00"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-4-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-04-19T10:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "10:55"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-4-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-04-19T11:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "11:20"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-4-serie-serie3",
+          "kind": "serie",
+          "name": "Serie 3",
+          "start": "2026-04-19T11:45:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "11:45"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-4-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-04-19T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
+          "start": "2026-04-19T14:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-concepcion-del-uruguay-horarios-tv-cronograma-fecha-4-2026/",
+              "start": "14:00"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -5635,30 +6235,6 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
-      "id": "tcp-2026-4",
-      "seriesId": "tc-pista",
-      "round": 4,
-      "name": "Fecha 4 · Concepción Del Uruguay",
-      "circuit": {
-        "name": "Concepción del Uruguay",
-        "city": "Entre Rios",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": ""
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-4-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-04-19T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
     },
     {
       "id": "nascar-2026-9",
@@ -7765,6 +8341,263 @@
       "source": "Wikipedia · 2026 NASCAR Cup Series"
     },
     {
+      "id": "tcp-2026-5",
+      "seriesId": "tc-pista",
+      "round": 5,
+      "name": "Fecha 5 · Termas De Río Hondo",
+      "circuit": {
+        "name": "Termas de Rio Hondo",
+        "city": "Corto",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": ""
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-5-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-05-09T08:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "08:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-5-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-05-09T11:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "11:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-5-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-05-09T15:26:00-03:00",
+          "timeKnown": true,
+          "durationMin": 34,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "15:26"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-5-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-05-10T09:15:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "09:15"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-5-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-05-10T09:40:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "09:40"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-5-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-05-10T12:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "12:55"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
+      "id": "tc-2026-5",
+      "seriesId": "tc",
+      "round": 5,
+      "name": "Fecha 5 · Termas De Río Hondo",
+      "circuit": {
+        "name": "Autódromo Internacional de Termas de Río Hondo",
+        "city": "Termas de Río Hondo",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Santiago del Estero"
+      },
+      "sessions": [
+        {
+          "id": "tc-2026-5-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-05-09T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "11:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-5-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-05-09T13:40:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "13:40"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-5-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-05-09T16:06:00-03:00",
+          "timeKnown": true,
+          "durationMin": 44,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "16:06"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-5-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-05-10T10:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "10:10"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-5-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-05-10T10:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "10:35"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-5-serie-serie3",
+          "kind": "serie",
+          "name": "Serie 3",
+          "start": "2026-05-10T11:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "11:00"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-5-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-05-10T14:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-termas-horarios-tv-cronograma-fecha-5-2026/",
+              "start": "14:00"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Mariano Werner",
+              "team": "Ford Mustang Mach I"
+            },
+            {
+              "pos": 2,
+              "driver": "Matías Rossi",
+              "team": "Toyota Camry TC"
+            },
+            {
+              "pos": 3,
+              "driver": "Mauricio Lambiris",
+              "team": "Ford Mustang Mach I"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario) · Wikipedia (podios)"
+    },
+    {
       "id": "indycar-2026-6",
       "seriesId": "indycar",
       "round": 6,
@@ -7913,71 +8746,6 @@
         }
       ],
       "source": "Wikipedia · 2026 IndyCar Series"
-    },
-    {
-      "id": "tc-2026-5",
-      "seriesId": "tc",
-      "round": 5,
-      "name": "Fecha 5 · Termas De Río Hondo",
-      "circuit": {
-        "name": "Autódromo Internacional de Termas de Río Hondo",
-        "city": "Termas de Río Hondo",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Santiago del Estero"
-      },
-      "sessions": [
-        {
-          "id": "tc-2026-5-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-05-10T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
-          "results": [
-            {
-              "pos": 1,
-              "driver": "Mariano Werner",
-              "team": "Ford Mustang Mach I"
-            },
-            {
-              "pos": 2,
-              "driver": "Matías Rossi",
-              "team": "Toyota Camry TC"
-            },
-            {
-              "pos": 3,
-              "driver": "Mauricio Lambiris",
-              "team": "Ford Mustang Mach I"
-            }
-          ]
-        }
-      ],
-      "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
-      "id": "tcp-2026-5",
-      "seriesId": "tc-pista",
-      "round": 5,
-      "name": "Fecha 5 · Termas De Río Hondo",
-      "circuit": {
-        "name": "Termas de Rio Hondo",
-        "city": "Corto",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": ""
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-5-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-05-10T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
     },
     {
       "id": "nascar-2026-12",
@@ -9520,6 +10288,118 @@
       "source": "Wikipedia · 2026 NASCAR Cup Series"
     },
     {
+      "id": "tcp-2026-6",
+      "seriesId": "tc-pista",
+      "round": 6,
+      "name": "Fecha 6 · Alta Gracia",
+      "circuit": {
+        "name": "Oscar Cabalén Córdoba",
+        "city": "Alta Gracia",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Córdoba"
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-6-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-05-30T08:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "08:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-6-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-05-30T11:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "11:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-6-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-05-30T15:26:00-03:00",
+          "timeKnown": true,
+          "durationMin": 34,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "15:26"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-6-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-05-31T09:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "09:10"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-6-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-05-31T09:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "09:35"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-6-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-05-31T12:50:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "12:50"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tc-2026-6",
       "seriesId": "tc",
       "round": 6,
@@ -9533,12 +10413,116 @@
       },
       "sessions": [
         {
-          "id": "tc-2026-6-final",
+          "id": "tc-2026-6-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-05-30T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "11:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-6-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-05-30T13:50:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "13:50"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-6-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-05-30T16:06:00-03:00",
+          "timeKnown": true,
+          "durationMin": 44,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "16:06"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-6-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-05-31T10:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "10:10"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-6-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-05-31T10:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "10:35"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-6-serie-serie3",
+          "kind": "serie",
+          "name": "Serie 3",
+          "start": "2026-05-31T11:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "11:00"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-6-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-05-31T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
+          "start": "2026-05-31T13:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-cordoba-horarios-tv-cronograma-fecha-6-2026/",
+              "start": "13:55"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -9559,30 +10543,6 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
-      "id": "tcp-2026-6",
-      "seriesId": "tc-pista",
-      "round": 6,
-      "name": "Fecha 6 · Alta Gracia",
-      "circuit": {
-        "name": "Oscar Cabalén Córdoba",
-        "city": "Alta Gracia",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Córdoba"
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-6-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-05-31T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
     },
     {
       "id": "indycar-2026-8",
@@ -12350,6 +13310,118 @@
       "source": "Wikipedia · 2026 NASCAR Cup Series"
     },
     {
+      "id": "tcp-2026-7",
+      "seriesId": "tc-pista",
+      "round": 7,
+      "name": "Fecha 7 · Rafaela",
+      "circuit": {
+        "name": "Autódromo Ciudad de Rafaela",
+        "city": "Rafaela",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Santa Fé"
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-7-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-06-20T09:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 70,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "09:30"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-7-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-06-20T11:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "11:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-7-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-06-20T15:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 38,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "15:10"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-7-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-06-21T10:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "10:10"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-7-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-06-21T10:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "10:35"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-7-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-06-21T12:50:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "12:50"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tc-2026-7",
       "seriesId": "tc",
       "round": 7,
@@ -12363,12 +13435,116 @@
       },
       "sessions": [
         {
-          "id": "tc-2026-7-final",
+          "id": "tc-2026-7-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-06-20T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "11:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-7-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-06-20T13:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "13:30"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-7-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-06-20T15:57:00-03:00",
+          "timeKnown": true,
+          "durationMin": 53,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "15:57"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-7-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-06-21T11:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "11:00"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-7-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-06-21T11:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "11:25"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-7-serie-serie3",
+          "kind": "serie",
+          "name": "Serie 3",
+          "start": "2026-06-21T11:50:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "11:50"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-7-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-06-21T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
+          "start": "2026-06-21T13:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rafaela-horarios-tv-cronograma-carrera-de-los-millones-fecha-7-2026/",
+              "start": "13:55"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -12389,30 +13565,6 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
-      "id": "tcp-2026-7",
-      "seriesId": "tc-pista",
-      "round": 7,
-      "name": "Fecha 7 · Rafaela",
-      "circuit": {
-        "name": "Autódromo Ciudad de Rafaela",
-        "city": "Rafaela",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Santa Fé"
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-7-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-06-21T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
     },
     {
       "id": "indycar-2026-10",
@@ -15401,6 +16553,118 @@
       "source": "Wikipedia · 2026 NASCAR Cup Series"
     },
     {
+      "id": "tcp-2026-8",
+      "seriesId": "tc-pista",
+      "round": 8,
+      "name": "Fecha 8 · Posadas",
+      "circuit": {
+        "name": "Rosamonte",
+        "city": "Posadas",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Misiones"
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-8-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-07-11T09:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "09:25"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-8-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-07-11T11:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "11:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-8-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-07-11T15:24:00-03:00",
+          "timeKnown": true,
+          "durationMin": 34,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "15:24"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-8-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-07-12T10:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "10:05"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-8-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-07-12T10:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "10:30"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-8-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-07-12T12:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "12:55"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tc-2026-8",
       "seriesId": "tc",
       "round": 8,
@@ -15414,12 +16678,116 @@
       },
       "sessions": [
         {
-          "id": "tc-2026-8-final",
+          "id": "tc-2026-8-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-07-11T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "11:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-8-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-07-11T13:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "13:20"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-8-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-07-11T16:03:00-03:00",
+          "timeKnown": true,
+          "durationMin": 47,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "16:03"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-8-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-07-12T10:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "10:55"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-8-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-07-12T11:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "11:20"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-8-serie-serie3",
+          "kind": "serie",
+          "name": "Serie 3",
+          "start": "2026-07-12T11:45:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "11:45"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-8-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-07-12T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
+          "start": "2026-07-12T14:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-posadas-horarios-tv-cronograma-fecha-8-2026/",
+              "start": "14:00"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -15440,30 +16808,6 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
-      "id": "tcp-2026-8",
-      "seriesId": "tc-pista",
-      "round": 8,
-      "name": "Fecha 8 · Posadas",
-      "circuit": {
-        "name": "Rosamonte",
-        "city": "Posadas",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Misiones"
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-8-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-07-12T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
     },
     {
       "id": "nascar-2026-20",
@@ -17610,6 +18954,118 @@
       "source": "Wikipedia · 2026 NASCAR Cup Series"
     },
     {
+      "id": "tcp-2026-9",
+      "seriesId": "tc-pista",
+      "round": 9,
+      "name": "Fecha 9 · San Juan",
+      "circuit": {
+        "name": "San Juan Villicum",
+        "city": "2",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": ""
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-9-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-08-01T09:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-juan-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "09:25"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-9-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-08-01T13:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-juan-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "13:00"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-9-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-08-01T16:16:00-03:00",
+          "timeKnown": true,
+          "durationMin": 34,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-juan-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "16:16"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-9-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-08-02T08:15:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-juan-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "08:15"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-9-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-08-02T08:40:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-juan-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "08:40"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-9-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-08-02T11:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-juan-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "11:35"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tc-2026-9",
       "seriesId": "tc",
       "round": 9,
@@ -17623,12 +19079,52 @@
       },
       "sessions": [
         {
-          "id": "tc-2026-9-final",
+          "id": "tc-2026-9-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-08-01T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 96,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-juan-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "11:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-9-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-08-01T14:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-juan-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "14:10"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-9-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-08-02T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
+          "start": "2026-08-02T12:50:00-03:00",
+          "timeKnown": true,
+          "durationMin": 120,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-juan-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "12:50"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -17649,30 +19145,6 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
-      "id": "tcp-2026-9",
-      "seriesId": "tc-pista",
-      "round": 9,
-      "name": "Fecha 9 · San Juan",
-      "circuit": {
-        "name": "San Juan Villicum",
-        "city": "2",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": ""
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-9-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-08-02T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
     },
     {
       "id": "tn-2026-7",
@@ -19495,6 +20967,118 @@
       "source": "Jolpica-F1"
     },
     {
+      "id": "tcp-2026-10",
+      "seriesId": "tc-pista",
+      "round": 10,
+      "name": "Fecha 10 · Paraná",
+      "circuit": {
+        "name": "Ciudad de Paraná",
+        "city": "Entre Ríos",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": ""
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-10-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-08-22T08:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "08:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-10-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-08-22T11:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "11:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-10-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-08-22T15:24:00-03:00",
+          "timeKnown": true,
+          "durationMin": 34,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "15:24"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-10-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-08-23T09:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "09:10"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-10-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-08-23T09:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "09:35"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-10-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-08-23T12:50:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "12:50"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tc-2026-10",
       "seriesId": "tc",
       "round": 10,
@@ -19508,12 +21092,116 @@
       },
       "sessions": [
         {
-          "id": "tc-2026-10-final",
+          "id": "tc-2026-10-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-08-22T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "11:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-10-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-08-22T13:16:00-03:00",
+          "timeKnown": true,
+          "durationMin": 64,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "13:16"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-10-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-08-22T16:03:00-03:00",
+          "timeKnown": true,
+          "durationMin": 47,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "16:03"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-10-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-08-23T10:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "10:10"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-10-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-08-23T10:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "10:35"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-10-serie-serie3",
+          "kind": "serie",
+          "name": "Serie 3",
+          "start": "2026-08-23T11:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "11:00"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-10-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-08-23T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
+          "start": "2026-08-23T14:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-parana-horarios-tv-cronograma-fecha-10-2026/",
+              "start": "14:00"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -19534,30 +21222,6 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
-      "id": "tcp-2026-10",
-      "seriesId": "tc-pista",
-      "round": 10,
-      "name": "Fecha 10 · Paraná",
-      "circuit": {
-        "name": "Ciudad de Paraná",
-        "city": "Entre Ríos",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": ""
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-10-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-08-23T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
     },
     {
       "id": "indycar-2026-15",
@@ -22274,10 +23938,396 @@
           "name": "Carrera",
           "start": "2026-09-13T13:00:00Z",
           "timeKnown": true,
-          "durationMin": 120
+          "durationMin": 120,
+          "results": [
+            {
+              "pos": 1,
+              "positionText": "1",
+              "status": "Finished",
+              "driver": "Andrea Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "1:34:23.754",
+              "points": 25,
+              "grid": 2
+            },
+            {
+              "pos": 2,
+              "positionText": "2",
+              "status": "Finished",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull",
+              "gap": "+4.351",
+              "points": 18,
+              "grid": 3
+            },
+            {
+              "pos": 3,
+              "positionText": "3",
+              "status": "Finished",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "+5.089",
+              "points": 15,
+              "grid": 1
+            },
+            {
+              "pos": 4,
+              "positionText": "4",
+              "status": "Finished",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "+29.116",
+              "points": 12,
+              "grid": 5
+            },
+            {
+              "pos": 5,
+              "positionText": "5",
+              "status": "Finished",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "+29.829",
+              "points": 10,
+              "grid": 6
+            },
+            {
+              "pos": 6,
+              "positionText": "6",
+              "status": "Finished",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Red Bull",
+              "gap": "+1:26.746",
+              "points": 8,
+              "grid": 8
+            },
+            {
+              "pos": 7,
+              "positionText": "7",
+              "status": "Finished",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine F1 Team",
+              "gap": "+1:34.281",
+              "points": 6,
+              "grid": 9
+            },
+            {
+              "pos": 8,
+              "positionText": "8",
+              "status": "Finished",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+1:35.839",
+              "points": 4,
+              "grid": 7
+            },
+            {
+              "pos": 9,
+              "positionText": "9",
+              "status": "Lapped",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "RB F1 Team",
+              "gap": "+10.408",
+              "points": 2,
+              "grid": 10
+            },
+            {
+              "pos": 10,
+              "positionText": "10",
+              "status": "Lapped",
+              "driver": "Nico Hülkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+11.298",
+              "points": 1,
+              "grid": 11
+            },
+            {
+              "pos": 11,
+              "positionText": "11",
+              "status": "Lapped",
+              "driver": "Esteban Ocon",
+              "code": "OCO",
+              "team": "Haas F1 Team",
+              "gap": "+15.143",
+              "points": 0,
+              "grid": 13
+            },
+            {
+              "pos": 12,
+              "positionText": "12",
+              "status": "Lapped",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine F1 Team",
+              "gap": "+26.152",
+              "points": 0,
+              "grid": 14
+            },
+            {
+              "pos": 13,
+              "positionText": "13",
+              "status": "Lapped",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "+28.389",
+              "points": 0,
+              "grid": 12
+            },
+            {
+              "pos": 14,
+              "positionText": "14",
+              "status": "Lapped",
+              "driver": "Yuki Tsunoda",
+              "code": "TSU",
+              "team": "RB F1 Team",
+              "gap": "+1:00.163",
+              "points": 0,
+              "grid": 15
+            },
+            {
+              "pos": 15,
+              "positionText": "15",
+              "status": "Lapped",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "+1:26.212",
+              "points": 0,
+              "grid": 16
+            },
+            {
+              "pos": 16,
+              "positionText": "16",
+              "status": "Lapped",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+1:29.963",
+              "points": 0,
+              "grid": 22
+            },
+            {
+              "pos": 17,
+              "positionText": "17",
+              "status": "Lapped",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+33.776",
+              "points": 0,
+              "grid": 17
+            },
+            {
+              "pos": 18,
+              "positionText": "18",
+              "status": "Lapped",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac F1 Team",
+              "gap": "+49.246",
+              "points": 0,
+              "grid": 19
+            },
+            {
+              "pos": 19,
+              "positionText": "R",
+              "status": "Retired",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "Retired",
+              "points": 0,
+              "grid": 20
+            },
+            {
+              "pos": 20,
+              "positionText": "R",
+              "status": "Retired",
+              "driver": "Sergio Pérez",
+              "code": "PER",
+              "team": "Cadillac F1 Team",
+              "gap": "Retired",
+              "points": 0,
+              "grid": 18
+            },
+            {
+              "pos": 21,
+              "positionText": "R",
+              "status": "Retired",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "Retired",
+              "points": 0,
+              "grid": 21
+            },
+            {
+              "pos": 22,
+              "positionText": "R",
+              "status": "Retired",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "Retired",
+              "points": 0,
+              "grid": 4
+            }
+          ]
         }
       ],
       "source": "Jolpica-F1"
+    },
+    {
+      "id": "tcp-2026-11",
+      "seriesId": "tc-pista",
+      "round": 11,
+      "name": "Fecha 11 · San Luis",
+      "circuit": {
+        "name": "Rosendo Hernández",
+        "city": "San Luis",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "San Luis"
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-11-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-09-12T09:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "09:25"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "09:25"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-11-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-09-12T11:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "11:55"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "11:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-11-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-09-12T15:24:00-03:00",
+          "timeKnown": true,
+          "durationMin": 34,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "15:24"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "15:24"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-11-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-09-13T10:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "10:05"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "10:05"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-11-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-09-13T10:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "10:30"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "10:30"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-11-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-09-13T12:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "12:55"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "12:55"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
     },
     {
       "id": "tc-2026-11",
@@ -22293,12 +24343,151 @@
       },
       "sessions": [
         {
-          "id": "tc-2026-11-final",
+          "id": "tc-2026-11-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-09-12T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "11:05"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "11:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-11-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-09-12T13:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "13:20"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "13:20"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-11-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-09-12T16:03:00-03:00",
+          "timeKnown": true,
+          "durationMin": 47,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "16:03"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "16:03"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-11-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-09-13T10:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "10:55"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "10:55"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-11-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-09-13T11:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "11:20"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "11:20"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-11-serie-serie3",
+          "kind": "serie",
+          "name": "Serie 3",
+          "start": "2026-09-13T11:45:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "11:45"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "11:45"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-11-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-09-13T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
+          "start": "2026-09-13T14:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
+              "start": "14:00"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/horarios-del-fin-de-semana-en-san-luis",
+              "start": "14:00"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -22319,30 +24508,6 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
-      "id": "tcp-2026-11",
-      "seriesId": "tc-pista",
-      "round": 11,
-      "name": "Fecha 11 · A Confirmar",
-      "circuit": {
-        "name": "Circuito a Confirmar",
-        "city": "Circuito a Confirmar",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Circuito a Confirmar"
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-11-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-09-13T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
     },
     {
       "id": "nascar-2026-28",
@@ -22616,13 +24781,13 @@
       "id": "tcp-2026-12",
       "seriesId": "tc-pista",
       "round": 12,
-      "name": "Fecha 12 · A Confirmar",
+      "name": "Fecha 12 · San Nicolas",
       "circuit": {
-        "name": "Circuito a Confirmar",
-        "city": "Circuito a Confirmar",
+        "name": "Ciudad San Nicolas",
+        "city": "San Nicolas",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Circuito a Confirmar"
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -22877,13 +25042,13 @@
       "id": "tcp-2026-13",
       "seriesId": "tc-pista",
       "round": 13,
-      "name": "Fecha 13 · A Confirmar",
+      "name": "Fecha 13 · Rosario",
       "circuit": {
-        "name": "Circuito a Confirmar",
-        "city": "Circuito a Confirmar",
+        "name": "Juan Manuel Fangio-ROSARIO",
+        "city": "Rosario",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Circuito a Confirmar"
+        "province": "Santa Fe"
       },
       "sessions": [
         {
@@ -23138,13 +25303,13 @@
       "id": "tcp-2026-14",
       "seriesId": "tc-pista",
       "round": 14,
-      "name": "Fecha 14 · A Confirmar",
+      "name": "Fecha 14 · Rio Cuarto",
       "circuit": {
-        "name": "Circuito a Confirmar",
-        "city": "Circuito a Confirmar",
+        "name": "Parque Ciudad de Rio Cuarto",
+        "city": "Rio Cuarto",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Circuito a Confirmar"
+        "province": "Cordoba"
       },
       "sessions": [
         {
@@ -23448,13 +25613,13 @@
       "id": "tcp-2026-15",
       "seriesId": "tc-pista",
       "round": 15,
-      "name": "Fecha 15 · A Confirmar",
+      "name": "Fecha 15 · La Plata",
       "circuit": {
-        "name": "Circuito a Confirmar",
-        "city": "Circuito a Confirmar",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Circuito a Confirmar"
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -23475,14 +25640,14 @@
         "pos": 1,
         "driver": "Andrea Kimi Antonelli",
         "team": "Mercedes",
-        "points": 267,
-        "wins": 7
+        "points": 292,
+        "wins": 8
       },
       {
         "pos": 2,
         "driver": "George Russell",
         "team": "Mercedes",
-        "points": 201,
+        "points": 211,
         "wins": 2
       },
       {
@@ -23496,28 +25661,28 @@
         "pos": 4,
         "driver": "Lando Norris",
         "team": "McLaren",
-        "points": 171,
+        "points": 186,
         "wins": 2
       },
       {
         "pos": 5,
         "driver": "Charles Leclerc",
         "team": "Ferrari",
-        "points": 155,
+        "points": 167,
         "wins": 1
       },
       {
         "pos": 6,
         "driver": "Max Verstappen",
         "team": "Red Bull",
-        "points": 127,
+        "points": 145,
         "wins": 0
       },
       {
         "pos": 7,
         "driver": "Oscar Piastri",
         "team": "McLaren",
-        "points": 116,
+        "points": 120,
         "wins": 0
       },
       {
@@ -23531,7 +25696,7 @@
         "pos": 9,
         "driver": "Liam Lawson",
         "team": "Red Bull",
-        "points": 51,
+        "points": 59,
         "wins": 0
       },
       {
@@ -23545,14 +25710,14 @@
         "pos": 11,
         "driver": "Arvid Lindblad",
         "team": "RB F1 Team",
-        "points": 29,
+        "points": 31,
         "wins": 0
       },
       {
         "pos": 12,
         "driver": "Franco Colapinto",
         "team": "Alpine F1 Team",
-        "points": 21,
+        "points": 27,
         "wins": 0
       },
       {
@@ -23573,7 +25738,7 @@
         "pos": 15,
         "driver": "Nico Hülkenberg",
         "team": "Audi",
-        "points": 6,
+        "points": 7,
         "wins": 0
       },
       {
@@ -26151,6 +28316,126 @@
               "points": 0
             }
           ]
+        },
+        {
+          "round": 14,
+          "standings": [
+            {
+              "driver": "Andrea Kimi Antonelli",
+              "pos": 1,
+              "points": 292
+            },
+            {
+              "driver": "George Russell",
+              "pos": 2,
+              "points": 211
+            },
+            {
+              "driver": "Lewis Hamilton",
+              "pos": 3,
+              "points": 191
+            },
+            {
+              "driver": "Lando Norris",
+              "pos": 4,
+              "points": 186
+            },
+            {
+              "driver": "Charles Leclerc",
+              "pos": 5,
+              "points": 167
+            },
+            {
+              "driver": "Max Verstappen",
+              "pos": 6,
+              "points": 145
+            },
+            {
+              "driver": "Oscar Piastri",
+              "pos": 7,
+              "points": 120
+            },
+            {
+              "driver": "Isack Hadjar",
+              "pos": 8,
+              "points": 71
+            },
+            {
+              "driver": "Liam Lawson",
+              "pos": 9,
+              "points": 59
+            },
+            {
+              "driver": "Pierre Gasly",
+              "pos": 10,
+              "points": 41
+            },
+            {
+              "driver": "Arvid Lindblad",
+              "pos": 11,
+              "points": 31
+            },
+            {
+              "driver": "Franco Colapinto",
+              "pos": 12,
+              "points": 27
+            },
+            {
+              "driver": "Oliver Bearman",
+              "pos": 13,
+              "points": 18
+            },
+            {
+              "driver": "Gabriel Bortoleto",
+              "pos": 14,
+              "points": 10
+            },
+            {
+              "driver": "Nico Hülkenberg",
+              "pos": 15,
+              "points": 7
+            },
+            {
+              "driver": "Carlos Sainz",
+              "pos": 16,
+              "points": 6
+            },
+            {
+              "driver": "Alexander Albon",
+              "pos": 17,
+              "points": 5
+            },
+            {
+              "driver": "Esteban Ocon",
+              "pos": 18,
+              "points": 3
+            },
+            {
+              "driver": "Fernando Alonso",
+              "pos": 19,
+              "points": 3
+            },
+            {
+              "driver": "Yuki Tsunoda",
+              "pos": 20,
+              "points": 1
+            },
+            {
+              "driver": "Lance Stroll",
+              "pos": 21,
+              "points": 0
+            },
+            {
+              "driver": "Valtteri Bottas",
+              "pos": 22,
+              "points": 0
+            },
+            {
+              "driver": "Sergio Pérez",
+              "pos": 23,
+              "points": 0
+            }
+          ]
         }
       ]
     },
@@ -26431,6 +28716,14 @@
     },
     "tc2000": {
       "incomplete": true
+    },
+    "schedules": {
+      "notes": 15,
+      "officialPdfs": 1,
+      "sessions": 126,
+      "confirmed": 13,
+      "conflicts": 0,
+      "eventsWithTimes": 20
     }
   },
   "failures": []

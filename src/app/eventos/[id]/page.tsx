@@ -33,6 +33,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
   const streamUrl = event.broadcasts.find((b) => b.url)?.url;
   const broadcastSource = broadcastsBySeries[event.seriesId]?.source;
   const timesUnknown = event.sessions.some((s) => s.timeKnown === false);
+  const scheduleSources = [...new Map(event.sessions.flatMap((s) => s.timeSources ?? []).map((x) => [x.url, x])).values()];
 
   return (
     <>
@@ -80,7 +81,14 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                           <strong>{s.name}</strong>
                           <span>
                             {status === "live" && "En curso"}
-                            {status === "upcoming" && (s.timeKnown === false ? "Horario a confirmar" : `${s.durationMin} min estimados`)}
+                            {status === "upcoming" &&
+                              (s.timeKnown === false
+                                ? "Horario a confirmar"
+                                : s.timeStatus === "confirmed"
+                                  ? "Horario confirmado"
+                                  : s.timeStatus === "tentative"
+                                    ? `Horario según ${s.timeSources?.map((x) => x.name).join(", ")}`
+                                    : `${s.durationMin} min estimados`)}
                             {status === "done" && (top ? (s.id === last?.id ? <a href="#resultados">Terminó · ver resultados</a> : "Terminó") : "Terminó · sin resultados cargados")}
                           </span>
                         </div>
@@ -124,6 +132,16 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
           <p>
             {timesUnknown ? "La fuente todavía no publica los horarios de esta fecha." : "Los horarios ya están convertidos a Argentina."}
             {event.source && ` Datos: ${event.source}.`}
+            {scheduleSources.length > 0 && " Horarios: "}
+            {scheduleSources.map((x, i) => (
+              <span key={x.url}>
+                {i > 0 && " · "}
+                <a href={x.url} target="_blank" rel="noreferrer">
+                  {x.name}
+                </a>
+              </span>
+            ))}
+            {scheduleSources.length > 0 && "."}
             {broadcastSource && (
               <>
                 {" "}

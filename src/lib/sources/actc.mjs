@@ -129,6 +129,16 @@ export async function actcSeason(io) {
     tcpEvents = [];
   }
 
+  // TC Pista corre junto al TC: si su calendario dice "A confirmar", se toma la sede de la fecha de TC del mismo día.
+  const tcByDay = new Map(tcEvents.map((e) => [e.sessions[0].start.slice(0, 10), e]));
+  for (const e of tcpEvents) {
+    const tc = tcByDay.get(e.sessions[0].start.slice(0, 10));
+    if (tc && /a\s+confirmar/i.test(`${e.name} ${e.circuit.city} ${e.circuit.name}`)) {
+      e.circuit = { ...tc.circuit };
+      e.name = `Fecha ${e.round} · ${tc.name.split(" · ").slice(1).join(" · ") || tc.circuit.city}`;
+    }
+  }
+
   const { playoff, regular } = wikiStandings(text);
   const standings = playoff.length ? playoff : regular;
   return {
