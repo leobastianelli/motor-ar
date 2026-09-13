@@ -79,6 +79,17 @@
 
 /* ——— Aire: la jerarquía la resuelven espacio, tamaño y peso; las líneas quedan sólo donde ordenan datos ——— */
 :root{--rule:rgba(16,18,19,.09);--rule-inverse:rgba(255,255,255,.1)}
+/* Cabecera de la home: una franja de datos, no un cartel */
+.weekend-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 32px;min-height:0;padding:36px max(28px,calc((100vw - 1240px)/2)) 0}
+.weekend-head h1{font-size:52px;line-height:1;letter-spacing:-2px;margin:0;white-space:nowrap}
+.weekend-head .hero-date{display:inline;margin:0 0 0 10px;font-size:.42em;font-stretch:100%;font-weight:650;letter-spacing:0;color:var(--muted)}
+.weekend-head .lede{display:flex;flex-wrap:wrap;align-items:baseline;max-width:none;margin:0;font-size:15px;font-weight:500;line-height:1.4}
+.weekend-head .lede>span+span::before{content:"·";margin:0 10px;color:var(--muted)}
+.weekend-head .lede b{font-weight:750;font-variant-numeric:tabular-nums}
+.weekend-head .lede-tz{display:none;color:var(--muted)}
+.weekend-head+.section-block,.weekend-head+.live-board{margin-top:0}
+.weekend-head+.section-block{padding-top:64px}
+@media(max-width:800px){.weekend-head{padding:18px 16px 0;gap:4px}.weekend-head h1{font-size:34px;letter-spacing:-1px}.weekend-head .lede{font-size:14px}.weekend-head .lede-tz{display:inline}.weekend-head+.section-block{padding-top:44px}}
 /* Cabecera */
 .masthead{border-bottom:1px solid var(--rule)}
 .brand,.clock{border-right:0}

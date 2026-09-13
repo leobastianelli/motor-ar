@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Agenda } from "@/components/agenda";
 import { CatMark, Code, SectionTitle, StateTag } from "@/components/pista";
 import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, ms, weekendWindow } from "@/lib/data";
-import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthLong, fmtMonthShort, fmtTime, minutesLeft, surname } from "@/lib/format";
+import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime, minutesLeft, surname } from "@/lib/format";
 
 export const revalidate = 60;
 
@@ -30,40 +30,41 @@ export default async function Home() {
   const nextEvents = season.getUpcomingEvents(now).filter((e) => ms(eventStart(e)) >= ms(to)).slice(0, 3);
   const liveUrl = live?.event.broadcasts.find((b) => b.url)?.url;
 
+  // Cabecera en una línea de datos: estado del día y próxima sesión con argentinos. Sin prosa.
   const sesiones = (n: number) => `${n} ${n === 1 ? "sesión" : "sesiones"}`;
-  let lede =
+  const status =
     items.length === 0
-      ? "No hay carreras cargadas para este fin de semana."
+      ? "Sin carreras"
       : isWeekend
         ? remaining === 0
-          ? "Ya terminó la actividad de hoy."
-          : `${remaining === 1 ? "Queda" : "Quedan"} ${sesiones(remaining)} hoy.`
-        : `Hay ${sesiones(items.length)} este fin de semana.`;
+          ? "Hoy ya terminó"
+          : `${sesiones(remaining)} hoy`
+        : sesiones(items.length);
+  let nextLabel: string | undefined;
   if (nextArg) {
-    const sameDay = dayKey(nextArg.session.start) === todayKey;
-    lede +=
-      nextArg.session.timeKnown === false
-        ? ` La próxima con un argentino es ${sameDay ? "hoy" : `el ${fmtDayShort(nextArg.session.start).toLowerCase()}`}.`
-        : ` La próxima con un argentino arranca ${sameDay ? "a las" : `el ${fmtDayShort(nextArg.session.start).toLowerCase()} a las`} ${fmtTime(nextArg.session.start)}.`;
+    const s = nextArg.session;
+    const day = dayKey(s.start) === todayKey ? "hoy" : fmtDayShort(s.start).toLowerCase();
+    nextLabel = s.timeKnown === false ? day : `${day} ${fmtTime(s.start)}`;
   }
 
   return (
     <>
       <section className="weekend-head">
-        <div>
-          <h1>
-            Este
-            <br />
-            finde
-          </h1>
-          <p className="hero-date">
-            <b>
-              {fmtDayNum(days[0].iso)}–{fmtDayNum(days[2].iso)}
-            </b>{" "}
-            {fmtMonthLong(days[2].iso)}
-          </p>
-        </div>
-        <p className="lede">{lede} Todos los horarios son de Argentina.</p>
+        <h1>
+          Este finde{" "}
+          <span className="hero-date">
+            {fmtDayNum(days[0].iso)}–{fmtDayNum(days[2].iso)} {fmtMonthShort(days[2].iso)}
+          </span>
+        </h1>
+        <p className="lede">
+          <span>{status}</span>
+          {nextLabel && (
+            <span>
+              Próximo argentino: <b>{nextLabel}</b>
+            </span>
+          )}
+          <span className="lede-tz">Hora ARG</span>
+        </p>
       </section>
 
       {live && (
