@@ -67,7 +67,7 @@ export default function Home() {
 
       <section aria-labelledby="argentinos">
         <SectionTitle title="Los nuestros" action={{ href: "/pilotos", label: "Todos" }} />
-        <ul id="argentinos" className="no-scrollbar -mx-4 flex snap-x gap-3 overflow-x-auto px-4 sm:mx-0 sm:grid sm:grid-cols-3 sm:px-0">
+        <ul id="argentinos" className="no-scrollbar -mx-4 flex snap-x gap-3 overflow-x-auto px-4 sm:mx-0 sm:grid sm:grid-cols-2 sm:px-0">
           {pulse.map((p) => (
             <li key={p.driver.slug} className="w-64 shrink-0 snap-start sm:w-auto">
               <Link

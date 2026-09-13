@@ -95,9 +95,9 @@ export interface DriverPulse {
   tone: "live" | "result" | "next";
 }
 
-/** Qué está pasando con cada argentino, en una línea. */
+/** Qué está pasando con cada argentino que corre afuera, en una línea. */
 export function getArgentinosPulse(): DriverPulse[] {
-  return drivers.map((driver) => {
+  return drivers.filter((d) => seriesById[d.seriesId]?.scope === "internacional").map((driver) => {
     const s = seriesById[driver.seriesId];
     const items = allItems.filter((i) => i.event.seriesId === driver.seriesId);
     const live = items.find((i) => i.status === "live");
