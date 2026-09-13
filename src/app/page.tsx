@@ -9,12 +9,9 @@ export const revalidate = 60;
 export default async function Home() {
   const now = getNow();
   const season = await getSeason();
-  const { days, to } = weekendWindow(now);
-  const items = season.getWeekendItems(now);
+  const { items, days, to } = season.getAgenda(now);
   const live = season.getLiveItems(now)[0];
   const todayKey = dayKey(now);
-  const isWeekend = days.some((d) => d.key === todayKey);
-  const remaining = items.filter((i) => i.status !== "done" && (!isWeekend || dayKey(i.session.start) === todayKey)).length;
   const nextArg = season.getNextArgentineSession(now);
 
   const runners = getDriversAbroad().map((driver) => ({
@@ -31,30 +28,35 @@ export default async function Home() {
   const liveUrl = live?.event.broadcasts.find((b) => b.url)?.url;
 
   // Cabecera en una línea de datos: estado del día y próxima sesión con argentinos. Sin prosa.
-  const sesiones = (n: number) => `${n} ${n === 1 ? "sesión" : "sesiones"}`;
-  const status =
-    items.length === 0
-      ? "Sin carreras"
-      : isWeekend
-        ? remaining === 0
-          ? "Hoy ya terminó"
-          : `${sesiones(remaining)} hoy`
-        : sesiones(items.length);
-  let nextLabel: string | undefined;
-  if (nextArg) {
-    const s = nextArg.session;
+  const when = (s: { start: string; timeKnown?: boolean }) => {
     const day = dayKey(s.start) === todayKey ? "hoy" : fmtDayShort(s.start).toLowerCase();
-    nextLabel = s.timeKnown === false ? day : `${day} ${fmtTime(s.start)}`;
-  }
+    return s.timeKnown === false ? day : `${day} ${fmtTime(s.start)}`;
+  };
+  const first = items[0];
+  const status = live
+    ? `En vivo: ${live.series.short} · ${live.session.name}`
+    : first
+      ? `Arranca ${when(first.session)}: ${first.series.short} · ${first.session.name}`
+      : "Sin carreras cargadas";
+  const nextLabel = nextArg && nextArg !== first ? when(nextArg.session) : undefined;
+
+  // "Este finde" si lo que sigue cae en el fin de semana en curso (o el inminente), "Próximo finde" si cae en el siguiente.
+  const inWindow = (win: { key: string }[]) => days.length > 0 && days.every((d) => win.some((w) => w.key === d.key));
+  const thisWeekend = weekendWindow(now).days;
+  const nextWeekend = weekendWindow(new Date(ms(thisWeekend[2].iso) + 2 * 86400000).toISOString()).days;
+  const title = inWindow(thisWeekend) ? "Este finde" : inWindow(nextWeekend) ? "Próximo finde" : "Lo que sigue";
+  const range =
+    days.length === 0
+      ? ""
+      : days.length === 1
+        ? `${fmtDayNum(days[0].iso)} ${fmtMonthShort(days[0].iso)}`
+        : `${fmtDayNum(days[0].iso)}–${fmtDayNum(days.at(-1)!.iso)} ${fmtMonthShort(days.at(-1)!.iso)}`;
 
   return (
     <>
       <section className="weekend-head">
         <h1>
-          Este finde{" "}
-          <span className="hero-date">
-            {fmtDayNum(days[0].iso)}–{fmtDayNum(days[2].iso)} {fmtMonthShort(days[2].iso)}
-          </span>
+          {title} <span className="hero-date">{range}</span>
         </h1>
         <p className="lede">
           <span>{status}</span>

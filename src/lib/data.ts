@@ -158,9 +158,20 @@ export function createSeason(raw: RawSeason) {
     getDriverResults,
     getRunnerStatus,
 
-    getWeekendItems(now: string) {
-      const { from, to } = weekendWindow(now);
-      return itemsAt(now).filter((i) => ms(i.session.start) >= ms(from) && ms(i.session.start) < ms(to));
+    /**
+     * Agenda de la home: sólo lo que está en curso y lo que sigue. Arranca en el día de la primera sesión pendiente
+     * (aunque sea otra semana) y llega hasta el domingo de esa semana. Lo que ya terminó no aparece.
+     */
+    getAgenda(now: string) {
+      const pending = itemsAt(now).filter((i) => i.status !== "done");
+      if (!pending.length) return { items: [], days: [], firstDay: undefined, to: now };
+      const firstDay = dayKey(pending[0].session.start);
+      const start = ms(`${firstDay}T00:00:00-03:00`);
+      const weekday = new Date(`${firstDay}T12:00:00-03:00`).getUTCDay();
+      const end = start + (weekday === 0 ? 1 : 8 - weekday) * 86400000;
+      const items = pending.filter((i) => ms(i.session.start) < end);
+      const days = [...new Set(items.map((i) => dayKey(i.session.start)))].map((key) => ({ key, iso: `${key}T12:00:00-03:00` }));
+      return { items, days, firstDay, to: new Date(end).toISOString() };
     },
 
     getLiveItems: (now: string) => itemsAt(now).filter((i) => i.status === "live"),

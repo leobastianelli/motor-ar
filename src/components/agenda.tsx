@@ -31,13 +31,15 @@ export function Agenda({ items, days, today, now }: { items: FeedItem[]; days: {
         </div>
       </SectionTitle>
 
-      <div className="day-tabs" role="group" aria-label="Día">
-        {days.map((d) => (
-          <button key={d.key} type="button" className={d.key === day ? "active" : undefined} aria-pressed={d.key === day} onClick={() => setDay(d.key)}>
-            {fmtWeekday(d.iso)} <b>{fmtDayNum(d.iso)}</b>
-          </button>
-        ))}
-      </div>
+      {days.length > 1 && (
+        <div className="day-tabs" role="group" aria-label="Día">
+          {days.map((d) => (
+            <button key={d.key} type="button" className={d.key === day ? "active" : undefined} aria-pressed={d.key === day} onClick={() => setDay(d.key)}>
+              {fmtWeekday(d.iso)} <b>{fmtDayNum(d.iso)}</b>
+            </button>
+          ))}
+        </div>
+      )}
 
       <div className="schedule">
         {rows.map(({ session, event, series }) => {
@@ -59,7 +61,9 @@ export function Agenda({ items, days, today, now }: { items: FeedItem[]; days: {
             </Link>
           );
         })}
-        {rows.length === 0 && <p className="empty-state">No hay sesiones cargadas para este día con este filtro.</p>}
+        {rows.length === 0 && (
+          <p className="empty-state">{days.length ? "No hay sesiones pendientes de este tipo ese día." : "No hay sesiones próximas cargadas."}</p>
+        )}
       </div>
     </section>
   );
