@@ -13,9 +13,7 @@ export function Footer() {
         Datos: Jolpica-F1, Wikipedia, ACTC y APAT.
       </p>
       <nav aria-label="Pie de página">
-        <Link href="/calendario">Calendario</Link>
-        <Link href="/sistema">Sistema visual</Link>
-      </nav>
+        <Link href="/calendario">Calendario</Link>      </nav>
     </footer>
   );
 }

@@ -3,7 +3,8 @@ import type { CSSProperties } from "react";
 import { Code, StateTag } from "@/components/pista";
 import { getAllSeries } from "@/lib/data";
 
-export const metadata: Metadata = { title: "Sistema visual" };
+// Manual interno: accesible por URL directa, fuera de la navegación y de los buscadores.
+export const metadata: Metadata = { title: "Sistema visual", robots: { index: false, follow: false } };
 
 const SWATCHES = [
   { name: "Tinta", hex: "#101213", dark: true },
