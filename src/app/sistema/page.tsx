@@ -19,7 +19,7 @@ export default function SystemPage() {
   return (
     <div className="system">
       <header className="system-head">
-        <p className="kicker">Pista · Manual de boxes</p>
+        <p className="kicker">Fierros · Manual de boxes</p>
         <h1>
           Sistema
           <br />

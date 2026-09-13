@@ -8,7 +8,7 @@ import "./globals.css";
 const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], axes: ["wdth"], display: "swap" });
 
 export const metadata: Metadata = {
-  title: { default: "Pista — Automovilismo argentino, al minuto", template: "%s — Pista" },
+  title: { default: "Fierros — Automovilismo argentino, al minuto", template: "%s — Fierros" },
   description: "Horarios, resultados y seguimiento de pilotos argentinos, siempre en hora argentina.",
 };
 

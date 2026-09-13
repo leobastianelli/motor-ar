@@ -30,7 +30,15 @@ export default async function Home() {
   const nextEvents = season.getUpcomingEvents(now).filter((e) => ms(eventStart(e)) >= ms(to)).slice(0, 3);
   const liveUrl = live?.event.broadcasts.find((b) => b.url)?.url;
 
-  let lede = items.length === 0 ? "No hay carreras cargadas para este fin de semana." : isWeekend ? `Quedan ${remaining} sesiones hoy.` : `Hay ${items.length} sesiones este fin de semana.`;
+  const sesiones = (n: number) => `${n} ${n === 1 ? "sesión" : "sesiones"}`;
+  let lede =
+    items.length === 0
+      ? "No hay carreras cargadas para este fin de semana."
+      : isWeekend
+        ? remaining === 0
+          ? "Ya terminó la actividad de hoy."
+          : `${remaining === 1 ? "Queda" : "Quedan"} ${sesiones(remaining)} hoy.`
+        : `Hay ${sesiones(items.length)} este fin de semana.`;
   if (nextArg) {
     const sameDay = dayKey(nextArg.session.start) === todayKey;
     lede +=

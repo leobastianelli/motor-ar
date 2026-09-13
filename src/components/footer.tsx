@@ -4,8 +4,8 @@ export function Footer() {
   return (
     <footer className="footer">
       <Link className="brand" href="/">
-        <span>Pis</span>
-        <b>ta</b>
+        <span>Fie</span>
+        <b>rros</b>
       </Link>
       <p>
         Automovilismo en hora argentina.

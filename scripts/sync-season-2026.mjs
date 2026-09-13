@@ -5,7 +5,7 @@ import fs from "node:fs";
 import { buildSeason } from "../src/lib/sources/season.mjs";
 import { wikiRawUrl } from "../src/lib/sources/wiki-pages.mjs";
 
-const UA = { "User-Agent": "pista-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
+const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function text(url, options = {}) {

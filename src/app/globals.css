@@ -67,3 +67,8 @@
 .driver-photo .photo-credit{left:16px;top:16px}
 .story-hero>.photo-credit{right:16px;top:16px}
 .category-hero>.photo-credit{right:16px;bottom:12px}
+/* Marca "Fierros": columna de marca más ancha que "Pista" en el mockup */
+.masthead{grid-template-columns:220px 1fr auto}
+.site-nav{padding-left:220px}
+.footer{grid-template-columns:240px 1fr auto}
+@media(max-width:800px){.masthead{grid-template-columns:1fr auto}.site-nav{padding-left:0}.footer{grid-template-columns:1fr}}

@@ -7,7 +7,7 @@ import { clean, flagOf, intOf, section, tables, texts } from "../src/lib/sources
 
 const pages = {};
 for (const key of ["es-tc", "es-tc2000", "es-tn", "en-f2", "en-indycar", "en-nascar-champions"]) {
-  const res = await fetch(wikiRawUrl(key), { headers: { "User-Agent": "pista-motor-ar/0.1 (leonelbastianelli@gmail.com)" } });
+  const res = await fetch(wikiRawUrl(key), { headers: { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" } });
   if (!res.ok) throw new Error(`No se pudo descargar ${key}: ${res.status}`);
   pages[key] = await res.text();
   await new Promise((r) => setTimeout(r, 400));

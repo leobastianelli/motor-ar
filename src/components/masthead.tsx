@@ -44,9 +44,9 @@ export function Masthead() {
 
   return (
     <header className="masthead">
-      <Link className="brand" href="/" aria-label="Pista, inicio">
-        <span>Pis</span>
-        <b>ta</b>
+      <Link className="brand" href="/" aria-label="Fierros, inicio">
+        <span>Fie</span>
+        <b>rros</b>
       </Link>
       <div className="clock">
         <span>Hora argentina</span>

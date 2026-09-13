@@ -2,7 +2,7 @@
 // Uso: node scripts/fetch-photos.mjs
 import fs from "node:fs";
 
-const UA = { "User-Agent": "pista-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
+const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
 const WIDTH = 1920;
 
 const PHOTOS = {
