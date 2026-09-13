@@ -1,0 +1,1061 @@
+{
+  "source": "Jolpica-F1 API (api.jolpi.ca), descargado 2026-09-13",
+  "races": [
+    {
+      "season": 2024,
+      "round": 16,
+      "race": "Italian Grand Prix",
+      "circuit": "Autodromo Nazionale di Monza",
+      "locality": "Monza",
+      "country": "Italy",
+      "date": "2024-09-01",
+      "team": "Williams",
+      "quali": 18,
+      "grid": 18,
+      "finish": "12",
+      "finishPos": 12,
+      "status": "Finished",
+      "points": 0,
+      "laps": 53,
+      "sprint": null,
+      "teammate": {
+        "driver": "Albon",
+        "finish": "9",
+        "points": 2
+      }
+    },
+    {
+      "season": 2024,
+      "round": 17,
+      "race": "Azerbaijan Grand Prix",
+      "circuit": "Baku City Circuit",
+      "locality": "Baku",
+      "country": "Azerbaijan",
+      "date": "2024-09-15",
+      "team": "Williams",
+      "quali": 9,
+      "grid": 8,
+      "finish": "8",
+      "finishPos": 8,
+      "status": "Finished",
+      "points": 4,
+      "laps": 51,
+      "sprint": null,
+      "teammate": {
+        "driver": "Albon",
+        "finish": "7",
+        "points": 6
+      }
+    },
+    {
+      "season": 2024,
+      "round": 18,
+      "race": "Singapore Grand Prix",
+      "circuit": "Marina Bay Street Circuit",
+      "locality": "Marina Bay",
+      "country": "Singapore",
+      "date": "2024-09-22",
+      "team": "Williams",
+      "quali": 12,
+      "grid": 12,
+      "finish": "11",
+      "finishPos": 11,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 61,
+      "sprint": null,
+      "teammate": {
+        "driver": "Albon",
+        "finish": "R",
+        "points": 0
+      }
+    },
+    {
+      "season": 2024,
+      "round": 19,
+      "race": "United States Grand Prix",
+      "circuit": "Circuit of the Americas",
+      "locality": "Austin",
+      "country": "USA",
+      "date": "2024-10-20",
+      "team": "Williams",
+      "quali": 17,
+      "grid": 15,
+      "finish": "10",
+      "finishPos": 10,
+      "status": "Finished",
+      "points": 1,
+      "laps": 56,
+      "sprint": {
+        "finish": "12",
+        "points": 0
+      },
+      "teammate": {
+        "driver": "Albon",
+        "finish": "16",
+        "points": 0
+      }
+    },
+    {
+      "season": 2024,
+      "round": 20,
+      "race": "Mexico City Grand Prix",
+      "circuit": "AutÃ³dromo Hermanos RodrÃ­guez",
+      "locality": "Mexico City",
+      "country": "Mexico",
+      "date": "2024-10-27",
+      "team": "Williams",
+      "quali": 16,
+      "grid": 16,
+      "finish": "12",
+      "finishPos": 12,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 70,
+      "sprint": null,
+      "teammate": {
+        "driver": "Albon",
+        "finish": "R",
+        "points": 0
+      }
+    },
+    {
+      "season": 2024,
+      "round": 21,
+      "race": "SÃ£o Paulo Grand Prix",
+      "circuit": "AutÃ³dromo JosÃ© Carlos Pace",
+      "locality": "SÃ£o Paulo",
+      "country": "Brazil",
+      "date": "2024-11-03",
+      "team": "Williams",
+      "quali": 18,
+      "grid": 16,
+      "finish": "R",
+      "finishPos": null,
+      "status": "Retired",
+      "points": 0,
+      "laps": 30,
+      "sprint": {
+        "finish": "12",
+        "points": 0
+      },
+      "teammate": {
+        "driver": "Albon",
+        "finish": "W",
+        "points": 0
+      }
+    },
+    {
+      "season": 2024,
+      "round": 22,
+      "race": "Las Vegas Grand Prix",
+      "circuit": "Las Vegas Strip Street Circuit",
+      "locality": "Las Vegas",
+      "country": "USA",
+      "date": "2024-11-23",
+      "team": "Williams",
+      "quali": 14,
+      "grid": 20,
+      "finish": "14",
+      "finishPos": 14,
+      "status": "Finished",
+      "points": 0,
+      "laps": 50,
+      "sprint": null,
+      "teammate": {
+        "driver": "Albon",
+        "finish": "R",
+        "points": 0
+      }
+    },
+    {
+      "season": 2024,
+      "round": 23,
+      "race": "Qatar Grand Prix",
+      "circuit": "Losail International Circuit",
+      "locality": "Lusail",
+      "country": "Qatar",
+      "date": "2024-12-01",
+      "team": "Williams",
+      "quali": 19,
+      "grid": 19,
+      "finish": "R",
+      "finishPos": null,
+      "status": "Retired",
+      "points": 0,
+      "laps": 0,
+      "sprint": {
+        "finish": "18",
+        "points": 0
+      },
+      "teammate": {
+        "driver": "Albon",
+        "finish": "15",
+        "points": 0
+      }
+    },
+    {
+      "season": 2024,
+      "round": 24,
+      "race": "Abu Dhabi Grand Prix",
+      "circuit": "Yas Marina Circuit",
+      "locality": "Abu Dhabi",
+      "country": "UAE",
+      "date": "2024-12-08",
+      "team": "Williams",
+      "quali": 19,
+      "grid": 20,
+      "finish": "R",
+      "finishPos": null,
+      "status": "Retired",
+      "points": 0,
+      "laps": 26,
+      "sprint": null,
+      "teammate": {
+        "driver": "Albon",
+        "finish": "11",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 7,
+      "race": "Emilia Romagna Grand Prix",
+      "circuit": "Autodromo Enzo e Dino Ferrari",
+      "locality": "Imola",
+      "country": "Italy",
+      "date": "2025-05-18",
+      "team": "Alpine F1 Team",
+      "quali": 15,
+      "grid": 16,
+      "finish": "16",
+      "finishPos": 16,
+      "status": "Finished",
+      "points": 0,
+      "laps": 63,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "13",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 8,
+      "race": "Monaco Grand Prix",
+      "circuit": "Circuit de Monaco",
+      "locality": "Monte Carlo",
+      "country": "Monaco",
+      "date": "2025-05-25",
+      "team": "Alpine F1 Team",
+      "quali": 20,
+      "grid": 18,
+      "finish": "13",
+      "finishPos": 13,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 76,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "R",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 9,
+      "race": "Spanish Grand Prix",
+      "circuit": "Circuit de Barcelona-Catalunya",
+      "locality": "Barcelona",
+      "country": "Spain",
+      "date": "2025-06-01",
+      "team": "Alpine F1 Team",
+      "quali": 19,
+      "grid": 18,
+      "finish": "15",
+      "finishPos": 15,
+      "status": "Finished",
+      "points": 0,
+      "laps": 66,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "8",
+        "points": 4
+      }
+    },
+    {
+      "season": 2025,
+      "round": 10,
+      "race": "Canadian Grand Prix",
+      "circuit": "Circuit Gilles Villeneuve",
+      "locality": "Montreal",
+      "country": "Canada",
+      "date": "2025-06-15",
+      "team": "Alpine F1 Team",
+      "quali": 12,
+      "grid": 10,
+      "finish": "13",
+      "finishPos": 13,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 69,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "15",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 11,
+      "race": "Austrian Grand Prix",
+      "circuit": "Red Bull Ring",
+      "locality": "Spielberg",
+      "country": "Austria",
+      "date": "2025-06-29",
+      "team": "Alpine F1 Team",
+      "quali": 14,
+      "grid": 14,
+      "finish": "15",
+      "finishPos": 15,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 69,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "13",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 12,
+      "race": "British Grand Prix",
+      "circuit": "Silverstone Circuit",
+      "locality": "Silverstone",
+      "country": "UK",
+      "date": "2025-07-06",
+      "team": "Alpine F1 Team",
+      "quali": 20,
+      "grid": 20,
+      "finish": "W",
+      "finishPos": null,
+      "status": "Did not start",
+      "points": 0,
+      "laps": 0,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "6",
+        "points": 8
+      }
+    },
+    {
+      "season": 2025,
+      "round": 13,
+      "race": "Belgian Grand Prix",
+      "circuit": "Circuit de Spa-Francorchamps",
+      "locality": "Spa",
+      "country": "Belgium",
+      "date": "2025-07-27",
+      "team": "Alpine F1 Team",
+      "quali": 17,
+      "grid": 15,
+      "finish": "19",
+      "finishPos": 19,
+      "status": "Finished",
+      "points": 0,
+      "laps": 44,
+      "sprint": {
+        "finish": "19",
+        "points": 0
+      },
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "10",
+        "points": 1
+      }
+    },
+    {
+      "season": 2025,
+      "round": 14,
+      "race": "Hungarian Grand Prix",
+      "circuit": "Hungaroring",
+      "locality": "Budapest",
+      "country": "Hungary",
+      "date": "2025-08-03",
+      "team": "Alpine F1 Team",
+      "quali": 14,
+      "grid": 14,
+      "finish": "18",
+      "finishPos": 18,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 69,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "19",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 15,
+      "race": "Dutch Grand Prix",
+      "circuit": "Circuit Park Zandvoort",
+      "locality": "Zandvoort",
+      "country": "Netherlands",
+      "date": "2025-08-31",
+      "team": "Alpine F1 Team",
+      "quali": 16,
+      "grid": 16,
+      "finish": "11",
+      "finishPos": 11,
+      "status": "Finished",
+      "points": 0,
+      "laps": 72,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "17",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 16,
+      "race": "Italian Grand Prix",
+      "circuit": "Autodromo Nazionale di Monza",
+      "locality": "Monza",
+      "country": "Italy",
+      "date": "2025-09-07",
+      "team": "Alpine F1 Team",
+      "quali": 18,
+      "grid": 17,
+      "finish": "17",
+      "finishPos": 17,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 52,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "16",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 17,
+      "race": "Azerbaijan Grand Prix",
+      "circuit": "Baku City Circuit",
+      "locality": "Baku",
+      "country": "Azerbaijan",
+      "date": "2025-09-21",
+      "team": "Alpine F1 Team",
+      "quali": 16,
+      "grid": 16,
+      "finish": "19",
+      "finishPos": 19,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 50,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "18",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 18,
+      "race": "Singapore Grand Prix",
+      "circuit": "Marina Bay Street Circuit",
+      "locality": "Marina Bay",
+      "country": "Singapore",
+      "date": "2025-10-05",
+      "team": "Alpine F1 Team",
+      "quali": 16,
+      "grid": 16,
+      "finish": "16",
+      "finishPos": 16,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 61,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "19",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 19,
+      "race": "United States Grand Prix",
+      "circuit": "Circuit of the Americas",
+      "locality": "Austin",
+      "country": "USA",
+      "date": "2025-10-19",
+      "team": "Alpine F1 Team",
+      "quali": 15,
+      "grid": 15,
+      "finish": "17",
+      "finishPos": 17,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 55,
+      "sprint": {
+        "finish": "14",
+        "points": 0
+      },
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "19",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 20,
+      "race": "Mexico City Grand Prix",
+      "circuit": "AutÃ³dromo Hermanos RodrÃ­guez",
+      "locality": "Mexico City",
+      "country": "Mexico",
+      "date": "2025-10-26",
+      "team": "Alpine F1 Team",
+      "quali": 20,
+      "grid": 20,
+      "finish": "16",
+      "finishPos": 16,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 70,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "15",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 21,
+      "race": "SÃ£o Paulo Grand Prix",
+      "circuit": "AutÃ³dromo JosÃ© Carlos Pace",
+      "locality": "SÃ£o Paulo",
+      "country": "Brazil",
+      "date": "2025-11-09",
+      "team": "Alpine F1 Team",
+      "quali": 18,
+      "grid": 16,
+      "finish": "15",
+      "finishPos": 15,
+      "status": "Finished",
+      "points": 0,
+      "laps": 71,
+      "sprint": {
+        "finish": "R",
+        "points": 0
+      },
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "10",
+        "points": 1
+      }
+    },
+    {
+      "season": 2025,
+      "round": 22,
+      "race": "Las Vegas Grand Prix",
+      "circuit": "Las Vegas Strip Street Circuit",
+      "locality": "Las Vegas",
+      "country": "USA",
+      "date": "2025-11-23",
+      "team": "Alpine F1 Team",
+      "quali": 15,
+      "grid": 15,
+      "finish": "15",
+      "finishPos": 15,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 49,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "13",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 23,
+      "race": "Qatar Grand Prix",
+      "circuit": "Losail International Circuit",
+      "locality": "Lusail",
+      "country": "Qatar",
+      "date": "2025-11-30",
+      "team": "Alpine F1 Team",
+      "quali": 20,
+      "grid": 20,
+      "finish": "14",
+      "finishPos": 14,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 56,
+      "sprint": {
+        "finish": "20",
+        "points": 0
+      },
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "16",
+        "points": 0
+      }
+    },
+    {
+      "season": 2025,
+      "round": 24,
+      "race": "Abu Dhabi Grand Prix",
+      "circuit": "Yas Marina Circuit",
+      "locality": "Abu Dhabi",
+      "country": "UAE",
+      "date": "2025-12-07",
+      "team": "Alpine F1 Team",
+      "quali": 20,
+      "grid": 20,
+      "finish": "20",
+      "finishPos": 20,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 57,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "19",
+        "points": 0
+      }
+    },
+    {
+      "season": 2026,
+      "round": 1,
+      "race": "Australian Grand Prix",
+      "circuit": "Albert Park Grand Prix Circuit",
+      "locality": "Melbourne",
+      "country": "Australia",
+      "date": "2026-03-08",
+      "team": "Alpine F1 Team",
+      "quali": 16,
+      "grid": 16,
+      "finish": "14",
+      "finishPos": 14,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 56,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "10",
+        "points": 1
+      }
+    },
+    {
+      "season": 2026,
+      "round": 2,
+      "race": "Chinese Grand Prix",
+      "circuit": "Shanghai International Circuit",
+      "locality": "Shanghai",
+      "country": "China",
+      "date": "2026-03-15",
+      "team": "Alpine F1 Team",
+      "quali": 12,
+      "grid": 12,
+      "finish": "10",
+      "finishPos": 10,
+      "status": "Lapped",
+      "points": 1,
+      "laps": 55,
+      "sprint": {
+        "finish": "14",
+        "points": 0
+      },
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "6",
+        "points": 8
+      }
+    },
+    {
+      "season": 2026,
+      "round": 3,
+      "race": "Japanese Grand Prix",
+      "circuit": "Suzuka Circuit",
+      "locality": "Suzuka",
+      "country": "Japan",
+      "date": "2026-03-29",
+      "team": "Alpine F1 Team",
+      "quali": 15,
+      "grid": 15,
+      "finish": "16",
+      "finishPos": 16,
+      "status": "Finished",
+      "points": 0,
+      "laps": 53,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "7",
+        "points": 6
+      }
+    },
+    {
+      "season": 2026,
+      "round": 4,
+      "race": "Miami Grand Prix",
+      "circuit": "Miami International Autodrome",
+      "locality": "Miami",
+      "country": "USA",
+      "date": "2026-05-03",
+      "team": "Alpine F1 Team",
+      "quali": 8,
+      "grid": 8,
+      "finish": "7",
+      "finishPos": 7,
+      "status": "Finished",
+      "points": 6,
+      "laps": 57,
+      "sprint": {
+        "finish": "10",
+        "points": 0
+      },
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "R",
+        "points": 0
+      }
+    },
+    {
+      "season": 2026,
+      "round": 5,
+      "race": "Canadian Grand Prix",
+      "circuit": "Circuit Gilles Villeneuve",
+      "locality": "Montreal",
+      "country": "Canada",
+      "date": "2026-05-24",
+      "team": "Alpine F1 Team",
+      "quali": 10,
+      "grid": 10,
+      "finish": "6",
+      "finishPos": 6,
+      "status": "Lapped",
+      "points": 8,
+      "laps": 67,
+      "sprint": {
+        "finish": "9",
+        "points": 0
+      },
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "8",
+        "points": 4
+      }
+    },
+    {
+      "season": 2026,
+      "round": 6,
+      "race": "Monaco Grand Prix",
+      "circuit": "Circuit de Monaco",
+      "locality": "Monte Carlo",
+      "country": "Monaco",
+      "date": "2026-06-07",
+      "team": "Alpine F1 Team",
+      "quali": 14,
+      "grid": 14,
+      "finish": "14",
+      "finishPos": 14,
+      "status": "Finished",
+      "points": 0,
+      "laps": 78,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "7",
+        "points": 6
+      }
+    },
+    {
+      "season": 2026,
+      "round": 7,
+      "race": "Barcelona Grand Prix",
+      "circuit": "Circuit de Barcelona-Catalunya",
+      "locality": "Barcelona",
+      "country": "Spain",
+      "date": "2026-06-14",
+      "team": "Alpine F1 Team",
+      "quali": 13,
+      "grid": 13,
+      "finish": "10",
+      "finishPos": 10,
+      "status": "Lapped",
+      "points": 1,
+      "laps": 65,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "7",
+        "points": 6
+      }
+    },
+    {
+      "season": 2026,
+      "round": 8,
+      "race": "Austrian Grand Prix",
+      "circuit": "Red Bull Ring",
+      "locality": "Spielberg",
+      "country": "Austria",
+      "date": "2026-06-28",
+      "team": "Alpine F1 Team",
+      "quali": 16,
+      "grid": 16,
+      "finish": "15",
+      "finishPos": 15,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 70,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "13",
+        "points": 0
+      }
+    },
+    {
+      "season": 2026,
+      "round": 9,
+      "race": "British Grand Prix",
+      "circuit": "Silverstone Circuit",
+      "locality": "Silverstone",
+      "country": "UK",
+      "date": "2026-07-05",
+      "team": "Alpine F1 Team",
+      "quali": 19,
+      "grid": 19,
+      "finish": "9",
+      "finishPos": 9,
+      "status": "Finished",
+      "points": 2,
+      "laps": 52,
+      "sprint": {
+        "finish": "12",
+        "points": 0
+      },
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "10",
+        "points": 1
+      }
+    },
+    {
+      "season": 2026,
+      "round": 10,
+      "race": "Belgian Grand Prix",
+      "circuit": "Circuit de Spa-Francorchamps",
+      "locality": "Spa",
+      "country": "Belgium",
+      "date": "2026-07-19",
+      "team": "Alpine F1 Team",
+      "quali": 13,
+      "grid": 11,
+      "finish": "10",
+      "finishPos": 10,
+      "status": "Finished",
+      "points": 1,
+      "laps": 44,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "11",
+        "points": 0
+      }
+    },
+    {
+      "season": 2026,
+      "round": 11,
+      "race": "Hungarian Grand Prix",
+      "circuit": "Hungaroring",
+      "locality": "Budapest",
+      "country": "Hungary",
+      "date": "2026-07-26",
+      "team": "Alpine F1 Team",
+      "quali": 13,
+      "grid": 13,
+      "finish": "15",
+      "finishPos": 15,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 68,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "12",
+        "points": 0
+      }
+    },
+    {
+      "season": 2026,
+      "round": 12,
+      "race": "Dutch Grand Prix",
+      "circuit": "Circuit Park Zandvoort",
+      "locality": "Zandvoort",
+      "country": "Netherlands",
+      "date": "2026-08-23",
+      "team": "Alpine F1 Team",
+      "quali": 14,
+      "grid": 14,
+      "finish": "14",
+      "finishPos": 14,
+      "status": "Lapped",
+      "points": 0,
+      "laps": 70,
+      "sprint": {
+        "finish": "12",
+        "points": 0
+      },
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "10",
+        "points": 1
+      }
+    },
+    {
+      "season": 2026,
+      "round": 13,
+      "race": "Italian Grand Prix",
+      "circuit": "Autodromo Nazionale di Monza",
+      "locality": "Monza",
+      "country": "Italy",
+      "date": "2026-09-06",
+      "team": "Alpine F1 Team",
+      "quali": 8,
+      "grid": 7,
+      "finish": "9",
+      "finishPos": 9,
+      "status": "Finished",
+      "points": 2,
+      "laps": 53,
+      "sprint": null,
+      "teammate": {
+        "driver": "Gasly",
+        "finish": "7",
+        "points": 6
+      }
+    }
+  ],
+  "standings2026": [
+    {
+      "round": 1,
+      "position": 14,
+      "points": 0,
+      "teammatePosition": 10,
+      "teammatePoints": 1
+    },
+    {
+      "round": 2,
+      "position": 15,
+      "points": 1,
+      "teammatePosition": 7,
+      "teammatePoints": 9
+    },
+    {
+      "round": 3,
+      "position": 16,
+      "points": 1,
+      "teammatePosition": 8,
+      "teammatePoints": 15
+    },
+    {
+      "round": 4,
+      "position": 11,
+      "points": 7,
+      "teammatePosition": 9,
+      "teammatePoints": 16
+    },
+    {
+      "round": 5,
+      "position": 11,
+      "points": 15,
+      "teammatePosition": 8,
+      "teammatePoints": 20
+    },
+    {
+      "round": 6,
+      "position": 12,
+      "points": 15,
+      "teammatePosition": 10,
+      "teammatePoints": 26
+    },
+    {
+      "round": 7,
+      "position": 12,
+      "points": 16,
+      "teammatePosition": 9,
+      "teammatePoints": 32
+    },
+    {
+      "round": 8,
+      "position": 12,
+      "points": 16,
+      "teammatePosition": 10,
+      "teammatePoints": 32
+    },
+    {
+      "round": 9,
+      "position": 13,
+      "points": 18,
+      "teammatePosition": 10,
+      "teammatePoints": 33
+    },
+    {
+      "round": 10,
+      "position": 12,
+      "points": 19,
+      "teammatePosition": 10,
+      "teammatePoints": 33
+    },
+    {
+      "round": 11,
+      "position": 12,
+      "points": 19,
+      "teammatePosition": 10,
+      "teammatePoints": 33
+    },
+    {
+      "round": 12,
+      "position": 12,
+      "points": 19,
+      "teammatePosition": 10,
+      "teammatePoints": 35
+    },
+    {
+      "round": 13,
+      "position": 12,
+      "points": 21,
+      "teammatePosition": 10,
+      "teammatePoints": 41
+    },
+    {
+      "round": 14,
+      "position": 12,
+      "points": 21,
+      "teammatePosition": 10,
+      "teammatePoints": 41
+    }
+  ]
+}

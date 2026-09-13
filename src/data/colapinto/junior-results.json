@@ -1,0 +1,1354 @@
+{
+  "source": "Wikipedia (en) – Franco Colapinto, wikitext descargado 2026-09-13. Licencia CC BY-SA 4.0.",
+  "seasons": [
+    {
+      "series": "F4 España",
+      "season": 2018,
+      "team": "Drivex School",
+      "championshipPosition": "9th",
+      "points": 49,
+      "races": [
+        {
+          "circuit": "NAV",
+          "race": "1",
+          "result": "5",
+          "position": 5,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "NAV",
+          "race": "2",
+          "result": "5",
+          "position": 5,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "NAV",
+          "race": "3",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "NAV",
+          "race": "4",
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": false
+        }
+      ]
+    },
+    {
+      "series": "F4 España",
+      "season": 2019,
+      "team": "Drivex School",
+      "championshipPosition": "1st",
+      "points": 325,
+      "races": [
+        {
+          "circuit": "NAV",
+          "race": "1",
+          "result": "1",
+          "position": 1,
+          "pole": true,
+          "fastestLap": true
+        },
+        {
+          "circuit": "NAV",
+          "race": "2",
+          "result": "3",
+          "position": 3,
+          "pole": true,
+          "fastestLap": false
+        },
+        {
+          "circuit": "NAV",
+          "race": "3",
+          "result": "6",
+          "position": 6,
+          "pole": true,
+          "fastestLap": false
+        },
+        {
+          "circuit": "LEC",
+          "race": "1",
+          "result": "4",
+          "position": 4,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "LEC",
+          "race": "2",
+          "result": "7",
+          "position": 7,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "LEC",
+          "race": "3",
+          "result": "4",
+          "position": 4,
+          "pole": false,
+          "fastestLap": true
+        },
+        {
+          "circuit": "ARA",
+          "race": "1",
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "ARA",
+          "race": "2",
+          "result": "14",
+          "position": 14,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "ARA",
+          "race": "3",
+          "result": "11",
+          "position": 11,
+          "pole": false,
+          "fastestLap": true
+        },
+        {
+          "circuit": "CRT",
+          "race": "1",
+          "result": "1",
+          "position": 1,
+          "pole": true,
+          "fastestLap": true
+        },
+        {
+          "circuit": "CRT",
+          "race": "2",
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": true
+        },
+        {
+          "circuit": "CRT",
+          "race": "3",
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": true
+        },
+        {
+          "circuit": "JER",
+          "race": "1",
+          "result": "4",
+          "position": 4,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "JER",
+          "race": "2",
+          "result": "3",
+          "position": 3,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "JER",
+          "race": "3",
+          "result": "1",
+          "position": 1,
+          "pole": true,
+          "fastestLap": true
+        },
+        {
+          "circuit": "ALG",
+          "race": "1",
+          "result": "1",
+          "position": 1,
+          "pole": true,
+          "fastestLap": true
+        },
+        {
+          "circuit": "ALG",
+          "race": "2",
+          "result": "1",
+          "position": 1,
+          "pole": true,
+          "fastestLap": false
+        },
+        {
+          "circuit": "ALG",
+          "race": "3",
+          "result": "4",
+          "position": 4,
+          "pole": true,
+          "fastestLap": true
+        },
+        {
+          "circuit": "CAT",
+          "race": "1",
+          "result": "1",
+          "position": 1,
+          "pole": true,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "2",
+          "result": "1",
+          "position": 1,
+          "pole": true,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "3",
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": true
+        }
+      ]
+    },
+    {
+      "series": "Euroformula Open",
+      "season": 2019,
+      "team": "Drivex School",
+      "championshipPosition": "27th",
+      "points": 0,
+      "races": [
+        {
+          "circuit": "SPA",
+          "race": "1",
+          "result": "15",
+          "position": 15,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SPA",
+          "race": "2",
+          "result": "14",
+          "position": 14,
+          "pole": false,
+          "fastestLap": false
+        }
+      ]
+    },
+    {
+      "series": "Fórmula Renault Eurocup",
+      "season": 2019,
+      "team": "FA Racing by Drivex",
+      "championshipPosition": "NC†",
+      "points": 0,
+      "races": [
+        {
+          "circuit": "SPA",
+          "race": "1",
+          "result": "12",
+          "position": 12,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SPA",
+          "race": "2",
+          "result": "20",
+          "position": 20,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "1",
+          "result": "11",
+          "position": 11,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "2",
+          "result": "10",
+          "position": 10,
+          "pole": false,
+          "fastestLap": false
+        }
+      ]
+    },
+    {
+      "series": "Fórmula Renault Eurocup",
+      "season": 2020,
+      "team": "MP Motorsport",
+      "championshipPosition": "3rd",
+      "points": 213.5,
+      "races": [
+        {
+          "circuit": "MNZ",
+          "race": "1",
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MNZ",
+          "race": "2",
+          "result": "3",
+          "position": 3,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "IMO",
+          "race": "1",
+          "result": "6",
+          "position": 6,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "IMO",
+          "race": "2",
+          "result": "7",
+          "position": 7,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "NÜR",
+          "race": "1",
+          "result": "7",
+          "position": 7,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "NÜR",
+          "race": "2",
+          "result": "6",
+          "position": 6,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MAG",
+          "race": "1",
+          "result": "13",
+          "position": 13,
+          "pole": false,
+          "fastestLap": true
+        },
+        {
+          "circuit": "MAG",
+          "race": "2",
+          "result": "Ret",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "ZAN",
+          "race": "1",
+          "result": "6",
+          "position": 6,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "ZAN",
+          "race": "2",
+          "result": "3",
+          "position": 3,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "1",
+          "result": "6",
+          "position": 6,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "2",
+          "result": "3",
+          "position": 3,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SPA",
+          "race": "1",
+          "result": "1‡",
+          "position": 1,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SPA",
+          "race": "2",
+          "result": "12",
+          "position": 12,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "IMO",
+          "race": "1",
+          "result": "4",
+          "position": 4,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "IMO",
+          "race": "2",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": true
+        },
+        {
+          "circuit": "HOC",
+          "race": "1",
+          "result": "4",
+          "position": 4,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "HOC",
+          "race": "2",
+          "result": "3",
+          "position": 3,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "LEC",
+          "race": "1",
+          "result": "3",
+          "position": 3,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "LEC",
+          "race": "2",
+          "result": "3",
+          "position": 3,
+          "pole": false,
+          "fastestLap": false
+        }
+      ]
+    },
+    {
+      "series": "Toyota Racing Series",
+      "season": 2020,
+      "team": "Kiwi Motorsport",
+      "championshipPosition": "3rd",
+      "points": 315,
+      "races": [
+        {
+          "circuit": "HIG",
+          "race": "1",
+          "result": "9",
+          "position": 9,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "HIG",
+          "race": "2",
+          "result": "6",
+          "position": 6,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "HIG",
+          "race": "3",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "TER",
+          "race": "1",
+          "result": "4",
+          "position": 4,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "TER",
+          "race": "2",
+          "result": "5",
+          "position": 5,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "TER",
+          "race": "3",
+          "result": "8",
+          "position": 8,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "HMP",
+          "race": "1",
+          "result": "5",
+          "position": 5,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "HMP",
+          "race": "2",
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "HMP",
+          "race": "3",
+          "result": "8",
+          "position": 8,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "PUK",
+          "race": "1",
+          "result": "3",
+          "position": 3,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "PUK",
+          "race": "2",
+          "result": "3",
+          "position": 3,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "PUK",
+          "race": "3",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MAN",
+          "race": "1",
+          "result": "3",
+          "position": 3,
+          "pole": true,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MAN",
+          "race": "2",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": true
+        },
+        {
+          "circuit": "MAN",
+          "race": "3",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": true
+        }
+      ]
+    },
+    {
+      "series": "Asian Le Mans Series",
+      "season": 2021,
+      "team": "G-Drive Racing",
+      "championshipPosition": "3rd",
+      "points": 66,
+      "races": [
+        {
+          "circuit": "DUB",
+          "race": "1",
+          "result": "4",
+          "position": 4,
+          "pole": true,
+          "fastestLap": false
+        },
+        {
+          "circuit": "DUB",
+          "race": "2",
+          "result": "2",
+          "position": 2,
+          "pole": true,
+          "fastestLap": false
+        },
+        {
+          "circuit": "ABU",
+          "race": "1",
+          "result": "3",
+          "position": 3,
+          "pole": true,
+          "fastestLap": false
+        },
+        {
+          "circuit": "ABU",
+          "race": "2",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": false
+        }
+      ]
+    },
+    {
+      "series": "Fórmula Regional Europea (FRECA)",
+      "season": 2021,
+      "team": "MP Motorsport",
+      "championshipPosition": "6th",
+      "points": 140,
+      "races": [
+        {
+          "circuit": "IMO",
+          "race": "1",
+          "result": "WD",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "IMO",
+          "race": "2",
+          "result": "WD",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "1",
+          "result": "28†",
+          "position": 28,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "2",
+          "result": "Ret",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MCO",
+          "race": "1",
+          "result": "WD",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MCO",
+          "race": "2",
+          "result": "WD",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "LEC",
+          "race": "1",
+          "result": "12",
+          "position": 12,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "LEC",
+          "race": "2",
+          "result": "12",
+          "position": 12,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "ZAN",
+          "race": "1",
+          "result": "5",
+          "position": 5,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "ZAN",
+          "race": "2",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": true
+        },
+        {
+          "circuit": "SPA",
+          "race": "1",
+          "result": "Ret",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SPA",
+          "race": "2",
+          "result": "6",
+          "position": 6,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "RBR",
+          "race": "1",
+          "result": "1",
+          "position": 1,
+          "pole": true,
+          "fastestLap": true
+        },
+        {
+          "circuit": "RBR",
+          "race": "2",
+          "result": "4",
+          "position": 4,
+          "pole": true,
+          "fastestLap": true
+        },
+        {
+          "circuit": "VAL",
+          "race": "1",
+          "result": "1",
+          "position": 1,
+          "pole": true,
+          "fastestLap": true
+        },
+        {
+          "circuit": "VAL",
+          "race": "2",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MUG",
+          "race": "1",
+          "result": "Ret",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MUG",
+          "race": "2",
+          "result": "5",
+          "position": 5,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MNZ",
+          "race": "1",
+          "result": "7",
+          "position": 7,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MNZ",
+          "race": "2",
+          "result": "6",
+          "position": 6,
+          "pole": false,
+          "fastestLap": false
+        }
+      ]
+    },
+    {
+      "series": "European Le Mans Series",
+      "season": 2021,
+      "team": "G-Drive Racing",
+      "championshipPosition": "4th",
+      "points": 74,
+      "races": [
+        {
+          "circuit": "CAT",
+          "race": null,
+          "result": "4",
+          "position": 4,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "RBR",
+          "race": null,
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "LEC",
+          "race": null,
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MNZ",
+          "race": null,
+          "result": "8",
+          "position": 8,
+          "pole": true,
+          "fastestLap": true
+        },
+        {
+          "circuit": "SPA",
+          "race": null,
+          "result": "NC",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "ALG",
+          "race": null,
+          "result": "5",
+          "position": 5,
+          "pole": false,
+          "fastestLap": false
+        }
+      ]
+    },
+    {
+      "series": "Fórmula 3 FIA",
+      "season": 2022,
+      "team": "Van Amersfoort Racing",
+      "championshipPosition": "9th",
+      "points": 76,
+      "races": [
+        {
+          "circuit": "BHR",
+          "race": "SPR",
+          "result": "25",
+          "position": 25,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "BHR",
+          "race": "FEA",
+          "result": "5",
+          "position": 5,
+          "pole": true,
+          "fastestLap": false
+        },
+        {
+          "circuit": "IMO",
+          "race": "SPR",
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "IMO",
+          "race": "FEA",
+          "result": "22",
+          "position": 22,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "SPR",
+          "result": "Ret",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "FEA",
+          "result": "8",
+          "position": 8,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SIL",
+          "race": "SPR",
+          "result": "13",
+          "position": 13,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SIL",
+          "race": "FEA",
+          "result": "Ret",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "RBR",
+          "race": "SPR",
+          "result": "3",
+          "position": 3,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "RBR",
+          "race": "FEA",
+          "result": "6",
+          "position": 6,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "HUN",
+          "race": "SPR",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "HUN",
+          "race": "FEA",
+          "result": "15",
+          "position": 15,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SPA",
+          "race": "SPR",
+          "result": "15",
+          "position": 15,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SPA",
+          "race": "FEA",
+          "result": "12",
+          "position": 12,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "ZAN",
+          "race": "SPR",
+          "result": "13",
+          "position": 13,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "ZAN",
+          "race": "FEA",
+          "result": "3",
+          "position": 3,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MNZ",
+          "race": "SPR",
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MNZ",
+          "race": "FEA",
+          "result": "15",
+          "position": 15,
+          "pole": false,
+          "fastestLap": false
+        }
+      ]
+    },
+    {
+      "series": "Fórmula 3 FIA",
+      "season": 2023,
+      "team": "MP Motorsport",
+      "championshipPosition": "4th",
+      "points": 110,
+      "races": [
+        {
+          "circuit": "BHR",
+          "race": "SPR",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "BHR",
+          "race": "FEA",
+          "result": "10",
+          "position": 10,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MEL",
+          "race": "SPR",
+          "result": "DSQ",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MEL",
+          "race": "FEA",
+          "result": "Ret",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MON",
+          "race": "SPR",
+          "result": "4",
+          "position": 4,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MON",
+          "race": "FEA",
+          "result": "6",
+          "position": 6,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "SPR",
+          "result": "6",
+          "position": 6,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "FEA",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "RBR",
+          "race": "SPR",
+          "result": "13",
+          "position": 13,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "RBR",
+          "race": "FEA",
+          "result": "4",
+          "position": 4,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SIL",
+          "race": "SPR",
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SIL",
+          "race": "FEA",
+          "result": "8",
+          "position": 8,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "HUN",
+          "race": "SPR",
+          "result": "7",
+          "position": 7,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "HUN",
+          "race": "FEA",
+          "result": "3",
+          "position": 3,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SPA",
+          "race": "SPR",
+          "result": "5",
+          "position": 5,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SPA",
+          "race": "FEA",
+          "result": "10",
+          "position": 10,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MNZ",
+          "race": "SPR",
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MNZ",
+          "race": "FEA",
+          "result": "Ret",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        }
+      ]
+    },
+    {
+      "series": "Fórmula 2 FIA",
+      "season": 2023,
+      "team": "MP Motorsport",
+      "championshipPosition": "25th",
+      "points": 0,
+      "races": [
+        {
+          "circuit": "YMC",
+          "race": "SPR",
+          "result": "19",
+          "position": 19,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "YMC",
+          "race": "FEA",
+          "result": "Ret",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        }
+      ]
+    },
+    {
+      "series": "Fórmula 2 FIA",
+      "season": 2024,
+      "team": "MP Motorsport",
+      "championshipPosition": "9th",
+      "points": 96,
+      "races": [
+        {
+          "circuit": "BHR",
+          "race": "SPR",
+          "result": "18",
+          "position": 18,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "BHR",
+          "race": "FEA",
+          "result": "6",
+          "position": 6,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "JED",
+          "race": "SPR",
+          "result": "11",
+          "position": 11,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "JED",
+          "race": "FEA",
+          "result": "Ret",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MEL",
+          "race": "SPR",
+          "result": "4",
+          "position": 4,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MEL",
+          "race": "FEA",
+          "result": "DSQ",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "IMO",
+          "race": "SPR",
+          "result": "1",
+          "position": 1,
+          "pole": false,
+          "fastestLap": true
+        },
+        {
+          "circuit": "IMO",
+          "race": "FEA",
+          "result": "5",
+          "position": 5,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MON",
+          "race": "SPR",
+          "result": "5",
+          "position": 5,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "MON",
+          "race": "FEA",
+          "result": "13",
+          "position": 13,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "SPR",
+          "result": "18",
+          "position": 18,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "CAT",
+          "race": "FEA",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "RBR",
+          "race": "SPR",
+          "result": "11",
+          "position": 11,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "RBR",
+          "race": "FEA",
+          "result": "2",
+          "position": 2,
+          "pole": false,
+          "fastestLap": true
+        },
+        {
+          "circuit": "SIL",
+          "race": "SPR",
+          "result": "5",
+          "position": 5,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SIL",
+          "race": "FEA",
+          "result": "4",
+          "position": 4,
+          "pole": false,
+          "fastestLap": true
+        },
+        {
+          "circuit": "HUN",
+          "race": "SPR",
+          "result": "5",
+          "position": 5,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "HUN",
+          "race": "FEA",
+          "result": "13",
+          "position": 13,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SPA",
+          "race": "SPR",
+          "result": "8",
+          "position": 8,
+          "pole": false,
+          "fastestLap": false
+        },
+        {
+          "circuit": "SPA",
+          "race": "FEA",
+          "result": "Ret",
+          "position": null,
+          "pole": false,
+          "fastestLap": false
+        }
+      ]
+    }
+  ]
+}

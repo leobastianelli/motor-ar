@@ -1,0 +1,240 @@
+﻿{
+    "MRData":  {
+                   "xmlns":  "",
+                   "series":  "f1",
+                   "url":  "https://api.jolpi.ca/ergast/f1/2025/drivers/colapinto/sprint.json",
+                   "limit":  "100",
+                   "offset":  "0",
+                   "total":  "4",
+                   "RaceTable":  {
+                                     "season":  "2025",
+                                     "driverId":  "colapinto",
+                                     "Races":  [
+                                                   {
+                                                       "season":  "2025",
+                                                       "round":  "13",
+                                                       "url":  "https://en.wikipedia.org/wiki/2025_Belgian_Grand_Prix",
+                                                       "raceName":  "Belgian Grand Prix",
+                                                       "Circuit":  {
+                                                                       "circuitId":  "spa",
+                                                                       "url":  "https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps",
+                                                                       "circuitName":  "Circuit de Spa-Francorchamps",
+                                                                       "Location":  {
+                                                                                        "lat":  "50.4372",
+                                                                                        "long":  "5.97139",
+                                                                                        "locality":  "Spa",
+                                                                                        "country":  "Belgium"
+                                                                                    }
+                                                                   },
+                                                       "date":  "2025-07-27",
+                                                       "time":  "13:00:00Z",
+                                                       "SprintResults":  [
+                                                                             {
+                                                                                 "number":  "43",
+                                                                                 "position":  "19",
+                                                                                 "positionText":  "19",
+                                                                                 "points":  "0",
+                                                                                 "Driver":  {
+                                                                                                "driverId":  "colapinto",
+                                                                                                "permanentNumber":  "43",
+                                                                                                "code":  "COL",
+                                                                                                "url":  "http://en.wikipedia.org/wiki/Franco_Colapinto",
+                                                                                                "givenName":  "Franco",
+                                                                                                "familyName":  "Colapinto",
+                                                                                                "dateOfBirth":  "2003-05-27",
+                                                                                                "nationality":  "Argentine"
+                                                                                            },
+                                                                                 "Constructor":  {
+                                                                                                     "constructorId":  "alpine",
+                                                                                                     "url":  "https://en.wikipedia.org/wiki/Alpine_F1_Team",
+                                                                                                     "name":  "Alpine F1 Team",
+                                                                                                     "nationality":  "French"
+                                                                                                 },
+                                                                                 "grid":  "20",
+                                                                                 "laps":  "15",
+                                                                                 "status":  "Finished",
+                                                                                 "Time":  {
+                                                                                              "millis":  "1636069",
+                                                                                              "time":  "+38.072"
+                                                                                          },
+                                                                                 "FastestLap":  {
+                                                                                                    "rank":  "20",
+                                                                                                    "lap":  "15",
+                                                                                                    "Time":  {
+                                                                                                                 "time":  "1:47.944"
+                                                                                                             }
+                                                                                                }
+                                                                             }
+                                                                         ]
+                                                   },
+                                                   {
+                                                       "season":  "2025",
+                                                       "round":  "19",
+                                                       "url":  "https://en.wikipedia.org/wiki/2025_United_States_Grand_Prix",
+                                                       "raceName":  "United States Grand Prix",
+                                                       "Circuit":  {
+                                                                       "circuitId":  "americas",
+                                                                       "url":  "https://en.wikipedia.org/wiki/Circuit_of_the_Americas",
+                                                                       "circuitName":  "Circuit of the Americas",
+                                                                       "Location":  {
+                                                                                        "lat":  "30.1328",
+                                                                                        "long":  "-97.6411",
+                                                                                        "locality":  "Austin",
+                                                                                        "country":  "USA"
+                                                                                    }
+                                                                   },
+                                                       "date":  "2025-10-19",
+                                                       "time":  "19:00:00Z",
+                                                       "SprintResults":  [
+                                                                             {
+                                                                                 "number":  "43",
+                                                                                 "position":  "14",
+                                                                                 "positionText":  "14",
+                                                                                 "points":  "0",
+                                                                                 "Driver":  {
+                                                                                                "driverId":  "colapinto",
+                                                                                                "permanentNumber":  "43",
+                                                                                                "code":  "COL",
+                                                                                                "url":  "http://en.wikipedia.org/wiki/Franco_Colapinto",
+                                                                                                "givenName":  "Franco",
+                                                                                                "familyName":  "Colapinto",
+                                                                                                "dateOfBirth":  "2003-05-27",
+                                                                                                "nationality":  "Argentine"
+                                                                                            },
+                                                                                 "Constructor":  {
+                                                                                                     "constructorId":  "alpine",
+                                                                                                     "url":  "https://en.wikipedia.org/wiki/Alpine_F1_Team",
+                                                                                                     "name":  "Alpine F1 Team",
+                                                                                                     "nationality":  "French"
+                                                                                                 },
+                                                                                 "grid":  "17",
+                                                                                 "laps":  "19",
+                                                                                 "status":  "Finished",
+                                                                                 "Time":  {
+                                                                                              "millis":  "2286235",
+                                                                                              "time":  "+8.006"
+                                                                                          },
+                                                                                 "FastestLap":  {
+                                                                                                    "rank":  "17",
+                                                                                                    "lap":  "10",
+                                                                                                    "Time":  {
+                                                                                                                 "time":  "1:39.235"
+                                                                                                             }
+                                                                                                }
+                                                                             }
+                                                                         ]
+                                                   },
+                                                   {
+                                                       "season":  "2025",
+                                                       "round":  "21",
+                                                       "url":  "https://en.wikipedia.org/wiki/2025_S%C3%A3o_Paulo_Grand_Prix",
+                                                       "raceName":  "SÃ£o Paulo Grand Prix",
+                                                       "Circuit":  {
+                                                                       "circuitId":  "interlagos",
+                                                                       "url":  "https://en.wikipedia.org/wiki/Interlagos_Circuit",
+                                                                       "circuitName":  "AutÃ³dromo JosÃ© Carlos Pace",
+                                                                       "Location":  {
+                                                                                        "lat":  "-23.7036",
+                                                                                        "long":  "-46.6997",
+                                                                                        "locality":  "SÃ£o Paulo",
+                                                                                        "country":  "Brazil"
+                                                                                    }
+                                                                   },
+                                                       "date":  "2025-11-09",
+                                                       "time":  "17:00:00Z",
+                                                       "SprintResults":  [
+                                                                             {
+                                                                                 "number":  "43",
+                                                                                 "position":  "20",
+                                                                                 "positionText":  "R",
+                                                                                 "points":  "0",
+                                                                                 "Driver":  {
+                                                                                                "driverId":  "colapinto",
+                                                                                                "permanentNumber":  "43",
+                                                                                                "code":  "COL",
+                                                                                                "url":  "http://en.wikipedia.org/wiki/Franco_Colapinto",
+                                                                                                "givenName":  "Franco",
+                                                                                                "familyName":  "Colapinto",
+                                                                                                "dateOfBirth":  "2003-05-27",
+                                                                                                "nationality":  "Argentine"
+                                                                                            },
+                                                                                 "Constructor":  {
+                                                                                                     "constructorId":  "alpine",
+                                                                                                     "url":  "https://en.wikipedia.org/wiki/Alpine_F1_Team",
+                                                                                                     "name":  "Alpine F1 Team",
+                                                                                                     "nationality":  "French"
+                                                                                                 },
+                                                                                 "grid":  "16",
+                                                                                 "laps":  "5",
+                                                                                 "status":  "Retired",
+                                                                                 "FastestLap":  {
+                                                                                                    "rank":  "20",
+                                                                                                    "lap":  "4",
+                                                                                                    "Time":  {
+                                                                                                                 "time":  "1:14.056"
+                                                                                                             }
+                                                                                                }
+                                                                             }
+                                                                         ]
+                                                   },
+                                                   {
+                                                       "season":  "2025",
+                                                       "round":  "23",
+                                                       "url":  "https://en.wikipedia.org/wiki/2025_Qatar_Grand_Prix",
+                                                       "raceName":  "Qatar Grand Prix",
+                                                       "Circuit":  {
+                                                                       "circuitId":  "losail",
+                                                                       "url":  "https://en.wikipedia.org/wiki/Lusail_International_Circuit",
+                                                                       "circuitName":  "Losail International Circuit",
+                                                                       "Location":  {
+                                                                                        "lat":  "25.49",
+                                                                                        "long":  "51.4542",
+                                                                                        "locality":  "Lusail",
+                                                                                        "country":  "Qatar"
+                                                                                    }
+                                                                   },
+                                                       "date":  "2025-11-30",
+                                                       "time":  "16:00:00Z",
+                                                       "SprintResults":  [
+                                                                             {
+                                                                                 "number":  "43",
+                                                                                 "position":  "20",
+                                                                                 "positionText":  "20",
+                                                                                 "points":  "0",
+                                                                                 "Driver":  {
+                                                                                                "driverId":  "colapinto",
+                                                                                                "permanentNumber":  "43",
+                                                                                                "code":  "COL",
+                                                                                                "url":  "http://en.wikipedia.org/wiki/Franco_Colapinto",
+                                                                                                "givenName":  "Franco",
+                                                                                                "familyName":  "Colapinto",
+                                                                                                "dateOfBirth":  "2003-05-27",
+                                                                                                "nationality":  "Argentine"
+                                                                                            },
+                                                                                 "Constructor":  {
+                                                                                                     "constructorId":  "alpine",
+                                                                                                     "url":  "https://en.wikipedia.org/wiki/Alpine_F1_Team",
+                                                                                                     "name":  "Alpine F1 Team",
+                                                                                                     "nationality":  "French"
+                                                                                                 },
+                                                                                 "grid":  "20",
+                                                                                 "laps":  "19",
+                                                                                 "status":  "Finished",
+                                                                                 "Time":  {
+                                                                                              "millis":  "1691837",
+                                                                                              "time":  "+1:20.804"
+                                                                                          },
+                                                                                 "FastestLap":  {
+                                                                                                    "rank":  "3",
+                                                                                                    "lap":  "19",
+                                                                                                    "Time":  {
+                                                                                                                 "time":  "1:23.765"
+                                                                                                             }
+                                                                                                }
+                                                                             }
+                                                                         ]
+                                                   }
+                                               ]
+                                 }
+               }
+}

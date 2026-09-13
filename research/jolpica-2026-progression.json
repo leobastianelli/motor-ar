@@ -1,0 +1,100 @@
+﻿[
+    {
+        "round":  1,
+        "colapintoPos":  "14",
+        "colapintoPts":  "0",
+        "gaslyPos":  "10",
+        "gaslyPts":  "1"
+    },
+    {
+        "round":  2,
+        "colapintoPos":  "15",
+        "colapintoPts":  "1",
+        "gaslyPos":  "7",
+        "gaslyPts":  "9"
+    },
+    {
+        "round":  3,
+        "colapintoPos":  "16",
+        "colapintoPts":  "1",
+        "gaslyPos":  "8",
+        "gaslyPts":  "15"
+    },
+    {
+        "round":  4,
+        "colapintoPos":  "11",
+        "colapintoPts":  "7",
+        "gaslyPos":  "9",
+        "gaslyPts":  "16"
+    },
+    {
+        "round":  5,
+        "colapintoPos":  "11",
+        "colapintoPts":  "15",
+        "gaslyPos":  "8",
+        "gaslyPts":  "20"
+    },
+    {
+        "round":  6,
+        "colapintoPos":  "12",
+        "colapintoPts":  "15",
+        "gaslyPos":  "10",
+        "gaslyPts":  "26"
+    },
+    {
+        "round":  7,
+        "colapintoPos":  "12",
+        "colapintoPts":  "16",
+        "gaslyPos":  "9",
+        "gaslyPts":  "32"
+    },
+    {
+        "round":  8,
+        "colapintoPos":  "12",
+        "colapintoPts":  "16",
+        "gaslyPos":  "10",
+        "gaslyPts":  "32"
+    },
+    {
+        "round":  9,
+        "colapintoPos":  "13",
+        "colapintoPts":  "18",
+        "gaslyPos":  "10",
+        "gaslyPts":  "33"
+    },
+    {
+        "round":  10,
+        "colapintoPos":  "12",
+        "colapintoPts":  "19",
+        "gaslyPos":  "10",
+        "gaslyPts":  "33"
+    },
+    {
+        "round":  11,
+        "colapintoPos":  "12",
+        "colapintoPts":  "19",
+        "gaslyPos":  "10",
+        "gaslyPts":  "33"
+    },
+    {
+        "round":  12,
+        "colapintoPos":  "12",
+        "colapintoPts":  "19",
+        "gaslyPos":  "10",
+        "gaslyPts":  "35"
+    },
+    {
+        "round":  13,
+        "colapintoPos":  "12",
+        "colapintoPts":  "21",
+        "gaslyPos":  "10",
+        "gaslyPts":  "41"
+    },
+    {
+        "round":  14,
+        "colapintoPos":  "12",
+        "colapintoPts":  "21",
+        "gaslyPos":  "10",
+        "gaslyPts":  "41"
+    }
+]

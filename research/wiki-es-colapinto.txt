@@ -1,0 +1,897 @@
+{{Ficha de piloto de carreras
+|nombre                 = Franco Colapinto
+|imagen                 = Franco Colapinto at the Melbourne Walk during the 2026 Australian Grand Prix (028A8698) cropped.jpg
+|pie                    = Colapinto en el [[Anexo:Gran Premio de Australia de 2026|Gran Premio de Australia de 2026]].
+|nombre completo        = Franco Alejandro Colapinto
+|apodo                  = ''El Nene''<ref>{{citaweb|url=https://www.diariomotor.com/competicion/noticia/franco-colapinto-renovacion-alpine/|título=¡Vamos Nene! Alpine renueva a Franco Colapinto y la parrilla ya espera la decisión de Red Bull||fecha=2025-11-07|obra=DiarioMotor}}</ref><br>''Il Gaucho''<ref>{{Cita web|título=De piloto a "Il Gaucho": El apodo viral que le puso la prensa italiana a Franco Colapinto|url=https://mitelefe.com/entretenimientos/espectaculos/el-nuevo-apodo-europeo-a-franco-colapinto/|obra=[[Telefe]]|fecha=14 de octubre de 2025|fechaacceso=15 de octubre de 2025}}</ref>
+|fecha de nacimiento    = {{fecha|27|5|2003|edad}}
+|lugar de nacimiento    = [[Pilar (Buenos Aires)|Pilar]], [[provincia de Buenos Aires]] ([[Argentina]])<ref>{{Cita web|apellidos=Estevez|nombre=Juan Pablo|título=Quién es el pibe de 18 años que es la máxima apuesta argentina para llegar a la Fórmula 1|url=https://www.clarin.com/zonales/pilar-maxima-apuesta-argentina-llegar-formula-1_0_IpQCPVLOUa.html|obra=[[Clarín (periódico)|Clarín]]|fecha=20 de febrero de 2022|fechaacceso=21 de febrero de 2022}}</ref>
+|nacionalidad           = [[Nacionalidad argentina|Argentina]]<br>[[Ciudadanía italiana|italiana]]<ref>{{Cita web|título=El nuevo sueño argentino para la Fórmula 1: quién es Franco Colapinto, la joven promesa a la que todos apuntan para dar el salto|url=https://www.infobae.com/deportes/2021/10/02/el-nuevo-sueno-argentino-para-la-formula-1-quien-es-franco-colapinto-la-joven-promesa-a-la-que-todos-apuntan-para-dar-el-salto/|obra=[[Infobae]]|fecha=2 de octubre de 2021|fechaacceso=25 de enero de 2022|cita=“Él quiere seguir corriendo con la licencia de su país. Aunque tiene también la nacionalidad italiana y hay una chance con un equipo de ese país para correr con F3, pero debería correr con bandera italiana”.}}</ref>
+|fecha de retiro        = 
+|reconocimientos        = 
+|relacionado         = [[Maia Reficco]] (pareja; 2026-presente)<ref name="partner"/>
+|primer año             = 
+|primera carrera        = 
+|primera victoria       = 
+|última victoria        = 
+|última carrera         = 
+|carreras comenzadas    = 
+|última competición     = 
+|última posición        = 
+|copiloto actual        = 
+|piloto actual          = 
+|anteriores competiciones = 
+|campeonato1            = [[Fórmula 1|F1]]
+|equipo1                = [[Williams Racing|Williams]], [[Alpine F1 Team|Alpine]]
+|tipo vehículo1         = 
+|vehículo1              = 
+|años1                  = {{F1|2024}}-
+|carreras1              = {{Estadísticas de pilotos de Fórmula 1|COL|grandespremios}} ({{Estadísticas de pilotos de Fórmula 1|COL|comenzadas}} comenzadas)
+|victorias1             = {{Estadísticas de pilotos de Fórmula 1|COL|victorias}}
+|podios1                = {{Estadísticas de pilotos de Fórmula 1|COL|podios}}
+|puntos1                = {{Estadísticas de pilotos de Fórmula 1|COL|puntos}}
+|poles1                 = {{Estadísticas de pilotos de Fórmula 1|COL|poles}}
+|vueltas rápidas1       = {{Estadísticas de pilotos de Fórmula 1|COL|vueltasrápidas}}
+|scratch1               = 
+|títulos1               = 0
+|firma                  = FrancoColapintoSignature.png
+|website             = [https://www.francolapinto.com/ Franco Colapinto]
+}}
+
+'''Franco Alejandro Colapinto''' ([[Pilar (Buenos Aires)|Pilar]], 27 de mayo de 2003) es un [[Pilotos argentinos en Fórmula 1|piloto]] de [[automovilismo]] [[Argentina|argentino]]. Fue campeón del [[Campeonato de España de F4]] en [[Temporada 2019 del Campeonato de España de F4|2019]], y tercero en los campeonatos de [[Toyota Racing Series]] y [[Temporada 2020 de Eurocopa de Fórmula Renault|Eurocopa de Fórmula Renault]] (ambos en 2020), [[Asian Le Mans Series]] (2021), cuarto en el [[Campeonato de Fórmula 3 de la FIA]] ({{F3|2023}}), y compitió en el [[Campeonato de Fórmula 2 de la FIA]] con el equipo [[MP Motorsport]] durante diez rondas en {{F2|2024}}.
+
+Fue miembro de la [[Academia de pilotos de Williams]] desde 2023 hasta 2025.<ref name="williams">{{Cita web|url=https://www.pilaradiario.com/laliga/2023/1/9/franco-colapinto-se-suma-un-historico-de-la-formula-124844.html|título=Franco Colapinto se suma a un histórico de la Fórmula 1|fechaacceso=9 de enero de 2023|fecha=9 de enero de 2023|obra=Pilar Diario}}</ref> Participó en los [[Anexo:Postemporada 2023 de Fórmula 1|entrenamientos postemporada 2023 de Fórmula 1]] al volante del [[Williams FW45|FW45]]. En {{F1|2024}} se subió al [[Williams FW46|FW46]] en los entrenamientos libres del [[Anexo:Gran Premio de Gran Bretaña de 2024|Gran Premio de Gran Bretaña]].<ref>[https://www.marca.com/motor/formula1/gp-gran-bretana/2024/07/01/6682d98146163f7b458b4587.html Argentina regresa a la Fórmula 1 23 años después con Colapinto]</ref> Pasó a ser piloto titular de Williams a partir del [[Anexo:Gran Premio de Italia de 2024|Gran Premio de Italia]] en reemplazo del estadounidense [[Logan Sargeant]] hasta el final de la temporada.<ref>{{Cita web|título=Histórico: Franco Colapinto fue confirmado por Williams para correr en la Fórmula 1|url=https://www.mdzol.com/deportes/2024/8/27/historico-franco-colapinto-fue-confirmado-por-williams-para-correr-en-la-formula-454106.html|obra=MDZ Online|fecha=27 de agosto de 2024|fechaacceso=27 de agosto de 2024}}</ref> Para {{F1|2025}}, fue fichado como piloto de reserva para la escudería [[Alpine F1 Team|Alpine]], para ser ascendido a piloto titular tras seis carreras.<ref>{{Cita web|url=https://www.tycsports.com/automovilismo/franco-colapinto-sera-piloto-de-alpine-en-la-formula-1-id627766.html|título=Colapinto a Alpine: todo sobre el bombazo en la F1 2025|fechaacceso=2025-01-09|fecha=2025-01-09|sitioweb=[[TyC Sports]]}}</ref>
+
+== Carrera ==
+=== Inicios ===
+Colapinto se inició en el [[karting]] en campeonatos nacionales y [[Rotax]] en 2013. Ganó el campeonato nacional prejúnior en 2016, mismo año en el que participó en torneos internacionales por primera vez.<ref name=":0">{{Cita web|url=https://www.driverdb.com/drivers/franco-alejandro-colapinto/|título=Franco Colapinto {{!}} Racing career profile {{!}} Driver Database|fechaacceso=22 de junio de 2020|sitioweb=www.driverdb.com}}</ref>
+
+En 2018 ganó un evento de la disciplina de karts como deporte de exhibición en los [[Juegos Olímpicos de la Juventud de Buenos Aires 2018|Juegos Olímpicos de la Juventud]] en Buenos Aires junto a María García Puig<ref>{{Cita web|url=https://www.fia.com/news/fia-supports-e-kart-race-buenos-aires|título=FIA Supports E-Kart race in Buenos Aires|fechaacceso=22 de junio de 2020|fecha=15 de octubre de 2018|sitioweb=Federation Internationale de l'Automobile}}</ref> y, por otro lado, debutó en monoplazas en la [[Fórmula 4 Española]] con el equipo [[Drivex]], ganando una de las cuatro competencias en las que se presentó.<ref name=":0" /><ref>{{Cita web|url=https://formularapida.net/colapinto-gana-la-carrera-y-cordeel-el-campeonato-de-f4-spain/|título=COLAPINTO GANA LA ÚLTIMA CARRERA DEL CAMPEONATO Y CORDEEL SE PROCLAMA CAMPEÓN DE LA F4 SPAIN|fechaacceso=22 de junio de 2020|sitioweb=formularapida.net}}</ref>
+
+Al año siguiente participó a tiempo completo en este campeonato, siendo campeón con casi 100 puntos de ventaja en 325 que obtuvo, y con 11 victorias en 21 carreras. También debutó en dos campeonatos continentales: la [[Eurofórmula Open]] y la [[Eurocopa de Fórmula Renault]].<ref name=":0" /><ref>{{Cita web|url=https://www.pilaradiario.com/laliga/2019/11/10/corona-espaa-franco-colapinto-97930.html|título=La corona de España es de Franco Colapinto - Pilar a Diario|fechaacceso=22 de junio de 2020|sitioweb=www.pilaradiario.com}}</ref>
+
+=== Toyota Racing Series y Fórmula Renault ===
+En inicios de 2020 participó en la [[Toyota Racing Series]] neozelandesa con el equipo Kiwi Motorsport. Finalizó tercero, detrás de [[Igor Fraga]] y [[Liam Lawson]], y logró un triunfo.<ref>{{Cita web|url=https://soymotor.com/coches/noticias/colapinto-brilla-mejor-rookie-de-las-toyota-racing-series-973872|título=Colapinto brilla: mejor 'rookie' de las Toyota Racing Series|fechaacceso=22 de junio de 2020|sitioweb=SoyMotor.com}}</ref> En julio firmó contrato con [[MP Motorsport]] para disputar al menos media temporada la [[Temporada 2020 de Eurocopa de Fórmula Renault|Eurocopa de Fórmula Renault]].<ref>{{Cita web|apellidos=Wood|nombre=Elliot|título=Franco Colapinto to Formula Renault Eurocup with MP Motorsport|url=https://formulascout.com/franco-colapinto-steps-up-to-formula-renault-eurocup-with-mp-motorsport/64175|obra=FormulaScout.com|fecha=6 de julio de 2020|fechaacceso=6 de julio de 2020|idioma=en}}</ref> Se llevó la victoria en la primera carrera de la temporada en [[Autodromo Nazionale di Monza|Monza]],<ref>{{Cita web|apellidos=Muñoz|nombre=Jesús|título=Primera victoria para Franco Colapinto en la Fórmula Renault|url=https://soymotor.com/coches/noticias/primera-victoria-para-franco-colapinto-en-la-formula-renault-977957|obra=SoyMotor.com|fecha=10 de julio de 2020|fechaacceso=10 de julio de 2020}}</ref> mientras que en la segunda prueba de la ronda italiana finalizó tercero.<ref>{{Cita web|apellidos=Bernal|nombre=Raúl|título=Colapinto subió al podio en la segunda prueba en Monza|url=https://www.rionegro.com.ar/colapinto-subio-al-podio-en-la-segunda-prueba-en-monza-1427600/|obra=[[Diario Río Negro]]|fecha=11 de julio de 2020|fechaacceso=11 de julio de 2020}}</ref> Volvió al triunfo en [[Circuito de Spa-Francorchamps|Spa]], en la ronda 7.<ref>{{Cita web|url=https://soymotor.com/coches/noticias/cronica-carrera-1-spa-2020-formula-renault-981571|título=Colapinto brilla en la lluvia de Spa y logra su segunda victoria; Vidales décimo|fechaacceso=2020-11-08|sitioweb=SoyMotor.com}}</ref> Finalmente terminó tercero en el Campeonato de Pilotos con 213.5 puntos detrás de [[Víctor Martins]] y [[Caio Collet]], logrando dos victorias en nueve podios.<ref>{{Cita web|apellidos=Ruiz|nombre=Jonathan Emmanuel|título=Colapinto tercero en la temporada 2020|url=https://www.vavel.com/ar/automovilismo/2020/11/17/1047208-colapinto-tercero-en-la-temporada-2020.html|obra=Vavel.com|fecha=17 de noviembre de 2020|fechaacceso=18 de noviembre de 2020}}</ref>
+
+=== Resistencia y Fórmula Regional Europea ===
+[[Archivo:FREC 2021 Spielberg Nr. 43 Colapinto (side).jpg|miniaturadeimagen|Colapinto en la ronda de Spielberg de FREC 2021.]]
+A inicios de 2021, disputó la [[Asian Le Mans Series]] con la escudería G-Drive Racing.<ref>{{Cita web|título=Algarve Pro Set For Asian Le Mans Title Defence With Falb, Colapinto & Andrade|url=https://www.dailysportscar.com/2020/12/11/algarve-pro-set-for-asian-le-mans-title-defence-with-falb-colapinto-and-andrade.html|obra=DailySportsCar.com|fecha=11 de diciembre de 2020|fechaacceso=12 de septiembre de 2021|idioma=en}}</ref> Logró tres ''poles'' y misma cantidad de podios en cuatro carreras para acabar en la tercera posición en el campeonato de la clase LMP2 junto a sus compañeros de equipo, [[Rui Andrade]] y John Falb.<ref>{{Cita web|título=JOTA Win Asian Le Mans Series Finale In A Thriller! #26 G-Drive Crew Take The Title|url=https://www.dailysportscar.com/2021/02/20/jota-win-asian-le-mans-series-finale-in-a-thriller-26-g-drive-crew-take-the-title.html|obra=DailySportsCar.com|fecha=20 de febrero de 2021|fechaacceso=12 de septiembre de 2021|idioma=en}}</ref> Además disputó la [[European Le Mans Series]] con el mismo equipo, y el [[Campeonato de Fórmula Regional Europea]] con MP Motorsport.<ref>{{Cita web|título=De Vries & Colapinto Join Rusinov At G-Drive For 2021 ELMS & Le Mans|url=https://www.dailysportscar.com/2021/03/23/de-vries-and-colapinto-join-rusinov-at-g-drive-for-2021-elms-and-le-mans.html|obra=DailySportsCar.com|fecha=23 de marzo de 2021|fechaacceso=12 de septiembre de 2021|idioma=en}}</ref><ref>{{Cita web|título=COLAPINTO AND GOETHE TEAM UP AT MP MOTORSPORT FOR FORMULA REGIONAL EUROPEAN SEASON|url=https://www.mpmotorsport.com/2021/03/16/colapinto-and-goethe-team-up-at-mp-motorsport-for-formula-regional-european-season/|obra=[[MP Motorsport]]|fecha=16 de marzo de 2021|fechaacceso=12 de septiembre de 2021|idioma=en|urlarchivo=https://web.archive.org/web/20210316160208/https://www.mpmotorsport.com/2021/03/16/colapinto-and-goethe-team-up-at-mp-motorsport-for-formula-regional-european-season/|fechaarchivo=16 de marzo de 2021}}</ref> En el primer campeonato logró dos podios, una victoria en Le Castellet y el cuarto lugar en el Campeonato de Pilotos.<ref name="ELMS2021"/> Mientras que en el segundo logró dos victorias en cuatro podios y el sexto puesto en el campeonato.<ref>{{Cita web|título=Formula Regional European Championship Certified by FIA 2021 standings {{!}} Driver Database|url=https://www.driverdb.com/championships/standings/formula-regional-european-championship/2021/|obra=Driver Database|fechaacceso=4 de noviembre de 2021|idioma=en}}</ref>
+
+Al participar en las [[24 Horas de Le Mans 2021]], se convirtió en el segundo piloto más joven de la historia en participar en esta competencia. Llegó a liderar la clase hasta un incidente.<ref>{{Cita web|url=https://www.pilaradiario.com/laliga/2021/8/21/punta-pina-de-franco-colapinto-en-las-24-horas-de-le-mans-112909.html|título=Punta y piña de Franco Colapinto en las 24 horas de Le Mans - Pilar a Diario|fechaacceso=2021-08-22|sitioweb=www.pilaradiario.com}}</ref> Finalizó, junto a sus copilotos [[Román Rúsinov|Roman Rusinov]] y [[Nyck de Vries]], séptimo en la clase.<ref>{{Cita web|url=https://semanariodejunin.com.ar/nota/20363/039-pechito-039-lopez-gano-las-24-horas-de-le-mans/|título='Pechito' López ganó las 24 Horas de Le Mans|fechaacceso=2021-08-22|sitioweb=Semanario de Junín}}</ref>
+
+=== Campeonato de Fórmula 3 de la FIA ===
+[[Archivo:FIA F3 Austria 2023 Nr. 10 Colapinto (2) (backfire).jpg|miniatura|263px|Franco Colapinto en [[Red Bull Ring]] durante la [[temporada 2023 del Campeonato de Fórmula 3 de la FIA]].]]
+En octubre de 2020, formó parte de la primera etapa de los [[Anexo:Postemporada 2020 del Campeonato de Fórmula 3 de la FIA|entrenamientos postemporada]] del [[Campeonato de Fórmula 3 de la FIA]] con la escudería [[MP Motorsport]].<ref>{{Cita web|título=FIA Formula 3 returns to action for Barcelona post-season test|url=https://www.fiaformula3.com/Latest/1adVEb0Qc7KV681beoa5dt/fia-formula-3-returns-to-action-for-barcelona-post-season-test|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=FIA Formula 3 Championship Limited|fecha=4 de octubre de 2020|fechaacceso=18 de noviembre de 2020|idioma=en}}</ref> Finalizó duodécimo y decimotercero respectivamente en la jornada del 5 de octubre.<ref>{{Cita web|título=Nannini tops Day 1 of post-season testing in Barcelona, ahead of Hughes|url=https://www.fiaformula3.com/Latest/11pSniissmSSmQ6JR3pSc0/nannini-tops-day-1-of-post-season-testing-in-barcelona-ahead-of-hughes|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=FIA Formula 3 Championship Limited|fecha=5 de octubre de 2020|fechaacceso=18 de noviembre de 2020|idioma=en}}</ref>
+
+Los días 1, 2 y 3 de noviembre de 2021 volvió a disputar la [[Anexo:Postemporada 2021 del Campeonato de Fórmula 3 de la FIA|postemporada]] de Fórmula 3 con MP.<ref>{{Cita web|título=FIA Formula 3 returns to action with post-season testing in Valencia|url=https://www.fiaformula3.com/Latest/3V94Y1DiiE4zZXQrxA9Z1z/fia-formula-3-returns-to-action-with-post-season-testing-in-valencia|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=FIA Formula 3 Championship Limited|fecha=31 de octubre de 2021|fechaacceso=4 de octubre de 2021|idioma=en}}</ref><ref>{{Cita web|título=Valencia Post-season testing Day 2 entry list|url=https://www.fiaformula3.com/Latest/1WdqpYaUYjHLZFJXSOdgkv/valencia-post-season-testing-day-2-entry-list|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=FIA Formula 3 Championship Limited|fecha=1 de noviembre de 2021|fechaacceso=4 de noviembre de 2021|idioma=en}}</ref><ref>{{Cita web|título=Valencia Post-season testing Day 3 entry list|url=https://www.fiaformula3.com/Latest/1btvESBZndHqGKPr9IEaJU/valencia-post-season-testing-day-3-entry-list|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=FIA Formula 3 Championship Limited|fecha=2 de noviembre de 2021|fechaacceso=4 de noviembre de 2021|idioma=en}}</ref> Fue el más rápido en la sesión de la tarde del segundo día con un tiempo de 1:21.759.<ref>{{Cita web|título=Crawford fastest with PREMA Racing on Day 2 of post-season testing in Valencia|url=https://www.fiaformula3.com/Latest/6BvRYxxb50WzvsbfBE9WZz/crawford-fastest-with-prema-racing-on-day-2-of-post-season-testing-in|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=FIA Formula 3 Championship Limited|fecha=2 de noviembre de 2021|fechaacceso=4 de noviembre de 2021|idioma=en}}</ref> Tres meses más tarde, se unió a [[Van Amersfoort Racing]] para disputar la temporada {{F3|2022}} junto a [[Rafael Villagómez]] y [[Reece Ushijima]].<ref>{{Cita web|título=Argentinian Colapinto completes Van Amersfoort Racing’s line-up|url=https://www.fiaformula3.com/Latest/1HWVkvGlfPb7lqDCaf9qFZ/argentinian-colapinto-completes-van-amersfoort-racings-line-up|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=FIA Fórmula 3 Championship Limited|fecha=3 de febrero de 2022|fechaacceso=3 de febrero de 2022|idioma=en}}</ref> En su debut, en [[Anexo:Rondas de Sakhir de Fórmula 2 y de Fórmula 3 2022|Sakhir]], logró la ''pole position''.<ref>{{Cita web|apellidos=White|nombre=Megan|título=F3 Bahrein: Colapinto debuta con pole con el equipo Van Amersfoort|url=https://lat.motorsport.com/fiaf3/news/formula3-bahrein-colapinto-debuta-pole-equipo-van-amersfoort/9106576/|obra=[[Motorsport.com|lat.motorsport.com]]|editorial=[[Motorsport Network]]|fecha=18 de marzo de 2022|fechaacceso=12 de septiembre de 2022}}</ref> En la [[Anexo:Rondas de Imola de Fórmula 2 y de Fórmula 3 2022|ronda siguiente]], logró su primera victoria en la categoría tras salir primero en la grilla invertida de la primera carrera.<ref>{{Cita web|título=Franco Colapinto celebró su primera victoria en Fórmula 3|url=https://www.pagina12.com.ar/417165-franco-colapinto-celebro-su-primera-victoria-en-formula-3|obra=[[Página/12]]|fecha=24 de abril de 2022|fechaacceso=12 de septiembre de 2022}}</ref> Logró otros tres podios en las rondas de [[Anexo:Rondas de Spielberg de Fórmula 2 y de Fórmula 3 2022|Spielberg]], [[Anexo:Rondas de Budapest de Fórmula 2 y de Fórmula 3 2022|Budapest]] y [[Anexo:Rondas de Zandvoort de Fórmula 2 y de Fórmula 3 2022|Zandvoort]].<ref name="F3 2022"/> En la ronda final, en [[Anexo:Rondas de Monza de Fórmula 2 y de Fórmula 3 2022|Monza]], volvió a ganar en la carrera 1.<ref>{{Cita web|título=El argentino Franco Colapinto triunfó en el sprint de la Fórmula 3, el tercer escalón antes de la F1|url=https://tn.com.ar/deportes/automovilismo/2022/09/10/el-argentino-franco-colapinto-triunfo-en-el-sprint-de-la-formula-3-el-tercer-escalon-antes-de-la-f1/|obra=[[Todo Noticias|TN]]|fecha=10 de septiembre de 2022|fechaacceso=12 de septiembre de 2022}}</ref>
+
+Una vez finalizada la temporada, corrió con MP Motorsport en la [[Anexo:Postemporada 2022 del Campeonato de Fórmula 3 de la FIA|postemporada 2022]] en el [[circuito de Jerez]] los días 21, 22 y 23 de septiembre.<ref>{{Cita web|título=Formula 3 returns to action with post-season testing in Jerez|url=https://www.fiaformula3.com/Latest/3OrwkHqGy8GUOqEQnmQDT2/formula-3-returns-to-action-with-post-season-testing-in-jerez|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=Formula Motorsport Limited|fecha=20 de septiembre de 2022|fechaacceso=9 de enero de 2023|idioma=en}}</ref><ref>{{Cita web|título=Jerez post-season testing Day 2 entry list|url=https://www.fiaformula3.com/Latest/1PumIQq3VXG9xdujzt4u7U/jerez-post-season-testing-day-2-entry-list|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=Formula Motorsport Limited|fecha=21 de septiembre de 2022|fechaacceso=9 de enero de 2023|idioma=en}}</ref><ref>{{Cita web|título=Jerez post-season testing Day 3 entry list|url=https://www.fiaformula3.com/Latest/263AL5rKdQIzUdm0BOxc2F/jerez-post-season-testing-day-3-entry-list|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=Formula Motorsport Limited|fecha=22 de septiembre de 2022|fechaacceso=9 de enero de 2023|idioma=en}}</ref> Logró el mejor tiempo en la jornada de la mañana del último día.<ref>{{Cita web|título=Colapinto and Barnard quickest on final day of Jerez post-season testing|url=https://www.fiaformula3.com/Latest/5Y20dOPa0QTu5MB6MZq6pS/colapinto-and-barnard-quickest-on-final-day-of-jerez-post-season-testing|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=Formula Motorsport Limited|fecha=23 de septiembre de 2022|fechaacceso=9 de enero de 2023|idioma=en}}</ref> El 9 de enero de 2023, fichó por el equipo para disputar su [[Temporada 2023 del Campeonato de Fórmula 3 de la FIA|segunda temporada]] en la F3.<ref>{{Cita web|título=Colapinto joins Williams Driver Academy and switches to MP Motorsport for second F3 season|url=https://www.fiaformula3.com/Latest/C8EhbYzUrLGuY7BWZOipB/colapinto-joins-williams-driver-academy-and-switches-to-mp-motorsport-for|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=Formula Motorsport Limited|fecha=9 de enero de 2023|fechaacceso=9 de enero de 2023|idioma=en}}</ref> Comenzó la temporada con un segundo lugar en [[Anexo:Rondas de Sakhir de Fórmula 2 y de Fórmula 3 2023|Sakhir]], y en la [[Anexo:Rondas de Melbourne de Fórmula 2 y de Fórmula 3 2023|ronda posterior]] ganaría en la carrera 1,<ref>{{Cita web|título=SPRINT RACE: Colapinto takes measured win amidst the drama in Melbourne|url=https://www.fiaformula3.com/Latest/23fuODK7d80gW4WbzPDVHN/sprint-race-colapinto-takes-measured-win-amidst-the-drama-in-melbourne|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=Formula Motorsport Limited|fecha=1 de abril de 2023|fechaacceso=2 de septiembre de 2023|idioma=en}}</ref> pero sería descalificado por una infracción técnica.<ref>{{Cita web|título=Colapinto es descalificado y Montoya asciende al segundo lugar de la Sprint de F3 en Melbourne|url=https://www.f1latam.com/noticias/franco-colapinto-descalificado-f3-sprint-race-carrera-sebastian-montoya-segundo-lugar-podio-18000|obra=F1 Latam|fecha=1 de abril de 2023|fechaacceso=2 de septiembre de 2023}}</ref> Logró tres podios más adelante, uno de ellos una victoria en la primera carrera de [[Anexo:Rondas de Silverstone de Fórmula 2 y de Fórmula 3 2023|Silverstone]].<ref>{{Cita web|título=F3: Triunfo de Colapinto en la Carrera Sprint de Silverstone|url=https://www.carburando.com/notas/f3-triunfo-de-colapinto-en-la-carrera-sprint-de-silverstone|obra=[[Carburando]]|fecha=8 de julio de 2023|fechaacceso=2 de septiembre de 2023}}</ref> Colapinto llegó a la [[Anexo:Rondas de Sakhir de Fórmula 2 y de Fórmula 3 2023|ronda final]] quinto en el campeonato con posibilidades de lograr el subcampeonato.<ref>{{Cita web|título=Franco Colapinto puede hacer historia en la Fórmula 3: qué necesita para ser subcampeón|url=https://www.tycsports.com/automovilismo/franco-colapinto-puede-hacer-historia-en-la-formula-3-que-necesita-para-ser-subcampeon-id533031.html|obra=[[TyC Sports]]|fecha=1 de septiembre de 2023|fechaacceso=2 de septiembre de 2023}}</ref> En la carrera 1 volvió a ganar tras salir primero en la grilla invertida, que lo ubicó provisoriamente en la segunda posición.<ref>{{Cita web|título=SPRINT RACE: Colapinto clinches record-equalling victory in frenetic Monza showdown|url=https://www.fiaformula3.com/Latest/5zzJ8GjFgDjyTPwJNtKPJp/sprint-race-colapinto-clinches-record-equalling-victory-in-frenetic-monza|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=Formula Motorsport Limited|fecha=2 de septiembre de 2023|fechaacceso=2 de septiembre de 2023|idioma=en}}</ref> Sin embargo, en la segunda carrera no pudo asegurar el subcampeonato debido a una colisión con su excompañero de equipo Rafael Villagómez, que dañó la suspensión de su monoplaza y lo obligó a retirarse tempranamente. Finalmente cerró su segunda temporada en la F3 en la cuarta posición con 110 puntos.<ref>{{Cita web|título=Franco Colapinto se quedó sin el subcampeonato de la Fórmula 3 por un temprano abandono, pero apunta al salto de categoría|url=https://www.clarin.com/deportes/franco-colapinto-quedo-subcampeonato-formula-3-temprano-abandono-apunta-salto-categoria_0_fV2oQFlyLN.html|obra=[[Clarín (periódico)|Clarín]]|fecha=3 de septiembre de 2023|fechaacceso=3 de septiembre de 2023}}</ref>
+
+==== Gran Premio de Macao ====
+El 19 de noviembre de 2023, estaba prevista su participación en el [[Gran Premio de Macao de 2023|Gran Premio de Macao]] con MP.<ref>{{Cita web|título=Franco Colapinto inscripto para el Gran Premio de Macao|url=https://automundo.com.ar/franco-colapinto-carrera-invitacion-2023/|obra=Automundo|fecha=25 de octubre de 2023|fechaacceso=11 de noviembre de 2023}}</ref> Sin embargo, una semana antes de la carrera, fue anunciado que su futuro compañero de F2 [[Dennis Hauger]] sea su sustituto debido a su recuperación tras ser operado de su clavícula izquierda dos meses antes.<ref>{{Cita web|apellidos=Wood|nombre=Ida|título=2021 FIA F3 champion Hauger replaces Colapinto in MP’s Macau line-up|url=https://formulascout.com/2021-fia-f3-champion-hauger-replaces-colapinto-in-mps-macau-line-up/113164|obra=FormulaScout.com|fecha=11 de noviembre de 2023|fechaacceso=11 de noviembre de 2023|idioma=en}}</ref>
+
+=== Campeonato de Fórmula 2 de la FIA ===
+[[Archivo:FIA F2 Austria 2024 Nr. 12 Colapinto.jpg|miniatura|263px|Franco Colapinto en [[Red Bull Ring]] durante la [[temporada 2024 del Campeonato de Fórmula 2 de la FIA]].]]
+Tras su gran campaña en la Fórmula 3, en [[Argentina]] comenzó una campaña a través de las redes sociales pidiendo el ascenso del piloto local al [[Campeonato de Fórmula 2 de la FIA]] en {{F2|2024}} bajo el hashtag #FranColapintoaF2.<ref>{{Cita web|título=Exclusivo, el futuro de Franco Colapinto: cómo está el presupuesto para dar el salto a la Fórmula 2, los plazos y la condición que le puso Williams|url=https://www.infobae.com/deportes/2023/09/11/exclusivo-el-futuro-de-franco-colapinto-como-esta-el-presupuesto-para-dar-el-salto-a-la-formula-2-los-plazos-y-la-condicion-que-le-puso-williams/|obra=[[Infobae]]|fecha=11 de septiembre de 2023|fechaacceso=3 de octubre de 2023}}</ref><ref>{{Cita web|título=Masiva campaña en redes para que el piloto Franco Colapinto llegue a la Fórmula 2|url=https://www.diarioconvos.com/2023/09/11/masiva-campana-en-redes-para-que-el-piloto-franco-colapinto-llegue-a-la-formula-2/|obra=Diario con Vos|fecha=11 de septiembre de 2023|fechaacceso=3 de octubre de 2023}}</ref> Distintas celebridades como Martín Migoya, fundador de la empresa informática [[Globant]], y el artista musical [[Bizarrap]], se sumaron a la campaña.<ref>{{Cita web|título=De Bizarrap a un CEO: inician una colecta millonaria para que Franco Colapinto pueda llegar a la Fórmula 2 en 2024 y soñar con la Fórmula 1|url=https://www.lanacion.com.ar/deportes/automovilismo/de-bizarrap-a-un-ceo-inician-una-colecta-millonaria-para-que-franco-colapinto-pueda-llegar-a-la-nid10092023/|obra=[[La Nación (Argentina)|La Nación]]|fecha=10 de septiembre de 2023|fechaacceso=3 de octubre de 2023}}</ref> Colapinto comentó en una entrevista que «es muy difícil seguir en Europa sin presupuesto y apoyo», y afirmó que estaba «luchando con el presupuesto» para dar el salto a la Fórmula 2.<ref>{{Cita web|título=Franco Colapinto: "La F2 es muy cara y sin el presupuesto, será muy difícil seguir en Europa"|url=https://www.espn.com.ar/deporte-motor/nota/_/id/12562587/formula-3-franco-colapinto-presupuesto-formula-2-euros-millones-chance-butacas|obra=[[ESPN]]|fecha=8 de septiembre de 2023|fechaacceso=3 de octubre de 2023}}</ref><ref>{{Cita web|título=Franco Colapinto reflects on F3, his future and the support from his fans|url=https://feederseries.net/2023/09/23/franco-colapinto-reflects-on-f3-his-future-and-the-support-from-his-fans/|obra=Feeder Series|fecha=23 de septiembre de 2023|fechaacceso=3 de octubre de 2023|idioma=en}}</ref>
+
+El 3 de octubre de 2023, Colapinto brindó una conferencia de prensa en la sede del [[Automóvil Club Argentino]] (ACA) en [[Buenos Aires]] donde confirmó su posible debut en la Fórmula 2 en la [[Anexo:Ronda de Yas Marina de Fórmula 2 2023|última ronda]] de {{F2|2023}} en el [[circuito Yas Marina]] con el equipo aún por confirmar.<ref>{{Cita web|título=Franco Colapinto confirmó que podría debutar en Fórmula 2|url=https://www.unoentrerios.com.ar/ovacion/franco-colapinto-confirmo-que-podria-debutar-formula-2-n10092982.html|obra=UNO Entre Ríos|fecha=3 de octubre de 2023|fechaacceso=3 de octubre de 2023}}</ref><ref>{{Cita web|apellidos=Paez|nombre=Miguel|título=Franco Colapinto podría debutar este año en FIA F2|url=https://campeones.com.ar/franco-colapinto-podria-debutar-en-fia-f2/|obra=[[Campeones (programa de radio y televisión)|Campeones]]|fecha=3 de octubre de 2023|fechaacceso=3 de octubre de 2023}}</ref> Finalmente, el 25 de octubre, MP Motorsport anunció su participación en dicha ronda en reemplazo del piloto [[Jehan Daruvala]], y lo confirmó como piloto titular para 2024.<ref>{{Cita web|título=Franco Colapinto graduates to F2 with MP Motorsport for Yas Marina finale and 2024 season|url=https://www.fiaformula2.com/Latest/3xqA1gjmbZmVVZugWnvtPv/franco-colapinto-graduates-to-f2-with-mp-motorsport-for-yas-marina-finale|obra=[[Campeonato de Fórmula 2 de la FIA|Fórmula 2]]|editorial=Formula Motorsport Limited|fecha=25 de octubre de 2023|fechaacceso=25 de octubre de 2023|idioma=en}}</ref>
+
+En la F2, logró tres podios, uno de ellos una victoria en la carrera corta de la [[Anexo:Rondas de Imola de Fórmula 2 y de Fórmula 3 2024|ronda de Imola]].<ref>{{Cita web|título=SPRINT RACE: Colapinto produces final lap overtake to achieve maiden F2 victory in Imola|url=https://www.fiaformula2.com/Latest/XKPGkYH2OiRl4HHiXFpSn/sprint-race-colapinto-produces-final-lap-overtake-to-achieve-maiden-f2|obra=[[Campeonato de Fórmula 2 de la FIA|Fórmula 2]]|editorial=Formula Motorsport Limited|fecha=18 de mayo de 2024|fechaacceso=13 de septiembre de 2024|idioma=en}}</ref> Dejó el equipo una vez confirmado su ascenso a la [[Fórmula 1]] con [[Williams Racing]],<ref>{{Cita web|título=Franco Colapinto to step up to Formula 1 with Williams for the rest of the 2024 season|url=https://www.fiaformula2.com/Latest/1U8plhT7kt1pXUK8zKDHoJ/franco-colapinto-to-step-up-to-formula-1-with-williams-for-the-rest-of-the|obra=[[Campeonato de Fórmula 2 de la FIA|Fórmula 2]]|editorial=Formula Motorsport Limited|fecha=27 de agosto de 2024|fechaacceso=13 de septiembre de 2024|idioma=en}}</ref> siendo [[Oliver Goethe]] su reemplazante en su asiento en MP Motorsport a partir de [[Anexo:Rondas de Monza de Fórmula 2 y de Fórmula 3 2024|Monza]].<ref>{{Cita web|apellidos=Carruébano|nombre=Estefanía D.|título=Oliver Goethe da el salto a la F2: sustituirá a Franco Colapinto|url=https://soymotor.com/competicion/noticias/oliver-goethe-da-el-salto-la-f2-sustituira-franco-colapinto|obra=SoyMotor.com|fecha=28 de agosto de 2024|fechaacceso=13 de septiembre de 2024}}</ref> En el momento de su ascenso, se encontraba en la sexta posición en el campeonato de pilotos con 96 puntos.<ref name="fórmula 2 2024"/>
+
+=== Fórmula 1 ===
+Colapinto fue miembro de la [[Academia de pilotos de Williams]] desde principios de 2023 hasta 2025.<ref name="williams"/>
+
+El 1 de noviembre de 2023, [[Williams Racing]] anunció su participación en los [[Anexo:Postemporada 2023 de Fórmula 1|entrenamientos postemporada 2023 de Fórmula 1]] al volante del [[Williams FW45|FW45]].<ref>{{Cita web|título=Histórico: Franco Colapinto manejará en la Fórmula 1 y cumplirá su sueño|url=https://www.eldestapeweb.com/deportes/formula-1/historico-franco-colapinto-manejara-en-la-formula-1-y-cumplira-su-sueno-202311112330|obra=eldestape|fecha=1 de noviembre de 2023|fechaacceso=1 de noviembre de 2023}}</ref> De esta manera, se convirtió en el primer piloto argentino en subirse a un monoplaza de F1 desde [[Ricardo Risatti III|Ricardo Risatti]] en 2007 con [[Toyota Racing|Toyota]].<ref>{{Cita web|apellidos=Iriart|nombre=Alejo|título=De Ricardo Risatti, para Franco Colapinto: "Mejor que yo deje de ser el último argentino en un Fórmula 1"|url=https://www.espn.com.ar/deporte-motor/nota/_/id/12810393/franco-colapinto-formula-1-williams-abu-dhabi-ricardo-risatti-toyota-formula-3-paul-ricard|obra=[[ESPN]]|fecha=1 de noviembre de 2023|fechaacceso=18 de diciembre de 2023}}</ref>
+
+En la sesión de la mañana para jóvenes pilotos, logró el décimo mejor tiempo de la prueba (1:26.832), girando 65 vueltas.<ref>{{Cita web|título=Franco Colapinto probó por primera vez un Fórmula 1|url=https://ar.motor1.com/news/698234/franco-colapinto-formula1-williams/|obra=Motor1|fecha=28 de noviembre de 2023|fechaacceso=18 de diciembre de 2023}}</ref> Mientras que en la sesión general de la tarde quedó en la posición 22, delante del piloto titular [[Alex Albon|Alexander Albon]] (25.º), y quedando detrás de su compañero de academia [[Zak O'Sullivan]] (17.º) y del otro titular, [[Logan Sargeant]] (9.º).<ref>{{Cita web|apellidos=Medland|nombre=Chris|título=Ocon sets the pace as Russell car failure causes heavy crash in post-season Abu Dhabi test|url=https://www.formula1.com/en/latest/article.esteban-ocon-george-russell-post-season-abu-dhabi-test.7eLZKeQzlNqFZBvQ5O6WcP.html|obra=[[Fórmula 1]]|editorial=Formula One World Championship Limited|fecha=28 de noviembre de 2023|fechaacceso=18 de diciembre de 2023|idioma=en}}</ref> En dicha prueba, Colapinto completó más de 300 kilómetros arriba del monoplaza, lo que le permitió obtener la [[superlicencia de la FIA]].<ref>{{Cita web|apellidos=Acosta|nombre=Gino Nicolás|título=¡Franco Colapinto obtuvo la Superlicencia de Fórmula 1!|url=https://campeones.com.ar/franco-colapinto-obtuvo-la-superlicencia-de-formula-1/|obra=[[Campeones (programa de radio y televisión)|Campeones]]|fecha=28 de noviembre de 2023|fechaacceso=18 de diciembre de 2023}}</ref>
+
+El 5 de julio de 2024 tuvo su primera experiencia en un entrenamiento libre de Fórmula 1, manejando el [[Williams FW46|FW46]] de Sargeant en el [[Anexo:Gran Premio de Gran Bretaña de 2024|Gran Premio de Gran Bretaña]].<ref>{{Cita web|título=Franco Colapinto to take the wheel in Silverstone FP1 session|url=https://www.williamsf1.com/posts/a18c22db-1129-4c95-9349-b0eb50f3e80e/franco-colapinto-to-take-the-wheel-in-silverstone-fp1|obra=[[Williams Racing|Williams F1]]|fecha=1 de julio de 2024|fechaacceso=1 de julio de 2024|idioma=en}}</ref>
+
+==== Williams (2024) ====
+En la semana del [[Anexo:Gran Premio de Italia de 2024|Gran Premio de Italia de 2024]], Williams decidió reemplazar con efecto inmediato a Logan Sargeant por Colapinto hasta el final de la temporada, siendo su debut en la Fórmula 1 y el regreso de un piloto argentino a la categoría 23 años después.<ref>{{Cita web|título=Williams Racing announces that Franco Colapinto will race with the team for the remainder of the 2024 FIA Formula 1 World Championship season|url=https://www.williamsf1.com/posts/fd43d928-0914-42ff-b9ee-394342064dc4/williams-racing-team-statement|obra=[[Williams Racing|Williams F1]]|fecha=27 de agosto de 2024|fechaacceso=27 de agosto de 2024|idioma=en}}</ref> Finalizó en la duodécima posición en su debut.<ref>{{Cita web|título=F1: Leclerc ganó un carrerón en Monza y Colapinto finalizó P12 en el GP de Italia|url=https://www.carburando.com/notas/f1-leclerc-gano-un-carreron-en-monza-y-colapinto-finalizo-p12-en-el-gp-de-italia|obra=[[Campeones (programa de radio y televisión)|Campeones]]|fecha=1 de septiembre de 2024|fechaacceso=7 de noviembre de 2024}}</ref>
+
+En el [[Anexo:Gran Premio de Azerbaiyán de 2024|Gran Premio de Azerbaiyán]], pese a ser su primera vez en el circuito, se metió en su primera ''Q3'' y clasificó noveno por delante de su compañero [[Alex Albon|Alexander Albon]] (9.º), rompiendo así la racha de 33 veces derrotando a su compañero de equipo del tailandés,<ref>{{Cita web|título=Colapinto largará noveno en el GP de Azerbaiyán|url=https://www.pagina12.com.ar/767397-colapinto-largara-noveno-en-el-gp-de-azerbaiyan|obra=[[Página/12]]|fecha=14 de septiembre de 2024|fechaacceso=7 de noviembre de 2024}}</ref> y tras una sanción a [[Lewis Hamilton]], salió octavo.<ref>{{Cita web|título=Lewis Hamilton y Esteban Ocon arrancarán el GP de Azerbaiyán desde el pit-lane|url=https://soymotor.com/f1/noticias/lewis-hamilton-y-esteban-ocon-arrancaran-el-gp-de-azerbaiyan-desde-el-pit-lane|obra=SoyMotor.com|fecha=15 de septiembre de 2024|fechaacceso=7 de noviembre de 2024}}</ref> Finalizó en la misma posición, convirtiéndose en el primer argentino en sumar puntos en la categoría desde el [[Anexo:Gran Premio de Sudáfrica de 1982|Gran Premio de Sudáfrica de 1982]], cuando [[Carlos Reutemann]] terminó en segunda posición.<ref>{{Cita web|título=F1: Lando Norris brilló en el GP de Singapur, le ganó a Verstappen y Piastri finalizó tercero|url=https://www.tycsports.com/automovilismo/f1-segui-en-vivo-la-carrera-del-gp-de-singapur-id608705.html|obra=[[TyC Sports]]|fecha=22 de septiembre de 2024|fechaacceso=7 de noviembre de 2024}}</ref> En [[Anexo:Gran Premio de Singapur de 2024|Singapur]], finalizó en la undécima posición,<ref>{{Cita web|título=Franco Colapinto completó un gran trabajo en su tercera carrera en la Fórmula 1: terminó en el 11° lugar del Gran Premio de Singapur|url=https://www.infobae.com/deportes/2024/09/22/franco-colapinto-largara-desde-el-12-puesto-el-gran-premio-de-singapur-de-la-formula-1-hora-y-todo-lo-que-hay-que-saber/|obra=[[Infobae]]|fecha=22 de septiembre de 2024|fechaacceso=7 de noviembre de 2024}}</ref> en una carrera donde fue presionado por el piloto de [[Red Bull Racing|Red Bull]] [[Sergio Pérez]] por varias vueltas y no pudo superarlo. El mexicano a través de su radio, elogió a Colapinto, afirmando que es un piloto «difícil de pasar».<ref>{{Cita web|título=El gran elogio de Checo Pérez a Franco Colapinto en plena carrera de F1 en Singapur|url=https://www.airedesantafe.com.ar/deportes/el-gran-elogio-checo-perez-franco-colapinto-plena-carrera-f1-singapur-n596596|obra=Aire de Santa Fe|fecha=22 de septiembre de 2024|fechaacceso=7 de noviembre de 2024}}</ref>
+
+En el [[Anexo:Gran Premio de los Estados Unidos de 2024|Gran Premio de los Estados Unidos]] pudo entrar en la ''SQ3'', clasificando décimo para la carrera ''sprint''.<ref>{{Cita web|título=F1: con Colapinto en 10° posición, así se largará la Sprint Race en el GP de Estados Unidos|url=https://www.carburando.com/notas/f1-con-colapinto-en-10deg-posicion-asi-se-largara-la-sprint-race-en-el-gp-de-estados-unidos|obra=[[Carburando]]|fecha=19 de octubre de 2024|fechaacceso=7 de noviembre de 2024}}</ref> El 19 de octubre clasificó en el puesto 17, y en el día siguiente, con una gran actuación, finalizó en el puesto 10, sumando un punto.<ref>{{Cita web|título=Gran Premio de Estados Unidos: Franco Colapinto no pudo clasificar a la Q2|url=https://www.perfil.com/noticias/deportes/colapinto-largo-10-en-la-carrera-sprint-del-gran-premio-de-estados-unidos.phtml|obra=[[Perfil (Argentina)|Perfil]]|fecha=19 de octubre de 2024|fechaacceso=7 de noviembre de 2024}}</ref><ref>{{Cita web|título=Colapinto en el GP de Estados Unidos: cómo le fue en la qualy y el Sprint|url=https://www.cronista.com/deportes/colapinto-en-el-gp-de-estados-unidos-como-le-fue-en-el-sprint/|obra=El Cronista|fecha=19 de octubre de 2024|fechaacceso=7 de noviembre de 2024}}</ref> Durante dicha carrera, logró el mejor tiempo de vuelta (1:37.611), que mantuvo por ocho vueltas, hasta que el piloto de [[Alpine F1 Team|Alpine]] [[Esteban Ocon]] superaría dicho récord (1:37.330).<ref>{{Cita web|título=Eligieron una maniobra de Colapinto como la mejor de la temporada en la Fórmula 1|url=https://www.lanacion.com.ar/deportes/automovilismo/la-formula-1-premio-a-colapinto-una-maniobra-suya-fue-elegida-como-la-mejor-de-la-temporada-nid20122024/|obra=[[La Nación (Argentina)|La Nación]]|fecha=20 de diciembre de 2024|fechaacceso=31 de diciembre de 2024}}</ref> En [[Anexo:Gran Premio de la Ciudad de México de 2024|México]] clasificó en el puesto 16 y en la carrera finalizó en el puesto 12, a pesar de su gran actuación, en un incidente con [[Liam Lawson]], la [[Federación Internacional del Automóvil|FIA]] le aplicó una sanción de diez segundos por causar una colisión con el neozelandés durante la carrera (que no afectó su posición) y dos puntos de penalización en su superlicencia por 12 meses.<ref>{{Cita web|url=https://www.fia.com/sites/default/files/decision-document/2024%20Mexico%20City%20Grand%20Prix%20-%20Infringement%20-%20Car%2043%20-%20Causing%20a%20collision.pdf|título=Document 50 - FIA Document Management System}}</ref>
+
+En [[Anexo:Gran Premio de São Paulo de 2024|São Paulo]], un Gran Premio marcado por el fallecimiento de su abuelo unos días antes,<ref>{{Cita web|título=Colapinto pierde a su abuelo antes del GP de Sao Paulo|url=https://www.revistaturbo.com/colapinto-pierde-abuelo-gp-sao-paulo/|obra=Revista Turbo|fecha=1 de noviembre de 2024|fechaacceso=7 de noviembre de 2024}}</ref> sufrió un accidente en la vuelta 30 entrando a la última curva debido a la lluvia que cayó en el circuito y generó la bandera roja.<ref>{{Cita web|título=Fin de semana para el olvido en Williams: Franco Colapinto lamenta el desastre del GP de Sao Paulo F1 2024|url=https://www.caranddriver.com/es/formula-1/a62799704/fin-semana-olvido-williams-f1-franco-colapinto-lamenta-gp-sao-paulo/|obra=[[Car and Driver]]|fecha=4 de noviembre de 2024|fechaacceso=7 de noviembre de 2024}}</ref> El día posterior a la carrera, fue galardonado con el premio del «[[Adelantamiento del Mes de la Fórmula 1]]» por su maniobra para sobrepasar al español [[Fernando Alonso]] en Estados Unidos.<ref>{{Cita web|título=Franco Colapinto ganó un premio por su tremenda maniobra en el GP de Estados Unidos|url=https://la100.cienradios.com/deportes/franco-colapinto-gano-un-premio-por-su-tremenda-maniobra-en-el-gp-de-estados-unidos/|obra=[[La 100]]|fecha=4 de noviembre de 2024|fechaacceso=7 de noviembre de 2024}}</ref>
+
+En la clasificación para el [[Anexo:Gran Premio de Las Vegas de 2024|Gran Premio de Las Vegas]] llegó a la ''Q2'', pero entrando a las curvas 15 y 16 sufrió un accidente de 50 [[Fuerza g|g]], que posteriormente lo obligó  a salir desde el ''pitlane'' debido a los daños que sufrió su monoplaza.<ref>{{Cita web|título=Colapinto declared fit to race in Las Vegas Grand Prix after 50G qualifying crash|url=https://www.formula1.com/en/latest/article/colapinto-declared-fit-to-race-in-las-vegas-grand-prix-after-50g-qualifying.bckip5T9rs7wZXNUjmvoz|obra=[[Fórmula 1]]|editorial=Formula One World Championship Limited|fecha=24 de noviembre de 2024|fechaacceso=31 de diciembre de 2024|idioma=en}}</ref> Finalizó la carrera en la posición 14.<ref>{{Cita web|título=FORMULA 1 HEINEKEN SILVER LAS VEGAS GRAND PRIX 2024 - RACE RESULT|url=https://www.formula1.com/en/results/2024/races/1250/las-vegas/race-result|obra=[[Fórmula 1]]|editorial=Formula One World Championship Limited|fechaacceso=31 de diciembre de 2024|idioma=en}}</ref> En las últimas dos pruebas del año, no pudo finalizar ambas carreras por varios incidentes. En inicio de la carrera de [[Anexo:Gran Premio de Catar de 2024|Catar]], [[Nico Hülkenberg]] hizo contacto con Esteban Ocon en la primera curva, haciendo que el francés perdiera el control de su monoplaza y chocara con el de Colapinto, quien venía por afuera de la pista.<ref>{{Cita web|título=Así fue el desafortunado choque de Franco Colapinto en el GP Qatar 2024|url=https://www.sportingnews.com/ar/formula-1/news/choque-colapinto-video-qatar/3a602cb354bbcdf4cea6abb3|obra=Sporting News|fecha=1 de diciembre de 2024|fechaacceso=31 de diciembre de 2024}}</ref> Mientras que en [[Anexo:Gran Premio de Abu Dabi de 2024|Abu Dabi]] tuvo que salir desde la última posición luego de cambiar la caja de cambios de su FW46.<ref>{{Cita web|título=La penalización que sufrirán Franco Colapinto y Alex Albon en la carrera principal del Gran Premio de Abu Dhabi|url=https://www.infobae.com/deportes/2024/12/06/la-penalizacion-que-sufriran-franco-colapinto-y-alex-albon-en-la-carrera-principal-del-gran-premio-de-abu-dhabi/|obra=[[Infobae]]|fecha=6 de diciembre de 2024|fechaacceso=31 de diciembre de 2024}}</ref> Durante la tercera vuelta de la carrera, el piloto de [[McLaren]] [[Oscar Piastri]] colisionó con Colapinto e hizo que este sufriera un pinchazo y pérdida de potencia.<ref>{{Cita web|título=La bronca incontenible de Franco Colapinto con Oscar Piastri tras el choque en el GP de Abu Dhabi: “No sé qué le pasa”|url=https://radiomitre.cienradios.com/deportes/la-bronca-incontenible-de-franco-colapinto-con-oscar-piastri-tras-el-choque-en-el-gp-de-abu-dhabi-no-se-que-le-pasa/|obra=[[Radio Mitre]]|fecha=8 de diciembre de 2024|fechaacceso=31 de diciembre de 2024}}</ref> En la vuelta 26 tuvo que ingresar a boxes para retirar su monoplaza de la carrera.<ref>{{Cita web|título=Norris sails to victory ahead of Sainz and Leclerc in Abu Dhabi as McLaren seal constructors’ championship|url=https://www.formula1.com/en/latest/article/norris-sails-to-victory-ahead-of-sainz-and-leclerc-in-abu-dhabi-as-mclaren.52fogZq77Kgmdt75WN8kGM|obra=[[Fórmula 1]]|editorial=Formula One World Championship Limited|fecha=8 de diciembre de 2024|fechaacceso=31 de diciembre de 2024|idioma=en}}</ref> Finalizó la temporada 19.º, sumando cinco puntos en las nueve carreras que disputó.<ref>{{Cita web|apellidos=Valentine|nombre=Henry|título=2024 Abu Dhabi Grand Prix – F1 race results and final standings for F1 2024 season|url=https://www.planetf1.com/news/f1-results-2024-abu-dhabi-grand-prix-race-standings|obra=Planet F1|fecha=8 de diciembre de 2024|fechaacceso=31 de diciembre de 2024|idioma=en}}</ref>
+
+==== Reserva y titular de Alpine (2025) ====
+[[Archivo:2025 Emilia Romagna Grand Prix 01 (cropped).jpg|miniaturadeimagen|Colapinto en su debut con el equipo Alpine en [[Anexo:Gran Premio de Emilia-Romaña de 2025|Imola 2025]].]]
+Tras quedarse sin asiento para la [[Temporada 2025 de Fórmula 1|temporada 2025]], el 9 de enero, fue anunciada la incorporación de Colapinto a [[Alpine F1 Team]] como piloto de pruebas y reserva.<ref>{{Cita web|título=Alpine ficha a Franco Colapinto para la Fórmula 1 2025|url=https://grupolaprovincia.com/contenido/580679/alpine-fichaafrancocolapintoparalaformula12025|obra=Grupo La Provincia|fecha=9 de enero de 2025|fechaacceso=9 de enero de 2025}}</ref> Tras un bajo rendimiento del australiano [[Jack Doohan]] en el equipo, fue Colapinto quien lo reemplazó, comenzando en el [[Anexo:Gran Premio de Emilia-Romaña de 2025|Gran Premio de Emilia-Romaña]].<ref>{{Cita web|título=Franco Colapinto reemplaza a Doohan en Alpine|url=https://ar.motor1.com/news/758807/franco-colapinto-alpine-f1/|obra=Motor1|fecha=7 de mayo de 2025|fechaacceso=7 de mayo de 2025}}</ref> Después de sufrir un accidente en la clasificación y recibir una penalización de un puesto en la grilla, comenzó y terminó la carrera en decimosexto lugar.<ref>{{Cita web|título=Colapinto explains what he's still lacking from Alpine's F1 car|url=https://www.autosport.com/f1/news/franco-colapinto-explains-what-hes-still-lacking-from-alpines-f1-car/10725220/|obra=[[Autosport]]|editorial=[[Motorsport Network]]|fecha=22 de mayo de 2025|fechaacceso=22 de octubre de 2025|idioma=en}}</ref> En [[Anexo:Gran Premio de Mónaco de 2025|Mónaco]] logró finalizar en el puesto 13 tras salir desde la última posición.<ref>{{Cita web|título=Franco Colapinto completó el GP de Mónaco y cumplió un precepto de Briatore|url=https://www.espn.com.ar/deporte-motor/f1/nota/_/id/15229045/franco-colapinto-completo-el-gp-de-monaco-y-cumplio-un-precepto-de-briatore|obra=[[ESPN|ESPN Argentina]]|fecha=25 de mayo de 2025|fechaacceso=22 de octubre de 2025}}</ref> En [[Anexo:Gran Premio de España de 2025|España]] y [[Anexo:Gran Premio de Canadá de 2025|Canadá]] finalizó decimoquinto y decimotercero respectivamente, en esta última venciendo por primera vez a su compañero [[Pierre Gasly]] en clasificación y carrera.<ref name="statsf1"/><ref name=":1">{{Cita web|título=Franco COLAPINTO - Compañero - Pierre GASLY • STATS F1|url=https://www.statsf1.com/es/franco-colapinto/coequipier-detail-pierre-gasly.aspx|fechaacceso=22 de octubre de 2025}}</ref>
+
+[[Archivo:Franco Colapinto 2025 Italian Grand Prix FP3.jpg|miniaturadeimagen|Colapinto en el Gran Premio de Italia.]]
+
+Antes del [[Anexo:Gran Premio de Austria de 2025|Gran Premio de Austria]], que fue su última carrera bajo contrato, se confirmó que mantenía su asiento en el equipo hasta el final de la temporada.<ref>{{Cita web|url=https://f1.jonatanalmeira.com/colapinto-asegura-su-lugar-en-alpine-y-destaca-el-respaldo-de-briatore/|título=Colapinto asegura su lugar en Alpine y destaca el respaldo de Briatore|fechaacceso=30 de Junio de 2025|fecha=30 de Junio de 2025|obra=f1.jonatanalmeira.com}}</ref> Clasificó último en [[Anexo:Gran Premio de Gran Bretaña de 2025|Silverstone]], pero no pudo comenzar la carrera debido a un problema en la caja de cambios de su monoplaza.<ref>{{Cita web|título=Franco Colapinto no pudo largar en el GP de Gran Bretaña: qué le pasó al piloto argentino en su sexta carrera en la Fórmula 1 2025|url=https://www.clarin.com/deportes/franco-colapinto-pudo-largar-gp-gran-bretana-paso-piloto-argentino-sexta-carrera-formula-1-2025_0_MxZE1crnhn.html|obra=[[Clarín (periódico)|Clarín]]|fecha=6 de julio de 2025|fechaacceso=22 de octubre de 2025}}</ref> Tras un decimonoveno lugar en [[Anexo:Gran Premio de Bélgica de 2025|Bélgica]], volvió a vencer a Gasly en clasificación y carrera en el [[Anexo:Gran Premio de Hungría de 2025|Gran Premio de Hungría]].<ref name=":1"/> En el [[Anexo:Gran Premio de los Países Bajos de 2025|GP posterior]], en [[Circuito de Zandvoort|Zandvoort]], pudo haber sumado su primer punto en la temporada, pero una lenta parada en boxes y una tardía orden para que su compañero le cediera su posición perjudicaron sus posibilidades.<ref>{{Cita web|título=Radiografía de la carrera de Colapinto en el GP de Países Bajos de F1: sobrepasos, una sólida tarea y la actitud de Gasly que lo perjudicó|url=https://www.infobae.com/deportes/2025/08/31/radiografia-de-la-carrera-de-colapinto-en-el-gp-de-paises-bajos-de-f1-sobrepasos-y-una-solida-tarea-en-su-mejor-carrera-con-alpine/|obra=[[Infobae]]|fecha=31 de agosto de 2025|fechaacceso=22 de octubre de 2025}}</ref> En las tres carreras posteriores mostró mejoría en su rendimiento, venciendo en clasificación a Gasly.<ref name=":1"/>
+
+El 7 de noviembre de 2025, fue confirmado como piloto titular para la temporada 2026 por la escudería Alpine.<ref>{{Cita web|url=https://www.infobae.com/deportes/2025/11/07/franco-colapinto-seguira-en-la-formula-1-alpine-lo-confirmo-como-piloto-titular-para-la-temporada-2026/|título=Franco Colapinto seguirá en la Fórmula 1: Alpine lo confirmó como piloto titular para la temporada 2026|fechaacceso=2025-11-07|apellido=|nombre=|fecha=2025-11-07|sitioweb=[[Infobae]]}}</ref>
+
+== Vida personal ==
+[[Archivo:Colapinto en palermo 01.jpg|miniatura|Colapinto exhibiendo el [[Lotus E20]] —decorado con los colores de Alpine— en las calles de [[Palermo (Buenos Aires)|Palermo]], Buenos Aires, en 2026.]]
+[[Archivo:Colapinto en palermo 02.jpg|miniatura|Franco Colapinto saludando a aficionados en 2026.]]
+Franco Alejandro Colapinto nació el 27 de mayo de 2003 en la localidad de [[Pilar (Buenos Aires)|Pilar]], de la provincia de Buenos Aires, Argentina. Sus padres son el abogado Aníbal Leónidas Colapinto y Andrea Laura Trofimczuk.<ref>{{Cita web|url=https://www.infobae.com/deportes/2023/11/27/las-historias-jamas-contadas-de-franco-colapinto-y-su-album-familiar-el-dia-que-convirtio-en-pista-una-jugueteria-y-las-travesuras-en-cuatriciclo/|título=Las historias jamás contadas de Franco Colapinto y su álbum familiar: el día que convirtió en pista una juguetería y las travesuras en cuatriciclo|fechaacceso=2024-09-11|apellido=Coronel|nombre=Darío|fecha=2023-11-27|sitioweb=[[Infobae]]}}</ref> Además de Franco, el matrimonio Colapinto-Trofimczuk tuvo otra hija, llamada Martina Colapinto.<ref>{{Cita web|url=https://www.minutoneuquen.com/entretenimiento/2024/9/2/la-princesa-de-la-familia-ella-es-martina-la-hermana-de-franco-colapinto-quien-mantiene-un-bajo-perfil-358995.html|título=La princesa de la familia: ella es Martina, la hermana de Franco Colapinto, quien mantiene un bajo perfil|fechaacceso=2024-09-11|sitioweb=www.minutoneuquen.com}}</ref> Además de ejercer como abogado, su padre fue copropietario del equipo de [[Turismo Carretera]] [[JC Competición]] en la década de 2010.<ref>{{Cita web|título=Franco Colapinto y su infancia junto al TC|url=https://www.solotc.com.ar/franco-colapinto-tc-infancia-papa-equipo/|obra=Sólo TC|fecha=27 de abril de 2026|fechaacceso=7 de mayo de 2026}}</ref>
+
+Colapinto es descendiente por su familia paterna de inmigrantes [[Pueblo italiano|italianos]], mientras que a través de su madre desciende de [[Pueblo ucraniano|ucranianos]] radicados en Argentina.<ref>{{Cita web|url=https://www.infobae.com/deportes/2024/09/07/el-posteo-de-franco-colapinto-tras-el-mensaje-de-una-fanatica-por-sus-raices-ucranianas/|título=El posteo de Franco Colapinto tras el mensaje de una fanática por sus raíces ucranianas|fechaacceso=2024-09-11|fecha=2024-09-07|sitioweb=[[Infobae]]}}</ref> Su padre, previo a ejercer la profesión de abogado, también se destacó en el automovilismo en la ciudad de [[Bahía Blanca]]. Aníbal Colapinto es a su vez hijo del reconocido abogado Leónidas Colapinto (1935-2024), y bisnieto de Vicente Colapinto, oriundo de [[Bari]] y radicado en [[Provincia de Entre Ríos|Entre Ríos]], médico por la [[Universidad de Nápoles Federico II|Universidad de Nápoles]].<ref>{{Cita web|url=https://la100.cienradios.com/deportes/como-es-y-a-que-se-dedica-anibal-el-papa-de-franco-colapinto-quien-es-responsable-de-su-pasion-por-la-formula-1/|título=Cómo es y a que se dedica Aníbal, el papá de Franco Colapinto, quien es responsable de su pasión por la Fórmula 1|fechaacceso=2024-09-11|fecha=2024-09-08|sitioweb=La 100}}</ref><ref>{{Cita libro|apellidos=Petriella|nombre=Dionisio|título=Diccionario biográfico ítalo-argentino|año=1976|editorial=Asociación Dante Alighieri|ubicación=Buenos Aires|apellidos2=Sosa Miatello|nombre2=Sara}}</ref><ref>{{Cita libro|título=Annuario scolastico 1888-89 della Regia Università degli Studi di Napoli|url=https://www.google.com.ar/books/edition/Annuario_scolastico/tT-h1WNvu4cC|fechaacceso=11-9-2024|año=1889|editorial=Tipografia della Regia Università|ubicación=Nápoles|página=160|idioma=italiano}}</ref> Previo al fin de semana del [[Anexo:Gran Premio de São Paulo de 2024|Gran Premio de São Paulo de 2024]], falleció su abuelo Leónidas, a los 89 años.<ref>{{cita web|url=https://www.infobae.com/deportes/2024/11/01/triste-noticia-para-franco-colapinto-antes-del-gp-de-brasil-murio-su-abuelo-un-reconocido-escritor-y-abogado/|título=Triste noticia para Franco Colapinto antes del GP de Brasil: murió su abuelo, un reconocido escritor y abogado|fechaacceso=2024-11-01|fecha=2024-11-01|sitioweb=[[Infobae]]}}</ref>
+
+Cursó estudios primarios en el Colegio del Pilar, en la localidad bonaerense homónima, continuando con sus estudios secundarios en la Escuela Técnica [[Roberto Rocca]] de [[Campana (Argentina)|Campana]], Buenos Aires. A sus 14 años se radicó en [[Italia]] para dedicarse al [[automovilismo]], y finalmente al regresar a Argentina finalizó la escuela secundaria en el Colegio del Pilar, gracias a un plan de estudios personalizado.<ref>{{Cita web|url=https://www.clarin.com/zonales/fotos-ineditas-colapinto-escuela-testimonio-profesora-distinto_0_IjN0P4yFbk.html|título=Las fotos inéditas de Colapinto en la escuela y el testimonio de su profesora: "Ya era distinto a los demás"|fechaacceso=2024-09-11|apellido=Avalos|nombre=Ignacio|fecha=2024-08-30|sitioweb=Clarín}}</ref><ref>{{Cita web|url=https://m.campananoticias.com/noticia/82243/un-formula-uno-paso-por-campana|título=Un Fórmula Uno pasó por Campana|fechaacceso=2024-09-11|sitioweb=Campana Noticias}}</ref>
+
+Una calle de la localidad de [[Luján]], lleva su nombre.<ref>{{Cita web|url=https://www.eldia.com/nota/2024-10-8-19-6-0-franco-colapinto-tendra-su-calle-en-una-localidad-bonaerense-deportes |título=Franco Colapinto tendrá su calle en una localidad bonaerense |fechaacceso=2024-10-08 |sitioweb=www.eldia.com}}</ref><ref>{{Cita web|url=https://www.canal26.com/deportes/franco-colapinto-ya-tiene-su-propia-calle-donde-queda-y-con-cual-cruza--394643 |título=Franco Colapinto ya tiene su propia calle: ¿dónde queda y con cuál cruza? |fechaacceso=2024-10-08 |sitioweb=www.canal26.com}}</ref> Es reconocido simpatizante del [[Club Atlético Boca Juniors]].<ref>{{Cita web|url=https://tntsports.com.ar/ligaprofesional/de-que-cuadro-es-hincha-franco-colapinto--20240827-0016.html|título=De que cuadro es hincha Franco Colapinto}}</ref>
+
+En 2023 tuvo una breve relación con la modelo e influencer francesa Estelle Ogilvy.{{refn|{{Cita web|url=https://www.paparazzi.com.ar/romances/quien-es-estelle-ogilvy-la-unica-ex-novia-que-se-le-conoce-a-franco-colapinto-las-fotos|título=Quién es Estelle Ogilvy, la única ex novia que se le conoce a Franco Colapinto: las fotos|sitioweb=Paparazzi|fecha=2024-11-08}}}}{{refn|{{Cita web|url=https://www.lanacion.com.ar/deportes/quien-es-la-modelo-francesa-que-fue-novia-de-franco-colapinto-antes-de-su-llegada-a-la-formula-1-nid20092024|título=Quién es la modelo francesa que fue novia de Franco Colapinto antes de su llegada a la Fórmula 1|sitioweb=La Nación|fecha=2024-9-21}}}} Desde 2026 mantiene una relación con la actriz y cantante argentina [[Maia Reficco]].<ref name="partner">{{Cita web|título=Maia Reficco, la estrella de Broadway que confirmó su noviazgo con Franco Colapinto|url=https://www.pagina12.com.ar/2026/04/28/maia-reficco-la-estrella-de-broadway-que-confirmo-su-noviazgo-con-franco-colapinto/|obra=[[Página/12]]|fecha=28 de abril de 2026|fechaacceso=28 de abril de 2026}}</ref>
+
+== Resumen de carrera ==
+{| class="wikitable" style="font-size: 90%; text-align:center"
+! Temporada
+! Categoría
+! Equipo
+! Carreras
+! Victorias
+! {{Abreviatura|''Poles''|Pole positions}}
+! {{Abreviatura|&nbsp;VR&nbsp;|Vueltas rápidas}}
+! Podios
+! Puntos
+! {{Abreviatura|Pos.|Posición}}
+|-
+! 2018
+|align="left"| [[Temporada 2018 del Campeonato de España de F4|Campeonato de España de F4]]
+|rowspan="3" align="left"| [[Drivex|Drivex School]]
+| 4
+| 1
+| 2
+| 0
+| 0
+| 40
+| 12.º
+|-
+!rowspan="3"| 2019
+|align="left"| [[Temporada 2019 del Campeonato de España de F4|Campeonato de España de F4]]
+| 21
+| 11
+| 14
+| 9
+| 10
+| 325
+|style="background:#FFFFBF;"| '''1.º'''
+|-
+|align="left"| [[Temporada 2019 de Eurofórmula Open|Eurofórmula Open]]
+| 2
+| 0
+| 0
+| 0
+| 0
+| 0
+| 27.º
+|-
+|align="left"| [[Eurocopa de Fórmula Renault]]
+|align="left"| [[Drivex|FA Racing by Drivex]]
+| 4
+| 0
+| 0
+| 0
+| 0
+| 0
+| NC†
+|-
+!rowspan="2"| 2020
+|align="left"| [[Toyota Racing Series]]
+|align="left"| Kiwi Motorsport
+| 15
+| 1
+| 1
+| 2
+| 8
+| 315
+|style="background:#FFDF9F;"| '''3.º'''
+|-
+|align="left"| [[Temporada 2020 de Eurocopa de Fórmula Renault|Eurocopa de Fórmula Renault]]
+|align="left"| [[MP Motorsport]]
+| 20
+| 2
+| 0
+| 2
+| 9
+| 213.5
+|style="background:#FFDF9F;"| '''3.º'''
+|-
+!rowspan="5"| 2021
+|align="left"| [[Asian Le Mans Series]] - LMP2
+|rowspan="3" align="left"| G-Drive Racing
+| 4
+| 0
+| 3
+| 0
+| 3
+| 66
+|style="background:#FFDF9F;"| '''3.º'''
+|-
+|align="left"| [[European Le Mans Series]] - LMP2
+| 6
+| 1
+| 3
+| 1
+| 2
+| 74
+| 4.º
+|-
+|align="left"| [[24 Horas de Le Mans 2021|24 Horas de Le Mans]] - LMP2
+|colspan="6"|
+| 7.º
+|-
+|align="left"| [[Temporada 2021 del Campeonato de Fórmula Regional Europea|Campeonato de Fórmula Regional Europea]]
+|align="left"| [[MP Motorsport]]
+| 16
+| 2
+| 3
+| 4
+| 4
+| 140
+| 6.º
+|-
+|align="left"| [[GT World Challenge Europe Endurance Cup]]
+|align="left"| [[Team WRT|ROFGO Racing with Team WRT]]
+| 1
+| 0
+| 0
+| 0
+| 0
+| 0
+| NC
+|-
+! 2022
+|align="left"| [[Temporada 2022 del Campeonato de Fórmula 3 de la FIA|Campeonato de Fórmula 3 de la FIA]]
+|align="left"| [[Van Amersfoort Racing]]
+| 18
+| 2
+| 1
+| 0
+| 5
+| 76
+| 9.º
+|-
+!rowspan="3"| 2023
+|align="left"| [[Temporada 2023 del Campeonato de Fórmula 3 de la FIA|Campeonato de Fórmula 3 de la FIA]]
+|rowspan="2" align="left"| [[MP Motorsport]]
+| 18
+| 2
+| 0
+| 0
+| 5
+| 110
+| 4.º
+|-
+|align="left"| [[Temporada 2023 del Campeonato de Fórmula 2 de la FIA|Campeonato de Fórmula 2 de la FIA]]
+| 2
+| 0
+| 0
+| 0
+| 0
+| 0
+| 25.º
+|-
+|align="left"| [[Temporada 2023 de Fórmula 1|Fórmula 1]]
+|align="left"| [[Williams Racing]]
+|colspan="7"| ''Piloto de pruebas''<ref>{{Cita web|título=Which drivers are taking part in the post-season test in Abu Dhabi|url=https://www.formula1.com/en/latest/article.which-drivers-are-taking-part-in-the-post-season-test-in-abu-dhabi.6dOTCMj5tPYPqcQ8WzFe86.html|obra=[[Fórmula 1]]|editorial=Formula One World Championship Limited|fecha=28 de noviembre de 2023|fechaacceso=28 de noviembre de 2023|idioma=en}}</ref>
+|-
+!rowspan="2"| 2024
+|align="left"| [[Temporada 2024 del Campeonato de Fórmula 2 de la FIA|Campeonato de Fórmula 2 de la FIA]]
+|align="left"| [[MP Motorsport]]
+| 20
+| 1
+| 0
+| 3
+| 3
+| 96
+| 9.º
+|-
+|align="left"| [[Temporada 2024 de Fórmula 1|Fórmula 1]]
+|align="left"| [[Williams Racing]]
+| 9
+| 0
+| 0
+| 0
+| 0
+| 5
+| 19.º
+|-
+! 2025
+|align="left"| [[Temporada 2025 de Fórmula 1|Fórmula 1]]
+|align="left"| [[Alpine F1 Team|BWT Alpine Formula 1 Team]]
+| 17
+| 0
+| 0
+| 0
+| 0
+| 0
+| 20.º
+|-
+! 2026
+|align="left"| [[Temporada 2026 de Fórmula 1|Fórmula 1]]
+|align="left"| [[Alpine F1 Team|BWT Alpine Formula One Team]]
+|colspan="7"| ''Disputándose''
+|-
+!colspan="10"| Fuentes:<ref name=":0"/><ref>{{Cita web|url=https://www.statsf1.com/es/2024/bilan.aspx|título=Balance 2024 • STATS F1|fechaacceso=5 de julio de 2024|obra=STATS F1}}</ref>
+|}
+* ''<sup>†</sup> Era piloto invitado, por lo que no sumó puntos.''
+
+== Balance con compañeros de equipo en Fórmula 1 ==
+{| class="wikitable" style="font-size: 100%; text-align:center"
+! Año
+! Compañero
+! Clasificación
+! Carrera
+! Puntos
+|-
+! {{F1|2024}}
+|align="left"| {{bandera|THA}} [[Alex Albon|Alexander Albon]]
+|bgcolor=salmon|'''2'''-7
+|bgcolor=salmon|'''1'''-2
+|bgcolor=salmon|'''5'''-8
+|-
+! {{F1|2025}}
+|rowspan="2" align="left"| {{bandera|FRA}} [[Pierre Gasly]]
+|bgcolor=salmon|'''5'''-13
+|bgcolor=salmon|'''7'''-11
+|bgcolor=salmon|'''0'''-16
+|-
+! {{F1|2026}}
+|colspan="3"| ''Disputándose''
+|-
+!colspan="5"| Fuente:<ref>{{Cita web|url=https://www.statsf1.com/es/franco-colapinto/modele.aspx|título=Franco COLAPINTO - Modelos • STATS F1|fechaacceso=2024-09-15|sitioweb=www.statsf1.com}}</ref>
+|}
+
+== Resultados ==
+=== Eurocopa de Fórmula Renault ===
+{{Clave de resultados de automovilismo}}
+{| class="wikitable" style="text-align:center; font-size:85%"
+! Año
+! Escudería
+! 1
+! 2
+! 3
+! 4
+! 5
+! 6
+! 7
+! 8
+! 9
+! 10
+! 11
+! 12
+! 13
+! 14
+! 15
+! 16
+! 17
+! 18
+! 19
+! 20
+! Pos.
+! Puntos
+|-
+| [[Temporada 2019 de Eurocopa de Fórmula Renault|2019]]
+! [[Drivex|FA Racing by Drivex]]
+| [[Autodromo Nazionale di Monza|MNZ<br>1]]
+| [[Autodromo Nazionale di Monza|MNZ<br>2]]
+| [[Circuito de Silverstone|SIL<br>1]]
+| [[Circuito de Silverstone|SIL<br>2]]
+| [[Circuito de Mónaco|MON<br>1]]
+| [[Circuito de Mónaco|MON<br>2]]
+| [[Circuito Paul Ricard|LEC<br>1]]
+| [[Circuito Paul Ricard|LEC<br>2]]
+|bgcolor="#CFCFFF"| [[Circuito de Spa-Francorchamps|SPA<br>1]]<br>{{small|12}}
+|bgcolor="#CFCFFF"| [[Circuito de Spa-Francorchamps|SPA<br>2]]<br>{{small|20}}
+| [[Nürburgring|NÜR<br>1]]
+| [[Nürburgring|NÜR<br>2]]
+| [[Hungaroring|HUN<br>1]]
+| [[Hungaroring|HUN<br>2]]
+|bgcolor="#CFCFFF"| [[Circuito de Barcelona-Cataluña|CAT<br>1]]<br>{{small|11}}
+|bgcolor="#CFCFFF"| [[Circuito de Barcelona-Cataluña|CAT<br>2]]<br>{{small|10}}
+| [[Hockenheimring|HOC<br>1]]
+| [[Hockenheimring|HOC<br>2]]
+| [[Circuito Yas Marina|YMC<br>1]]
+| [[Circuito Yas Marina|YMC<br>2]]
+! NC†
+! 0†
+|-
+| [[Temporada 2020 de Eurocopa de Fórmula Renault|2020]]
+! [[MP Motorsport]]
+|bgcolor="#FFFFBF"| [[Autodromo Nazionale di Monza|MNZ<br>1]]<br>{{small|1}}
+|bgcolor="#FFDF9F"| [[Autodromo Nazionale di Monza|MNZ<br>2]]<br>{{small|3}}
+|bgcolor="#DFFFDF"| [[Autodromo Enzo e Dino Ferrari|IMO<br>1]]<br>{{small|6}}
+|bgcolor="#DFFFDF"| [[Autodromo Enzo e Dino Ferrari|IMO<br>2]]<br>{{small|7}}
+|bgcolor="#DFFFDF"| [[Nürburgring|NÜR<br>1]]<br>{{small|7}}
+|bgcolor="#DFFFDF"| [[Nürburgring|NÜR<br>2]]<br>{{small|6}}
+|bgcolor="#CFCFFF"| ''[[Circuito de Nevers Magny-Cours|MAG<br>1]]''<br>{{small|13}}
+|bgcolor="#EFCFFF"| [[Circuito de Nevers Magny-Cours|MAG<br>2]]<br>{{small|Ret}}
+|bgcolor="#DFFFDF"| [[Circuito de Zandvoort|ZAN<br>1]]<br>{{small|6}}
+|bgcolor="#FFDF9F"| [[Circuito de Zandvoort|ZAN<br>2]]<br>{{small|3}}
+|bgcolor="#DFFFDF"| [[Circuito de Barcelona-Cataluña|CAT<br>1]]<br>{{small|6}}
+|bgcolor="#FFDF9F"| [[Circuito de Barcelona-Cataluña|CAT<br>2]]<br>{{small|3}}
+|bgcolor="#FFFFBF"| [[Circuito de Spa-Francorchamps|SPA<br>1]]<br>{{small|1}}
+|bgcolor="#CFCFFF"| [[Circuito de Spa-Francorchamps|SPA<br>2]]<br>{{small|12}}
+|bgcolor="#DFFFDF"| [[Autodromo Enzo e Dino Ferrari|IMO<br>1]]<br>{{small|4}}
+|bgcolor="#DFDFDF"| ''[[Autodromo Enzo e Dino Ferrari|IMO<br>2]]''<br>{{small|2}}
+|bgcolor="#DFFFDF"| [[Hockenheimring|HOC<br>1]]<br>{{small|4}}
+|bgcolor="#FFDF9F"| [[Hockenheimring|HOC<br>2]]<br>{{small|3}}
+|bgcolor="#FFDF9F"| [[Circuito Paul Ricard|LEC<br>1]]<br>{{small|3}}
+|bgcolor="#FFDF9F"| [[Circuito Paul Ricard|LEC<br>2]]<br>{{small|3}}
+|bgcolor="#FFDF9F"| '''3.º'''
+|bgcolor="#FFDF9F"| '''213.5'''
+|-
+!colspan="27"| Fuente:<ref>{{Cita web|título=Season 2020 - Results and standings - renaultsport.com|url=https://www.formulerenault.com/-resultats-et-classements-481-.html|obra=Formula Renault|fechaacceso=8 de marzo de 2021|idioma=en|fechaarchivo=5 de marzo de 2021|urlarchivo=https://web.archive.org/web/20210305063919/https://www.formulerenault.com/-resultats-et-classements-481-.html|deadurl=yes}}</ref>
+|}
+* ''† Como piloto invitado, no fue apto para puntuar.''
+
+=== Asian Le Mans Series ===
+{{Clave de resultados de automovilismo}}
+{| class="wikitable" style="text-align:center; font-size:90%"
+! Año
+! Escudería
+! Clase
+! Automóvil
+! 1
+! 2
+! 3
+! 4
+! Pos.
+! Puntos
+! {{Abreviatura|Ref.|Referencias}}
+|-
+|rowspan="2"| [[Temporada 2021 de Asian Le Mans Series|2021]]
+!rowspan="2"| G-Drive Racing
+!rowspan="2"| LMP2
+!rowspan="2"| [[Oreca 07|Aurus 01]]-[[Gibson Technology|Gibson]]
+| [[Autódromo de Dubái|DUB]]
+| [[Autódromo de Dubái|DUB]]
+| [[Circuito Yas Marina|YMC]]
+| [[Circuito Yas Marina|YMC]]
+|style="background:#FFDF9F;" rowspan="2"| '''3.º'''
+|style="background:#FFDF9F;" rowspan="2"| '''66'''
+|rowspan="2"| <ref>{{Cita web|título=Race Results 2021 - LMP2 {{!}} Asian Le Mans Series|url=https://www.asianlemansseries.com/calendar/2021/drivers-championship|obra=[[Asian Le Mans Series]]|fechaacceso=8 de marzo de 2021|idioma=en}}</ref>
+|-
+|bgcolor="#DFFFDF"| 4
+|bgcolor="#DFDFDF"| '''2'''
+|bgcolor="#FFDF9F"| '''3'''
+|bgcolor="#DFDFDF"| '''2'''
+|}
+
+=== European Le Mans Series ===
+{{Clave de resultados de automovilismo}}
+{| class="wikitable" style="text-align:center; font-size:90%"
+! Año
+! Escudería
+! Clase
+! Automóvil
+! 1
+! 2
+! 3
+! 4
+! 5
+! 6
+! Pos.
+! Puntos
+! {{Abreviatura|Ref.|Referencias}}
+|-
+|rowspan="2"| [[Temporada 2021 de European Le Mans Series|2021]]
+!rowspan="2"| G-Drive Racing
+!rowspan="2"| LMP2
+!rowspan="2"| [[Oreca 07|Aurus 01]]-[[Gibson Technology|Gibson]]
+| [[Circuito de Barcelona-Cataluña|BAR]]
+| [[Red Bull Ring|SPI]]
+| [[Circuito Paul Ricard|LEC]]
+| [[Autodromo Nazionale di Monza|MNZ]]
+| [[Circuito de Spa-Francorchamps|SPA]]
+| [[Autódromo Internacional do Algarve|POR]]
+!rowspan="2"| 4.º
+!rowspan="2"| 74
+|rowspan="2"| <ref name="ELMS2021">{{Cita web|título=2021 ELMS Presentation - ELMS|url=https://www.europeanlemansseries.com/en/season|obra=[[European Le Mans Series]]|fechaacceso=9 de junio de 2021|idioma=en}}</ref>
+|-
+|bgcolor="#DFFFDF"| '''4'''
+|bgcolor="#DFDFDF"| 2
+|bgcolor="#FFFFBF"| '''1'''
+|bgcolor="#DFFFDF"| '''''8'''''
+|bgcolor="#CFCFFF"| NC
+|bgcolor="#DFFFDF"| 5
+|}
+
+=== 24 Horas de Le Mans ===
+{| class="wikitable" style="text-align:center; font-size:90%"
+! Año
+! Equipo
+! Copilotos
+! Automóvil
+! Clase
+! Vueltas
+! {{Abreviatura|Pos.|Posición en la general}}
+! {{Abreviatura|Pos. Clase|Posición en su clase}}
+|-
+! [[24 Horas de Le Mans 2021|2021]]
+|align="left"| [[Archivo:Russian Automobile Federation flag.svg{{!}}border|20px]] G-Drive Racing
+|align="left"| [[Archivo:Russian Automobile Federation flag.svg{{!}}border|20px]] [[Román Rúsinov|Roman Rusinov]]<br>{{bandera|NLD}} [[Nyck de Vries]]
+|align="left"| [[Oreca 07|Aurus 01]]-[[Gibson Technology|Gibson]]
+| LMP2
+| 358
+| 12.º
+| 7.º
+|-
+! colspan="8" |Fuente:<ref>{{Cita web|url=https://www.motorsportmagazine.com/database/drivers/franco-colapinto/|título=Franco Colapinto • Career & Character Info {{!}} Motorsport Database|fechaacceso=2021-08-22|sitioweb=Motorsport Database - Motor Sport Magazine|idioma=en-GB}}</ref>
+|}
+
+=== Campeonato de Fórmula 3 de la FIA ===
+{{Clave de resultados de carrera de motor con vuelta rápida puntuable}}
+{| class="wikitable" style="text-align:center; font-size:90%"
+! Año
+! Escudería
+!colspan="2"| 1
+!colspan="2"| 2
+!colspan="2"| 3
+!colspan="2"| 4
+!colspan="2"| 5
+!colspan="2"| 6
+!colspan="2"| 7
+!colspan="2"| 8
+!colspan="2"| 9
+! Pos.
+! Puntos
+! {{Abreviatura|Ref.|Referencias}}
+|-
+|rowspan="2"| {{F3|2022}}
+!rowspan="2"| [[Van Amersfoort Racing]]
+|colspan="2"| {{nowrap|{{bandera|BHR}} [[Anexo:Rondas de Sakhir de Fórmula 2 y de Fórmula 3 2022|SAK]]}}
+|colspan="2"| {{nowrap|{{bandera|ITA}} [[Anexo:Rondas de Imola de Fórmula 2 y de Fórmula 3 2022|IMO]]}}
+|colspan="2"| {{nowrap|{{bandera|ESP}} [[Anexo:Rondas de Barcelona de Fórmula 2 y de Fórmula 3 2022|BAR]]}}
+|colspan="2"| {{nowrap|{{bandera|GBR}} [[Anexo:Rondas de Silverstone de Fórmula 2 y de Fórmula 3 2022|SIL]]}}
+|colspan="2"| {{nowrap|{{bandera|AUT}} [[Anexo:Rondas de Spielberg de Fórmula 2 y de Fórmula 3 2022|SPI]]}}
+|colspan="2"| {{nowrap|{{bandera|HUN}} [[Anexo:Rondas de Budapest de Fórmula 2 y de Fórmula 3 2022|BUD]]}}
+|colspan="2"| {{nowrap|{{bandera|BEL}} [[Anexo:Rondas de Spa-Francorchamps de Fórmula 2 y de Fórmula 3 2022|SPA]]}}
+|colspan="2"| {{nowrap|{{bandera|NLD}} [[Anexo:Rondas de Zandvoort de Fórmula 2 y de Fórmula 3 2022|ZAN]]}}
+|colspan="2"| {{nowrap|{{bandera|ITA}} [[Anexo:Rondas de Monza de Fórmula 2 y de Fórmula 3 2022|MNZ]]}}
+!rowspan="2"| {{ResF32022|29|Pos.}}.º
+!rowspan="2"| {{ResF32022|29|Puntos}}
+|rowspan="2"| <ref name="F3 2022">{{Cita web|título=Driver Standings for the FIA Formula 3 2022 Championship|url=https://www.fiaformula3.com/Standings/Driver|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=Formula Motorsport Limited|fechaacceso=18 de marzo de 2022|idioma=en}}</ref>
+|-
+| {{ResF32022|29|SAK1}}
+| {{ResF32022|29|SAK2}}
+| {{ResF32022|29|IMO1}}
+| {{ResF32022|29|IMO2}}
+| {{ResF32022|29|BAR1}}
+| {{ResF32022|29|BAR2}}
+| {{ResF32022|29|SIL1}}
+| {{ResF32022|29|SIL2}}
+| {{ResF32022|29|SPI1}}
+| {{ResF32022|29|SPI2}}
+| {{ResF32022|29|BUD1}}
+| {{ResF32022|29|BUD2}}
+| {{ResF32022|29|SPA1}}
+| {{ResF32022|29|SPA2}}
+| {{ResF32022|29|ZAN1}}
+| {{ResF32022|29|ZAN2}}
+| {{ResF32022|29|MNZ1}}
+| {{ResF32022|29|MNZ2}}
+|-
+|rowspan="2"| {{F3|2023}}
+!rowspan="2"| [[MP Motorsport]]
+|colspan="2"| {{nowrap|{{bandera|BHR}} [[Anexo:Rondas de Sakhir de Fórmula 2 y de Fórmula 3 2023|SAK]]}}
+|colspan="2"| {{nowrap|{{bandera|AUS}} [[Anexo:Rondas de Melbourne de Fórmula 2 y de Fórmula 3 2023|MEL]]}}
+|colspan="2"| {{nowrap|{{bandera|MON}} [[Anexo:Rondas de Montecarlo de Fórmula 2 y de Fórmula 3 2023|MON]]}}
+|colspan="2"| {{nowrap|{{bandera|ESP}} [[Anexo:Rondas de Barcelona de Fórmula 2 y de Fórmula 3 2023|BAR]]}}
+|colspan="2"| {{nowrap|{{bandera|AUT}} [[Anexo:Rondas de Spielberg de Fórmula 2 y de Fórmula 3 2023|SPI]]}}
+|colspan="2"| {{nowrap|{{bandera|GBR}} [[Anexo:Rondas de Silverstone de Fórmula 2 y de Fórmula 3 2023|SIL]]}}
+|colspan="2"| {{nowrap|{{bandera|HUN}} [[Anexo:Rondas de Budapest de Fórmula 2 y de Fórmula 3 2023|BUD]]}}
+|colspan="2"| {{nowrap|{{bandera|BEL}} [[Anexo:Rondas de Spa-Francorchamps de Fórmula 2 y de Fórmula 3 2023|SPA]]}}
+|colspan="2"| {{nowrap|{{bandera|ITA}} [[Anexo:Rondas de Monza de Fórmula 2 y de Fórmula 3 2023|MNZ]]}}
+!rowspan="2"| {{ResF32023|10|Pos.}}.º
+!rowspan="2"| {{ResF32023|10|Puntos}}
+|rowspan="2"| <ref>{{Cita web|título=Driver Standings for the FIA Formula 3 2023 Championship|url=https://www.fiaformula3.com/Standings/Driver|obra=[[Campeonato de Fórmula 3 de la FIA|Fórmula 3]]|editorial=Formula Motorsport Limited|fechaacceso=3 de marzo de 2023|idioma=en}}</ref>
+|-
+| {{ResF32023|10|SAK1}}
+| {{ResF32023|10|SAK2}}
+| {{ResF32023|10|MEL1}}
+| {{ResF32023|10|MEL2}}
+| {{ResF32023|10|MON1}}
+| {{ResF32023|10|MON2}}
+| {{ResF32023|10|BAR1}}
+| {{ResF32023|10|BAR2}}
+| {{ResF32023|10|SPI1}}
+| {{ResF32023|10|SPI2}}
+| {{ResF32023|10|SIL1}}
+| {{ResF32023|10|SIL2}}
+| {{ResF32023|10|BUD1}}
+| {{ResF32023|10|BUD2}}
+| {{ResF32023|10|SPA1}}
+| {{ResF32023|10|SPA2}}
+| {{ResF32023|10|MNZ1}}
+| {{ResF32023|10|MNZ2}}
+|}
+
+=== Campeonato de Fórmula 2 de la FIA ===
+{{Clave de resultados de carrera de motor con vuelta rápida puntuable}}
+{| class="wikitable" style="text-align:center; font-size:90%"
+! Año
+! Escudería
+!colspan="2"| 1
+!colspan="2"| 2
+!colspan="2"| 3
+!colspan="2"| 4
+!colspan="2"| 5
+!colspan="2"| 6
+!colspan="2"| 7
+!colspan="2"| 8
+!colspan="2"| 9
+!colspan="2"| 10
+!colspan="2"| 11
+!colspan="2"| 12
+!colspan="2"| 13
+!colspan="2"| 14
+! Pos.
+! Puntos
+! {{Abreviatura|Ref.|Referencias}}
+|-
+|rowspan="2"| {{F2|2023}}
+!rowspan="2"| [[MP Motorsport]]
+|colspan="2"| {{nowrap|{{bandera|BHR}} [[Anexo:Rondas de Sakhir de Fórmula 2 y de Fórmula 3 2023|SAK]]}}
+|colspan="2"| {{nowrap|{{bandera|SAU}} [[Anexo:Ronda de Yeda de Fórmula 2 2023|YED]]}}
+|colspan="2"| {{nowrap|{{bandera|AUS}} [[Anexo:Rondas de Melbourne de Fórmula 2 y de Fórmula 3 2023|MEL]]}}
+|colspan="2"| {{nowrap|{{bandera|AZE}} [[Anexo:Ronda de Bakú de Fórmula 2 2023|BAK]]}}
+|colspan="2"| {{nowrap|{{bandera|MON}} [[Anexo:Rondas de Montecarlo de Fórmula 2 y de Fórmula 3 2023|MON]]}}
+|colspan="2"| {{nowrap|{{bandera|ESP}} [[Anexo:Rondas de Barcelona de Fórmula 2 y de Fórmula 3 2023|BAR]]}}
+|colspan="2"| {{nowrap|{{bandera|AUT}} [[Anexo:Rondas de Spielberg de Fórmula 2 y de Fórmula 3 2023|SPI]]}}
+|colspan="2"| {{nowrap|{{bandera|GBR}} [[Anexo:Rondas de Silverstone de Fórmula 2 y de Fórmula 3 2023|SIL]]}}
+|colspan="2"| {{nowrap|{{bandera|HUN}} [[Anexo:Rondas de Budapest de Fórmula 2 y de Fórmula 3 2023|BUD]]}}
+|colspan="2"| {{nowrap|{{bandera|BEL}} [[Anexo:Rondas de Spa-Francorchamps de Fórmula 2 y de Fórmula 3 2023|SPA]]}}
+|colspan="2"| {{nowrap|{{bandera|NLD}} [[Anexo:Ronda de Zandvoort de Fórmula 2 2023|ZAN]]}}
+|colspan="2"| {{nowrap|{{bandera|ITA}} [[Anexo:Rondas de Monza de Fórmula 2 y de Fórmula 3 2023|MNZ]]}}
+|colspan="2"| {{nowrap|{{bandera|EAU}} [[Anexo:Ronda de Yas Marina de Fórmula 2 2023|YMC]]}}
+|colspan="2"|
+!rowspan="2"| {{ResF22023|2|Pos.B}}.º
+!rowspan="2"| {{ResF22023|2|PuntosB}}
+|rowspan="2"| <ref>{{Cita web|título=Driver Standings for the FIA Formula 2 2023 Championship|url=https://www.fiaformula2.com/Standings/Driver|obra=[[Campeonato de Fórmula 2 de la FIA|Fórmula 2]]|editorial=Formula Motorsport Limited|fechaacceso=23 de noviembre de 2023|idioma=en}}</ref>
+|-
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+| {{ResF22023|2|YMCC}}
+| {{ResF22023|2|YMCL}}
+|
+|
+|-
+|rowspan="2"| {{F2|2024}}
+!rowspan="2"| [[MP Motorsport]]
+|colspan="2"| {{nowrap|{{bandera|BHR}} [[Anexo:Rondas de Sakhir de Fórmula 2 y de Fórmula 3 2024|SAK]]}}
+|colspan="2"| {{nowrap|{{bandera|SAU}} [[Anexo:Ronda de Yeda de Fórmula 2 2024|YED]]}}
+|colspan="2"| {{nowrap|{{bandera|AUS}} [[Anexo:Rondas de Melbourne de Fórmula 2 y de Fórmula 3 2024|MEL]]}}
+|colspan="2"| {{nowrap|{{bandera|ITA}} [[Anexo:Rondas de Imola de Fórmula 2 y de Fórmula 3 2024|IMO]]}}
+|colspan="2"| {{nowrap|{{bandera|MON}} [[Anexo:Rondas de Montecarlo de Fórmula 2 y de Fórmula 3 2024|MON]]}}
+|colspan="2"| {{nowrap|{{bandera|ESP}} [[Anexo:Rondas de Barcelona de Fórmula 2 y de Fórmula 3 2024|BAR]]}}
+|colspan="2"| {{nowrap|{{bandera|AUT}} [[Anexo:Rondas de Spielberg de Fórmula 2 y de Fórmula 3 2024|SPI]]}}
+|colspan="2"| {{nowrap|{{bandera|GBR}} [[Anexo:Rondas de Silverstone de Fórmula 2 y de Fórmula 3 2024|SIL]]}}
+|colspan="2"| {{nowrap|{{bandera|HUN}} [[Anexo:Rondas de Budapest de Fórmula 2 y de Fórmula 3 2024|BUD]]}}
+|colspan="2"| {{nowrap|{{bandera|BEL}} [[Anexo:Rondas de Spa-Francorchamps de Fórmula 2 y de Fórmula 3 2024|SPA]]}}
+|colspan="2"| {{nowrap|{{bandera|ITA}} [[Anexo:Rondas de Monza de Fórmula 2 y de Fórmula 3 2024|MNZ]]}}
+|colspan="2"| {{nowrap|{{bandera|AZE}} [[Anexo:Ronda de Bakú de Fórmula 2 2024|BAK]]}}
+|colspan="2"| {{nowrap|{{bandera|QAT}} [[Anexo:Ronda de Lusail de Fórmula 2 2024|LUS]]}}
+|colspan="2"| {{nowrap|{{bandera|EAU}} [[Anexo:Ronda de Yas Marina de Fórmula 2 2024|YMC]]}}
+!rowspan="2"| {{ResF22024|12|Pos.}}.º
+!rowspan="2"| {{ResF22024|12|Puntos}}
+|rowspan="2"| <ref name="fórmula 2 2024">{{Cita web|título=Driver Standings for the FIA Formula 2 2024 Championship|url=https://www.fiaformula2.com/Standings/Driver|obra=[[Campeonato de Fórmula 2 de la FIA|Fórmula 2]]|editorial=Formula Motorsport Limited|fechaacceso=29 de febrero de 2024|idioma=en}}</ref>
+|-
+| {{ResF22024|12|SAKC}}
+| {{ResF22024|12|SAKL}}
+| {{ResF22024|12|YEDC}}
+| {{ResF22024|12|YEDL}}
+| {{ResF22024|12|MELC}}
+| {{ResF22024|12|MELL}}
+| {{ResF22024|12|IMOC}}
+| {{ResF22024|12|IMOL}}
+| {{ResF22024|12|MONC}}
+| {{ResF22024|12|MONL}}
+| {{ResF22024|12|BARC}}
+| {{ResF22024|12|BARL}}
+| {{ResF22024|12|SPIC}}
+| {{ResF22024|12|SPIL}}
+| {{ResF22024|12|SILC}}
+| {{ResF22024|12|SILL}}
+| {{ResF22024|12|BUDC}}
+| {{ResF22024|12|BUDL}}
+| {{ResF22024|12|SPAC}}
+| {{ResF22024|12|SPAL}}
+|
+|
+|
+|
+|
+|
+|
+|
+|}
+
+=== Fórmula 1 ===
+{{Clave de resultados de Fórmula 1}}
+{| class="wikitable" style="text-align:center; font-size:95%"
+! Año
+! Escudería
+! 1
+! 2
+! 3
+! 4
+! 5
+! 6
+! 7
+! 8
+! 9
+! 10
+! 11
+! 12
+! 13
+! 14
+! 15
+! 16
+! 17
+! 18
+! 19
+! 20
+! 21
+! 22
+! 23
+! 24
+! Pos.
+! Puntos
+|-
+| {{F1|2024}}
+! [[Williams Racing]]
+| [[Anexo:Gran Premio de Baréin de 2024|BHR]]
+| [[Anexo:Gran Premio de Arabia Saudita de 2024|ARA]]
+| [[Anexo:Gran Premio de Australia de 2024|AUS]]
+| [[Anexo:Gran Premio de Japón de 2024|JPN]]
+| [[Anexo:Gran Premio de China de 2024|CHN]]
+| [[Anexo:Gran Premio de Miami de 2024|MIA]]
+| [[Anexo:Gran Premio de Emilia-Romaña de 2024|EMI]]
+| [[Anexo:Gran Premio de Mónaco de 2024|MON]]
+| [[Anexo:Gran Premio de Canadá de 2024|CAN]]
+| [[Anexo:Gran Premio de España de 2024|ESP]]
+| [[Anexo:Gran Premio de Austria de 2024|AUT]]
+|bgcolor="#F1F8FF"| [[Anexo:Gran Premio de Gran Bretaña de 2024|GBR]]<br>{{small|TD}}
+| [[Anexo:Gran Premio de Hungría de 2024|HUN]]
+| [[Anexo:Gran Premio de Bélgica de 2024|BEL]]
+| [[Anexo:Gran Premio de los Países Bajos de 2024|NED]]
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Italia de 2024|ITA]]<br>{{small|12}}
+|bgcolor="#DFFFDF"| [[Anexo:Gran Premio de Azerbaiyán de 2024|AZE]]<br>{{small|8}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Singapur de 2024|SIN]]<br>{{small|11}}
+|bgcolor="#DFFFDF"| [[Anexo:Gran Premio de los Estados Unidos de 2024|USA]]<br>{{small|10}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de la Ciudad de México de 2024|MEX]]<br>{{small|12}}
+|bgcolor="#EFCFFF"| [[Anexo:Gran Premio de São Paulo de 2024|SÃO]]<br>{{small|Ret}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Las Vegas de 2024|LVG]]<br>{{small|14}}
+|bgcolor="#EFCFFF"| [[Anexo:Gran Premio de Catar de 2024|QAT]]<br>{{small|Ret}}
+|bgcolor="#EFCFFF"| [[Anexo:Gran Premio de Abu Dabi de 2024|ABU]]<br>{{small|Ret}}
+! 19.º
+! 5
+|-
+| {{F1|2025}}
+! [[Alpine F1 Team|BWT Alpine Formula 1 Team]]
+| [[Anexo:Gran Premio de Australia de 2025|AUS]]
+| [[Anexo:Gran Premio de China de 2025|CHN]]
+| [[Anexo:Gran Premio de Japón de 2025|JPN]]
+| [[Anexo:Gran Premio de Baréin de 2025|BHR]]
+| [[Anexo:Gran Premio de Arabia Saudita de 2025|ARA]]
+| [[Anexo:Gran Premio de Miami de 2025|MIA]]
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Emilia-Romaña de 2025|EMI]]<br>{{small|16}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Mónaco de 2025|MON]]<br>{{small|13}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de España de 2025|ESP]]<br>{{small|15}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Canadá de 2025|CAN]]<br>{{small|13}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Austria de 2025|AUT]]<br>{{small|15}}
+|bgcolor="#FFFFFF"| [[Anexo:Gran Premio de Gran Bretaña de 2025|GBR]]<br>{{small|DNS}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Bélgica de 2025|BEL]]<br>{{small|19}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Hungría de 2025|HUN]]<br>{{small|18}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de los Países Bajos de 2025|NED]]<br>{{small|11}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Italia de 2025|ITA]]<br>{{small|17}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Azerbaiyán de 2025|AZE]]<br>{{small|19}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Singapur de 2025|SIN]]<br>{{small|16}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de los Estados Unidos de 2025|USA]]<br>{{small|17}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de la Ciudad de México de 2025|MEX]]<br>{{small|16}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de São Paulo de 2025|SÃO]]<br>{{small|15}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Las Vegas de 2025|LVG]]<br>{{small|15}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Catar de 2025|QAT]]<br>{{small|14}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Abu Dabi de 2025|ABU]]<br>{{small|20}}
+! 20.º
+! 0
+|-
+| {{F1|2026}}*
+! [[Alpine F1 Team|BWT Alpine Formula One Team]]
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Australia de 2026|AUS]]<br>{{small|14}}
+|bgcolor="#DFFFDF"| [[Anexo:Gran Premio de China de 2026|CHN]]<br>{{small|10}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Japón de 2026|JPN]]<br>{{small|16}}
+|bgcolor="#DFFFDF"| [[Anexo:Gran Premio de Miami de 2026|MIA]]<br>{{small|7}}
+|bgcolor="#DFFFDF"| [[Anexo:Gran Premio de Canadá de 2026|CAN]]<br>{{small|6}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Mónaco de 2026|MON]]<br>{{small|14}}
+|bgcolor="#DFFFDF"| [[Anexo:Gran Premio de Barcelona-Cataluña de 2026|BAR]]<br>{{small|10}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Austria de 2026|AUT]]<br>{{small|15}}
+|bgcolor="#DFFFDF"| [[Anexo:Gran Premio de Gran Bretaña de 2026|GBR]]<br>{{small|9}}
+|bgcolor="#DFFFDF"| [[Anexo:Gran Premio de Bélgica de 2026|BEL]]<br>{{small|10}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de Hungría de 2026|HUN]]<br>{{small|15}}
+|bgcolor="#CFCFFF"| [[Anexo:Gran Premio de los Países Bajos de 2026|NED]]<br>{{small|14}}
+|bgcolor="#DFFFDF"| [[Anexo:Gran Premio de Italia de 2026|ITA]]<br>{{small|9}}
+|bgcolor="#DFFFDF"| [[Anexo:Gran Premio de España de 2026|ESP]]<br>{{small|7}}
+|bgcolor=""| [[Anexo:Gran Premio de Azerbaiyán de 2026|AZE]]<br>{{small|}}
+|bgcolor=""| [[Anexo:Gran Premio de Baréin de 2026|BHR]]<br>{{small|}}
+|bgcolor=""| [[Anexo:Gran Premio de Singapur de 2026|SIN]]<br>{{small|}}
+|bgcolor=""| [[Anexo:Gran Premio de los Estados Unidos de 2026|USA]]<br>{{small|}}
+|bgcolor=""| [[Anexo:Gran Premio de la Ciudad de México de 2026|MEX]]<br>{{small|}}
+|bgcolor=""| [[Anexo:Gran Premio de São Paulo de 2026|SÃO]]<br>{{small|}}
+|bgcolor=""| [[Anexo:Gran Premio de Las Vegas de 2026|LVG]]<br>{{small|}}
+|bgcolor=""| [[Anexo:Gran Premio de Catar de 2026|QAT]]<br>{{small|}}
+|bgcolor=""| [[Anexo:Gran Premio de Abu Dabi de 2026|ABU]]<br>{{small|}}
+|
+! 12.º
+! 27
+|-
+!colspan="28"| Fuente:<ref name="statsf1">{{Cita web|título=Franco COLAPINTO • STATS F1|url=https://www.statsf1.com/es/franco-colapinto.aspx|obra=STATS F1|fechaacceso=5 de julio de 2024}}</ref>
+|}
+* ''* Temporada en progreso.''
+
+== Premios y distinciones ==
+{| class="wikitable" style="font-size:95%;"
+|-
+! Distinción
+! Año
+! {{Abreviatura|Ref.|Referencias}}
+|-
+| [[Premios Olimpia|Premio Olimpia de Oro]]
+| 2024
+|align="center"| <ref>{{Cita web|título=Franco Colapinto y Dibu Martínez ganaron el Olimpia de Oro 2024|url=https://espndeportes.espn.com/futbol/nota/_/id/14585604/franco-colapinto-y-dibu-martinez-ganaron-el-olimpia-de-oro-2024|obra=[[ESPN]]|fecha=19 de diciembre de 2024|fechaacceso=28 de marzo de 2025}}</ref>
+|-
+| [[Adelantamiento del Mes de la Fórmula 1]] (octubre)
+|rowspan="2"| {{F1|2024}}
+|align="center"| <ref>{{Cita web|título=Colapinto gana el premio al adelantamiento del mes en la F1|url= https://lat.motorsport.com/f1/news/colapinto-adelantamiento-del-mes-f1-alonso/10670712/|obra=motorsport.es}}</ref>
+|-
+| [[Adelantamiento del Mes de la Fórmula 1|Adelantamiento del Año de la Fórmula 1]]
+|align="center"| <ref>{{Cita web|título=Franco wins Overtake of the Year award|url=https://www.williamsf1.com/posts/2ed29cfb-4d30-46fa-ae2b-5d7c5d3bba2b/franco-wins-overtake-of-the-year-award|obra=[[Williams Racing|Williams F1]]|fecha=20 de diciembre de 2024|fechaacceso=28 de marzo de 2025|idioma=en}}</ref>
+|}
+
+== Referencias ==
+{{listaref|2}}
+
+== Enlaces externos ==
+* {{Página web|https://www.francolapinto.com/}}
+* {{Piloto DriverDB|franco-colapinto}}
+* [https://www.statsf1.com/es/franco-colapinto.aspx Franco Colapinto] en STATS F1
+
+{{NF|2003||Colapinto, Franco}}
+[[Categoría:Nacidos en Pilar (Buenos Aires)]]
+[[Categoría:Deportistas de Argentina en los Juegos Olímpicos de la Juventud 2018]]
+[[Categoría:Deportistas de la provincia de Buenos Aires]]
+[[Categoría:Pilotos de Fórmula 1 de Argentina]]
+[[Categoría:Pilotos del Campeonato de España de F4]]
+[[Categoría:Pilotos argentinos de Eurocopa de Fórmula Renault]]
+[[Categoría:Pilotos de Eurofórmula Open]]
+[[Categoría:Pilotos de Toyota Racing Series]]
+[[Categoría:Pilotos del Campeonato de Fórmula Regional Europea]]
+[[Categoría:Pilotos argentinos en las 24 Horas de Le Mans]]
+[[Categoría:Pilotos del Campeonato de Fórmula 3 de la FIA]]
+[[Categoría:Pilotos de Asian Le Mans Series]]
+[[Categoría:Pilotos de European Le Mans Series]]
+[[Categoría:Pilotos del Campeonato de Fórmula 2 de la FIA]]
+[[Categoría:Pilotos de Williams en Fórmula 1]]
+[[Categoría:Pilotos de Alpine F1 Team]]
