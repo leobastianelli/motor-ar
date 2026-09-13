@@ -7,10 +7,13 @@ export interface Series {
   id: string;
   name: string;
   short: string;
+  /** Código de 2–3 caracteres para el sello de color. */
+  code: string;
   org: string;
   scope: Scope;
   /** Color de identidad de la categoría (no es el logo oficial). */
   color: string;
+  founded?: number;
 }
 
 export interface Circuit {
@@ -32,6 +35,8 @@ export type SessionKind =
 export interface ResultRow {
   pos: number;
   driver: string;
+  /** Código oficial de tres letras, si la fuente lo publica. */
+  code?: string;
   driverSlug?: string;
   team: string;
   gap: string;

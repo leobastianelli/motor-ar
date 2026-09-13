@@ -1,4 +1,5 @@
 import type { Broadcast, RaceEvent, ResultRow, Session, SessionKind } from "@/lib/types";
+import f1 from "./f1-2026.json";
 
 // DATOS FICTICIOS DE EJEMPLO para el prototipo. Horarios en hora argentina (-03:00).
 // Serán reemplazados por la ingesta real (APIs + scraping + carga en el panel).
@@ -25,6 +26,19 @@ function results(rows: [driver: string, team: string, gap: string, points?: numb
     const surname = driver.split(" ").at(-1) ?? driver;
     return { pos: i + 1, driver, team, gap, points, driverSlug: DRIVER_SLUGS[surname] };
   });
+}
+
+/** Filas reales de F1 (Jolpica). */
+function f1Rows(rows: { pos: number; driver: string; code: string; driverId: string; team: string; gap: string; points?: number }[]): ResultRow[] {
+  return rows.map((r) => ({
+    pos: r.pos,
+    driver: r.driver,
+    code: r.code,
+    team: r.team,
+    gap: r.gap,
+    points: r.points,
+    driverSlug: r.driverId === "colapinto" ? "franco-colapinto" : undefined,
+  }));
 }
 
 const F1_TV: Broadcast[] = [
@@ -57,20 +71,7 @@ export const events: RaceEvent[] = [
     sessions: [
       s("f1-monza-q", "clasificacion", "Clasificación", "2026-09-05T11:00:00-03:00", 60),
       s("f1-monza-r", "carrera", "Carrera", "2026-09-06T10:00:00-03:00", 110, {
-        results: results([
-          ["Lando Norris", "McLaren", "1:14:02.114", 25],
-          ["Charles Leclerc", "Ferrari", "+2.408", 18],
-          ["Oscar Piastri", "McLaren", "+5.911", 15],
-          ["Max Verstappen", "Red Bull", "+9.330", 12],
-          ["George Russell", "Mercedes", "+14.702", 10],
-          ["Lewis Hamilton", "Ferrari", "+19.845", 8],
-          ["Kimi Antonelli", "Mercedes", "+27.106", 6],
-          ["Pierre Gasly", "Alpine", "+38.551", 4],
-          ["Franco Colapinto", "Alpine", "+41.090", 2],
-          ["Carlos Sainz", "Williams", "+44.873", 1],
-          ["Alex Albon", "Williams", "+46.210"],
-          ["Fernando Alonso", "Aston Martin", "+52.998"],
-        ]),
+        results: f1Rows(f1.monza.results),
       }),
     ],
   },
@@ -123,31 +124,11 @@ export const events: RaceEvent[] = [
     circuit: { name: "Madring", city: "Madrid", country: "España", flag: "ES" },
     broadcasts: F1_TV,
     sessions: [
-      s("f1-madrid-fp1", "practica", "Práctica 1", "2026-09-11T08:30:00-03:00", 60, {
-        results: results([
-          ["Oscar Piastri", "McLaren", "1:13.104"],
-          ["Charles Leclerc", "Ferrari", "+0.087"],
-          ["Lando Norris", "McLaren", "+0.140"],
-          ["Franco Colapinto", "Alpine", "+0.702"],
-        ]),
-      }),
+      s("f1-madrid-fp1", "practica", "Práctica 1", "2026-09-11T08:30:00-03:00", 60),
       s("f1-madrid-fp2", "practica", "Práctica 2", "2026-09-11T12:00:00-03:00", 60),
       s("f1-madrid-fp3", "practica", "Práctica 3", "2026-09-12T07:30:00-03:00", 60),
       s("f1-madrid-q", "clasificacion", "Clasificación", "2026-09-12T11:00:00-03:00", 60, {
-        results: results([
-          ["Lando Norris", "McLaren", "1:11.842"],
-          ["Max Verstappen", "Red Bull", "+0.112"],
-          ["Charles Leclerc", "Ferrari", "+0.198"],
-          ["Oscar Piastri", "McLaren", "+0.230"],
-          ["George Russell", "Mercedes", "+0.341"],
-          ["Lewis Hamilton", "Ferrari", "+0.402"],
-          ["Kimi Antonelli", "Mercedes", "+0.455"],
-          ["Isack Hadjar", "Red Bull", "+0.520"],
-          ["Pierre Gasly", "Alpine", "+0.611"],
-          ["Carlos Sainz", "Williams", "+0.633"],
-          ["Franco Colapinto", "Alpine", "+0.650"],
-          ["Fernando Alonso", "Aston Martin", "+0.702"],
-        ]),
+        results: f1Rows(f1.madridQualifying.results),
       }),
       s("f1-madrid-r", "carrera", "Carrera", "2026-09-13T10:00:00-03:00", 110),
     ],

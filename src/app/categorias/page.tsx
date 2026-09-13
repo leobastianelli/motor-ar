@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllSeries } from "@/lib/data";
+import { Code, SectionTitle, StateTag } from "@/components/pista";
+import { getAllSeries, getEventsForSeries, getNextSession } from "@/lib/data";
+import { fmtDayNum, fmtMonthShort } from "@/lib/format";
 import type { Scope } from "@/lib/types";
 
 export const metadata: Metadata = { title: "Categorías" };
@@ -14,31 +16,44 @@ const GROUPS: { scope: Scope; title: string }[] = [
 export default function CategoriesPage() {
   const all = getAllSeries();
   return (
-    <div className="flex flex-col gap-8">
-      <h1 className="font-display text-4xl font-bold tracking-wide uppercase">Categorías</h1>
+    <>
+      <section className="weekend-head">
+        <div>
+          <h1>Categorías</h1>
+        </div>
+        <p className="lede">Nacionales, internacionales y zonales. Cada una con su código y su color, sin logos oficiales.</p>
+      </section>
       {GROUPS.map((g) => (
-        <section key={g.scope}>
-          <h2 className="mb-3 font-display text-xl font-semibold tracking-wide text-muted uppercase">{g.title}</h2>
-          <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+        <section key={g.scope} className="section-block">
+          <SectionTitle title={g.title} />
+          <div className="schedule">
             {all
               .filter((s) => s.scope === g.scope)
-              .map((s) => (
-                <li key={s.id}>
-                  <Link
-                    href={`/categorias/${s.id}`}
-                    className="flex h-full flex-col gap-3 overflow-hidden rounded-2xl border border-line bg-surface p-4 transition-colors hover:border-line-strong hover:bg-surface-2"
-                  >
-                    <span aria-hidden className="h-1 w-8 rounded-full" style={{ background: s.color }} />
-                    <span className="font-display text-2xl leading-none font-bold uppercase">{s.short}</span>
-                    <span className="text-sm text-muted">
-                      {s.name} · {s.org}
-                    </span>
+              .map((s) => {
+                const next = getEventsForSeries(s.id).find((e) => getNextSession(e));
+                const date = next?.sessions.at(-1)!.start;
+                return (
+                  <Link key={s.id} href={`/categorias/${s.id}`} className="schedule-row list-link">
+                    <time>{s.founded ?? "—"}</time>
+                    <Code series={s} />
+                    <div>
+                      <strong>{s.name}</strong>
+                      <span>{s.org}</span>
+                    </div>
+                    <b className="channel">{next ? next.circuit.city : "Sin fechas cargadas"}</b>
+                    {date ? (
+                      <StateTag kind="upcoming">
+                        {fmtDayNum(date)} {fmtMonthShort(date)}
+                      </StateTag>
+                    ) : (
+                      <StateTag kind="no-data">Sin datos</StateTag>
+                    )}
                   </Link>
-                </li>
-              ))}
-          </ul>
+                );
+              })}
+          </div>
         </section>
       ))}
-    </div>
+    </>
   );
 }

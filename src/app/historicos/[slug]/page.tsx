@@ -1,65 +1,78 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { StatGrid } from "@/components/ui";
+import { Fragment, type CSSProperties } from "react";
 import { legendBySlug, legends } from "@/data/legends";
+import { surname } from "@/lib/format";
 
 export function generateStaticParams() {
   return legends.map((l) => ({ slug: l.slug }));
 }
 
 export async function generateMetadata(props: PageProps<"/historicos/[slug]">): Promise<Metadata> {
-  return { title: legendBySlug[(await props.params).slug]?.name ?? "Histórico" };
+  return { title: legendBySlug[(await props.params).slug]?.name ?? "Historia" };
 }
+
+const yearOf = (period: string) => period.match(/\d{4}/)?.[0] ?? period.replace(/^Años\s+/, "");
 
 export default async function LegendPage(props: PageProps<"/historicos/[slug]">) {
   const legend = legendBySlug[(await props.params).slug];
   if (!legend) notFound();
-  const others = legends.filter((l) => l.slug !== legend.slug);
+  const hasPhoto = legend.slug === "juan-manuel-fangio";
 
   return (
-    <article className="flex flex-col gap-12">
-      <header className="flex flex-col gap-4 pt-4">
-        <p className="font-display text-lg font-semibold tracking-widest text-gold uppercase">“{legend.nickname}”</p>
-        <h1 className="font-display text-6xl leading-[0.9] font-bold uppercase sm:text-8xl">{legend.name}</h1>
-        <p className="max-w-2xl text-xl text-muted">{legend.tagline}</p>
-        <p className="text-sm text-faint">
-          {legend.hometown} · {legend.years}
-        </p>
+    <article>
+      <header className={`story-hero${hasPhoto ? "" : " no-photo"}`}>
+        {hasPhoto && (
+          <>
+            <Image src="/img/fangio-archive.png" alt="Ilustración provisoria de un piloto en los boxes de un Gran Premio de los años cincuenta" width={1536} height={1024} sizes="100vw" priority />
+            <span className="placeholder-tag">Ilustración provisoria · no es una foto de archivo</span>
+          </>
+        )}
+        <div className="story-shade" />
+        <div className="story-title">
+          <p>Historias</p>
+          <h1>{surname(legend.name)}</h1>
+          <h2>{legend.tagline}</h2>
+          <span>
+            {legend.name} · {legend.hometown} · {legend.years}
+          </span>
+        </div>
       </header>
 
-      <StatGrid stats={legend.keyStats} />
-
-      <ol className="flex flex-col gap-10">
+      <nav className="chapter-nav" aria-label="Capítulos">
         {legend.chapters.map((c, i) => (
-          <li key={c.title} className="grid gap-2 sm:grid-cols-[10rem_1fr] sm:gap-8">
-            <div>
-              <span className="font-display text-sm font-semibold text-faint">Capítulo {i + 1}</span>
-              <p className="font-display text-xl font-bold text-muted">{c.period}</p>
-            </div>
-            <div className="border-t border-line pt-3 sm:border-t-0 sm:border-l sm:pt-0 sm:pl-8">
-              <h2 className="font-display text-3xl font-bold uppercase">{c.title}</h2>
-              <p className="mt-2 max-w-2xl text-lg leading-relaxed text-muted">{c.body}</p>
-            </div>
-          </li>
+          <a key={c.title} href={`#capitulo-${i + 1}`} className={i === 0 ? "active" : undefined}>
+            <b>{String(i + 1).padStart(2, "0")}</b>
+            {c.title}
+          </a>
         ))}
-      </ol>
-
-      <nav aria-label="Otros históricos" className="border-t border-line pt-6">
-        <p className="mb-3 text-sm text-muted">Seguí leyendo</p>
-        <ul className="flex flex-wrap gap-2">
-          {others.map((o) => (
-            <li key={o.slug}>
-              <Link
-                href={`/historicos/${o.slug}`}
-                className="inline-block rounded-full border border-line px-4 py-2 transition-colors hover:border-line-strong hover:bg-surface"
-              >
-                {o.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
       </nav>
+
+      {legend.chapters.map((c, i) => (
+        <Fragment key={c.title}>
+          <section className="story-chapter" id={`capitulo-${i + 1}`}>
+            <aside>
+              <b>{yearOf(c.period)}</b>
+              <span>{c.period}</span>
+            </aside>
+            <div className="story-copy">
+              <h2>{c.title}</h2>
+              <p className={i === 0 ? "dropcap" : undefined}>{c.body}</p>
+            </div>
+          </section>
+          {i === 0 && (
+            <section className="story-stats" style={{ "--n": legend.keyStats.length } as CSSProperties}>
+              {legend.keyStats.map((s) => (
+                <div key={s.label}>
+                  <b>{s.value}</b>
+                  <span>{s.label}</span>
+                </div>
+              ))}
+            </section>
+          )}
+        </Fragment>
+      ))}
     </article>
   );
 }

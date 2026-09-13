@@ -1,9 +1,25 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { SectionTitle, SeriesTag, StatGrid } from "@/components/ui";
-import { getAllDrivers, getArgentinosPulse, getDriver, getDriverResults, getSeries } from "@/lib/data";
-import { fmtDate } from "@/lib/format";
+import type { CSSProperties } from "react";
+import { SectionTitle } from "@/components/pista";
+import {
+  careerStages,
+  championshipTrend,
+  finishLabel,
+  quotes,
+  raceCode,
+  raceName,
+  recentMilestones,
+  seasonRaces,
+  seasonStats,
+  standings2026,
+  statusLabel,
+} from "@/lib/colapinto";
+import { getAllDrivers, getDriver, getNextRace, getSeries, NOW } from "@/lib/data";
+import { fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/format";
+import type { Driver } from "@/lib/types";
 
 export function generateStaticParams() {
   return getAllDrivers().map((d) => ({ slug: d.slug }));
@@ -13,106 +29,272 @@ export async function generateMetadata(props: PageProps<"/pilotos/[slug]">): Pro
   return { title: getDriver((await props.params).slug)?.name ?? "Piloto" };
 }
 
+function age(born: string) {
+  const m = born.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+  if (!m) return null;
+  const now = new Date(NOW);
+  let years = now.getFullYear() - Number(m[3]);
+  if (now.getMonth() + 1 < Number(m[2]) || (now.getMonth() + 1 === Number(m[2]) && now.getDate() < Number(m[1]))) years--;
+  return years;
+}
+
+function NextRace({ driver }: { driver: Driver }) {
+  const next = getNextRace(driver.seriesId);
+  if (!next) return null;
+  return (
+    <div className="next-race">
+      <span>Próxima carrera</span>
+      <strong>{next.event.name}</strong>
+      <time dateTime={next.session.start}>
+        {fmtDayShort(next.session.start)} · {fmtTime(next.session.start)}
+      </time>
+      <Link href={`/eventos/${next.event.id}`}>Ver evento</Link>
+    </div>
+  );
+}
+
+function ChampionshipChart({ points }: { points: { round: number; position: number }[] }) {
+  const [x0, x1, y0, y1] = [60, 630, 35, 215];
+  const positions = points.map((p) => p.position);
+  const lo = Math.min(...positions) - 2;
+  const hi = Math.max(...positions) + 2;
+  const y = (pos: number) => y0 + ((pos - lo) / (hi - lo)) * (y1 - y0);
+  const x = (i: number) => (points.length === 1 ? x0 : x0 + (i * (x1 - x0)) / (points.length - 1));
+  const ticks = [0, 1, 2, 3].map((k) => Math.round(lo + (k * (hi - lo)) / 3));
+  const first = points[0];
+  const last = points.at(-1)!;
+
+  return (
+    <figure className="champ-chart">
+      <figcaption>
+        <strong>Posición en el campeonato</strong>
+        <span>
+          De {first.position}.º a {last.position}.º en {points.length} fechas
+        </span>
+      </figcaption>
+      <svg viewBox="0 0 680 270" role="img" aria-label={`Evolución en el campeonato: de ${first.position}.º en la fecha 1 a ${last.position}.º en la fecha ${last.round}`}>
+        <g className="grid-lines">
+          {ticks.map((t) => (
+            <g key={t}>
+              <path d={`M55 ${y(t)}H650`} />
+              <text x="12" y={y(t) + 5}>
+                {t}.º
+              </text>
+            </g>
+          ))}
+        </g>
+        <path className="chart-line" d={points.map((p, i) => `${i ? "L" : "M"}${x(i)} ${y(p.position)}`).join(" ")} />
+        <g className="chart-points">
+          {points.map((p, i) => (
+            <circle key={p.round} cx={x(i)} cy={y(p.position)} r={i === points.length - 1 ? 9 : 7}>
+              <title>
+                Fecha {p.round}: {p.position}.º
+              </title>
+            </circle>
+          ))}
+        </g>
+      </svg>
+    </figure>
+  );
+}
+
+function DuelBar({ label, mine, theirs }: { label: string; mine: number; theirs: number }) {
+  const pct = mine + theirs === 0 ? 50 : Math.round((mine / (mine + theirs)) * 100);
+  return (
+    <div>
+      <span>{label}</span>
+      <b>{mine}</b>
+      <i style={{ background: `linear-gradient(90deg,var(--blue-deep) ${pct}%,#aaa ${pct}%)` }} />
+      <b>{theirs}</b>
+    </div>
+  );
+}
+
+const milestoneDate = (date: string) => (date.length === 4 ? date : `${fmtDayNum(`${date}T12:00:00-03:00`).padStart(2, "0")} ${fmtMonthShort(`${date}T12:00:00-03:00`)}`);
+
+function ColapintoSections() {
+  const season = 2026;
+  const stats = seasonStats(season);
+  const races = seasonRaces(season);
+  const maxGain = stats.topGains[0]?.gain ?? 1;
+  const quote = quotes.at(-1);
+
+  return (
+    <>
+      <section className="section-block season-story">
+        <SectionTitle title="Carrera a carrera">
+          <div className="legend">
+            <i className="gain" /> Mejor resultado <i className="loss" /> No terminó
+          </div>
+        </SectionTitle>
+        <div className="race-strip">
+          {races.map((r) => {
+            const classified = r.finishPos !== null;
+            const gain = classified && r.grid > 0 ? r.grid - r.finishPos! : null;
+            const isBest = stats.best?.round === r.round;
+            return (
+              <article key={r.round} className={isBest ? "best" : !classified ? "loss" : undefined} title={`${raceName(r.race)} · largó ${r.grid}.º, terminó ${finishLabel(r)}`}>
+                <span>{raceCode(r.race)}</span>
+                <b>{r.grid || "PL"}</b>
+                <em>→</em>
+                <strong>{finishLabel(r)}</strong>
+                <small>
+                  {classified
+                    ? `${gain! > 0 ? `+${gain}` : gain! < 0 ? `−${-gain!}` : "="} · ${r.points} ${r.points === 1 ? "pt" : "pts"}`
+                    : statusLabel(r.status)}
+                </small>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="performance">
+        <div className="section-block">
+          <SectionTitle title="Progreso" inverse />
+          <div className="chart-grid">
+            <ChampionshipChart points={standings2026} />
+            <div className="duel">
+              <h3>Contra {stats.teammate}</h3>
+              <DuelBar label="Clasificación" mine={stats.qualiDuel.ahead} theirs={stats.qualiDuel.behind} />
+              <DuelBar label="Carrera" mine={stats.raceDuel.ahead} theirs={stats.raceDuel.behind} />
+              <p>
+                Terminó adelante de {stats.teammate} en <strong>{stats.raceDuel.ahead}</strong> de {stats.raceDuel.ahead + stats.raceDuel.behind} carreras.
+              </p>
+            </div>
+            <div className="gains">
+              <h3>Puestos en carrera</h3>
+              <b>
+                {stats.netGain > 0 ? "+" : ""}
+                {stats.netGain}
+              </b>
+              <span>balance neto de largada a llegada</span>
+              <ol>
+                {stats.topGains.map((g) => (
+                  <li key={g.code}>
+                    <span>{g.name}</span>
+                    <i style={{ "--w": `${Math.round((g.gain / maxGain) * 88)}%` } as CSSProperties} />
+                    <b>+{g.gain}</b>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-block driver-editorial">
+        <div>
+          <SectionTitle title="Declaraciones" />
+          {quote?.quote && (
+            <blockquote>
+              “{quote.quote.text}”
+              <cite>
+                {quote.quote.context} · {quote.title}.{" "}
+                <a href={quote.source} target="_blank" rel="noreferrer">
+                  Fuente
+                </a>
+                <span className="pill-quote-note">Cita original en inglés.</span>
+              </cite>
+            </blockquote>
+          )}
+        </div>
+        <aside>
+          <h3>Últimos hitos</h3>
+          {recentMilestones.map((m) => (
+            <a key={m.date} href={m.source} target="_blank" rel="noreferrer">
+              <time>{milestoneDate(m.date)}</time>
+              <strong>{m.title}</strong>
+            </a>
+          ))}
+        </aside>
+      </section>
+    </>
+  );
+}
+
 export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
   const driver = getDriver((await props.params).slug);
   if (!driver) notFound();
   const series = getSeries(driver.seriesId)!;
-  const pulse = getArgentinosPulse().find((p) => p.driver.slug === driver.slug);
-  const recent = getDriverResults(driver.slug).slice(0, 6);
+  const isColapinto = driver.slug === "franco-colapinto";
+  const years = age(driver.born);
+
+  const stages = isColapinto
+    ? careerStages()
+    : [...driver.career].reverse().map((c) => ({ years: c.year, title: c.series, text: c.highlight, stat: c.team, major: false }));
+
+  const trend = isColapinto ? championshipTrend() : null;
+  const stats = isColapinto ? seasonStats(2026) : null;
+  const ribbon = isColapinto
+    ? [
+        { label: "Temporada", value: "2026" },
+        { label: "Campeonato", value: `${trend!.position}.º`, note: trend!.label },
+        { label: "Puntos", value: String(stats!.points) },
+        { label: "Mejor resultado", value: `${stats!.best?.finishPos}.º`, note: stats!.best ? raceName(stats!.best.race) : undefined },
+        { label: `Vs. ${stats!.teammate}`, value: `${stats!.raceDuel.ahead}–${stats!.raceDuel.behind}`, note: "en carrera" },
+      ]
+    : [{ label: "Temporada", value: "2026" }, ...driver.seasonStats.map((s) => ({ label: s.label, value: s.value, note: undefined }))];
 
   return (
-    <article className="flex flex-col gap-10">
-      <header className="relative overflow-hidden rounded-3xl border border-line bg-surface p-6 sm:p-8">
-        {driver.number !== undefined && (
-          <span aria-hidden className="absolute -right-2 -bottom-10 font-display text-[12rem] leading-none font-bold text-surface-2 sm:text-[16rem]">
-            {driver.number}
-          </span>
-        )}
-        <div className="relative flex flex-col gap-3">
-          <div className="flex items-center gap-2">
-            <SeriesTag series={series} size="md" />
-            <span className="text-muted">{driver.team}</span>
+    <>
+      <section className={`driver-hero${isColapinto ? "" : " no-photo"}`}>
+        {isColapinto && (
+          <div className="driver-photo">
+            <Image src="/img/colapinto-editorial.png" alt="Ilustración provisoria de un piloto junto a un monoplaza" width={1536} height={1024} sizes="(max-width: 800px) 100vw, 56vw" priority />
+            <span className="placeholder-tag">Ilustración provisoria · no es una foto real</span>
           </div>
-          <h1 className="font-display text-5xl leading-none font-bold uppercase sm:text-7xl">{driver.name}</h1>
-          <p className="max-w-lg text-lg text-muted">{driver.tagline}</p>
-          <p className="text-sm text-faint">
-            {driver.hometown} · Nació el {driver.born}
+        )}
+        <div className="driver-title">
+          <p className="kicker">
+            {driver.hometown}
+            {years !== null && ` · ${years} años`}
           </p>
+          <h1>
+            {driver.name.split(" ")[0]}
+            <br />
+            {driver.name.split(" ").slice(1).join(" ")}
+          </h1>
+          {driver.number !== undefined && <b className="mega-number">{driver.number}</b>}
         </div>
-      </header>
-
-      {pulse && (
-        <Link
-          href={pulse.href}
-          className="flex items-center justify-between gap-4 rounded-2xl border border-line bg-surface px-5 py-4 transition-colors hover:border-line-strong hover:bg-surface-2"
-        >
-          <span className="text-sm text-muted">Este finde</span>
-          <span className="flex items-baseline gap-3">
-            <span className="text-sm text-muted">{pulse.detail}</span>
-            <span className={`font-display text-3xl font-bold ${pulse.tone === "result" ? "text-celeste" : ""}`}>{pulse.headline}</span>
-          </span>
-        </Link>
-      )}
-
-      <section>
-        <SectionTitle title="Temporada 2026" />
-        <StatGrid stats={driver.seasonStats} />
+        <NextRace driver={driver} />
       </section>
 
-      {recent.length > 0 && (
-        <section>
-          <SectionTitle title="Últimos resultados" />
-          <ul className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-            {recent.map((r) => (
-              <li key={r.session.id} className="shrink-0">
-                <Link
-                  href={`/eventos/${r.event.id}`}
-                  className="flex w-32 flex-col gap-1 rounded-xl border border-line bg-surface p-3 transition-colors hover:border-line-strong hover:bg-surface-2"
-                >
-                  <span className={`font-display text-3xl font-bold ${r.row.pos <= 3 ? "text-gold" : r.row.points ? "text-celeste" : "text-ink"}`}>
-                    P{r.row.pos}
-                  </span>
-                  <span className="truncate text-sm">
-                    {r.event.circuit.city}
-                  </span>
-                  <span className="text-xs text-faint">
-                    {r.session.name} · {fmtDate(r.session.start)}
-                  </span>
-                </Link>
-              </li>
+      <section className="season-ribbon">
+        {ribbon.map((item) => (
+          <div key={item.label}>
+            <span>{item.label}</span>
+            <strong>{item.value}</strong>
+            {item.note && <small>{item.note}</small>}
+          </div>
+        ))}
+      </section>
+
+      {isColapinto && <ColapintoSections />}
+
+      <section className="career">
+        <div className="section-block">
+          <SectionTitle title="Trayectoria" inverse />
+          <div className="timeline" style={{ "--n": stages.length } as CSSProperties}>
+            {stages.map((s) => (
+              <article key={`${s.years}-${s.title}`} className={s.major ? "major" : undefined}>
+                <time>{s.years}</time>
+                <b>{s.title}</b>
+                <p>{s.text}</p>
+                <span>{s.stat}</span>
+              </article>
             ))}
-          </ul>
+          </div>
+        </div>
+      </section>
+
+      {!isColapinto && (
+        <section className="section-block">
+          <p className="empty-state">
+            Todavía no cargamos el carrera a carrera de {driver.name}. {series.name} · {driver.team}.
+          </p>
         </section>
       )}
-
-      <section>
-        <SectionTitle title="Trayectoria" />
-        <ol className="relative flex flex-col">
-          {driver.career.map((stint, i) => (
-            <li key={`${stint.year}-${stint.series}`} className="relative grid grid-cols-[4.5rem_1fr] gap-4 pb-6 last:pb-0 sm:grid-cols-[6rem_1fr]">
-              <span className="pt-0.5 text-right font-display text-lg font-bold text-muted">{stint.year}</span>
-              <div className="relative border-l border-line pb-1 pl-5">
-                <span
-                  aria-hidden
-                  className={`absolute top-2 -left-[5px] size-[9px] rounded-full border-2 border-bg ${i === 0 ? "bg-celeste" : "bg-line-strong"}`}
-                />
-                <div className="font-medium">{stint.series}</div>
-                <div className="text-sm text-faint">{stint.team}</div>
-                <p className="mt-1.5 text-sm text-muted">{stint.highlight}</p>
-                {stint.stats && (
-                  <div className="mt-2 flex gap-4">
-                    {stint.stats.map((s) => (
-                      <span key={s.label} className="text-sm">
-                        <span className="font-display text-xl font-bold">{s.value}</span> <span className="text-faint">{s.label}</span>
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            </li>
-          ))}
-        </ol>
-      </section>
-    </article>
+    </>
   );
 }

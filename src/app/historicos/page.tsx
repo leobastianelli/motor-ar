@@ -1,42 +1,35 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SectionTitle } from "@/components/pista";
 import { legends } from "@/data/legends";
 
-export const metadata: Metadata = { title: "Históricos" };
+export const metadata: Metadata = { title: "Historias" };
 
 export default function LegendsPage() {
   return (
-    <div className="flex flex-col gap-6">
-      <header>
-        <h1 className="font-display text-4xl font-bold tracking-wide uppercase">Históricos</h1>
-        <p className="text-muted">Las leyendas que hicieron grande al automovilismo argentino.</p>
-      </header>
-      <ul className="flex flex-col gap-3">
-        {legends.map((l) => (
-          <li key={l.slug}>
-            <Link
-              href={`/historicos/${l.slug}`}
-              className="flex flex-col gap-4 rounded-2xl border border-line bg-surface p-5 transition-colors hover:border-line-strong hover:bg-surface-2 sm:flex-row sm:items-center sm:justify-between"
-            >
+    <>
+      <section className="weekend-head">
+        <div>
+          <h1>Historias</h1>
+        </div>
+        <p className="lede">Las leyendas que hicieron grande al automovilismo argentino, contadas en capítulos.</p>
+      </section>
+      <section className="section-block">
+        <SectionTitle title="Leyendas" />
+        <div className="champ-table">
+          {legends.map((l, i) => (
+            <Link key={l.slug} href={`/historicos/${l.slug}`} className={`champ-row list-link${i === 0 ? " leader" : ""}`}>
+              <b>{String(i + 1).padStart(2, "0")}</b>
               <div>
-                <p className="text-sm text-faint">
-                  “{l.nickname}” · {l.years}
-                </p>
-                <div className="font-display text-3xl font-bold uppercase">{l.name}</div>
-                <p className="mt-1 max-w-xl text-sm text-muted">{l.tagline}</p>
+                <strong>{l.name}</strong>
+                <span>{l.tagline}</span>
               </div>
-              <div className="flex shrink-0 gap-5">
-                {l.keyStats.slice(0, 2).map((s) => (
-                  <div key={s.label}>
-                    <div className="font-display text-4xl leading-none font-bold text-gold">{s.value}</div>
-                    <div className="text-xs text-muted">{s.label}</div>
-                  </div>
-                ))}
-              </div>
+              <em>{l.years}</em>
+              <time>{l.keyStats[0].value}</time>
             </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

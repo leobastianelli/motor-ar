@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { EventCard } from "@/components/event-card";
+import { Code, SectionTitle } from "@/components/pista";
 import { getSeries, getUpcomingEvents } from "@/lib/data";
-import { fmtMonth } from "@/lib/format";
+import { capitalize, fmtDayNum, fmtMonth, fmtMonthShort } from "@/lib/format";
 import type { Scope } from "@/lib/types";
 
 export const metadata: Metadata = { title: "Calendario" };
 
-const SCOPES: { id?: Scope; label: string }[] = [
+const FILTERS: { id?: Scope; label: string }[] = [
   { label: "Todo" },
   { id: "nacional", label: "Nacional" },
   { id: "internacional", label: "Internacional" },
@@ -17,38 +17,66 @@ const SCOPES: { id?: Scope; label: string }[] = [
 export default async function CalendarPage(props: PageProps<"/calendario">) {
   const { ambito } = await props.searchParams;
   const events = getUpcomingEvents().filter((e) => !ambito || getSeries(e.seriesId)?.scope === ambito);
-  const byMonth = Map.groupBy(events, (e) => fmtMonth(e.sessions.at(-1)!.start));
+  const byMonth = Map.groupBy(events, (e) => capitalize(fmtMonth(e.sessions.at(-1)!.start)));
 
   return (
-    <div className="flex flex-col gap-6">
-      <h1 className="font-display text-4xl font-bold tracking-wide uppercase">Calendario</h1>
+    <>
+      <section className="weekend-head">
+        <div>
+          <h1>Calendario</h1>
+        </div>
+        <p className="lede">Todas las fechas que vienen, en hora argentina.</p>
+      </section>
 
-      <nav aria-label="Filtrar por ámbito" className="no-scrollbar -mx-4 flex gap-1.5 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-        {SCOPES.map((s) => {
-          const active = (ambito ?? undefined) === s.id;
-          return (
-            <Link
-              key={s.label}
-              href={s.id ? `/calendario?ambito=${s.id}` : "/calendario"}
-              aria-current={active ? "page" : undefined}
-              className="shrink-0 rounded-full border border-line px-3 py-1.5 text-sm text-muted transition-colors hover:border-line-strong hover:text-ink aria-[current=page]:border-celeste/60 aria-[current=page]:text-celeste"
-            >
-              {s.label}
-            </Link>
-          );
-        })}
-      </nav>
-
-      {[...byMonth.entries()].map(([month, list]) => (
-        <section key={month}>
-          <h2 className="mb-3 font-display text-xl font-semibold tracking-wide text-muted uppercase">{month}</h2>
-          <div className="flex flex-col gap-2">
-            {list.map((e) => (
-              <EventCard key={e.id} event={e} />
-            ))}
+      {[...byMonth.entries()].map(([month, list], index) => (
+        <section key={month} className="section-block">
+          <SectionTitle title={month}>
+            {index === 0 && (
+              <nav className="filters" aria-label="Filtrar por ámbito">
+                {FILTERS.map((f) => {
+                  const active = (ambito ?? undefined) === f.id;
+                  return (
+                    <Link key={f.label} href={f.id ? `/calendario?ambito=${f.id}` : "/calendario"} aria-current={active ? "page" : undefined}>
+                      <button type="button" tabIndex={-1} className={active ? "is-selected" : undefined}>
+                        {f.label}
+                      </button>
+                    </Link>
+                  );
+                })}
+              </nav>
+            )}
+          </SectionTitle>
+          <div className="date-strip">
+            {list.map((e) => {
+              const s = getSeries(e.seriesId)!;
+              const date = e.sessions.at(-1)!.start;
+              return (
+                <article key={e.id}>
+                  <time dateTime={date}>
+                    <b>{fmtDayNum(date).padStart(2, "0")}</b> {fmtMonthShort(date)}
+                  </time>
+                  <Code series={s} />
+                  <div>
+                    <strong>
+                      <Link href={`/eventos/${e.id}`} className="list-link">
+                        {e.name}
+                      </Link>
+                    </strong>
+                    <span>
+                      {s.name} · {e.circuit.city}
+                    </span>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </section>
       ))}
-    </div>
+      {events.length === 0 && (
+        <section className="section-block">
+          <p className="empty-state">No hay fechas próximas para este filtro.</p>
+        </section>
+      )}
+    </>
   );
 }

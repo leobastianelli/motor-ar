@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { EventCard } from "@/components/event-card";
-import { ResultCard } from "@/components/results";
-import { SectionTitle, WatchChips } from "@/components/ui";
-import { getAllSeries, getEventsForSeries, getNextSession, getSeries, getStandings, NOW } from "@/lib/data";
-import { fmtDate, sessionStatus } from "@/lib/format";
+import { SectionTitle } from "@/components/pista";
+import { getAllSeries, getEventsForSeries, getNextSession, getSeries, getStandings } from "@/lib/data";
+import { fmtDayNum, fmtMonthShort, surname } from "@/lib/format";
 
 export function generateStaticParams() {
   return getAllSeries().map((s) => ({ slug: s.id }));
@@ -15,102 +14,127 @@ export async function generateMetadata(props: PageProps<"/categorias/[slug]">): 
   return { title: getSeries((await props.params).slug)?.name ?? "Categoría" };
 }
 
+const SCOPE_LABEL = { nacional: "Automovilismo nacional", internacional: "Categoría internacional", zonal: "Automovilismo zonal" };
+
 export default async function SeriesPage(props: PageProps<"/categorias/[slug]">) {
   const series = getSeries((await props.params).slug);
   if (!series) notFound();
 
   const events = getEventsForSeries(series.id);
+  const done = events.filter((e) => !getNextSession(e));
   const next = events.find((e) => getNextSession(e));
-  const lastRace = events
-    .flatMap((e) => e.sessions.map((s) => ({ event: e, session: s })))
-    .filter(({ session }) => session.results && ["carrera", "final"].includes(session.kind) && sessionStatus(session, NOW) === "done")
-    .at(-1);
-  const table = getStandings(series.id);
-  const leader = table[0]?.points ?? 1;
+  const table = getStandings(series.id).slice(0, 10);
+  const [leader, second] = table;
+  const hasPhoto = series.id === "tc";
+  const nameParts = series.name.split(" ");
 
   return (
-    <div className="flex flex-col gap-10">
-      <header className="border-l-4 pl-4" style={{ borderColor: series.color }}>
-        <p className="text-sm text-muted">
-          {series.org} · {series.scope}
-        </p>
-        <h1 className="font-display text-5xl font-bold uppercase">{series.name}</h1>
-      </header>
+    <>
+      <section className="category-hero">
+        <div className="cat-poster" style={{ borderColor: series.color }}>
+          <span style={{ color: series.color }}>{series.code}</span>
+          <b>{series.founded ?? series.org}</b>
+          <small>{series.founded ? "desde" : "organiza"}</small>
+        </div>
+        <div>
+          <p className="kicker">{SCOPE_LABEL[series.scope]}</p>
+          <h1>
+            {nameParts[0]}
+            {nameParts.length > 1 && (
+              <>
+                <br />
+                {nameParts.slice(1).join(" ")}
+              </>
+            )}
+          </h1>
+          <p className="lede">
+            {series.org}. Calendario, campeonato y archivo de la categoría, siempre en hora argentina.
+          </p>
+        </div>
+        {hasPhoto && <Image src="/img/tc-action.png" alt="Auto de turismo doblando a alta velocidad" width={1536} height={1024} sizes="(max-width: 800px) 100vw, 46vw" priority />}
+      </section>
 
-      {events.length > 0 && (
-        <section aria-label="Temporada">
-          <ol className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-            {events.map((e) => {
-              const done = !getNextSession(e);
-              const isNext = e.id === next?.id;
-              return (
-                <li key={e.id} className="shrink-0">
-                  <Link
-                    href={`/eventos/${e.id}`}
-                    className={`flex w-24 flex-col gap-1 rounded-xl border p-3 transition-colors hover:bg-surface-2 ${isNext ? "border-celeste/60 bg-surface" : "border-line"} ${done ? "opacity-60" : ""}`}
-                  >
-                    <span className="font-display text-sm font-semibold text-muted">F{e.round}</span>
-                    <span className="font-mono text-xs text-muted">{e.circuit.flag}</span>
-                    <span className="truncate text-xs">{e.circuit.city}</span>
-                    <span className="text-[11px] text-faint">{fmtDate(e.sessions.at(-1)!.start)}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ol>
-        </section>
-      )}
+      <section className="season-ribbon category-stats">
+        <div>
+          <span>Temporada</span>
+          <strong>2026</strong>
+        </div>
+        <div>
+          <span>Disputadas</span>
+          <strong>
+            {done.length}/{events.length}
+          </strong>
+          <small>en agenda</small>
+        </div>
+        <div>
+          <span>Líder</span>
+          <strong>{leader ? surname(leader.driver) : "—"}</strong>
+        </div>
+        <div>
+          <span>Diferencia</span>
+          <strong>{leader && second ? leader.points - second.points : "—"}</strong>
+          <small>puntos</small>
+        </div>
+        <div>
+          <span>Próxima</span>
+          <strong>{next ? `${fmtDayNum(next.sessions.at(-1)!.start).padStart(2, "0")} ${fmtMonthShort(next.sessions.at(-1)!.start)}` : "—"}</strong>
+          {next && <small>{next.circuit.city}</small>}
+        </div>
+      </section>
 
-      {next && (
-        <section>
-          <SectionTitle title="Próxima fecha" />
-          <div className="flex flex-col gap-3">
-            <EventCard event={next} />
-            <WatchChips broadcasts={next.broadcasts} />
-          </div>
-        </section>
-      )}
-
-      <div className="grid gap-10 md:grid-cols-2">
-        {table.length > 0 && (
-          <section>
-            <SectionTitle title="Campeonato" />
-            <ol className="flex flex-col gap-3">
+      <section className="section-block category-current">
+        <div>
+          <SectionTitle title="Campeonato" />
+          {table.length > 0 ? (
+            <div className="champ-table">
               {table.map((row, i) => (
-                <li key={row.driver} className="flex flex-col gap-1.5">
-                  <div className="flex items-baseline justify-between gap-3 text-sm">
-                    <span>
-                      <span className="mr-2 inline-block w-4 font-display font-bold text-faint">{i + 1}</span>
-                      {row.driverSlug ? (
-                        <Link href={`/pilotos/${row.driverSlug}`} className="font-medium text-celeste hover:underline">
-                          {row.driver}
-                        </Link>
-                      ) : (
-                        <span className="font-medium">{row.driver}</span>
-                      )}
-                      <span className="ml-2 text-xs text-faint">{row.team}</span>
-                    </span>
-                    <span className="font-display text-lg font-bold tabular-nums">{row.points}</span>
+                <div key={row.driver} className={`champ-row${i === 0 ? " leader" : ""}`}>
+                  <b>{i + 1}</b>
+                  <div>
+                    <strong>{row.driverSlug ? <Link href={`/pilotos/${row.driverSlug}`}>{row.driver}</Link> : row.driver}</strong>
+                    <span>{row.team}</span>
                   </div>
-                  <div className="h-1.5 overflow-hidden rounded-full bg-surface-2">
-                    <div
-                      className="h-full rounded-full"
-                      style={{ width: `${(row.points / leader) * 100}%`, background: row.driverSlug ? "var(--color-celeste)" : series.color }}
-                    />
-                  </div>
+                  <em>{row.wins === undefined ? "—" : `${row.wins} ${row.wins === 1 ? "victoria" : "victorias"}`}</em>
+                  <time>{row.points}</time>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p className="empty-state">Sin datos del campeonato todavía.</p>
+          )}
+        </div>
+        <aside className="calendar-tape" style={{ borderTopColor: series.color }}>
+          <h2>Calendario</h2>
+          {events.length > 0 ? (
+            <ol>
+              {events.map((e) => (
+                <li key={e.id} className={getNextSession(e) ? undefined : "done"}>
+                  <b>{String(e.round).padStart(2, "0")}</b>
+                  <span>
+                    <Link href={`/eventos/${e.id}`} className="list-link">
+                      {e.circuit.city}
+                    </Link>
+                  </span>
+                  <time>
+                    {fmtDayNum(e.sessions.at(-1)!.start).padStart(2, "0")} {fmtMonthShort(e.sessions.at(-1)!.start)}
+                  </time>
                 </li>
               ))}
             </ol>
-          </section>
-        )}
+          ) : (
+            <p className="empty-state">Sin fechas cargadas.</p>
+          )}
+        </aside>
+      </section>
 
-        {lastRace && (
-          <section>
-            <SectionTitle title="Última carrera" />
-            <ResultCard event={lastRace.event} series={series} session={lastRace.session} />
-          </section>
-        )}
-      </div>
-    </div>
+      <section className="history-stats">
+        <div className="section-block">
+          <SectionTitle title="La historia en números" inverse />
+          <p className="empty-state">
+            Sin datos verificados todavía. El archivo de campeones y récords se va a cargar desde fuentes citadas antes de publicarse.
+          </p>
+        </div>
+      </section>
+    </>
   );
 }

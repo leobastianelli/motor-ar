@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Horarios, resultados y seguimiento de pilotos argentinos, siempre en hora argentina.">
+  <title>Pista — Automovilismo argentino, al minuto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="index.html" aria-label="Pista, inicio"><span>Pis</span><b>ta</b></a>
+    <div class="clock"><span>Hora argentina</span><strong id="clock">09:42:18</strong></div>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Secciones</button>
+    <nav id="site-nav" class="site-nav" aria-label="Principal">
+      <a class="active" href="index.html">Este finde</a><a href="evento.html">Evento</a><a href="piloto.html">Pilotos</a><a href="categoria.html">Categorías</a><a href="historico.html">Historias</a><a href="sistema.html">Sistema visual</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="weekend-head">
+      <div><h1>Este<br>finde</h1><p class="hero-date"><b>13–15</b> septiembre</p></div>
+      <p class="lede">Hay 14 sesiones entre hoy y mañana. La próxima con un argentino arranca a las 10:00. Todos los horarios son de Argentina.</p>
+    </section>
+
+    <section class="live-board" aria-labelledby="live-title">
+      <div class="live-flag"><span class="pulse"></span><span id="live-title">En vivo</span><b>V. 18</b></div>
+      <div class="live-main">
+        <div class="cat-mark int">I3</div>
+        <div><p class="series">Fórmula 3 · Monza</p><h2>Carrera principal</h2><p class="lap">Vuelta 18 <span>de 22</span></p></div>
+        <div class="live-leader"><small>Líder</small><b>FOR</b><span>1:38.244</span></div>
+      </div>
+      <ol class="timing-mini">
+        <li><b>1</b><span class="driver-code">FOR</span><span>+0.000</span></li>
+        <li class="argentine"><b>2</b><span class="driver-code">COL</span><span>+1.284</span></li>
+        <li><b>3</b><span class="driver-code">MIN</span><span>+2.019</span></li>
+      </ol>
+      <div class="watch"><span>Se ve por</span><strong>Streaming oficial</strong><a href="#">Abrir transmisión <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="section-block nuestros" aria-labelledby="nuestros-title">
+      <header class="section-title"><h2 id="nuestros-title">Los nuestros</h2><a href="piloto.html">Ver todos</a></header>
+      <div class="arg-runners">
+        <article class="runner-feature">
+          <a href="piloto.html" class="runner-number">43</a>
+          <div><p class="series">Franco Colapinto · Monoplazas</p><h3>Clasifica hoy, 10:00</h3><p>Llega 14.º en el campeonato. Ayer quedó a 0.18s de su compañero.</p></div>
+          <span class="state upcoming">Próxima</span>
+        </article>
+        <article class="runner-line"><b>7</b><div><strong>Nicolás Varrone</strong><span>GT3 · Nürburgring</span></div><p><span class="state live">En pista</span> P4 · faltan 46 min</p></article>
+        <article class="runner-line"><b>20</b><div><strong>Agustín Canapino</strong><span>Stock Car · Velocitta</span></div><p><span class="state finished">Final</span> Terminó 6.º</p></article>
+      </div>
+    </section>
+
+    <section class="section-block agenda" aria-labelledby="agenda-title">
+      <header class="section-title"><h2 id="agenda-title">Agenda</h2><div class="filters" role="group" aria-label="Filtrar agenda"><button class="is-selected" data-filter="all">Todo</button><button data-filter="nac">Nacional</button><button data-filter="int">Internacional</button><button data-filter="zon">Zonales</button></div></header>
+      <div class="day-tabs" role="tablist"><button role="tab">Viernes <b>13</b></button><button role="tab" class="active" aria-selected="true">Sábado <b>14</b></button><button role="tab">Domingo <b>15</b></button></div>
+      <div class="schedule">
+        <article class="schedule-row" data-kind="nac"><time>09:10</time><span class="code tc">TC</span><div><strong>Turismo Carretera</strong><span>2.ª práctica · San Luis</span></div><b class="channel">TV Pública</b><span class="state finished">Terminó</span></article>
+        <article class="schedule-row current" data-kind="int"><time>10:00</time><span class="code f2">M2</span><div><strong>Monoplazas 2</strong><span>Clasificación · Monza</span></div><b class="channel">Cable deportivo</b><span class="state live">En vivo</span></article>
+        <article class="schedule-row" data-kind="int"><time>11:35</time><span class="code gt">G3</span><div><strong>Gran Turismo 3</strong><span>Carrera 1 · Nürburgring</span></div><b class="channel">YouTube</b><span class="state upcoming">En 48 min</span></article>
+        <article class="schedule-row" data-kind="nac"><time>13:15</time><span class="code tn">TN</span><div><strong>Turismo Nacional</strong><span>Series Clase 3 · Paraná</span></div><b class="channel">TV abierta</b><span class="state upcoming">Próxima</span></article>
+        <article class="schedule-row" data-kind="zon"><time>15:40</time><span class="code zon">ZL</span><div><strong>Zonal Litoral</strong><span>Clasificación · Concordia</span></div><b class="channel">Sin transmisión</b><span class="state no-data">Sin datos</span></article>
+      </div>
+    </section>
+
+    <section class="results-band">
+      <div class="section-block">
+        <header class="section-title inverse"><h2>Resultados</h2><a href="evento.html">Todos</a></header>
+        <div class="result-layout">
+          <article class="podium"><div class="podium-head"><span class="code tc">TC</span><div><strong>Final · San Luis</strong><span>25 vueltas · finalizada 14:22</span></div></div><ol><li><b>1</b><div><strong>J. Werner</strong><span>Ford</span></div><time>38:12.475</time></li><li><b>2</b><div><strong>G. Todino</strong><span>Toyota</span></div><time>+1.204</time></li><li><b>3</b><div><strong>M. Urcera</strong><span>Ford</span></div><time>+4.880</time></li></ol></article>
+          <article class="arg-highlight"><span>Argentino destacado afuera</span><b class="big-pos">4.º</b><h3>Nicolás Varrone</h3><p>Largó 11.º y avanzó siete lugares en la carrera de GT3.</p><div class="delta positive">+7 <small>puestos</small></div></article>
+          <div class="result-notes"><a href="evento.html"><span>Monoplazas 3</span><strong>Colombo terminó 8.º</strong><small>Sumó sus primeros 4 puntos</small></a><a href="evento.html"><span>TC Pista</span><strong>Canapino ganó la serie</strong><small>Por 0.324 segundos</small></a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block next-weeks"><header class="section-title"><span>Guardate la fecha</span><h2>Lo que viene</h2></header><div class="date-strip"><article><time><b>22</b> SEP</time><span class="code tc">TC</span><div><strong>Buenos Aires</strong><span>Fecha 12 · Oscar y Juan Gálvez</span></div></article><article><time><b>29</b> SEP</time><span class="code f2">M1</span><div><strong>Singapur</strong><span>Ronda 18 · callejero</span></div></article><article><time><b>06</b> OCT</time><span class="code tn">TN</span><div><strong>Rosario</strong><span>Fecha 10 · clases 2 y 3</span></div></article></div></section>
+  </main>
+
+  <footer class="footer"><a class="brand" href="index.html"><span>Pis</span><b>ta</b></a><p>Automovilismo en hora argentina.<br>Datos de muestra para este prototipo.</p><nav><a href="sistema.html">Sistema visual</a><a href="#">Fuentes y criterios</a></nav></footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

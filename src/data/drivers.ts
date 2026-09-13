@@ -14,10 +14,10 @@ export const drivers: Driver[] = [
     born: "27/05/2003",
     tagline: "El primer argentino en la F1 desde Gastón Mazzacane en 2001.",
     seasonStats: [
-      { label: "Puesto", value: "14°" },
-      { label: "Puntos", value: "18" },
-      { label: "Mejor resultado", value: "P6" },
-      { label: "Carreras", value: "16" },
+      { label: "Campeonato", value: "12.º" },
+      { label: "Puntos", value: "21" },
+      { label: "Mejor resultado", value: "6.º" },
+      { label: "Carreras", value: "13" },
     ],
     career: [
       {
