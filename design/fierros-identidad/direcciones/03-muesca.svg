@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 96" role="img" aria-label="Fierros, dirección Muesca">
+  <path fill="#f1f2f0" d="M0 0h480v96H0z"/>
+  <path fill="#16658f" d="M0 20h64v56H0z"/>
+  <path fill="#f1f2f0" d="M14 31h36v9H26v8h20v9H26v13H14z"/>
+  <g transform="translate(86 20) scale(1.12 1)">
+    <path fill="#101213" d="M0 0h44v10H14v13h24v10H14v23H0zM50 0h14v56H50zM70 0h44v10H84v13h24v10H84v13h30v10H70z"/>
+    <path fill="#101213" fill-rule="evenodd" d="M120 0h32l10 10v18l-9 8 12 20h-16l-10-17h-5v17h-14V0zm14 10v19h14V10h-14zM171 0h32l10 10v18l-9 8 12 20h-16l-10-17h-5v17h-14V0zm14 10v19h14V10h-14zM230 0h30l10 10v36l-10 10h-30l-10-10V10l10-10zm4 10v36h22V10h-22z"/>
+    <path fill="#101213" d="M284 0h38v10h-28v12h20l10 10v14l-10 10h-40V46h30V34h-20l-10-10V10z"/>
+    <path fill="#f1f2f0" d="M0 38h324v6H0z"/>
+  </g>
+</svg>

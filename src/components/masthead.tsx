@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useSyncExternalStore } from "react";
+import { Logo } from "./logo";
 
 const NAV = [
   { href: "/", label: "Este finde" },
@@ -45,8 +46,7 @@ export function Masthead() {
   return (
     <header className="masthead">
       <Link className="brand" href="/" aria-label="Fierros, inicio">
-        <span>Fie</span>
-        <b>rros</b>
+        <Logo />
       </Link>
       <div className="clock">
         <span>Hora argentina</span>

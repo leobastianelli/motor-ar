@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" role="img" aria-label="Guía de uso de la identidad Fierros">
+  <style>@font-face{font-family:ArchivoLocal;src:url('fonts/Archivo-SemiBold.otf')}text{font-family:ArchivoLocal,Arial,sans-serif}</style>
+  <path fill="#f1f2f0" d="M0 0h1200v1600H0z"/>
+  <path fill="#101213" d="M0 0h1200v18H0z"/>
+  <text x="80" y="96" fill="#16658f" font-size="22">Guía de uso</text>
+  <text x="80" y="150" fill="#101213" font-size="54" font-weight="700">Fierros</text>
+  <text x="1120" y="142" fill="#666b6d" font-size="20" text-anchor="end">Versión 1.0</text>
+  <path fill="#101213" d="M80 205h1040v4H80z"/>
+
+  <g transform="translate(110 270) scale(1.85)">
+    <path fill="#101213" d="M0 8h80v80H0z"/>
+    <path fill="#75bee9" d="M18 21h17v15H18zm17 0h29v15H35zM18 41h17v15H18zm17 0h23v15H35zM18 61h17v15H18z"/>
+    <g transform="translate(104 20)"><path fill="#75bee9" d="M0 0h44v10H14v13h24v10H14v23H0z"/><path fill="#101213" d="M50 0h14v56H50zM70 0h44v10H84v13h24v10H84v13h30v10H70z"/><path fill="#101213" fill-rule="evenodd" d="M120 0h32l10 10v18l-9 8 12 20h-16l-10-17h-5v17h-14V0zm14 10v19h14V10h-14zM171 0h32l10 10v18l-9 8 12 20h-16l-10-17h-5v17h-14V0zm14 10v19h14V10h-14zM230 0h30l10 10v36l-10 10h-30l-10-10V10l10-10zm4 10v36h22V10h-22z"/><path fill="#101213" d="M284 0h38v10h-28v12h20l10 10v14l-10 10h-40V46h30V34h-20l-10-10V10z"/></g>
+  </g>
+
+  <text x="80" y="535" fill="#101213" font-size="30">Área de respeto</text>
+  <text x="80" y="575" fill="#666b6d" font-size="21">Dejar alrededor del logo, como mínimo, el ancho de un bloque del símbolo.</text>
+  <path fill="none" stroke="#16658f" stroke-width="3" stroke-dasharray="10 8" d="M80 620h530v170H80z"/>
+  <path fill="#101213" d="M130 665h80v80h-80z"/><path fill="#75bee9" d="M148 678h17v15h-17zm17 0h29v15h-29zm-17 20h17v15h-17zm17 0h23v15h-23zm-17 20h17v15h-17z"/>
+  <path fill="#16658f" d="M80 620h50v4H80zM80 620h4v45h-4z"/><text x="98" y="651" fill="#16658f" font-size="20">x</text>
+  <text x="660" y="666" fill="#101213" font-size="30">Tamaño mínimo</text>
+  <text x="660" y="706" fill="#666b6d" font-size="21">Logo horizontal: 96 px de ancho.</text>
+  <text x="660" y="740" fill="#666b6d" font-size="21">Símbolo: 16 × 16 px.</text>
+  <path fill="#101213" d="M660 770h32v32h-32z"/><path fill="#75bee9" d="M667 775h7v6h-7zm7 0h12v6h-12zm-7 8h7v6h-7zm7 0h9v6h-9zm-7 8h7v6h-7z"/>
+
+  <path fill="#101213" d="M80 870h1040v4H80z"/>
+  <text x="80" y="930" fill="#101213" font-size="30">Versiones</text>
+  <path fill="#101213" d="M80 970h320v170H80z"/><path fill="#75bee9" d="M130 1010h40v34h-40zm40 0h68v34h-68zm-40 45h40v34h-40zm40 0h52v34h-52zm-40 45h40v20h-40z"/><text x="80" y="1175" fill="#666b6d" font-size="20">Principal: tinta + celeste</text>
+  <path fill="#f1f2f0" stroke="#101213" stroke-width="2" d="M440 970h320v170H440z"/><path fill="#101213" d="M490 1010h40v34h-40zm40 0h68v34h-68zm-40 45h40v34h-40zm40 0h52v34h-52zm-40 45h40v20h-40z"/><text x="440" y="1175" fill="#666b6d" font-size="20">Una tinta: negro pleno</text>
+  <path fill="#101213" d="M800 970h320v170H800z"/><path fill="#f1f2f0" d="M850 1010h40v34h-40zm40 0h68v34h-68zm-40 45h40v34h-40zm40 0h52v34h-52zm-40 45h40v20h-40z"/><text x="800" y="1175" fill="#666b6d" font-size="20">Negativa: papel sobre tinta</text>
+
+  <path fill="#101213" d="M80 1240h1040v4H80z"/>
+  <text x="80" y="1300" fill="#101213" font-size="30">No hacer</text>
+  <text x="80" y="1346" fill="#666b6d" font-size="21">No estirar ni inclinar. No agregar sombras, contornos o degradés.</text>
+  <text x="80" y="1382" fill="#666b6d" font-size="21">No cambiar el celeste por colores de categorías. No usar sobre fotos con mucho detalle.</text>
+
+  <text x="80" y="1465" fill="#101213" font-size="30">Paleta de marca</text>
+  <path fill="#101213" d="M80 1500h160v50H80z"/><path fill="#f1f2f0" stroke="#101213" d="M240 1500h160v50H240z"/><path fill="#75bee9" d="M400 1500h160v50H400z"/><path fill="#16658f" d="M560 1500h160v50H560z"/><path fill="#dc3e25" d="M720 1500h100v50H720z"/><path fill="#f5c640" d="M820 1500h100v50H820z"/><path fill="#287e58" d="M920 1500h100v50H920z"/><path fill="#666b6d" d="M1020 1500h100v50H1020z"/>
+  <text x="80" y="1580" fill="#666b6d" font-size="18">#101213   #F1F2F0   #75BEE9   #16658F   #DC3E25   #F5C640   #287E58   #666B6D</text>
+</svg>

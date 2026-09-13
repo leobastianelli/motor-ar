@@ -1,11 +1,11 @@
 import Link from "next/link";
+import { Logo } from "./logo";
 
 export function Footer() {
   return (
     <footer className="footer">
-      <Link className="brand" href="/">
-        <span>Fie</span>
-        <b>rros</b>
+      <Link className="brand" href="/" aria-label="Fierros, inicio">
+        <Logo />
       </Link>
       <p>
         Automovilismo en hora argentina.

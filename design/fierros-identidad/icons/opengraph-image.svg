@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <style>@font-face{font-family:ArchivoLocal;src:url('../fonts/Archivo-SemiBold.otf')}text{font-family:ArchivoLocal,Arial,sans-serif}</style>
+  <path fill="#f1f2f0" d="M0 0h1200v630H0z"/>
+  <path fill="#101213" d="M0 0h86v630H0zM0 544h1200v86H0z"/>
+  <path fill="#75bee9" d="M86 0h26v544H86z"/>
+  <g transform="translate(164 170) scale(1.75)">
+    <path fill="#101213" d="M0 8h80v80H0z"/>
+    <path fill="#75bee9" d="M18 21h17v15H18zm17 0h29v15H35zM18 41h17v15H18zm17 0h23v15H35zM18 61h17v15H18z"/>
+    <g transform="translate(104 20)"><path fill="#75bee9" d="M0 0h44v10H14v13h24v10H14v23H0z"/><path fill="#101213" d="M50 0h14v56H50zM70 0h44v10H84v13h24v10H84v13h30v10H70z"/><path fill="#101213" fill-rule="evenodd" d="M120 0h32l10 10v18l-9 8 12 20h-16l-10-17h-5v17h-14V0zm14 10v19h14V10h-14zM171 0h32l10 10v18l-9 8 12 20h-16l-10-17h-5v17h-14V0zm14 10v19h14V10h-14zM230 0h30l10 10v36l-10 10h-30l-10-10V10l10-10zm4 10v36h22V10h-22z"/><path fill="#101213" d="M284 0h38v10h-28v12h20l10 10v14l-10 10h-40V46h30V34h-20l-10-10V10z"/></g>
+  </g>
+  <text x="164" y="438" fill="#101213" font-size="50" font-weight="600">Automovilismo argentino, al minuto</text>
+  <g transform="translate(756 560)" font-size="24" font-weight="700" text-anchor="middle"><path fill="#16658f" d="M0 0h74v48H0z"/><text x="37" y="33" fill="#fff">F1</text><path fill="#dc3e25" d="M86 0h74v48H86z"/><text x="123" y="33" fill="#fff">TC</text><path fill="#f5c640" d="M172 0h92v48h-92z"/><text x="218" y="33" fill="#101213">T2K</text><path fill="#287e58" d="M276 0h74v48h-74z"/><text x="313" y="33" fill="#fff">TN</text></g>
+</svg>

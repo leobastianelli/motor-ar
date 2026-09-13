@@ -72,3 +72,7 @@
 .site-nav{padding-left:220px}
 .footer{grid-template-columns:240px 1fr auto}
 @media(max-width:800px){.masthead{grid-template-columns:1fr auto}.site-nav{padding-left:0}.footer{grid-template-columns:1fr}}
+/* Logotipo en curvas (design/fierros-identidad) */
+.brand svg{display:block;width:100%;max-width:172px;height:auto}
+.footer .brand svg{max-width:190px}
+@media(max-width:800px){.brand svg{max-width:132px}.footer .brand svg{max-width:150px}}
