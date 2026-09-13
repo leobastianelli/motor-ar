@@ -10,8 +10,6 @@ Relevado el 2026-09-13. "Verificado" = hicimos una consulta real y respondió co
 | F1 – en vivo (vueltas, posiciones, radio) | [OpenF1](https://openf1.org/docs/) | API JSON | ✅ histórico | Total | Histórico gratis; **vivo pago** |
 | F2 / F3 | [fiaformula2.com](https://www.fiaformula2.com/livetiming/index.html) / fiaformula3.com | HTML (sin API pública) | ⚠️ parcial | Scraping | Gratis |
 | MotoGP / Moto2 / Moto3 | [API de motogp.com](https://github.com/robschmitt/MotoGP-API) (`api.motogp.pulselive.com`) | API JSON no oficial | ✅ | Total | Gratis |
-| IndyCar | [Blacktop API](https://ocblacktop.com/api/indycar) o scraping de indycar.com | API JSON | ❌ sin probar | Total | Free tier 7.500 req/mes |
-| NASCAR | Feed no documentado `cf.nascar.com` ([cliente comunitario](https://pypi.org/project/nascar-api/)) | JSON | ❌ sin probar | Total | Gratis (sin garantías) |
 | GT World Challenge (GT3) | [gt-world-challenge-europe.com](https://www.gt-world-challenge-europe.com/) | HTML + PDF | ❌ sin API | Semi-manual | Gratis |
 | ACTC (TC, TCP, TCM, TCPM, TCPK, TCPPK) | [tiempos.actc.org.ar](https://tiempos.actc.org.ar/resultados) | HTML + PDF + Excel | ✅ | Scraping | Gratis |
 | TC2000 (CDA del ACA) | [tc2000.com.ar](https://tc2000.com.ar/institucional.php?accion=resultados) | HTML | ❌ bloquea bots (403) | Manual / acuerdo | — |
@@ -102,15 +100,13 @@ Pendiente de revisar: Jolpica muestra el campeonato 2026 tras la fecha 14 (Madri
 
 | Archivo | Script | Contenido |
 |---|---|---|
-| `src/data/history.json` | `scripts/sync-history.mjs` | Campeones por año y récords de TC, TC2000, TN, F1, F2, IndyCar y NASCAR |
-| `src/data/season-2026.json` | `scripts/sync-season-2026.mjs` | Calendario, resultados y campeonato 2026 de 8 categorías |
+| `src/data/history.json` | `scripts/sync-history.mjs` | Campeones por año y récords de TC, TC2000, TN, F1 y F2 |
+| `src/data/season-2026.json` | `scripts/sync-season-2026.mjs` | Calendario, resultados y campeonato 2026 de 6 categorías |
 
 | Categoría | Calendario | Horarios | Resultados | Campeonato |
 |---|---|---|---|---|
 | F1 | Jolpica | ✅ por sesión | ✅ carrera, clasificación y sprint | ✅ |
 | F2 | Wikipedia | ❌ sólo fecha | ✅ posición de todos (desde la tabla de campeonato) | ✅ |
-| IndyCar | Wikipedia | ✅ (hora del Este convertida) | ✅ | ✅ |
-| NASCAR Cup | Wikipedia | ✅ (hora del Este convertida) | ✅ | ✅ |
 | TC | ACTC oficial | ❌ sólo fecha | Podio (Wikipedia) | ✅ Copa de Oro (Wikipedia) |
 | TC Pista | ACTC oficial | ❌ sólo fecha | ❌ | ❌ |
 | TN APAT | APAT oficial | ❌ sólo fecha | ✅ finales Clase 2 y 3 completas | ✅ Clase 3 (Clase 2 en `meta`) |
@@ -119,7 +115,7 @@ Pendiente de revisar: Jolpica muestra el campeonato 2026 tras la fecha 14 (Madri
 - Sesiones sin horario (`timeKnown: false`) nunca se muestran "en vivo": pasan de "Hoy" a "Terminó" o "Sin datos".
 - Si una fuente falla, el sincronizador conserva los datos anteriores de esa categoría.
 - Las páginas de APAT se cachean en `research/html/` y se piden con pausas de 1,5 s.
-- Dónde ver: `src/data/broadcasts.ts`, sólo con fuente. NASCAR, GT3 y zonales quedan "sin datos".
+- Dónde ver: `src/data/broadcasts.ts`, sólo con fuente. GT3 y zonales quedan "sin datos". IndyCar y NASCAR se quitaron del sitio el 2026-09-13.
 - Pendiente: horarios de categorías nacionales, resultados de TC Pista y TC2000, GT3 y zonales.
 
 ## Actualización automática en producción

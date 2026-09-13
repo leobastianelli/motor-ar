@@ -4,16 +4,12 @@ import { actcOfficialSchedules } from "./actc-official.mjs";
 import { apatSeason } from "./apat.mjs";
 import { f1Season } from "./f1.mjs";
 import { f2Season } from "./f2.mjs";
-import { indycarSeason } from "./indycar.mjs";
-import { nascarSeason } from "./nascar.mjs";
 import { applySchedules, buildConsensus, solotcNotes } from "./schedule-notes.mjs";
 import { tc2000Season } from "./tc2000.mjs";
 
 const SOURCES = [
   ["F1", ["f1"], f1Season],
   ["F2", ["f2"], f2Season],
-  ["IndyCar", ["indycar"], indycarSeason],
-  ["NASCAR", ["nascar"], nascarSeason],
   ["TC y TC Pista", ["tc", "tc-pista"], actcSeason],
   ["TN APAT", ["tn"], apatSeason],
   ["TC2000", ["tc2000"], tc2000Season],

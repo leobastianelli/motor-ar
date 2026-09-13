@@ -7,10 +7,6 @@ export const WIKI_PAGES = {
   "es-tc2000-2026": ["es", "Anexo:Temporada_2026_de_TC2000"],
   "en-f2": ["en", "FIA_Formula_2_Championship"],
   "en-f2-2026": ["en", "2026_Formula_2_Championship"],
-  "en-indycar": ["en", "IndyCar_Series"],
-  "en-indycar-2026": ["en", "2026_IndyCar_Series"],
-  "en-nascar-champions": ["en", "List_of_NASCAR_Cup_Series_champions"],
-  "en-nascar-2026": ["en", "2026_NASCAR_Cup_Series"],
 };
 
 export function wikiRawUrl(key) {

@@ -34,11 +34,6 @@ export const broadcastsBySeries: Record<string, { items: Broadcast[]; source?: s
     items: [{ name: "Motorplay", kind: "streaming" }],
     source: "https://www.multimediosgenesis.com.ar/articulo/2026/04/el-tc2000-acelera-en-concordia-cuando-y-por-donde-ver.php",
   },
-  indycar: {
-    items: [{ name: "TyC Sports Play", kind: "streaming", url: "https://play.tycsports.com" }],
-    source: "https://formularapida.net/es/guia-para-seguir-el-gp-de-indycar-2026-horarios-y-como-verlo/",
-  },
-  nascar: { items: [] },
   gt3: { items: [] },
   "zonal-bsas": { items: [] },
 };

@@ -9,8 +9,6 @@ export const series: Series[] = [
   { id: "tc-pista", name: "TC Pista", short: "TC Pista", code: "TCP", org: "ACTC", scope: "nacional", color: "#dc3e25" },
   { id: "tc2000", name: "TC2000", short: "TC2000", code: "T2K", org: "CDA del ACA", scope: "nacional", color: "#101213", founded: 1979 },
   { id: "tn", name: "TN APAT", short: "TN", code: "TN", org: "APAT", scope: "nacional", color: "#b47805", founded: 1961 },
-  { id: "indycar", name: "IndyCar", short: "IndyCar", code: "IND", org: "IndyCar", scope: "internacional", color: "#16658f", founded: 1996 },
-  { id: "nascar", name: "NASCAR Cup", short: "NASCAR", code: "NAS", org: "NASCAR", scope: "internacional", color: "#16658f", founded: 1949 },
   { id: "gt3", name: "GT World Challenge", short: "GT3", code: "GT3", org: "SRO", scope: "internacional", color: "#6b3d83" },
   { id: "zonal-bsas", name: "Procar4000", short: "Procar", code: "ZL", org: "Zonal", scope: "zonal", color: "#287e58" },
 ];

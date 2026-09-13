@@ -6,7 +6,7 @@ import { wikiRawUrl } from "../src/lib/sources/wiki-pages.mjs";
 import { clean, flagOf, intOf, section, tables, texts } from "../src/lib/sources/wikitext.mjs";
 
 const pages = {};
-for (const key of ["es-tc", "es-tc2000", "es-tn", "en-f2", "en-indycar", "en-nascar-champions"]) {
+for (const key of ["es-tc", "es-tc2000", "es-tn", "en-f2"]) {
   const res = await fetch(wikiRawUrl(key), { headers: { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" } });
   if (!res.ok) throw new Error(`No se pudo descargar ${key}: ${res.status}`);
   pages[key] = await res.text();
@@ -16,7 +16,6 @@ const wiki = (key) => pages[key];
 const url = (lang, title) => `https://${lang}.wikipedia.org/wiki/${title}`;
 const WIKI_LICENSE = "CC BY-SA 4.0";
 const brand = (s) => (s || "").split(" ")[0];
-const stripCount = (s) => s.replace(/\s*\(\d+\)\s*$/, "").trim();
 const isData = (row) => row.cells.some((c) => !c.header);
 
 function summarize(champions, makeLabel) {
@@ -121,49 +120,7 @@ function f2() {
   };
 }
 
-function indycar() {
-  const table = tables(section(wiki("en-indycar"), "Seasons"))[0];
-  const seen = new Set();
-  const champions = [];
-  for (const r of table.rows) {
-    const label = r.cells[0]?.text ?? "";
-    if (!/^\d{4}/.test(label) || !r.cells[1]?.text || seen.has(label)) continue;
-    seen.add(label);
-    champions.push({
-      year: Number(label.slice(0, 4)),
-      label,
-      driver: stripCount(r.cells[1].text),
-      detail: r.cells[2].text,
-      make: r.cells[2].text,
-      argentine: flagOf(r.cells[1].raw) === "ARG",
-    });
-  }
-  return {
-    source: { label: "Wikipedia · IndyCar Series", url: url("en", "IndyCar_Series"), license: WIKI_LICENSE },
-    champions,
-    note: "Campeones desde la creación de la Indy Racing League (1996).",
-    ...summarize(champions, "Equipos campeones"),
-  };
-}
-
-function nascar() {
-  const table = tables(section(wiki("en-nascar-champions"), "By season"))[0];
-  const seen = new Set();
-  const champions = [];
-  for (const r of table.rows) {
-    const year = r.cells[0]?.text ?? "";
-    if (!/^\d{4}$/.test(year) || seen.has(year) || !r.cells[1]?.text || /^TBD$/i.test(r.cells[1].text)) continue;
-    seen.add(year);
-    champions.push({ year: Number(year), driver: stripCount(r.cells[1].text), detail: r.cells[4]?.text ?? "", make: brand(r.cells[4]?.text) });
-  }
-  return {
-    source: { label: "Wikipedia · List of NASCAR Cup Series champions", url: url("en", "List_of_NASCAR_Cup_Series_champions"), license: WIKI_LICENSE },
-    champions,
-    ...summarize(champions, "Marcas campeonas"),
-  };
-}
-
-const series = { tc: tc(), tc2000: tc2000(), tn: tn(), f1: f1(), f2: f2(), indycar: indycar(), nascar: nascar() };
+const series = { tc: tc(), tc2000: tc2000(), tn: tn(), f1: f1(), f2: f2() };
 fs.writeFileSync("src/data/history.json", JSON.stringify({ generatedAt: new Date().toISOString(), series }, null, 2));
 
 for (const [id, h] of Object.entries(series)) {
