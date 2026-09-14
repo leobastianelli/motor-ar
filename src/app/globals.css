@@ -140,6 +140,10 @@ button{color:inherit;font-family:inherit}
   .site-nav a{padding:16px 20px;font-size:18px;color:var(--ink)}
   .site-nav a+a{border-top:1px solid var(--rule)}
   .site-nav a.active{box-shadow:inset 4px 0 0 var(--blue);font-weight:800}
+  .menu-toggle{display:grid;place-items:center;width:56px;padding:0;color:var(--ink)}
+  /* Velo detrás del menú abierto: oscurece la página y deja claro que tocando afuera se cierra */
+  .nav-backdrop{position:fixed;top:64px;left:0;right:0;bottom:0;z-index:1;background:rgba(16,18,19,.35)}
+  .masthead>.brand,.masthead>.menu-toggle{position:relative;z-index:2}
 }
 /* Home en celular: resultados sin apretar */
 @media(max-width:800px){
