@@ -19,7 +19,13 @@ export function generateStaticParams() {
 
 export async function generateMetadata(props: PageProps<"/pilotos/[slug]">): Promise<Metadata> {
   const slug = (await props.params).slug;
-  return { title: getDriver(slug)?.name ?? getIndexedDriver(slug)?.name ?? "Piloto" };
+  const curated = getDriver(slug);
+  const indexed = curated ? undefined : getIndexedDriver(slug);
+  const name = curated?.name ?? indexed?.name;
+  if (!name) return { title: "Piloto" };
+  const seriesNames = (curated ? [curated.seriesId] : (indexed?.series ?? [])).map((id) => getSeries(id)?.name).filter(Boolean).join(", ");
+  const description = `${name}${seriesNames ? ` (${seriesNames})` : ""}: temporada 2026, campeonato, victorias, podios y resultados fecha por fecha.`;
+  return { title: name, description, openGraph: { title: name, description }, alternates: { canonical: `/pilotos/${slug}` } };
 }
 
 const RACES = new Set(["final", "carrera", "sprint"]);

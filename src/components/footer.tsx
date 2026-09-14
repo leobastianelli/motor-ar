@@ -10,7 +10,7 @@ export function Footer() {
       <p>
         Automovilismo en hora argentina.
         <br />
-        Datos: Jolpica-F1, Wikipedia, ACTC y APAT.
+        Datos de ACTC, APAT, FIA, Jolpica-F1, OpenF1 y Wikipedia.
         <br />
         Desarrollado por{" "}
         <a href="https://leobastianelli.dev" target="_blank" rel="noreferrer author">
@@ -18,7 +18,11 @@ export function Footer() {
         </a>
       </p>
       <nav aria-label="Pie de página">
-        <Link href="/calendario">Calendario</Link>      </nav>
+        <Link href="/calendario">Calendario</Link>
+        <Link href="/fuentes">Fuentes</Link>
+        <Link href="/terminos">Términos</Link>
+        <Link href="/privacidad">Privacidad</Link>
+      </nav>
     </footer>
   );
 }

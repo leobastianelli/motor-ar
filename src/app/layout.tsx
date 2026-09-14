@@ -1,21 +1,24 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Archivo } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Masthead } from "@/components/masthead";
+import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 // Una sola familia: Archivo variable, con eje de ancho para titulares condensados.
 const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], axes: ["wdth"], display: "swap" });
 
-// Base absoluta para la imagen de Open Graph: el dominio de producción en Vercel, o local en desarrollo.
-const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000";
+const description = "Horarios en hora argentina, dónde ver y resultados de F1, F2, Turismo Carretera, TC Pista, TN y más. Todos los pilotos argentinos, fecha por fecha.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   authors: [{ name: "Leo Bastianelli", url: "https://leobastianelli.dev" }],
   creator: "Leo Bastianelli",
-  title: { default: "Fierros — Automovilismo argentino, al minuto", template: "%s — Fierros" },
-  description: "Horarios, resultados y seguimiento de pilotos argentinos, siempre en hora argentina.",
+  title: { default: `${SITE_NAME} — ${SITE_TAGLINE}`, template: `%s — ${SITE_NAME}` },
+  description,
+  openGraph: { siteName: SITE_NAME, locale: "es_AR", type: "website", description },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -25,6 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Masthead />
         <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

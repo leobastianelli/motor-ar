@@ -5,7 +5,10 @@ import { DriverDirectory, type DirectoryEntry } from "@/components/driver-direct
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { getAllDrivers, getAllSeries, getIndexedDrivers, getNow, getSeason, getSeries } from "@/lib/data";
 
-export const metadata: Metadata = { title: "Pilotos argentinos" };
+export const metadata: Metadata = {
+  title: "Pilotos argentinos",
+  description: "Todos los pilotos argentinos con resultados en 2026: Colapinto, Varrone, Canapino y los de TC, TC Pista, TN, Mouras y Pick Up, con su temporada fecha por fecha.",
+};
 export const revalidate = 60;
 
 export default async function DriversPage() {

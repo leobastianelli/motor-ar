@@ -6,7 +6,10 @@ import { getAllSeries, getNow, getSeason } from "@/lib/data";
 import { fmtDayShort, fmtMonthShort } from "@/lib/format";
 import type { Scope } from "@/lib/types";
 
-export const metadata: Metadata = { title: "Categorías" };
+export const metadata: Metadata = {
+  title: "Categorías",
+  description: "Categorías nacionales, internacionales y zonales: próximas fechas, campeonatos e historia.",
+};
 export const revalidate = 60;
 
 const GROUPS: { scope: Scope; title: string }[] = [

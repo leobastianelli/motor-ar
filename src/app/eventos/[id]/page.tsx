@@ -16,7 +16,12 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: PageProps<"/eventos/[id]">): Promise<Metadata> {
   const event = (await getSeason()).getEvent((await props.params).id);
-  return { title: event?.name ?? "Evento" };
+  if (!event) return { title: "Evento" };
+  const series = getSeries(event.seriesId);
+  const title = `${series?.name ?? ""} · ${event.name}`.replace(/^ · /, "");
+  const winner = event.sessions.filter((s) => ["final", "carrera"].includes(s.kind) && s.results?.length).at(-1)?.results?.[0];
+  const description = `${series?.name ?? "Fecha"} en ${event.circuit.city}: horarios en hora argentina, dónde verlo y resultados de cada sesión${winner ? `. Ganó ${winner.driver}` : ""}.`;
+  return { title, description, openGraph: { title, description }, alternates: { canonical: `/eventos/${event.id}` } };
 }
 
 const BROADCAST_KIND: Record<Broadcast["kind"], string> = { tv: "TV", streaming: "Streaming", youtube: "YouTube" };
@@ -84,8 +89,22 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
   const timesUnknown = event.sessions.some((s) => s.timeKnown === false);
   const scheduleSources = [...new Map(event.sessions.flatMap((s) => s.timeSources ?? []).map((x) => [x.url, x])).values()];
 
+  // Datos estructurados para buscadores: evento deportivo con lugar, fechas y organizador.
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    name: `${series.name} · ${event.name}`,
+    sport: "Automovilismo",
+    startDate: event.sessions[0].start,
+    endDate: event.sessions.at(-1)!.start,
+    eventStatus: "https://schema.org/EventScheduled",
+    location: { "@type": "Place", name: event.circuit.name, address: [event.circuit.city, event.circuit.province, event.circuit.country].filter(Boolean).join(", ") },
+    organizer: { "@type": "Organization", name: series.org },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <section className="event-hero" style={{ "--cat": series.color } as CSSProperties}>
         <div className="event-id">
           <CategoryLabel series={series} detail={`Fecha ${event.round}`} />

@@ -133,6 +133,16 @@ button{color:inherit;font-family:inherit}
   .event-meta b{font-size:22px}
   .session .session-winner{font-size:13px}
 }
+/* Páginas legales y de fuentes */
+.legal{max-width:760px}
+.legal h2{font-size:22px;margin:32px 0 8px}
+.legal p{font-size:16px;line-height:1.6;margin:0 0 12px}
+.legal .section-title{margin-top:36px}
+.legal-list{list-style:none;margin:0;padding:0}
+.legal-list li{display:flex;flex-direction:column;gap:2px;padding:12px 0;border-bottom:1px solid var(--rule)}
+.legal-list li>a{font-weight:700}
+.legal-list li span,.legal-list li small{font-size:14px;color:var(--muted)}
+.footer nav{flex-wrap:wrap}
 /* Directorio de pilotos */
 .directory-tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:24px}
 .directory-tools input{flex:1 1 280px;font:inherit;font-size:16px;padding:10px 14px;border:1px solid var(--rule);border-radius:2px;background:#fff}

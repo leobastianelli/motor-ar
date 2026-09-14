@@ -3,7 +3,10 @@ import { CalendarView, type CalendarCard } from "@/components/calendar-view";
 import { getNow, getSeason, getSeries } from "@/lib/data";
 import { capitalize, fmtDayShort, fmtMonth, fmtMonthShort } from "@/lib/format";
 
-export const metadata: Metadata = { title: "Calendario" };
+export const metadata: Metadata = {
+  title: "Calendario 2026",
+  description: "Todas las fechas que vienen de F1, F2, Turismo Carretera, TC Pista, TN, TC Mouras, Pick Up y GT, en hora argentina.",
+};
 export const revalidate = 60;
 
 export default async function CalendarPage() {

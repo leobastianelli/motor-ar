@@ -3,7 +3,10 @@ import Link from "next/link";
 import { SectionTitle } from "@/components/pista";
 import { legends } from "@/data/legends";
 
-export const metadata: Metadata = { title: "Historias" };
+export const metadata: Metadata = {
+  title: "Historias",
+  description: "Fangio, Reutemann, Traverso y las leyendas del automovilismo argentino.",
+};
 
 export default function LegendsPage() {
   return (
