@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Archivo } from "next/font/google";
 import { Footer } from "@/components/footer";
+import { JsonLd } from "@/components/json-ld";
 import { Masthead } from "@/components/masthead";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import "./globals.css";
@@ -28,6 +29,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Masthead />
         <main>{children}</main>
         <Footer />
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@graph": [
+              { "@type": "WebSite", name: SITE_NAME, url: SITE_URL, inLanguage: "es-AR", description },
+              { "@type": "Organization", name: SITE_NAME, url: SITE_URL, founder: { "@type": "Person", name: "Leo Bastianelli", url: "https://leobastianelli.dev" } },
+            ],
+          }}
+        />
         <Analytics />
       </body>
     </html>

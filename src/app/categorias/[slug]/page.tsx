@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { breadcrumb, JsonLd } from "@/components/json-ld";
 import { PhotoCredit, SectionTitle } from "@/components/pista";
 import { getAllSeries, getHistory, getNow, getSeason, getSeries } from "@/lib/data";
 import { getPhoto } from "@/lib/photos";
@@ -15,7 +16,11 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata(props: PageProps<"/categorias/[slug]">): Promise<Metadata> {
-  return { title: getSeries((await props.params).slug)?.name ?? "Categoría" };
+  const series = getSeries((await props.params).slug);
+  if (!series) return { title: "Categoría" };
+  const history = getHistory(series.id);
+  const description = `${series.name}: calendario 2026 en hora argentina, campeonato, resultados de cada fecha${history ? ` e historia con ${history.champions.length} campeones desde ${history.firstYear}` : ""}.`;
+  return { title: series.name, description, openGraph: { title: series.name, description }, alternates: { canonical: `/categorias/${series.id}` } };
 }
 
 const SCOPE_LABEL = { nacional: "Automovilismo nacional", internacional: "Categoría internacional", zonal: "Automovilismo zonal" };
@@ -136,6 +141,19 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
 
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            { "@type": "SportsOrganization", name: series.name, sport: "Automovilismo", ...(series.founded ? { foundingDate: String(series.founded) } : {}), parentOrganization: { "@type": "Organization", name: series.org } },
+            breadcrumb([
+              ["Inicio", "/"],
+              ["Categorías", "/categorias"],
+              [series.name, `/categorias/${series.id}`],
+            ]),
+          ],
+        }}
+      />
       <section className="category-hero">
         <div className="cat-poster" style={{ borderColor: series.color }}>
           <span style={{ color: series.color }}>{series.code}</span>

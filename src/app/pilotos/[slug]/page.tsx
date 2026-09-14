@@ -9,6 +9,8 @@ import { getAllDrivers, getDriver, getIndexedDriver, getIndexedDrivers, getNow, 
 import { fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/format";
 import { getPhoto } from "@/lib/photos";
 import { driverKey } from "@/lib/sources/driver-index.mjs";
+import { breadcrumb, isoDate, JsonLd } from "@/components/json-ld";
+import type { IndexedDriver } from "@/lib/data";
 import type { Driver } from "@/lib/types";
 
 export const revalidate = 60;
@@ -25,11 +27,37 @@ export async function generateMetadata(props: PageProps<"/pilotos/[slug]">): Pro
   const name = curated?.name ?? indexed?.name;
   if (!name) return { title: "Piloto" };
   const seriesNames = (curated ? [curated.seriesId] : (indexed?.series ?? [])).map((id) => getSeries(id)?.name).filter(Boolean).join(", ");
-  const description = `${name}${seriesNames ? ` (${seriesNames})` : ""}: temporada 2026, campeonato, victorias, podios y resultados fecha por fecha.`;
+  const description = indexed
+    ? indexedSummary(indexed, await getSeason())
+    : `${name}${seriesNames ? ` (${seriesNames})` : ""}: ${curated?.tagline ?? ""} Temporada 2026, campeonato y resultados fecha por fecha.`;
   return { title: name, description, openGraph: { title: name, description }, alternates: { canonical: `/pilotos/${slug}` } };
 }
 
 const RACES = new Set(["final", "carrera", "sprint"]);
+
+const count = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+
+/** Resumen escrito con los datos de la temporada, para la ficha automática y su descripción en buscadores. */
+function indexedSummary(entry: IndexedDriver, season: Season) {
+  const stats = season.getDriverSeason(entry);
+  const keys = entry.keys ?? [entry.key];
+  const ids = [...entry.series].sort((a, b) => (stats.bySeries[b]?.races ?? 0) - (stats.bySeries[a]?.races ?? 0));
+  const main = getSeries(ids[0]);
+  if (!main) return `${entry.name}: resultados de la temporada 2026.`;
+  const s = stats.bySeries[main.id];
+  const number = entry.numbers[main.id];
+  const team = entry.teams[main.id];
+  const standing = season.getDriverStanding(main.id, keys);
+  const others = ids.slice(1).map((id) => getSeries(id)?.name).filter(Boolean);
+  return [
+    `${entry.name} corre en ${main.name}${number ? ` con el número ${number}` : ""}${team ? `, con ${team}` : ""}.`,
+    s ? `En 2026 lleva ${count(s.races, "carrera", "carreras")}, ${count(s.wins, "victoria", "victorias")} y ${count(s.podiums, "podio", "podios")}${s.best ? `; su mejor resultado es un ${s.best}.º puesto` : ""}.` : "",
+    standing ? `Está ${standing.pos}.º en el campeonato con ${standing.points} puntos.` : "",
+    others.length ? `También corrió en ${others.join(" y ")}.` : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
 
 /** Ficha armada sólo con resultados: categoría, estadísticas de la temporada y cada sesión. Sin datos biográficos. */
 async function IndexedDriverPage({ slug }: { slug: string }) {
@@ -49,8 +77,29 @@ async function IndexedDriverPage({ slug }: { slug: string }) {
             {entry.name}
             {entry.numbers[main.id] && <span className="hero-date">#{entry.numbers[main.id]}</span>}
           </h1>
+          <p className="driver-auto-summary">{indexedSummary(entry, season)}</p>
         </div>
       </section>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Person",
+              name: entry.name,
+              jobTitle: "Piloto de automovilismo",
+              nationality: { "@type": "Country", name: "Argentina" },
+              ...(entry.teams[main.id] ? { memberOf: { "@type": "SportsTeam", name: entry.teams[main.id] } } : {}),
+              description: indexedSummary(entry, season),
+            },
+            breadcrumb([
+              ["Inicio", "/"],
+              ["Pilotos", "/pilotos"],
+              [entry.name, `/pilotos/${entry.slug}`],
+            ]),
+          ],
+        }}
+      />
 
       <SeasonBlocks keys={entry.keys ?? [entry.key]} season={season} />
     </>
@@ -341,6 +390,28 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
 
   return (
     <>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Person",
+              name: driver.name,
+              ...(isoDate(driver.born) ? { birthDate: isoDate(driver.born) } : {}),
+              birthPlace: { "@type": "Place", name: driver.hometown },
+              nationality: { "@type": "Country", name: "Argentina" },
+              jobTitle: "Piloto de automovilismo",
+              memberOf: { "@type": "SportsTeam", name: driver.team },
+              description: driver.tagline,
+            },
+            breadcrumb([
+              ["Inicio", "/"],
+              ["Pilotos", "/pilotos"],
+              [driver.name, `/pilotos/${driver.slug}`],
+            ]),
+          ],
+        }}
+      />
       <section className={`driver-hero${photo ? "" : " no-photo"}`}>
         {photo && (
           <div className="driver-photo">

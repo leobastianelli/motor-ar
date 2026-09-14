@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
+import { breadcrumb, JsonLd } from "@/components/json-ld";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { getNow, getSeason, getSeries } from "@/lib/data";
@@ -91,7 +92,6 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
 
   // Datos estructurados para buscadores: evento deportivo con lugar, fechas y organizador.
   const jsonLd = {
-    "@context": "https://schema.org",
     "@type": "SportsEvent",
     name: `${series.name} · ${event.name}`,
     sport: "Automovilismo",
@@ -104,7 +104,19 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            jsonLd,
+            breadcrumb([
+              ["Inicio", "/"],
+              [series.name, `/categorias/${series.id}`],
+              [event.name, `/eventos/${event.id}`],
+            ]),
+          ],
+        }}
+      />
       <section className="event-hero" style={{ "--cat": series.color } as CSSProperties}>
         <div className="event-id">
           <CategoryLabel series={series} detail={`Fecha ${event.round}`} />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Fragment, type CSSProperties } from "react";
+import { breadcrumb, isoDate, JsonLd } from "@/components/json-ld";
 import { PhotoCredit } from "@/components/pista";
 import { legendBySlug, legends } from "@/data/legends";
 import { getPhoto } from "@/lib/photos";
@@ -12,7 +13,10 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata(props: PageProps<"/historicos/[slug]">): Promise<Metadata> {
-  return { title: legendBySlug[(await props.params).slug]?.name ?? "Historia" };
+  const legend = legendBySlug[(await props.params).slug];
+  if (!legend) return { title: "Historia" };
+  const description = `${legend.name} (${legend.years}): ${legend.tagline}`;
+  return { title: legend.name, description, openGraph: { title: legend.name, description }, alternates: { canonical: `/historicos/${legend.slug}` } };
 }
 
 const yearOf = (period: string) => period.match(/\d{4}/)?.[0] ?? period.replace(/^Años\s+/, "");
@@ -22,8 +26,33 @@ export default async function LegendPage(props: PageProps<"/historicos/[slug]">)
   if (!legend) notFound();
   const photo = getPhoto(legend.slug);
 
+  const [born, died] = legend.years.split(/\s*[–-]\s*/).map((y) => y.trim());
+
   return (
     <article>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Person",
+              name: legend.name,
+              ...(legend.nickname ? { alternateName: legend.nickname } : {}),
+              ...(isoDate(born) ? { birthDate: isoDate(born) } : {}),
+              ...(isoDate(died) ? { deathDate: isoDate(died) } : {}),
+              birthPlace: { "@type": "Place", name: legend.hometown },
+              nationality: { "@type": "Country", name: "Argentina" },
+              jobTitle: "Piloto de automovilismo",
+              description: legend.tagline,
+            },
+            breadcrumb([
+              ["Inicio", "/"],
+              ["Historias", "/historicos"],
+              [legend.name, `/historicos/${legend.slug}`],
+            ]),
+          ],
+        }}
+      />
       <header className={`story-hero${photo ? "" : " no-photo"}`}>
         {photo && <Image src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} sizes="100vw" priority />}
         <div className="story-shade" />
