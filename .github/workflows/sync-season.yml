@@ -1,0 +1,52 @@
+# Actualiza la instantánea de la temporada (src/data/season-2026.json) desde las fuentes y la sube al repo.
+# Vercel publica solo cada push, así los resultados quedan guardados aunque salgan de la ventana de 10 días del sitio.
+name: Sincronizar temporada
+
+on:
+  schedule:
+    # Lunes y jueves a las 06:00 UTC (03:00 en Argentina): después del fin de semana y para tomar rectificaciones.
+    - cron: "0 6 * * 1,4"
+  workflow_dispatch:
+    inputs:
+      timing_days:
+        description: "Días hacia atrás en los que se vuelven a pedir los resultados por sesión (400 = toda la temporada)"
+        required: false
+        default: "21"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-season
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Sincronizar
+        env:
+          TIMING_DAYS: ${{ github.event.inputs.timing_days || '21' }}
+        run: npm run sync:season
+
+      - name: Subir cambios
+        run: |
+          if git diff --quiet -- src/data/season-2026.json; then
+            echo "Sin cambios en la temporada."
+            exit 0
+          fi
+          git config user.name "fierros-sync"
+          git config user.email "fierros-sync@users.noreply.github.com"
+          git add src/data/season-2026.json
+          git commit -m "datos: sincronización automática de la temporada"
+          git push
