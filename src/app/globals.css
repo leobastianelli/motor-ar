@@ -188,6 +188,9 @@ button{color:inherit;font-family:inherit}
 .horario-watch li{padding:8px 0;border-top:1px solid rgba(16,18,19,.15);font-weight:700}
 .horario-watch p{margin:0;font-size:14px}
 @media(max-width:800px){.horario-grid{grid-template-columns:1fr}.horario-answer{font-size:17px}.horario-day li{grid-template-columns:64px 1fr auto}.horario-day time{font-size:19px}}
+/* Placa del finde */
+.placa img{display:block;width:100%;max-width:540px;height:auto;box-shadow:0 12px 32px rgba(16,18,19,.15)}
+.placa p{margin-top:14px}
 /* Páginas legales y de fuentes */
 .legal{max-width:760px}
 .legal h2{font-size:22px;margin:32px 0 8px}

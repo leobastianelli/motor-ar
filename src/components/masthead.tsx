@@ -7,6 +7,7 @@ import { Logo } from "./logo";
 
 const NAV = [
   { href: "/", label: "Este finde" },
+  { href: "/horarios", label: "Horarios" },
   { href: "/calendario", label: "Calendario" },
   { href: "/pilotos", label: "Pilotos" },
   { href: "/categorias", label: "Categorías" },

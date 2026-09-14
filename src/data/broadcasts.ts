@@ -34,6 +34,23 @@ export const broadcastsBySeries: Record<string, { items: Broadcast[]; source?: s
     items: [{ name: "Motorplay", kind: "streaming" }],
     source: "https://www.multimediosgenesis.com.ar/articulo/2026/04/el-tc2000-acelera-en-concordia-cuando-y-por-donde-ver.php",
   },
-  gt3: { items: [] },
+  "tc-pick-up": {
+    items: [
+      { name: "Canal 9", kind: "tv" },
+      { name: "Motorplay", kind: "streaming" },
+    ],
+    source: "https://www.solotc.com.ar/horarios-tv-cronograma-fecha-6-tc-pick-up-la-plata-2026/",
+  },
+  "tc-pista-pick-up": {
+    items: [
+      { name: "Canal 9", kind: "tv" },
+      { name: "Motorplay", kind: "streaming" },
+    ],
+    source: "https://www.solotc.com.ar/horarios-tv-cronograma-fecha-6-tc-pick-up-la-plata-2026/",
+  },
+  gt3: {
+    items: [{ name: "GT World (YouTube, gratis)", kind: "youtube", url: "https://www.youtube.com/@GTWorld" }],
+    source: "https://www.dailysportscar.com/2026/05/31/live-stream-gt-world-challenge-europe-monza.html",
+  },
   "zonal-bsas": { items: [] },
 };
