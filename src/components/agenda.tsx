@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import type { FeedItem } from "@/lib/data";
 import { dayKey, fmtDayNum, fmtWeekday, sessionState, sessionTime } from "@/lib/format";
 import type { Scope } from "@/lib/types";
-import { Code, SectionTitle, StateTag } from "./pista";
+import { CategoryLabel, SectionTitle, StateTag } from "./pista";
 
 const FILTERS: { id: Scope | "all"; label: string }[] = [
   { id: "all", label: "Todo" },
@@ -13,6 +13,13 @@ const FILTERS: { id: Scope | "all"; label: string }[] = [
   { id: "internacional", label: "Internacional" },
   { id: "zonal", label: "Zonales" },
 ];
+
+/** Agrupa las sesiones por fecha de cada categoría, en el orden en que arrancan (como las ligas en un fixture). */
+function byEvent(rows: FeedItem[]) {
+  const groups = new Map<string, FeedItem[]>();
+  for (const row of rows) groups.set(row.event.id, [...(groups.get(row.event.id) ?? []), row]);
+  return [...groups.values()];
+}
 
 export function Agenda({ items, days, today, now }: { items: FeedItem[]; days: { key: string; iso: string }[]; today: string; now: string }) {
   const [day, setDay] = useState(days.some((d) => d.key === today) ? today : days[0]?.key);
@@ -42,23 +49,27 @@ export function Agenda({ items, days, today, now }: { items: FeedItem[]; days: {
       )}
 
       <div className="schedule">
-        {rows.map(({ session, event, series }) => {
-          const state = sessionState(session, now);
+        {byEvent(rows).map((group) => {
+          const { event, series } = group[0];
           return (
-            <Link key={session.id} href={`/eventos/${event.id}`} className={`schedule-row list-link${state.kind === "live" ? " current" : ""}`}>
-              <time dateTime={session.start} title={session.timeKnown === false ? "Horario a confirmar" : undefined}>
-                {sessionTime(session)}
-              </time>
-              <Code series={series} />
-              <div>
-                <strong>{series.name}</strong>
-                <span>
-                  {session.name} · {event.circuit.city}
-                </span>
-              </div>
-              <b className="channel">{event.broadcasts[0]?.name ?? "Sin datos de transmisión"}</b>
-              <StateTag kind={state.kind}>{state.label}</StateTag>
-            </Link>
+            <div key={event.id} className="agenda-group" style={{ "--cat": series.color } as CSSProperties}>
+              <Link href={`/eventos/${event.id}`} className="agenda-group-head list-link">
+                <CategoryLabel series={series} detail={`${event.circuit.city} · Fecha ${event.round}`} />
+                <span className="channel">{event.broadcasts[0]?.name ?? "Sin datos de transmisión"}</span>
+              </Link>
+              {group.map(({ session }) => {
+                const state = sessionState(session, now);
+                return (
+                  <Link key={session.id} href={`/eventos/${event.id}`} className={`schedule-row list-link${state.kind === "live" ? " current" : ""}`}>
+                    <time dateTime={session.start} title={session.timeKnown === false ? "Horario a confirmar" : undefined}>
+                      {sessionTime(session)}
+                    </time>
+                    <strong>{session.name}</strong>
+                    <StateTag kind={state.kind}>{state.label}</StateTag>
+                  </Link>
+                );
+              })}
+            </div>
           );
         })}
         {rows.length === 0 && (

@@ -32,6 +32,17 @@ export function Code({ series }: { series: Pick<Series, "code" | "color" | "name
   );
 }
 
+/** Categoría legible de un vistazo: sello de color + nombre. Va siempre primero en cualquier bloque. */
+export function CategoryLabel({ series, detail }: { series: Pick<Series, "code" | "color" | "name">; detail?: ReactNode }) {
+  return (
+    <span className="cat-label">
+      <Code series={series} />
+      <b>{series.name}</b>
+      {detail && <span>{detail}</span>}
+    </span>
+  );
+}
+
 export function CatMark({ series }: { series: Pick<Series, "code" | "color" | "name"> }) {
   return (
     <span className="cat-mark" style={{ background: series.color }} title={series.name}>

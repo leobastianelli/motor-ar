@@ -1,6 +1,7 @@
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { Agenda } from "@/components/agenda";
-import { CatMark, Code, SectionTitle, StateTag } from "@/components/pista";
+import { CatMark, CategoryLabel, Code, SectionTitle, StateTag } from "@/components/pista";
 import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, ms, weekendWindow } from "@/lib/data";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime, minutesLeft, surname } from "@/lib/format";
 
@@ -20,7 +21,6 @@ export default async function Home() {
     status: season.getRunnerStatus(driver, now),
     standing: season.getStandingPosition(driver),
   }));
-  const [feature, ...lines] = runners;
 
   const podium = season.getRecentResults(now, "nacional")[0];
   const [highlight, ...notes] = season.getArgentineHighlights(now);
@@ -33,11 +33,14 @@ export default async function Home() {
     return s.timeKnown === false ? day : `${day} ${fmtTime(s.start)}`;
   };
   const first = items[0];
-  const status = live
-    ? `En vivo: ${live.series.short} · ${live.session.name}`
-    : first
-      ? `Arranca ${when(first.session)}: ${first.series.short} · ${first.session.name}`
-      : "Sin carreras cargadas";
+  const lead = live ?? first;
+  const status = lead ? (
+    <>
+      {live ? "En vivo" : `Arranca ${when(lead.session)}`} <Code series={lead.series} /> {lead.session.name}
+    </>
+  ) : (
+    "Sin carreras cargadas"
+  );
   const nextLabel = nextArg && nextArg !== first ? when(nextArg.session) : undefined;
 
   // "Este finde" si lo que sigue cae en el fin de semana en curso (o el inminente), "Próximo finde" si cae en el siguiente.
@@ -115,44 +118,26 @@ export default async function Home() {
         </section>
       )}
 
-      {feature && (
+      {runners.length > 0 && (
         <section className="section-block nuestros" aria-labelledby="nuestros-title">
           <SectionTitle id="nuestros-title" title="Los nuestros">
             <Link href="/pilotos">Ver todos</Link>
           </SectionTitle>
-          <div className="arg-runners">
-            <article className="runner-feature">
-              <Link href={`/pilotos/${feature.driver.slug}`} className="runner-number" aria-label={feature.driver.name}>
-                {feature.driver.number ?? "—"}
-              </Link>
-              <div>
-                <p className="series">
-                  {feature.driver.name} · {feature.series.name}
+          {/* Mismo orden de lectura en cada tarjeta: categoría → piloto → qué pasó. */}
+          <div className="runner-cards">
+            {runners.map((r) => (
+              <Link key={r.driver.slug} href={`/pilotos/${r.driver.slug}`} className="runner-card list-link" style={{ "--cat": r.series.color } as CSSProperties}>
+                <CategoryLabel series={r.series} />
+                <strong className="runner-name">
+                  {r.driver.name}
+                  {r.driver.number && <span>#{r.driver.number}</span>}
+                </strong>
+                <p className="runner-status">
+                  <StateTag kind={r.status.state}>{r.status.stateLabel}</StateTag>
+                  <b>{r.status.headline}</b>
                 </p>
-                <h3>
-                  <Link href={feature.status.href} className="list-link">
-                    {feature.status.headline}
-                  </Link>
-                </h3>
-                {feature.standing && (
-                  <p>
-                    Va {feature.standing.position}.º en el campeonato con {feature.standing.points} puntos.
-                  </p>
-                )}
-              </div>
-              <StateTag kind={feature.status.state}>{feature.status.stateLabel}</StateTag>
-            </article>
-            {lines.map((r) => (
-              <Link key={r.driver.slug} href={`/pilotos/${r.driver.slug}`} className="runner-line list-link">
-                <b>{r.driver.number ?? "—"}</b>
-                <div>
-                  <strong>{r.driver.name}</strong>
-                  <span>
-                    {r.series.name} · {r.status.detail || r.driver.team}
-                  </span>
-                </div>
-                <p>
-                  <StateTag kind={r.status.state}>{r.status.stateLabel}</StateTag> {r.status.headline}
+                <p className="runner-meta">
+                  {[r.status.detail, r.standing && `${r.standing.position}.º en el campeonato · ${r.standing.points} pts`].filter(Boolean).join(" · ")}
                 </p>
               </Link>
             ))}
@@ -224,9 +209,7 @@ export default async function Home() {
             <div className="result-notes">
               {notes.slice(0, 2).map((n) => (
                 <Link key={`${n.session.id}-${n.row.driver}`} href={`/eventos/${n.event.id}`}>
-                  <span>
-                    {n.series.name} · {n.event.circuit.city}
-                  </span>
+                  <CategoryLabel series={n.series} detail={n.event.circuit.city} />
                   <strong>
                     {surname(n.row.driver)} terminó {n.row.pos}.º
                   </strong>
@@ -247,22 +230,13 @@ export default async function Home() {
             const s = getSeries(e.seriesId)!;
             const date = e.sessions.at(-1)!.start;
             return (
-              <article key={e.id}>
+              <Link key={e.id} href={`/eventos/${e.id}`} className="next-card list-link" style={{ "--cat": s.color } as CSSProperties}>
+                <CategoryLabel series={s} />
+                <strong>{e.circuit.city}</strong>
                 <time dateTime={date}>
-                  <b>{fmtDayNum(date).padStart(2, "0")}</b> {fmtMonthShort(date)}
+                  {fmtDayShort(date)} · Fecha {e.round}
                 </time>
-                <Code series={s} />
-                <div>
-                  <strong>
-                    <Link href={`/eventos/${e.id}`} className="list-link">
-                      {e.circuit.city}
-                    </Link>
-                  </strong>
-                  <span>
-                    {s.name} · Fecha {e.round}
-                  </span>
-                </div>
-              </article>
+              </Link>
             );
           })}
         </div>

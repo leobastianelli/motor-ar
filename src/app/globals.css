@@ -79,6 +79,51 @@
 
 /* ——— Aire: la jerarquía la resuelven espacio, tamaño y peso; las líneas quedan sólo donde ordenan datos ——— */
 :root{--rule:rgba(16,18,19,.09);--rule-inverse:rgba(255,255,255,.1)}
+/* ——— Categoría primero: sello + nombre encabezan cada bloque ——— */
+button{color:inherit;font-family:inherit}
+.cat-label{display:inline-flex;align-items:center;gap:10px;min-width:0}
+.cat-label .code{height:26px;min-width:40px;font-size:14px;flex:none}
+.cat-label b{font-size:15px;font-weight:800;white-space:nowrap}
+.cat-label>span:last-child:not(.code){font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.weekend-head .lede .code{height:20px;min-width:32px;font-size:11px;margin:0 2px;vertical-align:1px}
+/* Agenda agrupada por fecha de cada categoría */
+.agenda-group{margin-top:28px}
+.agenda-group:first-child{margin-top:8px}
+.agenda-group-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 0 10px;border-bottom:3px solid var(--cat,var(--ink))}
+/* Franja del color de la categoría: se reconoce de reojo, sin leer */
+.runner-card,.next-card{box-shadow:inset 5px 0 0 var(--cat,var(--ink));padding-left:24px}
+.agenda-group-head .channel{font-size:13px;font-weight:650;color:var(--muted);white-space:nowrap}
+.agenda .schedule-row{grid-template-columns:90px 1fr auto;min-height:56px;gap:16px;padding:8px 0}
+.agenda .schedule-row time{font-size:22px}
+.agenda .schedule-row strong{font-size:16px;font-weight:650}
+.agenda .schedule-row>.state{grid-column:auto;justify-self:end;align-self:center}
+.agenda .schedule-row.current{padding-left:12px}
+/* Lo que viene */
+.next-weeks .date-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.next-card{display:flex;flex-direction:column;gap:8px;padding:18px 20px;background:#fff;border-radius:2px}
+.next-card strong{font-size:22px;font-weight:850;font-stretch:90%}
+.next-card time{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
+.result-notes .cat-label{margin-bottom:6px}
+.result-notes .cat-label b{color:#fff}
+.result-notes .cat-label>span:last-child:not(.code){color:#aeb3b4}
+@media(max-width:800px){.next-weeks .date-strip{grid-template-columns:1fr;gap:12px}}
+/* Los nuestros: tarjetas iguales */
+.runner-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.runner-card{display:flex;flex-direction:column;gap:10px;padding:18px 20px;background:#fff;border-radius:2px}
+.runner-name{font-size:26px;font-weight:850;font-stretch:90%;letter-spacing:-.5px;line-height:1.05}
+.runner-name span{margin-left:8px;font-size:15px;font-weight:650;color:var(--muted);letter-spacing:0}
+.runner-status{display:flex;align-items:center;gap:10px;margin:0}
+.runner-status b{font-size:18px;font-variant-numeric:tabular-nums}
+.runner-meta{margin:0;font-size:14px;color:var(--muted)}
+.runner-card:hover .runner-name{text-decoration:underline}
+@media(max-width:800px){
+  .menu-toggle{color:var(--ink)}
+  .agenda .schedule-row{grid-template-columns:64px 1fr auto;gap:10px}
+  .agenda .schedule-row time{font-size:19px}
+  .agenda-group-head .channel{display:none}
+  .runner-cards{gap:12px}
+  .runner-name{font-size:23px}
+}
 /* Cabecera de la home: una franja de datos, no un cartel */
 .weekend-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 32px;min-height:0;padding:36px max(28px,calc((100vw - 1240px)/2)) 0}
 .weekend-head h1{font-size:52px;line-height:1;letter-spacing:-2px;margin:0;white-space:nowrap}
