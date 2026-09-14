@@ -1,10 +1,11 @@
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { drivers } from "@/data/drivers";
 import history from "@/data/history.json";
+import manualOverrides from "@/data/manual-overrides.json";
 import { series, seriesById } from "@/data/series";
 import { dayKey, fmtDayShort, fmtTime, sessionStatus, type SessionStatus, type StateKind } from "./format";
 import { loadRawSeason, type RawSeason } from "./season-data";
-import type { CategoryHistory, Driver, RaceEvent, ResultRow, Series, Session, StandingRow } from "./types";
+import type { Broadcast, CategoryHistory, Driver, RaceEvent, ResultRow, Series, Session, StandingRow } from "./types";
 
 // Capa de acceso a datos. Lo estático (categorías, pilotos, archivo) se lee directo; la temporada se carga con
 // getSeason(), que en producción se mantiene al día desde las fuentes.
@@ -85,12 +86,36 @@ type RawEvent = Omit<RaceEvent, "broadcasts" | "sessions"> & {
   sessions: (Omit<Session, "results"> & { results?: (Omit<ResultRow, "gap"> & { gap?: string })[] })[];
 };
 
+type SessionPatch = Partial<RawEvent["sessions"][number]> & Pick<Session, "kind" | "name">;
+interface ManualOverride {
+  name?: string;
+  broadcasts?: Broadcast[];
+  sessions?: SessionPatch[];
+}
+const OVERRIDES = ((manualOverrides as unknown as { events?: Record<string, ManualOverride> }).events ?? {}) as Record<string, ManualOverride>;
+
+/** Carga manual (src/data/manual-overrides.json): completa o corrige una fecha sin tocar las fuentes. */
+function applyOverride(e: RawEvent): RawEvent {
+  const o = OVERRIDES[e.id];
+  if (!o) return e;
+  const key = (s: { kind: string; name: string }) => `${s.kind}|${normalize(s.name)}`;
+  const sessions = [...e.sessions];
+  for (const patch of o.sessions ?? []) {
+    const i = sessions.findIndex((s) => key(s) === key(patch));
+    if (i >= 0) sessions[i] = { ...sessions[i], ...patch };
+    else sessions.push({ id: `${e.id}-manual-${sessions.length + 1}`, start: sessions[0]?.start ?? "", durationMin: 30, timeKnown: false, ...patch });
+  }
+  sessions.sort((a, b) => ms(a.start) - ms(b.start));
+  return { ...e, name: o.name ?? e.name, sessions };
+}
+
 export function createSeason(raw: RawSeason) {
   const events: RaceEvent[] = (raw.events as RawEvent[])
     .filter((e) => seriesById[e.seriesId])
+    .map(applyOverride)
     .map((e) => ({
       ...e,
-      broadcasts: broadcastsBySeries[e.seriesId]?.items ?? [],
+      broadcasts: OVERRIDES[e.id]?.broadcasts ?? broadcastsBySeries[e.seriesId]?.items ?? [],
       sessions: e.sessions.map((s) => ({
         ...s,
         results: s.results?.map((r) => ({ ...r, gap: r.gap ?? "", driverSlug: slugFor(r.driver) })),
@@ -157,6 +182,15 @@ export function createSeason(raw: RawSeason) {
     failures: raw.failures ?? [],
     getAllEvents: () => events,
     getEvent: (id: string) => events.find((e) => e.id === id),
+
+    /** Otras categorías que corren en el mismo lugar ese fin de semana (p. ej. TC Pista, TC Mouras y Pick Up junto al TC). */
+    getSiblingEvents(event: RaceEvent) {
+      const lastDay = (e: RaceEvent) => ms(`${dayKey(e.sessions.at(-1)!.start)}T12:00:00-03:00`);
+      const city = normalize(event.circuit.city);
+      return events
+        .filter((e) => e.id !== event.id && normalize(e.circuit.city) === city && Math.abs(lastDay(e) - lastDay(event)) <= 86400000)
+        .sort((a, b) => series.findIndex((s) => s.id === a.seriesId) - series.findIndex((s) => s.id === b.seriesId));
+    },
     getStandings,
     getSeasonMeta: (seriesId: string): SeasonMeta => meta[seriesId] ?? {},
     getEventsForSeries,

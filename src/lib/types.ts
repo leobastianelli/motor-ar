@@ -43,6 +43,8 @@ export interface ResultRow {
   gap: string;
   points?: number;
   grid?: number;
+  /** Número del auto, si la fuente lo publica. */
+  number?: string;
   /** Posición tal como la publica la fuente ("R" = abandono, etc.). */
   positionText?: string;
   status?: string;
@@ -60,6 +62,8 @@ export interface Session {
   timeSources?: { name: string; url: string; start: string }[];
   durationMin: number;
   results?: ResultRow[];
+  /** Documento oficial del que salen los resultados de esta sesión. */
+  resultsSource?: { name: string; url: string };
 }
 
 export interface Broadcast {

@@ -152,6 +152,42 @@ Corre en cada actualización de la temporada (producción y `npm run sync:season
 
 Fuentes evaluadas y descartadas por ahora: Carburando (sin feed, sitemap ni buscador para descubrir notas), Campeones (el cronograma de TC2000 viene como imagen; robots.txt pide 60 s entre pedidos). TN APAT y TC2000 siguen sin una fuente de horarios en texto.
 
+## Resultados oficiales de la ACTC (tiempos.actc.org.ar)
+
+`src/lib/sources/actc-timing.mjs` lee el portal de tiempos de la ACTC. Su robots.txt no restringe el acceso.
+
+- **Listado** (`/resultados`, caché 15 min): toda la temporada de TC, TC Pista, TC Mouras, TC Pista Mouras, TC Pick Up y TC Pista Pick Up, agrupada por categoría y fecha.
+- **Cada sesión** (`/resultados/{id}/ver`): tabla completa con posición, número, piloto, marca, tiempo y vueltas. Las diferencias se calculan acá, porque las columnas del portal no siempre coinciden con su encabezado.
+- **Qué se toma:** entrenamientos, clasificación, series y final. Se ignoran los parciales y las grillas. Si hay versión rectificada, vale esa.
+- **Cómo se asigna a una fecha:** misma categoría y documentos publicados hasta 3 días antes del último día de la fecha.
+- **Nombres:** se buscan en el campeonato y en otras fuentes. Si no aparecen, se da vuelta "APELLIDO NOMBRE" cuando hay solo dos palabras.
+- **Volumen de pedidos:** en producción solo se consultan las fechas de los últimos 10 días; las anteriores salen de la instantánea. `npm run sync:season` recorre la temporada completa, con 0,7 s entre páginas.
+
+Las categorías que acompañan al TC salen del calendario de actc.org.ar (`/tcm`, `/tcpm`, `/tcpk`, `/tcppk`). Sus horarios salen de las mismas notas de cronograma que TC y TC Pista. La página de cada fecha muestra "Corren el mismo finde", con las otras categorías del mismo lugar y fin de semana.
+
+## Carga manual
+
+`src/data/manual-overrides.json` completa o corrige cualquier fecha sin tocar las fuentes:
+
+```json
+{
+  "events": {
+    "tc-2026-12": {
+      "broadcasts": [{ "name": "Canal 9", "kind": "tv" }],
+      "sessions": [
+        { "kind": "practica", "name": "1° Entrenamiento", "start": "2026-10-03T10:00:00-03:00", "timeKnown": true },
+        { "kind": "final", "name": "Final", "results": [{ "pos": 1, "driver": "Nombre Apellido", "team": "Marca", "gap": "" }] }
+      ]
+    }
+  }
+}
+```
+
+- El id de la fecha es el de la URL (`/eventos/tc-2026-12`).
+- Cada sesión se reconoce por `kind` + `name`. Si existe, se actualizan solo los campos cargados; si no, se agrega.
+- `broadcasts` reemplaza la lista de dónde verlo.
+- Se aplica en cada carga, tanto con datos en vivo como con la instantánea. Hay que hacer commit y push para que llegue a producción.
+
 ## Fotos
 
 `npm run sync:photos` descarga desde Wikimedia Commons sólo imágenes CC BY, CC BY-SA, CC0 o dominio público y guarda autor, licencia y enlace en `src/data/photos.json`. Cada foto muestra su crédito en el sitio. Las ilustraciones generadas del mockup se quitaron.

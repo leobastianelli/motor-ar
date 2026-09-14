@@ -1,0 +1,4 @@
+{
+  "_ayuda": "Carga manual. Pisa o completa lo que traen las fuentes automáticas. En 'events', la clave es el id de la fecha (se ve en la URL: /eventos/tc-2026-11). Cada sesión se reconoce por 'kind' + 'name' (p. ej. practica + '1° Entrenamiento', clasificacion + 'Clasificación', serie + 'Serie 1', final + 'Final'): si existe se actualizan sólo los campos que pongas; si no existe, se agrega. 'broadcasts' reemplaza la lista de dónde verlo. Horarios en ISO con -03:00. Ver docs/fuentes-de-datos.md.",
+  "events": {}
+}

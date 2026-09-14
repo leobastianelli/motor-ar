@@ -4,19 +4,20 @@ import { actcOfficialSchedules } from "./actc-official.mjs";
 import { apatSeason } from "./apat.mjs";
 import { f1Season } from "./f1.mjs";
 import { f2Season } from "./f2.mjs";
+import { actcTiming, keepPreviousTiming, TIMING_SERIES } from "./actc-timing.mjs";
 import { applySchedules, buildConsensus, solotcNotes } from "./schedule-notes.mjs";
 import { tc2000Season } from "./tc2000.mjs";
 
 const SOURCES = [
   ["F1", ["f1"], f1Season],
   ["F2", ["f2"], f2Season],
-  ["TC y TC Pista", ["tc", "tc-pista"], actcSeason],
+  ["ACTC", ["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up"], actcSeason],
   ["TN APAT", ["tn"], apatSeason],
   ["TC2000", ["tc2000"], tc2000Season],
 ];
 
 /** Categorías cuyos horarios salen de notas de cronograma (ver schedule-notes.mjs). */
-const SCHEDULED_SERIES = new Set(["tc", "tc-pista"]);
+const SCHEDULED_SERIES = new Set(["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up"]);
 
 /**
  * Suma horarios a las fechas nacionales desde notas de cronograma (SoloTC) verificadas con el PDF oficial de la ACTC.
@@ -90,6 +91,22 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
   const scheduled = await withSchedules(io, events, previous, failures);
   events = scheduled.events;
   meta.schedules = scheduled.meta;
+
+  // Resultados oficiales de cada sesión de la ACTC. Los nombres conocidos (campeonato y otras fuentes) ordenan cómo se muestran.
+  // Sólo nombres del TC y sus categorías (Wikipedia los escribe "Nombre Apellido"; otras fuentes los dan vuelta).
+  const knownNames = [
+    ...(standings.tc ?? []).map((r) => r.driver),
+    ...events.filter((e) => TIMING_SERIES.has(e.seriesId)).flatMap((e) => e.sessions.flatMap((s) => s.results?.map((r) => r.driver) ?? [])),
+  ];
+  try {
+    const timing = await actcTiming(io, events, previous, { windowDays: io.timingWindowDays ?? 10, delayMs: io.timingDelayMs ?? 400, knownNames });
+    events = timing.events;
+    meta.timing = timing.meta;
+  } catch (error) {
+    failures.push(`Tiempos ACTC: ${error.message} (se conservan los resultados anteriores)`);
+    events = keepPreviousTiming(events, previous);
+    meta.timing = previous.meta?.timing ?? null;
+  }
 
   events.sort((a, b) => new Date(a.sessions[0].start) - new Date(b.sessions[0].start));
   return { generatedAt: new Date().toISOString(), events, standings, meta, failures };

@@ -12,6 +12,15 @@ const decode = (s) =>
     .replace(/\s+/g, " ")
     .trim();
 
+/** Categorías de la ACTC con calendario propio, además del TC. */
+export const SUPPORT = [
+  { path: "tcp", seriesId: "tc-pista", prefix: "tcp", duration: 40 },
+  { path: "tcm", seriesId: "tc-mouras", prefix: "tcm", duration: 35 },
+  { path: "tcpm", seriesId: "tc-pista-mouras", prefix: "tcpm", duration: 30 },
+  { path: "tcpk", seriesId: "tc-pick-up", prefix: "tcpk", duration: 35 },
+  { path: "tcppk", seriesId: "tc-pista-pick-up", prefix: "tcppk", duration: 30 },
+];
+
 const titleCase = (s) => s.toLowerCase().replace(/(^|[\s-])([a-záéíóúñü])/g, (m, p, c) => p + c.toUpperCase());
 
 /** Fechas del calendario oficial de una categoría de la ACTC ("tc", "tcp", ...). */
@@ -113,36 +122,44 @@ export async function actcSeason(io) {
     };
   });
 
-  await io.sleep(1000);
-  let tcpEvents = [];
-  try {
-    tcpEvents = (await actcCalendar(io, "tcp")).map((c) => ({
-      id: `tcp-2026-${c.round}`,
-      seriesId: "tc-pista",
-      round: c.round,
-      name: `Fecha ${c.round} · ${c.name}`,
-      circuit: { name: c.circuit, city: c.city, country: "Argentina", flag: "AR", province: c.province },
-      sessions: [{ id: `tcp-2026-${c.round}-final`, kind: "final", name: "Final", start: dateOnly(2026, c.date.m, c.date.d), timeKnown: false, durationMin: 40 }],
-      source: "ACTC (calendario)",
-    }));
-  } catch {
-    tcpEvents = [];
+  // Las categorías que acompañan al TC: mismo formato de calendario en actc.org.ar.
+  const others = [];
+  for (const { path, seriesId, prefix, duration } of SUPPORT) {
+    await io.sleep(800);
+    try {
+      others.push(
+        ...(await actcCalendar(io, path)).map((c) => ({
+          id: `${prefix}-2026-${c.round}`,
+          seriesId,
+          round: c.round,
+          name: `Fecha ${c.round} · ${c.name}`,
+          circuit: { name: c.circuit, city: c.city, country: "Argentina", flag: "AR", province: c.province },
+          sessions: [{ id: `${prefix}-2026-${c.round}-final`, kind: "final", name: "Final", start: dateOnly(2026, c.date.m, c.date.d), timeKnown: false, durationMin: duration }],
+          source: "ACTC (calendario)",
+        })),
+      );
+    } catch {
+      // Si un calendario no responde, esa categoría conserva sus datos anteriores (ver season.mjs).
+    }
   }
 
-  // TC Pista corre junto al TC: si su calendario dice "A confirmar", se toma la sede de la fecha de TC del mismo día.
-  const tcByDay = new Map(tcEvents.map((e) => [e.sessions[0].start.slice(0, 10), e]));
-  for (const e of tcpEvents) {
-    const tc = tcByDay.get(e.sessions[0].start.slice(0, 10));
-    if (tc && /a\s+confirmar/i.test(`${e.name} ${e.circuit.city} ${e.circuit.name}`)) {
-      e.circuit = { ...tc.circuit };
-      e.name = `Fecha ${e.round} · ${tc.name.split(" · ").slice(1).join(" · ") || tc.circuit.city}`;
+  // Si un calendario dice "A confirmar", se toma la sede de otra categoría de la ACTC que corra ese mismo día.
+  const byDay = new Map();
+  for (const e of [...tcEvents, ...others]) {
+    if (!/a\s+confirmar/i.test(`${e.name} ${e.circuit.city} ${e.circuit.name}`)) byDay.set(e.sessions[0].start.slice(0, 10), byDay.get(e.sessions[0].start.slice(0, 10)) ?? e);
+  }
+  for (const e of others) {
+    const host = byDay.get(e.sessions[0].start.slice(0, 10));
+    if (host && host !== e && /a\s+confirmar/i.test(`${e.name} ${e.circuit.city} ${e.circuit.name}`)) {
+      e.circuit = { ...host.circuit };
+      e.name = `Fecha ${e.round} · ${host.name.split(" · ").slice(1).join(" · ") || host.circuit.city}`;
     }
   }
 
   const { playoff, regular } = wikiStandings(text);
   const standings = playoff.length ? playoff : regular;
   return {
-    events: [...tcEvents, ...tcpEvents],
+    events: [...tcEvents, ...others],
     standings: { tc: standings },
     meta: { tc: { standingsLabel: playoff.length ? "Copa de Oro" : "Etapa regular" } },
   };

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { getNow, getSeason, getSeries } from "@/lib/data";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtRange, fmtWeekday, sessionState, sessionStatus, sessionTime } from "@/lib/format";
-import type { Broadcast } from "@/lib/types";
+import type { Broadcast, ResultRow, Session } from "@/lib/types";
 
 export const revalidate = 60;
 
@@ -21,16 +22,52 @@ export async function generateMetadata(props: PageProps<"/eventos/[id]">): Promi
 const BROADCAST_KIND: Record<Broadcast["kind"], string> = { tv: "TV", streaming: "Streaming", youtube: "YouTube" };
 const RACE_KINDS = ["carrera", "final", "sprint", "serie"];
 
+const tag = (r: ResultRow) => (r.number ? `#${r.number}` : driverCode(r));
+
+function Ranking({ rows }: { rows: ResultRow[] }) {
+  return (
+    <div className="ranking">
+      {rows.map((r) => (
+        <div key={`${r.pos}-${r.driver}`} className={`rank-row${r.driverSlug ? " argentine" : ""}`}>
+          <b>{r.positionText ?? r.pos}</b>
+          <span className="driver-code">{tag(r)}</span>
+          <strong>
+            {r.driver}
+            {r.team && <small>{r.team}</small>}
+          </strong>
+          <time>{r.status ?? r.gap}</time>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function SourceLink({ session }: { session: Session }) {
+  if (!session.resultsSource) return null;
+  return (
+    <p className="results-source">
+      Fuente:{" "}
+      <a href={session.resultsSource.url} target="_blank" rel="noreferrer">
+        {session.resultsSource.name}
+      </a>
+    </p>
+  );
+}
+
 export default async function EventPage(props: PageProps<"/eventos/[id]">) {
-  const event = (await getSeason()).getEvent((await props.params).id);
+  const season = await getSeason();
+  const event = season.getEvent((await props.params).id);
   if (!event) notFound();
   const now = getNow();
   const series = getSeries(event.seriesId)!;
+  const siblings = season.getSiblingEvents(event);
 
   const byDay = Map.groupBy(event.sessions, (s) => dayKey(s.start));
-  const last = event.sessions.filter((s) => s.results?.length && sessionStatus(s, now) === "done").at(-1);
-  const rows = last?.results ?? [];
-  const isRace = last ? RACE_KINDS.includes(last.kind) : false;
+  // Todas las sesiones con resultados, de la más reciente a la primera.
+  const withResults = event.sessions.filter((s) => s.results?.length && sessionStatus(s, now) === "done").reverse();
+  const [latest, ...earlier] = withResults;
+  const rows = latest?.results ?? [];
+  const isRace = latest ? RACE_KINDS.includes(latest.kind) : false;
   const streamUrl = event.broadcasts.find((b) => b.url)?.url;
   const broadcastSource = broadcastsBySeries[event.seriesId]?.source;
   const timesUnknown = event.sessions.some((s) => s.timeKnown === false);
@@ -87,13 +124,11 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                                   : s.timeStatus === "tentative"
                                     ? `Horario según ${s.timeSources?.map((x) => x.name).join(", ")}`
                                     : `${s.durationMin} min estimados`)}
-                            {status === "done" && (top ? (s.id === last?.id ? <a href="#resultados">Terminó · ver resultados</a> : "Terminó") : "Terminó · sin resultados cargados")}
+                            {status === "done" && (top ? <a href={`#${s.id}`}>Terminó · ver resultados</a> : "Terminó · sin resultados cargados")}
                           </span>
                         </div>
                         {status === "done" && top ? (
-                          <b>
-                            {driverCode(top)} {top.gap}
-                          </b>
+                          <b className="session-winner">{top.driver}</b>
                         ) : (
                           <StateTag as="b" kind={state.kind}>
                             {state.label}
@@ -152,13 +187,34 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
         </aside>
       </section>
 
-      {last && rows.length > 0 && (
+      {siblings.length > 0 && (
+        <section className="section-block siblings">
+          <SectionTitle title="Corren el mismo finde" />
+          <div className="date-strip">
+            {siblings.map((e) => {
+              const s = getSeries(e.seriesId)!;
+              const finished = e.sessions.filter((x) => x.results?.length && sessionStatus(x, now) === "done").at(-1);
+              return (
+                <Link key={e.id} href={`/eventos/${e.id}`} className="next-card list-link" style={{ "--cat": s.color } as CSSProperties}>
+                  <CategoryLabel series={s} />
+                  <strong>{finished ? `${finished.name}: ganó ${finished.results![0].driver}` : `Fecha ${e.round}`}</strong>
+                  <time dateTime={e.sessions.at(-1)!.start}>
+                    {fmtDayShort(e.sessions.at(-1)!.start)} · {e.sessions.length} {e.sessions.length === 1 ? "sesión" : "sesiones"}
+                  </time>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      {latest && rows.length > 0 && (
         <section className="classification-wrap" id="resultados">
           <div className="section-block">
-            <SectionTitle title={last.name} inverse>
-              <time dateTime={last.start}>{fmtDayShort(last.start)}</time>
+            <SectionTitle title={latest.name} inverse>
+              <time dateTime={latest.start}>{fmtDayShort(latest.start)}</time>
             </SectionTitle>
-            <div className="session-result">
+            <div id={latest.id} className="session-result">
               <div className="pole">
                 <span>1</span>
                 <div>
@@ -181,21 +237,29 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
               </ol>
             </div>
             {rows.length > 3 && (
-              <details className="full-results" open={rows.slice(3).some((r) => r.driverSlug)}>
+              <details className="full-results" open>
                 <summary>
-                  Ver clasificación completa <span>{rows.length} pilotos</span>
+                  Clasificación completa <span>{rows.length} pilotos</span>
                 </summary>
-                <div className="ranking">
-                  {rows.slice(3).map((r) => (
-                    <div key={`${r.pos}-${r.driver}`} className={`rank-row${r.driverSlug ? " argentine" : ""}`}>
-                      <b>{r.pos}</b>
-                      <span className="driver-code">{driverCode(r)}</span>
-                      <strong>{r.driver}</strong>
-                      <time>{r.gap}</time>
-                    </div>
-                  ))}
-                </div>
+                <Ranking rows={rows.slice(3)} />
               </details>
+            )}
+            <SourceLink session={latest} />
+
+            {earlier.length > 0 && (
+              <div className="earlier-sessions">
+                <h3>Sesiones anteriores</h3>
+                {earlier.map((s) => (
+                  <details key={s.id} id={s.id} className="full-results">
+                    <summary>
+                      <strong>{s.name}</strong> · {fmtDayShort(s.start)} · 1.º {s.results![0].driver}
+                      <span>{s.results!.length} pilotos</span>
+                    </summary>
+                    <Ranking rows={s.results!} />
+                    <SourceLink session={s} />
+                  </details>
+                ))}
+              </div>
             )}
           </div>
         </section>

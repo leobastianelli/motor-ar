@@ -27,7 +27,8 @@ async function bytes(url) {
   return res.arrayBuffer();
 }
 
-const io = { text, bytes, json: async (url, options) => JSON.parse(await text(url, options)), wiki: (key) => text(wikiRawUrl(key)), sleep };
+// En el sincronizador se consultan los resultados de toda la temporada (en producción, sólo las fechas recientes).
+const io = { text, bytes, json: async (url, options) => JSON.parse(await text(url, options)), wiki: (key) => text(wikiRawUrl(key)), sleep, timingWindowDays: Number(process.env.TIMING_DAYS ?? 400), timingDelayMs: 700 };
 
 const OUTPUT = "src/data/season-2026.json";
 const previous = fs.existsSync(OUTPUT) ? JSON.parse(fs.readFileSync(OUTPUT, "utf8")) : undefined;

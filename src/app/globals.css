@@ -111,6 +111,28 @@ button{color:inherit;font-family:inherit}
 .event-id .cat-label b{font-size:20px;white-space:normal}
 .live-main .cat-label{margin-bottom:6px}
 .date-strip .next-card{min-width:0}
+/* Resultados de todas las sesiones de una fecha */
+.rank-row strong small{display:block;font-size:12px;font-weight:450;color:#aeb3b4}
+.rank-row.argentine strong small{color:inherit;opacity:.75}
+.results-source{margin:14px 0 0;font-size:13px;color:#aeb3b4}
+.results-source a{color:#fff}
+.earlier-sessions{margin-top:48px}
+.earlier-sessions h3{font-size:20px;margin:0 0 12px;color:#fff}
+.earlier-sessions .full-results+.full-results{margin-top:8px}
+.earlier-sessions summary strong{color:#fff}
+.siblings{padding-top:0}
+.session .session-winner{font-size:14px;font-weight:700;text-align:right}
+@media(max-width:800px){
+  .event-hero{display:flex;flex-direction:column;align-items:flex-start;gap:14px;min-height:0;padding:28px 16px 32px}
+  .event-hero h1{font-size:44px;line-height:.95}
+  .event-id{padding-top:0}
+  .event-id .cat-label{flex-direction:row;align-items:center}
+  .event-id .cat-label .code{height:28px;min-width:44px;font-size:15px}
+  .event-id .cat-label b{font-size:16px}
+  .event-meta{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .event-meta b{font-size:22px}
+  .session .session-winner{font-size:13px}
+}
 /* Lo que viene */
 .date-strip:has(.next-card){display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .next-card{display:flex;flex-direction:column;gap:8px;padding:18px 20px;background:#fff;border-radius:2px}
