@@ -35,7 +35,8 @@ export default function SourcesPage() {
       <section className="section-block legal">
         <p>
           Fierros junta información que publican las categorías, las federaciones y otras fuentes abiertas, y la ordena en hora argentina. No tiene relación
-          con ninguna categoría, federación, equipo ni piloto. Las marcas y nombres pertenecen a sus dueños. Si encontrás un error, avisanos.
+          con ninguna categoría, federación, equipo ni piloto. Las marcas y nombres pertenecen a sus dueños. Si encontrás un error, escribinos a{" "}
+          <a href="mailto:contacto@somosfierros.ar">contacto@somosfierros.ar</a>.
         </p>
 
         <SectionTitle title="Datos" />

@@ -47,11 +47,8 @@ export default function TermsPage() {
 
         <h2>Cambios y contacto</h2>
         <p>
-          Estos términos pueden cambiar; la versión vigente es la publicada en esta página. Para consultas o correcciones, escribí a través de{" "}
-          <a href="https://leobastianelli.dev" target="_blank" rel="noreferrer">
-            leobastianelli.dev
-          </a>
-          . Ver también la <Link href="/privacidad">Política de privacidad</Link>.
+          Estos términos pueden cambiar; la versión vigente es la publicada en esta página. Para consultas o correcciones, escribí a{" "}
+          <a href="mailto:contacto@somosfierros.ar">contacto@somosfierros.ar</a>. Ver también la <Link href="/privacidad">Política de privacidad</Link>.
         </p>
       </section>
     </>

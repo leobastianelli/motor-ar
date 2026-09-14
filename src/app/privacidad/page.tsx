@@ -47,11 +47,8 @@ export default function PrivacyPage() {
         <h2>Tus derechos y contacto</h2>
         <p>
           De acuerdo con la Ley 25.326 de Protección de Datos Personales, podés consultar, rectificar o pedir la eliminación de tus datos. Como Fierros no guarda
-          datos personales, en general no hay nada que borrar; igual podés escribir a través de{" "}
-          <a href="https://leobastianelli.dev" target="_blank" rel="noreferrer">
-            leobastianelli.dev
-          </a>
-          . Ver también los <Link href="/terminos">Términos de uso</Link>.
+          datos personales, en general no hay nada que borrar; igual podés escribir a{" "}
+          <a href="mailto:contacto@somosfierros.ar">contacto@somosfierros.ar</a>. Ver también los <Link href="/terminos">Términos de uso</Link>.
         </p>
       </section>
     </>
