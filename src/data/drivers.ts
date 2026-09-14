@@ -1,7 +1,7 @@
 import type { Driver } from "@/lib/types";
 
-// Pilotos argentinos seguidos por el sitio. Números y equipos 2026 verificados contra las fuentes
-// de temporada (Jolpica-F1, Wikipedia, ACTC/APAT). Las estadísticas se calculan desde los datos, no se escriben acá.
+// Pilotos argentinos destacados, con ficha completa. Nacimiento, títulos e hitos verificados en Wikipedia en español;
+// números, equipos y marcas 2026 tomados de las fuentes de temporada. Las estadísticas se calculan desde los datos.
 export const drivers: Driver[] = [
   {
     slug: "franco-colapinto",
@@ -21,13 +21,28 @@ export const drivers: Driver[] = [
     number: 22,
     seriesId: "f2",
     team: "Van Amersfoort Racing",
-    hometown: "Argentina",
-    born: "(a verificar)",
+    hometown: "Ingeniero Maschwitz, Buenos Aires",
+    born: "06/12/2000",
     tagline: "Campeón en Le Mans y de vuelta en los monoplazas camino a la F1.",
     career: [
       { year: "2022", series: "Fórmula 3 FIA", team: "Van Amersfoort Racing", highlight: "Temporada en la F3 de la FIA." },
       { year: "2023", series: "WEC · GTE Am", team: "Corvette Racing", highlight: "Campeón del mundo de la clase y ganador en las 24 Horas de Le Mans." },
+      { year: "2024", series: "24 Horas de Le Mans · LMP2 Pro-Am", team: "", highlight: "Segunda victoria de clase en Le Mans." },
       { year: "2026", series: "Fórmula 2", team: "Van Amersfoort Racing", highlight: "Temporada completa en la F2 con el número 22." },
+    ].reverse(),
+  },
+  {
+    slug: "ignacio-montenegro",
+    name: "Ignacio Montenegro",
+    seriesId: "gt3",
+    team: "Team WRT",
+    hometown: "Rada Tilly, Chubut",
+    born: "23/11/2004",
+    tagline: "Campeón de TCR South America y hoy en el GT World Challenge Europe.",
+    career: [
+      { year: "2020", series: "F4 España", team: "MP Motorsport", highlight: "Primer año en monoplazas en Europa." },
+      { year: "2023", series: "TCR South America", team: "Squadra Martino", highlight: "Campeón con cinco victorias; además, tercero en el TC2000." },
+      { year: "2026", series: "GT World Challenge Europe", team: "Team WRT", highlight: "Temporada en el Sprint Cup, con un segundo puesto en Magny-Cours." },
     ].reverse(),
   },
   {
@@ -38,12 +53,95 @@ export const drivers: Driver[] = [
     seriesId: "tc",
     team: "Chevrolet Camaro ZL1",
     hometown: "Arrecifes, Buenos Aires",
-    born: "(a verificar)",
+    born: "19/01/1990",
     tagline: "Pentacampeón del Turismo Carretera; pasó por IndyCar y volvió a casa.",
     career: [
-      { year: "2010–25", series: "Turismo Carretera", team: "Chevrolet", highlight: "Campeón en 2010, 2017, 2018, 2019 y 2025." },
+      { year: "2010–25", series: "Turismo Carretera", team: "Chevrolet", highlight: "Campeón en 2010 (el más joven de la historia), 2017, 2018, 2019 y 2025." },
+      { year: "2010–17", series: "Top Race V6", team: "Sportteam", highlight: "Siete títulos." },
+      { year: "2016 y 2021", series: "Súper TC2000", team: "Chevrolet YPF", highlight: "Dos títulos." },
       { year: "2023–24", series: "IndyCar", team: "Juncos Hollinger Racing", highlight: "Dos temporadas en IndyCar con un equipo argentino." },
       { year: "2026", series: "TC · TN APAT", team: "Chevrolet", highlight: "Corre el Turismo Carretera con el número 1 y la Clase 3 del TN." },
+    ].reverse(),
+  },
+  {
+    slug: "mariano-werner",
+    name: "Mariano Werner",
+    number: 11,
+    seriesId: "tc",
+    team: "Ford",
+    hometown: "Paraná, Entre Ríos",
+    born: "30/12/1988",
+    tagline: "Tricampeón del Turismo Carretera con Ford y ganador de la última fecha en San Luis.",
+    career: [
+      { year: "2006 y 2007", series: "Fórmula Renault Argentina", team: "Werner Competición", highlight: "Bicampeón; en 2007 ganó nueve carreras, récord de la categoría." },
+      { year: "2017", series: "Turismo Nacional · Clase 3", team: "", highlight: "Campeón." },
+      { year: "2020, 2021 y 2023", series: "Turismo Carretera", team: "Ford", highlight: "Tres títulos." },
+      { year: "2023", series: "TC Pick Up", team: "", highlight: "Campeón." },
+    ].reverse(),
+  },
+  {
+    slug: "matias-rossi",
+    name: "Matías Rossi",
+    number: 117,
+    seriesId: "tc",
+    team: "Toyota",
+    hometown: "Del Viso, Buenos Aires",
+    born: "02/04/1984",
+    tagline: "Seis veces campeón del TC2000 y piloto oficial de Toyota.",
+    career: [
+      { year: "2006 – 2025", series: "TC2000 · Súper TC2000", team: "", highlight: "Campeón en 2006, 2007, 2011, 2013, 2020 y 2025; el bicampeón más joven de la categoría." },
+      { year: "2014", series: "Turismo Nacional · Clase 3", team: "", highlight: "Campeón." },
+      { year: "2019 y 2020", series: "Top Race", team: "", highlight: "Bicampeón." },
+      { year: "2026", series: "Turismo Carretera · TC2000", team: "Toyota Gazoo Racing Argentina", highlight: "Piloto oficial de Toyota en las dos categorías." },
+    ].reverse(),
+  },
+  {
+    slug: "julian-santero",
+    name: "Julián Santero",
+    number: 68,
+    seriesId: "tc",
+    team: "Alifraco Sport",
+    hometown: "Guaymallén, Mendoza",
+    born: "21/10/1993",
+    tagline: "Mendocino campeón en fórmulas y en el TC Mouras, protagonista del TC y del TN.",
+    career: [
+      { year: "2013", series: "Fórmula Renault Argentina", team: "", highlight: "Campeón; además, subcampeón del TC 2000." },
+      { year: "2014", series: "TC Mouras", team: "", highlight: "Campeón: su primer título en turismos." },
+      { year: "2017", series: "Turismo Carretera", team: "Coiro Dole Racing", highlight: "Primera victoria, en Viedma, en su año de debut." },
+      { year: "2026", series: "Turismo Carretera · TN", team: "Alifraco Sport · Toyota Gazoo Racing", highlight: "Corre el TC y el Turismo Nacional." },
+    ].reverse(),
+  },
+  {
+    slug: "leonel-pernia",
+    name: "Leonel Pernía",
+    aliases: ["Leonel Pernia"],
+    number: 144,
+    seriesId: "tn",
+    team: "Clase 3",
+    hometown: "Tandil, Buenos Aires",
+    born: "27/09/1975",
+    tagline: "Campeón del TC2000 y del Turismo Nacional; exfutbolista y Maestro de Maestros.",
+    career: [
+      { year: "2009", series: "Master de Pilotos", team: "", highlight: "Maestro de Maestros." },
+      { year: "2009 – 2015", series: "TC2000", team: "", highlight: "Cinco subcampeonatos antes del título." },
+      { year: "2018", series: "Turismo Nacional", team: "", highlight: "Campeón." },
+      { year: "2019", series: "TC2000", team: "", highlight: "Campeón." },
+    ].reverse(),
+  },
+  {
+    slug: "facundo-ardusso",
+    name: "Facundo Ardusso",
+    number: 83,
+    seriesId: "tc",
+    team: "Ford",
+    hometown: "Las Parejas, Santa Fe",
+    born: "24/06/1988",
+    tagline: "Campeón de Fórmula Renault y ganador en TC, TC2000 y TN.",
+    career: [
+      { year: "2009", series: "Fórmula Renault Argentina", team: "", highlight: "Campeón en forma anticipada." },
+      { year: "2014", series: "Turismo Carretera", team: "", highlight: "Primera victoria en la categoría." },
+      { year: "2014", series: "Súper TC2000", team: "Fiat Petronas", highlight: "Primera victoria, en Termas de Río Hondo." },
+      { year: "2026", series: "TC · TN · TC Pick Up", team: "", highlight: "Corre las tres categorías con el número 83." },
     ].reverse(),
   },
 ];

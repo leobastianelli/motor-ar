@@ -8,6 +8,7 @@ import { colapintoData, finishLabel, quotes, raceCode, raceName, recentMilestone
 import { getAllDrivers, getDriver, getIndexedDriver, getIndexedDrivers, getNow, getSeason, getSeries, type Season } from "@/lib/data";
 import { fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/format";
 import { getPhoto } from "@/lib/photos";
+import { driverKey } from "@/lib/sources/driver-index.mjs";
 import type { Driver } from "@/lib/types";
 
 export const revalidate = 60;
@@ -51,11 +52,22 @@ async function IndexedDriverPage({ slug }: { slug: string }) {
         </div>
       </section>
 
+      <SeasonBlocks keys={entry.keys ?? [entry.key]} season={season} />
+    </>
+  );
+}
+
+/** Temporada de un piloto desde los resultados: un bloque por categoría con estadísticas y cada sesión, fecha por fecha. */
+function SeasonBlocks({ keys, season }: { keys: string[]; season: Season }) {
+  const stats = season.getDriverSeason({ key: keys[0], keys });
+  const seriesIds = Object.keys(stats.bySeries).sort((a, b) => stats.bySeries[b].races - stats.bySeries[a].races);
+  return (
+    <>
       {seriesIds.map((id) => {
         const series = getSeries(id);
         const s = stats.bySeries[id];
         if (!series || !s) return null;
-        const standing = season.getDriverStanding(id, entry.keys ?? [entry.key]);
+        const standing = season.getDriverStanding(id, keys);
         const byEvent = Map.groupBy(
           stats.results.filter((r) => r.event.seriesId === id),
           (r) => r.event.id,
@@ -321,7 +333,8 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
       { label: "Temporada", value: "2026" },
       { label: "Campeonato", value: standing ? `${standing.position}.º` : "—", note: label },
       { label: "Puntos", value: standing ? String(standing.points) : "—" },
-      { label: "Victorias", value: standing?.wins === undefined ? "—" : String(standing.wins) },
+      // Victorias contadas desde los resultados de la temporada, igual que en los bloques de abajo.
+      { label: "Victorias", value: String(season.getDriverSeason({ key: "", keys: [driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n)) }).bySeries[driver.seriesId]?.wins ?? 0) },
       { label: "Categoría", value: series.short, note: driver.team },
     ];
   }
@@ -362,6 +375,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
       </section>
 
       {data && <ColapintoSections data={data} />}
+      {!data && <SeasonBlocks keys={[driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n))} season={season} />}
 
       {stages.length > 0 && (
         <section className="career">
