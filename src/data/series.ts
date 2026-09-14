@@ -11,7 +11,7 @@ export const series: Series[] = [
   { id: "tc-pista-mouras", name: "TC Pista Mouras", short: "TCP Mouras", code: "TCPM", org: "ACTC", scope: "nacional", color: "#0e7c7b" },
   { id: "tc-pick-up", name: "TC Pick Up", short: "TC Pick Up", code: "TCPK", org: "ACTC", scope: "nacional", color: "#4f6d7a" },
   { id: "tc-pista-pick-up", name: "TC Pista Pick Up", short: "TCP Pick Up", code: "TCPPK", org: "ACTC", scope: "nacional", color: "#4f6d7a" },
-  { id: "tc2000", name: "TC2000", short: "TC2000", code: "T2K", org: "CDA del ACA", scope: "nacional", color: "#101213", founded: 1979 },
+  { id: "tc2000", name: "TC2000", short: "TC2000", code: "TC2K", org: "CDA del ACA", scope: "nacional", color: "#101213", founded: 1979 },
   { id: "tn", name: "TN APAT", short: "TN", code: "TN", org: "APAT", scope: "nacional", color: "#b47805", founded: 1961 },
   { id: "gt3", name: "GT World Challenge Europe", short: "GTWC", code: "GT3", org: "SRO", scope: "internacional", color: "#6b3d83", founded: 2011 },
   { id: "zonal-bsas", name: "Procar4000", short: "Procar", code: "ZL", org: "Zonal", scope: "zonal", color: "#287e58" },

@@ -31,8 +31,11 @@ export const broadcastsBySeries: Record<string, { items: Broadcast[]; source?: s
     source: "https://tavilatam.com/argentina-turismo-carretera-tc-pista-y-las-principales-categorias-automovilisticas-argentinas-pasan-de-la-tv-publica-a-canal-9/",
   },
   tc2000: {
-    items: [{ name: "Motorplay", kind: "streaming" }],
-    source: "https://www.multimediosgenesis.com.ar/articulo/2026/04/el-tc2000-acelera-en-concordia-cuando-y-por-donde-ver.php",
+    // TC2000 no es de la ACTC: no va por Motorplay.
+    items: [
+      { name: "TyC Sports", kind: "tv" },
+      { name: "Carburando", kind: "streaming" },
+    ],
   },
   "tc-pick-up": {
     items: [
