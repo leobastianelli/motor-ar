@@ -13,7 +13,10 @@ export interface RawSeason {
 const fallback = snapshot as unknown as RawSeason;
 const build = buildSeason as unknown as (io: typeof nextIo, previous: RawSeason) => Promise<RawSeason>;
 const TTL_MS = 60_000;
+/** Si reconstruir la temporada tarda más que esto, se responde con lo último que haya y la reconstrucción sigue sola. */
+const WAIT_MS = 6_000;
 let memo: { at: number; value: Promise<RawSeason> } | null = null;
+let lastGood: RawSeason = fallback;
 
 /**
  * Datos de la temporada. En la compilación (o con PISTA_LIVE=0) se usa la instantánea del repo; en ejecución se
@@ -21,10 +24,19 @@ let memo: { at: number; value: Promise<RawSeason> } | null = null;
  */
 export function loadRawSeason(): Promise<RawSeason> {
   if (process.env.NEXT_PHASE === "phase-production-build" || process.env.PISTA_LIVE === "0") return Promise.resolve(fallback);
-  if (memo && Date.now() - memo.at < TTL_MS) return memo.value;
+  if (memo && Date.now() - memo.at < TTL_MS) return waitOrLast(memo.value);
   const value = build(nextIo, fallback)
-    .then((season) => (season.events.length > 0 ? season : fallback))
-    .catch(() => fallback);
+    .then((season) => {
+      const ok = season.events.length > 0 ? season : fallback;
+      lastGood = ok;
+      return ok;
+    })
+    .catch(() => lastGood);
   memo = { at: Date.now(), value };
-  return value;
+  return waitOrLast(value);
+}
+
+/** Espera la temporada nueva unos segundos; si no llega, devuelve la última buena (instantánea o reconstrucción anterior). */
+function waitOrLast(value: Promise<RawSeason>): Promise<RawSeason> {
+  return Promise.race([value, new Promise<RawSeason>((resolve) => setTimeout(() => resolve(lastGood), WAIT_MS))]);
 }
