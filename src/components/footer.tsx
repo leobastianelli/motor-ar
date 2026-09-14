@@ -19,6 +19,7 @@ export function Footer() {
       </p>
       <nav aria-label="Pie de página">
         <Link href="/calendario">Calendario</Link>
+        <Link href="/horarios">Horarios</Link>
         <Link href="/fuentes">Fuentes</Link>
         <Link href="/terminos">Términos</Link>
         <Link href="/privacidad">Privacidad</Link>
