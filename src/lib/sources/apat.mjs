@@ -1,4 +1,5 @@
-// TN APAT 2026 desde el sitio oficial (apat.org.ar): calendario, finales de Clase 2 y 3, y campeonatos.
+// TN APAT 2026 desde el sitio oficial (apat.org.ar): calendario, todas las sesiones de Clase 2 y 3 (entrenamientos,
+// clasificación, series y final) y campeonatos.
 import { dateOnly, properName } from "./common.mjs";
 
 const BASE = "https://apat.org.ar";
@@ -46,17 +47,51 @@ async function ranking(io, klass) {
     .filter((r) => r.pos && r.driver);
 }
 
-async function finalResults(io, klass, isoDay, knownNames, revalidate) {
-  const html = await io.text(`${BASE}/resultados/${klass}/${isoDay}`, { revalidate });
-  const heading = html.search(new RegExp(`<h2[^>]*>\\s*FINAL\\s+${klass}\\s*</h2>`, "i"));
-  if (heading === -1) return [];
-  return rowsOf(firstTbody(html, heading))
-    .map((row) => {
-      const c = cells(row);
-      const pos = Number(text(c[0] ?? ""));
-      return { pos, driver: resolveName(driverCell(c), knownNames), team: text(c[3] ?? ""), gap: pos === 1 ? text(c[5] ?? "") : text(c[6] ?? "") };
-    })
-    .filter((r) => r.pos && r.driver);
+/** Encabezados de la página de resultados → sesión. "General entrenamiento" repite los dos entrenamientos y se omite. */
+const HEADINGS = [
+  [/^GENERAL\s+ENTRENAMIENTO/i, null],
+  [/^FINAL\b/i, "final", "Final"],
+  [/^PRIMERA\s+SERIE/i, "serie", "Serie 1"],
+  [/^SEGUNDA\s+SERIE/i, "serie", "Serie 2"],
+  [/^TERCERA\s+SERIE/i, "serie", "Serie 3"],
+  [/^CUARTA\s+SERIE/i, "serie", "Serie 4"],
+  [/CLASIFICACI/i, "clasificacion", "Clasificación"],
+  [/^(?:1|PRIMER)\s*[º°O]?\s*ENTRENAMIENTO/i, "practica", "1° Entrenamiento"],
+  [/^(?:2|SEGUNDO)\s*[º°O]?\s*ENTRENAMIENTO/i, "practica", "2° Entrenamiento"],
+  [/^(?:3|TERCER)\s*[º°O]?\s*ENTRENAMIENTO/i, "practica", "3° Entrenamiento"],
+];
+const ORDER = { practica: 0, clasificacion: 1, serie: 2, final: 3 };
+
+/** Todas las sesiones de una clase en una fecha: entrenamientos, clasificación, series y final, con la tabla completa. */
+async function sessionResults(io, klass, isoDay, knownNames, revalidate) {
+  const url = `${BASE}/resultados/${klass}/${isoDay}`;
+  const html = await io.text(url, { revalidate });
+  const label = klass === "c2" ? "Clase 2" : "Clase 3";
+  const found = new Map();
+  for (const m of html.matchAll(/<h[23][^>]*>\s*([^<]{3,80}?)\s*<\/h[23]>/g)) {
+    const title = text(m[1]);
+    if (!new RegExp(`\\b${klass}\\b`, "i").test(title)) continue;
+    const rule = HEADINGS.find(([re]) => re.test(title));
+    if (!rule?.[1] || found.has(rule[2])) continue;
+    const tbodyAt = html.indexOf("<tbody", m.index);
+    const nextHeading = html.slice(m.index + m[0].length).search(/<h[23][^>]*>/);
+    if (tbodyAt === -1 || (nextHeading !== -1 && tbodyAt > m.index + m[0].length + nextHeading)) continue;
+    const results = rowsOf(firstTbody(html, m.index))
+      .map((row) => {
+        const c = cells(row);
+        const pos = Number(text(c[0] ?? ""));
+        const time = text(c[5] ?? "");
+        const diff = text(c[6] ?? "");
+        return { pos, number: text(c[1] ?? "") || undefined, driver: resolveName(driverCell(c), knownNames), team: text(c[3] ?? ""), gap: pos === 1 ? time : diff || time };
+      })
+      .filter((r) => r.pos && r.driver);
+    // El documento de cada sesión trae su fecha de publicación: ubica entrenamientos y clasificación en su día.
+    const tableEnd = html.indexOf("</tbody>", tbodyAt);
+    const after = html.slice(tableEnd, tableEnd + 4000).match(/(\d{2})\/(\d{2})\/(\d{4})\s+\d{2}:\d{2}/);
+    const day = after ? `${after[3]}-${after[2]}-${after[1]}` : isoDay;
+    if (results.length) found.set(rule[2], { kind: rule[1], name: `${rule[2]} ${label}`, day: day > isoDay ? isoDay : day, results, url });
+  }
+  return [...found.values()];
 }
 
 export async function apatSeason(io) {
@@ -85,18 +120,26 @@ export async function apatSeason(io) {
 
     const sessions = [];
     for (const [klass, label] of [["c2", "Final Clase 2"], ["c3", "Final Clase 3"]]) {
-      const results = played ? await finalResults(io, klass, isoDay, known, revalidate) : [];
-      sessions.push({
-        id: `tn-2026-${round}-${klass}`,
-        kind: "final",
-        name: label,
-        start: dateOnly(y, m, d),
-        timeKnown: false,
-        durationMin: 35,
-        ...(results.length ? { results } : {}),
-      });
+      const found = played ? await sessionResults(io, klass, isoDay, known, revalidate) : [];
+      if (!found.some((s) => s.kind === "final")) {
+        sessions.push({ id: `tn-2026-${round}-${klass}`, kind: "final", name: label, start: dateOnly(y, m, d), timeKnown: false, durationMin: 35 });
+      }
+      for (const s of found) {
+        const [sy, sm, sd] = s.day.split("-").map(Number);
+        sessions.push({
+          id: s.kind === "final" ? `tn-2026-${round}-${klass}` : `tn-2026-${round}-${klass}-${s.name.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
+          kind: s.kind,
+          name: s.name,
+          start: dateOnly(sy, sm, sd),
+          timeKnown: false,
+          durationMin: s.kind === "final" ? 35 : 25,
+          results: s.results,
+          resultsSource: { name: "APAT · resultados oficiales", url: s.url },
+        });
+      }
       if (played) await io.sleep(300);
     }
+    sessions.sort((a, b) => a.start.localeCompare(b.start) || ORDER[a.kind] - ORDER[b.kind] || a.name.localeCompare(b.name));
 
     events.push({
       id: `tn-2026-${round}`,

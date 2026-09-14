@@ -50,10 +50,21 @@ const SESSIONS = [
 ];
 
 const fullName = (d) => `${d.givenName} ${d.familyName}`;
+
+/** Estado de Jolpica → texto. "Finished" y "+N Laps" no son estados para mostrar: van en la diferencia. */
+const LAPPED = /^\+(\d+) Laps?$/;
+const STATUS_ES = { Retired: "Abandonó", Accident: "Abandonó", Collision: "Abandonó", Disqualified: "Descalificado", "Did not start": "No largó", Withdrew: "No largó" };
+const statusOf = (s) => (!s || s === "Finished" || s === "Lapped" || LAPPED.test(s) ? undefined : STATUS_ES[s] ?? "Abandonó");
+const raceGap = (r) => {
+  if (r.Time?.time) return r.Time.time;
+  const lapped = r.status?.match(LAPPED);
+  return lapped ? `+${lapped[1]} ${lapped[1] === "1" ? "vuelta" : "vueltas"}` : "";
+};
+
 const row = (r, gap) => ({
   pos: Number(r.position),
   positionText: r.positionText,
-  status: r.status,
+  status: statusOf(r.status),
   driver: fullName(r.Driver),
   code: r.Driver.code,
   team: r.Constructor.name,
@@ -106,12 +117,12 @@ export async function f1Season(io) {
         s.results = qualifying.get(race.round).map((r) => row(r, r.Q3 || r.Q2 || r.Q1 || "")).sort((a, b) => a.pos - b.pos);
       }
       if (key === "Sprint" && sprints.has(race.round)) {
-        s.results = sprints.get(race.round).map((r) => row(r, r.Time?.time ?? r.status)).sort((a, b) => a.pos - b.pos);
+        s.results = sprints.get(race.round).map((r) => row(r, raceGap(r))).sort((a, b) => a.pos - b.pos);
       }
       sessions.push(s);
     }
     const raceSession = { id: `f1-2026-${race.round}-race`, kind: "carrera", name: "Carrera", start: `${race.date}T${race.time}`, timeKnown: true, durationMin: 120 };
-    if (races.has(race.round)) raceSession.results = races.get(race.round).map((r) => row(r, r.Time?.time ?? r.status)).sort((a, b) => a.pos - b.pos);
+    if (races.has(race.round)) raceSession.results = races.get(race.round).map((r) => row(r, raceGap(r))).sort((a, b) => a.pos - b.pos);
     sessions.push(raceSession);
     sessions.sort((a, b) => new Date(a.start) - new Date(b.start));
     return {

@@ -4,7 +4,10 @@ import { actcOfficialSchedules } from "./actc-official.mjs";
 import { apatSeason } from "./apat.mjs";
 import { f1Season } from "./f1.mjs";
 import { f2Season } from "./f2.mjs";
+import { gtwcSeason } from "./gtwc.mjs";
 import { actcTiming, keepPreviousTiming, TIMING_SERIES } from "./actc-timing.mjs";
+import { fiaF2, keepPreviousFia } from "./fia-f2.mjs";
+import { keepPreviousOpenf1, openf1Sessions } from "./openf1.mjs";
 import { applySchedules, buildConsensus, solotcNotes } from "./schedule-notes.mjs";
 import { tc2000Season } from "./tc2000.mjs";
 
@@ -14,6 +17,7 @@ const SOURCES = [
   ["ACTC", ["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up"], actcSeason],
   ["TN APAT", ["tn"], apatSeason],
   ["TC2000", ["tc2000"], tc2000Season],
+  ["GT World Challenge", ["gt3"], gtwcSeason],
 ];
 
 /** Categorías cuyos horarios salen de notas de cronograma (ver schedule-notes.mjs). */
@@ -106,6 +110,32 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
     failures.push(`Tiempos ACTC: ${error.message} (se conservan los resultados anteriores)`);
     events = keepPreviousTiming(events, previous);
     meta.timing = previous.meta?.timing ?? null;
+  }
+
+  // Fórmula 1: prácticas y clasificación sprint desde OpenF1.
+  try {
+    const f1Extra = await openf1Sessions(io, events, previous, { windowDays: io.timingWindowDays ?? 10, delayMs: io.openf1DelayMs ?? 1000 });
+    events = f1Extra.events;
+    meta.openf1 = f1Extra.meta;
+  } catch (error) {
+    failures.push(`OpenF1: ${error.message} (se conservan los resultados anteriores)`);
+    events = keepPreviousOpenf1(events, previous);
+    meta.openf1 = previous.meta?.openf1 ?? null;
+  }
+
+  // Fórmula 2: clasificaciones oficiales de la FIA para todas las sesiones.
+  try {
+    const f2Extra = await fiaF2(io, events, previous, {
+      windowDays: io.timingWindowDays ?? 10,
+      delayMs: io.fiaDelayMs ?? 11000,
+      knownNames: [...(standings.f2 ?? []).map((r) => r.driver), ...events.filter((e) => e.seriesId === "f2").flatMap((e) => e.sessions.flatMap((s) => s.results?.map((r) => r.driver) ?? []))],
+    });
+    events = f2Extra.events;
+    meta.fiaF2 = f2Extra.meta;
+  } catch (error) {
+    failures.push(`FIA F2: ${error.message} (se conservan los resultados anteriores)`);
+    events = keepPreviousFia(events, previous);
+    meta.fiaF2 = previous.meta?.fiaF2 ?? null;
   }
 
   events.sort((a, b) => new Date(a.sessions[0].start) - new Date(b.sessions[0].start));

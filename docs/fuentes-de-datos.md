@@ -165,6 +165,21 @@ Fuentes evaluadas y descartadas por ahora: Carburando (sin feed, sitemap ni busc
 
 Las categorías que acompañan al TC salen del calendario de actc.org.ar (`/tcm`, `/tcpm`, `/tcpk`, `/tcppk`). Sus horarios salen de las mismas notas de cronograma que TC y TC Pista. La página de cada fecha muestra "Corren el mismo finde", con las otras categorías del mismo lugar y fin de semana.
 
+## Resultados por sesión en el resto de las categorías
+
+| Categoría | Fuente | Qué trae | Ritmo |
+|---|---|---|---|
+| F1 | Jolpica (carrera, clasificación, sprint) + [OpenF1](https://api.openf1.org/v1) (`src/lib/sources/openf1.mjs`) | Prácticas 1–3 y clasificación sprint con todos los pilotos: posición, número, sigla, equipo, mejor vuelta, diferencia y abandonos | 1 s entre pedidos |
+| F2 | [fia.com](https://www.fia.com/events/formula-2-championship/season-2026/fia-formula-2) (`src/lib/sources/fia-f2.mjs`) | Clasificación, sprint y carrera principal con todos los pilotos, equipo, tiempos, diferencias, puntos y abandonos. La práctica solo se publica en PDF y no se toma. Los nombres abreviados ("N. Leon") se completan con el campeonato. Algunas sedes se llaman distinto que en fiaformula2.com (miami, monaco, barcelona-catalunya) | 11 s entre pedidos (robots.txt pide 10) |
+| GT World Challenge Europe | Wikipedia (en) (`src/lib/sources/gtwc.mjs`) | Calendario de Sprint Cup y Endurance Cup, clasificación de cada carrera del Sprint Cup (sale del campeonato de pilotos), ganador general de cada carrera de Endurance y campeonato | Una página por copa |
+| TN APAT | apat.org.ar (`src/lib/sources/apat.mjs`) | Clase 2 y Clase 3: 1.º y 2.º entrenamiento, clasificación, series y final, con marca y modelo. Cada sesión se ubica en el día de publicación de su documento | 0,3 s entre páginas |
+
+**Categorías sin fuente automática de resultados por sesión:**
+
+- **TC2000:** su robots.txt prohíbe leer las direcciones con parámetros (donde están los resultados) y pide 60 s entre pedidos, con un máximo de 6 páginas por hora. Siguen Wikipedia y la carga manual.
+- **Procar 4000:** los resultados se publican como PDF diseñados en Illustrator, sin texto extraíble de forma confiable. Quedan posiciones y noticias del sitio oficial, y resultados por carga manual.
+- **GT World Challenge:** cada región usa un proveedor de cronometraje distinto. Queda pendiente.
+
 ## Carga manual
 
 `src/data/manual-overrides.json` completa o corrige cualquier fecha sin tocar las fuentes:

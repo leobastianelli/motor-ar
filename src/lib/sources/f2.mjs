@@ -110,8 +110,10 @@ export async function f2Season(io) {
       round: c.round,
       name: city,
       circuit: { name: c.circuitName, city, country: "", flag: c.flag },
+      // Nombre corto de la sede en los sitios oficiales (fiaformula2.com y fia.com usan el mismo).
+      ...(match ? { venueSlug: match.slug } : {}),
       sessions,
-      source: match ? "FIA Formula 2 (horarios) · Wikipedia (resultados)" : "Wikipedia · 2026 Formula 2 Championship",
+      source: match ? "FIA Formula 2 (horarios) · FIA y Wikipedia (resultados)" : "Wikipedia · 2026 Formula 2 Championship",
     };
   });
 

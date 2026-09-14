@@ -7,6 +7,8 @@ export const WIKI_PAGES = {
   "es-tc2000-2026": ["es", "Anexo:Temporada_2026_de_TC2000"],
   "en-f2": ["en", "FIA_Formula_2_Championship"],
   "en-f2-2026": ["en", "2026_Formula_2_Championship"],
+  "en-gtwc-sprint-2026": ["en", "2026_GT_World_Challenge_Europe_Sprint_Cup"],
+  "en-gtwc-endurance-2026": ["en", "2026_GT_World_Challenge_Europe_Endurance_Cup"],
 };
 
 export function wikiRawUrl(key) {

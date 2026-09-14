@@ -22,7 +22,18 @@ export async function generateMetadata(props: PageProps<"/eventos/[id]">): Promi
 const BROADCAST_KIND: Record<Broadcast["kind"], string> = { tv: "TV", streaming: "Streaming", youtube: "YouTube" };
 const RACE_KINDS = ["carrera", "final", "sprint", "serie"];
 
-const tag = (r: ResultRow) => (r.number ? `#${r.number}` : driverCode(r));
+// Número del auto si la fuente lo publica; sigla sólo para pilotos individuales (en tripulaciones no identifica a nadie).
+const tag = (r: ResultRow) => (r.number ? `#${r.number}` : r.driver.includes(" / ") ? "" : driverCode(r));
+
+/** Diferencia o estado. Los estados en inglés de las fuentes ("Finished", "+1 Lap") no se muestran como texto. */
+const STATUS_ES: Record<string, string> = { Retired: "Abandonó", Accident: "Abandonó", Collision: "Abandonó", Disqualified: "Descalificado", "Did not start": "No largó" };
+function shownGap(r: ResultRow) {
+  const status = r.status;
+  if (!status || /^(finished|lapped)$/i.test(status)) return r.gap;
+  const lapped = status.match(/^\+(\d+) Laps?$/i);
+  if (lapped) return `+${lapped[1]} ${lapped[1] === "1" ? "vuelta" : "vueltas"}`;
+  return STATUS_ES[status] ?? (/^[A-Za-z ]+$/.test(status) && !/[áéíóúñ]/.test(status) && !["Abandonó", "No largó", "Descalificado", "Sin tiempo"].includes(status) ? "Abandonó" : status);
+}
 
 function Ranking({ rows }: { rows: ResultRow[] }) {
   return (
@@ -35,7 +46,7 @@ function Ranking({ rows }: { rows: ResultRow[] }) {
             {r.driver}
             {r.team && <small>{r.team}</small>}
           </strong>
-          <time>{r.status ?? r.gap}</time>
+          <time>{shownGap(r)}</time>
         </div>
       ))}
     </div>
