@@ -11,6 +11,11 @@ export function Footer() {
         Automovilismo en hora argentina.
         <br />
         Datos: Jolpica-F1, Wikipedia, ACTC y APAT.
+        <br />
+        Desarrollado por{" "}
+        <a href="https://leobastianelli.dev" target="_blank" rel="noreferrer author">
+          Leo Bastianelli
+        </a>
       </p>
       <nav aria-label="Pie de página">
         <Link href="/calendario">Calendario</Link>      </nav>

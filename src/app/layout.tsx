@@ -12,6 +12,8 @@ const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.e
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  authors: [{ name: "Leo Bastianelli", url: "https://leobastianelli.dev" }],
+  creator: "Leo Bastianelli",
   title: { default: "Fierros — Automovilismo argentino, al minuto", template: "%s — Fierros" },
   description: "Horarios, resultados y seguimiento de pilotos argentinos, siempre en hora argentina.",
 };
