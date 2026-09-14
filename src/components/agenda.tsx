@@ -22,9 +22,14 @@ function byEvent(rows: FeedItem[]) {
 }
 
 export function Agenda({ items, days, today, now }: { items: FeedItem[]; days: { key: string; iso: string }[]; today: string; now: string }) {
-  const [day, setDay] = useState(days.some((d) => d.key === today) ? today : days[0]?.key);
+  const [picked, setPicked] = useState(days.some((d) => d.key === today) ? today : days[0]?.key);
   const [filter, setFilter] = useState<Scope | "all">("all");
-  const rows = items.filter((i) => dayKey(i.session.start) === day && (filter === "all" || i.series.scope === filter));
+  // Sólo los días con sesiones para el filtro elegido; si el día marcado quedó vacío, se pasa al primero que tenga.
+  const matching = items.filter((i) => filter === "all" || i.series.scope === filter);
+  const visibleDays = days.filter((d) => matching.some((i) => dayKey(i.session.start) === d.key));
+  const day = visibleDays.some((d) => d.key === picked) ? picked : visibleDays[0]?.key;
+  const setDay = setPicked;
+  const rows = matching.filter((i) => dayKey(i.session.start) === day);
 
   return (
     <section className="section-block agenda" aria-labelledby="agenda-title">
@@ -38,9 +43,9 @@ export function Agenda({ items, days, today, now }: { items: FeedItem[]; days: {
         </div>
       </SectionTitle>
 
-      {days.length > 1 && (
-        <div className="day-tabs" role="group" aria-label="Día">
-          {days.map((d) => (
+      {visibleDays.length > 1 && (
+        <div className="day-tabs" role="group" aria-label="Día" style={{ gridTemplateColumns: `repeat(${visibleDays.length}, 1fr)` }}>
+          {visibleDays.map((d) => (
             <button key={d.key} type="button" className={d.key === day ? "active" : undefined} aria-pressed={d.key === day} onClick={() => setDay(d.key)}>
               {fmtWeekday(d.iso)} <b>{fmtDayNum(d.iso)}</b>
             </button>

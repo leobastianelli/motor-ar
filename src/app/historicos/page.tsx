@@ -12,10 +12,10 @@ export default function LegendsPage() {
   return (
     <>
       <section className="weekend-head">
-        <div>
-          <h1>Historias</h1>
-        </div>
-        <p className="lede">Las leyendas que hicieron grande al automovilismo argentino, contadas en capítulos.</p>
+        <h1>Historias</h1>
+        <p className="lede">
+          <span>Las leyendas del automovilismo argentino, contadas en capítulos</span>
+        </p>
       </section>
       <section className="section-block">
         <SectionTitle title="Leyendas" />
@@ -28,7 +28,11 @@ export default function LegendsPage() {
                 <span>{l.tagline}</span>
               </div>
               <em>{l.years}</em>
-              <time>{l.keyStats[0].value}</time>
+              {/* El número siempre con lo que mide: títulos de F1, victorias, campeonatos. */}
+              <span className="legend-stat">
+                <b>{l.keyStats[0].value}</b>
+                <small>{l.keyStats[0].label}</small>
+              </span>
             </Link>
           ))}
         </div>

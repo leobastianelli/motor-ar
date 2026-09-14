@@ -70,11 +70,11 @@ export const legends: Legend[] = [
     slug: "juan-maria-traverso",
     name: "Juan María Traverso",
     nickname: "El Flaco",
-    years: "1950 –",
+    years: "1950 – 2024",
     hometown: "Ramallo, Buenos Aires",
     tagline: "El piloto con más campeonatos del automovilismo argentino. Ídolo total.",
     keyStats: [
-      { label: "Campeonatos", value: "16" },
+      { label: "Títulos nacionales", value: "16" },
       { label: "Categorías", value: "TC · TC2000 · TN" },
       { label: "Marca", value: "Chevrolet" },
     ],

@@ -133,6 +133,32 @@ button{color:inherit;font-family:inherit}
   .event-meta b{font-size:22px}
   .session .session-winner{font-size:13px}
 }
+/* Menú en mobile: se despliega encima de la página, sin empujarla */
+@media(max-width:800px){
+  .masthead{position:sticky}
+  .site-nav{position:absolute;top:100%;left:0;right:0;z-index:30;background:var(--paper);padding:8px 0 12px;box-shadow:0 18px 32px rgba(16,18,19,.18);border-bottom:1px solid var(--rule)}
+  .site-nav a{padding:16px 20px;font-size:18px;color:var(--ink)}
+  .site-nav a+a{border-top:1px solid var(--rule)}
+  .site-nav a.active{box-shadow:inset 4px 0 0 var(--blue);font-weight:800}
+}
+/* Home en celular: resultados sin apretar */
+@media(max-width:800px){
+  .weekend-head+.results-band{margin-top:24px}
+  .result-notes{display:flex;flex-direction:column;gap:0}
+  .result-notes a{width:100%;padding:16px 0;margin:0;border-bottom:1px solid var(--rule-inverse)}
+  .result-notes a:last-child{border-bottom:0}
+  .arg-highlight .big-pos{font-size:72px}
+}
+/* Historias: el número con su etiqueta */
+.legend-stat{display:flex;flex-direction:column;align-items:flex-end;text-align:right}
+.legend-stat b{font-size:28px;font-variant-numeric:tabular-nums;line-height:1}
+.legend-stat small{font-size:12px;color:var(--muted);white-space:nowrap}
+.champ-row.leader .legend-stat small{color:inherit;opacity:.75}
+/* Argentino destacado: etiqueta de categoría visible sobre el celeste */
+.arg-highlight>span:first-child{display:block}
+.arg-highlight .cat-label{display:flex;margin:12px 0 4px}
+.arg-highlight .cat-label b{color:var(--ink)}
+.arg-highlight .cat-label>span:last-child:not(.code){color:rgba(16,18,19,.7)}
 /* Páginas legales y de fuentes */
 .legal{max-width:760px}
 .legal h2{font-size:22px;margin:32px 0 8px}

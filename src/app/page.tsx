@@ -172,9 +172,12 @@ export default async function Home() {
     resultados: (
       <section key="resultados" className="results-band">
         <div className="section-block">
-          <SectionTitle title="Resultados" inverse>
-            <Link href="/calendario">Calendario</Link>
-          </SectionTitle>
+          {/* Con resultados primero, la cabecera ya dice "Resultados del finde": no se repite el título. */}
+          {mode !== "results" && (
+            <SectionTitle title="Resultados" inverse>
+              <Link href="/calendario">Calendario</Link>
+            </SectionTitle>
+          )}
           <div className="result-layout">
             {podium ? (
               <article className="podium">
@@ -208,6 +211,7 @@ export default async function Home() {
             {highlight ? (
               <Link href={`/eventos/${highlight.event.id}`} className="arg-highlight list-link">
                 <span>Argentino destacado afuera</span>
+                <CategoryLabel series={highlight.series} detail={highlight.event.circuit.city} />
                 <b className="big-pos">{highlight.row.pos}.º</b>
                 <h3>{highlight.row.driver}</h3>
                 <p>
