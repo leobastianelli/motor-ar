@@ -42,9 +42,11 @@ export async function f2Season(io) {
   const text = await io.wiki("en-f2-2026");
 
   const teamOf = new Map();
+  const argentines = new Set();
   for (const r of tables(section(text, "Entries"))[0].rows) {
     const cells = r.cells.map((c) => c.text);
     if (cells.length >= 4 && intOf(cells[1]) !== null && cells[2]) teamOf.set(cells[2], { team: cells[0], number: intOf(cells[1]) });
+    if (cells[2] && flagOf(r.cells[2]?.raw ?? "") === "ARG") argentines.add(cells[2]);
   }
 
   const calendar = tables(section(text, "Race calendar"))[0]
@@ -118,5 +120,5 @@ export async function f2Season(io) {
   });
 
   const standings = rows.map((r) => ({ pos: r.pos, driver: r.driver, team: teamOf.get(r.driver)?.team ?? "", points: r.points }));
-  return { events, standings: { f2: standings }, meta: { f2: { officialTimes: official.length } } };
+  return { events, standings: { f2: standings }, meta: { f2: { officialTimes: official.length, argentines: [...argentines] } } };
 }

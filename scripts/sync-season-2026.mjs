@@ -2,6 +2,7 @@
 // El sitio en producción refresca estos datos solo; este script sirve para actualizar el repo.
 // Uso: npm run sync:season
 import fs from "node:fs";
+import { buildDriverIndex } from "../src/lib/sources/driver-index.mjs";
 import { buildSeason } from "../src/lib/sources/season.mjs";
 import { wikiRawUrl } from "../src/lib/sources/wiki-pages.mjs";
 
@@ -43,3 +44,10 @@ for (const failure of season.failures) console.error(`ERROR ${failure} (se conse
 
 fs.writeFileSync(OUTPUT, JSON.stringify(season, null, 2));
 console.log(`\n${season.events.length} eventos → ${OUTPUT}`);
+
+// Índice de pilotos: se completa con lo nuevo y conserva a todos los que ya estaban.
+const INDEX = "src/data/drivers-2026.json";
+const previousIndex = fs.existsSync(INDEX) ? JSON.parse(fs.readFileSync(INDEX, "utf8")) : undefined;
+const index = buildDriverIndex(season, previousIndex);
+fs.writeFileSync(INDEX, JSON.stringify(index, null, 2));
+console.log(`${index.drivers.length} pilotos → ${INDEX}`);

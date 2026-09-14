@@ -1,7 +1,9 @@
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { drivers } from "@/data/drivers";
 import history from "@/data/history.json";
+import driverIndex from "@/data/drivers-2026.json";
 import manualOverrides from "@/data/manual-overrides.json";
+import { driverKey } from "./sources/driver-index.mjs";
 import { series, seriesById } from "@/data/series";
 import { dayKey, fmtDayShort, fmtTime, sessionStatus, type SessionStatus, type StateKind } from "./format";
 import { loadRawSeason, type RawSeason } from "./season-data";
@@ -24,6 +26,38 @@ export const getAllSeries = () => series;
 export const getHistory = (seriesId: string) => (history.series as unknown as Record<string, CategoryHistory>)[seriesId];
 export const getDriver = (slug: string) => drivers.find((d) => d.slug === slug);
 export const getAllDrivers = () => drivers;
+
+/** Pilotos que aparecen en los resultados (índice guardado en el repo por el sincronizador). */
+export interface IndexedDriver {
+  key: string;
+  /** Todas las formas en que las fuentes escribieron a este piloto (normalizadas). */
+  keys?: string[];
+  aliases?: string[];
+  slug: string;
+  name: string;
+  series: string[];
+  numbers: Record<string, string>;
+  teams: Record<string, string>;
+  firstSeen: string;
+  lastSeen: string;
+}
+// Los pilotos con ficha completa (drivers.ts) no se repiten: se descartan por nombre o por cualquiera de sus alias.
+const CURATED_KEYS = new Set(drivers.flatMap((d) => [d.name, ...(d.aliases ?? [])].map((n) => driverKey(n))));
+const INDEXED = (driverIndex as unknown as { drivers: IndexedDriver[] }).drivers.filter((d) => !(d.keys ?? [d.key]).some((k) => CURATED_KEYS.has(k)));
+export const getIndexedDrivers = () => INDEXED;
+export const getIndexedDriver = (slug: string) => INDEXED.find((d) => d.slug === slug);
+
+export interface DriverSeriesStats {
+  races: number;
+  wins: number;
+  podiums: number;
+  poles: number;
+  best: number | null;
+}
+export interface DriverSeason {
+  results: { event: RaceEvent; session: Session; row: ResultRow }[];
+  bySeries: Record<string, DriverSeriesStats>;
+}
 /** Argentinos que corren afuera: los que aparecen en "Los nuestros". */
 export const getDriversAbroad = () => drivers.filter((d) => seriesById[d.seriesId]?.scope === "internacional");
 
@@ -134,6 +168,59 @@ export function createSeason(raw: RawSeason) {
 
   const getStandings = (seriesId: string) => standings[seriesId] ?? [];
 
+  // Temporada de cada piloto (por nombre normalizado), calculada una sola vez: resultados y estadísticas por categoría.
+  let driverSeasons: Map<string, DriverSeason> | null = null;
+  function getDriverSeasons() {
+    if (driverSeasons) return driverSeasons;
+    const map = new Map<string, DriverSeason>();
+    const ordered = [...events].sort((a, b) => ms(eventStart(a)) - ms(eventStart(b)));
+    for (const event of ordered) {
+      for (const session of event.sessions) {
+        for (const row of session.results ?? []) {
+          for (const part of row.driver.split(" / ")) {
+            const key = driverKey(part);
+            if (!map.has(key)) map.set(key, { results: [], bySeries: {} });
+            const d = map.get(key)!;
+            d.results.push({ event, session, row });
+            const s = (d.bySeries[event.seriesId] ??= { races: 0, wins: 0, podiums: 0, poles: 0, best: null });
+            const classified = !row.positionText || /^\d+$/.test(row.positionText);
+            if (RACE_KINDS.includes(session.kind)) {
+              s.races++;
+              if (classified && row.pos === 1) s.wins++;
+              if (classified && row.pos <= 3) s.podiums++;
+              if (classified && (s.best === null || row.pos < s.best)) s.best = row.pos;
+            }
+            if (session.kind === "clasificacion" && classified && row.pos === 1) s.poles++;
+          }
+        }
+      }
+    }
+    driverSeasons = map;
+    return map;
+  }
+  const standingFor = (seriesId: string, keys: string | string[]) => {
+    const wanted = new Set(Array.isArray(keys) ? keys : [keys]);
+    return getStandings(seriesId).find((r) => r.driver.split(" / ").some((p) => wanted.has(driverKey(p))));
+  };
+
+  /** Temporada de un piloto sumando todas las formas en que lo escribieron las fuentes. */
+  function driverSeasonFor(keys: string[]): DriverSeason {
+    const parts = keys.map((k) => getDriverSeasons().get(k)).filter((x): x is DriverSeason => Boolean(x));
+    const results = parts.flatMap((p) => p.results).sort((a, b) => ms(a.session.start) - ms(b.session.start));
+    const bySeries: Record<string, DriverSeriesStats> = {};
+    for (const p of parts) {
+      for (const [id, s] of Object.entries(p.bySeries)) {
+        const t = (bySeries[id] ??= { races: 0, wins: 0, podiums: 0, poles: 0, best: null });
+        t.races += s.races;
+        t.wins += s.wins;
+        t.podiums += s.podiums;
+        t.poles += s.poles;
+        if (s.best !== null && (t.best === null || s.best < t.best)) t.best = s.best;
+      }
+    }
+    return { results, bySeries };
+  }
+
   const getEventsForSeries = (seriesId: string) =>
     events.filter((e) => e.seriesId === seriesId).sort((a, b) => ms(eventStart(a)) - ms(eventStart(b)));
 
@@ -182,6 +269,10 @@ export function createSeason(raw: RawSeason) {
     failures: raw.failures ?? [],
     getAllEvents: () => events,
     getEvent: (id: string) => events.find((e) => e.id === id),
+
+    /** Resultados y estadísticas de la temporada de un piloto del índice. */
+    getDriverSeason: (driver: Pick<IndexedDriver, "key" | "keys">): DriverSeason => driverSeasonFor(driver.keys ?? [driver.key]),
+    getDriverStanding: standingFor,
 
     /** Otras categorías que corren en el mismo lugar ese fin de semana (p. ej. TC Pista, TC Mouras y Pick Up junto al TC). */
     getSiblingEvents(event: RaceEvent) {

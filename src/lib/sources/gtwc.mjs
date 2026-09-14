@@ -148,7 +148,9 @@ function build(text, cup) {
       source: `Wikipedia · 2026 GT World Challenge Europe ${sprint ? "Sprint" : "Endurance"} Cup`,
     };
   });
-  return { events, standings };
+  // Pilotos argentinos según las banderas de Wikipedia: "{{flagicon|ARG}} [[Ignacio Montenegro]]".
+  const argentines = [...text.matchAll(/\{\{flagicon\|ARG\}\}\s*\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g)].map((m) => (m[2] ?? m[1]).trim());
+  return { events, standings, argentines };
 }
 
 export async function gtwcSeason(io) {
@@ -158,6 +160,6 @@ export async function gtwcSeason(io) {
   return {
     events: [...sprint.events, ...endurance.events],
     standings: { gt3: sprint.standings },
-    meta: { gt3: { standingsLabel: "Sprint Cup", endurance: endurance.standings } },
+    meta: { gt3: { standingsLabel: "Sprint Cup", endurance: endurance.standings, argentines: [...new Set([...sprint.argentines, ...endurance.argentines])] } },
   };
 }

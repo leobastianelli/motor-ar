@@ -41,12 +41,13 @@ jobs:
 
       - name: Subir cambios
         run: |
-          if git diff --quiet -- src/data/season-2026.json; then
-            echo "Sin cambios en la temporada."
+          git add -N src/data/drivers-2026.json 2>/dev/null || true
+          if git diff --quiet -- src/data/season-2026.json src/data/drivers-2026.json; then
+            echo "Sin cambios en la temporada ni en los pilotos."
             exit 0
           fi
           git config user.name "fierros-sync"
           git config user.email "fierros-sync@users.noreply.github.com"
-          git add src/data/season-2026.json
+          git add src/data/season-2026.json src/data/drivers-2026.json
           git commit -m "datos: sincronización automática de la temporada"
           git push

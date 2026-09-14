@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T20:56:59.179Z",
+  "generatedAt": "2026-09-14T21:06:28.719Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -10231,7 +10231,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -10242,7 +10241,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -10253,7 +10251,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -10264,7 +10261,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -10275,7 +10271,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -10286,7 +10281,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -10297,7 +10291,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Lapped",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -10308,7 +10301,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Lapped",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -10319,7 +10311,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Lapped",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -10330,7 +10321,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Lapped",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -10341,7 +10331,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Lapped",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -10352,7 +10341,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Lapped",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -10363,7 +10351,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Lapped",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -10374,7 +10361,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Lapped",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -10385,7 +10371,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Lapped",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -10396,7 +10381,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Lapped",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -10407,66 +10391,65 @@
             {
               "pos": 17,
               "positionText": "R",
-              "status": "Lapped",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
-              "gap": "Lapped",
+              "gap": "",
               "points": 0,
               "grid": 22
             },
             {
               "pos": 18,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 17
             },
             {
               "pos": 19,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 19
             },
             {
               "pos": 20,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 3
             },
             {
               "pos": 21,
               "positionText": "W",
-              "status": "Did not start",
+              "status": "No largó",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
-              "gap": "Did not start",
+              "gap": "",
               "points": 0,
               "grid": 5
             },
             {
               "pos": 22,
               "positionText": "W",
-              "status": "Did not start",
+              "status": "No largó",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
-              "gap": "Did not start",
+              "gap": "",
               "points": 0,
               "grid": 11
             }
@@ -13651,7 +13634,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -13662,7 +13644,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -13673,7 +13654,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -13684,7 +13664,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -13695,7 +13674,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -13706,7 +13684,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -13717,7 +13694,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -13728,7 +13704,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -13739,7 +13714,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -13750,7 +13724,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Finished",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -13761,7 +13734,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Finished",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -13772,7 +13744,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Finished",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -13783,7 +13754,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Finished",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -13794,7 +13764,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Finished",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -13805,7 +13774,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Finished",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -13816,7 +13784,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Finished",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -13827,7 +13794,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Finished",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -13838,7 +13804,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Finished",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
@@ -13849,7 +13814,6 @@
             {
               "pos": 19,
               "positionText": "19",
-              "status": "Finished",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -13860,33 +13824,33 @@
             {
               "pos": 20,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 11
             },
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 20
             },
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 15
             }
@@ -14067,7 +14031,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -14078,7 +14041,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -14089,7 +14051,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -14100,7 +14061,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -14111,7 +14071,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -14122,7 +14081,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -14133,7 +14091,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -14144,7 +14101,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -14155,7 +14111,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Lapped",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -14166,7 +14121,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Lapped",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -14177,7 +14131,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Lapped",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -14188,7 +14141,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Lapped",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -14199,7 +14151,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Lapped",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -14210,7 +14161,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Lapped",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -14221,7 +14171,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Lapped",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -14232,77 +14181,77 @@
             {
               "pos": 16,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 8
             },
             {
               "pos": 17,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 18
             },
             {
               "pos": 18,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 20
             },
             {
               "pos": 19,
               "positionText": "W",
-              "status": "Did not start",
+              "status": "No largó",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
-              "gap": "Did not start",
+              "gap": "",
               "points": 0,
               "grid": 5
             },
             {
               "pos": 20,
               "positionText": "W",
-              "status": "Did not start",
+              "status": "No largó",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
-              "gap": "Did not start",
+              "gap": "",
               "points": 0,
               "grid": 6
             },
             {
               "pos": 21,
               "positionText": "W",
-              "status": "Did not start",
+              "status": "No largó",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
-              "gap": "Did not start",
+              "gap": "",
               "points": 0,
               "grid": 16
             },
             {
               "pos": 22,
               "positionText": "W",
-              "status": "Did not start",
+              "status": "No largó",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
-              "gap": "Did not start",
+              "gap": "",
               "points": 0,
               "grid": 22
             }
@@ -19882,7 +19831,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -19893,7 +19841,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -19904,7 +19851,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -19915,7 +19861,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -19926,7 +19871,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -19937,7 +19881,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -19948,7 +19891,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -19959,7 +19901,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -19970,7 +19911,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -19981,7 +19921,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Finished",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -19992,7 +19931,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Finished",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -20003,7 +19941,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Finished",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -20014,7 +19951,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Finished",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -20025,7 +19961,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Finished",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -20036,7 +19971,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Finished",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -20047,7 +19981,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Finished",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -20058,7 +19991,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Finished",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -20069,7 +20001,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Lapped",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -20080,7 +20011,6 @@
             {
               "pos": 19,
               "positionText": "19",
-              "status": "Lapped",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -20091,7 +20021,6 @@
             {
               "pos": 20,
               "positionText": "20",
-              "status": "Lapped",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -20102,22 +20031,22 @@
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 22
             },
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 18
             }
@@ -30944,7 +30873,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -30955,7 +30883,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -30966,7 +30893,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -30977,7 +30903,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -30988,7 +30913,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -30999,7 +30923,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -31010,7 +30933,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -31021,7 +30943,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -31032,7 +30953,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Finished",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -31043,7 +30963,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Finished",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -31054,7 +30973,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Finished",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -31065,7 +30983,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Finished",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -31076,7 +30993,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Finished",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -31087,7 +31003,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -31098,7 +31013,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Finished",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -31109,7 +31023,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Finished",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -31120,7 +31033,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Finished",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
@@ -31131,7 +31043,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Finished",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -31142,7 +31053,6 @@
             {
               "pos": 19,
               "positionText": "19",
-              "status": "Finished",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -31153,33 +31063,33 @@
             {
               "pos": 20,
               "positionText": "W",
-              "status": "Did not start",
+              "status": "No largó",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
-              "gap": "Did not start",
+              "gap": "",
               "points": 0,
               "grid": 12
             },
             {
               "pos": 21,
               "positionText": "W",
-              "status": "Did not start",
+              "status": "No largó",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
-              "gap": "Did not start",
+              "gap": "",
               "points": 0,
               "grid": 22
             },
             {
               "pos": 22,
               "positionText": "D",
-              "status": "Disqualified",
+              "status": "Descalificado",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
-              "gap": "Disqualified",
+              "gap": "",
               "points": 0,
               "grid": 11
             }
@@ -31360,7 +31270,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -31371,7 +31280,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -31382,7 +31290,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -31393,7 +31300,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -31404,7 +31310,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -31415,7 +31320,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -31426,7 +31330,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -31437,7 +31340,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -31448,7 +31350,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Finished",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -31459,7 +31360,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Finished",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -31470,7 +31370,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Lapped",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -31481,7 +31380,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Lapped",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -31492,7 +31390,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Lapped",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -31503,7 +31400,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Lapped",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -31514,7 +31410,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Lapped",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -31525,7 +31420,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Lapped",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -31536,7 +31430,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Lapped",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
@@ -31547,7 +31440,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Lapped",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -31558,44 +31450,44 @@
             {
               "pos": 19,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 10
             },
             {
               "pos": 20,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 11
             },
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 9
             },
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 22
             }
@@ -40401,7 +40293,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -40412,7 +40303,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -40423,7 +40313,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -40434,7 +40323,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -40445,7 +40333,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -40456,7 +40343,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -40467,7 +40353,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -40478,7 +40363,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -40489,7 +40373,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Finished",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -40500,7 +40383,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Finished",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -40511,7 +40393,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -40522,7 +40403,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Finished",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -40533,7 +40413,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Finished",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -40544,7 +40423,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Finished",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -40555,7 +40433,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Finished",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -40566,7 +40443,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Lapped",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
@@ -40577,7 +40453,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Lapped",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -40588,7 +40463,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Lapped",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -40599,7 +40473,6 @@
             {
               "pos": 19,
               "positionText": "19",
-              "status": "Lapped",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -40610,7 +40483,6 @@
             {
               "pos": 20,
               "positionText": "20",
-              "status": "Lapped",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -40621,7 +40493,6 @@
             {
               "pos": 21,
               "positionText": "21",
-              "status": "Lapped",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -40632,11 +40503,11 @@
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 15
             }
@@ -40817,7 +40688,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -40828,7 +40698,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -40839,7 +40708,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -40850,7 +40718,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -40861,7 +40728,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Lapped",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -40872,7 +40738,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Lapped",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -40883,7 +40748,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Lapped",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -40894,7 +40758,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Lapped",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -40905,7 +40768,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Lapped",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -40916,7 +40778,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Lapped",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -40927,7 +40788,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Lapped",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -40938,7 +40798,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Lapped",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -40949,7 +40808,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Lapped",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -40960,7 +40818,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Lapped",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -40971,7 +40828,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Lapped",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
@@ -40982,7 +40838,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Lapped",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -40993,66 +40848,66 @@
             {
               "pos": 17,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 20
             },
             {
               "pos": 18,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 3
             },
             {
               "pos": 19,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 1
             },
             {
               "pos": 20,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 19
             },
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 18
             },
             {
               "pos": 22,
               "positionText": "W",
-              "status": "Did not start",
+              "status": "No largó",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
-              "gap": "Did not start",
+              "gap": "",
               "points": 0,
               "grid": 9
             }
@@ -44819,7 +44674,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -44830,7 +44684,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -44841,7 +44694,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -44852,7 +44704,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -44863,7 +44714,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -44874,7 +44724,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -44885,7 +44734,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -44896,7 +44744,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -44907,7 +44754,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Finished",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -44918,7 +44764,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Finished",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -44929,7 +44774,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Finished",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -44940,7 +44784,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -44951,7 +44794,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Finished",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -44962,7 +44804,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Finished",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -44973,7 +44814,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Finished",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -44984,7 +44824,7 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -44995,66 +44835,66 @@
             {
               "pos": 17,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 4
             },
             {
               "pos": 18,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 22
             },
             {
               "pos": 19,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 8
             },
             {
               "pos": 20,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 19
             },
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 20
             },
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 2
             }
@@ -49272,7 +49112,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -49283,7 +49122,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -49294,7 +49132,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -49305,7 +49142,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -49316,7 +49152,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -49327,7 +49162,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Lapped",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -49338,7 +49172,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Lapped",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -49349,7 +49182,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Lapped",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -49360,7 +49192,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Lapped",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -49371,7 +49202,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Lapped",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -49382,7 +49212,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Lapped",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -49393,7 +49222,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Lapped",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -49404,7 +49232,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Lapped",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -49415,7 +49242,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Lapped",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -49426,7 +49252,7 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -49437,7 +49263,7 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -49448,7 +49274,7 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -49459,55 +49285,54 @@
             {
               "pos": 18,
               "positionText": "R",
-              "status": "Lapped",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
-              "gap": "Lapped",
+              "gap": "",
               "points": 0,
               "grid": 18
             },
             {
               "pos": 19,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 22
             },
             {
               "pos": 20,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 9
             },
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 20
             },
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 21
             }
@@ -52814,7 +52639,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -52825,7 +52649,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -52836,7 +52659,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -52847,7 +52669,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -52858,7 +52679,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -52869,7 +52689,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -52880,7 +52699,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -52891,7 +52709,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -52902,7 +52719,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Lapped",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -52913,7 +52729,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Lapped",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -52924,7 +52739,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Lapped",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -52935,7 +52749,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Lapped",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -52946,7 +52759,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Lapped",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -52957,7 +52769,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Lapped",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -52968,7 +52779,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Lapped",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -52979,7 +52789,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Lapped",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -52990,7 +52799,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Lapped",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -53001,7 +52809,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Lapped",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -53012,44 +52819,44 @@
             {
               "pos": 19,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 22
             },
             {
               "pos": 20,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 17
             },
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 19
             },
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 20
             }
@@ -55163,7 +54970,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -55174,7 +54980,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -55185,7 +54990,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -55196,7 +55000,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -55207,7 +55010,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -55218,7 +55020,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -55229,7 +55030,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -55240,7 +55040,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -55251,7 +55050,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Finished",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -55262,7 +55060,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Finished",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -55273,7 +55070,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Finished",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -55284,7 +55080,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Finished",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -55295,7 +55090,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Finished",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -55306,7 +55100,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Finished",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -55317,7 +55110,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Finished",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -55328,7 +55120,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Finished",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -55339,7 +55130,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Finished",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -55350,7 +55140,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Finished",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -55361,7 +55150,6 @@
             {
               "pos": 19,
               "positionText": "19",
-              "status": "Finished",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -55372,7 +55160,6 @@
             {
               "pos": 20,
               "positionText": "20",
-              "status": "Finished",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -55383,7 +55170,6 @@
             {
               "pos": 21,
               "positionText": "21",
-              "status": "Lapped",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
@@ -55394,7 +55180,6 @@
             {
               "pos": 22,
               "positionText": "22",
-              "status": "Lapped",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -55579,7 +55364,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -55590,7 +55374,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -55601,7 +55384,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -55612,7 +55394,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -55623,7 +55404,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -55634,7 +55414,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -55645,7 +55424,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -55656,7 +55434,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -55667,7 +55444,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Finished",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -55678,7 +55454,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Finished",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -55689,7 +55464,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -55700,7 +55474,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Finished",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -55711,7 +55484,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Finished",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -55722,7 +55494,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Finished",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -55733,7 +55504,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -55744,7 +55514,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Finished",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -55755,7 +55524,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Lapped",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -55766,7 +55534,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Lapped",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -55777,7 +55544,6 @@
             {
               "pos": 19,
               "positionText": "19",
-              "status": "Lapped",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
@@ -55788,7 +55554,7 @@
             {
               "pos": 20,
               "positionText": "20",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -55799,22 +55565,22 @@
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 16
             },
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 12
             }
@@ -61785,7 +61551,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -61796,7 +61561,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -61807,7 +61571,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -61818,7 +61581,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -61829,7 +61591,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -61840,7 +61601,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -61851,7 +61611,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -61862,7 +61621,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -61873,7 +61631,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Finished",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -61884,7 +61641,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Finished",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -61895,7 +61651,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Finished",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -61906,7 +61661,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -61917,7 +61671,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Finished",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -61928,7 +61681,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Finished",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -61939,7 +61691,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Finished",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -61950,7 +61701,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Finished",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -61961,7 +61711,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Finished",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -61972,7 +61721,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Lapped",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -61983,7 +61731,6 @@
             {
               "pos": 19,
               "positionText": "19",
-              "status": "Lapped",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -61994,33 +61741,33 @@
             {
               "pos": 20,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 20
             },
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 18
             },
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 3
             }
@@ -63667,7 +63414,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -63678,7 +63424,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -63689,7 +63434,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -63700,7 +63444,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -63711,7 +63454,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -63722,7 +63464,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
@@ -63733,7 +63474,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -63744,7 +63484,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Lapped",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -63755,7 +63494,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Lapped",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -63766,7 +63504,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Lapped",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -63777,7 +63514,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Lapped",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -63788,7 +63524,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Lapped",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -63799,7 +63534,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Lapped",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
@@ -63810,7 +63544,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Lapped",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -63821,7 +63554,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Lapped",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -63832,7 +63564,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Lapped",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -63843,7 +63574,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Lapped",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -63854,7 +63584,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Lapped",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -63865,7 +63594,6 @@
             {
               "pos": 19,
               "positionText": "19",
-              "status": "Lapped",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -63876,33 +63604,33 @@
             {
               "pos": 20,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 3
             },
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 22
             },
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 21
             }
@@ -72514,7 +72242,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -72525,7 +72252,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -72536,7 +72262,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -72547,7 +72272,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -72558,7 +72282,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -72569,7 +72292,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -72580,7 +72302,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -72591,7 +72312,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -72602,7 +72322,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Finished",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -72613,7 +72332,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Finished",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -72624,7 +72342,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "Red Bull",
@@ -72635,7 +72352,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Finished",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -72646,7 +72362,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Finished",
               "driver": "Yuki Tsunoda",
               "code": "TSU",
               "team": "RB F1 Team",
@@ -72657,7 +72372,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Finished",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -72668,7 +72382,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Finished",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -72679,7 +72392,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Finished",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -72690,7 +72402,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Finished",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
@@ -72701,7 +72412,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Finished",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -72712,7 +72422,6 @@
             {
               "pos": 19,
               "positionText": "19",
-              "status": "Lapped",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -72723,7 +72432,6 @@
             {
               "pos": 20,
               "positionText": "20",
-              "status": "Lapped",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -72734,7 +72442,6 @@
             {
               "pos": 21,
               "positionText": "21",
-              "status": "Lapped",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -72745,11 +72452,10 @@
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Lapped",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
-              "gap": "Lapped",
+              "gap": "",
               "points": 0,
               "grid": 14
             }
@@ -72930,7 +72636,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -72941,7 +72646,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -72952,7 +72656,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -72963,7 +72666,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -72974,7 +72676,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -72985,7 +72686,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -72996,7 +72696,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "Red Bull",
@@ -73007,7 +72706,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Lapped",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -73018,7 +72716,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Lapped",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -73029,7 +72726,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Lapped",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -73040,7 +72736,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Lapped",
               "driver": "Yuki Tsunoda",
               "code": "TSU",
               "team": "RB F1 Team",
@@ -73051,7 +72746,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Lapped",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -73062,7 +72756,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Lapped",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -73073,7 +72766,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Lapped",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -73084,7 +72776,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Lapped",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -73095,7 +72786,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Lapped",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -73106,7 +72796,7 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -73117,55 +72807,55 @@
             {
               "pos": 18,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 21
             },
             {
               "pos": 19,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 15
             },
             {
               "pos": 20,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 19
             },
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 20
             },
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 7
             }
@@ -78483,7 +78173,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -78494,7 +78183,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -78505,7 +78193,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -78516,7 +78203,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -78527,7 +78213,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -78538,7 +78223,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -78549,7 +78233,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -78560,7 +78243,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -78571,7 +78253,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Finished",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -78582,7 +78263,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Finished",
               "driver": "Yuki Tsunoda",
               "code": "TSU",
               "team": "RB F1 Team",
@@ -78593,7 +78273,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Finished",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -78604,7 +78283,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Finished",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -78615,7 +78293,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Finished",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -78626,7 +78303,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "Red Bull",
@@ -78637,7 +78313,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Finished",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -78648,7 +78323,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Lapped",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -78659,7 +78333,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Lapped",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -78670,7 +78343,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Lapped",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
@@ -78681,7 +78353,6 @@
             {
               "pos": 19,
               "positionText": "19",
-              "status": "Lapped",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -78692,33 +78363,33 @@
             {
               "pos": 20,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 18
             },
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 21
             },
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 3
             }
@@ -80048,7 +79719,6 @@
             {
               "pos": 1,
               "positionText": "1",
-              "status": "Finished",
               "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
@@ -80059,7 +79729,6 @@
             {
               "pos": 2,
               "positionText": "2",
-              "status": "Finished",
               "driver": "Max Verstappen",
               "code": "VER",
               "team": "Red Bull",
@@ -80070,7 +79739,6 @@
             {
               "pos": 3,
               "positionText": "3",
-              "status": "Finished",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -80081,7 +79749,6 @@
             {
               "pos": 4,
               "positionText": "4",
-              "status": "Finished",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -80092,7 +79759,6 @@
             {
               "pos": 5,
               "positionText": "5",
-              "status": "Finished",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -80103,7 +79769,6 @@
             {
               "pos": 6,
               "positionText": "6",
-              "status": "Finished",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "Red Bull",
@@ -80114,7 +79779,6 @@
             {
               "pos": 7,
               "positionText": "7",
-              "status": "Finished",
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
@@ -80125,7 +79789,6 @@
             {
               "pos": 8,
               "positionText": "8",
-              "status": "Finished",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -80136,7 +79799,6 @@
             {
               "pos": 9,
               "positionText": "9",
-              "status": "Lapped",
               "driver": "Arvid Lindblad",
               "code": "LIN",
               "team": "RB F1 Team",
@@ -80147,7 +79809,6 @@
             {
               "pos": 10,
               "positionText": "10",
-              "status": "Lapped",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -80158,7 +79819,6 @@
             {
               "pos": 11,
               "positionText": "11",
-              "status": "Lapped",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -80169,7 +79829,6 @@
             {
               "pos": 12,
               "positionText": "12",
-              "status": "Lapped",
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
@@ -80180,7 +79839,6 @@
             {
               "pos": 13,
               "positionText": "13",
-              "status": "Lapped",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -80191,7 +79849,6 @@
             {
               "pos": 14,
               "positionText": "14",
-              "status": "Lapped",
               "driver": "Yuki Tsunoda",
               "code": "TSU",
               "team": "RB F1 Team",
@@ -80202,7 +79859,6 @@
             {
               "pos": 15,
               "positionText": "15",
-              "status": "Lapped",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -80213,7 +79869,6 @@
             {
               "pos": 16,
               "positionText": "16",
-              "status": "Lapped",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -80224,7 +79879,6 @@
             {
               "pos": 17,
               "positionText": "17",
-              "status": "Lapped",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -80235,7 +79889,6 @@
             {
               "pos": 18,
               "positionText": "18",
-              "status": "Lapped",
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -80246,44 +79899,44 @@
             {
               "pos": 19,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 20
             },
             {
               "pos": 20,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 18
             },
             {
               "pos": 21,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 21
             },
             {
               "pos": 22,
               "positionText": "R",
-              "status": "Retired",
+              "status": "Abandonó",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
-              "gap": "Retired",
+              "gap": "",
               "points": 0,
               "grid": 4
             }
@@ -86070,7 +85723,10 @@
       ]
     },
     "f2": {
-      "officialTimes": 11
+      "officialTimes": 11,
+      "argentines": [
+        "Nico Varrone"
+      ]
     },
     "tc": {
       "standingsLabel": "Copa de Oro"
@@ -86349,7 +86005,11 @@
     },
     "gt3": {
       "standingsLabel": "Sprint Cup",
-      "endurance": []
+      "endurance": [],
+      "argentines": [
+        "Ignacio Montenegro",
+        "Ezequiel Pérez Companc"
+      ]
     },
     "schedules": {
       "notes": 15,
@@ -86374,7 +86034,5 @@
       "eventsWithResults": 10
     }
   },
-  "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/12/driverstandings.json?limit=40"
-  ]
+  "failures": []
 }

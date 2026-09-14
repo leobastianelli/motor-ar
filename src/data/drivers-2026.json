@@ -1,0 +1,4508 @@
+{
+  "generatedAt": "2026-09-14T21:10:49.680Z",
+  "drivers": [
+    {
+      "key": "adrian percaz",
+      "keys": [
+        "adrian percaz"
+      ],
+      "slug": "adrian-percaz",
+      "name": "Adrian Percaz",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "66"
+      },
+      "teams": {
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "agustin bonomo",
+      "keys": [
+        "agustin bonomo"
+      ],
+      "slug": "agustin-bonomo",
+      "name": "Agustin Bonomo",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "56"
+      },
+      "teams": {
+        "tn": "DS 3"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "agustin canapino",
+      "keys": [
+        "agustin canapino"
+      ],
+      "slug": "agustin-canapino",
+      "name": "Agustín Canapino",
+      "aliases": [],
+      "series": [
+        "tn",
+        "tc",
+        "tc-pick-up",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tn": "86",
+        "tc": "1",
+        "tc-pick-up": "1",
+        "tc-pista-pick-up": "1"
+      },
+      "teams": {
+        "tn": "Chevrolet Cruze",
+        "tc": "Chevrolet",
+        "tc-pick-up": "Chevrolet",
+        "tc-pista-pick-up": "Chevrolet"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "agustin martinez",
+      "keys": [
+        "agustin martinez"
+      ],
+      "slug": "agustin-martinez",
+      "name": "Agustín Martínez",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "16"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-02-15"
+    },
+    {
+      "key": "alan cifre",
+      "keys": [
+        "alan cifre denis",
+        "alan cifre"
+      ],
+      "slug": "alan-cifre",
+      "name": "Alan Cifre",
+      "aliases": [
+        "Alan Cifre Denis"
+      ],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "78"
+      },
+      "teams": {
+        "tc-mouras": "Ford"
+      },
+      "firstSeen": "2026-02-28",
+      "lastSeen": "2026-03-22"
+    },
+    {
+      "key": "aldo ortiz",
+      "keys": [
+        "aldo ortiz"
+      ],
+      "slug": "aldo-ortiz",
+      "name": "Aldo Ortiz",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "58"
+      },
+      "teams": {
+        "tc-mouras": "Dodge"
+      },
+      "firstSeen": "2026-08-15",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "alejandro inella",
+      "keys": [
+        "alejandro inella"
+      ],
+      "slug": "alejandro-inella",
+      "name": "Alejandro Inella",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "80"
+      },
+      "teams": {},
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-02-22"
+    },
+    {
+      "key": "alejandro martinez",
+      "keys": [
+        "alejandro martinez"
+      ],
+      "slug": "alejandro-martinez",
+      "name": "Alejandro Martínez",
+      "aliases": [],
+      "series": [
+        "tc-mouras",
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-mouras": "23",
+        "tc-pista": "23"
+      },
+      "teams": {
+        "tc-mouras": "Dodge",
+        "tc-pista": "Chevrolet"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "alfonso domenech",
+      "keys": [
+        "alfonso domenech"
+      ],
+      "slug": "alfonso-domenech",
+      "name": "Alfonso Domenech",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "7"
+      },
+      "teams": {
+        "tn": "Honda Civic"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "alvaro oroza",
+      "keys": [
+        "alvaro oroza"
+      ],
+      "slug": "alvaro-oroza",
+      "name": "Alvaro Oroza",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "88"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "andres calderon",
+      "keys": [
+        "andres calderon"
+      ],
+      "slug": "andres-calderon",
+      "name": "Andres Calderon",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "79"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "andres jakos",
+      "keys": [
+        "andres jakos"
+      ],
+      "slug": "andres-jakos",
+      "name": "Andrés Jakos",
+      "aliases": [],
+      "series": [
+        "tc",
+        "tc-pick-up"
+      ],
+      "numbers": {
+        "tc": "122",
+        "tc-pick-up": "122"
+      },
+      "teams": {
+        "tc": "Toyota",
+        "tc-pick-up": "Toyota"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "antonino garcia",
+      "keys": [
+        "antonino garcia"
+      ],
+      "slug": "antonino-garcia",
+      "name": "Antonino Garcia",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "118"
+      },
+      "teams": {
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-04-05"
+    },
+    {
+      "key": "augusto carinelli",
+      "keys": [
+        "augusto carinelli"
+      ],
+      "slug": "augusto-carinelli",
+      "name": "Augusto Carinelli",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "77"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "bautista damiani",
+      "keys": [
+        "bautista damiani"
+      ],
+      "slug": "bautista-damiani",
+      "name": "Bautista Damiani",
+      "aliases": [],
+      "series": [
+        "tn",
+        "tc-pista"
+      ],
+      "numbers": {
+        "tn": "99",
+        "tc-pista": "99"
+      },
+      "teams": {
+        "tn": "VW Vento GLI",
+        "tc-pista": "Chevrolet"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "bautista roqueta",
+      "keys": [
+        "bautista roqueta",
+        "baustista roqueta"
+      ],
+      "slug": "bautista-roqueta",
+      "name": "Bautista Roqueta",
+      "aliases": [
+        "Baustista Roqueta"
+      ],
+      "series": [
+        "tc-pista-mouras",
+        "tn",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "47",
+        "tn": "47",
+        "tc-pista-pick-up": "47"
+      },
+      "teams": {
+        "tc-pista-mouras": "Dodge",
+        "tn": "Toyota Yaris",
+        "tc-pista-pick-up": "Dodge"
+      },
+      "firstSeen": "2026-01-24",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "anton benjamin",
+      "keys": [
+        "anton benjamin"
+      ],
+      "slug": "benjamin-anton",
+      "name": "Benjamin Anton",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "43"
+      },
+      "teams": {
+        "tc-pista": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "benjamin ochoa",
+      "keys": [
+        "benjamin ochoa"
+      ],
+      "slug": "benjamin-ochoa",
+      "name": "Benjamin Ochoa",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "111"
+      },
+      "teams": {
+        "tc-pista": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "bernardo llaver",
+      "keys": [
+        "bernardo llaver"
+      ],
+      "slug": "bernardo-llaver",
+      "name": "Bernardo Llaver",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "100"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-05-30",
+      "lastSeen": "2026-05-31"
+    },
+    {
+      "key": "blas sefchek",
+      "keys": [
+        "blas sefchek"
+      ],
+      "slug": "blas-sefchek",
+      "name": "Blas Sefchek",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "159"
+      },
+      "teams": {
+        "tn": "VW Vento"
+      },
+      "firstSeen": "2026-03-14",
+      "lastSeen": "2026-04-05"
+    },
+    {
+      "key": "braian quevedo",
+      "keys": [
+        "braian quevedo"
+      ],
+      "slug": "braian-quevedo",
+      "name": "Braian Quevedo",
+      "aliases": [],
+      "series": [
+        "tc-pista",
+        "tn"
+      ],
+      "numbers": {
+        "tc-pista": "169",
+        "tn": "169"
+      },
+      "teams": {
+        "tc-pista": "Toyota",
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "braian reinoso",
+      "keys": [
+        "braian reinoso"
+      ],
+      "slug": "braian-reinoso",
+      "name": "Braian Reinoso",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "98"
+      },
+      "teams": {
+        "tn": "Toyota Yaris"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "bruno pace",
+      "keys": [
+        "bruno pace"
+      ],
+      "slug": "bruno-pace",
+      "name": "Bruno Pace",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "97"
+      },
+      "teams": {
+        "tn": "Toyota Etios"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "carlos okulovich",
+      "keys": [
+        "carlos okulovich"
+      ],
+      "slug": "carlos-okulovich",
+      "name": "Carlos Okulovich",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "13"
+      },
+      "teams": {
+        "tn": "Chevrolet Cruze"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "christian ledesma",
+      "keys": [
+        "christian ledesma"
+      ],
+      "slug": "christian-ledesma",
+      "name": "Christian Ledesma",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "14"
+      },
+      "teams": {
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "costanzo maiximo",
+      "keys": [
+        "costanzo maiximo",
+        "costanzo maximo",
+        "costanzo maximiliano"
+      ],
+      "slug": "costanzo-maiximo",
+      "name": "Costanzo Maíximo",
+      "aliases": [
+        "Maximo Costanzo",
+        "Maximiliano Costanzo"
+      ],
+      "series": [
+        "tc-pista-mouras"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "75"
+      },
+      "teams": {
+        "tc-pista-mouras": "Chevrolet"
+      },
+      "firstSeen": "2026-01-24",
+      "lastSeen": "2026-03-01"
+    },
+    {
+      "key": "cristian vaira",
+      "keys": [
+        "cristian vaira"
+      ],
+      "slug": "cristian-vaira",
+      "name": "Cristian Vaira",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "36"
+      },
+      "teams": {
+        "tn": "VW Gol Trend"
+      },
+      "firstSeen": "2026-05-02",
+      "lastSeen": "2026-05-03"
+    },
+    {
+      "key": "damian kirstein",
+      "keys": [
+        "damian kirstein"
+      ],
+      "slug": "damian-kirstein",
+      "name": "Damian Kirstein",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "28"
+      },
+      "teams": {
+        "tn": "Toyota Etios"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-04-05"
+    },
+    {
+      "key": "damian perez",
+      "keys": [
+        "damian perez"
+      ],
+      "slug": "damian-perez",
+      "name": "Damián Pérez",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "199",
+        "tc-pista-pick-up": "199"
+      },
+      "teams": {
+        "tc-pista-mouras": "Dodge",
+        "tc-pista-pick-up": "Dodge"
+      },
+      "firstSeen": "2026-01-24",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "costa daniel sanchez",
+      "keys": [
+        "costa daniel sanchez"
+      ],
+      "slug": "daniel-costa-sanchez",
+      "name": "Daniel Costa Sanchez",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "87"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-07-05"
+    },
+    {
+      "key": "daniel faggiano",
+      "keys": [
+        "daniel faggiano"
+      ],
+      "slug": "daniel-faggiano",
+      "name": "Daniel Faggiano",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "148",
+        "tc-pista-pick-up": "148"
+      },
+      "teams": {
+        "tc-pista-mouras": "Dodge",
+        "tc-pista-pick-up": "Dodge"
+      },
+      "firstSeen": "2026-02-27",
+      "lastSeen": "2026-03-22"
+    },
+    {
+      "key": "dante hainze rubiera",
+      "keys": [
+        "dante hanze rubiera",
+        "dante hainze rubiera"
+      ],
+      "slug": "dante-rubiera-hainze",
+      "name": "Dante Rubiera Hainze",
+      "aliases": [
+        "Dante Rubiera Hanze"
+      ],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "122",
+        "tc-pista-pick-up": "122"
+      },
+      "teams": {
+        "tc-pista-mouras": "Ford",
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-01-24",
+      "lastSeen": "2026-07-26"
+    },
+    {
+      "key": "azar diego",
+      "keys": [
+        "azar diego"
+      ],
+      "slug": "diego-azar",
+      "name": "Diego Azar",
+      "aliases": [],
+      "series": [
+        "tc",
+        "tc-pick-up",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc": "110",
+        "tc-pick-up": "110",
+        "tc-pista-pick-up": "110"
+      },
+      "teams": {
+        "tc": "Mercedes-Benz",
+        "tc-pick-up": "Toyota",
+        "tc-pista-pick-up": "Fiat"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "casais diego",
+      "keys": [
+        "casais diego"
+      ],
+      "slug": "diego-casais",
+      "name": "Diego Casais",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "132"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "carlo de diego",
+      "keys": [
+        "carlo de diego"
+      ],
+      "slug": "diego-de-carlo",
+      "name": "Diego De Carlo",
+      "aliases": [],
+      "series": [
+        "tc-pick-up",
+        "tc",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pick-up": "13",
+        "tc": "115",
+        "tc-pista-pick-up": "13"
+      },
+      "teams": {
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "diego farina",
+      "keys": [
+        "diego farina"
+      ],
+      "slug": "diego-farina",
+      "name": "Diego Farina",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "116"
+      },
+      "teams": {
+        "tn": "VW Gol Trend"
+      },
+      "firstSeen": "2026-04-04",
+      "lastSeen": "2026-05-03"
+    },
+    {
+      "key": "di dino palma",
+      "keys": [
+        "di dino palma"
+      ],
+      "slug": "dino-di-palma",
+      "name": "Dino Di Palma",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "99",
+        "tc-pista-pick-up": "99"
+      },
+      "teams": {
+        "tc-pista-mouras": "Dodge",
+        "tc-pista-pick-up": "Dodge"
+      },
+      "firstSeen": "2026-03-21",
+      "lastSeen": "2026-03-22"
+    },
+    {
+      "key": "craparo elio",
+      "keys": [
+        "craparo elio"
+      ],
+      "slug": "elio-craparo",
+      "name": "Elio Craparo",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "29"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "emiliano simonetti",
+      "keys": [
+        "emiliano simonetti"
+      ],
+      "slug": "emiliano-simonetti",
+      "name": "Emiliano Simonetti",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "65"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-05-17"
+    },
+    {
+      "key": "emiliano spataro",
+      "keys": [
+        "emiliano spataro"
+      ],
+      "slug": "emiliano-spataro",
+      "name": "Emiliano Spataro",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "27"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "esteban luna",
+      "keys": [
+        "esteban luna"
+      ],
+      "slug": "esteban-luna",
+      "name": "Esteban Luna",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "221"
+      },
+      "teams": {
+        "tc-mouras": "Ford"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "esteban mancuso",
+      "keys": [
+        "esteban mancuso"
+      ],
+      "slug": "esteban-mancuso",
+      "name": "Esteban Mancuso",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "88"
+      },
+      "teams": {
+        "tc-mouras": "Dodge"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "eugenio provens",
+      "keys": [
+        "eugenio provens"
+      ],
+      "slug": "eugenio-provens",
+      "name": "Eugenio Provens",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "53"
+      },
+      "teams": {
+        "tc-pista": "Dodge"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "ever franetovich",
+      "keys": [
+        "ever franetovich"
+      ],
+      "slug": "ever-franetovich",
+      "name": "Ever Franetovich",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "238"
+      },
+      "teams": {
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "bastidas exequiel",
+      "keys": [
+        "bastidas exequiel"
+      ],
+      "slug": "exequiel-bastidas",
+      "name": "Exequiel Bastidas",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "151"
+      },
+      "teams": {
+        "tn": "Toyota Yaris"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "fabian yannantuoni",
+      "keys": [
+        "fabian yannantuoni"
+      ],
+      "slug": "fabian-yannantuoni",
+      "name": "Fabian Yannantuoni",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "9"
+      },
+      "teams": {
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "fabrizio maggini",
+      "keys": [
+        "fabrizio maggini"
+      ],
+      "slug": "fabrizio-maggini",
+      "name": "Fabrizio Maggini",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "118"
+      },
+      "teams": {
+        "tc-mouras": "Ford"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "ardusso facundo",
+      "keys": [
+        "ardusso facundo",
+        "ardusso cundo fa"
+      ],
+      "slug": "facundo-ardusso",
+      "name": "Facundo Ardusso",
+      "aliases": [
+        "Ardusso Fa Cundo"
+      ],
+      "series": [
+        "tn",
+        "tc",
+        "tc-pick-up"
+      ],
+      "numbers": {
+        "tc": "83",
+        "tn": "83",
+        "tc-pick-up": "83"
+      },
+      "teams": {
+        "tc": "Ford",
+        "tn": "Toyota Corolla",
+        "tc-pick-up": "Toyota"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "chapur facundo",
+      "keys": [
+        "chapur facundo"
+      ],
+      "slug": "facundo-chapur",
+      "name": "Facundo Chapur",
+      "aliases": [],
+      "series": [
+        "tn",
+        "tc"
+      ],
+      "numbers": {
+        "tn": "79",
+        "tc": "79"
+      },
+      "teams": {
+        "tn": "Honda Civic",
+        "tc": "Torino"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "facundo ledesma",
+      "keys": [
+        "facundo ledesma"
+      ],
+      "slug": "facundo-ledesma",
+      "name": "Facundo Ledesma",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "119"
+      },
+      "teams": {
+        "tc-pista": "Chevrolet"
+      },
+      "firstSeen": "2026-05-30",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "facundo luduena",
+      "keys": [
+        "facundo luduena"
+      ],
+      "slug": "facundo-luduena",
+      "name": "Facundo Ludueña",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "74",
+        "tc-pista-pick-up": "74"
+      },
+      "teams": {
+        "tc-pista-mouras": "Chevrolet",
+        "tc-pista-pick-up": "Chevrolet"
+      },
+      "firstSeen": "2026-01-24",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "facundo marques",
+      "keys": [
+        "facundo marques"
+      ],
+      "slug": "facundo-marques",
+      "name": "Facundo Marques",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "88"
+      },
+      "teams": {
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "cifre faustino",
+      "keys": [
+        "cifre faustino"
+      ],
+      "slug": "faustino-cifre",
+      "name": "Faustino Cifre",
+      "aliases": [],
+      "series": [
+        "tc-pista",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista": "144",
+        "tc-pista-pick-up": "144"
+      },
+      "teams": {
+        "tc-pista": "Ford",
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "federico luques",
+      "keys": [
+        "federico luques"
+      ],
+      "slug": "federico-luques",
+      "name": "Federico Luques",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "53"
+      },
+      "teams": {
+        "tn": "Toyota Yaris"
+      },
+      "firstSeen": "2026-05-02",
+      "lastSeen": "2026-05-03"
+    },
+    {
+      "key": "bernasconi felipe",
+      "keys": [
+        "bernasconi felipe"
+      ],
+      "slug": "felipe-bernasconi",
+      "name": "Felipe Bernasconi",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "133"
+      },
+      "teams": {
+        "tc-pista": "Toyota"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "felipe martini",
+      "keys": [
+        "felipe martini"
+      ],
+      "slug": "felipe-martini",
+      "name": "Felipe Martini",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "76"
+      },
+      "teams": {
+        "tn": "VW Gol Trend"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-04-05"
+    },
+    {
+      "key": "coltrinari francisco",
+      "keys": [
+        "coltrinari francisco"
+      ],
+      "slug": "francisco-coltrinari",
+      "name": "Francisco Coltrinari",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "2"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "francisco luengo",
+      "keys": [
+        "francisco luengo"
+      ],
+      "slug": "francisco-luengo",
+      "name": "Francisco Luengo",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "141"
+      },
+      "teams": {
+        "tc-mouras": "Chevrolet"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "bodrato franco mionetto",
+      "keys": [
+        "bodrato franco mionetto"
+      ],
+      "slug": "franco-bodrato-mionetto",
+      "name": "Franco Bodrato Mionetto",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "131"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "franco riva",
+      "keys": [
+        "franco riva"
+      ],
+      "slug": "franco-riva",
+      "name": "Franco Riva",
+      "aliases": [],
+      "series": [
+        "tc2000"
+      ],
+      "numbers": {},
+      "teams": {
+        "tc2000": "Pro Racing"
+      },
+      "firstSeen": "2026-03-15",
+      "lastSeen": "2026-03-15"
+    },
+    {
+      "key": "franco romano",
+      "keys": [
+        "franco romano"
+      ],
+      "slug": "franco-romano",
+      "name": "Franco Romano",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "193"
+      },
+      "teams": {
+        "tn": "Toyota Yaris"
+      },
+      "firstSeen": "2026-03-15",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "gabriel gandulia",
+      "keys": [
+        "gabriel gandulia"
+      ],
+      "slug": "gabriel-gandulia",
+      "name": "Gabriel Gandulia",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "10"
+      },
+      "teams": {
+        "tc-pista": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "gabriel villalba",
+      "keys": [
+        "gabriel villalba"
+      ],
+      "slug": "gabriel-villalba",
+      "name": "Gabriel Villalba",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "30"
+      },
+      "teams": {
+        "tc-pista-mouras": "Ford"
+      },
+      "firstSeen": "2026-05-16",
+      "lastSeen": "2026-05-17"
+    },
+    {
+      "key": "chansard gaspar",
+      "keys": [
+        "chansard gaspar"
+      ],
+      "slug": "gaspar-chansard",
+      "name": "Gaspar Chansard",
+      "aliases": [],
+      "series": [
+        "tc",
+        "tc-pick-up"
+      ],
+      "numbers": {
+        "tc": "140",
+        "tc-pick-up": "140"
+      },
+      "teams": {
+        "tc": "Toyota"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "ferrante gaston",
+      "keys": [
+        "ferrante gaston"
+      ],
+      "slug": "gaston-ferrante",
+      "name": "Gastón Ferrante",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "114"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "gaston iansa",
+      "keys": [
+        "gaston iansa"
+      ],
+      "slug": "gaston-iansa",
+      "name": "Gaston Iansa",
+      "aliases": [],
+      "series": [
+        "tc-pick-up"
+      ],
+      "numbers": {
+        "tc-pick-up": "55"
+      },
+      "teams": {
+        "tc-pick-up": "Toyota"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-03-22"
+    },
+    {
+      "key": "gaston martinez minetti",
+      "keys": [
+        "gaston martinez minetti"
+      ],
+      "slug": "gaston-martinez-minetti",
+      "name": "Gaston Martinez Minetti",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "84"
+      },
+      "teams": {
+        "tn": "Toyota Etios"
+      },
+      "firstSeen": "2026-03-15",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "foton gaston mazzacane",
+      "keys": [
+        "gaston mazzacane",
+        "foton gaston mazzacane"
+      ],
+      "slug": "gaston-mazzacane-foton",
+      "name": "Gaston Mazzacane Foton",
+      "aliases": [
+        "Gaston Mazzacane"
+      ],
+      "series": [
+        "tc-pick-up",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pick-up": "11",
+        "tc-pista-pick-up": "11"
+      },
+      "teams": {},
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "german todino",
+      "keys": [
+        "german todino"
+      ],
+      "slug": "german-todino",
+      "name": "Germán Todino",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "4"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "antolin gonzalo",
+      "keys": [
+        "antolin gonzalo"
+      ],
+      "slug": "gonzalo-antolin",
+      "name": "Gonzalo Antolin",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "94"
+      },
+      "teams": {
+        "tn": "Chevrolet Cruze"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "aramburu gonzalo",
+      "keys": [
+        "aramburu gonzalo"
+      ],
+      "slug": "gonzalo-aramburu",
+      "name": "Gonzalo Aramburu",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "66"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Toyota"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-08-15"
+    },
+    {
+      "key": "gustavo tadei",
+      "keys": [
+        "gustavo tadei",
+        "gustavo tadie"
+      ],
+      "slug": "gustavo-tadei",
+      "name": "Gustavo Tadei",
+      "aliases": [
+        "Gustavo Tadie"
+      ],
+      "series": [
+        "tc-pista",
+        "tc-pick-up",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pick-up": "66",
+        "tc-pista-pick-up": "66",
+        "tc-pista": "66"
+      },
+      "teams": {
+        "tc-pick-up": "Toyota",
+        "tc-pista-pick-up": "Ford",
+        "tc-pista": "Chevrolet"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-15"
+    },
+    {
+      "key": "hernan palazzo",
+      "keys": [
+        "hernan palazzo",
+        "azzo hernan pal"
+      ],
+      "slug": "hernan-palazzo",
+      "name": "Hernán Palazzo",
+      "aliases": [
+        "Hernan Pal Azzo"
+      ],
+      "series": [
+        "tc",
+        "tc-pick-up",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc": "119",
+        "tc-pick-up": "119",
+        "tc-pista-pick-up": "119"
+      },
+      "teams": {
+        "tc": "Toyota",
+        "tc-pick-up": "Toyota",
+        "tc-pista-pick-up": "Toyota"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "hernan sala",
+      "keys": [
+        "hernan sala"
+      ],
+      "slug": "hernan-sala",
+      "name": "Hernan Sala",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "23"
+      },
+      "teams": {
+        "tc-pista-pick-up": "RAM"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-05-17"
+    },
+    {
+      "key": "evolo horacio",
+      "keys": [
+        "evolo horacio"
+      ],
+      "slug": "horacio-evolo",
+      "name": "Horacio Evolo",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "29"
+      },
+      "teams": {
+        "tn": "Toyota Etios"
+      },
+      "firstSeen": "2026-06-05",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "fain ignacio",
+      "keys": [
+        "fain ignacio"
+      ],
+      "slug": "ignacio-fain",
+      "name": "Ignacio Faín",
+      "aliases": [],
+      "series": [
+        "tc",
+        "tc-pick-up",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc": "86",
+        "tc-pick-up": "86",
+        "tc-pista-pick-up": "86"
+      },
+      "teams": {
+        "tc": "Torino",
+        "tc-pick-up": "Ford",
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "grippo ignacio",
+      "keys": [
+        "grippo ignacio"
+      ],
+      "slug": "ignacio-grippo",
+      "name": "Ignacio Grippo",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "78"
+      },
+      "teams": {
+        "tn": "Toyota Etios"
+      },
+      "firstSeen": "2026-05-02",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "ignacio lovich",
+      "keys": [
+        "ignacio lovich"
+      ],
+      "slug": "ignacio-lovich",
+      "name": "Ignacio Lovich",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "63",
+        "tc-pista-pick-up": "63"
+      },
+      "teams": {
+        "tc-pista-mouras": "Dodge",
+        "tc-pista-pick-up": "Dodge"
+      },
+      "firstSeen": "2026-01-24",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "ignacio montenegro",
+      "keys": [
+        "ignacio montenegro"
+      ],
+      "slug": "ignacio-montenegro",
+      "name": "Ignacio Montenegro",
+      "aliases": [],
+      "series": [
+        "gt3"
+      ],
+      "numbers": {},
+      "teams": {
+        "gt3": "Team WRT"
+      },
+      "firstSeen": "2026-05-02",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "ignacio quintana",
+      "keys": [
+        "ignacio quintana"
+      ],
+      "slug": "ignacio-quintana",
+      "name": "Ignacio Quintana",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "111",
+        "tc-pista-pick-up": "111"
+      },
+      "teams": {
+        "tc-pista-mouras": "Torino",
+        "tc-pista-pick-up": "Torino"
+      },
+      "firstSeen": "2026-01-24",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "ignacio vilas",
+      "keys": [
+        "ignacio vilas"
+      ],
+      "slug": "ignacio-vilas",
+      "name": "Ignacio Vilas",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "77",
+        "tc-pista-pick-up": "77"
+      },
+      "teams": {
+        "tc-pista-mouras": "Dodge",
+        "tc-pista-pick-up": "Dodge"
+      },
+      "firstSeen": "2026-01-24",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "arrias inaki",
+      "keys": [
+        "arrias inaki"
+      ],
+      "slug": "inaki-arrias",
+      "name": "Iñaki Arrias",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "145",
+        "tc-pista-pick-up": "145"
+      },
+      "teams": {
+        "tc-pista-mouras": "Ford",
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-03-01",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "javier merlo",
+      "keys": [
+        "javier merlo"
+      ],
+      "slug": "javier-merlo",
+      "name": "Javier Merlo",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "111"
+      },
+      "teams": {
+        "tn": "VW Virtus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "jeremias olmedo",
+      "keys": [
+        "jeremias olmedo"
+      ],
+      "slug": "jeremias-olmedo",
+      "name": "Jeremías Olmedo",
+      "aliases": [],
+      "series": [
+        "tn",
+        "tc"
+      ],
+      "numbers": {
+        "tn": "89",
+        "tc": "9"
+      },
+      "teams": {
+        "tn": "Chevrolet Cruze",
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "jeremias scialchi",
+      "keys": [
+        "jeremias scialchi"
+      ],
+      "slug": "jeremias-scialchi",
+      "name": "Jeremías Scialchi",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "137"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "jeronimo teti",
+      "keys": [
+        "jeronimo teti"
+      ],
+      "slug": "jeronimo-teti",
+      "name": "Jerónimo Teti",
+      "aliases": [],
+      "series": [
+        "tn",
+        "tc"
+      ],
+      "numbers": {
+        "tn": "4",
+        "tc": "60"
+      },
+      "teams": {
+        "tn": "Chevrolet Cruze",
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-06-20"
+    },
+    {
+      "key": "joaquin ochoa",
+      "keys": [
+        "joaquin ochoa"
+      ],
+      "slug": "joaquin-ochoa",
+      "name": "Joaquín Ochoa",
+      "aliases": [],
+      "series": [
+        "tc",
+        "tc-pick-up"
+      ],
+      "numbers": {
+        "tc": "154",
+        "tc-pick-up": "154"
+      },
+      "teams": {
+        "tc": "Toyota",
+        "tc-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "joaquin rossotti",
+      "keys": [
+        "joaquin rossotti"
+      ],
+      "slug": "joaquin-rossotti",
+      "name": "Joaquin Rossotti",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "44"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Nissan"
+      },
+      "firstSeen": "2026-03-21",
+      "lastSeen": "2026-07-26"
+    },
+    {
+      "key": "gassmann joel",
+      "keys": [
+        "gassmann joel",
+        "gassman joel"
+      ],
+      "slug": "joel-gassmann",
+      "name": "Joel Gassmann",
+      "aliases": [
+        "Gassman Joel"
+      ],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "8"
+      },
+      "teams": {
+        "tn": "Chevrolet Cruze"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "castellano jonatan",
+      "keys": [
+        "castellano jonatan"
+      ],
+      "slug": "jonatan-castellano",
+      "name": "Jonatan Castellano",
+      "aliases": [],
+      "series": [
+        "tn",
+        "tc"
+      ],
+      "numbers": {
+        "tn": "11",
+        "tc": "101"
+      },
+      "teams": {
+        "tn": "Chevrolet Cruze",
+        "tc": "Dodge"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "barrio jorge",
+      "keys": [
+        "barrio jorge"
+      ],
+      "slug": "jorge-barrio",
+      "name": "Jorge Barrio",
+      "aliases": [],
+      "series": [
+        "tn",
+        "tc"
+      ],
+      "numbers": {
+        "tn": "2",
+        "tc": "141"
+      },
+      "teams": {
+        "tn": "Chevrolet Cruze",
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "alberto goya jose",
+      "keys": [
+        "alberto goya jose"
+      ],
+      "slug": "jose-alberto-goya",
+      "name": "Jose Alberto Goya",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "15"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "carlos jose montanari",
+      "keys": [
+        "carlos jose montanari"
+      ],
+      "slug": "jose-carlos-montanari",
+      "name": "Jose Carlos Montanari",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "22"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-05-17"
+    },
+    {
+      "key": "arrate jose luis",
+      "keys": [
+        "arrate jose luis"
+      ],
+      "slug": "jose-luis-arrate",
+      "name": "Jose Luis Arrate",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "73"
+      },
+      "teams": {
+        "tn": "Audi A1"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-03-15"
+    },
+    {
+      "key": "jose manuel urcera",
+      "keys": [
+        "jose manuel urcera"
+      ],
+      "slug": "jose-manuel-urcera",
+      "name": "José Manuel Urcera",
+      "aliases": [],
+      "series": [
+        "tn",
+        "tc"
+      ],
+      "numbers": {
+        "tn": "231",
+        "tc": "231"
+      },
+      "teams": {
+        "tn": "Honda Civic",
+        "tc": "Mercedes-Benz"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "antonio juan sandin",
+      "keys": [
+        "antonio juan sandin"
+      ],
+      "slug": "juan-antonio-sandin",
+      "name": "Juan Antonio Sandin",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up",
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "8",
+        "tc-pista": "32"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford",
+        "tc-pista": "Toyota"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "b benedictis de juan",
+      "keys": [
+        "b benedictis de juan"
+      ],
+      "slug": "juan-b-de-benedictis",
+      "name": "Juan B De Benedictis",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "157"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "benvenutti cruz juan",
+      "keys": [
+        "benvenutti cruz juan",
+        "benvenuti cruz juan"
+      ],
+      "slug": "juan-cruz-benvenutti",
+      "name": "Juan Cruz Benvenutti",
+      "aliases": [
+        "Juan Cruz Benvenuti"
+      ],
+      "series": [
+        "tc",
+        "tn"
+      ],
+      "numbers": {
+        "tc": "96",
+        "tn": "96"
+      },
+      "teams": {
+        "tc": "Chevrolet",
+        "tn": "VW Vento GLI"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "eduardo juan kreitz",
+      "keys": [
+        "eduardo juan kreitz"
+      ],
+      "slug": "juan-eduardo-kreitz",
+      "name": "Juan Eduardo Kreitz",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "14"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "canela ignacio juan",
+      "keys": [
+        "canela ignacio juan"
+      ],
+      "slug": "juan-ignacio-canela",
+      "name": "Juan Ignacio Canela",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "70"
+      },
+      "teams": {
+        "tn": "Toyota Yaris"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "ignacio juan maceira",
+      "keys": [
+        "ignacio juan maceira"
+      ],
+      "slug": "juan-ignacio-maceira",
+      "name": "Juan Ignacio Maceira",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "59"
+      },
+      "teams": {
+        "tc-pista": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "conde jose juan",
+      "keys": [
+        "conde juan",
+        "conde jose juan"
+      ],
+      "slug": "juan-jose-conde",
+      "name": "Juan Jose Conde",
+      "aliases": [
+        "Juan Conde"
+      ],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "44",
+        "tc-pista-pick-up": "44"
+      },
+      "teams": {
+        "tc-pista-mouras": "Chevrolet",
+        "tc-pista-pick-up": "Chevrolet"
+      },
+      "firstSeen": "2026-01-24",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "ebarlin jose juan",
+      "keys": [
+        "ebarlin jose juan"
+      ],
+      "slug": "juan-jose-ebarlin",
+      "name": "Juan José Ebarlín",
+      "aliases": [],
+      "series": [
+        "tc",
+        "tc-pick-up",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc": "15",
+        "tc-pick-up": "2",
+        "tc-pista-pick-up": "2"
+      },
+      "teams": {
+        "tc": "Chevrolet",
+        "tc-pick-up": "Toyota",
+        "tc-pista-pick-up": "Toyota"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "jose juan suarez",
+      "keys": [
+        "jose juan suarez"
+      ],
+      "slug": "juan-jose-suarez",
+      "name": "Juan José Suárez",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "76",
+        "tc-pista-pick-up": "76"
+      },
+      "teams": {
+        "tc-pista-mouras": "Ford",
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-01-24",
+      "lastSeen": "2026-04-26"
+    },
+    {
+      "key": "jose juan tomasello",
+      "keys": [
+        "jose juan tomasello",
+        "juan manuel tomasello"
+      ],
+      "slug": "juan-jose-tomasello",
+      "name": "Juan Jose Tomasello",
+      "aliases": [
+        "Juan Manuel Tomasello"
+      ],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "178"
+      },
+      "teams": {
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-03-08"
+    },
+    {
+      "key": "eluchans juan martin",
+      "keys": [
+        "eluchans juan martin"
+      ],
+      "slug": "juan-martin-eluchans",
+      "name": "Juan Martin Eluchans",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "150"
+      },
+      "teams": {
+        "tn": "Toyota Yaris"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "juan martin trucco",
+      "keys": [
+        "juan martin trucco"
+      ],
+      "slug": "juan-martin-trucco",
+      "name": "Juan Martín Trucco",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "6"
+      },
+      "teams": {
+        "tc": "Dodge"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "alberti juan pablo",
+      "keys": [
+        "alberti juan pablo"
+      ],
+      "slug": "juan-pablo-alberti",
+      "name": "Juan Pablo Alberti",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "133"
+      },
+      "teams": {},
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "gianini juan pablo",
+      "keys": [
+        "gianini juan pablo"
+      ],
+      "slug": "juan-pablo-gianini",
+      "name": "Juan Pablo Gianini",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "57"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "guiffrey juan pablo",
+      "keys": [
+        "guiffrey juan pablo"
+      ],
+      "slug": "juan-pablo-guiffrey",
+      "name": "Juan Pablo Guiffrey",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "71"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-05-17"
+    },
+    {
+      "key": "juan pablo pastori",
+      "keys": [
+        "juan pablo pastori"
+      ],
+      "slug": "juan-pablo-pastori",
+      "name": "Juan Pablo Pastori",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "5"
+      },
+      "teams": {
+        "tn": "Toyota Etios"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "gallo juan sebastian",
+      "keys": [
+        "gallo juan sebastian"
+      ],
+      "slug": "juan-sebastian-gallo",
+      "name": "Juan Sebastian Gallo",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "168"
+      },
+      "teams": {
+        "tc-pista": "Ford"
+      },
+      "firstSeen": "2026-04-18",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "juan tartaglino",
+      "keys": [
+        "juan tartaglino"
+      ],
+      "slug": "juan-tartaglino",
+      "name": "Juan Tartaglino",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "25"
+      },
+      "teams": {
+        "tc-mouras": "Ford"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "catalan juan magni tomas",
+      "keys": [
+        "catalan juan magni tomas",
+        "catalan juan magntci tomas",
+        "catalan juan magni t"
+      ],
+      "slug": "juan-tomas-catalan-magni",
+      "name": "Juan Tomás Catalán Magni",
+      "aliases": [
+        "Juan Tomas Catalan Magntci",
+        "Juan T Catalan Magni"
+      ],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "53"
+      },
+      "teams": {
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "julian santero",
+      "keys": [
+        "julian santero"
+      ],
+      "slug": "julian-santero",
+      "name": "Julián Santero",
+      "aliases": [],
+      "series": [
+        "tn",
+        "tc",
+        "tc-pick-up"
+      ],
+      "numbers": {
+        "tn": "1",
+        "tc": "68",
+        "tc-pick-up": "68"
+      },
+      "teams": {
+        "tn": "VW Virtus",
+        "tc": "BMW",
+        "tc-pick-up": "Toyota"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "candela kevin",
+      "keys": [
+        "candela kevin"
+      ],
+      "slug": "kevin-candela",
+      "name": "Kevin Candela",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "116"
+      },
+      "teams": {
+        "tc": "BMW"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "dominguez lautaro",
+      "keys": [
+        "dominguez lautaro"
+      ],
+      "slug": "lautaro-dominguez",
+      "name": "Lautaro Dominguez",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "22"
+      },
+      "teams": {
+        "tc-pista-mouras": "Chevrolet"
+      },
+      "firstSeen": "2026-05-16",
+      "lastSeen": "2026-05-17"
+    },
+    {
+      "key": "carducci leandro",
+      "keys": [
+        "carducci leandro"
+      ],
+      "slug": "leandro-carducci",
+      "name": "Leandro Carducci",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "27"
+      },
+      "teams": {
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "gonzalez leandro",
+      "keys": [
+        "gonzalez leandro"
+      ],
+      "slug": "leandro-gonzalez",
+      "name": "Leandro Gonzalez",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "177"
+      },
+      "teams": {
+        "tn": "Chevrolet Cruze"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "forte leonardo",
+      "keys": [
+        "forte leonardo"
+      ],
+      "slug": "leonardo-forte",
+      "name": "Leonardo Forte",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "100",
+        "tc-pista-pick-up": "100"
+      },
+      "teams": {
+        "tc-pista-mouras": "Ford",
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-01-24",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "larrauri leonel",
+      "keys": [
+        "larrauri leonel"
+      ],
+      "slug": "leonel-larrauri",
+      "name": "Leonel Larrauri",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "18"
+      },
+      "teams": {
+        "tn": "Honda Civic"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "leonel pernia",
+      "keys": [
+        "leonel pernia"
+      ],
+      "slug": "leonel-pernia",
+      "name": "Leonel Pernia",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "144"
+      },
+      "teams": {
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "carlo de luca",
+      "keys": [
+        "carlo de luca"
+      ],
+      "slug": "luca-de-carlo",
+      "name": "Luca De Carlo",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "115"
+      },
+      "teams": {
+        "tc-pista-mouras": "Chevrolet"
+      },
+      "firstSeen": "2026-07-25",
+      "lastSeen": "2026-07-26"
+    },
+    {
+      "key": "demarco luca",
+      "keys": [
+        "demarco luca"
+      ],
+      "slug": "luca-demarco",
+      "name": "Luca Demarco",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "177"
+      },
+      "teams": {
+        "tc-pista": "Ford"
+      },
+      "firstSeen": "2026-05-30",
+      "lastSeen": "2026-06-21"
+    },
+    {
+      "key": "carabajal lucas",
+      "keys": [
+        "carabajal lucas",
+        "abajal car lucas"
+      ],
+      "slug": "lucas-carabajal",
+      "name": "Lucas Carabajal",
+      "aliases": [
+        "Lucas Car Abajal"
+      ],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "81"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-04-19"
+    },
+    {
+      "key": "guerra lucas",
+      "keys": [
+        "guerra lucas"
+      ],
+      "slug": "lucas-guerra",
+      "name": "Lucas Guerra",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "31"
+      },
+      "teams": {
+        "tc-pista": "Torino"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-06-21"
+    },
+    {
+      "key": "lucas petracchini",
+      "keys": [
+        "lucas petracchini"
+      ],
+      "slug": "lucas-petracchini",
+      "name": "Lucas Petracchini",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "161"
+      },
+      "teams": {
+        "tn": "Chevrolet Onix"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "lucas tedeschi",
+      "keys": [
+        "lucas tedeschi"
+      ],
+      "slug": "lucas-tedeschi",
+      "name": "Lucas Tedeschi",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "72"
+      },
+      "teams": {
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "lucas valle",
+      "keys": [
+        "lucas valle"
+      ],
+      "slug": "lucas-valle",
+      "name": "Lucas Valle",
+      "aliases": [],
+      "series": [
+        "tc",
+        "tc-pick-up"
+      ],
+      "numbers": {
+        "tc": "112",
+        "tc-pick-up": "112"
+      },
+      "teams": {
+        "tc": "Chevrolet",
+        "tc-pick-up": "Toyota"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "lucas vicino",
+      "keys": [
+        "lucas vicino"
+      ],
+      "slug": "lucas-vicino",
+      "name": "Lucas Vicino",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "19"
+      },
+      "teams": {
+        "tn": "Toyota Corolla"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "cotignola luciano",
+      "keys": [
+        "cotignola luciano"
+      ],
+      "slug": "luciano-cotignola",
+      "name": "Luciano Cotignola",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "19"
+      },
+      "teams": {
+        "tc-pista": "Toyota"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "catelli luis",
+      "keys": [
+        "catelli luis"
+      ],
+      "slug": "luis-catelli",
+      "name": "Luis Catelli",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "10"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Toyota"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "di jose luis palma",
+      "keys": [
+        "di jose luis palma"
+      ],
+      "slug": "luis-jose-di-palma",
+      "name": "Luis José Di Palma",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "24"
+      },
+      "teams": {
+        "tc": "Toyota"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "borgert manuel",
+      "keys": [
+        "borgert manuel"
+      ],
+      "slug": "manuel-borgert",
+      "name": "Manuel Borgert",
+      "aliases": [],
+      "series": [
+        "tc-pista",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista": "105",
+        "tc-pista-pick-up": "105"
+      },
+      "teams": {
+        "tc-pista": "Ford",
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "agrelo marcelo",
+      "keys": [
+        "agrelo marcelo"
+      ],
+      "slug": "marcelo-agrelo",
+      "name": "Marcelo Agrelo",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "5"
+      },
+      "teams": {
+        "tc": "Torino"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "beraldi marcelo",
+      "keys": [
+        "beraldi marcelo"
+      ],
+      "slug": "marcelo-beraldi",
+      "name": "Marcelo Beraldi",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "222"
+      },
+      "teams": {
+        "tc-mouras": "Ford"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "guevara marcelo",
+      "keys": [
+        "guevara marcelo"
+      ],
+      "slug": "marcelo-guevara",
+      "name": "Marcelo Guevara",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "43"
+      },
+      "teams": {
+        "tn": "Chevrolet Onix"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "marcelo vergagni",
+      "keys": [
+        "marcelo vergagni"
+      ],
+      "slug": "marcelo-vergagni",
+      "name": "Marcelo Vergagni",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "122"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-07-26"
+    },
+    {
+      "key": "dianda marco",
+      "keys": [
+        "dianda marco"
+      ],
+      "slug": "marco-dianda",
+      "name": "Marco Dianda",
+      "aliases": [],
+      "series": [
+        "tc",
+        "tc-pick-up",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc": "147",
+        "tc-pick-up": "147",
+        "tc-pista-pick-up": "147"
+      },
+      "teams": {
+        "tc": "Dodge",
+        "tc-pick-up": "Ford",
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "castro marcos",
+      "keys": [
+        "castro marcos"
+      ],
+      "slug": "marcos-castro",
+      "name": "Marcos Castro",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "193"
+      },
+      "teams": {
+        "tc": "Torino"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "fernandez marcos",
+      "keys": [
+        "fernandez marcos"
+      ],
+      "slug": "marcos-fernandez",
+      "name": "Marcos Fernandez",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "100"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "landa marcos",
+      "keys": [
+        "landa marcos"
+      ],
+      "slug": "marcos-landa",
+      "name": "Marcos Landa",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "95"
+      },
+      "teams": {
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "marcos quijada",
+      "keys": [
+        "marcos quijada"
+      ],
+      "slug": "marcos-quijada",
+      "name": "Marcos Quijada",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "197"
+      },
+      "teams": {
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "mariano werner",
+      "keys": [
+        "mariano werner",
+        "foton mariano werner"
+      ],
+      "slug": "mariano-werner",
+      "name": "Mariano Werner",
+      "aliases": [
+        "Mariano Werner Foton"
+      ],
+      "series": [
+        "tc",
+        "tc-pick-up",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pick-up": "3",
+        "tc-pista-pick-up": "3",
+        "tc": "11"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "baldo mario",
+      "keys": [
+        "baldo mario"
+      ],
+      "slug": "mario-baldo",
+      "name": "Mario Baldo",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "77"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-04-26"
+    },
+    {
+      "key": "blasig martin",
+      "keys": [
+        "blasig martin"
+      ],
+      "slug": "martin-blasig",
+      "name": "Martin Blasig",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "192"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-04-04",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "leston martin",
+      "keys": [
+        "leston martin"
+      ],
+      "slug": "martin-leston",
+      "name": "Martin Leston",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "86"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "martin mura",
+      "keys": [
+        "martin mura"
+      ],
+      "slug": "martin-mura",
+      "name": "Martin Mura",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "93"
+      },
+      "teams": {
+        "tn": "Chevrolet Onix"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "martin serrano",
+      "keys": [
+        "martin serrano"
+      ],
+      "slug": "martin-serrano",
+      "name": "Martín Serrano",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "72"
+      },
+      "teams": {
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-05-10"
+    },
+    {
+      "key": "martin taha",
+      "keys": [
+        "martin taha"
+      ],
+      "slug": "martin-taha",
+      "name": "Martin Taha",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "144",
+        "tc-pista-pick-up": "144"
+      },
+      "teams": {
+        "tc-pista-mouras": "Ford",
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-27",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "martin vazquez",
+      "keys": [
+        "martin vazquez"
+      ],
+      "slug": "martin-vazquez",
+      "name": "Martín Vázquez",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "123"
+      },
+      "teams": {
+        "tc": "Dodge"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "canapino matias",
+      "keys": [
+        "canapino matias"
+      ],
+      "slug": "matias-canapino",
+      "name": "Matías Canapino",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "32"
+      },
+      "teams": {
+        "tc": "Torino"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "cohen matias",
+      "keys": [
+        "cohen matias"
+      ],
+      "slug": "matias-cohen",
+      "name": "Matias Cohen",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "77"
+      },
+      "teams": {
+        "tn": "VW Virtus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "frano matias",
+      "keys": [
+        "frano matias"
+      ],
+      "slug": "matias-frano",
+      "name": "Matias Frano",
+      "aliases": [],
+      "series": [
+        "tc-pick-up",
+        "tc-pista-pick-up",
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-pick-up": "75",
+        "tc-pista-pick-up": "75",
+        "tc-mouras": "75"
+      },
+      "teams": {
+        "tc-pick-up": "Toyota",
+        "tc-pista-pick-up": "Toyota",
+        "tc-mouras": "Ford"
+      },
+      "firstSeen": "2026-04-25",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "jalaf matias",
+      "keys": [
+        "jalaf matias"
+      ],
+      "slug": "matias-jalaf",
+      "name": "Matias Jalaf",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "134"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-08-01",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "marchesi matias munoz",
+      "keys": [
+        "marchesi matias munoz"
+      ],
+      "slug": "matias-munoz-marchesi",
+      "name": "Matias Munoz Marchesi",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "16"
+      },
+      "teams": {
+        "tn": "VW Vento"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "matias rossi",
+      "keys": [
+        "matias rossi"
+      ],
+      "slug": "matias-rossi",
+      "name": "Matías Rossi",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "117"
+      },
+      "teams": {
+        "tc": "Toyota"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "lambiris mauricio",
+      "keys": [
+        "lambiris mauricio"
+      ],
+      "slug": "mauricio-lambiris",
+      "name": "Mauricio Lambiris",
+      "aliases": [],
+      "series": [
+        "tn",
+        "tc"
+      ],
+      "numbers": {
+        "tn": "123",
+        "tc": "3"
+      },
+      "teams": {
+        "tn": "Ford Focus",
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "bestani maximiliano",
+      "keys": [
+        "bestani maximiliano"
+      ],
+      "slug": "maximiliano-bestani",
+      "name": "Maximiliano Bestani",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "19"
+      },
+      "teams": {
+        "tn": "Chevrolet Onix"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "donzino maximo",
+      "keys": [
+        "donzino maximo"
+      ],
+      "slug": "maximo-donzino",
+      "name": "Maximo Donzino",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "71"
+      },
+      "teams": {
+        "tn": "Ford F Kinetic"
+      },
+      "firstSeen": "2026-03-15",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "ciaurro miguel",
+      "keys": [
+        "ciaurro miguel"
+      ],
+      "slug": "miguel-ciaurro",
+      "name": "Miguel Ciaurro",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "46"
+      },
+      "teams": {
+        "tn": "VW Virtus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "eddy mion",
+      "keys": [
+        "eddy mion"
+      ],
+      "slug": "mion-eddy",
+      "name": "Mion Eddy",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "69"
+      },
+      "teams": {
+        "tc-pista": "Toyota"
+      },
+      "firstSeen": "2026-04-18",
+      "lastSeen": "2026-04-19"
+    },
+    {
+      "key": "cordone nahuel",
+      "keys": [
+        "cordone nahuel"
+      ],
+      "slug": "nahuel-cordone",
+      "name": "Nahuel Cordone",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "127"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "della nahuel santina",
+      "keys": [
+        "della nahuel santina"
+      ],
+      "slug": "nahuel-della-santina",
+      "name": "Nahuel Della Santina",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "119"
+      },
+      "teams": {
+        "tn": "Toyota Etios"
+      },
+      "firstSeen": "2026-07-31",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "goya nestor omar",
+      "keys": [
+        "goya nestor omar"
+      ],
+      "slug": "nestor-omar-goya",
+      "name": "Nestor Omar Goya",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "14"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "nicanor pazos santilli",
+      "keys": [
+        "nicanor pazos santilli",
+        "foton nicanor pazos santilli"
+      ],
+      "slug": "nicanor-santilli-pazos",
+      "name": "Nicanor Santilli Pazos",
+      "aliases": [
+        "Santilli Pazos Nicanor Foton"
+      ],
+      "series": [
+        "tc-pista",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista": "123",
+        "tc-pista-pick-up": "123"
+      },
+      "teams": {
+        "tc-pista": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "nico varrone",
+      "keys": [
+        "nico varrone"
+      ],
+      "slug": "nico-varrone",
+      "name": "Nico Varrone",
+      "aliases": [],
+      "series": [
+        "f2"
+      ],
+      "numbers": {
+        "f2": "22"
+      },
+      "teams": {
+        "f2": "Van Amersfoort Racing"
+      },
+      "firstSeen": "2026-03-06",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "bonelli nicolas",
+      "keys": [
+        "bonelli nicolas"
+      ],
+      "slug": "nicolas-bonelli",
+      "name": "Nicolás Bonelli",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "63"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "cotignola nicolas",
+      "keys": [
+        "cotignola nicolas"
+      ],
+      "slug": "nicolas-cotignola",
+      "name": "Nicolás Cotignola",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "51"
+      },
+      "teams": {
+        "tc": "Toyota"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-05-10"
+    },
+    {
+      "key": "impiombato nicolas",
+      "keys": [
+        "impiombato nicolas"
+      ],
+      "slug": "nicolas-impiombato",
+      "name": "Nicolas Impiombato",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "87"
+      },
+      "teams": {
+        "tc": "Torino"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "jaime nicolas",
+      "keys": [
+        "jaime nicolas"
+      ],
+      "slug": "nicolas-jaime",
+      "name": "Nicolás Jaime",
+      "aliases": [],
+      "series": [
+        "tc-mouras",
+        "tn",
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-mouras": "176",
+        "tn": "176",
+        "tc-pista": "176"
+      },
+      "teams": {
+        "tc-mouras": "Dodge",
+        "tn": "Toyota Corolla",
+        "tc-pista": "Ford"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "moscardini nicolas",
+      "keys": [
+        "moscardini nicolas"
+      ],
+      "slug": "nicolas-moscardini",
+      "name": "Nicolás Moscardini",
+      "aliases": [],
+      "series": [
+        "tn",
+        "tc"
+      ],
+      "numbers": {
+        "tn": "109",
+        "tc": "109"
+      },
+      "teams": {
+        "tn": "Toyota Corolla",
+        "tc": "Dodge"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "nicolas posco",
+      "keys": [
+        "nicolas posco"
+      ],
+      "slug": "nicolas-posco",
+      "name": "Nicolas Posco",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "121"
+      },
+      "teams": {
+        "tn": "Ford F Kinetic"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-05-03"
+    },
+    {
+      "key": "nicolas trosset",
+      "keys": [
+        "nicolas trosset"
+      ],
+      "slug": "nicolas-trosset",
+      "name": "Nicolas Trosset",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "88"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "nicolas villamayor",
+      "keys": [
+        "nicolas villamayor"
+      ],
+      "slug": "nicolas-villamayor",
+      "name": "Nicolás Villamayor",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "177"
+      },
+      "teams": {
+        "tc-mouras": "Torino"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-03-01"
+    },
+    {
+      "key": "fontana norberto",
+      "keys": [
+        "fontana norberto"
+      ],
+      "slug": "norberto-fontana",
+      "name": "Norberto Fontana",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "37"
+      },
+      "teams": {
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "fritzler otto",
+      "keys": [
+        "fritzler otto"
+      ],
+      "slug": "otto-fritzler",
+      "name": "Otto Fritzler",
+      "aliases": [],
+      "series": [
+        "tc",
+        "tc-pick-up",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc": "256",
+        "tc-pick-up": "256",
+        "tc-pista-pick-up": "256"
+      },
+      "teams": {
+        "tc": "Mercedes-Benz",
+        "tc-pick-up": "Ford",
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "collazo pablo",
+      "keys": [
+        "collazo pablo"
+      ],
+      "slug": "pablo-collazo",
+      "name": "Pablo Collazo",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "117"
+      },
+      "teams": {
+        "tn": "Toyota Yaris"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "grippo pedro",
+      "keys": [
+        "grippo pedro"
+      ],
+      "slug": "pedro-grippo",
+      "name": "Pedro Grippo",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "11"
+      },
+      "teams": {
+        "tn": "Toyota Yaris"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "cano ramiro",
+      "keys": [
+        "cano ramiro"
+      ],
+      "slug": "ramiro-cano",
+      "name": "Ramiro Cano",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "69"
+      },
+      "teams": {
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "bonis de ramiro",
+      "keys": [
+        "bonis de ramiro"
+      ],
+      "slug": "ramiro-de-bonis",
+      "name": "Ramiro De Bonis",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "178"
+      },
+      "teams": {
+        "tc-mouras": "Ford"
+      },
+      "firstSeen": "2026-02-28",
+      "lastSeen": "2026-03-22"
+    },
+    {
+      "key": "blotta renzo",
+      "keys": [
+        "blotta renzo"
+      ],
+      "slug": "renzo-blotta",
+      "name": "Renzo Blotta",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "3"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "ian reutemann",
+      "keys": [
+        "ian reutemann"
+      ],
+      "slug": "reutemann-ian",
+      "name": "Reutemann Ian",
+      "aliases": [],
+      "series": [
+        "tc-pick-up",
+        "tc-pista-pick-up",
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pick-up": "100",
+        "tc-pista-pick-up": "100",
+        "tc-pista": "100"
+      },
+      "teams": {
+        "tc-pick-up": "Toyota",
+        "tc-pista-pick-up": "Toyota",
+        "tc-pista": "Dodge"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "ricardo risatti",
+      "keys": [
+        "ricardo risatti"
+      ],
+      "slug": "ricardo-risatti",
+      "name": "Ricardo Risatti",
+      "aliases": [],
+      "series": [
+        "tn",
+        "tc"
+      ],
+      "numbers": {
+        "tn": "10",
+        "tc": "85"
+      },
+      "teams": {
+        "tn": "Citroen C-Elyse",
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "lugon rodrigo",
+      "keys": [
+        "lugon rodrigo"
+      ],
+      "slug": "rodrigo-lugon",
+      "name": "Rodrigo Lugón",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "113"
+      },
+      "teams": {
+        "tc": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "alvarez santiago",
+      "keys": [
+        "alvarez santiago"
+      ],
+      "slug": "santiago-alvarez",
+      "name": "Santiago Alvarez",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "172"
+      },
+      "teams": {
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "arrigoni santiago",
+      "keys": [
+        "arrigoni santiago",
+        "arrigone santiago"
+      ],
+      "slug": "santiago-arrigoni",
+      "name": "Santiago Arrigoni",
+      "aliases": [
+        "Santiago Arrigone"
+      ],
+      "series": [
+        "tc-mouras",
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-mouras": "139",
+        "tc-pista": "139"
+      },
+      "teams": {
+        "tc-mouras": "Dodge",
+        "tc-pista": "Toyota"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "biagi santiago",
+      "keys": [
+        "biagi santiago"
+      ],
+      "slug": "santiago-biagi",
+      "name": "Santiago Biagi",
+      "aliases": [],
+      "series": [
+        "tc-pista",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista": "67",
+        "tc-pista-pick-up": "67"
+      },
+      "teams": {
+        "tc-pista": "Dodge",
+        "tc-pista-pick-up": "Toyota"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "mangoni santiago",
+      "keys": [
+        "mangoni santiago"
+      ],
+      "slug": "santiago-mangoni",
+      "name": "Santiago Mangoni",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "7"
+      },
+      "teams": {
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "robledo santiago",
+      "keys": [
+        "robledo santiago"
+      ],
+      "slug": "santiago-robledo",
+      "name": "Santiago Robledo",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "25"
+      },
+      "teams": {
+        "tn": "Toyota Yaris"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "balerini santino",
+      "keys": [
+        "balerini santino"
+      ],
+      "slug": "santino-balerini",
+      "name": "Santino Balerini",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "95"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "ortiz santino",
+      "keys": [
+        "ortiz santino"
+      ],
+      "slug": "santino-ortiz",
+      "name": "Santino Ortiz",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "77"
+      },
+      "teams": {
+        "tc-mouras": "Dodge"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "abella sebastian",
+      "keys": [
+        "abella sebastian"
+      ],
+      "slug": "sebastian-abella",
+      "name": "Sebastian Abella",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "71"
+      },
+      "teams": {
+        "tc": "Toyota"
+      },
+      "firstSeen": "2026-05-30",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "gomez sebastian",
+      "keys": [
+        "gomez sebastian"
+      ],
+      "slug": "sebastian-gomez",
+      "name": "Sebastian Gomez",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "24"
+      },
+      "teams": {
+        "tn": "VW Vento GLI"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "salse sebastian",
+      "keys": [
+        "salse sebastian"
+      ],
+      "slug": "sebastian-salse",
+      "name": "Sebastian Salse",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "181"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-08-15",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "fernandez sergio",
+      "keys": [
+        "fernandez sergio"
+      ],
+      "slug": "sergio-fernandez",
+      "name": "Sergio Fernandez",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "174"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "antonino sganga",
+      "keys": [
+        "antonino sganga"
+      ],
+      "slug": "sganga-antonino",
+      "name": "Sganga Antonino",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "107"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "falivene thiago",
+      "keys": [
+        "falivene thiago"
+      ],
+      "slug": "thiago-falivene",
+      "name": "Thiago Falivene",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "46"
+      },
+      "teams": {
+        "tc-mouras": "Chevrolet"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "ferrari thiago",
+      "keys": [
+        "ferrari thiago"
+      ],
+      "slug": "thiago-ferrari",
+      "name": "Thiago Ferrari",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "221"
+      },
+      "teams": {
+        "tn": "Ford F. Kinetic"
+      },
+      "firstSeen": "2026-04-04",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "martinez thiago",
+      "keys": [
+        "martinez thiago"
+      ],
+      "slug": "thiago-martinez",
+      "name": "Thiago Martinez",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "152"
+      },
+      "teams": {
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "marchesin thomas",
+      "keys": [
+        "marchesin thomas"
+      ],
+      "slug": "thomas-marchesin",
+      "name": "Thomas Marchesin",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "92"
+      },
+      "teams": {
+        "tn": "Toyota Etios"
+      },
+      "firstSeen": "2026-05-02",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "pozner thomas",
+      "keys": [
+        "pozner thomas"
+      ],
+      "slug": "thomas-pozner",
+      "name": "Thomas Pozner",
+      "aliases": [],
+      "series": [
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista": "44"
+      },
+      "teams": {
+        "tc-pista": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "ricciardi thomas",
+      "keys": [
+        "ricciardi thomas"
+      ],
+      "slug": "thomas-ricciardi",
+      "name": "Thomas Ricciardi",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "126"
+      },
+      "teams": {
+        "tc": "Toyota"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-07-12"
+    },
+    {
+      "key": "martinez tobias",
+      "keys": [
+        "martinez tobias"
+      ],
+      "slug": "tobias-martinez",
+      "name": "Tobías Martínez",
+      "aliases": [],
+      "series": [
+        "tc",
+        "tc-pick-up",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc": "107",
+        "tc-pick-up": "107",
+        "tc-pista-pick-up": "107"
+      },
+      "teams": {
+        "tc": "Chevrolet",
+        "tc-pick-up": "Chevrolet",
+        "tc-pista-pick-up": "Chevrolet"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "abdala tomas",
+      "keys": [
+        "abdala tomas"
+      ],
+      "slug": "tomas-abdala",
+      "name": "Tomás Abdala",
+      "aliases": [],
+      "series": [
+        "tc",
+        "tc-pick-up",
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc": "80",
+        "tc-pick-up": "12",
+        "tc-pista-pick-up": "12"
+      },
+      "teams": {
+        "tc": "Ford",
+        "tc-pick-up": "Ford",
+        "tc-pista-pick-up": "Ford"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-07-26"
+    },
+    {
+      "key": "di salvia tomas",
+      "keys": [
+        "di salvia tomas"
+      ],
+      "slug": "tomas-di-salvia",
+      "name": "Tomas Di Salvia",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "188"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Toyota"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-05-17"
+    },
+    {
+      "key": "pellandino tomas",
+      "keys": [
+        "pellandino tomas"
+      ],
+      "slug": "tomas-pellandino",
+      "name": "Tomas Pellandino",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up",
+        "tc-pista"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "132",
+        "tc-pista": "132"
+      },
+      "teams": {
+        "tc-pista-pick-up": "Ford",
+        "tc-pista": "Dodge"
+      },
+      "firstSeen": "2026-02-21",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "tomas vitar",
+      "keys": [
+        "tomas vitar"
+      ],
+      "slug": "tomas-vitar",
+      "name": "Tomas Vitar",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "177"
+      },
+      "teams": {
+        "tn": "Nissan March"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "aguirre valentin",
+      "keys": [
+        "aguirre valentin"
+      ],
+      "slug": "valentin-aguirre",
+      "name": "Valentín Aguirre",
+      "aliases": [],
+      "series": [
+        "tc"
+      ],
+      "numbers": {
+        "tc": "133"
+      },
+      "teams": {
+        "tc": "Chevrolet"
+      },
+      "firstSeen": "2026-02-14",
+      "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "alaux valentino",
+      "keys": [
+        "alaux valentino"
+      ],
+      "slug": "valentino-alaux",
+      "name": "Valentino Alaux",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "26"
+      },
+      "teams": {
+        "tc-mouras": "Dodge"
+      },
+      "firstSeen": "2026-01-23",
+      "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "quattrocchi valentino",
+      "keys": [
+        "quattrocchi valentino"
+      ],
+      "slug": "valentino-quattrocchi",
+      "name": "Valentino Quattrocchi",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "89"
+      },
+      "teams": {
+        "tn": "Toyota Yaris"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "simon volpi",
+      "keys": [
+        "simon volpi"
+      ],
+      "slug": "volpi-simon",
+      "name": "Volpi Simon",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "124"
+      },
+      "teams": {
+        "tc-mouras": "Ford"
+      },
+      "firstSeen": "2026-02-28",
+      "lastSeen": "2026-04-25"
+    }
+  ]
+}

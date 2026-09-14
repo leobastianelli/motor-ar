@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
 import { CategoryLabel, PhotoCredit, SectionTitle } from "@/components/pista";
 import { colapintoData, finishLabel, quotes, raceCode, raceName, recentMilestones, statusLabel, type ColapintoData } from "@/lib/colapinto";
-import { getAllDrivers, getDriver, getNow, getSeason, getSeries, type Season } from "@/lib/data";
+import { getAllDrivers, getDriver, getIndexedDriver, getIndexedDrivers, getNow, getSeason, getSeries, type Season } from "@/lib/data";
 import { fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/format";
 import { getPhoto } from "@/lib/photos";
 import type { Driver } from "@/lib/types";
@@ -13,11 +13,93 @@ import type { Driver } from "@/lib/types";
 export const revalidate = 60;
 
 export function generateStaticParams() {
-  return getAllDrivers().map((d) => ({ slug: d.slug }));
+  const slugs = new Set([...getAllDrivers().map((d) => d.slug), ...getIndexedDrivers().map((d) => d.slug)]);
+  return [...slugs].map((slug) => ({ slug }));
 }
 
 export async function generateMetadata(props: PageProps<"/pilotos/[slug]">): Promise<Metadata> {
-  return { title: getDriver((await props.params).slug)?.name ?? "Piloto" };
+  const slug = (await props.params).slug;
+  return { title: getDriver(slug)?.name ?? getIndexedDriver(slug)?.name ?? "Piloto" };
+}
+
+const RACES = new Set(["final", "carrera", "sprint"]);
+
+/** Ficha armada sólo con resultados: categoría, estadísticas de la temporada y cada sesión. Sin datos biográficos. */
+async function IndexedDriverPage({ slug }: { slug: string }) {
+  const entry = getIndexedDriver(slug);
+  if (!entry) notFound();
+  const season = await getSeason();
+  const stats = season.getDriverSeason(entry);
+  const seriesIds = [...entry.series].sort((a, b) => (stats.bySeries[b]?.races ?? 0) - (stats.bySeries[a]?.races ?? 0));
+  const main = getSeries(seriesIds[0])!;
+
+  return (
+    <>
+      <section className="weekend-head driver-auto-head" style={{ "--cat": main.color } as CSSProperties}>
+        <div>
+          <CategoryLabel series={main} detail={entry.teams[main.id]} />
+          <h1>
+            {entry.name}
+            {entry.numbers[main.id] && <span className="hero-date">#{entry.numbers[main.id]}</span>}
+          </h1>
+        </div>
+      </section>
+
+      {seriesIds.map((id) => {
+        const series = getSeries(id);
+        const s = stats.bySeries[id];
+        if (!series || !s) return null;
+        const standing = season.getDriverStanding(id, entry.keys ?? [entry.key]);
+        const byEvent = Map.groupBy(
+          stats.results.filter((r) => r.event.seriesId === id),
+          (r) => r.event.id,
+        );
+        return (
+          <section key={id} className="section-block driver-auto-series" style={{ "--cat": series.color } as CSSProperties}>
+            <SectionTitle title={`${series.name} 2026`} />
+            <div className="driver-auto-stats">
+              {[
+                ["Campeonato", standing ? `${standing.pos}.º` : "—", standing ? `${standing.points} pts` : ""],
+                ["Carreras", String(s.races), ""],
+                ["Victorias", String(s.wins), ""],
+                ["Podios", String(s.podiums), ""],
+                ["Poles", String(s.poles), ""],
+                ["Mejor resultado", s.best ? `${s.best}.º` : "—", ""],
+              ].map(([label, value, note]) => (
+                <div key={label}>
+                  <span>{label}</span>
+                  <strong>{value}</strong>
+                  {note && <small>{note}</small>}
+                </div>
+              ))}
+            </div>
+            <div className="driver-auto-results">
+              {[...byEvent.values()].reverse().map((rows) => {
+                const { event } = rows[0];
+                return (
+                  <article key={event.id}>
+                    <Link href={`/eventos/${event.id}`} className="list-link">
+                      <strong>{event.name}</strong>
+                      <span>{fmtDayShort(event.sessions.at(-1)!.start)}</span>
+                    </Link>
+                    <ul>
+                      {rows.map(({ session, row }) => (
+                        <li key={session.id} className={RACES.has(session.kind) ? "race" : undefined}>
+                          <span>{session.name}</span>
+                          <b>{row.positionText && !/^\d+$/.test(row.positionText) ? row.positionText : `${row.pos}.º`}</b>
+                          <small>{row.status ?? row.gap}</small>
+                        </li>
+                      ))}
+                    </ul>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+        );
+      })}
+    </>
+  );
 }
 
 function age(born: string, now: string) {
@@ -200,8 +282,9 @@ function ColapintoSections({ data }: { data: ColapintoData }) {
 }
 
 export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
-  const driver = getDriver((await props.params).slug);
-  if (!driver) notFound();
+  const slug = (await props.params).slug;
+  const driver = getDriver(slug);
+  if (!driver) return <IndexedDriverPage slug={slug} />;
   const now = getNow();
   const season = await getSeason();
   const series = getSeries(driver.seriesId)!;
