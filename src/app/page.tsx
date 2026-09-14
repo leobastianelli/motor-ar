@@ -17,6 +17,9 @@ const ORDER: Record<HomeMode, SectionId[]> = {
   midweek: ["nuestros", "resultados", "agenda", "viene"],
 };
 
+// Acceso directo a cada categoría: mucha gente entra buscando una en particular. Primero las más buscadas.
+const JUMP = ["f1", "tc", "tc2000", "tn", "tc-pista", "f2", "gt3", "tc-mouras", "tc-pick-up"];
+
 export default async function Home() {
   const now = getNow();
   const season = await getSeason();
@@ -282,6 +285,21 @@ export default async function Home() {
           ))}
         </p>
       </section>
+      <nav className="cat-jump" aria-label="Ir a una categoría">
+        {JUMP.map((id) => {
+          const s = getSeries(id)!;
+          return (
+            <Link key={id} href={`/categorias/${id}`} className="cat-jump-item">
+              <Code series={s} />
+              {/* Si el nombre corto repite el código (F1, TC, TN), va el nombre completo. */}
+              <span>{s.short === s.code ? s.name : s.short}</span>
+            </Link>
+          );
+        })}
+        <Link href="/categorias" className="cat-jump-all">
+          Todas
+        </Link>
+      </nav>
       {ORDER[mode].map((id) => sections[id])}
     </>
   );
