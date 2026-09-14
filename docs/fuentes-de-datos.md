@@ -202,6 +202,7 @@ Las categorías que acompañan al TC salen del calendario de actc.org.ar (`/tcm`
 - Cada sesión se reconoce por `kind` + `name`. Si existe, se actualizan solo los campos cargados; si no, se agrega.
 - `broadcasts` reemplaza la lista de dónde verlo.
 - Se aplica en cada carga, tanto con datos en vivo como con la instantánea. Hay que hacer commit y push para que llegue a producción.
+- **Fechas nuevas:** `newEvents` es una lista de fechas completas (mismo formato que en `season-2026.json`), para cuando ninguna fuente las publica todavía, como pasa con TC2000 en Wikipedia. Si después una fuente trae una fecha con el mismo `id`, gana la fuente. Para agregarle horarios o resultados más adelante, basta con editar esa misma entrada.
 
 ## Fotos
 

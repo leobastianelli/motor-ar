@@ -127,6 +127,8 @@ interface ManualOverride {
   sessions?: SessionPatch[];
 }
 const OVERRIDES = ((manualOverrides as unknown as { events?: Record<string, ManualOverride> }).events ?? {}) as Record<string, ManualOverride>;
+/** Fechas enteras cargadas a mano, para cuando ninguna fuente las publica todavía. Si una fuente trae el mismo id, gana la fuente. */
+const EXTRA_EVENTS = ((manualOverrides as unknown as { newEvents?: RawEvent[] }).newEvents ?? []) as RawEvent[];
 
 /** Carga manual (src/data/manual-overrides.json): completa o corrige una fecha sin tocar las fuentes. */
 function applyOverride(e: RawEvent): RawEvent {
@@ -144,7 +146,9 @@ function applyOverride(e: RawEvent): RawEvent {
 }
 
 export function createSeason(raw: RawSeason) {
-  const events: RaceEvent[] = (raw.events as RawEvent[])
+  const fromSources = raw.events as RawEvent[];
+  const known = new Set(fromSources.map((e) => e.id));
+  const events: RaceEvent[] = [...fromSources, ...EXTRA_EVENTS.filter((e) => !known.has(e.id))]
     .filter((e) => seriesById[e.seriesId])
     .map(applyOverride)
     .map((e) => ({
