@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { CatMark, SectionTitle, StateTag } from "@/components/pista";
+import type { CSSProperties } from "react";
+import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { getNow, getSeason, getSeries } from "@/lib/data";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtRange, fmtWeekday, sessionState, sessionStatus, sessionTime } from "@/lib/format";
@@ -37,12 +38,9 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
 
   return (
     <>
-      <section className="event-hero">
+      <section className="event-hero" style={{ "--cat": series.color } as CSSProperties}>
         <div className="event-id">
-          <CatMark series={series} />
-          <p>
-            {series.name} · Fecha {event.round}
-          </p>
+          <CategoryLabel series={series} detail={`Fecha ${event.round}`} />
         </div>
         <div>
           <p className="kicker">

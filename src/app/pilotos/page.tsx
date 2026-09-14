@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SectionTitle, StateTag } from "@/components/pista";
+import type { CSSProperties } from "react";
+import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { getAllDrivers, getDriversAbroad, getNow, getSeason, getSeries } from "@/lib/data";
 
 export const metadata: Metadata = { title: "Pilotos argentinos" };
@@ -12,22 +13,26 @@ export default async function DriversPage() {
   const abroad = getDriversAbroad();
   const home = getAllDrivers().filter((d) => !abroad.includes(d));
 
+  // Mismas tarjetas que en la home: categoría bien visible, piloto y qué pasó.
   const list = (drivers: typeof abroad) => (
-    <div className="arg-runners" style={{ display: "block" }}>
+    <div className="runner-cards">
       {drivers.map((d) => {
         const series = getSeries(d.seriesId)!;
         const status = season.getRunnerStatus(d, now);
+        const standing = season.getStandingPosition(d);
         return (
-          <Link key={d.slug} href={`/pilotos/${d.slug}`} className="runner-line list-link">
-            <b>{d.number ?? "—"}</b>
-            <div>
-              <strong>{d.name}</strong>
-              <span>
-                {series.name} · {d.team}
-              </span>
-            </div>
-            <p>
-              <StateTag kind={status.state}>{status.stateLabel}</StateTag> {status.headline}
+          <Link key={d.slug} href={`/pilotos/${d.slug}`} className="runner-card list-link" style={{ "--cat": series.color } as CSSProperties}>
+            <CategoryLabel series={series} detail={d.team} />
+            <strong className="runner-name">
+              {d.name}
+              {d.number && <span>#{d.number}</span>}
+            </strong>
+            <p className="runner-status">
+              <StateTag kind={status.state}>{status.stateLabel}</StateTag>
+              <b>{status.headline}</b>
+            </p>
+            <p className="runner-meta">
+              {[status.detail, standing && `${standing.position}.º en el campeonato · ${standing.points} pts`].filter(Boolean).join(" · ")}
             </p>
           </Link>
         );
@@ -38,10 +43,8 @@ export default async function DriversPage() {
   return (
     <>
       <section className="weekend-head">
-        <div>
-          <h1>Pilotos</h1>
-        </div>
-        <p className="lede">Los argentinos que corren hoy, afuera y en el país, con su estado del fin de semana.</p>
+        <h1>Pilotos</h1>
+        <p className="lede">Los argentinos que corren hoy, afuera y en el país.</p>
       </section>
       <section className="section-block">
         <SectionTitle title="Los nuestros afuera" />

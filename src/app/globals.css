@@ -81,6 +81,7 @@
 :root{--rule:rgba(16,18,19,.09);--rule-inverse:rgba(255,255,255,.1)}
 /* ——— Categoría primero: sello + nombre encabezan cada bloque ——— */
 button{color:inherit;font-family:inherit}
+.filters button.is-selected,.filters a:last-child button.is-selected{background:var(--ink);color:#fff}
 .cat-label{display:inline-flex;align-items:center;gap:10px;min-width:0}
 .cat-label .code{height:26px;min-width:40px;font-size:14px;flex:none}
 .cat-label b{font-size:15px;font-weight:800;white-space:nowrap}
@@ -98,15 +99,27 @@ button{color:inherit;font-family:inherit}
 .agenda .schedule-row strong{font-size:16px;font-weight:650}
 .agenda .schedule-row>.state{grid-column:auto;justify-self:end;align-self:center}
 .agenda .schedule-row.current{padding-left:12px}
+/* Categoría en fondos oscuros y en encabezados de página */
+.results-band .cat-label b,.driver-title .cat-label b{color:#fff}
+.results-band .cat-label>span:last-child:not(.code),.driver-title .cat-label>span:last-child:not(.code){color:#c9cdce}
+.podium-head>div{display:flex;flex-direction:column;gap:8px}
+.podium-head strong{font-size:18px}
+.driver-title .cat-label{margin-bottom:14px}
+.event-hero{box-shadow:inset 0 6px 0 var(--cat,var(--ink))}
+.event-id .cat-label{flex-direction:column;align-items:flex-start;gap:8px}
+.event-id .cat-label .code{height:40px;min-width:60px;font-size:20px}
+.event-id .cat-label b{font-size:20px;white-space:normal}
+.live-main .cat-label{margin-bottom:6px}
+.date-strip .next-card{min-width:0}
 /* Lo que viene */
-.next-weeks .date-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.date-strip:has(.next-card){display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .next-card{display:flex;flex-direction:column;gap:8px;padding:18px 20px;background:#fff;border-radius:2px}
 .next-card strong{font-size:22px;font-weight:850;font-stretch:90%}
 .next-card time{font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums}
 .result-notes .cat-label{margin-bottom:6px}
 .result-notes .cat-label b{color:#fff}
 .result-notes .cat-label>span:last-child:not(.code){color:#aeb3b4}
-@media(max-width:800px){.next-weeks .date-strip{grid-template-columns:1fr;gap:12px}}
+@media(max-width:800px){.date-strip:has(.next-card){grid-template-columns:1fr;gap:12px}}
 /* Los nuestros: tarjetas iguales */
 .runner-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .runner-card{display:flex;flex-direction:column;gap:10px;padding:18px 20px;background:#fff;border-radius:2px}
@@ -159,7 +172,8 @@ button{color:inherit;font-family:inherit}
 .runner-line+.runner-line{padding-top:22px;border-top:1px solid var(--rule)}
 /* Agenda */
 .filters{gap:4px}
-.filters button,.filters a:last-child button,.filters button:last-child{border:0;border-radius:2px;background:rgba(16,18,19,.05)}
+.filters button,.filters a:last-child button,.filters button:last-child{border:0;border-radius:2px}
+.filters button:not(.is-selected){background:rgba(16,18,19,.05)}
 .day-tabs{border-bottom:0;gap:8px}
 .day-tabs button{border-right:0;border-radius:2px;background:rgba(16,18,19,.04)}
 .schedule-row{border-bottom:1px solid var(--rule)}

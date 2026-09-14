@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Code, SectionTitle } from "@/components/pista";
+import type { CSSProperties } from "react";
+import { CategoryLabel, SectionTitle } from "@/components/pista";
 import { getNow, getSeason, getSeries } from "@/lib/data";
-import { capitalize, fmtDayNum, fmtMonth, fmtMonthShort } from "@/lib/format";
+import { capitalize, fmtDayShort, fmtMonth, fmtMonthShort } from "@/lib/format";
 import type { Scope } from "@/lib/types";
 
 export const metadata: Metadata = { title: "Calendario" };
@@ -22,9 +23,7 @@ export default async function CalendarPage(props: PageProps<"/calendario">) {
   return (
     <>
       <section className="weekend-head">
-        <div>
-          <h1>Calendario</h1>
-        </div>
+        <h1>Calendario</h1>
         <p className="lede">Todas las fechas que vienen, en hora argentina.</p>
       </section>
 
@@ -51,22 +50,13 @@ export default async function CalendarPage(props: PageProps<"/calendario">) {
               const s = getSeries(e.seriesId)!;
               const date = e.sessions.at(-1)!.start;
               return (
-                <article key={e.id}>
+                <Link key={e.id} href={`/eventos/${e.id}`} className="next-card list-link" style={{ "--cat": s.color } as CSSProperties}>
+                  <CategoryLabel series={s} />
+                  <strong>{e.circuit.city}</strong>
                   <time dateTime={date}>
-                    <b>{fmtDayNum(date).padStart(2, "0")}</b> {fmtMonthShort(date)}
+                    {fmtDayShort(date)} {fmtMonthShort(date)} · Fecha {e.round}
                   </time>
-                  <Code series={s} />
-                  <div>
-                    <strong>
-                      <Link href={`/eventos/${e.id}`} className="list-link">
-                        {e.name}
-                      </Link>
-                    </strong>
-                    <span>
-                      {s.name} · {e.circuit.city}
-                    </span>
-                  </div>
-                </article>
+                </Link>
               );
             })}
           </div>

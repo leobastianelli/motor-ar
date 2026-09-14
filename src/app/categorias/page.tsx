@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Code, SectionTitle, StateTag } from "@/components/pista";
+import type { CSSProperties } from "react";
+import { CategoryLabel, SectionTitle } from "@/components/pista";
 import { getAllSeries, getNow, getSeason } from "@/lib/data";
-import { fmtDayNum, fmtMonthShort } from "@/lib/format";
+import { fmtDayShort, fmtMonthShort } from "@/lib/format";
 import type { Scope } from "@/lib/types";
 
 export const metadata: Metadata = { title: "Categorías" };
@@ -21,35 +22,28 @@ export default async function CategoriesPage() {
   return (
     <>
       <section className="weekend-head">
-        <div>
-          <h1>Categorías</h1>
-        </div>
-        <p className="lede">Nacionales, internacionales y zonales. Cada una con su código y su color, sin logos oficiales.</p>
+        <h1>Categorías</h1>
+        <p className="lede">Nacionales, internacionales y zonales.</p>
       </section>
       {GROUPS.map((g) => (
         <section key={g.scope} className="section-block">
           <SectionTitle title={g.title} />
-          <div className="schedule">
+          <div className="date-strip">
             {all
               .filter((s) => s.scope === g.scope)
               .map((s) => {
                 const next = season.getEventsForSeries(s.id).find((e) => season.getNextSession(e, now));
                 const date = next?.sessions.at(-1)!.start;
                 return (
-                  <Link key={s.id} href={`/categorias/${s.id}`} className="schedule-row list-link">
-                    <time>{s.founded ?? "—"}</time>
-                    <Code series={s} />
-                    <div>
-                      <strong>{s.name}</strong>
-                      <span>{s.org}</span>
-                    </div>
-                    <b className="channel">{next ? next.circuit.city : "Sin fechas cargadas"}</b>
+                  <Link key={s.id} href={`/categorias/${s.id}`} className="next-card list-link" style={{ "--cat": s.color } as CSSProperties}>
+                    <CategoryLabel series={s} detail={s.founded ? `desde ${s.founded}` : undefined} />
+                    <strong>{next ? `Próxima: ${next.circuit.city}` : "Sin fechas cargadas"}</strong>
                     {date ? (
-                      <StateTag kind="upcoming">
-                        {fmtDayNum(date)} {fmtMonthShort(date)}
-                      </StateTag>
+                      <time dateTime={date}>
+                        {fmtDayShort(date)} {fmtMonthShort(date)} · {s.org}
+                      </time>
                     ) : (
-                      <StateTag kind="no-data">Sin datos</StateTag>
+                      <time>{s.org}</time>
                     )}
                   </Link>
                 );

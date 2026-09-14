@@ -82,9 +82,7 @@ export default async function Home() {
           <div className="live-main">
             <CatMark series={live.series} />
             <div>
-              <p className="series">
-                {live.series.name} · {live.event.circuit.city}
-              </p>
+              <CategoryLabel series={live.series} detail={live.event.circuit.city} />
               <h2>{live.session.name}</h2>
               <p className="lap">
                 Faltan {minutesLeft(live.session, now)} min <span>largó {fmtTime(live.session.start)}</span>
@@ -156,16 +154,13 @@ export default async function Home() {
             {podium ? (
               <article className="podium">
                 <div className="podium-head">
-                  <Code series={podium.series} />
                   <div>
+                    <CategoryLabel series={podium.series} detail={`${fmtDayNum(podium.session.start)} ${fmtMonthShort(podium.session.start)}`} />
                     <strong>
                       <Link href={`/eventos/${podium.event.id}`} className="list-link">
                         {podium.session.name} · {podium.event.circuit.city}
                       </Link>
                     </strong>
-                    <span>
-                      {podium.series.name} · {fmtDayNum(podium.session.start)} {fmtMonthShort(podium.session.start)}
-                    </span>
                   </div>
                 </div>
                 <ol>

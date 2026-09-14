@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
-import { PhotoCredit, SectionTitle } from "@/components/pista";
+import { CategoryLabel, PhotoCredit, SectionTitle } from "@/components/pista";
 import { colapintoData, finishLabel, quotes, raceCode, raceName, recentMilestones, statusLabel, type ColapintoData } from "@/lib/colapinto";
 import { getAllDrivers, getDriver, getNow, getSeason, getSeries, type Season } from "@/lib/data";
 import { fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/format";
@@ -247,6 +247,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
           </div>
         )}
         <div className="driver-title">
+          <CategoryLabel series={series} detail={driver.team} />
           <p className="kicker">
             {driver.hometown}
             {years !== null && ` · ${years} años`}
