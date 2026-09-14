@@ -1,15 +1,26 @@
 import Link from "next/link";
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
 import { Agenda } from "@/components/agenda";
 import { CatMark, CategoryLabel, Code, SectionTitle, StateTag } from "@/components/pista";
-import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, ms, weekendWindow } from "@/lib/data";
+import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, ms, weekendWindow, type HomeMode } from "@/lib/data";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime, minutesLeft, surname } from "@/lib/format";
 
 export const revalidate = 60;
 
+type SectionId = "live" | "nuestros" | "agenda" | "resultados" | "viene";
+
+// El orden de la home depende del momento de la semana: primero lo que más probablemente se busca, pero siempre está todo.
+const ORDER: Record<HomeMode, SectionId[]> = {
+  live: ["live", "agenda", "nuestros", "resultados", "viene"],
+  weekend: ["agenda", "nuestros", "resultados", "viene"],
+  results: ["resultados", "nuestros", "agenda", "viene"],
+  midweek: ["nuestros", "resultados", "agenda", "viene"],
+};
+
 export default async function Home() {
   const now = getNow();
   const season = await getSeason();
+  const mode = season.getHomeMode(now);
   const { items, days, to } = season.getAgenda(now);
   const live = season.getLiveItems(now)[0];
   const todayKey = dayKey(now);
@@ -22,130 +33,144 @@ export default async function Home() {
     standing: season.getStandingPosition(driver),
   }));
 
+  const latest = season.getRecentResults(now)[0];
   const podium = season.getRecentResults(now, "nacional")[0];
   const [highlight, ...notes] = season.getArgentineHighlights(now);
   const nextEvents = season.getUpcomingEvents(now).filter((e) => ms(eventStart(e)) >= ms(to)).slice(0, 3);
   const liveUrl = live?.event.broadcasts.find((b) => b.url)?.url;
 
-  // Cabecera en una línea de datos: estado del día y próxima sesión con argentinos. Sin prosa.
+  // ——— Cabecera: una franja de datos que cambia con el momento ———
   const when = (s: { start: string; timeKnown?: boolean }) => {
     const day = dayKey(s.start) === todayKey ? "hoy" : fmtDayShort(s.start).toLowerCase();
     return s.timeKnown === false ? day : `${day} ${fmtTime(s.start)}`;
   };
+  const rangeOf = (list: { iso: string }[]) =>
+    list.length === 0
+      ? ""
+      : list.length === 1
+        ? `${fmtDayNum(list[0].iso)} ${fmtMonthShort(list[0].iso)}`
+        : `${fmtDayNum(list[0].iso)}–${fmtDayNum(list.at(-1)!.iso)} ${fmtMonthShort(list.at(-1)!.iso)}`;
+
   const first = items[0];
-  const lead = live ?? first;
-  const status = lead ? (
+  const upcomingLine = live ? (
     <>
-      {live ? "En vivo" : `Arranca ${when(lead.session)}`} <Code series={lead.series} /> {lead.session.name}
+      En vivo <Code series={live.series} /> {live.session.name}
+    </>
+  ) : first ? (
+    <>
+      {mode === "results" ? "Próximo" : "Arranca"} {when(first.session)} <Code series={first.series} /> {first.session.name}
     </>
   ) : (
-    "Sin carreras cargadas"
+    "Sin carreras próximas cargadas"
   );
-  const nextLabel = nextArg && nextArg !== first ? when(nextArg.session) : undefined;
-
-  // "Este finde" si lo que sigue cae en el fin de semana en curso (o el inminente), "Próximo finde" si cae en el siguiente.
-  const inWindow = (win: { key: string }[]) => days.length > 0 && days.every((d) => win.some((w) => w.key === d.key));
-  const thisWeekend = weekendWindow(now).days;
-  const nextWeekend = weekendWindow(new Date(ms(thisWeekend[2].iso) + 2 * 86400000).toISOString()).days;
-  const title = inWindow(thisWeekend) ? "Este finde" : inWindow(nextWeekend) ? "Próximo finde" : "Lo que sigue";
-  const range =
-    days.length === 0
-      ? ""
-      : days.length === 1
-        ? `${fmtDayNum(days[0].iso)} ${fmtMonthShort(days[0].iso)}`
-        : `${fmtDayNum(days[0].iso)}–${fmtDayNum(days.at(-1)!.iso)} ${fmtMonthShort(days.at(-1)!.iso)}`;
-
-  return (
+  const latestLine = latest?.session.results?.[0] && (
     <>
-      <section className="weekend-head">
-        <h1>
-          {title} <span className="hero-date">{range}</span>
-        </h1>
-        <p className="lede">
-          <span>{status}</span>
-          {nextLabel && (
-            <span>
-              Próximo argentino: <b>{nextLabel}</b>
-            </span>
-          )}
-          <span className="lede-tz">Hora ARG</span>
-        </p>
-      </section>
+      Último <Code series={latest.series} /> {latest.session.name} · ganó <b>{latest.session.results[0].driver}</b>
+    </>
+  );
+  const nextArgLabel = nextArg && nextArg !== first ? when(nextArg.session) : undefined;
 
-      {live && (
-        <section className="live-board" aria-labelledby="live-title">
-          <div className="live-flag">
-            <span className="pulse" />
-            <span id="live-title">En vivo</span>
-            <b>{minutesLeft(live.session, now)}′</b>
+  let title: string;
+  let range: string;
+  let lede: ReactNode[];
+  if (mode === "results" && latest) {
+    title = "Resultados del finde";
+    range = rangeOf(weekendWindow(latest.session.start).days);
+    lede = [latestLine, upcomingLine];
+  } else {
+    // "Este finde" si lo que sigue cae en el fin de semana en curso (o el inminente), "Próximo finde" si cae en el siguiente.
+    const inWindow = (win: { key: string }[]) => days.length > 0 && days.every((d) => win.some((w) => w.key === d.key));
+    const thisWeekend = weekendWindow(now).days;
+    const nextWeekend = weekendWindow(new Date(ms(thisWeekend[2].iso) + 2 * 86400000).toISOString()).days;
+    title = inWindow(thisWeekend) ? "Este finde" : inWindow(nextWeekend) ? "Próximo finde" : "Lo que sigue";
+    range = rangeOf(days);
+    lede = [
+      upcomingLine,
+      mode === "midweek" ? latestLine : undefined,
+      nextArgLabel && (
+        <>
+          Próximo argentino: <b>{nextArgLabel}</b>
+        </>
+      ),
+    ];
+  }
+
+  // ——— Secciones ———
+  const sections: Record<SectionId, ReactNode> = {
+    live: live && (
+      <section key="live" className="live-board" aria-labelledby="live-title">
+        <div className="live-flag">
+          <span className="pulse" />
+          <span id="live-title">En vivo</span>
+          <b>{minutesLeft(live.session, now)}′</b>
+        </div>
+        <div className="live-main">
+          <CatMark series={live.series} />
+          <div>
+            <CategoryLabel series={live.series} detail={live.event.circuit.city} />
+            <h2>{live.session.name}</h2>
+            <p className="lap">
+              Faltan {minutesLeft(live.session, now)} min <span>largó {fmtTime(live.session.start)}</span>
+            </p>
           </div>
-          <div className="live-main">
-            <CatMark series={live.series} />
-            <div>
-              <CategoryLabel series={live.series} detail={live.event.circuit.city} />
-              <h2>{live.session.name}</h2>
-              <p className="lap">
-                Faltan {minutesLeft(live.session, now)} min <span>largó {fmtTime(live.session.start)}</span>
-              </p>
-            </div>
-          </div>
-          <ol className="timing-mini">
-            {live.session.results?.length ? (
-              live.session.results.slice(0, 3).map((r) => (
-                <li key={r.pos} className={r.driverSlug ? "argentine" : undefined}>
-                  <b>{r.pos}</b>
-                  <span className="driver-code">{driverCode(r)}</span>
-                  <span>{r.gap}</span>
-                </li>
-              ))
-            ) : (
-              <li>
-                <StateTag kind="no-data">Sin tiempos en vivo</StateTag>
+        </div>
+        <ol className="timing-mini">
+          {live.session.results?.length ? (
+            live.session.results.slice(0, 3).map((r) => (
+              <li key={r.pos} className={r.driverSlug ? "argentine" : undefined}>
+                <b>{r.pos}</b>
+                <span className="driver-code">{driverCode(r)}</span>
+                <span>{r.gap}</span>
               </li>
-            )}
-          </ol>
-          <div className="watch">
-            <span>Se ve por</span>
-            <strong>{live.event.broadcasts.map((b) => b.name).join(" · ") || "Sin datos de transmisión"}</strong>
-            {liveUrl && (
-              <a href={liveUrl} target="_blank" rel="noreferrer">
-                Abrir transmisión <span aria-hidden="true">↗</span>
-              </a>
-            )}
-          </div>
-        </section>
-      )}
+            ))
+          ) : (
+            <li>
+              <StateTag kind="no-data">Sin tiempos en vivo</StateTag>
+            </li>
+          )}
+        </ol>
+        <div className="watch">
+          <span>Se ve por</span>
+          <strong>{live.event.broadcasts.map((b) => b.name).join(" · ") || "Sin datos de transmisión"}</strong>
+          {liveUrl && (
+            <a href={liveUrl} target="_blank" rel="noreferrer">
+              Abrir transmisión <span aria-hidden="true">↗</span>
+            </a>
+          )}
+        </div>
+      </section>
+    ),
 
-      {runners.length > 0 && (
-        <section className="section-block nuestros" aria-labelledby="nuestros-title">
-          <SectionTitle id="nuestros-title" title="Los nuestros">
-            <Link href="/pilotos">Ver todos</Link>
-          </SectionTitle>
-          {/* Mismo orden de lectura en cada tarjeta: categoría → piloto → qué pasó. */}
-          <div className="runner-cards">
-            {runners.map((r) => (
-              <Link key={r.driver.slug} href={`/pilotos/${r.driver.slug}`} className="runner-card list-link" style={{ "--cat": r.series.color } as CSSProperties}>
-                <CategoryLabel series={r.series} />
-                <strong className="runner-name">
-                  {r.driver.name}
-                  {r.driver.number && <span>#{r.driver.number}</span>}
-                </strong>
-                <p className="runner-status">
-                  <StateTag kind={r.status.state}>{r.status.stateLabel}</StateTag>
-                  <b>{r.status.headline}</b>
-                </p>
-                <p className="runner-meta">
-                  {[r.status.detail, r.standing && `${r.standing.position}.º en el campeonato · ${r.standing.points} pts`].filter(Boolean).join(" · ")}
-                </p>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+    nuestros: runners.length > 0 && (
+      <section key="nuestros" className="section-block nuestros" aria-labelledby="nuestros-title">
+        <SectionTitle id="nuestros-title" title="Los nuestros">
+          <Link href="/pilotos">Ver todos</Link>
+        </SectionTitle>
+        <div className="runner-cards">
+          {runners.map((r) => (
+            <Link key={r.driver.slug} href={`/pilotos/${r.driver.slug}`} className="runner-card list-link" style={{ "--cat": r.series.color } as CSSProperties}>
+              <CategoryLabel series={r.series} />
+              <strong className="runner-name">
+                {r.driver.name}
+                {r.driver.number && <span>#{r.driver.number}</span>}
+              </strong>
+              <p className="runner-status">
+                <StateTag kind={r.status.state}>{r.status.stateLabel}</StateTag>
+                <b>{r.status.headline}</b>
+              </p>
+              <p className="runner-meta">
+                {[r.status.detail, r.standing && `${r.standing.position}.º en el campeonato · ${r.standing.points} pts`].filter(Boolean).join(" · ")}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+    ),
 
-      <Agenda items={items} days={days} today={todayKey} now={now} />
+    agenda: <Agenda key="agenda" items={items} days={days} today={todayKey} now={now} />,
 
-      <section className="results-band">
+    resultados: (
+      <section key="resultados" className="results-band">
         <div className="section-block">
           <SectionTitle title="Resultados" inverse>
             <Link href="/calendario">Calendario</Link>
@@ -215,8 +240,10 @@ export default async function Home() {
           </div>
         </div>
       </section>
+    ),
 
-      <section className="section-block next-weeks">
+    viene: (
+      <section key="viene" className="section-block next-weeks">
         <SectionTitle title="Lo que viene">
           <Link href="/calendario">Ver calendario</Link>
         </SectionTitle>
@@ -236,6 +263,22 @@ export default async function Home() {
           })}
         </div>
       </section>
+    ),
+  };
+
+  return (
+    <>
+      <section className={`weekend-head mode-${mode}`}>
+        <h1>
+          {title} <span className="hero-date">{range}</span>
+        </h1>
+        <p className="lede">
+          {lede.filter(Boolean).map((line, i) => (
+            <span key={i}>{line}</span>
+          ))}
+        </p>
+      </section>
+      {ORDER[mode].map((id) => sections[id])}
     </>
   );
 }

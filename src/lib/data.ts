@@ -9,7 +9,14 @@ import type { CategoryHistory, Driver, RaceEvent, ResultRow, Series, Session, St
 // Capa de acceso a datos. Lo estático (categorías, pilotos, archivo) se lee directo; la temporada se carga con
 // getSeason(), que en producción se mantiene al día desde las fuentes.
 
-export const getNow = () => new Date().toISOString();
+// FIERROS_NOW permite simular otro momento (por ejemplo, para revisar la home de un lunes). Sin la variable, es la hora real.
+export const getNow = () => process.env.FIERROS_NOW ?? new Date().toISOString();
+
+/**
+ * Qué busca la gente según el momento: en pista o de jueves a domingo antes de que termine lo del día, lo que pasa y lo que viene;
+ * el domingo ya terminado, el lunes y el martes, los resultados; el miércoles es intermedio.
+ */
+export type HomeMode = "live" | "weekend" | "results" | "midweek";
 
 export const getSeries = (id: string): Series | undefined => seriesById[id];
 export const getAllSeries = () => series;
@@ -175,6 +182,20 @@ export function createSeason(raw: RawSeason) {
     },
 
     getLiveItems: (now: string) => itemsAt(now).filter((i) => i.status === "live"),
+
+    getHomeMode(now: string): HomeMode {
+      const items = itemsAt(now);
+      if (items.some((i) => i.status === "live")) return "live";
+      const today = dayKey(now);
+      const weekday = new Date(`${today}T12:00:00-03:00`).getUTCDay();
+      if (weekday === 1 || weekday === 2) return "results";
+      if (weekday === 3) return "midweek";
+      if (weekday === 0) {
+        const pendingToday = items.some((i) => i.status !== "done" && dayKey(i.session.start) === today);
+        return pendingToday ? "weekend" : "results";
+      }
+      return "weekend";
+    },
 
     getUpcomingEvents: (now: string) => events.filter((e) => eventEnd(e) >= ms(now)).sort((a, b) => ms(eventStart(a)) - ms(eventStart(b))),
 
