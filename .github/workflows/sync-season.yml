@@ -46,8 +46,10 @@ jobs:
             echo "Sin cambios en la temporada ni en los pilotos."
             exit 0
           fi
+          # Vercel bloquea deploys cuyo commit no venga de un email asociado a una cuenta de GitHub,
+          # así que se commitea con el email de la cuenta en vez de uno de bot.
           git config user.name "fierros-sync"
-          git config user.email "fierros-sync@users.noreply.github.com"
+          git config user.email "leonelbastianelli@gmail.com"
           git add src/data/season-2026.json src/data/drivers-2026.json
           git commit -m "datos: sincronización automática de la temporada"
           git push
