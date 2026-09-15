@@ -15,8 +15,8 @@ export default function PrivacyPage() {
       <section className="section-block legal">
         <h2>Resumen</h2>
         <p>
-          Fierros no pide registrarse y no guarda datos personales de quienes lo visitan. Para saber qué páginas se usan más, mide visitas de forma agregada y
-          anónima.
+          Fierros no pide registrarse ni pide datos para navegarlo. Para entender qué se usa y detectar errores, mide visitas y, desde septiembre de 2026,
+          también graba cómo se navega el sitio (sin ver lo que escribís). No vendemos ni compartimos esos datos con nadie más.
         </p>
 
         <h2>Medición de visitas</h2>
@@ -24,6 +24,19 @@ export default function PrivacyPage() {
           Usamos Vercel Web Analytics, que cuenta visitas y páginas vistas sin cookies y sin identificar a las personas: no guarda direcciones IP completas ni
           arma perfiles. Los datos se ven sólo en conjunto (por ejemplo, cuántas visitas tuvo el calendario en un día).
         </p>
+
+        <h2>Análisis de uso y grabación de sesiones</h2>
+        <p>
+          Además usamos <a href="https://posthog.com/privacy" target="_blank" rel="noreferrer">PostHog</a>, con sus servidores en la Unión Europea, para
+          entender cómo se usa el sitio: qué páginas se visitan, en qué se hace clic, mapas de calor y qué tan rápido carga cada página. Para eso, PostHog usa
+          una cookie o un identificador guardado en tu navegador que no incluye tu nombre ni tu email.
+        </p>
+        <p>
+          También graba sesiones de navegación (movimiento del mouse, clics y scroll) para ver dónde se traba la navegación. Por defecto, no graba lo que
+          escribís en ningún campo: esos valores quedan ocultos. Fierros no tiene formularios ni pide datos personales, así que estas grabaciones no deberían
+          contener información sensible.
+        </p>
+        <p>Si preferís no ser parte de esto, podés bloquear cookies de terceros o usar una extensión que bloquee rastreadores; el sitio funciona igual.</p>
 
         <h2>Alojamiento</h2>
         <p>
