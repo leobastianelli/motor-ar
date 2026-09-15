@@ -19,7 +19,7 @@ const PHOTOS = {
   "series-f1": { file: "File:Opening lap of the 2025 Canadian Grand Prix (cropped).jpg", alt: "Largada del Gran Premio de Canadá de Fórmula 1, 2025" },
   "series-f2": { file: "File:FIA F2 Austria 2025 Nr. 1 Fornaroli.jpg", alt: "El auto Nº1 de Fornaroli en el Gran Premio de Austria de Fórmula 2, 2025" },
   "series-gt3": { file: "File:GT World Challenge Europe 2024 Nürburg Nr. 51 Pier Guidi, Rigon, Rovera.jpg", alt: "El Nº51 en Nürburgring, GT World Challenge Europe 2024" },
-  "series-tn": { file: "File:Top Race 2025, Fecha 8, Buenos Aires. Sábado, Clasificación - 03.jpg", alt: "Clasificación de Top Race en Buenos Aires, 2025" },
+  "series-tn": { file: "File:TN APAT Gran Premio Elf 2026, Domingo. Clase 2, Carrera - 03.jpg", alt: "Carrera de Clase 2 del TN APAT, Gran Premio Elf 2026" },
   "series-tc2000": { file: "File:200 km de Buenos Aires 2023, Carrera Sprint de invitados, sábado 7 octubre.jpg", alt: "Autos en pit lane antes de la Carrera Sprint de invitados, 200 km de Buenos Aires 2023" },
   "series-tc-pista": { file: "File:TC Pista 2025, Fecha 10, Buenos Aires. Domingo. Carrera - 09.jpg", alt: "Carrera de TC Pista, Fecha 10 en Buenos Aires, 2025" },
   "series-tc-mouras": { file: "File:TC Mouras 2026, Fecha 5. Domingo, Carrera - 05.jpg", alt: "TC Mouras en carrera, Fecha 5 de 2026" },

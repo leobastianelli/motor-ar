@@ -7,7 +7,7 @@ import { PhotoCredit, SectionTitle } from "@/components/pista";
 import { getAllSeries, getHistory, getNow, getSeason, getSeries } from "@/lib/data";
 import { getPhoto } from "@/lib/photos";
 import { fmtDayNum, fmtMonthShort, surname } from "@/lib/format";
-import type { CategoryHistory } from "@/lib/types";
+import type { CategoryHistory, StandingRow } from "@/lib/types";
 
 export const revalidate = 60;
 
@@ -33,6 +33,24 @@ function curiosity(history: CategoryHistory) {
     return `Argentina suma ${history.argentineTitles} títulos, de ${argentines.join(" y ")}. El primer campeón fue ${first.driver}, en ${first.label ?? first.year}.`;
   }
   return `El primer campeón fue ${first.driver}, en ${first.label ?? first.year}. Desde entonces hubo ${history.distinctChampions} campeones distintos en ${history.seasons} temporadas.`;
+}
+
+function StandingRows({ rows, leaderRow }: { rows: StandingRow[]; leaderRow?: boolean }) {
+  return (
+    <>
+      {rows.map((row, i) => (
+        <div key={row.driver} className={`champ-row${leaderRow && i === 0 ? " leader" : ""}`}>
+          <b>{row.pos}</b>
+          <div>
+            <strong>{row.driverSlug ? <Link href={`/pilotos/${row.driverSlug}`}>{row.driver}</Link> : row.driver}</strong>
+            <span>{row.team}</span>
+          </div>
+          <em>{row.wins === undefined ? "" : `${row.wins} ${row.wins === 1 ? "victoria" : "victorias"}`}</em>
+          <time>{row.points}</time>
+        </div>
+      ))}
+    </>
+  );
 }
 
 function History({ history }: { history: CategoryHistory }) {
@@ -220,34 +238,14 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
           <SectionTitle title={meta.standingsLabel ? `Campeonato · ${meta.standingsLabel}` : "Campeonato"} />
           {table.length > 0 ? (
             <div className="champ-table">
-              {table.map((row, i) => (
-                <div key={row.driver} className={`champ-row${i === 0 ? " leader" : ""}`}>
-                  <b>{row.pos}</b>
-                  <div>
-                    <strong>{row.driverSlug ? <Link href={`/pilotos/${row.driverSlug}`}>{row.driver}</Link> : row.driver}</strong>
-                    <span>{row.team}</span>
-                  </div>
-                  <em>{row.wins === undefined ? "" : `${row.wins} ${row.wins === 1 ? "victoria" : "victorias"}`}</em>
-                  <time>{row.points}</time>
-                </div>
-              ))}
+              <StandingRows rows={table} leaderRow />
               {rest.length > 0 && (
                 <details className="full-results">
                   <summary>
                     Campeonato completo <span>{fullTable.length} pilotos</span>
                   </summary>
                   <div className="champ-table">
-                    {rest.map((row) => (
-                      <div key={row.driver} className="champ-row">
-                        <b>{row.pos}</b>
-                        <div>
-                          <strong>{row.driverSlug ? <Link href={`/pilotos/${row.driverSlug}`}>{row.driver}</Link> : row.driver}</strong>
-                          <span>{row.team}</span>
-                        </div>
-                        <em>{row.wins === undefined ? "" : `${row.wins} ${row.wins === 1 ? "victoria" : "victorias"}`}</em>
-                        <time>{row.points}</time>
-                      </div>
-                    ))}
+                    <StandingRows rows={rest} />
                   </div>
                 </details>
               )}
@@ -282,6 +280,27 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
           )}
         </aside>
       </section>
+
+      {meta.secondaryStandings && meta.secondaryStandings.rows.length > 0 && (
+        <section className="section-block category-current single">
+          <div>
+            <SectionTitle title={`Campeonato · ${meta.secondaryStandings.label}`} />
+            <div className="champ-table">
+              <StandingRows rows={meta.secondaryStandings.rows.slice(0, 10)} leaderRow />
+              {meta.secondaryStandings.rows.length > 10 && (
+                <details className="full-results">
+                  <summary>
+                    Campeonato completo <span>{meta.secondaryStandings.rows.length} pilotos</span>
+                  </summary>
+                  <div className="champ-table">
+                    <StandingRows rows={meta.secondaryStandings.rows.slice(10)} />
+                  </div>
+                </details>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
 
       {history ? (
         <History history={history} />

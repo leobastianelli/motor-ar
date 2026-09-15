@@ -377,10 +377,9 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
     ];
   } else {
     const standing = season.getStandingPosition(driver);
-    const label = season.getSeasonMeta(driver.seriesId).standingsLabel;
     ribbon = [
       { label: "Temporada", value: "2026" },
-      { label: "Campeonato", value: standing ? `${standing.position}.º` : "—", note: label },
+      { label: "Campeonato", value: standing ? `${standing.position}.º` : "—", note: standing?.label },
       { label: "Puntos", value: standing ? String(standing.points) : "—" },
       // Victorias contadas desde los resultados de la temporada, igual que en los bloques de abajo.
       { label: "Victorias", value: String(season.getDriverSeason({ key: "", keys: [driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n)) }).bySeries[driver.seriesId]?.wins ?? 0) },

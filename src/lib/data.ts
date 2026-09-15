@@ -117,6 +117,8 @@ export interface SeasonMeta {
   standingsHidden?: boolean;
   standingsAsOfRound?: number;
   standingsSource?: string;
+  /** Un segundo campeonato de la misma categoría (p. ej. Clase 2 del TN, que corre junto a la Clase 3). */
+  secondaryStandings?: { label: string; rows: StandingRow[] };
   progression?: { round: number; standings: { driver: string; pos: number; points: number }[] }[];
 }
 
@@ -170,6 +172,12 @@ export function createSeason(raw: RawSeason) {
     Object.entries(raw.standings as Record<string, Omit<StandingRow, "driverSlug">[]>).map(([id, rows]) => [id, rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) }))]),
   );
   const meta = { ...(raw.meta as Record<string, SeasonMeta>) };
+
+  // Un segundo campeonato de la misma categoría, cargado por la fuente bajo una clave propia (hoy sólo clase2 del TN).
+  for (const [id, m] of Object.entries(meta)) {
+    const rows = (m as unknown as { clase2?: Omit<StandingRow, "driverSlug">[] })?.clase2;
+    if (rows?.length) meta[id] = { ...meta[id], secondaryStandings: { label: "Clase 2", rows: rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) })) } };
+  }
 
   // Tabla atrasada: si la fuente dice hasta qué fecha llega y ya se corrieron más, no se muestra como actual.
   for (const [id, m] of Object.entries(meta)) {
@@ -228,7 +236,9 @@ export function createSeason(raw: RawSeason) {
   }
   const standingFor = (seriesId: string, keys: string | string[]) => {
     const wanted = new Set(Array.isArray(keys) ? keys : [keys]);
-    return getStandings(seriesId).find((r) => r.driver.split(" / ").some((p) => wanted.has(driverKey(p))));
+    const match = (rows: StandingRow[]) => rows.find((r) => r.driver.split(" / ").some((p) => wanted.has(driverKey(p))));
+    // Un piloto puede estar sólo en un campeonato secundario de la categoría (p. ej. Clase 2 del TN).
+    return match(getStandings(seriesId)) ?? (meta[seriesId]?.secondaryStandings && match(meta[seriesId].secondaryStandings.rows));
   };
 
   /** Temporada de un piloto sumando todas las formas en que lo escribieron las fuentes. */
@@ -371,7 +381,11 @@ export function createSeason(raw: RawSeason) {
 
     getStandingPosition(driver: Driver) {
       const row = getStandings(driver.seriesId).find((r) => r.driverSlug === driver.slug);
-      return row ? { position: row.pos, points: row.points, wins: row.wins } : null;
+      if (row) return { position: row.pos, points: row.points, wins: row.wins, label: meta[driver.seriesId]?.standingsLabel };
+      // Un piloto puede estar sólo en un campeonato secundario de la categoría (p. ej. Clase 2 del TN).
+      const secondary = meta[driver.seriesId]?.secondaryStandings;
+      const secRow = secondary?.rows.find((r) => r.driverSlug === driver.slug);
+      return secRow ? { position: secRow.pos, points: secRow.points, wins: secRow.wins, label: secondary!.label } : null;
     },
   };
 }
