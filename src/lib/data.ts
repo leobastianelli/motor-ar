@@ -186,7 +186,7 @@ export function createSeason(raw: RawSeason) {
     const fromSource = meta[id]?.standingsHidden ? 0 : (meta[id]?.standingsAsOfRound ?? 0);
     if (manual.asOfRound < fromSource && standings[id]?.length) continue;
     standings[id] = manual.rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) }));
-    meta[id] = { ...meta[id], standingsHidden: false, standingsAsOfRound: manual.asOfRound, standingsLabel: `tras la fecha ${manual.asOfRound}`, standingsSource: manual.source };
+    meta[id] = { ...meta[id], standingsHidden: false, standingsAsOfRound: manual.asOfRound, standingsLabel: [raw.meta && (raw.meta as Record<string, SeasonMeta>)[id]?.standingsLabel, `tras la fecha ${manual.asOfRound}`].filter(Boolean).join(" · "), standingsSource: manual.source };
   }
 
   const baseItems = events
