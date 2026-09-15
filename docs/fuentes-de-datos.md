@@ -150,7 +150,7 @@ Corre en cada actualización de la temporada (producción y `npm run sync:season
 
 **Para sumar una fuente:** escribir un adaptador que devuelva `{ source: { id, name, official }, url, published, text }` y agregarlo en `withSchedules` (`season.mjs`). El lector y el consenso no cambian.
 
-Fuentes evaluadas y descartadas por ahora: Carburando (sin feed, sitemap ni buscador para descubrir notas), Campeones (el cronograma de TC2000 viene como imagen; robots.txt pide 60 s entre pedidos). TN APAT y TC2000 siguen sin una fuente de horarios en texto.
+Fuentes evaluadas y descartadas por ahora: Carburando (sin feed, sitemap ni buscador para descubrir notas), Campeones para horarios (el cronograma de TC2000 viene como imagen; sí se usa para pole, ganador y hora de la carrera, ver más abajo). TN APAT y TC2000 siguen sin una fuente de horarios en texto.
 
 ## Resultados oficiales de la ACTC (tiempos.actc.org.ar)
 
@@ -176,7 +176,11 @@ Las categorías que acompañan al TC salen del calendario de actc.org.ar (`/tcm`
 
 **Categorías sin fuente automática de resultados por sesión:**
 
-- **TC2000:** su robots.txt prohíbe leer las direcciones con parámetros (donde están los resultados) y pide 60 s entre pedidos, con un máximo de 6 páginas por hora. Siguen Wikipedia y la carga manual.
+- **TC2000:** su robots.txt prohíbe leer las direcciones con parámetros (donde están los resultados) y pide 60 s entre pedidos, con un máximo de 6 páginas por hora. No se usa. En su lugar:
+  - **Wikipedia (es)**: calendario de las primeras fechas y campeonato.
+  - **Campeones** (`src/lib/sources/tc2000-campeones.mjs`): de las notas del feed `/category/tc2000/feed/` (una dirección, sin parámetros, caché 1 h) se leen sede, número de fecha, hora de la carrera, pole y ganador de cada fin de semana. No hay clasificaciones completas: son crónicas en texto. Lo leído se guarda en `meta.tc2000.campeones` y cada sincronización lo completa, así que no se pierde cuando la nota sale del feed. El horario se muestra "según Campeones".
+  - **Fechas viejas**: `node scripts/crawl-campeones-tc2000.mjs` recorre el archivo (61 s entre pedidos, robots.txt pide 60 y prohíbe parámetros) y guarda las notas en `research/campeones/` (no se sube); `node scripts/backfill-tc2000-campeones.mjs` las suma a la instantánea.
+  - Carga manual (`newEvents`) para fechas anunciadas que ninguna fuente publica todavía.
 - **Procar 4000:** los resultados se publican como PDF diseñados en Illustrator, sin texto extraíble de forma confiable. Quedan posiciones y noticias del sitio oficial, y resultados por carga manual.
 - **GT World Challenge:** cada región usa un proveedor de cronometraje distinto. Queda pendiente.
 

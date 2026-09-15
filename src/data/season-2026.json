@@ -16428,8 +16428,8 @@
           "id": "tc2000-2026-1-race",
           "kind": "carrera",
           "name": "Carrera",
-          "start": "2026-03-15T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-03-15T13:00:00-03:00",
+          "timeKnown": true,
           "durationMin": 50,
           "results": [
             {
@@ -16437,10 +16437,18 @@
               "driver": "Franco Riva",
               "team": "Pro Racing"
             }
+          ],
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/tc2000-emiliano-stang-fue-la-referencia-previo-a-la-clasificacion/",
+              "start": "13:00"
+            }
           ]
         }
       ],
-      "source": "Wikipedia · Temporada 2026 de TC2000"
+      "source": "Wikipedia · Temporada 2026 de TC2000 · Campeones"
     },
     {
       "id": "tcm-2026-3",
@@ -25260,15 +25268,55 @@
       },
       "sessions": [
         {
+          "id": "tc2000-2026-2-qualy",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-04-11T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Matías Rossi",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/rossi-brindo-por-su-quinto-triunfo-con-tc2000-en-el-zonda/"
+          }
+        },
+        {
           "id": "tc2000-2026-2-race",
           "kind": "carrera",
           "name": "Carrera",
-          "start": "2026-04-12T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 50
+          "start": "2026-04-12T13:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/rossi-brindo-por-su-quinto-triunfo-con-tc2000-en-el-zonda/",
+              "start": "13:00"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Matías Rossi",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/rossi-brindo-por-su-quinto-triunfo-con-tc2000-en-el-zonda/"
+          }
         }
       ],
-      "source": "Wikipedia · Temporada 2026 de TC2000"
+      "source": "Wikipedia · Temporada 2026 de TC2000 · Campeones"
     },
     {
       "id": "gt3-2026-e1",
@@ -34294,25 +34342,53 @@
       "id": "tc2000-2026-3",
       "seriesId": "tc2000",
       "round": 3,
-      "name": "Fecha 3 · Rosario",
+      "name": "Fecha 3 · Concordia",
       "circuit": {
-        "name": "Autódromo Municipal Juan Manuel Fangio",
-        "city": "Rosario",
+        "name": "Autódromo Ciudad de Concordia",
+        "city": "Concordia",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Santa Fe"
+        "province": "Entre Ríos"
       },
       "sessions": [
+        {
+          "id": "tc2000-2026-3-qualy",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-05-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Franco Vivian",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/tc2000-rossi-abrio-la-manana-del-domingo-en-los-tanques-llenos/"
+          }
+        },
         {
           "id": "tc2000-2026-3-race",
           "kind": "carrera",
           "name": "Carrera",
-          "start": "2026-05-03T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 50
+          "start": "2026-05-03T13:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/tc2000-rossi-abrio-la-manana-del-domingo-en-los-tanques-llenos/",
+              "start": "13:00"
+            }
+          ]
         }
       ],
-      "source": "Wikipedia · Temporada 2026 de TC2000"
+      "source": "Wikipedia · Temporada 2026 de TC2000 · Campeones"
     },
     {
       "id": "tcp-2026-5",
@@ -40930,15 +41006,55 @@
       },
       "sessions": [
         {
+          "id": "tc2000-2026-4-qualy",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-05-23T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Matías Rossi",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/tc2000-franco-vivian-volvio-al-triunfo-en-salta/"
+          }
+        },
+        {
           "id": "tc2000-2026-4-race",
           "kind": "carrera",
           "name": "Carrera",
           "start": "2026-05-24T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 50
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/tc2000-franco-vivian-volvio-al-triunfo-en-salta/",
+              "start": "12:00"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Franco Vivian",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/tc2000-franco-vivian-volvio-al-triunfo-en-salta/"
+          }
         }
       ],
-      "source": "Wikipedia · Temporada 2026 de TC2000"
+      "source": "Wikipedia · Temporada 2026 de TC2000 · Campeones"
     },
     {
       "id": "tcp-2026-6",
@@ -53880,6 +53996,70 @@
       "source": "ACTC (calendario)"
     },
     {
+      "id": "tc2000-2026-5",
+      "seriesId": "tc2000",
+      "round": 5,
+      "name": "Fecha 5 · San Nicolás",
+      "circuit": {
+        "name": "Autódromo Juan María Traverso",
+        "city": "San Nicolás",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Ciudad de Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tc2000-2026-5-qualy",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-06-27T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Franco Vivian",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/franco-morillo-aguanto-y-gano-por-segunda-vez-en-la-temporada/"
+          }
+        },
+        {
+          "id": "tc2000-2026-5-race",
+          "kind": "carrera",
+          "name": "Carrera",
+          "start": "2026-06-28T13:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/franco-morillo-aguanto-y-gano-por-segunda-vez-en-la-temporada/",
+              "start": "13:00"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Franco Morillo",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/franco-morillo-aguanto-y-gano-por-segunda-vez-en-la-temporada/"
+          }
+        }
+      ],
+      "source": "Wikipedia · Temporada 2026 de TC2000 · Campeones"
+    },
+    {
       "id": "tcm-2026-7",
       "seriesId": "tc-mouras",
       "round": 7,
@@ -53926,30 +54106,6 @@
         }
       ],
       "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tc2000-2026-5",
-      "seriesId": "tc2000",
-      "round": 5,
-      "name": "Fecha 5 · San Nicolás",
-      "circuit": {
-        "name": "Autódromo Juan María Traverso",
-        "city": "San Nicolás",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Ciudad de Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tc2000-2026-5-race",
-          "kind": "carrera",
-          "name": "Carrera",
-          "start": "2026-06-28T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 50
-        }
-      ],
-      "source": "Wikipedia · Temporada 2026 de TC2000"
     },
     {
       "id": "gt3-2026-e3",
@@ -69840,6 +69996,70 @@
       "source": "Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
+      "id": "tc2000-2026-6",
+      "seriesId": "tc2000",
+      "round": 6,
+      "name": "Fecha 6 · Toay",
+      "circuit": {
+        "name": "Autódromo Provincia de La Pampa",
+        "city": "Toay",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "La Pampa"
+      },
+      "sessions": [
+        {
+          "id": "tc2000-2026-6-qualy",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-08-08T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Facundo Aldrighetti",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/ponce-de-leon-le-gano-el-duelo-a-vivian-y-vencio-en-toay/"
+          }
+        },
+        {
+          "id": "tc2000-2026-6-race",
+          "kind": "carrera",
+          "name": "Carrera",
+          "start": "2026-08-09T13:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/ponce-de-leon-le-gano-el-duelo-a-vivian-y-vencio-en-toay/",
+              "start": "13:00"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Gabriel Ponce de León",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/ponce-de-leon-le-gano-el-duelo-a-vivian-y-vencio-en-toay/"
+          }
+        }
+      ],
+      "source": "Campeones"
+    },
+    {
       "id": "tcm-2026-8",
       "seriesId": "tc-mouras",
       "round": 8,
@@ -78399,6 +78619,70 @@
       "source": "Jolpica-F1"
     },
     {
+      "id": "tc2000-2026-7",
+      "seriesId": "tc2000",
+      "round": 7,
+      "name": "Fecha 7 · Junín",
+      "circuit": {
+        "name": "Autódromo Eusebio Marcilla",
+        "city": "Junín",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tc2000-2026-7-qualy",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-09-05T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Matías Rossi",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/gabriel-ponce-de-leon-otra-vez-profeta-en-su-tierra/"
+          }
+        },
+        {
+          "id": "tc2000-2026-7-race",
+          "kind": "carrera",
+          "name": "Carrera",
+          "start": "2026-09-06T13:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/gabriel-ponce-de-leon-otra-vez-profeta-en-su-tierra/",
+              "start": "13:00"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Gabriel Ponce de León",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/gabriel-ponce-de-leon-otra-vez-profeta-en-su-tierra/"
+          }
+        }
+      ],
+      "source": "Campeones"
+    },
+    {
       "id": "f2-2026-11",
       "seriesId": "f2",
       "round": 11,
@@ -86001,7 +86285,122 @@
       ]
     },
     "tc2000": {
-      "incomplete": true
+      "incomplete": true,
+      "campeones": [
+        {
+          "raceDay": "2026-03-15",
+          "round": 1,
+          "city": "Buenos Aires",
+          "circuit": "Circuito callejero de la Ciudad de Buenos Aires",
+          "province": "Buenos Aires",
+          "raceTime": "13:00",
+          "sources": [
+            "https://campeones.com.ar/tc2000-emiliano-stang-fue-la-referencia-previo-a-la-clasificacion/",
+            "https://campeones.com.ar/tc2000-ponce-de-leon-sigue-dominando-en-el-callejero/",
+            "https://campeones.com.ar/dias-y-horarios-del-tc2000-en-el-callejero-de-buenos-aires/"
+          ]
+        },
+        {
+          "raceDay": "2026-04-12",
+          "round": 2,
+          "city": "San Juan",
+          "circuit": "Autódromo El Zonda Eduardo Copello",
+          "province": "San Juan",
+          "raceTime": "13:00",
+          "pole": "Matías Rossi",
+          "winner": "Matías Rossi",
+          "winnerUrl": "https://campeones.com.ar/rossi-brindo-por-su-quinto-triunfo-con-tc2000-en-el-zonda/",
+          "sources": [
+            "https://campeones.com.ar/rossi-brindo-por-su-quinto-triunfo-con-tc2000-en-el-zonda/",
+            "https://campeones.com.ar/el-orden-de-largada-de-turismo-competicion-2000-en-el-zonda/",
+            "https://campeones.com.ar/rossi-conquisto-el-mejor-tiempo-de-la-clasificacion-de-tc2000-en-san-juan/",
+            "https://campeones.com.ar/horarios-para-el-tc2000-en-el-zonda/"
+          ]
+        },
+        {
+          "raceDay": "2026-05-03",
+          "city": "Concordia",
+          "circuit": "Autódromo Ciudad de Concordia",
+          "province": "Entre Ríos",
+          "raceTime": "13:00",
+          "pole": "Franco Vivian",
+          "sources": [
+            "https://campeones.com.ar/tc2000-rossi-abrio-la-manana-del-domingo-en-los-tanques-llenos/",
+            "https://campeones.com.ar/vivian-volvio-con-pole-position-incluida-al-tc2000/",
+            "https://campeones.com.ar/tc2000-vivian-sostuvo-el-dominio-en-la-segunda-practica-de-concordia/"
+          ]
+        },
+        {
+          "raceDay": "2026-05-24",
+          "round": 4,
+          "city": "Salta",
+          "circuit": "Autódromo Martín Miguel de Güemes",
+          "province": "Salta",
+          "raceTime": "12:00",
+          "pole": "Matías Rossi",
+          "winner": "Franco Vivian",
+          "winnerUrl": "https://campeones.com.ar/tc2000-franco-vivian-volvio-al-triunfo-en-salta/",
+          "sources": [
+            "https://campeones.com.ar/tc2000-franco-vivian-volvio-al-triunfo-en-salta/",
+            "https://campeones.com.ar/asi-se-larga-la-final-del-tc2000-en-salta/",
+            "https://campeones.com.ar/tc2000-en-salta-rossi-logro-su-3a-pole-position-de-2026/"
+          ]
+        },
+        {
+          "raceDay": "2026-06-28",
+          "round": 5,
+          "city": "San Nicolás",
+          "circuit": "Autódromo Juan María Traverso",
+          "province": "Buenos Aires",
+          "raceTime": "13:00",
+          "pole": "Franco Vivian",
+          "winner": "Franco Morillo",
+          "winnerUrl": "https://campeones.com.ar/franco-morillo-aguanto-y-gano-por-segunda-vez-en-la-temporada/",
+          "sources": [
+            "https://campeones.com.ar/franco-morillo-aguanto-y-gano-por-segunda-vez-en-la-temporada/",
+            "https://campeones.com.ar/asi-se-larga-la-final-de-tc2000-en-san-nicolas/",
+            "https://campeones.com.ar/en-san-nicolas-todo-es-de-vivian-se-quedo-con-la-pole-del-tc2000/",
+            "https://campeones.com.ar/franco-vivian-amplio-dominador-de-las-practicas-de-tc2000/"
+          ]
+        },
+        {
+          "raceDay": "2026-08-09",
+          "round": 6,
+          "city": "Toay",
+          "circuit": "Autódromo Provincia de La Pampa",
+          "province": "La Pampa",
+          "raceTime": "13:00",
+          "pole": "Facundo Aldrighetti",
+          "winner": "Gabriel Ponce de León",
+          "winnerUrl": "https://campeones.com.ar/ponce-de-leon-le-gano-el-duelo-a-vivian-y-vencio-en-toay/",
+          "sources": [
+            "https://campeones.com.ar/ponce-de-leon-le-gano-el-duelo-a-vivian-y-vencio-en-toay/",
+            "https://campeones.com.ar/stang-al-frente-en-los-tanques-llenos-del-tc2000-en-toay/",
+            "https://campeones.com.ar/tc2000-honda-se-quedo-con-el-1-de-la-mano-de-aldrighetti-en-toay/",
+            "https://campeones.com.ar/tc2000-aldrighetti-marco-el-ritmo-antes-de-clasificar-en-toay/",
+            "https://campeones.com.ar/tc2000-vuelve-a-toay-cronograma-y-novedades/"
+          ]
+        },
+        {
+          "raceDay": "2026-09-06",
+          "round": 7,
+          "city": "Junín",
+          "circuit": "Autódromo Eusebio Marcilla",
+          "province": "Buenos Aires",
+          "raceTime": "13:00",
+          "pole": "Matías Rossi",
+          "winner": "Gabriel Ponce de León",
+          "winnerUrl": "https://campeones.com.ar/gabriel-ponce-de-leon-otra-vez-profeta-en-su-tierra/",
+          "sources": [
+            "https://campeones.com.ar/gabriel-ponce-de-leon-otra-vez-profeta-en-su-tierra/",
+            "https://campeones.com.ar/asi-se-larga-la-septima-del-ano-de-tc2000-en-junin/",
+            "https://campeones.com.ar/el-poleman-de-siempre-matias-rossi-el-mejor-del-sabado-en-tc2000/",
+            "https://campeones.com.ar/lucas-carabajal-repitio-dominio-en-junin/",
+            "https://campeones.com.ar/tc2000-en-junin-lucas-carabajal-al-frente-en-el-primer-ensayo/",
+            "https://campeones.com.ar/cronograma-para-la-visita-del-tc2000-a-junin/"
+          ]
+        }
+      ]
     },
     "gt3": {
       "standingsLabel": "Sprint Cup",

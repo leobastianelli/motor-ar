@@ -15,6 +15,7 @@ const SOURCES: { name: string; url: string; what: string; license?: string }[] =
   { name: "FIA Formula 2 · fiaformula2.com", url: "https://www.fiaformula2.com", what: "Horarios de cada fecha de la Fórmula 2." },
   { name: "Jolpica-F1", url: "https://api.jolpi.ca/ergast/f1/", what: "Calendario, horarios, resultados y campeonato de la Fórmula 1." },
   { name: "OpenF1", url: "https://openf1.org", what: "Resultados de prácticas y clasificación sprint de la Fórmula 1." },
+  { name: "Campeones · campeones.com.ar", url: "https://campeones.com.ar/category/tc2000/", what: "Notas de TC2000 de las que salen sede, hora de la carrera, pole y ganador de cada fecha." },
   { name: "SoloTC", url: "https://www.solotc.com.ar", what: "Notas de cronograma usadas para verificar horarios de las categorías de la ACTC." },
   { name: "Wikipedia", url: "https://www.wikipedia.org", what: "Historia y campeones de cada categoría, temporada de TC2000 y GT World Challenge Europe, y datos de pilotos.", license: "CC BY-SA 4.0" },
 ];

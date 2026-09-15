@@ -205,7 +205,11 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
             </a>
           )}
           <p>
-            {timesUnknown ? "La fuente todavía no publica los horarios de esta fecha." : "Los horarios ya están convertidos a Argentina."}
+            {!timesUnknown
+              ? "Los horarios ya están convertidos a Argentina."
+              : event.sessions.some((s) => s.timeKnown)
+                ? "Algunos horarios de esta fecha todavía no se publicaron."
+                : "La fuente todavía no publica los horarios de esta fecha."}
             {event.source && ` Datos: ${event.source}.`}
             {scheduleSources.length > 0 && " Horarios: "}
             {scheduleSources.map((x, i) => (
@@ -295,7 +299,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                   <details key={s.id} id={s.id} className="full-results">
                     <summary>
                       <strong>{s.name}</strong> · {fmtDayShort(s.start)} · 1.º {s.results![0].driver}
-                      <span>{s.results!.length} pilotos</span>
+                      <span>{s.results!.length === 1 ? "Solo el 1.º" : `${s.results!.length} pilotos`}</span>
                     </summary>
                     <Ranking rows={s.results!} />
                     <SourceLink session={s} />

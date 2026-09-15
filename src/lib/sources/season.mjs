@@ -77,7 +77,7 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
 
   for (const [label, seriesIds, run] of SOURCES) {
     try {
-      const part = await run(io);
+      const part = await run(io, previous);
       events.push(...part.events);
       Object.assign(standings, part.standings);
       Object.assign(meta, part.meta);
