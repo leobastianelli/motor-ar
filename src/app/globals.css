@@ -407,3 +407,16 @@ button{color:inherit;font-family:inherit}
 .task-done-list li{display:flex;align-items:center;gap:12px;padding:8px 0;color:var(--muted);border-bottom:1px solid var(--rule)}
 .task-done-list li label{display:flex;align-items:center;gap:10px}
 .task-done-list li em{font-style:normal;margin-left:auto;font-size:13px}
+
+/* Invitación a agregar a la pantalla de inicio (Android/iOS) */
+.install-prompt{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;align-items:center;gap:16px;background:var(--ink);color:#fff;border-top:4px solid var(--blue);padding:14px max(24px,calc((100vw - 1240px)/2))}
+.install-prompt-body{display:flex;align-items:center;gap:16px;flex:1;min-width:0}
+.install-prompt img{border-radius:10px;flex:none}
+.install-prompt-body>div{min-width:0}
+.install-prompt strong{display:block;font-size:16px}
+.install-prompt p{margin:2px 0 0;font-size:14px;color:#c9cdce}
+.install-prompt-actions{display:flex;gap:10px;flex:none}
+.install-prompt-actions button{border:1px solid #fff;background:transparent;color:#fff;padding:10px 16px;font-weight:700;cursor:pointer;white-space:nowrap}
+.install-prompt-actions button.accept{background:var(--blue);color:var(--ink);border-color:var(--blue)}
+.install-prompt-actions button:hover{opacity:.85}
+@media(max-width:800px){.install-prompt{flex-direction:column;align-items:stretch;padding:16px}.install-prompt p{font-size:13px}.install-prompt-actions{justify-content:stretch}.install-prompt-actions button{flex:1}}
