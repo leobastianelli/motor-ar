@@ -48,7 +48,10 @@ export function DriverDirectory({ entries, groups }: { entries: DirectoryEntry[]
         return (
           <section key={g.id} className="directory-group" style={{ "--cat": g.color } as CSSProperties}>
             <h3>
-              <Code series={g} /> {g.name} <span>{list.length}</span>
+              <Link href={`/categorias/${g.id}`} className="code-link">
+                <Code series={g} /> {g.name}
+              </Link>{" "}
+              <span>{list.length}</span>
             </h3>
             <ul>
               {list.map((e) => (

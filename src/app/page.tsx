@@ -59,11 +59,11 @@ export default async function Home() {
   const first = items[0];
   const upcomingLine = live ? (
     <>
-      En vivo <Code series={live.series} /> {live.session.name}
+      En vivo <Code series={live.series} href={`/categorias/${live.series.id}`} /> {live.session.name}
     </>
   ) : first ? (
     <>
-      {mode === "results" ? "Próximo" : "Arranca"} {when(first.session)} <Code series={first.series} /> {first.session.name}
+      {mode === "results" ? "Próximo" : "Arranca"} {when(first.session)} <Code series={first.series} href={`/categorias/${first.series.id}`} /> {first.session.name}
     </>
   ) : (
     "Sin carreras próximas cargadas"
@@ -71,7 +71,7 @@ export default async function Home() {
   const latestWinner = latest && raceWinner(latest.session.results);
   const latestLine = latest?.session.results?.[0] && (
     <>
-      Último <Code series={latest.series} /> {latest.session.name}
+      Último <Code series={latest.series} href={`/categorias/${latest.series.id}`} /> {latest.session.name}
       {latestWinner && (
         <>
           {" "}· ganó <b>{latestWinner.driver}</b>
@@ -118,7 +118,7 @@ export default async function Home() {
         <div className="live-main">
           <CatMark series={live.series} />
           <div>
-            <CategoryLabel series={live.series} detail={live.event.circuit.city} />
+            <CategoryLabel series={live.series} detail={live.event.circuit.city} href={`/categorias/${live.series.id}`} />
             <h2>{live.session.name}</h2>
             <p className="lap">
               Faltan {minutesLeft(live.session, now)} min <span>largó {fmtTime(live.session.start)}</span>
@@ -194,7 +194,7 @@ export default async function Home() {
               <article className="podium">
                 <div className="podium-head">
                   <div>
-                    <CategoryLabel series={podium.series} detail={`${fmtDayNum(podium.session.start)} ${fmtMonthShort(podium.session.start)}`} />
+                    <CategoryLabel series={podium.series} detail={`${fmtDayNum(podium.session.start)} ${fmtMonthShort(podium.session.start)}`} href={`/categorias/${podium.series.id}`} />
                     <strong>
                       <Link href={`/eventos/${podium.event.id}`} className="list-link">
                         {podium.session.name} · {podium.event.circuit.city}

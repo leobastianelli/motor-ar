@@ -124,7 +124,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
       />
       <section className="event-hero" style={{ "--cat": series.color } as CSSProperties}>
         <div className="event-id">
-          <CategoryLabel series={series} detail={`Fecha ${event.round}`} />
+          <CategoryLabel series={series} detail={`Fecha ${event.round}`} href={`/categorias/${series.id}`} />
         </div>
         <div>
           <p className="kicker">
