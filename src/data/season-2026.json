@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T21:06:28.719Z",
+  "generatedAt": "2026-09-15T13:26:23.130Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -16435,7 +16435,8 @@
             {
               "pos": 1,
               "driver": "Franco Riva",
-              "team": "Pro Racing"
+              "team": "Pro Racing",
+              "gap": ""
             }
           ],
           "timeStatus": "tentative",
@@ -34032,6 +34033,58 @@
       "source": "APAT (apat.org.ar)"
     },
     {
+      "id": "tc2000-2026-3",
+      "seriesId": "tc2000",
+      "round": 3,
+      "name": "Fecha 3 · Concordia",
+      "circuit": {
+        "name": "Autódromo Ciudad de Concordia",
+        "city": "Concordia",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Entre Ríos"
+      },
+      "sessions": [
+        {
+          "id": "tc2000-2026-3-qualy",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-05-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Franco Vivian",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/tc2000-rossi-abrio-la-manana-del-domingo-en-los-tanques-llenos/"
+          }
+        },
+        {
+          "id": "tc2000-2026-3-race",
+          "kind": "carrera",
+          "name": "Carrera",
+          "start": "2026-05-03T13:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/tc2000-rossi-abrio-la-manana-del-domingo-en-los-tanques-llenos/",
+              "start": "13:00"
+            }
+          ]
+        }
+      ],
+      "source": "Wikipedia · Temporada 2026 de TC2000 · Campeones"
+    },
+    {
       "id": "gt3-2026-s1",
       "seriesId": "gt3",
       "round": 1,
@@ -34337,58 +34390,6 @@
         }
       ],
       "source": "Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
-    },
-    {
-      "id": "tc2000-2026-3",
-      "seriesId": "tc2000",
-      "round": 3,
-      "name": "Fecha 3 · Concordia",
-      "circuit": {
-        "name": "Autódromo Ciudad de Concordia",
-        "city": "Concordia",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Entre Ríos"
-      },
-      "sessions": [
-        {
-          "id": "tc2000-2026-3-qualy",
-          "kind": "clasificacion",
-          "name": "Clasificación",
-          "start": "2026-05-02T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "driver": "Franco Vivian",
-              "team": "",
-              "gap": ""
-            }
-          ],
-          "resultsSource": {
-            "name": "Campeones",
-            "url": "https://campeones.com.ar/tc2000-rossi-abrio-la-manana-del-domingo-en-los-tanques-llenos/"
-          }
-        },
-        {
-          "id": "tc2000-2026-3-race",
-          "kind": "carrera",
-          "name": "Carrera",
-          "start": "2026-05-03T13:00:00-03:00",
-          "timeKnown": true,
-          "durationMin": 50,
-          "timeStatus": "tentative",
-          "timeSources": [
-            {
-              "name": "Campeones",
-              "url": "https://campeones.com.ar/tc2000-rossi-abrio-la-manana-del-domingo-en-los-tanques-llenos/",
-              "start": "13:00"
-            }
-          ]
-        }
-      ],
-      "source": "Wikipedia · Temporada 2026 de TC2000 · Campeones"
     },
     {
       "id": "tcp-2026-5",
@@ -81965,7 +81966,7 @@
             {
               "pos": 34,
               "number": "141",
-              "driver": "Jorge Barrio",
+              "driver": "Jorge Barrio Recargo",
               "team": "Chevrolet",
               "gap": "+26.989"
             },
@@ -82021,21 +82022,21 @@
             {
               "pos": 42,
               "number": "116",
-              "driver": "Kevin Candela",
+              "driver": "Kevin S Candela",
               "team": "BMW",
               "gap": "+43.622"
             },
             {
               "pos": 43,
               "number": "172",
-              "driver": "Santiago Alvarez",
+              "driver": "Santiago Alvarez Vuelta",
               "team": "Chevrolet",
               "gap": "+1 vuelta"
             },
             {
               "pos": 44,
               "number": "154",
-              "driver": "Joaquín Ochoa",
+              "driver": "Joaquin Ochoa Vuelta",
               "team": "Toyota",
               "gap": "+1 vuelta"
             },
@@ -82079,21 +82080,29 @@
               "number": "29",
               "driver": "Elio Craparo",
               "team": "Ford",
-              "gap": "+9 vueltas"
+              "gap": "+16 vueltas"
             },
             {
               "pos": 51,
               "number": "117",
               "driver": "Matías Rossi",
               "team": "Toyota",
-              "gap": "+5 vueltas"
+              "gap": "+20 vueltas"
             },
             {
               "pos": 52,
               "number": "134",
               "driver": "Matias Jalaf",
               "team": "Ford",
-              "gap": "+2 vueltas"
+              "gap": "+23 vueltas"
+            },
+            {
+              "pos": 53,
+              "number": "7",
+              "driver": "Mangoni Excluido Excluido",
+              "team": "Chevrolet",
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -86295,10 +86304,12 @@
             "https://campeones.com.ar/el-poleman-de-siempre-matias-rossi-el-mejor-del-sabado-en-tc2000/",
             "https://campeones.com.ar/lucas-carabajal-repitio-dominio-en-junin/",
             "https://campeones.com.ar/tc2000-en-junin-lucas-carabajal-al-frente-en-el-primer-ensayo/",
-            "https://campeones.com.ar/cronograma-para-la-visita-del-tc2000-a-junin/"
+            "https://campeones.com.ar/cronograma-para-la-visita-del-tc2000-a-junin/",
+            "https://campeones.com.ar/tc2000-francisco-monarca-comenzo-arriba-la-manana-de-sabado-en-junin/"
           ]
         }
       ],
+      "campeonesFeed": true,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -86320,18 +86331,20 @@
     },
     "timing": {
       "documents": 720,
-      "pagesFetched": 0,
+      "pagesFetched": 11,
       "eventsWithResults": 51
     },
     "openf1": {
       "sessions": 131,
-      "requests": 0,
+      "requests": 12,
       "sessionsWithResults": 37
     },
     "fiaF2": {
-      "requests": 3,
+      "requests": 6,
       "eventsWithResults": 10
     }
   },
-  "failures": []
+  "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/13/driverstandings.json?limit=40"
+  ]
 }

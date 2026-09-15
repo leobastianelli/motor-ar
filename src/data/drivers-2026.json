@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T21:10:49.680Z",
+  "generatedAt": "2026-09-15T13:26:23.206Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -98,9 +98,7 @@
       ],
       "slug": "alan-cifre",
       "name": "Alan Cifre",
-      "aliases": [
-        "Alan Cifre Denis"
-      ],
+      "aliases": [],
       "series": [
         "tc-mouras"
       ],
@@ -328,9 +326,7 @@
       ],
       "slug": "bautista-roqueta",
       "name": "Bautista Roqueta",
-      "aliases": [
-        "Baustista Roqueta"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-mouras",
         "tn",
@@ -533,7 +529,7 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "key": "costanzo maiximo",
+      "key": "costanzo maximo",
       "keys": [
         "costanzo maiximo",
         "costanzo maximo",
@@ -541,10 +537,7 @@
       ],
       "slug": "costanzo-maiximo",
       "name": "Costanzo Maíximo",
-      "aliases": [
-        "Maximo Costanzo",
-        "Maximiliano Costanzo"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-mouras"
       ],
@@ -671,9 +664,7 @@
       ],
       "slug": "dante-rubiera-hainze",
       "name": "Dante Rubiera Hainze",
-      "aliases": [
-        "Dante Rubiera Hanze"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -1003,6 +994,22 @@
       "lastSeen": "2026-08-16"
     },
     {
+      "key": "aldrighetti facundo",
+      "keys": [
+        "aldrighetti facundo"
+      ],
+      "slug": "facundo-aldrighetti",
+      "name": "Facundo Aldrighetti",
+      "aliases": [],
+      "series": [
+        "tc2000"
+      ],
+      "numbers": {},
+      "teams": {},
+      "firstSeen": "2026-08-08",
+      "lastSeen": "2026-08-08"
+    },
+    {
       "key": "ardusso facundo",
       "keys": [
         "ardusso facundo",
@@ -1010,9 +1017,7 @@
       ],
       "slug": "facundo-ardusso",
       "name": "Facundo Ardusso",
-      "aliases": [
-        "Ardusso Fa Cundo"
-      ],
+      "aliases": [],
       "series": [
         "tn",
         "tc",
@@ -1261,6 +1266,22 @@
       "lastSeen": "2026-08-30"
     },
     {
+      "key": "franco morillo",
+      "keys": [
+        "franco morillo"
+      ],
+      "slug": "franco-morillo",
+      "name": "Franco Morillo",
+      "aliases": [],
+      "series": [
+        "tc2000"
+      ],
+      "numbers": {},
+      "teams": {},
+      "firstSeen": "2026-06-28",
+      "lastSeen": "2026-06-28"
+    },
+    {
       "key": "franco riva",
       "keys": [
         "franco riva"
@@ -1299,6 +1320,22 @@
       "lastSeen": "2026-08-30"
     },
     {
+      "key": "franco vivian",
+      "keys": [
+        "franco vivian"
+      ],
+      "slug": "franco-vivian",
+      "name": "Franco Vivian",
+      "aliases": [],
+      "series": [
+        "tc2000"
+      ],
+      "numbers": {},
+      "teams": {},
+      "firstSeen": "2026-05-02",
+      "lastSeen": "2026-06-27"
+    },
+    {
       "key": "gabriel gandulia",
       "keys": [
         "gabriel gandulia"
@@ -1317,6 +1354,22 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "de gabriel leon ponce",
+      "keys": [
+        "de gabriel leon ponce"
+      ],
+      "slug": "gabriel-ponce-de-leon",
+      "name": "Gabriel Ponce de León",
+      "aliases": [],
+      "series": [
+        "tc2000"
+      ],
+      "numbers": {},
+      "teams": {},
+      "firstSeen": "2026-08-09",
+      "lastSeen": "2026-09-06"
     },
     {
       "key": "gabriel villalba",
@@ -1428,9 +1481,7 @@
       ],
       "slug": "gaston-mazzacane-foton",
       "name": "Gaston Mazzacane Foton",
-      "aliases": [
-        "Gaston Mazzacane"
-      ],
+      "aliases": [],
       "series": [
         "tc-pick-up",
         "tc-pista-pick-up"
@@ -1511,9 +1562,7 @@
       ],
       "slug": "gustavo-tadei",
       "name": "Gustavo Tadei",
-      "aliases": [
-        "Gustavo Tadie"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista",
         "tc-pick-up",
@@ -1540,9 +1589,7 @@
       ],
       "slug": "hernan-palazzo",
       "name": "Hernán Palazzo",
-      "aliases": [
-        "Hernan Pal Azzo"
-      ],
+      "aliases": [],
       "series": [
         "tc",
         "tc-pick-up",
@@ -1846,11 +1893,14 @@
     {
       "key": "joaquin ochoa",
       "keys": [
-        "joaquin ochoa"
+        "joaquin ochoa",
+        "joaquin ochoa vuelta"
       ],
       "slug": "joaquin-ochoa",
       "name": "Joaquín Ochoa",
-      "aliases": [],
+      "aliases": [
+        "Joaquin Ochoa Vuelta"
+      ],
       "series": [
         "tc",
         "tc-pick-up"
@@ -1894,9 +1944,7 @@
       ],
       "slug": "joel-gassmann",
       "name": "Joel Gassmann",
-      "aliases": [
-        "Gassman Joel"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -1935,11 +1983,14 @@
     {
       "key": "barrio jorge",
       "keys": [
-        "barrio jorge"
+        "barrio jorge",
+        "barrio jorge recargo"
       ],
       "slug": "jorge-barrio",
       "name": "Jorge Barrio",
-      "aliases": [],
+      "aliases": [
+        "Jorge Barrio Recargo"
+      ],
       "series": [
         "tn",
         "tc"
@@ -2089,9 +2140,7 @@
       ],
       "slug": "juan-cruz-benvenutti",
       "name": "Juan Cruz Benvenutti",
-      "aliases": [
-        "Juan Cruz Benvenuti"
-      ],
+      "aliases": [],
       "series": [
         "tc",
         "tn"
@@ -2175,9 +2224,7 @@
       ],
       "slug": "juan-jose-conde",
       "name": "Juan Jose Conde",
-      "aliases": [
-        "Juan Conde"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -2250,9 +2297,7 @@
       ],
       "slug": "juan-jose-tomasello",
       "name": "Juan Jose Tomasello",
-      "aliases": [
-        "Juan Manuel Tomasello"
-      ],
+      "aliases": [],
       "series": [
         "tc"
       ],
@@ -2432,10 +2477,7 @@
       ],
       "slug": "juan-tomas-catalan-magni",
       "name": "Juan Tomás Catalán Magni",
-      "aliases": [
-        "Juan Tomas Catalan Magntci",
-        "Juan T Catalan Magni"
-      ],
+      "aliases": [],
       "series": [
         "tc"
       ],
@@ -2443,7 +2485,7 @@
         "tc": "53"
       },
       "teams": {
-        "tc": "Chevrolet"
+        "tc": "Toyota"
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-09-13"
@@ -2477,11 +2519,14 @@
     {
       "key": "candela kevin",
       "keys": [
-        "candela kevin"
+        "candela kevin",
+        "candela kevin s"
       ],
       "slug": "kevin-candela",
       "name": "Kevin Candela",
-      "aliases": [],
+      "aliases": [
+        "Kevin S Candela"
+      ],
       "series": [
         "tc"
       ],
@@ -2665,9 +2710,7 @@
       ],
       "slug": "lucas-carabajal",
       "name": "Lucas Carabajal",
-      "aliases": [
-        "Lucas Car Abajal"
-      ],
+      "aliases": [],
       "series": [
         "tc"
       ],
@@ -3060,9 +3103,7 @@
       ],
       "slug": "mariano-werner",
       "name": "Mariano Werner",
-      "aliases": [
-        "Mariano Werner Foton"
-      ],
+      "aliases": [],
       "series": [
         "tc",
         "tc-pick-up",
@@ -3337,7 +3378,8 @@
       "name": "Matías Rossi",
       "aliases": [],
       "series": [
-        "tc"
+        "tc",
+        "tc2000"
       ],
       "numbers": {
         "tc": "117"
@@ -3519,9 +3561,7 @@
       ],
       "slug": "nicanor-santilli-pazos",
       "name": "Nicanor Santilli Pazos",
-      "aliases": [
-        "Santilli Pazos Nicanor Foton"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista",
         "tc-pista-pick-up"
@@ -3943,11 +3983,14 @@
     {
       "key": "alvarez santiago",
       "keys": [
-        "alvarez santiago"
+        "alvarez santiago",
+        "alvarez santiago vuelta"
       ],
       "slug": "santiago-alvarez",
       "name": "Santiago Alvarez",
-      "aliases": [],
+      "aliases": [
+        "Santiago Alvarez Vuelta"
+      ],
       "series": [
         "tc"
       ],
@@ -3968,9 +4011,7 @@
       ],
       "slug": "santiago-arrigoni",
       "name": "Santiago Arrigoni",
-      "aliases": [
-        "Santiago Arrigone"
-      ],
+      "aliases": [],
       "series": [
         "tc-mouras",
         "tc-pista"
@@ -4012,11 +4053,14 @@
     {
       "key": "mangoni santiago",
       "keys": [
-        "mangoni santiago"
+        "mangoni santiago",
+        "excluido excluido mangoni"
       ],
       "slug": "santiago-mangoni",
       "name": "Santiago Mangoni",
-      "aliases": [],
+      "aliases": [
+        "Mangoni Excluido Excluido"
+      ],
       "series": [
         "tc"
       ],
