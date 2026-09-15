@@ -6,6 +6,7 @@ import { legends } from "@/data/legends";
 export const metadata: Metadata = {
   title: "Historias",
   description: "Fangio, Reutemann, Traverso y las leyendas del automovilismo argentino.",
+  alternates: { canonical: "/historicos" },
 };
 
 export default function LegendsPage() {

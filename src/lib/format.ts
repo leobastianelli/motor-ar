@@ -91,6 +91,13 @@ export const sessionTime = (session: Session) => (session.timeKnown === false ? 
 export const minutesLeft = (session: Session, nowIso: string) =>
   Math.max(0, Math.round((new Date(session.start).getTime() + session.durationMin * 60000 - new Date(nowIso).getTime()) / 60000));
 
+/**
+ * El primer puesto, sólo si de verdad está en los resultados: algunas fuentes (el portal público de la ACTC, sobre
+ * todo en categorías chicas) sólo publican parte de la clasificación, y esa parte puede no incluir al 1.º. No hay
+ * que anunciar "ganador" ni armar un podio con eso.
+ */
+export const raceWinner = (results?: ResultRow[]) => results?.find((r) => r.pos === 1);
+
 /** Código de tres letras del piloto (oficial si existe, si no, derivado del apellido). */
 export function driverCode(row: Pick<ResultRow, "driver" | "code">) {
   if (row.code) return row.code;

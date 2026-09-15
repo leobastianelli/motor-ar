@@ -10,6 +10,7 @@ import { fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/format";
 import { getPhoto } from "@/lib/photos";
 import { driverKey } from "@/lib/sources/driver-index.mjs";
 import { breadcrumb, isoDate, JsonLd } from "@/components/json-ld";
+import { OG_DEFAULTS } from "@/lib/site";
 import type { IndexedDriver } from "@/lib/data";
 import type { Driver } from "@/lib/types";
 
@@ -30,7 +31,7 @@ export async function generateMetadata(props: PageProps<"/pilotos/[slug]">): Pro
   const description = indexed
     ? indexedSummary(indexed, await getSeason())
     : `${name}${seriesNames ? ` (${seriesNames})` : ""}: ${curated?.tagline ?? ""} Temporada 2026, campeonato y resultados fecha por fecha.`;
-  return { title: name, description, openGraph: { title: name, description }, alternates: { canonical: `/pilotos/${slug}` } };
+  return { title: name, description, openGraph: { title: name, description, ...OG_DEFAULTS }, alternates: { canonical: `/pilotos/${slug}` } };
 }
 
 const RACES = new Set(["final", "carrera", "sprint"]);

@@ -69,6 +69,10 @@ export async function f2Season(io) {
     .filter((r) => intOf(r.cells[0]?.text) !== null && r.cells[1]?.text)
     .map((r) => ({ pos: intOf(r.cells[0].text), driver: r.cells[1].text, results: r.cells.slice(2, -1).map((c) => c.text), points: Number.parseFloat(r.cells.at(-1).text) || 0 }));
   const perRace = resultsFromStandings(rows, calendar.length * 2, (d) => teamOf.get(d)?.team ?? "");
+  // Hasta qué fecha llega la tabla de campeonato: cuántas columnas (sprint + principal) tienen algún resultado
+  // cargado, cada dos una fecha. Sirve para no mostrarla como actual si el campeonato de Wikipedia quedó atrás
+  // de los resultados oficiales de cada sesión (ver createSeason en data.ts).
+  const standingsAsOfRound = Math.floor(perRace.filter((list) => list.length > 0).length / 2);
 
   let official = [];
   try {
@@ -120,5 +124,9 @@ export async function f2Season(io) {
   });
 
   const standings = rows.map((r) => ({ pos: r.pos, driver: r.driver, team: teamOf.get(r.driver)?.team ?? "", points: r.points }));
-  return { events, standings: { f2: standings }, meta: { f2: { officialTimes: official.length, argentines: [...argentines] } } };
+  return {
+    events,
+    standings: { f2: standings },
+    meta: { f2: { officialTimes: official.length, argentines: [...argentines], ...(standingsAsOfRound ? { standingsAsOfRound } : {}) } },
+  };
 }

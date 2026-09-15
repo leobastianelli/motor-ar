@@ -1,10 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import { Agenda } from "@/components/agenda";
 import { CatMark, CategoryLabel, Code, SectionTitle, StateTag } from "@/components/pista";
 import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, ms, weekendWindow, type HomeMode } from "@/lib/data";
-import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime, minutesLeft, surname } from "@/lib/format";
+import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime, minutesLeft, raceWinner, surname } from "@/lib/format";
 
+export const metadata: Metadata = { alternates: { canonical: "/" } };
 export const revalidate = 60;
 
 type SectionId = "live" | "nuestros" | "agenda" | "resultados" | "viene";
@@ -66,9 +68,15 @@ export default async function Home() {
   ) : (
     "Sin carreras próximas cargadas"
   );
+  const latestWinner = latest && raceWinner(latest.session.results);
   const latestLine = latest?.session.results?.[0] && (
     <>
-      Último <Code series={latest.series} /> {latest.session.name} · ganó <b>{latest.session.results[0].driver}</b>
+      Último <Code series={latest.series} /> {latest.session.name}
+      {latestWinner && (
+        <>
+          {" "}· ganó <b>{latestWinner.driver}</b>
+        </>
+      )}
     </>
   );
   const nextArgLabel = nextArg && nextArg !== first ? when(nextArg.session) : undefined;

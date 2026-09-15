@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = { title: "Términos de uso", description: "Condiciones de uso de Fierros." };
+export const metadata: Metadata = { title: "Términos de uso", description: "Condiciones de uso de Fierros.", alternates: { canonical: "/terminos" } };
 
 export default function TermsPage() {
   return (

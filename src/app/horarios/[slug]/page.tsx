@@ -5,8 +5,9 @@ import type { CSSProperties } from "react";
 import { breadcrumb, JsonLd } from "@/components/json-ld";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { getDriver, getNow, getSeason, getSeries, type Season } from "@/lib/data";
-import { dayKey, fmtDayShort, fmtRange, fmtTime, fmtWeekday, fmtDayNum, sessionState, sessionStatus, sessionTime } from "@/lib/format";
+import { dayKey, fmtDayShort, fmtRange, fmtTime, fmtWeekday, fmtDayNum, raceWinner, sessionState, sessionStatus, sessionTime } from "@/lib/format";
 import { allHorarioSlugs, horarioSeriesSlug, resolveHorario } from "@/lib/horarios";
+import { OG_DEFAULTS } from "@/lib/site";
 import type { RaceEvent } from "@/lib/types";
 
 export const revalidate = 60;
@@ -46,7 +47,7 @@ export async function generateMetadata(props: PageProps<"/horarios/[slug]">): Pr
   const description = next && nextSession
     ? `${driver ? `${driver.name} corre en ${series.name}. ` : ""}Próxima fecha: ${next.name}, ${fmtRange(next.sessions[0].start, next.sessions.at(-1)!.start)}. ${nextSession.name} el ${when(nextSession)}. Todas las sesiones y dónde verlo.`
     : `Horarios de ${series.name} en hora argentina y dónde verlo.`;
-  return { title, description, openGraph: { title, description }, alternates: { canonical: `/horarios/${slug}` } };
+  return { title, description, openGraph: { title, description, ...OG_DEFAULTS }, alternates: { canonical: `/horarios/${slug}` } };
 }
 
 export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) {
@@ -57,6 +58,7 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
   const standing = driver ? season.getStandingPosition(driver) : null;
   const lastRace = last?.sessions.filter((s) => s.results?.length && ["final", "carrera"].includes(s.kind)).at(-1);
   const driverRow = driver && lastRace?.results?.find((r) => r.driverSlug === driver.slug);
+  const lastWinner = lastRace && raceWinner(lastRace.results);
   const title = driver ? `A qué hora corre ${driver.name}` : `Horario de ${series.name}`;
   const byDay = next ? Map.groupBy(next.sessions, (s) => dayKey(s.start)) : new Map();
 
@@ -143,7 +145,7 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
           {last && lastRace?.results?.[0] && (
             <Link href={`/eventos/${last.id}`} className="next-card list-link" style={{ "--cat": series.color } as CSSProperties}>
               <CategoryLabel series={series} detail={last.circuit.city} />
-              <strong>{driverRow ? `${driver!.name} terminó ${driverRow.pos}.º` : `Ganó ${lastRace.results[0].driver}`}</strong>
+              <strong>{driverRow ? `${driver!.name} terminó ${driverRow.pos}.º` : lastWinner ? `Ganó ${lastWinner.driver}` : "Terminó"}</strong>
               <time>
                 {lastRace.name} · {fmtDayShort(lastRace.start)}
               </time>
@@ -170,12 +172,14 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
 }
 
 function sportsEvent(event: RaceEvent, seriesName: string, org: string) {
+  // Si el horario todavía no se sabe, sólo se publica la fecha: la hora de relleno (mediodía) no es un dato real.
+  const jsonLdDate = (s: RaceEvent["sessions"][number]) => (s.timeKnown === false ? dayKey(s.start) : s.start);
   return {
     "@type": "SportsEvent",
     name: `${seriesName} · ${event.name}`,
     sport: "Automovilismo",
-    startDate: event.sessions[0].start,
-    endDate: event.sessions.at(-1)!.start,
+    startDate: jsonLdDate(event.sessions[0]),
+    endDate: jsonLdDate(event.sessions.at(-1)!),
     eventStatus: "https://schema.org/EventScheduled",
     location: { "@type": "Place", name: event.circuit.name, address: [event.circuit.city, event.circuit.country].filter(Boolean).join(", ") },
     organizer: { "@type": "Organization", name: org },

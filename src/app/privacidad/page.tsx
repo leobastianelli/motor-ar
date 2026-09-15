@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata: Metadata = { title: "Política de privacidad", description: "Qué datos usa Fierros y cómo." };
+export const metadata: Metadata = { title: "Política de privacidad", description: "Qué datos usa Fierros y cómo.", alternates: { canonical: "/privacidad" } };
 
 export default function PrivacyPage() {
   return (

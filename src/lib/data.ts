@@ -179,22 +179,33 @@ export function createSeason(raw: RawSeason) {
     if (rows?.length) meta[id] = { ...meta[id], secondaryStandings: { label: "Clase 2", rows: rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) })) } };
   }
 
+  // Fechas de una categoría con resultado de carrera cargado: mide hasta dónde llegó la temporada de verdad,
+  // para comparar contra lo que cada tabla (automática o manual) dice que cubre.
+  const racedRounds = (id: string) => events.filter((e) => e.seriesId === id && e.sessions.some((s) => (s.kind === "final" || s.kind === "carrera") && s.results?.length)).length;
+
   // Tabla atrasada: si la fuente dice hasta qué fecha llega y ya se corrieron más, no se muestra como actual.
   for (const [id, m] of Object.entries(meta)) {
     if (m?.standingsAsOfRound === undefined || !standings[id]?.length) continue;
-    const raced = events.filter((e) => e.seriesId === id && e.sessions.some((s) => (s.kind === "final" || s.kind === "carrera") && s.results?.length)).length;
-    if (raced > m.standingsAsOfRound) {
+    if (racedRounds(id) > m.standingsAsOfRound) {
       standings[id] = [];
       meta[id] = { ...m, standingsHidden: true };
     }
   }
 
-  // Campeonato cargado a mano: vale mientras la fuente automática no cubra más fechas.
+  // Campeonato cargado a mano: vale mientras la fuente automática no cubra más fechas, y sólo si tampoco quedó
+  // atrás de las fechas ya corridas (la misma regla se aplica a la carga manual que a cualquier fuente automática).
   for (const [id, manual] of Object.entries(MANUAL_STANDINGS)) {
     const fromSource = meta[id]?.standingsHidden ? 0 : (meta[id]?.standingsAsOfRound ?? 0);
     if (manual.asOfRound < fromSource && standings[id]?.length) continue;
-    standings[id] = manual.rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) }));
-    meta[id] = { ...meta[id], standingsHidden: false, standingsAsOfRound: manual.asOfRound, standingsLabel: [raw.meta && (raw.meta as Record<string, SeasonMeta>)[id]?.standingsLabel, `tras la fecha ${manual.asOfRound}`].filter(Boolean).join(" · "), standingsSource: manual.source };
+    const stale = racedRounds(id) > manual.asOfRound;
+    standings[id] = stale ? [] : manual.rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) }));
+    meta[id] = {
+      ...meta[id],
+      standingsHidden: stale,
+      standingsAsOfRound: manual.asOfRound,
+      standingsLabel: [raw.meta && (raw.meta as Record<string, SeasonMeta>)[id]?.standingsLabel, `tras la fecha ${manual.asOfRound}`].filter(Boolean).join(" · "),
+      standingsSource: manual.source,
+    };
   }
 
   const baseItems = events

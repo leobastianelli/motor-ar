@@ -9,6 +9,7 @@ import type { Scope } from "@/lib/types";
 export const metadata: Metadata = {
   title: "Categorías",
   description: "Categorías nacionales, internacionales y zonales: próximas fechas, campeonatos e historia.",
+  alternates: { canonical: "/categorias" },
 };
 export const revalidate = 60;
 
