@@ -113,6 +113,10 @@ export interface RunnerStatus {
 export interface SeasonMeta {
   standingsLabel?: string;
   incomplete?: boolean;
+  /** El campeonato publicado quedó atrás de las fechas corridas y no se muestra. */
+  standingsHidden?: boolean;
+  standingsAsOfRound?: number;
+  standingsSource?: string;
   progression?: { round: number; standings: { driver: string; pos: number; points: number }[] }[];
 }
 
@@ -129,6 +133,8 @@ interface ManualOverride {
 const OVERRIDES = ((manualOverrides as unknown as { events?: Record<string, ManualOverride> }).events ?? {}) as Record<string, ManualOverride>;
 /** Fechas enteras cargadas a mano, para cuando ninguna fuente las publica todavía. Si una fuente trae el mismo id, gana la fuente. */
 const EXTRA_EVENTS = ((manualOverrides as unknown as { newEvents?: RawEvent[] }).newEvents ?? []) as RawEvent[];
+/** Campeonatos cargados a mano (p. ej. la tabla oficial publicada en redes cuando ninguna fuente abierta está al día). */
+const MANUAL_STANDINGS = ((manualOverrides as unknown as { standings?: Record<string, { asOfRound: number; source: string; rows: Omit<StandingRow, "driverSlug">[] }> }).standings ?? {});
 
 /** Carga manual (src/data/manual-overrides.json): completa o corrige una fecha sin tocar las fuentes. */
 function applyOverride(e: RawEvent): RawEvent {
@@ -163,7 +169,15 @@ export function createSeason(raw: RawSeason) {
   const standings: Record<string, StandingRow[]> = Object.fromEntries(
     Object.entries(raw.standings as Record<string, Omit<StandingRow, "driverSlug">[]>).map(([id, rows]) => [id, rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) }))]),
   );
-  const meta = raw.meta as Record<string, SeasonMeta>;
+  const meta = { ...(raw.meta as Record<string, SeasonMeta>) };
+
+  // Campeonato cargado a mano: vale mientras la fuente automática no cubra más fechas.
+  for (const [id, manual] of Object.entries(MANUAL_STANDINGS)) {
+    const fromSource = meta[id]?.standingsHidden ? 0 : (meta[id]?.standingsAsOfRound ?? 0);
+    if (manual.asOfRound < fromSource && standings[id]?.length) continue;
+    standings[id] = manual.rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) }));
+    meta[id] = { ...meta[id], standingsHidden: false, standingsAsOfRound: manual.asOfRound, standingsLabel: `tras la fecha ${manual.asOfRound}`, standingsSource: manual.source };
+  }
 
   const baseItems = events
     .flatMap((event) => event.sessions.map((session) => ({ session, event, series: seriesById[event.seriesId] })))

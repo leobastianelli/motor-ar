@@ -84118,110 +84118,7 @@
         "points": 2
       }
     ],
-    "tc2000": [
-      {
-        "pos": 1,
-        "driver": "Emiliano Stang",
-        "team": "",
-        "points": 26
-      },
-      {
-        "pos": 2,
-        "driver": "Franco Riva",
-        "team": "",
-        "points": 25
-      },
-      {
-        "pos": 3,
-        "driver": "Valentín Yankelevich",
-        "team": "",
-        "points": 18
-      },
-      {
-        "pos": 4,
-        "driver": "Diego Ciantini",
-        "team": "",
-        "points": 16
-      },
-      {
-        "pos": 5,
-        "driver": "Franco Morillo",
-        "team": "",
-        "points": 16
-      },
-      {
-        "pos": 6,
-        "driver": "Gabriel Ponce de León",
-        "team": "",
-        "points": 13
-      },
-      {
-        "pos": 7,
-        "driver": "Matías Rossi",
-        "team": "",
-        "points": 12
-      },
-      {
-        "pos": 8,
-        "driver": "Benjamín Squaglia",
-        "team": "",
-        "points": 10
-      },
-      {
-        "pos": 9,
-        "driver": "Tomás Fernández",
-        "team": "",
-        "points": 8
-      },
-      {
-        "pos": 10,
-        "driver": "Matías Capurro",
-        "team": "",
-        "points": 6
-      },
-      {
-        "pos": 11,
-        "driver": "Nicolás Traut",
-        "team": "",
-        "points": 3
-      },
-      {
-        "pos": 12,
-        "driver": "Facundo Aldrighetti",
-        "team": "",
-        "points": 2
-      },
-      {
-        "pos": 13,
-        "driver": "Nicolás Ginés",
-        "team": "",
-        "points": 1
-      },
-      {
-        "pos": 14,
-        "driver": "Nicolás Palau",
-        "team": "",
-        "points": 1
-      },
-      {
-        "pos": 15,
-        "driver": "Evgeny Leonov",
-        "team": "",
-        "points": 0
-      },
-      {
-        "pos": 16,
-        "driver": "Franco Vivian",
-        "team": "",
-        "points": 0
-      },
-      {
-        "pos": 17,
-        "driver": "Marcelo Ciarrochi",
-        "team": "",
-        "points": 0
-      }
-    ],
+    "tc2000": [],
     "gt3": [
       {
         "pos": 1,
@@ -86400,7 +86297,9 @@
             "https://campeones.com.ar/cronograma-para-la-visita-del-tc2000-a-junin/"
           ]
         }
-      ]
+      ],
+      "standingsAsOfRound": 1,
+      "standingsHidden": true
     },
     "gt3": {
       "standingsLabel": "Sprint Cup",

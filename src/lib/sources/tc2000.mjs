@@ -61,7 +61,7 @@ async function wikiPart(io) {
   } catch {
     standings = [];
   }
-  return { events, standings };
+  return { events, standings, roundsWithResults: winners.size };
 }
 
 const dayOf = (iso) => iso.slice(0, 10);
@@ -155,9 +155,16 @@ export async function tc2000Season(io, previous) {
     feedOk = false;
   }
 
+  const events = applyCampeones(wiki.events, weekends);
+  // El campeonato de Wikipedia se actualiza tarde. Si cubre menos fechas que las ya corridas, no se muestra: mejor nada que
+  // una tabla vieja presentada como actual.
+  const raced = events.filter((e) => e.sessions.some((s) => s.kind === "carrera" && s.results?.length)).length;
+  const covered = wiki.roundsWithResults ?? 0;
+  const stale = raced > covered;
+
   return {
-    events: applyCampeones(wiki.events, weekends),
-    standings: { tc2000: wiki.standings },
-    meta: { tc2000: { incomplete: true, campeones: weekends, campeonesFeed: feedOk } },
+    events,
+    standings: { tc2000: stale ? [] : wiki.standings },
+    meta: { tc2000: { incomplete: true, campeones: weekends, campeonesFeed: feedOk, standingsAsOfRound: covered, standingsHidden: stale } },
   };
 }
