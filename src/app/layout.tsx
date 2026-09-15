@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Archivo } from "next/font/google";
+import { CookieBanner } from "@/components/cookie-banner";
 import { Footer } from "@/components/footer";
 import { JsonLd } from "@/components/json-ld";
 import { Masthead } from "@/components/masthead";
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           }}
         />
         <Analytics />
+        <CookieBanner />
       </body>
     </html>
   );

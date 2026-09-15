@@ -36,7 +36,10 @@ export default function PrivacyPage() {
           escribís en ningún campo: esos valores quedan ocultos. Fierros no tiene formularios ni pide datos personales, así que estas grabaciones no deberían
           contener información sensible.
         </p>
-        <p>Si preferís no ser parte de esto, podés bloquear cookies de terceros o usar una extensión que bloquee rastreadores; el sitio funciona igual.</p>
+        <p>
+          Por eso, al entrar por primera vez vas a ver un aviso para aceptar o rechazar estas cookies. Si rechazás, PostHog no se activa y el sitio funciona
+          igual. Podés cambiar de opinión borrando los datos guardados del sitio en tu navegador, para que el aviso vuelva a aparecer.
+        </p>
 
         <h2>Alojamiento</h2>
         <p>
