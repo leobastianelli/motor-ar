@@ -73,7 +73,7 @@ async function IndexedDriverPage({ slug }: { slug: string }) {
     <>
       <section className="weekend-head driver-auto-head" style={{ "--cat": main.color } as CSSProperties}>
         <div>
-          <CategoryLabel series={main} detail={entry.teams[main.id]} />
+          <CategoryLabel series={main} detail={entry.teams[main.id]} href={`/categorias/${main.id}`} />
           <h1>
             {entry.name}
             {entry.numbers[main.id] && <span className="hero-date">#{entry.numbers[main.id]}</span>}
@@ -124,7 +124,7 @@ function SeasonBlocks({ keys, season }: { keys: string[]; season: Season }) {
         );
         return (
           <section key={id} className="section-block driver-auto-series" style={{ "--cat": series.color } as CSSProperties}>
-            <SectionTitle title={`${series.name} 2026`} />
+            <SectionTitle title={<Link href={`/categorias/${series.id}`}>{series.name} 2026</Link>} />
             <div className="driver-auto-stats">
               {[
                 ["Campeonato", standing ? `${standing.pos}.º` : "—", standing ? `${standing.points} pts` : ""],
@@ -420,7 +420,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
           </div>
         )}
         <div className="driver-title">
-          <CategoryLabel series={series} detail={driver.team} />
+          <CategoryLabel series={series} detail={driver.team} href={`/categorias/${series.id}`} />
           <p className="kicker">
             {driver.hometown}
             {years !== null && ` · ${years} años`}

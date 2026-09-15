@@ -85,7 +85,7 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
       />
       <section className="weekend-head horario-head" style={{ "--cat": series.color } as CSSProperties}>
         <div>
-          <CategoryLabel series={series} detail={driver ? driver.team : series.org} />
+          <CategoryLabel series={series} detail={driver ? driver.team : series.org} href={`/categorias/${series.id}`} />
           <h1>{title}</h1>
           <p className="horario-answer">{answer}</p>
         </div>

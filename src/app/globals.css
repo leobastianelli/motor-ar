@@ -87,6 +87,9 @@ button{color:inherit;font-family:inherit}
 .cat-label .code{height:26px;min-width:40px;font-size:14px;flex:none}
 .cat-label b{font-size:15px;font-weight:800;white-space:nowrap}
 .cat-label>span:last-child:not(.code){font-size:14px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cat-label-link{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+.cat-label-link:hover b{text-decoration:underline}
+.code-link{text-decoration:none}
 .weekend-head .lede .code{height:20px;min-width:32px;font-size:11px;margin:0 2px;vertical-align:1px}
 /* Agenda agrupada por fecha de cada categoría */
 .agenda-group{margin-top:28px}
