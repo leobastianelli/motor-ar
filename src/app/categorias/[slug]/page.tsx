@@ -7,6 +7,7 @@ import { PhotoCredit, SectionTitle } from "@/components/pista";
 import { getAllSeries, getHistory, getNow, getSeason, getSeries } from "@/lib/data";
 import { getPhoto } from "@/lib/photos";
 import { fmtDayNum, fmtMonthShort, surname } from "@/lib/format";
+import { OG_DEFAULTS } from "@/lib/site";
 import type { CategoryHistory, StandingRow } from "@/lib/types";
 
 export const revalidate = 60;
@@ -20,7 +21,7 @@ export async function generateMetadata(props: PageProps<"/categorias/[slug]">): 
   if (!series) return { title: "Categoría" };
   const history = getHistory(series.id);
   const description = `${series.name}: calendario 2026 en hora argentina, campeonato, resultados de cada fecha${history ? ` e historia con ${history.champions.length} campeones desde ${history.firstYear}` : ""}.`;
-  return { title: series.name, description, openGraph: { title: series.name, description }, alternates: { canonical: `/categorias/${series.id}` } };
+  return { title: series.name, description, openGraph: { title: series.name, description, ...OG_DEFAULTS }, alternates: { canonical: `/categorias/${series.id}` } };
 }
 
 const SCOPE_LABEL = { nacional: "Automovilismo nacional", internacional: "Categoría internacional", zonal: "Automovilismo zonal" };

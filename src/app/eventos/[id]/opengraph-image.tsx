@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 import { getSeason, getSeries } from "@/lib/data";
-import { fmtRange } from "@/lib/format";
+import { fmtRange, raceWinner } from "@/lib/format";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -11,7 +11,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   const event = (await getSeason()).getEvent((await params).id);
   const series = event ? getSeries(event.seriesId) : undefined;
   const color = series?.color ?? "#101213";
-  const winner = event?.sessions.filter((s) => ["final", "carrera"].includes(s.kind) && s.results?.length).at(-1)?.results?.[0];
+  const winner = raceWinner(event?.sessions.filter((s) => ["final", "carrera"].includes(s.kind) && s.results?.length).at(-1)?.results);
 
   return new ImageResponse(
     (

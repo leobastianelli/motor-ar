@@ -150,5 +150,7 @@ export async function f1Season(io) {
     wins: Number(s.wins),
   }));
 
-  return { events, standings: { f1: standings }, meta: { f1: { standingsAfterRound: Number(standingsData.round), progression } } };
+  // `standingsAsOfRound`: hasta qué fecha llega esta tabla. Lo usa createSeason (data.ts) para no mostrarla si
+  // ya se corrieron más carreras y la fuente quedó atrás (la misma regla que ACTC y TC2000).
+  return { events, standings: { f1: standings }, meta: { f1: { standingsAsOfRound: Number(standingsData.round), progression } } };
 }

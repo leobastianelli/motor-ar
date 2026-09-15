@@ -6,7 +6,8 @@ import { breadcrumb, JsonLd } from "@/components/json-ld";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { getNow, getSeason, getSeries } from "@/lib/data";
-import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtRange, fmtWeekday, sessionState, sessionStatus, sessionTime } from "@/lib/format";
+import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtRange, fmtWeekday, raceWinner, sessionState, sessionStatus, sessionTime } from "@/lib/format";
+import { OG_DEFAULTS } from "@/lib/site";
 import type { Broadcast, ResultRow, Session } from "@/lib/types";
 
 export const revalidate = 60;
@@ -20,9 +21,9 @@ export async function generateMetadata(props: PageProps<"/eventos/[id]">): Promi
   if (!event) return { title: "Evento" };
   const series = getSeries(event.seriesId);
   const title = `${series?.name ?? ""} · ${event.name}`.replace(/^ · /, "");
-  const winner = event.sessions.filter((s) => ["final", "carrera"].includes(s.kind) && s.results?.length).at(-1)?.results?.[0];
+  const winner = raceWinner(event.sessions.filter((s) => ["final", "carrera"].includes(s.kind) && s.results?.length).at(-1)?.results);
   const description = `${series?.name ?? "Fecha"} en ${event.circuit.city}: horarios en hora argentina, dónde verlo y resultados de cada sesión${winner ? `. Ganó ${winner.driver}` : ""}.`;
-  return { title, description, openGraph: { title, description }, alternates: { canonical: `/eventos/${event.id}` } };
+  return { title, description, openGraph: { title, description, ...OG_DEFAULTS }, alternates: { canonical: `/eventos/${event.id}` } };
 }
 
 const BROADCAST_KIND: Record<Broadcast["kind"], string> = { tv: "TV", streaming: "Streaming", youtube: "YouTube" };
@@ -85,18 +86,22 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
   const [latest, ...earlier] = withResults;
   const rows = latest?.results ?? [];
   const isRace = latest ? RACE_KINDS.includes(latest.kind) : false;
+  // Si la fuente no publicó al 1.º, `rows[0]` es la mejor posición disponible, no el ganador.
+  const rowsComplete = rows.length > 0 && rows[0].pos === 1;
   const streamUrl = event.broadcasts.find((b) => b.url)?.url;
   const broadcastSource = broadcastsBySeries[event.seriesId]?.source;
   const timesUnknown = event.sessions.some((s) => s.timeKnown === false);
   const scheduleSources = [...new Map(event.sessions.flatMap((s) => s.timeSources ?? []).map((x) => [x.url, x])).values()];
 
   // Datos estructurados para buscadores: evento deportivo con lugar, fechas y organizador.
+  // Si el horario todavía no se sabe, sólo se publica la fecha: la hora de relleno (mediodía) no es un dato real.
+  const jsonLdDate = (s: Session) => (s.timeKnown === false ? dayKey(s.start) : s.start);
   const jsonLd = {
     "@type": "SportsEvent",
     name: `${series.name} · ${event.name}`,
     sport: "Automovilismo",
-    startDate: event.sessions[0].start,
-    endDate: event.sessions.at(-1)!.start,
+    startDate: jsonLdDate(event.sessions[0]),
+    endDate: jsonLdDate(event.sessions.at(-1)!),
     eventStatus: "https://schema.org/EventScheduled",
     location: { "@type": "Place", name: event.circuit.name, address: [event.circuit.city, event.circuit.province, event.circuit.country].filter(Boolean).join(", ") },
     organizer: { "@type": "Organization", name: series.org },
@@ -150,7 +155,10 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                   {sessions.map((s) => {
                     const status = sessionStatus(s, now);
                     const state = sessionState(s, now);
-                    const top = s.results?.[0];
+                    // El nombre en negrita es el 1.º; si la fuente sólo publicó parte de la tabla y no incluye al
+                    // 1.º, se muestra la mejor posición conocida en vez de hacer pasar a otro piloto por ganador.
+                    const winner = raceWinner(s.results);
+                    const top = winner ?? s.results?.[0];
                     return (
                       <div key={s.id} className={`session${status === "live" ? " live-session" : ""}${status === "done" ? " done" : ""}`}>
                         <time dateTime={s.start}>{sessionTime(s)}</time>
@@ -170,7 +178,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                           </span>
                         </div>
                         {status === "done" && top ? (
-                          <b className="session-winner">{top.driver}</b>
+                          <b className="session-winner">{winner ? top.driver : `${top.positionText ?? `${top.pos}.º`} ${top.driver}`}</b>
                         ) : (
                           <StateTag as="b" kind={state.kind}>
                             {state.label}
@@ -240,10 +248,11 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
             {siblings.map((e) => {
               const s = getSeries(e.seriesId)!;
               const finished = e.sessions.filter((x) => x.results?.length && sessionStatus(x, now) === "done").at(-1);
+              const winner = finished && raceWinner(finished.results);
               return (
                 <Link key={e.id} href={`/eventos/${e.id}`} className="next-card list-link" style={{ "--cat": s.color } as CSSProperties}>
                   <CategoryLabel series={s} />
-                  <strong>{finished ? `${finished.name}: ganó ${finished.results![0].driver}` : `Fecha ${e.round}`}</strong>
+                  <strong>{winner ? `${finished!.name}: ganó ${winner.driver}` : finished ? `${finished.name}: terminó` : `Fecha ${e.round}`}</strong>
                   <time dateTime={e.sessions.at(-1)!.start}>
                     {fmtDayShort(e.sessions.at(-1)!.start)} · {e.sessions.length} {e.sessions.length === 1 ? "sesión" : "sesiones"}
                   </time>
@@ -262,9 +271,9 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
             </SectionTitle>
             <div id={latest.id} className="session-result">
               <div className="pole">
-                <span>1</span>
+                <span>{rows[0].positionText ?? rows[0].pos}</span>
                 <div>
-                  <p>{isRace ? "Ganador" : "Mejor tiempo"}</p>
+                  <p>{rowsComplete ? (isRace ? "Ganador" : "Mejor tiempo") : "Mejor resultado disponible"}</p>
                   <h3>{rows[0].driver}</h3>
                   <b>{rows[0].gap || rows[0].team}</b>
                 </div>
@@ -272,7 +281,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
               <ol className="podium compact">
                 {rows.slice(1, 3).map((r) => (
                   <li key={r.pos}>
-                    <b>{r.pos}</b>
+                    <b>{r.positionText ?? r.pos}</b>
                     <div>
                       <strong>{r.driver}</strong>
                       <span>{r.team}</span>
@@ -282,6 +291,11 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                 ))}
               </ol>
             </div>
+            {!rowsComplete && (
+              <p className="empty-state">
+                La fuente no publicó la clasificación completa de esta sesión: se muestran sólo las posiciones que informó.
+              </p>
+            )}
             {rows.length > 3 && (
               <details className="full-results" open>
                 <summary>

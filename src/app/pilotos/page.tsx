@@ -8,6 +8,7 @@ import { getAllDrivers, getAllSeries, getIndexedDrivers, getNow, getSeason, getS
 export const metadata: Metadata = {
   title: "Pilotos argentinos",
   description: "Todos los pilotos argentinos con resultados en 2026: Colapinto, Varrone, Canapino y los de TC, TC Pista, TN, Mouras y Pick Up, con su temporada fecha por fecha.",
+  alternates: { canonical: "/pilotos" },
 };
 export const revalidate = 60;
 

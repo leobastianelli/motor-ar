@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import photos from "@/data/photos.json";
 import { SectionTitle } from "@/components/pista";
+import { getSeason } from "@/lib/data";
+import { fmtDayLong, fmtTime } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: "Fuentes y créditos",
   description: "De dónde salen los horarios, resultados y fotos de Fierros, con sus licencias.",
+  alternates: { canonical: "/fuentes" },
 };
 
 const SOURCES: { name: string; url: string; what: string; license?: string }[] = [
@@ -20,10 +23,23 @@ const SOURCES: { name: string; url: string; what: string; license?: string }[] =
   { name: "Wikipedia", url: "https://www.wikipedia.org", what: "Historia y campeones de cada categoría, temporada de TC2000 y GT World Challenge Europe, y datos de pilotos.", license: "CC BY-SA 4.0" },
 ];
 
+// Lo que ninguna fuente pública todavía (algunos campeonatos que sólo se publican como imagen) se carga a mano,
+// desde estas cuentas y sitios, hasta que exista una fuente automática (ver src/data/manual-overrides.json y
+// docs/fuentes-de-datos.md).
+const MANUAL_SOURCES: { name: string; url: string; what: string }[] = [
+  { name: "ACTC oficial (Instagram)", url: "https://www.instagram.com/actcargentina/", what: "Campeonato del TC (Copa de Oro) cuando la fuente automática de Wikipedia todavía no lo actualizó." },
+  { name: "TC2000 oficial (Instagram)", url: "https://www.instagram.com/supertc2000/", what: "Campeonato de TC2000 cuando la fuente automática todavía no lo actualizó." },
+  { name: "0264Noticias", url: "https://www.0264noticias.com", what: "Sede y fecha de carreras de TC2000 anunciadas antes de que las publique una fuente automática." },
+  { name: "Passline", url: "https://www.passline.com", what: "Entradas y confirmación de sede de fechas de TC2000 cargadas a mano." },
+];
+
 type Photo = { alt: string; author: string; license: string; licenseUrl: string | null; sourceUrl: string };
 
-export default function SourcesPage() {
+export const revalidate = 60;
+
+export default async function SourcesPage() {
   const credits = Object.values(photos as Record<string, Photo>);
+  const season = await getSeason();
   return (
     <>
       <section className="weekend-head">
@@ -52,6 +68,40 @@ export default function SourcesPage() {
             </li>
           ))}
         </ul>
+
+        <SectionTitle title="Carga manual" />
+        <p>
+          La mayoría de los datos se leen solos de las fuentes de arriba. Lo que ninguna fuente pública todavía —hoy, algunos campeonatos que sólo se
+          publican como imagen o anuncio— se carga a mano desde estas cuentas y sitios, y se reemplaza por la fuente automática en cuanto ésta se pone al
+          día.
+        </p>
+        <ul className="legal-list">
+          {MANUAL_SOURCES.map((s) => (
+            <li key={s.name}>
+              <a href={s.url} target="_blank" rel="noreferrer">
+                {s.name}
+              </a>
+              <span>{s.what}</span>
+            </li>
+          ))}
+        </ul>
+
+        <SectionTitle title="Estado de la sincronización" />
+        <p>
+          Última actualización automática: {fmtDayLong(season.updatedAt)} a las {fmtTime(season.updatedAt)} (hora argentina).
+          {season.failures.length === 0
+            ? " Todas las fuentes respondieron bien la última vez."
+            : ` ${season.failures.length === 1 ? "Una fuente falló" : `${season.failures.length} fuentes fallaron`} en el último intento; se muestran los últimos datos buenos que se pudieron guardar.`}
+        </p>
+        {season.failures.length > 0 && (
+          <ul className="legal-list">
+            {season.failures.map((f) => (
+              <li key={f}>
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+        )}
 
         <SectionTitle title="Fotos" />
         <ul className="legal-list">

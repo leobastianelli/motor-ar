@@ -158,13 +158,17 @@ export async function actcSeason(io) {
 
   const { playoff, regular } = wikiStandings(text);
   const standings = playoff.length ? playoff : regular;
+  // Última fecha con podio cargado en la misma página de Wikipedia: se actualiza junto con el campeonato, así que
+  // sirve de referencia para saber hasta dónde llega la Copa de Oro una vez que ya no son sólo puntos de largada.
+  const lastPodiumRound = podiums.size ? Math.max(...podiums.keys()) : undefined;
   // Hasta qué fecha llega la tabla, para no mostrarla como actual si quedó atrás (ver createSeason en data.ts):
   // - Etapa regular: una victoria por fecha, así que la suma de victorias es la cantidad de fechas incluidas.
   // - Copa de Oro con sólo los puntos de largada (bonus de la etapa regular, 15 como máximo): llega hasta la fecha 10.
+  // - Copa de Oro ya con puntos de carrera: se estima con la última fecha que tiene podio cargado.
   const asOfRound = playoff.length
     ? Math.max(...playoff.map((r) => r.points)) <= 15
       ? 10
-      : undefined
+      : lastPodiumRound
     : regular.reduce((sum, r) => sum + (r.wins ?? 0), 0) || undefined;
   return {
     events: [...tcEvents, ...others],

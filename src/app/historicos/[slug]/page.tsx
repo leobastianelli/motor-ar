@@ -7,6 +7,7 @@ import { PhotoCredit } from "@/components/pista";
 import { legendBySlug, legends } from "@/data/legends";
 import { getPhoto } from "@/lib/photos";
 import { surname } from "@/lib/format";
+import { OG_DEFAULTS } from "@/lib/site";
 
 export function generateStaticParams() {
   return legends.map((l) => ({ slug: l.slug }));
@@ -16,7 +17,7 @@ export async function generateMetadata(props: PageProps<"/historicos/[slug]">): 
   const legend = legendBySlug[(await props.params).slug];
   if (!legend) return { title: "Historia" };
   const description = `${legend.name} (${legend.years}): ${legend.tagline}`;
-  return { title: legend.name, description, openGraph: { title: legend.name, description }, alternates: { canonical: `/historicos/${legend.slug}` } };
+  return { title: legend.name, description, openGraph: { title: legend.name, description, ...OG_DEFAULTS }, alternates: { canonical: `/historicos/${legend.slug}` } };
 }
 
 const yearOf = (period: string) => period.match(/\d{4}/)?.[0] ?? period.replace(/^Años\s+/, "");

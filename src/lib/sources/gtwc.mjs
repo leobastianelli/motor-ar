@@ -150,16 +150,31 @@ function build(text, cup) {
   });
   // Pilotos argentinos según las banderas de Wikipedia: "{{flagicon|ARG}} [[Ignacio Montenegro]]".
   const argentines = [...text.matchAll(/\{\{flagicon\|ARG\}\}\s*\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g)].map((m) => (m[2] ?? m[1]).trim());
-  return { events, standings, argentines };
+  // Hasta qué fecha del Sprint Cup llega la tabla de campeonato (sólo tiene sentido para el Sprint: en Endurance
+  // no hay tabla de pilotos, sólo ganadores). Cuenta de a dos columnas (Carrera 1 y 2 de cada fecha).
+  const covered = sprint ? Math.floor(races.filter((list) => list.length > 0).length / 2) : 0;
+  return { events, standings, argentines, covered };
 }
 
 export async function gtwcSeason(io) {
   const sprint = build(await io.wiki("en-gtwc-sprint-2026"), "sprint");
   await io.sleep(500);
   const endurance = build(await io.wiki("en-gtwc-endurance-2026"), "endurance");
+  // El campeonato de pilotos puede quedar atrás de las carreras ya corridas (mismo problema que en TC2000). Se
+  // compara contra las fechas de Sprint con resultado cargado, no contra todo GT3 (que también incluye Endurance,
+  // con su propia numeración de fechas, bajo la misma categoría).
+  const sprintRaced = sprint.events.filter((e) => e.sessions.some((s) => s.results?.length)).length;
+  const stale = sprintRaced > sprint.covered;
   return {
     events: [...sprint.events, ...endurance.events],
-    standings: { gt3: sprint.standings },
-    meta: { gt3: { standingsLabel: "Sprint Cup", endurance: endurance.standings, argentines: [...new Set([...sprint.argentines, ...endurance.argentines])] } },
+    standings: { gt3: stale ? [] : sprint.standings },
+    meta: {
+      gt3: {
+        standingsLabel: "Sprint Cup",
+        ...(stale ? { standingsHidden: true, standingsAsOfRound: sprint.covered } : {}),
+        endurance: endurance.standings,
+        argentines: [...new Set([...sprint.argentines, ...endurance.argentines])],
+      },
+    },
   };
 }
