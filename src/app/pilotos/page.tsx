@@ -4,6 +4,7 @@ import type { CSSProperties } from "react";
 import { DriverDirectory, type DirectoryEntry } from "@/components/driver-directory";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { getAllDrivers, getAllSeries, getIndexedDrivers, getNow, getSeason, getSeries } from "@/lib/data";
+import { driverKey } from "@/lib/sources/driver-index.mjs";
 
 export const metadata: Metadata = {
   title: "Pilotos argentinos",
@@ -17,8 +18,31 @@ export default async function DriversPage() {
   const season = await getSeason();
   const featured = getAllDrivers();
 
-  // Categoría principal de cada piloto: donde más carreras corrió.
-  const entries: DirectoryEntry[] = getIndexedDrivers().flatMap((d) => {
+  // Los destacados (fichas completas) van también en la tabla y el buscador: no tiene sentido que sólo
+  // aparezcan en las tarjetas de arriba. getIndexedDrivers() ya los excluye (CURATED_KEYS en data.ts), así que
+  // no hay duplicados al sumarlos acá.
+  const curatedEntries: DirectoryEntry[] = featured.flatMap((d) => {
+    const series = getSeries(d.seriesId);
+    if (!series) return [];
+    const keys = [d.name, ...(d.aliases ?? [])].map(driverKey);
+    const stats = season.getDriverSeason({ key: keys[0], keys }).bySeries[d.seriesId];
+    const standing = season.getStandingPosition(d);
+    return [
+      {
+        slug: d.slug,
+        name: d.name,
+        number: d.number !== undefined ? String(d.number) : undefined,
+        team: d.team,
+        standing: standing ? `${standing.position}.º en el campeonato` : undefined,
+        wins: stats?.wins ?? 0,
+        races: stats?.races ?? 0,
+        series: { id: series.id, name: series.name, code: series.code, color: series.color },
+      },
+    ];
+  });
+
+  // Categoría principal de cada piloto indexado: donde más carreras corrió.
+  const indexedEntries: DirectoryEntry[] = getIndexedDrivers().flatMap((d) => {
     const stats = season.getDriverSeason(d);
     const main = [...d.series].sort((a, b) => (stats.bySeries[b]?.races ?? 0) - (stats.bySeries[a]?.races ?? 0))[0];
     const series = getSeries(main);
@@ -37,6 +61,7 @@ export default async function DriversPage() {
       },
     ];
   });
+  const entries: DirectoryEntry[] = [...curatedEntries, ...indexedEntries];
   // Dentro de cada categoría: primero el campeonato, después victorias y nombre.
   const rank = (e: DirectoryEntry) => Number.parseInt(e.standing ?? "", 10) || 999;
   entries.sort((a, b) => rank(a) - rank(b) || b.wins - a.wins || a.name.localeCompare(b.name, "es"));

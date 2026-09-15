@@ -14,6 +14,9 @@ export const series: Series[] = [
   { id: "tc2000", name: "TC2000", short: "TC2000", code: "TC2K", org: "CDA del ACA", scope: "nacional", color: "#101213", founded: 1979 },
   { id: "tn", name: "TN APAT", short: "TN", code: "TN", org: "APAT", scope: "nacional", color: "#b47805", founded: 1961 },
   { id: "gt3", name: "GT World Challenge Europe", short: "GTWC", code: "GT3", org: "SRO", scope: "internacional", color: "#6b3d83", founded: 2011 },
+  // Sin fuente automática todavía (ver docs/fuentes-de-datos.md): calendario, horarios y resultados quedan
+  // "sin datos" hasta que exista un adaptador, igual que Procar4000.
+  { id: "wec", name: "FIA WEC", short: "WEC", code: "WEC", org: "FIA/ACO", scope: "internacional", color: "#8a3f1f", founded: 2012 },
   { id: "zonal-bsas", name: "Procar4000", short: "Procar", code: "ZL", org: "Zonal", scope: "zonal", color: "#287e58" },
 ];
 
