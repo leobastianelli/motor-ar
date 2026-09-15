@@ -13,6 +13,7 @@ const SERIES_SLUGS: Record<string, string> = {
   tn: "turismo-nacional",
   tc2000: "tc2000",
   gt3: "gt-world-challenge",
+  wec: "wec",
 };
 
 export const horarioSeriesSlug = (seriesId: string) => SERIES_SLUGS[seriesId] ?? seriesId;
