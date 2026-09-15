@@ -16,6 +16,16 @@ const PHOTOS = {
   "carlos-reutemann": { file: "File:Carlos Reutemann 7os 46.jpg", alt: "Carlos Reutemann en un circuito en los años setenta" },
   "juan-maria-traverso": { file: "File:Juan María Traverso y fanático.jpg", alt: "Juan María Traverso junto a un fanático con una bandera de Chevrolet" },
   "series-tc": { file: "File:TC Gran Premio Coronación 2025. Sábado, Clasificación - 06.jpg", alt: "Un auto de Turismo Carretera en clasificación, Gran Premio Coronación 2025" },
+  "series-f1": { file: "File:Opening lap of the 2025 Canadian Grand Prix (cropped).jpg", alt: "Largada del Gran Premio de Canadá de Fórmula 1, 2025" },
+  "series-f2": { file: "File:FIA F2 Austria 2025 Nr. 1 Fornaroli.jpg", alt: "El auto Nº1 de Fornaroli en el Gran Premio de Austria de Fórmula 2, 2025" },
+  "series-gt3": { file: "File:GT World Challenge Europe 2024 Nürburg Nr. 51 Pier Guidi, Rigon, Rovera.jpg", alt: "El Nº51 en Nürburgring, GT World Challenge Europe 2024" },
+  "series-tn": { file: "File:Top Race 2025, Fecha 8, Buenos Aires. Sábado, Clasificación - 03.jpg", alt: "Clasificación de Top Race en Buenos Aires, 2025" },
+  "series-tc2000": { file: "File:200 km de Buenos Aires 2023, Carrera Sprint de invitados, sábado 7 octubre.jpg", alt: "Autos en pit lane antes de la Carrera Sprint de invitados, 200 km de Buenos Aires 2023" },
+  "series-tc-pista": { file: "File:TC Pista 2025, Fecha 10, Buenos Aires. Domingo. Carrera - 09.jpg", alt: "Carrera de TC Pista, Fecha 10 en Buenos Aires, 2025" },
+  "series-tc-mouras": { file: "File:TC Mouras 2026, Fecha 5. Domingo, Carrera - 05.jpg", alt: "TC Mouras en carrera, Fecha 5 de 2026" },
+  "series-tc-pista-mouras": { file: "File:TC Pista Mouras 2026 Fecha 5. Domingo, Carrera - (5).jpg", alt: "TC Pista Mouras en carrera, Fecha 5 de 2026" },
+  "series-tc-pick-up": { file: "File:Gran Premio Autojuntas AUVO 2021 - Ford Ranger TC Pick Up de Eddy Mión.jpg", alt: "El Ford Ranger de Eddy Mión en TC Pick Up, 2021" },
+  "series-zonal-bsas": { file: "File:ProCar 4000, Gran Premio FAD Medical 2023 (27).jpg", alt: "Carrera de Procar4000, Gran Premio FAD Medical 2023" },
 };
 
 const strip = (s) => String(s ?? "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();

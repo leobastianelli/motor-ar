@@ -68,5 +68,105 @@
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:TC_Gran_Premio_Coronaci%C3%B3n_2025._S%C3%A1bado,_Clasificaci%C3%B3n_-_06.jpg"
+  },
+  "series-f1": {
+    "src": "/img/commons/series-f1.jpg",
+    "width": 1920,
+    "height": 1277,
+    "alt": "Largada del Gran Premio de Canadá de Fórmula 1, 2025",
+    "author": "Bassfish22",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Opening_lap_of_the_2025_Canadian_Grand_Prix_(cropped).jpg"
+  },
+  "series-f2": {
+    "src": "/img/commons/series-f2.jpg",
+    "width": 1920,
+    "height": 1080,
+    "alt": "El auto Nº1 de Fornaroli en el Gran Premio de Austria de Fórmula 2, 2025",
+    "author": "Lukas Raich",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:FIA_F2_Austria_2025_Nr._1_Fornaroli.jpg"
+  },
+  "series-gt3": {
+    "src": "/img/commons/series-gt3.jpg",
+    "width": 1920,
+    "height": 1080,
+    "alt": "El Nº51 en Nürburgring, GT World Challenge Europe 2024",
+    "author": "Lukas Raich",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:GT_World_Challenge_Europe_2024_N%C3%BCrburg_Nr._51_Pier_Guidi,_Rigon,_Rovera.jpg"
+  },
+  "series-tn": {
+    "src": "/img/commons/series-tn.jpg",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Clasificación de Top Race en Buenos Aires, 2025",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Top_Race_2025,_Fecha_8,_Buenos_Aires._S%C3%A1bado,_Clasificaci%C3%B3n_-_03.jpg"
+  },
+  "series-tc2000": {
+    "src": "/img/commons/series-tc2000.jpg",
+    "width": 1920,
+    "height": 1440,
+    "alt": "Autos en pit lane antes de la Carrera Sprint de invitados, 200 km de Buenos Aires 2023",
+    "author": "Maxi-Napo-99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:200_km_de_Buenos_Aires_2023,_Carrera_Sprint_de_invitados,_s%C3%A1bado_7_octubre.jpg"
+  },
+  "series-tc-pista": {
+    "src": "/img/commons/series-tc-pista.jpg",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Carrera de TC Pista, Fecha 10 en Buenos Aires, 2025",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TC_Pista_2025,_Fecha_10,_Buenos_Aires._Domingo._Carrera_-_09.jpg"
+  },
+  "series-tc-mouras": {
+    "src": "/img/commons/series-tc-mouras.jpg",
+    "width": 1920,
+    "height": 1080,
+    "alt": "TC Mouras en carrera, Fecha 5 de 2026",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TC_Mouras_2026,_Fecha_5._Domingo,_Carrera_-_05.jpg"
+  },
+  "series-tc-pista-mouras": {
+    "src": "/img/commons/series-tc-pista-mouras.jpg",
+    "width": 1920,
+    "height": 1080,
+    "alt": "TC Pista Mouras en carrera, Fecha 5 de 2026",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TC_Pista_Mouras_2026_Fecha_5._Domingo,_Carrera_-_(5).jpg"
+  },
+  "series-tc-pick-up": {
+    "src": "/img/commons/series-tc-pick-up.jpg",
+    "width": 1920,
+    "height": 1707,
+    "alt": "El Ford Ranger de Eddy Mión en TC Pick Up, 2021",
+    "author": "NaBUru38",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gran_Premio_Autojuntas_AUVO_2021_-_Ford_Ranger_TC_Pick_Up_de_Eddy_Mi%C3%B3n.jpg"
+  },
+  "series-zonal-bsas": {
+    "src": "/img/commons/series-zonal-bsas.jpg",
+    "width": 1920,
+    "height": 1440,
+    "alt": "Carrera de Procar4000, Gran Premio FAD Medical 2023",
+    "author": "Maxi-Napo-99",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:ProCar_4000,_Gran_Premio_FAD_Medical_2023_(27).jpg"
   }
 }
