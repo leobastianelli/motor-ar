@@ -132,7 +132,9 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
   const events = season.getEventsForSeries(series.id);
   const done = events.filter((e) => !season.getNextSession(e, now));
   const next = events.find((e) => season.getNextSession(e, now));
-  const table = season.getStandings(series.id).slice(0, 10);
+  const fullTable = season.getStandings(series.id);
+  const table = fullTable.slice(0, 10);
+  const rest = fullTable.slice(10);
   const [leader, second] = table;
   const meta = season.getSeasonMeta(series.id);
   const history = getHistory(series.id);
@@ -229,6 +231,26 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
                   <time>{row.points}</time>
                 </div>
               ))}
+              {rest.length > 0 && (
+                <details className="full-results">
+                  <summary>
+                    Campeonato completo <span>{fullTable.length} pilotos</span>
+                  </summary>
+                  <div className="champ-table">
+                    {rest.map((row) => (
+                      <div key={row.driver} className="champ-row">
+                        <b>{row.pos}</b>
+                        <div>
+                          <strong>{row.driverSlug ? <Link href={`/pilotos/${row.driverSlug}`}>{row.driver}</Link> : row.driver}</strong>
+                          <span>{row.team}</span>
+                        </div>
+                        <em>{row.wins === undefined ? "" : `${row.wins} ${row.wins === 1 ? "victoria" : "victorias"}`}</em>
+                        <time>{row.points}</time>
+                      </div>
+                    ))}
+                  </div>
+                </details>
+              )}
               {meta.standingsSource && <p className="source-note">Fuente: {meta.standingsSource}.</p>}
             </div>
           ) : (
