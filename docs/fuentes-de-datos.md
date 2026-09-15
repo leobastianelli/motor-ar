@@ -211,3 +211,19 @@ Las categorías que acompañan al TC salen del calendario de actc.org.ar (`/tcm`
 ## Fotos
 
 `npm run sync:photos` descarga desde Wikimedia Commons sólo imágenes CC BY, CC BY-SA, CC0 o dominio público y guarda autor, licencia y enlace en `src/data/photos.json`. Cada foto muestra su crédito en el sitio. Las ilustraciones generadas del mockup se quitaron.
+
+## Panel de tareas (/sistema/tareas)
+
+Panel interno (bloqueado en robots.txt, protegido por contraseña) para llevar lo que ninguna fuente automática
+cubre todavía: video de resumen para las categorías sin canal consistente, foto de portada, dónde ver, campeonato
+atrasado, fechas ya corridas sin resultados cargados.
+
+- **Automáticas:** `src/lib/tasks.ts` (`computeAutoGaps`) compara los datos actuales de la temporada contra lo que
+  ya existe en la base y abre o cierra tareas solas. Corre en cada llamada a `/api/refresh` (el cron diario de
+  `vercel.json`). Una tarea automática que alguien marcó "hecha" a mano no se reabre aunque el hueco siga: se
+  asume que fue una decisión.
+- **Manuales:** se cargan desde el panel mismo.
+- **Base:** Postgres (Neon, vía Vercel Marketplace). `npm run db:migrate` crea la tabla `tasks` (ver
+  `scripts/init-tareas-db.mjs`); hace falta `DATABASE_URL` en el entorno (`vercel env pull .env.local`).
+- **Auth:** una sola contraseña compartida (`TASKS_PASSWORD`), sin cuentas. La sesión es una cookie firmada con
+  HMAC (`TASKS_SESSION_SECRET`), sin tabla de sesiones. Ver `src/lib/task-auth.ts`.

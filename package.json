@@ -10,9 +10,11 @@
     "sync:history": "node scripts/sync-history.mjs",
     "sync:season": "node scripts/sync-season-2026.mjs",
     "sync": "npm run sync:history && npm run sync:season",
-    "sync:photos": "node scripts/fetch-photos.mjs"
+    "sync:photos": "node scripts/fetch-photos.mjs",
+    "db:migrate": "dotenv -e .env.local -- node scripts/init-tareas-db.mjs"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "@vercel/analytics": "^2.0.1",
     "next": "16.3.5",
     "posthog-js": "^1.433.4",
@@ -24,6 +26,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "dotenv-cli": "^11.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
     "tailwindcss": "^4",
