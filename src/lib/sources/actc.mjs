@@ -158,9 +158,17 @@ export async function actcSeason(io) {
 
   const { playoff, regular } = wikiStandings(text);
   const standings = playoff.length ? playoff : regular;
+  // Hasta qué fecha llega la tabla, para no mostrarla como actual si quedó atrás (ver createSeason en data.ts):
+  // - Etapa regular: una victoria por fecha, así que la suma de victorias es la cantidad de fechas incluidas.
+  // - Copa de Oro con sólo los puntos de largada (bonus de la etapa regular, 15 como máximo): llega hasta la fecha 10.
+  const asOfRound = playoff.length
+    ? Math.max(...playoff.map((r) => r.points)) <= 15
+      ? 10
+      : undefined
+    : regular.reduce((sum, r) => sum + (r.wins ?? 0), 0) || undefined;
   return {
     events: [...tcEvents, ...others],
     standings: { tc: standings },
-    meta: { tc: { standingsLabel: playoff.length ? "Copa de Oro" : "Etapa regular" } },
+    meta: { tc: { standingsLabel: playoff.length ? "Copa de Oro" : "Etapa regular", ...(asOfRound ? { standingsAsOfRound: asOfRound } : {}) } },
   };
 }

@@ -234,7 +234,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
           ) : (
             <p className="empty-state">
               {meta.standingsHidden
-                ? `La tabla publicada llega sólo hasta la fecha ${meta.standingsAsOfRound ?? 1} y ya se corrieron más, así que no la mostramos para no confundir. Abajo están la pole y el ganador de cada fecha.`
+                ? `La tabla publicada llega sólo hasta la fecha ${meta.standingsAsOfRound ?? 1} y ya se corrieron más, así que no la mostramos para no confundir. Abajo están los resultados de cada fecha.`
                 : "Sin datos del campeonato todavía."}
             </p>
           )}

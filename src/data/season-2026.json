@@ -85910,7 +85910,8 @@
       ]
     },
     "tc": {
-      "standingsLabel": "Copa de Oro"
+      "standingsLabel": "Copa de Oro",
+      "standingsAsOfRound": 10
     },
     "tn": {
       "standingsLabel": "Clase 3",

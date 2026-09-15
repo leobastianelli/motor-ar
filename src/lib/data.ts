@@ -171,6 +171,16 @@ export function createSeason(raw: RawSeason) {
   );
   const meta = { ...(raw.meta as Record<string, SeasonMeta>) };
 
+  // Tabla atrasada: si la fuente dice hasta qué fecha llega y ya se corrieron más, no se muestra como actual.
+  for (const [id, m] of Object.entries(meta)) {
+    if (m?.standingsAsOfRound === undefined || !standings[id]?.length) continue;
+    const raced = events.filter((e) => e.seriesId === id && e.sessions.some((s) => (s.kind === "final" || s.kind === "carrera") && s.results?.length)).length;
+    if (raced > m.standingsAsOfRound) {
+      standings[id] = [];
+      meta[id] = { ...m, standingsHidden: true };
+    }
+  }
+
   // Campeonato cargado a mano: vale mientras la fuente automática no cubra más fechas.
   for (const [id, manual] of Object.entries(MANUAL_STANDINGS)) {
     const fromSource = meta[id]?.standingsHidden ? 0 : (meta[id]?.standingsAsOfRound ?? 0);
