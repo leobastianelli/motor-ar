@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import photos from "@/data/photos.json";
 import { SectionTitle } from "@/components/pista";
 import { getSeason } from "@/lib/data";
@@ -53,7 +54,8 @@ export default async function SourcesPage() {
         <p>
           Fierros junta información que publican las categorías, las federaciones y otras fuentes abiertas, y la ordena en hora argentina. No tiene relación
           con ninguna categoría, federación, equipo ni piloto. Las marcas y nombres pertenecen a sus dueños. Si encontrás un error, escribinos a{" "}
-          <a href="mailto:contacto@somosfierros.ar">contacto@somosfierros.ar</a>.
+          <a href="mailto:contacto@somosfierros.ar">contacto@somosfierros.ar</a>. Quién está detrás de todo esto y por qué, en{" "}
+          <Link href="/acerca">Acerca de Fierros</Link>.
         </p>
 
         <SectionTitle title="Datos" />

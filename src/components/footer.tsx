@@ -21,6 +21,7 @@ export function Footer() {
         <Link href="/calendario">Calendario</Link>
         <Link href="/horarios">Horarios</Link>
         <Link href="/fuentes">Fuentes</Link>
+        <Link href="/acerca">Acerca de</Link>
         <Link href="/terminos">Términos</Link>
         <Link href="/privacidad">Privacidad</Link>
       </nav>
