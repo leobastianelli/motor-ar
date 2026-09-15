@@ -21,6 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     page("/categorias", "weekly", 0.7),
     page("/historicos", "monthly", 0.5),
     page("/fuentes", "monthly", 0.2),
+    page("/acerca", "monthly", 0.3),
     page("/terminos", "monthly", 0.1),
     page("/privacidad", "monthly", 0.1),
     ...getAllSeries().map((s) => page(`/categorias/${s.id}`, "weekly", 0.7)),
