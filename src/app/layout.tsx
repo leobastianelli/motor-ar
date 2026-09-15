@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { Archivo } from "next/font/google";
 import { CookieBanner } from "@/components/cookie-banner";
 import { Footer } from "@/components/footer";
+import { InstallPrompt } from "@/components/install-prompt";
 import { JsonLd } from "@/components/json-ld";
 import { Masthead } from "@/components/masthead";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <Analytics />
         <CookieBanner />
+        <InstallPrompt />
       </body>
     </html>
   );
