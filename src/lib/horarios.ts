@@ -14,6 +14,8 @@ const SERIES_SLUGS: Record<string, string> = {
   tc2000: "tc2000",
   gt3: "gt-world-challenge",
   wec: "wec",
+  f3: "formula-3",
+  "f4-italia": "formula-4-italia",
 };
 
 export const horarioSeriesSlug = (seriesId: string) => SERIES_SLUGS[seriesId] ?? seriesId;
