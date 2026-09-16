@@ -166,6 +166,37 @@ export const drivers: Driver[] = [
     ].reverse(),
   },
   {
+    slug: "mattia-colnaghi",
+    name: "Mattia Colnaghi",
+    number: 7,
+    seriesId: "f3",
+    team: "MP Motorsport",
+    hometown: "Monza, Italia · madre chubutense",
+    born: "26/07/2008",
+    tagline: "Nacido en Italia de madre chubutense, junior de Red Bull y primer piloto con bandera argentina en la Fórmula 3.",
+    career: [
+      { year: "2024", series: "Fórmula 4 España", team: "MP Motorsport", highlight: "Campeón." },
+      { year: "2025", series: "Eurocup-3", team: "MP Motorsport", highlight: "Campeón." },
+      { year: "2026", series: "FIA Fórmula 3", team: "MP Motorsport", highlight: "Debut en la F3 con el número 7, como junior de Red Bull y por primera vez con bandera argentina." },
+    ].reverse(),
+  },
+  {
+    slug: "thiago-palotini",
+    name: "Thiago Palotini",
+    seriesId: "f4-italia",
+    team: "Alpha 54 Racing",
+    hometown: "Necochea, Buenos Aires",
+    // Fecha de nacimiento no confirmada en ninguna fuente consultada (sólo la edad, 15 años en 2026):
+    // se deja sin dato en vez de inventar un día y mes.
+    born: "",
+    tagline: "Necochense de 15 años, campeón sudamericano de karting Rotax, debutó en la Fórmula 4 Italiana con la escudería argentina Alpha 54.",
+    career: [
+      { year: "2024", series: "Karting · Rotax Junior Max", team: "", highlight: "Campeón de la Copa Rotax Junior Max en Ecuador; también campeón argentino en IAME y Rotax." },
+      { year: "2025", series: "Karting · Mundial Rotax", team: "", highlight: "Representó a la Argentina en el Mundial Rotax, en Baréin." },
+      { year: "2026", series: "Fórmula 4 Italiana", team: "Alpha 54 Racing", highlight: "Debut en monoplazas europeos con la escudería argentina Alpha 54, arrancando en Misano." },
+    ].reverse(),
+  },
+  {
     slug: "facundo-ardusso",
     name: "Facundo Ardusso",
     number: 83,
