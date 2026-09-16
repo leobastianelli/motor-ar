@@ -103,6 +103,9 @@ const MAKE_WORDS = {
 const NOISE = new Set([
   "tc", "tcp", "tcm", "tcpm", "tcpk", "tcppk", "actc", "n", "no", "piloto", "nombre", "marca", "apellido",
   "ex", "ab", "nc", "dsq", "desc", "exc", "laps", "lap", "vueltas", "vtas", "vta", "pts",
+  // Estado del auto (badge al lado del nombre + repetido en la columna de diferencia, p. ej. "MANGONI EXCLUIDO"
+  // con diferencia "excluido"): sin esto, el nombre queda pegado a la palabra de estado, hasta duplicada.
+  "excluido", "excluida", "descalificado", "descalificada", "abandono", "abandonado", "abandonada", "retirado", "retirada",
 ]);
 
 const nameKey = (s) => fold(s).replace(/[^a-z\s]/g, " ").split(/\s+/).filter(Boolean).sort().join(" ");
