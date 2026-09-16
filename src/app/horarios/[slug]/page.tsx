@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
-import { breadcrumb, JsonLd } from "@/components/json-ld";
+import { breadcrumb, JsonLd, sportsEventJsonLd } from "@/components/json-ld";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { getDriver, getNow, getSeason, getSeries, type Season } from "@/lib/data";
 import { dayKey, fmtDayShort, fmtRange, fmtTime, fmtWeekday, fmtDayNum, raceWinner, sessionState, sessionStatus, sessionTime } from "@/lib/format";
@@ -74,7 +74,7 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
         data={{
           "@context": "https://schema.org",
           "@graph": [
-            ...(next ? [sportsEvent(next, series.name, series.org)] : []),
+            ...(next ? [sportsEventJsonLd(next, series, answer)] : []),
             breadcrumb([
               ["Inicio", "/"],
               ["Horarios", "/horarios"],
@@ -169,19 +169,4 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
       </section>
     </>
   );
-}
-
-function sportsEvent(event: RaceEvent, seriesName: string, org: string) {
-  // Si el horario todavía no se sabe, sólo se publica la fecha: la hora de relleno (mediodía) no es un dato real.
-  const jsonLdDate = (s: RaceEvent["sessions"][number]) => (s.timeKnown === false ? dayKey(s.start) : s.start);
-  return {
-    "@type": "SportsEvent",
-    name: `${seriesName} · ${event.name}`,
-    sport: "Automovilismo",
-    startDate: jsonLdDate(event.sessions[0]),
-    endDate: jsonLdDate(event.sessions.at(-1)!),
-    eventStatus: "https://schema.org/EventScheduled",
-    location: { "@type": "Place", name: event.circuit.name, address: [event.circuit.city, event.circuit.country].filter(Boolean).join(", ") },
-    organizer: { "@type": "Organization", name: org },
-  };
 }

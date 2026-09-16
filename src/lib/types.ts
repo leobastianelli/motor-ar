@@ -10,6 +10,8 @@ export interface Series {
   /** Código de 2–3 caracteres para el sello de color. */
   code: string;
   org: string;
+  /** Sitio oficial de quien organiza la categoría (no el sitio de la categoría en sí, si son distintos). */
+  orgUrl?: string;
   scope: Scope;
   /** Color de identidad de la categoría (no es el logo oficial). */
   color: string;

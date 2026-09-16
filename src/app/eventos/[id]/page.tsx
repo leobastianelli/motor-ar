@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
-import { breadcrumb, JsonLd } from "@/components/json-ld";
+import { breadcrumb, JsonLd, sportsEventJsonLd } from "@/components/json-ld";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { getNow, getSeason, getSeries } from "@/lib/data";
@@ -93,19 +93,10 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
   const timesUnknown = event.sessions.some((s) => s.timeKnown === false);
   const scheduleSources = [...new Map(event.sessions.flatMap((s) => s.timeSources ?? []).map((x) => [x.url, x])).values()];
 
-  // Datos estructurados para buscadores: evento deportivo con lugar, fechas y organizador.
-  // Si el horario todavía no se sabe, sólo se publica la fecha: la hora de relleno (mediodía) no es un dato real.
-  const jsonLdDate = (s: Session) => (s.timeKnown === false ? dayKey(s.start) : s.start);
-  const jsonLd = {
-    "@type": "SportsEvent",
-    name: `${series.name} · ${event.name}`,
-    sport: "Automovilismo",
-    startDate: jsonLdDate(event.sessions[0]),
-    endDate: jsonLdDate(event.sessions.at(-1)!),
-    eventStatus: "https://schema.org/EventScheduled",
-    location: { "@type": "Place", name: event.circuit.name, address: [event.circuit.city, event.circuit.province, event.circuit.country].filter(Boolean).join(", ") },
-    organizer: { "@type": "Organization", name: series.org },
-  };
+  // Datos estructurados para buscadores: evento deportivo con lugar, fechas, organizador y quién compitió.
+  const jsonLdWinner = rowsComplete ? rows[0] : undefined;
+  const jsonLdDescription = `${series.name} en ${event.circuit.city}: horarios en hora argentina, dónde verlo y resultados de cada sesión${jsonLdWinner ? `. Ganó ${jsonLdWinner.driver}` : ""}.`;
+  const jsonLd = sportsEventJsonLd(event, series, jsonLdDescription);
 
   return (
     <>
