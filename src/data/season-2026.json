@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T13:26:23.130Z",
+  "generatedAt": "2026-09-17T11:30:42.070Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -448,7 +448,7 @@
         "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -5747,10 +5747,10 @@
       "id": "tcp-2026-1",
       "seriesId": "tc-pista",
       "round": 1,
-      "name": "Fecha 1 · El Calafate",
+      "name": "Fecha 1 · Calafate",
       "circuit": {
-        "name": "Autódromo Enrique “Quique” Freile",
-        "city": "El Calafate",
+        "name": "Calafate",
+        "city": "Calafate",
         "country": "Argentina",
         "flag": "AR",
         "province": "Santa Cruz"
@@ -7049,7 +7049,7 @@
         "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -7901,11 +7901,11 @@
       "round": 2,
       "name": "Fecha 2 · Concepción Del Uruguay",
       "circuit": {
-        "name": "Concepción del Uruguay",
-        "city": "Entre Rios",
+        "name": "Ciudad de Concepción del Uruguay",
+        "city": "Concepción del Uruguay",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Entre Rios"
       },
       "sessions": [
         {
@@ -10464,7 +10464,7 @@
       "round": 2,
       "name": "Fecha 2 · Viedma",
       "circuit": {
-        "name": "Viedma",
+        "name": "Ciudad de Viedma",
         "city": "Viedma",
         "country": "Argentina",
         "flag": "AR",
@@ -17043,11 +17043,11 @@
       "round": 3,
       "name": "Fecha 3 · La Plata",
       "circuit": {
-        "name": "Roberto Jose Mouras",
-        "city": "con chicana",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -18118,7 +18118,7 @@
         "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -20068,9 +20068,9 @@
       "id": "tcp-2026-3",
       "seriesId": "tc-pista",
       "round": 3,
-      "name": "Fecha 3 · Neuquén",
+      "name": "Fecha 3 · Centenario",
       "circuit": {
-        "name": "Parque Provincia de Neuquén",
+        "name": "Parque Provincia del Neuquén",
         "city": "Centenario",
         "country": "Argentina",
         "flag": "AR",
@@ -25360,11 +25360,11 @@
       "round": 4,
       "name": "Fecha 4 · Concepción Del Uruguay",
       "circuit": {
-        "name": "Concepción del Uruguay",
-        "city": "Entre Rios",
+        "name": "Ciudad de Concepción del Uruguay",
+        "city": "Concepción del Uruguay",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Entre Rios"
       },
       "sessions": [
         {
@@ -28139,7 +28139,7 @@
         "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -29140,7 +29140,7 @@
         "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -34397,11 +34397,11 @@
       "round": 5,
       "name": "Fecha 5 · Termas De Río Hondo",
       "circuit": {
-        "name": "Termas de Rio Hondo",
-        "city": "Corto",
+        "name": "Autódromo Internacional de Termas de Río Hondo",
+        "city": "Termas de Río Hondo",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Santiago del Estero"
       },
       "sessions": [
         {
@@ -37615,11 +37615,11 @@
       "round": 5,
       "name": "Fecha 5 · La Plata",
       "circuit": {
-        "name": "Roberto Jose Mouras",
-        "city": "con chicana",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -38704,7 +38704,7 @@
         "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -41063,7 +41063,7 @@
       "round": 6,
       "name": "Fecha 6 · Alta Gracia",
       "circuit": {
-        "name": "Oscar Cabalén Córdoba",
+        "name": "Oscar Cabalén",
         "city": "Alta Gracia",
         "country": "Argentina",
         "flag": "AR",
@@ -49464,11 +49464,11 @@
       "round": 7,
       "name": "Fecha 7 · Rafaela",
       "circuit": {
-        "name": "Autódromo Ciudad de Rafaela",
+        "name": "Ciudad de Rafaela",
         "city": "Rafaela",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Santa Fé"
+        "province": "Santa Fe"
       },
       "sessions": [
         {
@@ -64107,7 +64107,7 @@
           "id": "tcpm-2026-8-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-07-26T12:00:00-03:00",
+          "start": "2026-08-16T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 30,
           "results": [
@@ -67870,13 +67870,13 @@
       "id": "tcp-2026-9",
       "seriesId": "tc-pista",
       "round": 9,
-      "name": "Fecha 9 · San Juan",
+      "name": "Fecha 9 · Albardon",
       "circuit": {
         "name": "San Juan Villicum",
-        "city": "2",
+        "city": "Albardon",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "San Juan"
       },
       "sessions": [
         {
@@ -70956,7 +70956,7 @@
           "id": "tcpm-2026-9-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-08-16T12:00:00-03:00",
+          "start": "2026-09-27T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 30,
           "results": [
@@ -71541,13 +71541,13 @@
       "id": "tcppk-2026-7",
       "seriesId": "tc-pista-pick-up",
       "round": 7,
-      "name": "Fecha 7 · La Plata",
+      "name": "Fecha 7 · Rosario",
       "circuit": {
-        "name": "Roberto José Mouras",
-        "city": "La Plata",
+        "name": "Juan Manuel Fangio-ROSARIO",
+        "city": "Rosario",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Buenos Aires"
+        "province": "Santa Fe"
       },
       "sessions": [
         {
@@ -73089,13 +73089,13 @@
       "id": "tcp-2026-10",
       "seriesId": "tc-pista",
       "round": 10,
-      "name": "Fecha 10 · Paraná",
+      "name": "Fecha 10 · Parana",
       "circuit": {
-        "name": "Ciudad de Paraná",
-        "city": "Entre Ríos",
+        "name": "Ciudad de Parana",
+        "city": "Parana",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Entre Rios"
       },
       "sessions": [
         {
@@ -82099,7 +82099,7 @@
             {
               "pos": 53,
               "number": "7",
-              "driver": "Mangoni Excluido Excluido",
+              "driver": "Mangoni",
               "team": "Chevrolet",
               "gap": "",
               "status": "Sin tiempo"
@@ -82264,6 +82264,54 @@
       "source": "Wikipedia · 2026 Formula 2 Championship"
     },
     {
+      "id": "tcpk-2026-8",
+      "seriesId": "tc-pick-up",
+      "round": 8,
+      "name": "Fecha 8 · Balcarce",
+      "circuit": {
+        "name": "Juan Manuel Fangio-BALCARCE",
+        "city": "Balcarce",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcpk-2026-8-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-09-26T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 35
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
+      "id": "tcppk-2026-8",
+      "seriesId": "tc-pista-pick-up",
+      "round": 8,
+      "name": "Fecha 8 · Balcarce",
+      "circuit": {
+        "name": "Juan Manuel Fangio-BALCARCE",
+        "city": "Balcarce",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcppk-2026-8-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-09-26T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tcm-2026-9",
       "seriesId": "tc-mouras",
       "round": 9,
@@ -82283,78 +82331,6 @@
           "start": "2026-09-27T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 35
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tcpm-2026-10",
-      "seriesId": "tc-pista-mouras",
-      "round": 10,
-      "name": "Fecha 10 · La Plata",
-      "circuit": {
-        "name": "Roberto José Mouras",
-        "city": "La Plata",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcpm-2026-10-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-09-27T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tcpk-2026-8",
-      "seriesId": "tc-pick-up",
-      "round": 8,
-      "name": "Fecha 8 · Balcarce",
-      "circuit": {
-        "name": "Juan Manuel Fangio-BALCARCE",
-        "city": "Balcarce",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcpk-2026-8-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-09-27T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 35
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tcppk-2026-8",
-      "seriesId": "tc-pista-pick-up",
-      "round": 8,
-      "name": "Fecha 8 · La Plata",
-      "circuit": {
-        "name": "Roberto José Mouras",
-        "city": "La Plata",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcppk-2026-8-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-09-27T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
         }
       ],
       "source": "ACTC (calendario)"
@@ -82630,20 +82606,20 @@
       "source": "ACTC (calendario)"
     },
     {
-      "id": "tcpm-2026-11",
+      "id": "tcpm-2026-10",
       "seriesId": "tc-pista-mouras",
-      "round": 11,
-      "name": "Fecha 11 · A Confirmar",
+      "round": 10,
+      "name": "Fecha 10 · ",
       "circuit": {
-        "name": "Circuito a Confirmar",
-        "city": "Circuito a Confirmar",
+        "name": "A CONFIRMAR",
+        "city": "A CONFIRMAR",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Circuito a Confirmar"
+        "province": ""
       },
       "sessions": [
         {
-          "id": "tcpm-2026-11-final",
+          "id": "tcpm-2026-10-final",
           "kind": "final",
           "name": "Final",
           "start": "2026-10-18T12:00:00-03:00",
@@ -82681,13 +82657,13 @@
       "id": "tcppk-2026-9",
       "seriesId": "tc-pista-pick-up",
       "round": 9,
-      "name": "Fecha 9 · A Confirmar",
+      "name": "Fecha 9 · ",
       "circuit": {
-        "name": "Circuito a Confirmar",
-        "city": "Circuito a Confirmar",
+        "name": "A CONFIRMAR",
+        "city": "A CONFIRMAR",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Circuito a Confirmar"
+        "province": ""
       },
       "sessions": [
         {
@@ -82974,20 +82950,20 @@
       "source": "ACTC (calendario)"
     },
     {
-      "id": "tcpm-2026-12",
+      "id": "tcpm-2026-11",
       "seriesId": "tc-pista-mouras",
-      "round": 12,
-      "name": "Fecha 12 · A Confirmar",
+      "round": 11,
+      "name": "Fecha 11 · ",
       "circuit": {
-        "name": "Circuito a Confirmar",
-        "city": "Circuito a Confirmar",
+        "name": "A CONFIRMAR",
+        "city": "A CONFIRMAR",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Circuito a Confirmar"
+        "province": ""
       },
       "sessions": [
         {
-          "id": "tcpm-2026-12-final",
+          "id": "tcpm-2026-11-final",
           "kind": "final",
           "name": "Final",
           "start": "2026-11-08T12:00:00-03:00",
@@ -83025,13 +83001,13 @@
       "id": "tcppk-2026-10",
       "seriesId": "tc-pista-pick-up",
       "round": 10,
-      "name": "Fecha 10 · A Confirmar",
+      "name": "Fecha 10 · ",
       "circuit": {
-        "name": "Circuito a Confirmar",
-        "city": "Circuito a Confirmar",
+        "name": "A CONFIRMAR",
+        "city": "A CONFIRMAR",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Circuito a Confirmar"
+        "province": ""
       },
       "sessions": [
         {
@@ -83428,20 +83404,20 @@
       "source": "ACTC (calendario)"
     },
     {
-      "id": "tcpm-2026-13",
+      "id": "tcpm-2026-12",
       "seriesId": "tc-pista-mouras",
-      "round": 13,
-      "name": "Fecha 13 · A Confirmar",
+      "round": 12,
+      "name": "Fecha 12 · ",
       "circuit": {
-        "name": "Circuito a Confirmar",
-        "city": "Circuito a Confirmar",
+        "name": "A CONFIRMAR",
+        "city": "A CONFIRMAR",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Circuito a Confirmar"
+        "province": ""
       },
       "sessions": [
         {
-          "id": "tcpm-2026-13-final",
+          "id": "tcpm-2026-12-final",
           "kind": "final",
           "name": "Final",
           "start": "2026-12-13T12:00:00-03:00",
@@ -83479,13 +83455,13 @@
       "id": "tcppk-2026-11",
       "seriesId": "tc-pista-pick-up",
       "round": 11,
-      "name": "Fecha 11 · A Confirmar",
+      "name": "Fecha 11 · ",
       "circuit": {
-        "name": "Circuito a Confirmar",
-        "city": "Circuito a Confirmar",
+        "name": "A CONFIRMAR",
+        "city": "A CONFIRMAR",
         "country": "Argentina",
         "flag": "AR",
-        "province": "Circuito a Confirmar"
+        "province": ""
       },
       "sessions": [
         {
@@ -84283,7 +84259,7 @@
   },
   "meta": {
     "f1": {
-      "standingsAfterRound": 14,
+      "standingsAsOfRound": 14,
       "progression": [
         {
           "round": 1,
@@ -85913,10 +85889,11 @@
       ]
     },
     "f2": {
-      "officialTimes": 11,
+      "officialTimes": 12,
       "argentines": [
         "Nico Varrone"
-      ]
+      ],
+      "standingsAsOfRound": 11
     },
     "tc": {
       "standingsLabel": "Copa de Oro",
@@ -86344,7 +86321,5 @@
       "eventsWithResults": 10
     }
   },
-  "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/13/driverstandings.json?limit=40"
-  ]
+  "failures": []
 }

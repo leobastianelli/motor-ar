@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T13:26:23.206Z",
+  "generatedAt": "2026-09-17T11:30:42.142Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -343,7 +343,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "anton benjamin",
@@ -611,7 +611,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "costa daniel sanchez",
@@ -678,7 +678,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-07-26"
+      "lastSeen": "2026-08-16"
     },
     {
       "key": "azar diego",
@@ -1100,7 +1100,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "facundo marques",
@@ -1715,7 +1715,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "ignacio montenegro",
@@ -1756,7 +1756,7 @@
         "tc-pista-pick-up": "Torino"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "ignacio vilas",
@@ -1779,7 +1779,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "arrias inaki",
@@ -1802,7 +1802,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-03-01",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "javier merlo",
@@ -1898,9 +1898,7 @@
       ],
       "slug": "joaquin-ochoa",
       "name": "Joaquín Ochoa",
-      "aliases": [
-        "Joaquin Ochoa Vuelta"
-      ],
+      "aliases": [],
       "series": [
         "tc",
         "tc-pick-up"
@@ -1988,9 +1986,7 @@
       ],
       "slug": "jorge-barrio",
       "name": "Jorge Barrio",
-      "aliases": [
-        "Jorge Barrio Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tn",
         "tc"
@@ -2238,7 +2234,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "ebarlin jose juan",
@@ -2524,9 +2520,7 @@
       ],
       "slug": "kevin-candela",
       "name": "Kevin Candela",
-      "aliases": [
-        "Kevin S Candela"
-      ],
+      "aliases": [],
       "series": [
         "tc"
       ],
@@ -2620,7 +2614,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "larrauri leonel",
@@ -2680,7 +2674,7 @@
         "tc-pista-mouras": "Chevrolet"
       },
       "firstSeen": "2026-07-25",
-      "lastSeen": "2026-07-26"
+      "lastSeen": "2026-08-16"
     },
     {
       "key": "demarco luca",
@@ -3241,7 +3235,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-27",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "martin vazquez",
@@ -3988,9 +3982,7 @@
       ],
       "slug": "santiago-alvarez",
       "name": "Santiago Alvarez",
-      "aliases": [
-        "Santiago Alvarez Vuelta"
-      ],
+      "aliases": [],
       "series": [
         "tc"
       ],
@@ -4058,9 +4050,7 @@
       ],
       "slug": "santiago-mangoni",
       "name": "Santiago Mangoni",
-      "aliases": [
-        "Mangoni Excluido Excluido"
-      ],
+      "aliases": [],
       "series": [
         "tc"
       ],
