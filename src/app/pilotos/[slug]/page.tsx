@@ -180,6 +180,9 @@ function age(born: string, now: string) {
 }
 
 function NextRace({ driver, now, season }: { driver: Driver; now: string; season: Season }) {
+  // Sin equipo confirmado (driver.team vacío, p. ej. entre butacas) no hay manera de saber si va a estar en la
+  // próxima fecha del calendario de la categoría: mejor no decir nada que dar por hecho que corre.
+  if (!driver.team) return null;
   const next = season.getNextRace(driver.seriesId, now);
   if (!next) return null;
   return (
@@ -401,7 +404,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
               birthPlace: { "@type": "Place", name: driver.hometown },
               nationality: { "@type": "Country", name: "Argentina" },
               jobTitle: "Piloto de automovilismo",
-              memberOf: { "@type": "SportsTeam", name: driver.team },
+              ...(driver.team ? { memberOf: { "@type": "SportsTeam", name: driver.team } } : {}),
               description: driver.tagline,
             },
             breadcrumb([

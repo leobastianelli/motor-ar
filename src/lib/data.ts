@@ -300,7 +300,9 @@ export function createSeason(raw: RawSeason) {
       const verb = last.session.kind === "clasificacion" ? "Clasificó" : last.session.kind === "practica" ? "Fue" : "Terminó";
       return { state: "finished", stateLabel: "Final", headline: `${verb} ${last.row.pos}.º`, detail: `${last.session.name} · ${last.event.circuit.city}`, href: `/eventos/${last.event.id}` };
     }
-    if (next) {
+    // Sin equipo confirmado (p. ej. un piloto entre butacas) no hay forma de saber si va a estar en la próxima
+    // fecha del calendario de la categoría: mejor "sin datos" que dar por hecho que corre.
+    if (next && driver.team) {
       const when = next.session.timeKnown === false ? "" : `, ${fmtTime(next.session.start)}`;
       return {
         state: "upcoming",

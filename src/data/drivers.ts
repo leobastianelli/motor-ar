@@ -20,15 +20,19 @@ export const drivers: Driver[] = [
     aliases: ["Nico Varrone"],
     number: 22,
     seriesId: "f2",
-    team: "Van Amersfoort Racing",
+    // Se desvinculó de Van Amersfoort Racing el 17/9/2026, a tres fechas del final de la temporada (bajo
+    // rendimiento del auto en Europa). No sigue en la F2 con otro equipo por ahora; evalúa F2, un regreso al
+    // WEC en Hypercar o un rol en Cadillac F1 para 2027, con confirmación esperada en un par de semanas.
+    // https://www.infobae.com/deportes/2026/09/17/por-que-el-argentino-nico-varrone-se-desvinculo-de-su-equipo-de-formula-2-y-cual-seria-su-futuro/
+    team: "",
     hometown: "Ingeniero Maschwitz, Buenos Aires",
     born: "06/12/2000",
-    tagline: "Campeón en Le Mans y de vuelta en los monoplazas camino a la F1.",
+    tagline: "Se desvinculó de su equipo de F2 a tres fechas del final de 2026; evalúa F2, el WEC o un rol en Cadillac F1 para 2027.",
     career: [
       { year: "2022", series: "Fórmula 3 FIA", team: "Van Amersfoort Racing", highlight: "Temporada en la F3 de la FIA." },
       { year: "2023", series: "WEC · GTE Am", team: "Corvette Racing", highlight: "Campeón del mundo de la clase y ganador en las 24 Horas de Le Mans." },
       { year: "2024", series: "24 Horas de Le Mans · LMP2 Pro-Am", team: "", highlight: "Segunda victoria de clase en Le Mans." },
-      { year: "2026", series: "Fórmula 2", team: "Van Amersfoort Racing", highlight: "Temporada completa en la F2 con el número 22." },
+      { year: "2026", series: "Fórmula 2", team: "Van Amersfoort Racing", highlight: "Corrió con el número 22 hasta desvincularse del equipo en septiembre, a tres fechas del final." },
     ].reverse(),
   },
   {
