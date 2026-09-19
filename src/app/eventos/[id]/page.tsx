@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
 import { breadcrumb, JsonLd, sportsEventJsonLd } from "@/components/json-ld";
+import { LiveTimingEmbed } from "@/components/live-timing-embed";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { getNow, getSeason, getSeries } from "@/lib/data";
@@ -193,6 +194,12 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
               </section>
             ))}
           </div>
+          {timingUrl && (
+            <>
+              <SectionTitle title="Tiempos en vivo" />
+              <LiveTimingEmbed url={timingUrl} />
+            </>
+          )}
         </div>
 
         <aside className="broadcast">

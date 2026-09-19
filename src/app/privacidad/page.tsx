@@ -51,6 +51,13 @@ export default function PrivacyPage() {
           .
         </p>
 
+        <h2>Contenido de otros sitios</h2>
+        <p>
+          Algunas páginas enlazan a videos de YouTube y a los tiempos en vivo de Speedhive (MYLAPS). Los enlaces se abren en otra pestaña. Los tiempos en
+          vivo también se pueden ver dentro de Fierros: sólo se cargan si tocás &quot;Ver los tiempos acá&quot;, y desde ese momento Speedhive puede usar
+          sus propias cookies, con su política de privacidad.
+        </p>
+
         <h2>Preferencias guardadas en tu navegador</h2>
         <p>Algunas elecciones, como un filtro de la agenda, pueden quedar guardadas sólo en tu navegador. No se envían a ningún servidor.</p>
 
