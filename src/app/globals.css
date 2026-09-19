@@ -424,3 +424,4 @@ button{color:inherit;font-family:inherit}
 .session .session-videos{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px}.session .session-videos a{font-size:13px;font-weight:700;color:inherit;text-decoration:underline;text-underline-offset:3px}.session .session-videos a:hover{color:var(--red)}
 .timing-mini li:has(.state.live){display:block}.timing-mini li a{text-decoration:none;color:inherit}
 .timing-embed{margin:0 0 50px}.timing-embed iframe{display:block;width:100%;height:min(640px,80vh);border:1px solid var(--ink);background:#111}.timing-embed-gate{border:1px solid var(--ink);padding:24px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}.timing-embed-gate p{margin:0;font-size:14px;max-width:52ch}.timing-embed-gate button{background:var(--ink);color:white;border:0;padding:14px 18px;font:inherit;font-weight:700;cursor:pointer}.timing-embed>a{display:inline-block;margin-top:10px;font-size:14px}
+#tiempos-en-vivo{scroll-margin-top:90px}
