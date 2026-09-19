@@ -6,6 +6,7 @@ import { f1Season } from "./f1.mjs";
 import { f2Season } from "./f2.mjs";
 import { gtwcSeason } from "./gtwc.mjs";
 import { gtwcOfficial, keepPreviousGtwc } from "./gtwc-official.mjs";
+import { gtwcYoutube, keepPreviousYoutube } from "./gtwc-youtube.mjs";
 import { actcTiming, keepPreviousTiming, TIMING_SERIES } from "./actc-timing.mjs";
 import { fiaF2, keepPreviousFia } from "./fia-f2.mjs";
 import { keepPreviousOpenf1, openf1Sessions } from "./openf1.mjs";
@@ -149,6 +150,17 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
     failures.push(`GT World oficial: ${error.message} (se conservan los datos anteriores)`);
     events = keepPreviousGtwc(events, previous);
     meta.gtwcOfficial = previous.meta?.gtwcOfficial ?? null;
+  }
+
+  // GT World Challenge Europe: transmisión y resumen de cada sesión desde el canal oficial de YouTube (API oficial, si hay clave).
+  try {
+    const yt = await gtwcYoutube(io, events, previous, { apiKey: io.youtubeKey ?? process.env.YOUTUBE_API_KEY, windowDays: io.timingWindowDays ?? 21 });
+    events = yt.events;
+    Object.assign(meta, yt.meta);
+  } catch (error) {
+    failures.push(`YouTube GT World: ${error.message} (se conservan los videos anteriores)`);
+    events = keepPreviousYoutube(events, previous);
+    meta.gtwcYoutube = previous.meta?.gtwcYoutube ?? null;
   }
 
   events.sort((a, b) => new Date(a.sessions[0].start) - new Date(b.sessions[0].start));

@@ -420,3 +420,5 @@ button{color:inherit;font-family:inherit}
 .install-prompt-actions button.accept{background:var(--blue);color:var(--ink);border-color:var(--blue)}
 .install-prompt-actions button:hover{opacity:.85}
 @media(max-width:800px){.install-prompt{flex-direction:column;align-items:stretch;padding:16px}.install-prompt p{font-size:13px}.install-prompt-actions{justify-content:stretch}.install-prompt-actions button{flex:1}}
+
+.session .session-videos{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px}.session .session-videos a{font-size:13px;font-weight:700;color:inherit;text-decoration:underline;text-underline-offset:3px}.session .session-videos a:hover{color:var(--red)}

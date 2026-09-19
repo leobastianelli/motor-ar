@@ -26011,6 +26011,16 @@
               "url": "https://www.gt-world-challenge-europe.com/event/246/circuit-paul-ricard",
               "start": "2026-04-11T12:05:00+02:00"
             }
+          ],
+          "videos": [
+            {
+              "id": "IWluCBcSAOE",
+              "kind": "live"
+            },
+            {
+              "id": "7CKcpKWCRYQ",
+              "kind": "highlights"
+            }
           ]
         },
         {
@@ -26515,10 +26525,25 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/circuit-paul-ricard/main-race"
-          }
+          },
+          "videos": [
+            {
+              "id": "b7u1j5GKroE",
+              "kind": "live"
+            },
+            {
+              "id": "yCnOgjzhHZc",
+              "kind": "highlights"
+            },
+            {
+              "id": "gFsI4V-PHHE",
+              "kind": "highlights",
+              "label": "Extendido"
+            }
+          ]
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "tc2000-2026-2",
@@ -33081,7 +33106,17 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/brands-hatch/free-practice-1"
-          }
+          },
+          "videos": [
+            {
+              "id": "RgCj3b5IYAU",
+              "kind": "live"
+            },
+            {
+              "id": "z9WAlcC7218",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "gt3-2026-s1-fp2",
@@ -33377,7 +33412,17 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/brands-hatch/free-practice-2"
-          }
+          },
+          "videos": [
+            {
+              "id": "KAnZLUvk8Z8",
+              "kind": "live"
+            },
+            {
+              "id": "8Ai1aLAs7Wg",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "gt3-2026-s1-q1",
@@ -34265,7 +34310,22 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/brands-hatch/race-1"
-          }
+          },
+          "videos": [
+            {
+              "id": "ECei0R8_pZU",
+              "kind": "live"
+            },
+            {
+              "id": "axNDwTctj80",
+              "kind": "highlights"
+            },
+            {
+              "id": "aC0RkHbCM8w",
+              "kind": "highlights",
+              "label": "Extendido"
+            }
+          ]
         },
         {
           "id": "gt3-2026-s1-r2",
@@ -34555,10 +34615,25 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/brands-hatch/race-2"
-          }
+          },
+          "videos": [
+            {
+              "id": "Bq_iDo6Ul2I",
+              "kind": "live"
+            },
+            {
+              "id": "YY5AbDqa37s",
+              "kind": "highlights"
+            },
+            {
+              "id": "lLadH_Af-OM",
+              "kind": "highlights",
+              "label": "Extendido"
+            }
+          ]
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "tn-2026-4",
@@ -44253,7 +44328,13 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/monza/free-practice-1"
-          }
+          },
+          "videos": [
+            {
+              "id": "VpIFVbPr_zk",
+              "kind": "live"
+            }
+          ]
         },
         {
           "id": "gt3-2026-e2-fp2",
@@ -44731,7 +44812,13 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/monza/free-practice-2"
-          }
+          },
+          "videos": [
+            {
+              "id": "yAtb3SEzau8",
+              "kind": "live"
+            }
+          ]
         },
         {
           "id": "gt3-2026-e2-q",
@@ -45209,7 +45296,17 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/monza/qualifying-combined"
-          }
+          },
+          "videos": [
+            {
+              "id": "-OsoLYwz_Vk",
+              "kind": "live"
+            },
+            {
+              "id": "ggKMVYacUEU",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "gt3-2026-e2-race",
@@ -45717,10 +45814,20 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/monza/main-race"
-          }
+          },
+          "videos": [
+            {
+              "id": "51rrcLZCpYE",
+              "kind": "live"
+            },
+            {
+              "id": "e_z4dptbjG8",
+              "kind": "highlights"
+            }
+          ]
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "tcp-2026-6",
@@ -57199,7 +57306,13 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/crowdstrike-24-hours-of-spa/free-practice-2"
-          }
+          },
+          "videos": [
+            {
+              "id": "76IRcnM8drs",
+              "kind": "live"
+            }
+          ]
         },
         {
           "id": "gt3-2026-e3-q",
@@ -57781,7 +57894,17 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/crowdstrike-24-hours-of-spa/qualifying-combined"
-          }
+          },
+          "videos": [
+            {
+              "id": "aquzP2xUctI",
+              "kind": "live"
+            },
+            {
+              "id": "zsT9PMau-K0",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "gt3-2026-e3-np",
@@ -58645,7 +58768,17 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/crowdstrike-24-hours-of-spa/super-pole"
-          }
+          },
+          "videos": [
+            {
+              "id": "7coTMUgnOJU",
+              "kind": "live"
+            },
+            {
+              "id": "qPuDSSCqCVY",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "gt3-2026-e3-wu",
@@ -58660,6 +58793,12 @@
               "name": "GT World Challenge Europe (oficial)",
               "url": "https://www.gt-world-challenge-europe.com/event/249/crowdstrike-24-hours-of-spa",
               "start": "2026-06-26T19:20:00+02:00"
+            }
+          ],
+          "videos": [
+            {
+              "id": "_qrNys91N6w",
+              "kind": "live"
             }
           ]
         },
@@ -59279,10 +59418,41 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/crowdstrike-24-hours-of-spa/main-race"
-          }
+          },
+          "videos": [
+            {
+              "id": "YzU6_l-2ov8",
+              "kind": "live",
+              "label": "Parte 1"
+            },
+            {
+              "id": "PGSIoUyQVX0",
+              "kind": "live",
+              "label": "Parte 2"
+            },
+            {
+              "id": "sozJeZESyFY",
+              "kind": "live",
+              "label": "Últimas 7 horas"
+            },
+            {
+              "id": "aaZPHEWe_Gk",
+              "kind": "live",
+              "label": "Últimas 7 horas"
+            },
+            {
+              "id": "iHpYb8lnMjU",
+              "kind": "live",
+              "label": "Carrera completa"
+            },
+            {
+              "id": "mBkIYDDxXns",
+              "kind": "highlights"
+            }
+          ]
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "f2-2026-6",
@@ -70883,7 +71053,13 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/misano/qualifying-1-combined"
-          }
+          },
+          "videos": [
+            {
+              "id": "3Ng4Mk_6bqQ",
+              "kind": "live"
+            }
+          ]
         },
         {
           "id": "gt3-2026-s2-r1",
@@ -71253,7 +71429,22 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/misano/race-1"
-          }
+          },
+          "videos": [
+            {
+              "id": "VNAfdw9Lm-o",
+              "kind": "live"
+            },
+            {
+              "id": "1ZQ4dVyJN38",
+              "kind": "highlights"
+            },
+            {
+              "id": "0gAbqfzkNw0",
+              "kind": "highlights",
+              "label": "Extendido"
+            }
+          ]
         },
         {
           "id": "gt3-2026-s2-q2",
@@ -71611,7 +71802,13 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/misano/qualifying-2"
-          }
+          },
+          "videos": [
+            {
+              "id": "EBSCN8ttgb8",
+              "kind": "live"
+            }
+          ]
         },
         {
           "id": "gt3-2026-s2-r2",
@@ -71973,10 +72170,25 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/misano/race-2"
-          }
+          },
+          "videos": [
+            {
+              "id": "iZh0_ZOdQC8",
+              "kind": "live"
+            },
+            {
+              "id": "cXh5PsUm-iA",
+              "kind": "highlights"
+            },
+            {
+              "id": "f9jLQo4v9ZQ",
+              "kind": "highlights",
+              "label": "Extendido"
+            }
+          ]
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "f2-2026-9",
@@ -76267,7 +76479,17 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/magny-cours/qualifying-1-combined"
-          }
+          },
+          "videos": [
+            {
+              "id": "1mhOUrj-Zx0",
+              "kind": "live"
+            },
+            {
+              "id": "mrvXNlOIsUQ",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "gt3-2026-s3-r1",
@@ -76645,7 +76867,22 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/magny-cours/race-1"
-          }
+          },
+          "videos": [
+            {
+              "id": "bCYIMdGZBYA",
+              "kind": "live"
+            },
+            {
+              "id": "w4sO-SkIOw8",
+              "kind": "highlights"
+            },
+            {
+              "id": "JfltqXWIKTA",
+              "kind": "highlights",
+              "label": "Extendido"
+            }
+          ]
         },
         {
           "id": "gt3-2026-s3-q2",
@@ -77025,7 +77262,13 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/magny-cours/qualifying-2-combined"
-          }
+          },
+          "videos": [
+            {
+              "id": "wAmfpg3nlOU",
+              "kind": "live"
+            }
+          ]
         },
         {
           "id": "gt3-2026-s3-r2",
@@ -77411,10 +77654,25 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/magny-cours/race-2"
-          }
+          },
+          "videos": [
+            {
+              "id": "NbY8E8uLIxs",
+              "kind": "live"
+            },
+            {
+              "id": "_WZ9xRDKk4A",
+              "kind": "highlights"
+            },
+            {
+              "id": "S3gCKY1U1AU",
+              "kind": "highlights",
+              "label": "Extendido"
+            }
+          ]
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "tn-2026-7",
@@ -87303,7 +87561,17 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/n%C3%BCrburgring/free-practice-1"
-          }
+          },
+          "videos": [
+            {
+              "id": "JmdkjbLm6Yk",
+              "kind": "live"
+            },
+            {
+              "id": "kZT_RxYM0E8",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "gt3-2026-e4-fp2",
@@ -87765,7 +88033,13 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/n%C3%BCrburgring/free-practice-2"
-          }
+          },
+          "videos": [
+            {
+              "id": "bfjIY5VBl0c",
+              "kind": "live"
+            }
+          ]
         },
         {
           "id": "gt3-2026-e4-q",
@@ -88227,7 +88501,17 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/n%C3%BCrburgring/qualifying-combined"
-          }
+          },
+          "videos": [
+            {
+              "id": "ZEHpjO05fxw",
+              "kind": "live"
+            },
+            {
+              "id": "jKvd2bCDWJw",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "gt3-2026-e4-race",
@@ -88707,10 +88991,20 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/n%C3%BCrburgring/main-race"
-          }
+          },
+          "videos": [
+            {
+              "id": "tv8BABUQrps",
+              "kind": "live"
+            },
+            {
+              "id": "u6gdE-WyrWc",
+              "kind": "highlights"
+            }
+          ]
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "tn-2026-8",
@@ -96811,7 +97105,17 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/zandvoort/qualifying-1-combined"
-          }
+          },
+          "videos": [
+            {
+              "id": "Aui-Kzu3bqQ",
+              "kind": "live"
+            },
+            {
+              "id": "GZeSybGsIDs",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "gt3-2026-s4-r1",
@@ -96826,6 +97130,388 @@
               "name": "GT World Challenge Europe (oficial)",
               "url": "https://www.gt-world-challenge-europe.com/event/253/zandvoort",
               "start": "2026-09-19T14:45:00+02:00"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "58",
+              "class": "Gold Cup",
+              "driver": "Thomas Fleming / Louis Prette",
+              "team": "Garage 59",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "2",
+              "class": "Pro Cup",
+              "driver": "Morris Schuring / Dorian Boccolacci",
+              "team": "Boutsen VDS",
+              "gap": "+0.676"
+            },
+            {
+              "pos": 3,
+              "number": "69",
+              "class": "Pro Cup",
+              "driver": "Thierry Vermeulen / Ben Green",
+              "team": "Emil Frey Racing",
+              "gap": "+10.893"
+            },
+            {
+              "pos": 4,
+              "number": "914",
+              "class": "Pro Cup",
+              "driver": "Klaus Bachler / Simon Birch",
+              "team": "Razoon - more than racing",
+              "gap": "+15.826"
+            },
+            {
+              "pos": 5,
+              "number": "80",
+              "class": "Pro Cup",
+              "driver": "Bastian Buus / Ricardo Feller",
+              "team": "Lionspeed GP",
+              "gap": "+16.117"
+            },
+            {
+              "pos": 6,
+              "number": "3",
+              "class": "Pro Cup",
+              "driver": "Daniel Juncadella / Chris Lulham",
+              "team": "Mercedes-AMG Team Verstappen Racing",
+              "gap": "+16.657"
+            },
+            {
+              "pos": 7,
+              "number": "50",
+              "class": "Pro Cup",
+              "driver": "Thomas Neubauer / Arthur Leclerc",
+              "team": "AF Corse",
+              "gap": "+17.370"
+            },
+            {
+              "pos": 8,
+              "number": "51",
+              "class": "Gold Cup",
+              "driver": "Tommaso Mosca / Matias Zagazeta",
+              "team": "AF Corse",
+              "gap": "+17.920"
+            },
+            {
+              "pos": 9,
+              "number": "30",
+              "class": "Silver Cup",
+              "driver": "Matisse Lismont / Ignacio Montenegro",
+              "team": "Team WRT",
+              "gap": "+18.345"
+            },
+            {
+              "pos": 10,
+              "number": "7",
+              "class": "Pro Cup",
+              "driver": "Nicki Thiim / Kobe Pauwels",
+              "team": "Comtoyou Racing",
+              "gap": "+19.206"
+            },
+            {
+              "pos": 11,
+              "number": "163",
+              "class": "Gold Cup",
+              "driver": "Loris Spinelli / Mattia Michelotto",
+              "team": "VSR",
+              "gap": "+22.022"
+            },
+            {
+              "pos": 12,
+              "number": "10",
+              "class": "Gold Cup",
+              "driver": "Robin Knutsson / Gilles Magnus",
+              "team": "Boutsen VDS",
+              "gap": "+22.657"
+            },
+            {
+              "pos": 13,
+              "number": "46",
+              "class": "Pro Cup",
+              "driver": "Valentino Rossi / Max Hesse",
+              "team": "Team WRT",
+              "gap": "+22.877"
+            },
+            {
+              "pos": 14,
+              "number": "48",
+              "class": "Pro Cup",
+              "driver": "Lucas Auer / Maro Engel",
+              "team": "Winward Racing",
+              "gap": "+29.051"
+            },
+            {
+              "pos": 15,
+              "number": "99",
+              "class": "Gold Cup",
+              "driver": "Dylan Pereira / Alex Aka",
+              "team": "Tresor Attempto Racing",
+              "gap": "+29.062"
+            },
+            {
+              "pos": 16,
+              "number": "66",
+              "class": "Silver Cup",
+              "driver": "Ariel Levi / Andrea Frassineti",
+              "team": "Tresor Attempto Racing",
+              "gap": "+29.634"
+            },
+            {
+              "pos": 17,
+              "number": "14",
+              "class": "Pro Cup",
+              "driver": "Matteo Cairoli / Konsta Lappalainen",
+              "team": "Emil Frey Racing",
+              "gap": "+29.955"
+            },
+            {
+              "pos": 18,
+              "number": "93",
+              "class": "Bronze Cup",
+              "driver": "Eddie Cheever / Peter Dempsey",
+              "team": "Ziggo Sport Tempesta Racing",
+              "gap": "+32.576"
+            },
+            {
+              "pos": 19,
+              "number": "991",
+              "class": "Bronze Cup",
+              "driver": "Augusto Farfus / Darren Leung",
+              "team": "Paradine Competition",
+              "gap": "+42.936"
+            },
+            {
+              "pos": 20,
+              "number": "21",
+              "class": "Silver Cup",
+              "driver": "Arthur Dorison / Oliver Söderström",
+              "team": "Comtoyou Racing",
+              "gap": "+43.293"
+            },
+            {
+              "pos": 21,
+              "number": "59",
+              "class": "Pro Cup",
+              "driver": "Dean Macdonald / Marvin Kirchhöfer",
+              "team": "Garage 59",
+              "gap": "+43.416"
+            },
+            {
+              "pos": 22,
+              "number": "84",
+              "class": "Pro Cup",
+              "driver": "Simon Reicher / Christopher Haase",
+              "team": "Eastalent Racing",
+              "gap": "+43.999"
+            },
+            {
+              "pos": 23,
+              "number": "96",
+              "class": "Pro Cup",
+              "driver": "Luca Engstler / Patric Niederhauser",
+              "team": "Rutronik Racing",
+              "gap": "+44.284"
+            },
+            {
+              "pos": 24,
+              "number": "87",
+              "class": "Bronze Cup",
+              "driver": "Marvin Dienst / Rinat Salikhov",
+              "team": "Winward Racing",
+              "gap": "+47.626"
+            },
+            {
+              "pos": 25,
+              "number": "5",
+              "class": "Silver Cup",
+              "driver": "Guilherme Oliveira / Mikey Porter",
+              "team": "Optimum Motorsport",
+              "gap": "+49.959"
+            },
+            {
+              "pos": 26,
+              "number": "222",
+              "class": "Bronze Cup",
+              "driver": "Kiern Jewiss / Charles Dawson",
+              "team": "2Seas Motorsport",
+              "gap": "+50.516"
+            },
+            {
+              "pos": 27,
+              "number": "89",
+              "class": "Silver Cup",
+              "driver": "Flynt Schuring / Nicolas Baert",
+              "team": "Lionspeed GP",
+              "gap": "+51.082"
+            },
+            {
+              "pos": 28,
+              "number": "111",
+              "class": "Gold Cup",
+              "driver": "Arthur Rougier / James Kell",
+              "team": "CSA Racing",
+              "gap": "+58.839"
+            },
+            {
+              "pos": 29,
+              "number": "34",
+              "class": "Silver Cup",
+              "driver": "Jamie Day / Mateo Villagomez",
+              "team": "Walkenhorst Motorsport",
+              "gap": "+1:03.262"
+            },
+            {
+              "pos": 30,
+              "number": "77",
+              "class": "Gold Cup",
+              "driver": "David Pittard / Jop Rappange",
+              "team": "KPX Motorsport",
+              "gap": "+1:04.117"
+            },
+            {
+              "pos": 31,
+              "number": "35",
+              "class": "Silver Cup",
+              "driver": "Gaspard Simon / Maxime Robin",
+              "team": "Walkenhorst Motorsport",
+              "gap": "+1:05.088"
+            },
+            {
+              "pos": 32,
+              "number": "52",
+              "class": "Silver Cup",
+              "driver": "Gilles Stadsbader / Jef Machiels",
+              "team": "AF Corse",
+              "gap": "+1:05.883"
+            },
+            {
+              "pos": 33,
+              "number": "54",
+              "class": "Silver Cup",
+              "driver": "Tanart Sathienthirakul / Mark Kastelic",
+              "team": "Dinamic GT",
+              "gap": "+1:06.054"
+            },
+            {
+              "pos": 34,
+              "number": "12",
+              "class": "Bronze Cup",
+              "driver": "Fabian Schiller / Gabriel Rindone",
+              "team": "GetSpeed Team Dubai",
+              "gap": "+1:06.227"
+            },
+            {
+              "pos": 35,
+              "number": "55",
+              "class": "Bronze Cup",
+              "driver": "Loris Cabirou / Dmitry Gvazava",
+              "team": "Dinamic GT",
+              "gap": "+1:11.755"
+            },
+            {
+              "pos": 36,
+              "number": "6",
+              "class": "Silver Cup",
+              "driver": "Aurelien Panis / Anthony Bartone",
+              "team": "GetSpeed Team Bartone Bros",
+              "gap": "+1:15.144"
+            },
+            {
+              "pos": 37,
+              "number": "9",
+              "class": "Silver Cup",
+              "driver": "Riccardo Pera / Aliaksandr Malykhin",
+              "team": "Pure Rxcing",
+              "gap": "+1:15.410"
+            },
+            {
+              "pos": 38,
+              "number": "74",
+              "class": "Bronze Cup",
+              "driver": "Dennis Marschall / Dustin Blattner",
+              "team": "Kessel Racing",
+              "gap": "+1:15.773"
+            },
+            {
+              "pos": 39,
+              "number": "88",
+              "class": "Bronze Cup",
+              "driver": "Sebastian Øgaard / Carrie Schreiner",
+              "team": "Tresor Attempto Racing",
+              "gap": "+1:20.275"
+            },
+            {
+              "pos": 40,
+              "number": "27",
+              "class": "Bronze Cup",
+              "driver": "David Fumanelli / Marco Pulcini",
+              "team": "Kessel Racing",
+              "gap": "+5 vueltas"
+            },
+            {
+              "pos": 81,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "32",
+              "class": "Pro Cup",
+              "driver": "Charles Weerts / Kelvin van der Linde",
+              "team": "Team WRT",
+              "gap": ""
+            },
+            {
+              "pos": 82,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "11",
+              "class": "Bronze Cup",
+              "driver": "Felice Jelmini / Marcelo Tomasoni",
+              "team": "Comtoyou Racing",
+              "gap": ""
+            },
+            {
+              "pos": 83,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "71",
+              "class": "Silver Cup",
+              "driver": "Carl Bennett / Felix Hirsiger",
+              "team": "AF Corse",
+              "gap": ""
+            },
+            {
+              "pos": 84,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "31",
+              "class": "Pro Cup",
+              "driver": "Amaury Cordeel / Jordan Pepper",
+              "team": "Team WRT",
+              "gap": ""
+            },
+            {
+              "pos": 85,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "555",
+              "class": "Gold Cup",
+              "driver": "Romain Andriolo / Simon Gachet",
+              "team": "CSA Racing",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "GT World Challenge Europe (oficial)",
+            "url": "https://www.gt-world-challenge-europe.com/results/2026/zandvoort/race-1"
+          },
+          "videos": [
+            {
+              "id": "on1SqJwt_eA",
+              "kind": "live"
             }
           ]
         },
@@ -96843,6 +97529,12 @@
               "url": "https://www.gt-world-challenge-europe.com/event/253/zandvoort",
               "start": "2026-09-20T10:35:00+02:00"
             }
+          ],
+          "videos": [
+            {
+              "id": "kJ3sh9XAUr4",
+              "kind": "live"
+            }
           ]
         },
         {
@@ -96859,10 +97551,16 @@
               "url": "https://www.gt-world-challenge-europe.com/event/253/zandvoort",
               "start": "2026-09-20T14:15:00+02:00"
             }
+          ],
+          "videos": [
+            {
+              "id": "kQ-qaSmoawM",
+              "kind": "live"
+            }
           ]
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "tn-2026-9",
@@ -97188,7 +97886,7 @@
           ]
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "tc-2026-12",
@@ -97387,7 +98085,7 @@
           ]
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "tcm-2026-10",
@@ -101131,8 +101829,13 @@
     "gtwcOfficial": {
       "meetings": 10,
       "sessions": 50,
-      "withResults": 38,
+      "withResults": 39,
       "errors": []
+    },
+    "gtwcYoutube": {
+      "scanned": 1050,
+      "sessions": 31,
+      "channel": "https://www.youtube.com/@GTWorld"
     }
   },
   "failures": []

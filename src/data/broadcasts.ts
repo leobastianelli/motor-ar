@@ -26,7 +26,10 @@ export const broadcastsBySeries: Record<string, { items: Broadcast[]; source?: s
   tn: {
     items: [
       { name: "Canal 9", kind: "tv" },
-      { name: "Streaming APAT", kind: "streaming", url: "https://www.apat.org.ar/media/63/transmisiones-online" },
+      // La transmisión sólo se ve por TV y por Motorplay: no hay un enlace público para mirarla (el de apat.org.ar no existe).
+      { name: "Motorplay", kind: "streaming" },
+      // Cronometraje oficial en vivo (siempre en la misma dirección).
+      { name: "Tiempos en vivo (Speedhive)", kind: "timing", url: "https://speedhive.mylaps.com/livetiming/SODRNDLQ-2147484939/active" },
     ],
     source: "https://tavilatam.com/argentina-turismo-carretera-tc-pista-y-las-principales-categorias-automovilisticas-argentinas-pasan-de-la-tv-publica-a-canal-9/",
   },

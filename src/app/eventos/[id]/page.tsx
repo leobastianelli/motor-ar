@@ -26,7 +26,7 @@ export async function generateMetadata(props: PageProps<"/eventos/[id]">): Promi
   return { title, description, openGraph: { title, description, ...OG_DEFAULTS }, alternates: { canonical: `/eventos/${event.id}` } };
 }
 
-const BROADCAST_KIND: Record<Broadcast["kind"], string> = { tv: "TV", streaming: "Streaming", youtube: "YouTube" };
+const BROADCAST_KIND: Record<Broadcast["kind"], string> = { tv: "TV", streaming: "Streaming", youtube: "YouTube", timing: "Tiempos" };
 const RACE_KINDS = ["carrera", "final", "sprint", "serie"];
 
 // Número del auto si la fuente lo publica; sigla sólo para pilotos individuales (en tripulaciones no identifica a nadie).
@@ -88,7 +88,8 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
   const isRace = latest ? RACE_KINDS.includes(latest.kind) : false;
   // Si la fuente no publicó al 1.º, `rows[0]` es la mejor posición disponible, no el ganador.
   const rowsComplete = rows.length > 0 && rows[0].pos === 1;
-  const streamUrl = event.broadcasts.find((b) => b.url)?.url;
+  const streamUrl = event.broadcasts.find((b) => b.url && b.kind !== "timing")?.url;
+  const timingUrl = event.broadcasts.find((b) => b.kind === "timing")?.url;
   const broadcastSource = broadcastsBySeries[event.seriesId]?.source;
   const timesUnknown = event.sessions.some((s) => s.timeKnown === false);
   const scheduleSources = [...new Map(event.sessions.flatMap((s) => s.timeSources ?? []).map((x) => [x.url, x])).values()];
@@ -167,6 +168,16 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                                     : `${s.durationMin} min estimados`)}
                             {status === "done" && (top ? <a href={`#${s.id}`}>Terminó · ver resultados</a> : "Terminó · sin resultados cargados")}
                           </span>
+                          {s.videos && s.videos.length > 0 && (
+                            <span className="session-videos">
+                              {s.videos.map((v) => (
+                                <a key={v.id} href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noreferrer">
+                                  <span aria-hidden="true">▶</span> {v.kind === "live" ? (status === "done" ? "Ver la sesión" : "Ver en vivo") : "Resumen"}
+                                  {v.label ? ` · ${v.label}` : ""}
+                                </a>
+                              ))}
+                            </span>
+                          )}
                         </div>
                         {status === "done" && top ? (
                           <b className="session-winner">{winner ? top.driver : `${top.positionText ?? `${top.pos}.º`} ${top.driver}`}</b>
@@ -201,6 +212,11 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
           {streamUrl && (
             <a href={streamUrl} target="_blank" rel="noreferrer">
               Abrir transmisión <span aria-hidden="true">↗</span>
+            </a>
+          )}
+          {timingUrl && (
+            <a href={timingUrl} target="_blank" rel="noreferrer">
+              Tiempos en vivo <span aria-hidden="true">↗</span>
             </a>
           )}
           <p>
