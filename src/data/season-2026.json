@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-17T11:30:42.070Z",
+  "generatedAt": "2026-09-19T07:53:57.568Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -818,7 +818,7 @@
       "round": 1,
       "name": "Fecha 1 · Parana",
       "circuit": {
-        "name": "Autódromo Ciudad de Parana",
+        "name": "AutÃ³dromo Ciudad de Parana",
         "city": "Parana",
         "country": "Argentina",
         "flag": "AR",
@@ -878,14 +878,14 @@
             {
               "pos": 7,
               "number": "100",
-              "driver": "Marcos Fernandez",
+              "driver": "Marcos Fernãndez",
               "team": "208",
               "gap": "+0.808"
             },
             {
               "pos": 8,
               "number": "177",
-              "driver": "Tomas Vitar",
+              "driver": "Tomãs Vitar",
               "team": "MARCH",
               "gap": "+0.842"
             },
@@ -899,14 +899,14 @@
             {
               "pos": 10,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "FIESTA",
               "gap": "+1.009"
             },
             {
               "pos": 11,
               "number": "86",
-              "driver": "Martin Leston",
+              "driver": "Martãn Leston",
               "team": "208",
               "gap": "+1.063"
             },
@@ -997,7 +997,7 @@
             {
               "pos": 24,
               "number": "174",
-              "driver": "Sergio Fernandez",
+              "driver": "Sergio Fernãndez",
               "team": "208",
               "gap": "+2.452"
             },
@@ -1018,7 +1018,7 @@
             {
               "pos": 27,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Andrã‰s Calderã“n",
               "team": "208",
               "gap": "+2.548"
             },
@@ -1039,7 +1039,7 @@
             {
               "pos": 30,
               "number": "28",
-              "driver": "Damian Kirstein",
+              "driver": "Damiãn Kirstein",
               "team": "ETIOS",
               "gap": "+3.631"
             },
@@ -1053,7 +1053,7 @@
             {
               "pos": 32,
               "number": "56",
-              "driver": "Agustin Bonomo",
+              "driver": "Agustãn Bonomo",
               "team": "208",
               "gap": "+4.337"
             }
@@ -1081,7 +1081,7 @@
             {
               "pos": 2,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Fabiãn Yannantuoni",
               "team": "FOCUS",
               "gap": "+0.238"
             },
@@ -1102,7 +1102,7 @@
             {
               "pos": 5,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Sebastiãn Gã“mez",
               "team": "VENTO",
               "gap": "+0.350"
             },
@@ -1116,21 +1116,21 @@
             {
               "pos": 7,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Leonel Pernãa",
               "team": "CIVIC",
               "gap": "+0.624"
             },
             {
               "pos": 8,
               "number": "86",
-              "driver": "Agustin Canapino",
+              "driver": "Agustãn Canapino",
               "team": "CRUZE",
               "gap": "+0.764"
             },
             {
               "pos": 9,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Jerã“nimo Teti",
               "team": "CRUZE",
               "gap": "+0.874"
             },
@@ -1151,7 +1151,7 @@
             {
               "pos": 12,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Juliãn Santero",
               "team": "FOCUS",
               "gap": "+1.076"
             },
@@ -1179,14 +1179,14 @@
             {
               "pos": 16,
               "number": "118",
-              "driver": "Antonino Garcia",
+              "driver": "Antonino Garcãa",
               "team": "FOCUS",
               "gap": "+1.208"
             },
             {
               "pos": 17,
               "number": "152",
-              "driver": "Thiago Martinez",
+              "driver": "Thiago Martãnez",
               "team": "FOCUS",
               "gap": "+1.263"
             },
@@ -1214,28 +1214,28 @@
             {
               "pos": 21,
               "number": "177",
-              "driver": "Leandro Gonzalez",
+              "driver": "Leandro Gonzãlez",
               "team": "CRUZE",
               "gap": "+1.888"
             },
             {
               "pos": 22,
               "number": "16",
-              "driver": "Matias Munoz Marchesi",
+              "driver": "Matãas Muã‘oz M.",
               "team": "VENTO",
               "gap": "+1.927"
             },
             {
               "pos": 23,
               "number": "77",
-              "driver": "Matias Cohen",
+              "driver": "Matãas Cohen",
               "team": "VIRTUS",
               "gap": "+2.104"
             },
             {
               "pos": 24,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Gonzalo Antolãn",
               "team": "CRUZE",
               "gap": "+2.134"
             },
@@ -1249,7 +1249,7 @@
             {
               "pos": 26,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolas Jaime",
               "team": "COROLLA",
               "gap": "+2.431"
             },
@@ -1291,7 +1291,7 @@
             {
               "pos": 32,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "COROLLA",
               "gap": "+6.305"
             },
@@ -1305,7 +1305,7 @@
             {
               "pos": 34,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Jeremãas Olmedo",
               "team": "CRUZE",
               "gap": "+9.316"
             },
@@ -1354,21 +1354,21 @@
             {
               "pos": 3,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "FIESTA",
               "gap": "+0.200"
             },
             {
               "pos": 4,
               "number": "177",
-              "driver": "Tomas Vitar",
+              "driver": "Tomãs Vitar",
               "team": "MARCH",
               "gap": "+0.234"
             },
             {
               "pos": 5,
               "number": "86",
-              "driver": "Martin Leston",
+              "driver": "Martãn Leston",
               "team": "208",
               "gap": "+0.346"
             },
@@ -1424,7 +1424,7 @@
             {
               "pos": 13,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Andrã‰s Calderã“n",
               "team": "208",
               "gap": "+0.933"
             },
@@ -1515,21 +1515,21 @@
             {
               "pos": 26,
               "number": "100",
-              "driver": "Marcos Fernandez",
+              "driver": "Marcos Fernãndez",
               "team": "208",
               "gap": "+1.899"
             },
             {
               "pos": 27,
               "number": "174",
-              "driver": "Sergio Fernandez",
+              "driver": "Sergio Fernãndez",
               "team": "208",
               "gap": "+2.275"
             },
             {
               "pos": 28,
               "number": "28",
-              "driver": "Damian Kirstein",
+              "driver": "Damiãn Kirstein",
               "team": "ETIOS",
               "gap": "+2.586"
             },
@@ -1571,7 +1571,7 @@
             {
               "pos": 1,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Leonel Pernãa",
               "team": "CIVIC",
               "gap": "01;32.154"
             },
@@ -1599,7 +1599,7 @@
             {
               "pos": 5,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Fabiãn Yannantuoni",
               "team": "FOCUS",
               "gap": "+0.494"
             },
@@ -1620,7 +1620,7 @@
             {
               "pos": 8,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "COROLLA",
               "gap": "+0.639"
             },
@@ -1634,28 +1634,28 @@
             {
               "pos": 10,
               "number": "86",
-              "driver": "Agustin Canapino",
+              "driver": "Agustãn Canapino",
               "team": "CRUZE",
               "gap": "+0.725"
             },
             {
               "pos": 11,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Sebastiãn Gã“mez",
               "team": "VENTO",
               "gap": "+0.751"
             },
             {
               "pos": 12,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Juliãn Santero",
               "team": "FOCUS",
               "gap": "+0.757"
             },
             {
               "pos": 13,
               "number": "16",
-              "driver": "Matias Munoz Marchesi",
+              "driver": "Matãas Muã‘oz M.",
               "team": "VENTO",
               "gap": "+0.935"
             },
@@ -1704,14 +1704,14 @@
             {
               "pos": 20,
               "number": "152",
-              "driver": "Thiago Martinez",
+              "driver": "Thiago Martãnez",
               "team": "FOCUS",
               "gap": "+1.155"
             },
             {
               "pos": 21,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Jeremãas Olmedo",
               "team": "CRUZE",
               "gap": "+1.339"
             },
@@ -1725,7 +1725,7 @@
             {
               "pos": 23,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Gonzalo Antolãn",
               "team": "CRUZE",
               "gap": "+1.652"
             },
@@ -1746,28 +1746,28 @@
             {
               "pos": 26,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolas Jaime",
               "team": "COROLLA",
               "gap": "+1.802"
             },
             {
               "pos": 27,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Jerã“nimo Teti",
               "team": "CRUZE",
               "gap": "+1.899"
             },
             {
               "pos": 28,
               "number": "77",
-              "driver": "Matias Cohen",
+              "driver": "Matãas Cohen",
               "team": "VIRTUS",
               "gap": "+1.929"
             },
             {
               "pos": 29,
               "number": "177",
-              "driver": "Leandro Gonzalez",
+              "driver": "Leandro Gonzãlez",
               "team": "CRUZE",
               "gap": "+2.242"
             },
@@ -1802,7 +1802,7 @@
             {
               "pos": 34,
               "number": "118",
-              "driver": "Antonino Garcia",
+              "driver": "Antonino Garcãa",
               "team": "FOCUS",
               "gap": "+10.966"
             },
@@ -1837,7 +1837,7 @@
             {
               "pos": 1,
               "number": "177",
-              "driver": "Tomas Vitar",
+              "driver": "Tomãs Vitar",
               "team": "MARCH",
               "gap": "01;35.634"
             },
@@ -1879,7 +1879,7 @@
             {
               "pos": 7,
               "number": "86",
-              "driver": "Martin Leston",
+              "driver": "Martãn Leston",
               "team": "208",
               "gap": "+0.655"
             },
@@ -1963,7 +1963,7 @@
             {
               "pos": 19,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Andrã‰s Calderã“n",
               "team": "208",
               "gap": "+1.266"
             },
@@ -1991,7 +1991,7 @@
             {
               "pos": 23,
               "number": "28",
-              "driver": "Damian Kirstein",
+              "driver": "Damiãn Kirstein",
               "team": "ETIOS",
               "gap": "+1.944"
             },
@@ -2019,14 +2019,14 @@
             {
               "pos": 27,
               "number": "56",
-              "driver": "Agustin Bonomo",
+              "driver": "Agustãn Bonomo",
               "team": "208",
               "gap": "+2.489"
             },
             {
               "pos": 28,
               "number": "174",
-              "driver": "Sergio Fernandez",
+              "driver": "Sergio Fernãndez",
               "team": "208",
               "gap": "+2.566"
             },
@@ -2047,14 +2047,14 @@
             {
               "pos": 31,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "FIESTA",
               "gap": "-"
             },
             {
               "pos": 32,
               "number": "100",
-              "driver": "Marcos Fernandez",
+              "driver": "Marcos Fernãndez",
               "team": "208",
               "gap": "-"
             }
@@ -2082,7 +2082,7 @@
             {
               "pos": 2,
               "number": "86",
-              "driver": "Agustin Canapino",
+              "driver": "Agustãn Canapino",
               "team": "CRUZE",
               "gap": "+0.215"
             },
@@ -2096,7 +2096,7 @@
             {
               "pos": 4,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Sebastiãn Gã“mez",
               "team": "VENTO",
               "gap": "+0.344"
             },
@@ -2110,7 +2110,7 @@
             {
               "pos": 6,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Juliãn Santero",
               "team": "FOCUS",
               "gap": "+0.400"
             },
@@ -2124,14 +2124,14 @@
             {
               "pos": 8,
               "number": "16",
-              "driver": "Matias Munoz Marchesi",
+              "driver": "Matãas Muã‘oz M.",
               "team": "VENTO",
               "gap": "+0.450"
             },
             {
               "pos": 9,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Leonel Pernãa",
               "team": "CIVIC",
               "gap": "+0.452"
             },
@@ -2145,7 +2145,7 @@
             {
               "pos": 11,
               "number": "152",
-              "driver": "Thiago Martinez",
+              "driver": "Thiago Martãnez",
               "team": "FOCUS",
               "gap": "+0.485"
             },
@@ -2166,7 +2166,7 @@
             {
               "pos": 14,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Fabiãn Yannantuoni",
               "team": "FOCUS",
               "gap": "+0.735"
             },
@@ -2180,14 +2180,14 @@
             {
               "pos": 16,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Jeremãas Olmedo",
               "team": "CRUZE",
               "gap": "+0.809"
             },
             {
               "pos": 17,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "COROLLA",
               "gap": "+0.884"
             },
@@ -2201,7 +2201,7 @@
             {
               "pos": 19,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Jerã“nimo Teti",
               "team": "CRUZE",
               "gap": "+0.926"
             },
@@ -2250,14 +2250,14 @@
             {
               "pos": 26,
               "number": "77",
-              "driver": "Matias Cohen",
+              "driver": "Matãas Cohen",
               "team": "VIRTUS",
               "gap": "+1.583"
             },
             {
               "pos": 27,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Gonzalo Antolãn",
               "team": "CRUZE",
               "gap": "+1.630"
             },
@@ -2299,21 +2299,21 @@
             {
               "pos": 33,
               "number": "177",
-              "driver": "Leandro Gonzalez",
+              "driver": "Leandro Gonzãlez",
               "team": "CRUZE",
               "gap": "+17.411"
             },
             {
               "pos": 34,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolas Jaime",
               "team": "COROLLA",
               "gap": "-"
             },
             {
               "pos": 35,
               "number": "118",
-              "driver": "Antonino Garcia",
+              "driver": "Antonino Garcãa",
               "team": "FOCUS",
               "gap": "-"
             },
@@ -2341,7 +2341,7 @@
             {
               "pos": 1,
               "number": "177",
-              "driver": "Tomas Vitar",
+              "driver": "Tomãs Vitar",
               "team": "MARCH",
               "gap": "08;04.788"
             },
@@ -2369,7 +2369,7 @@
             {
               "pos": 5,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "FIESTA",
               "gap": "+8.287"
             },
@@ -2446,7 +2446,7 @@
             {
               "pos": 3,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Sebastiãn Gã“mez",
               "team": "VENTO",
               "gap": "+2.244"
             },
@@ -2474,7 +2474,7 @@
             {
               "pos": 7,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Jerã“nimo Teti",
               "team": "CRUZE",
               "gap": "+12.513"
             },
@@ -2495,14 +2495,14 @@
             {
               "pos": 10,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolas Jaime",
               "team": "COROLLA",
               "gap": "+1 VTA"
             },
             {
               "pos": 11,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Jeremãas Olmedo",
               "team": "CRUZE",
               "gap": "+2 VTAS"
             },
@@ -2565,7 +2565,7 @@
             {
               "pos": 6,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Andrã‰s Calderã“n",
               "team": "208",
               "gap": "+11.557"
             },
@@ -2593,7 +2593,7 @@
             {
               "pos": 10,
               "number": "28",
-              "driver": "Damian Kirstein",
+              "driver": "Damiãn Kirstein",
               "team": "ETIOS",
               "gap": "+15.353"
             },
@@ -2642,35 +2642,35 @@
             {
               "pos": 4,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Fabiãn Yannantuoni",
               "team": "FOCUS",
               "gap": "+5.778"
             },
             {
               "pos": 5,
               "number": "16",
-              "driver": "Matias Munoz Marchesi",
+              "driver": "Matãas Muã‘oz M.",
               "team": "VENTO",
               "gap": "+7.905"
             },
             {
               "pos": 6,
               "number": "152",
-              "driver": "Thiago Martinez",
+              "driver": "Thiago Martãnez",
               "team": "FOCUS",
               "gap": "+8.186"
             },
             {
               "pos": 7,
               "number": "86",
-              "driver": "Agustin Canapino",
+              "driver": "Agustãn Canapino",
               "team": "CRUZE",
               "gap": "+8.628"
             },
             {
               "pos": 8,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "COROLLA",
               "gap": "+9.024"
             },
@@ -2691,14 +2691,14 @@
             {
               "pos": 11,
               "number": "77",
-              "driver": "Matias Cohen",
+              "driver": "Matãas Cohen",
               "team": "VIRTUS",
               "gap": "+19.827"
             },
             {
               "pos": 12,
               "number": "118",
-              "driver": "Antonino Garcia",
+              "driver": "Antonino Garcãa",
               "team": "FOCUS",
               "gap": "+5 VTAS"
             }
@@ -2747,14 +2747,14 @@
             {
               "pos": 5,
               "number": "100",
-              "driver": "Marcos Fernandez",
+              "driver": "Marcos Fernãndez",
               "team": "208",
               "gap": "+5.153"
             },
             {
               "pos": 6,
               "number": "86",
-              "driver": "Martin Leston",
+              "driver": "Martãn Leston",
               "team": "208",
               "gap": "+7.201"
             },
@@ -2768,14 +2768,14 @@
             {
               "pos": 8,
               "number": "174",
-              "driver": "Sergio Fernandez",
+              "driver": "Sergio Fernãndez",
               "team": "208",
               "gap": "+12.242"
             },
             {
               "pos": 9,
               "number": "56",
-              "driver": "Agustin Bonomo",
+              "driver": "Agustãn Bonomo",
               "team": "208",
               "gap": "+15.325"
             },
@@ -2810,7 +2810,7 @@
             {
               "pos": 2,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Juliãn Santero",
               "team": "FOCUS",
               "gap": "+1.417"
             },
@@ -2824,7 +2824,7 @@
             {
               "pos": 4,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Gonzalo Antolãn",
               "team": "CRUZE",
               "gap": "+2.500"
             },
@@ -2838,7 +2838,7 @@
             {
               "pos": 6,
               "number": "177",
-              "driver": "Leandro Gonzalez",
+              "driver": "Leandro Gonzãlez",
               "team": "CRUZE",
               "gap": "+6.860"
             },
@@ -2873,7 +2873,7 @@
             {
               "pos": 11,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Leonel Pernãa",
               "team": "CIVIC",
               "gap": "+4 VTAS"
             }
@@ -2901,7 +2901,7 @@
             {
               "pos": 2,
               "number": "177",
-              "driver": "Tomas Vitar",
+              "driver": "Tomãs Vitar",
               "team": "MARCH",
               "gap": "+1.117"
             },
@@ -2950,14 +2950,14 @@
             {
               "pos": 9,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Andrã‰s Calderã“n",
               "team": "208",
               "gap": "+17.462"
             },
             {
               "pos": 10,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "FIESTA",
               "gap": "+19.361"
             },
@@ -2971,7 +2971,7 @@
             {
               "pos": 12,
               "number": "86",
-              "driver": "Martin Leston",
+              "driver": "Martãn Leston",
               "team": "208",
               "gap": "+22.019"
             },
@@ -2985,14 +2985,14 @@
             {
               "pos": 14,
               "number": "56",
-              "driver": "Agustin Bonomo",
+              "driver": "Agustãn Bonomo",
               "team": "208",
               "gap": "+33.724"
             },
             {
               "pos": 15,
               "number": "174",
-              "driver": "Sergio Fernandez",
+              "driver": "Sergio Fernãndez",
               "team": "208",
               "gap": "+34.136"
             },
@@ -3020,7 +3020,7 @@
             {
               "pos": 19,
               "number": "100",
-              "driver": "Marcos Fernandez",
+              "driver": "Marcos Fernãndez",
               "team": "208",
               "gap": "+1 VTA"
             },
@@ -3034,7 +3034,7 @@
             {
               "pos": 21,
               "number": "28",
-              "driver": "Damian Kirstein",
+              "driver": "Damiãn Kirstein",
               "team": "ETIOS",
               "gap": "+7 VTAS"
             },
@@ -3139,14 +3139,14 @@
             {
               "pos": 5,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Sebastiãn Gã“mez",
               "team": "VENTO",
               "gap": "+6.747"
             },
             {
               "pos": 6,
               "number": "152",
-              "driver": "Thiago Martinez",
+              "driver": "Thiago Martãnez",
               "team": "FOCUS",
               "gap": "+7.636"
             },
@@ -3167,14 +3167,14 @@
             {
               "pos": 9,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Fabiãn Yannantuoni",
               "team": "FOCUS",
               "gap": "+19.892"
             },
             {
               "pos": 10,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "COROLLA",
               "gap": "+20.595"
             },
@@ -3195,7 +3195,7 @@
             {
               "pos": 13,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Gonzalo Antolãn",
               "team": "CRUZE",
               "gap": "+23.313"
             },
@@ -3209,7 +3209,7 @@
             {
               "pos": 15,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Leonel Pernãa",
               "team": "CIVIC",
               "gap": "+26.015"
             },
@@ -3223,7 +3223,7 @@
             {
               "pos": 17,
               "number": "177",
-              "driver": "Leandro Gonzalez",
+              "driver": "Leandro Gonzãlez",
               "team": "CRUZE",
               "gap": "+29.489"
             },
@@ -3237,21 +3237,21 @@
             {
               "pos": 19,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolas Jaime",
               "team": "COROLLA",
               "gap": "+36.293"
             },
             {
               "pos": 20,
               "number": "77",
-              "driver": "Matias Cohen",
+              "driver": "Matãas Cohen",
               "team": "VIRTUS",
               "gap": "+48.699"
             },
             {
               "pos": 21,
               "number": "118",
-              "driver": "Antonino Garcia",
+              "driver": "Antonino Garcãa",
               "team": "FOCUS",
               "gap": "+48.700"
             },
@@ -3272,7 +3272,7 @@
             {
               "pos": 24,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Jeremãas Olmedo",
               "team": "CRUZE",
               "gap": "+6 VTAS"
             },
@@ -3293,14 +3293,14 @@
             {
               "pos": 27,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Juliãn Santero",
               "team": "FOCUS",
               "gap": "+13 VTAS"
             },
             {
               "pos": 28,
               "number": "16",
-              "driver": "Matias Munoz Marchesi",
+              "driver": "Matãas Muã‘oz M.",
               "team": "VENTO",
               "gap": "+16 VTAS"
             },
@@ -3328,7 +3328,7 @@
             {
               "pos": 32,
               "number": "86",
-              "driver": "Agustin Canapino",
+              "driver": "Agustãn Canapino",
               "team": "CRUZE",
               "gap": "+19 VTAS"
             },
@@ -14266,7 +14266,7 @@
       "round": 2,
       "name": "Fecha 2 · Oscar Cabalen",
       "circuit": {
-        "name": "Autódromo Oscar Cabalen",
+        "name": "AutÃ³dromo Oscar Cabalen",
         "city": "Oscar Cabalen",
         "country": "Argentina",
         "flag": "AR",
@@ -14298,7 +14298,7 @@
             {
               "pos": 3,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+1.896"
             },
@@ -14445,7 +14445,7 @@
             {
               "pos": 2,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+0.493"
             },
@@ -14480,14 +14480,14 @@
             {
               "pos": 7,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "+1.033"
             },
             {
               "pos": 9,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+1.258"
             },
@@ -14501,7 +14501,7 @@
             {
               "pos": 11,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+1.811"
             },
@@ -14529,7 +14529,7 @@
             {
               "pos": 15,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "Ford Focus",
               "gap": "+2.265"
             },
@@ -14550,7 +14550,7 @@
             {
               "pos": 18,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+2.845"
             },
@@ -14599,14 +14599,14 @@
             {
               "pos": 26,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+3.965"
             },
             {
               "pos": 27,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+4.130"
             },
@@ -14634,7 +14634,7 @@
             {
               "pos": 31,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+4.855"
             },
@@ -14704,7 +14704,7 @@
             {
               "pos": 4,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+0.487"
             },
@@ -14725,7 +14725,7 @@
             {
               "pos": 7,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "Ford Focus",
               "gap": "+0.693"
             },
@@ -14760,7 +14760,7 @@
             {
               "pos": 13,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+0.933"
             },
@@ -14816,7 +14816,7 @@
             {
               "pos": 24,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+1.580"
             },
@@ -14844,7 +14844,7 @@
             {
               "pos": 28,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+1.992"
             },
@@ -14872,14 +14872,14 @@
             {
               "pos": 32,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+2.142"
             },
             {
               "pos": 33,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+3.230"
             },
@@ -14900,14 +14900,14 @@
             {
               "pos": 36,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "-"
             },
             {
               "pos": 37,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "-"
             }
@@ -15019,7 +15019,7 @@
             {
               "pos": 15,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+0.736"
             },
@@ -15271,7 +15271,7 @@
             {
               "pos": 19,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+1.526"
             },
@@ -15383,7 +15383,7 @@
             {
               "pos": 3,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "Fiesta Kinetic",
               "gap": "+2.084"
             },
@@ -15467,28 +15467,28 @@
             {
               "pos": 2,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "Ford Focus",
               "gap": "+2.065"
             },
             {
               "pos": 3,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+3.841"
             },
             {
               "pos": 4,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+5.818"
             },
             {
               "pos": 5,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+5.975"
             },
@@ -15509,7 +15509,7 @@
             {
               "pos": 8,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+9.871"
             },
@@ -15670,7 +15670,7 @@
             {
               "pos": 3,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+7.865"
             },
@@ -15726,7 +15726,7 @@
             {
               "pos": 11,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+21.464"
             }
@@ -15768,7 +15768,7 @@
             {
               "pos": 4,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+6.805"
             },
@@ -15838,7 +15838,7 @@
             {
               "pos": 4,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "+9.316"
             },
@@ -15852,7 +15852,7 @@
             {
               "pos": 6,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+12.361"
             },
@@ -15873,7 +15873,7 @@
             {
               "pos": 9,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+15.142"
             },
@@ -15922,7 +15922,7 @@
             {
               "pos": 2,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "Fiesta Kinetic",
               "gap": "+0.459"
             },
@@ -16006,7 +16006,7 @@
             {
               "pos": 14,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+19.750"
             },
@@ -16055,7 +16055,7 @@
             {
               "pos": 21,
               "number": "71",
-              "driver": "Maximo Donzino",
+              "driver": "Donzino Mãximo",
               "team": "Fiesta Kinetic",
               "gap": "+38.132"
             },
@@ -16174,7 +16174,7 @@
             {
               "pos": 5,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "Ford Focus",
               "gap": "+6.711"
             },
@@ -16195,7 +16195,7 @@
             {
               "pos": 8,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+17.299"
             },
@@ -16209,7 +16209,7 @@
             {
               "pos": 10,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "+26.108"
             },
@@ -16237,14 +16237,14 @@
             {
               "pos": 14,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+34.144"
             },
             {
               "pos": 15,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+34.444"
             },
@@ -16265,7 +16265,7 @@
             {
               "pos": 18,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+36.933"
             },
@@ -16328,7 +16328,7 @@
             {
               "pos": 27,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+57.974"
             },
@@ -16356,14 +16356,14 @@
             {
               "pos": 31,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+12 Vueltas"
             },
             {
               "pos": 32,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+14 Vueltas"
             },
@@ -16391,7 +16391,7 @@
             {
               "pos": 36,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+19 Vueltas"
             },
@@ -22662,7 +22662,7 @@
       "round": 3,
       "name": "Fecha 3 · Rosario",
       "circuit": {
-        "name": "Autódromo Rosario",
+        "name": "AutÃ³dromo Rosario",
         "city": "Rosario",
         "country": "Argentina",
         "flag": "AR",
@@ -22736,7 +22736,7 @@
             {
               "pos": 9,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+2.147"
             },
@@ -22778,7 +22778,7 @@
             {
               "pos": 15,
               "number": "71",
-              "driver": "Maximo Donzino",
+              "driver": "Donzino Mãximo",
               "team": "Ford Kinetic",
               "gap": "+6.346"
             },
@@ -22855,7 +22855,7 @@
             {
               "pos": 26,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+12.622"
             },
@@ -22883,7 +22883,7 @@
             {
               "pos": 30,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "Ford Kinetic",
               "gap": "+2:35.461"
             },
@@ -23114,7 +23114,7 @@
             {
               "pos": 28,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Jaime Nicolas",
               "team": "Toyota Corolla",
               "gap": "+2.380"
             },
@@ -23226,7 +23226,7 @@
             {
               "pos": 7,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "Ford Kinetic",
               "gap": "+0.408"
             },
@@ -23275,7 +23275,7 @@
             {
               "pos": 14,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+0.927"
             },
@@ -23345,7 +23345,7 @@
             {
               "pos": 24,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+1.835"
             },
@@ -23415,7 +23415,7 @@
             {
               "pos": 34,
               "number": "71",
-              "driver": "Maximo Donzino",
+              "driver": "Donzino Mãximo",
               "team": "Ford Kinetic",
               "gap": "+5.057"
             },
@@ -23443,7 +23443,7 @@
             {
               "pos": 1,
               "number": "86",
-              "driver": "Agustin Canapino",
+              "driver": "Canapino Agustãn",
               "team": "Chevrolet Cruze",
               "gap": "1:42.375"
             },
@@ -23457,21 +23457,21 @@
             {
               "pos": 3,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+0.713"
             },
             {
               "pos": 4,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+0.726"
             },
             {
               "pos": 5,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+0.726"
             },
@@ -23485,21 +23485,21 @@
             {
               "pos": 7,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+0.825"
             },
             {
               "pos": 8,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+0.966"
             },
             {
               "pos": 9,
               "number": "118",
-              "driver": "Antonino Garcia",
+              "driver": "Garcãa Antonino",
               "team": "Ford Focus",
               "gap": "+1.132"
             },
@@ -23604,7 +23604,7 @@
             {
               "pos": 24,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+2.186"
             },
@@ -23618,7 +23618,7 @@
             {
               "pos": 26,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+2.358"
             },
@@ -23639,7 +23639,7 @@
             {
               "pos": 29,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+2.751"
             },
@@ -23660,7 +23660,7 @@
             {
               "pos": 32,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+3.058"
             },
@@ -23681,7 +23681,7 @@
             {
               "pos": 35,
               "number": "77",
-              "driver": "Matias Cohen",
+              "driver": "Cohen Matãas",
               "team": "VW Virtus",
               "gap": "+3.771"
             }
@@ -23765,7 +23765,7 @@
             {
               "pos": 10,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "Ford Kinetic",
               "gap": "+0.518"
             },
@@ -23835,7 +23835,7 @@
             {
               "pos": 20,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+1.302"
             },
@@ -23863,7 +23863,7 @@
             {
               "pos": 24,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+1.935"
             },
@@ -23919,7 +23919,7 @@
             {
               "pos": 32,
               "number": "71",
-              "driver": "Maximo Donzino",
+              "driver": "Donzino Mãximo",
               "team": "Ford Kinetic",
               "gap": "+7.576"
             },
@@ -23947,21 +23947,21 @@
             {
               "pos": 1,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "1:42.728"
             },
             {
               "pos": 2,
               "number": "86",
-              "driver": "Agustin Canapino",
+              "driver": "Canapino Agustãn",
               "team": "Chevrolet Cruze",
               "gap": "+0.019"
             },
             {
               "pos": 3,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+0.104"
             },
@@ -23975,7 +23975,7 @@
             {
               "pos": 5,
               "number": "118",
-              "driver": "Antonino Garcia",
+              "driver": "Garcãa Antonino",
               "team": "Ford Focus",
               "gap": "+0.308"
             },
@@ -24087,14 +24087,14 @@
             {
               "pos": 21,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+1.828"
             },
             {
               "pos": 22,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+1.834"
             },
@@ -24108,7 +24108,7 @@
             {
               "pos": 24,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+2.014"
             },
@@ -24136,14 +24136,14 @@
             {
               "pos": 28,
               "number": "77",
-              "driver": "Matias Cohen",
+              "driver": "Cohen Matãas",
               "team": "VW Virtus",
               "gap": "+2.899"
             },
             {
               "pos": 29,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+2.993"
             },
@@ -24164,14 +24164,14 @@
             {
               "pos": 32,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+1:30.178"
             },
             {
               "pos": 34,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "-"
             },
@@ -24255,7 +24255,7 @@
             {
               "pos": 9,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+49.934"
             },
@@ -24269,7 +24269,7 @@
             {
               "pos": 11,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+5 Vueltas"
             },
@@ -24297,7 +24297,7 @@
             {
               "pos": 1,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "9:38.635"
             },
@@ -24346,7 +24346,7 @@
             {
               "pos": 8,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+8.681"
             },
@@ -24367,7 +24367,7 @@
             {
               "pos": 11,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+15.505"
             },
@@ -24514,7 +24514,7 @@
             {
               "pos": 6,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+11.099"
             },
@@ -24549,7 +24549,7 @@
             {
               "pos": 11,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+18.994"
             },
@@ -24668,7 +24668,7 @@
             {
               "pos": 1,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "11:08.414"
             },
@@ -24682,7 +24682,7 @@
             {
               "pos": 3,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "Volkswagen Vento",
               "gap": "+1.615"
             },
@@ -24703,7 +24703,7 @@
             {
               "pos": 6,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+3.305"
             },
@@ -24717,7 +24717,7 @@
             {
               "pos": 8,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+4.146"
             },
@@ -24787,7 +24787,7 @@
             {
               "pos": 5,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "Ford Kinetic",
               "gap": "+4.102"
             },
@@ -24871,7 +24871,7 @@
             {
               "pos": 17,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+13.152"
             },
@@ -24913,7 +24913,7 @@
             {
               "pos": 23,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+16.020"
             },
@@ -25018,14 +25018,14 @@
             {
               "pos": 3,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+2.397"
             },
             {
               "pos": 4,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+2.905"
             },
@@ -25046,7 +25046,7 @@
             {
               "pos": 7,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+5.751"
             },
@@ -25158,7 +25158,7 @@
             {
               "pos": 23,
               "number": "109",
-              "driver": "Nicolas Moscardini",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+9 Vueltas"
             },
@@ -25172,7 +25172,7 @@
             {
               "pos": 25,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+10 Vueltas"
             },
@@ -25207,7 +25207,7 @@
             {
               "pos": 30,
               "number": "176",
-              "driver": "Nicolás Jaime",
+              "driver": "Nicolã¡s Jaime",
               "team": "Toyota Corolla",
               "gap": "+15 Vueltas"
             },
@@ -25221,7 +25221,7 @@
             {
               "pos": 32,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+16 Vueltas"
             },
@@ -25235,14 +25235,14 @@
             {
               "pos": 34,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "-"
             },
             {
               "pos": 35,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "-"
             }
@@ -31639,7 +31639,7 @@
             {
               "pos": 11,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "Ford F Kinetic",
               "gap": "+1.064"
             },
@@ -31688,7 +31688,7 @@
             {
               "pos": 18,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+1.712"
             },
@@ -31765,7 +31765,7 @@
             {
               "pos": 29,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+3.324"
             },
@@ -31863,7 +31863,7 @@
             {
               "pos": 7,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+0.531"
             },
@@ -31884,14 +31884,14 @@
             {
               "pos": 10,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+0.666"
             },
             {
               "pos": 11,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+0.810"
             },
@@ -31940,14 +31940,14 @@
             {
               "pos": 18,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "+1.272"
             },
             {
               "pos": 19,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+1.304"
             },
@@ -31961,14 +31961,14 @@
             {
               "pos": 21,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+1.357"
             },
             {
               "pos": 22,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+1.444"
             },
@@ -32038,7 +32038,7 @@
             {
               "pos": 32,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+2.946"
             }
@@ -32206,7 +32206,7 @@
             {
               "pos": 22,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+1.739"
             },
@@ -32276,7 +32276,7 @@
             {
               "pos": 32,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+11.224"
             },
@@ -32290,7 +32290,7 @@
             {
               "pos": 34,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "Ford F Kinetic",
               "gap": "+22.407"
             }
@@ -32311,7 +32311,7 @@
             {
               "pos": 1,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "1:48.555"
             },
@@ -32332,7 +32332,7 @@
             {
               "pos": 4,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+0.347"
             },
@@ -32360,7 +32360,7 @@
             {
               "pos": 8,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+0.860"
             },
@@ -32395,7 +32395,7 @@
             {
               "pos": 13,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+1.265"
             },
@@ -32423,14 +32423,14 @@
             {
               "pos": 17,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+1.452"
             },
             {
               "pos": 18,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+1.484"
             },
@@ -32451,7 +32451,7 @@
             {
               "pos": 21,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "+2.173"
             },
@@ -32500,7 +32500,7 @@
             {
               "pos": 28,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+3.058"
             },
@@ -32598,7 +32598,7 @@
             {
               "pos": 8,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "Ford F Kinetic",
               "gap": "+0.646"
             },
@@ -32654,7 +32654,7 @@
             {
               "pos": 16,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+1.181"
             },
@@ -32703,7 +32703,7 @@
             {
               "pos": 23,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+1.778"
             },
@@ -32801,7 +32801,7 @@
             {
               "pos": 1,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "1:48.688"
             },
@@ -32829,7 +32829,7 @@
             {
               "pos": 5,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+0.878"
             },
@@ -32857,7 +32857,7 @@
             {
               "pos": 9,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "Volkswagen Vento",
               "gap": "+1.089"
             },
@@ -32885,7 +32885,7 @@
             {
               "pos": 13,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "+1.487"
             },
@@ -32913,7 +32913,7 @@
             {
               "pos": 17,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+1.853"
             },
@@ -32990,21 +32990,21 @@
             {
               "pos": 28,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+10.904"
             },
             {
               "pos": 29,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+3.267"
             },
             {
               "pos": 30,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "-"
             },
@@ -33053,7 +33053,7 @@
             {
               "pos": 4,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "Ford F Kinetic",
               "gap": "+5.140"
             },
@@ -33137,7 +33137,7 @@
             {
               "pos": 2,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+0.464"
             },
@@ -33179,7 +33179,7 @@
             {
               "pos": 8,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "+14.903"
             },
@@ -33200,7 +33200,7 @@
             {
               "pos": 11,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+4 Vueltas"
             }
@@ -33228,7 +33228,7 @@
             {
               "pos": 2,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+5.946"
             },
@@ -33312,7 +33312,7 @@
             {
               "pos": 1,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "9:17.542"
             },
@@ -33347,14 +33347,14 @@
             {
               "pos": 6,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+8.319"
             },
             {
               "pos": 7,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+11.100"
             },
@@ -33459,7 +33459,7 @@
             {
               "pos": 10,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+17.606"
             },
@@ -33529,7 +33529,7 @@
             {
               "pos": 7,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+15.574"
             },
@@ -33550,7 +33550,7 @@
             {
               "pos": 10,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+2 Vueltas"
             }
@@ -33627,7 +33627,7 @@
             {
               "pos": 9,
               "number": "121",
-              "driver": "Nicolas Posco",
+              "driver": "Nicolã¡s Jaime",
               "team": "Ford F Kinetic",
               "gap": "+9.505"
             },
@@ -33641,7 +33641,7 @@
             {
               "pos": 11,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+12.939"
             },
@@ -33676,7 +33676,7 @@
             {
               "pos": 16,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+20.284"
             },
@@ -33816,7 +33816,7 @@
             {
               "pos": 2,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+1.108"
             },
@@ -33851,7 +33851,7 @@
             {
               "pos": 7,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+4.220"
             },
@@ -33907,14 +33907,14 @@
             {
               "pos": 15,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+9.275"
             },
             {
               "pos": 16,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+9.297"
             },
@@ -33928,14 +33928,14 @@
             {
               "pos": 18,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+1:44.436"
             },
             {
               "pos": 19,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+1 Vuelta"
             },
@@ -33998,7 +33998,7 @@
             {
               "pos": 28,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "+16 Vueltas"
             },
@@ -34019,7 +34019,7 @@
             {
               "pos": 31,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "-"
             }
@@ -45026,7 +45026,7 @@
       "round": 5,
       "name": "Fecha 5 · La Plata",
       "circuit": {
-        "name": "Autódromo Roberto Mouras",
+        "name": "AutÃ³dromo Roberto Mouras",
         "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
@@ -45212,14 +45212,14 @@
             {
               "pos": 25,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+2.506"
             },
             {
               "pos": 26,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+2.548"
             },
@@ -45268,14 +45268,14 @@
             {
               "pos": 1,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "1:30.813"
             },
             {
               "pos": 2,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "+0.177"
             },
@@ -45324,7 +45324,7 @@
             {
               "pos": 9,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+0.910"
             },
@@ -45366,14 +45366,14 @@
             {
               "pos": 15,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+1.107"
             },
             {
               "pos": 16,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+1.141"
             },
@@ -45408,7 +45408,7 @@
             {
               "pos": 21,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+1.340"
             },
@@ -45450,7 +45450,7 @@
             {
               "pos": 27,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+1.959"
             },
@@ -45485,7 +45485,7 @@
             {
               "pos": 32,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+2.323"
             },
@@ -45611,7 +45611,7 @@
             {
               "pos": 15,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+1.000"
             },
@@ -45646,7 +45646,7 @@
             {
               "pos": 20,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+1.497"
             },
@@ -45877,7 +45877,7 @@
             {
               "pos": 21,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+1.047"
             },
@@ -45912,7 +45912,7 @@
             {
               "pos": 26,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+1.457"
             },
@@ -46003,14 +46003,14 @@
             {
               "pos": 6,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+0.461"
             },
             {
               "pos": 7,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+0.504"
             },
@@ -46038,7 +46038,7 @@
             {
               "pos": 11,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+0.780"
             },
@@ -46059,21 +46059,21 @@
             {
               "pos": 14,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "+0.888"
             },
             {
               "pos": 15,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "Vw Virtus",
               "gap": "+0.974"
             },
             {
               "pos": 16,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+0.982"
             },
@@ -46108,7 +46108,7 @@
             {
               "pos": 21,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "Vw Vento",
               "gap": "+1.313"
             },
@@ -46157,7 +46157,7 @@
             {
               "pos": 28,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+1.807"
             },
@@ -46353,7 +46353,7 @@
             {
               "pos": 8,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+8.556"
             },
@@ -46437,7 +46437,7 @@
             {
               "pos": 7,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+6.604"
             },
@@ -46507,14 +46507,14 @@
             {
               "pos": 5,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+6.614"
             },
             {
               "pos": 6,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+10.759"
             },
@@ -46535,7 +46535,7 @@
             {
               "pos": 9,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+15.239"
             },
@@ -46626,14 +46626,14 @@
             {
               "pos": 9,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+1 Vuelta"
             },
             {
               "pos": 10,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "+2 Vueltas"
             },
@@ -46661,7 +46661,7 @@
             {
               "pos": 1,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "7:40.352"
             },
@@ -46689,7 +46689,7 @@
             {
               "pos": 5,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+6.863"
             },
@@ -46710,7 +46710,7 @@
             {
               "pos": 8,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+30.223"
             },
@@ -46829,7 +46829,7 @@
             {
               "pos": 12,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+21.535"
             },
@@ -46843,7 +46843,7 @@
             {
               "pos": 14,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+23.976"
             },
@@ -46990,7 +46990,7 @@
             {
               "pos": 1,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "31:09.841"
             },
@@ -47060,7 +47060,7 @@
             {
               "pos": 11,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+22.107"
             },
@@ -47074,7 +47074,7 @@
             {
               "pos": 13,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+23.411"
             },
@@ -47102,7 +47102,7 @@
             {
               "pos": 17,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+25.877"
             },
@@ -47158,7 +47158,7 @@
             {
               "pos": 25,
               "number": "66",
-              "driver": "Adrian Percaz",
+              "driver": "Percãz Adriãn",
               "team": "Ford Focus",
               "gap": "+46.529"
             },
@@ -47172,7 +47172,7 @@
             {
               "pos": 27,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+1:14.835"
             },
@@ -47200,7 +47200,7 @@
             {
               "pos": 31,
               "number": "4",
-              "driver": "Jeronimo Teti",
+              "driver": "Teti Jerã“nimo",
               "team": "Chevrolet Cruze",
               "gap": "+12 Vueltas"
             },
@@ -47214,7 +47214,7 @@
             {
               "pos": 33,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+16 Vueltas"
             }
@@ -55826,7 +55826,7 @@
             {
               "pos": 9,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+1.516"
             },
@@ -55889,7 +55889,7 @@
             {
               "pos": 18,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+3.372"
             },
@@ -56001,7 +56001,7 @@
             {
               "pos": 1,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "1:53.113"
             },
@@ -56036,7 +56036,7 @@
             {
               "pos": 6,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+0.976"
             },
@@ -56078,7 +56078,7 @@
             {
               "pos": 12,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+1.515"
             },
@@ -56127,7 +56127,7 @@
             {
               "pos": 19,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+1.887"
             },
@@ -56176,14 +56176,14 @@
             {
               "pos": 26,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+2.935"
             },
             {
               "pos": 27,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+3.486"
             },
@@ -56288,7 +56288,7 @@
             {
               "pos": 8,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+0.537"
             },
@@ -56428,7 +56428,7 @@
             {
               "pos": 28,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+2.214"
             },
@@ -56477,14 +56477,14 @@
             {
               "pos": 1,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "1:52.960"
             },
             {
               "pos": 2,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+0.186"
             },
@@ -56505,14 +56505,14 @@
             {
               "pos": 5,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+0.332"
             },
             {
               "pos": 6,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+0.369"
             },
@@ -56575,7 +56575,7 @@
             {
               "pos": 15,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+0.821"
             },
@@ -56617,7 +56617,7 @@
             {
               "pos": 21,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+1.293"
             },
@@ -56729,7 +56729,7 @@
             {
               "pos": 4,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+1.610"
             },
@@ -56785,7 +56785,7 @@
             {
               "pos": 12,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+3.423"
             },
@@ -56974,7 +56974,7 @@
             {
               "pos": 5,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+1.080"
             },
@@ -57037,7 +57037,7 @@
             {
               "pos": 14,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+2.153"
             },
@@ -57065,14 +57065,14 @@
             {
               "pos": 18,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+2.677"
             },
             {
               "pos": 19,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+2.764"
             },
@@ -57093,7 +57093,7 @@
             {
               "pos": 22,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+3.246"
             },
@@ -57135,7 +57135,7 @@
             {
               "pos": 28,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "|Chevrolet Cruze",
               "gap": "+-"
             },
@@ -57198,7 +57198,7 @@
             {
               "pos": 4,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+4.614"
             },
@@ -57275,7 +57275,7 @@
             {
               "pos": 3,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+7.243"
             },
@@ -57289,7 +57289,7 @@
             {
               "pos": 5,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+10.580"
             },
@@ -57303,7 +57303,7 @@
             {
               "pos": 7,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+15.571"
             },
@@ -57373,7 +57373,7 @@
             {
               "pos": 4,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+12.154"
             },
@@ -57443,7 +57443,7 @@
             {
               "pos": 1,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "9:40.272"
             },
@@ -57478,7 +57478,7 @@
             {
               "pos": 6,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+5.534"
             },
@@ -57667,7 +57667,7 @@
             {
               "pos": 10,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+13.783"
             },
@@ -57758,7 +57758,7 @@
             {
               "pos": 23,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+6 Vueltas"
             },
@@ -57870,7 +57870,7 @@
             {
               "pos": 5,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+4.377"
             },
@@ -57905,7 +57905,7 @@
             {
               "pos": 10,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+14.378"
             },
@@ -57933,7 +57933,7 @@
             {
               "pos": 14,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+24.833"
             },
@@ -57961,7 +57961,7 @@
             {
               "pos": 18,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+32.940"
             },
@@ -58017,7 +58017,7 @@
             {
               "pos": 26,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+11 Vueltas"
             },
@@ -58031,7 +58031,7 @@
             {
               "pos": 28,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+-"
             },
@@ -65529,7 +65529,7 @@
             {
               "pos": 13,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+1.270"
             },
@@ -65592,7 +65592,7 @@
             {
               "pos": 22,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+1.990"
             },
@@ -65683,7 +65683,7 @@
             {
               "pos": 1,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "1:50.123"
             },
@@ -65725,7 +65725,7 @@
             {
               "pos": 7,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+0.471"
             },
@@ -65816,7 +65816,7 @@
             {
               "pos": 20,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+1.798"
             },
@@ -65830,7 +65830,7 @@
             {
               "pos": 22,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+2.354"
             },
@@ -65865,7 +65865,7 @@
             {
               "pos": 27,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+2.872"
             },
@@ -65893,7 +65893,7 @@
             {
               "pos": 31,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+10.084"
             },
@@ -66005,7 +66005,7 @@
             {
               "pos": 13,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+0.568"
             },
@@ -66026,7 +66026,7 @@
             {
               "pos": 16,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+0.758"
             },
@@ -66180,7 +66180,7 @@
             {
               "pos": 4,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+0.433"
             },
@@ -66243,21 +66243,21 @@
             {
               "pos": 13,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+1.058"
             },
             {
               "pos": 14,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+1.200"
             },
             {
               "pos": 15,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+1.354"
             },
@@ -66285,7 +66285,7 @@
             {
               "pos": 19,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+1.448"
             },
@@ -66369,7 +66369,7 @@
             {
               "pos": 31,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+3.003"
             },
@@ -66467,7 +66467,7 @@
             {
               "pos": 11,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+1.188"
             },
@@ -66600,7 +66600,7 @@
             {
               "pos": 30,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+11.446"
             },
@@ -66656,7 +66656,7 @@
             {
               "pos": 4,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+0.140"
             },
@@ -66677,7 +66677,7 @@
             {
               "pos": 7,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+0.259"
             },
@@ -66698,7 +66698,7 @@
             {
               "pos": 10,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+0.382"
             },
@@ -66712,14 +66712,14 @@
             {
               "pos": 12,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+0.589"
             },
             {
               "pos": 13,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+0.671"
             },
@@ -66845,7 +66845,7 @@
             {
               "pos": 31,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+3.501"
             },
@@ -66964,28 +66964,28 @@
             {
               "pos": 2,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+0.258"
             },
             {
               "pos": 3,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+0.660"
             },
             {
               "pos": 4,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+1.075"
             },
             {
               "pos": 5,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+1.731"
             },
@@ -67013,7 +67013,7 @@
             {
               "pos": 9,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+6.021"
             },
@@ -67069,7 +67069,7 @@
             {
               "pos": 4,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+2.368"
             },
@@ -67258,7 +67258,7 @@
             {
               "pos": 5,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+13.551"
             },
@@ -67335,7 +67335,7 @@
             {
               "pos": 4,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+6.292"
             },
@@ -67426,7 +67426,7 @@
             {
               "pos": 5,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+4.032"
             },
@@ -67454,7 +67454,7 @@
             {
               "pos": 9,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+8.994"
             },
@@ -67650,7 +67650,7 @@
             {
               "pos": 3,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Honda Civic",
               "gap": "+5.705"
             },
@@ -67706,7 +67706,7 @@
             {
               "pos": 11,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+20.433"
             },
@@ -67762,7 +67762,7 @@
             {
               "pos": 19,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento",
               "gap": "+37.698"
             },
@@ -67783,7 +67783,7 @@
             {
               "pos": 22,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+40.439"
             },
@@ -67811,7 +67811,7 @@
             {
               "pos": 26,
               "number": "94",
-              "driver": "Gonzalo Antolin",
+              "driver": "Antolãn Gonzalo",
               "team": "Chevrolet Cruze",
               "gap": "+8 Vueltas"
             },
@@ -67846,7 +67846,7 @@
             {
               "pos": 31,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+15 Vueltas"
             },
@@ -75141,10 +75141,10 @@
       "id": "tn-2026-8",
       "seriesId": "tn",
       "round": 8,
-      "name": "Fecha 8 · Oberá",
+      "name": "Fecha 8 · OberÃ¡",
       "circuit": {
-        "name": "Autódromo Ciudad de Oberá",
-        "city": "Oberá",
+        "name": "AutÃ³dromo Ciudad de OberÃ¡",
+        "city": "OberÃ¡",
         "country": "Argentina",
         "flag": "AR",
         "province": ""
@@ -75252,7 +75252,7 @@
             {
               "pos": 14,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+2.113"
             },
@@ -75280,7 +75280,7 @@
             {
               "pos": 18,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+2.659"
             },
@@ -75399,7 +75399,7 @@
             {
               "pos": 4,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+0.433"
             },
@@ -75413,7 +75413,7 @@
             {
               "pos": 6,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Ford Focus",
               "gap": "+0.829"
             },
@@ -75462,7 +75462,7 @@
             {
               "pos": 13,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento GLI",
               "gap": "+1.707"
             },
@@ -75476,7 +75476,7 @@
             {
               "pos": 15,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+2.335"
             },
@@ -75511,7 +75511,7 @@
             {
               "pos": 20,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+4.610"
             },
@@ -75735,7 +75735,7 @@
             {
               "pos": 21,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+1.917"
             },
@@ -75763,7 +75763,7 @@
             {
               "pos": 25,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+2.440"
             },
@@ -75819,7 +75819,7 @@
             {
               "pos": 2,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+0.568"
             },
@@ -75882,7 +75882,7 @@
             {
               "pos": 11,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento GLI",
               "gap": "+1.442"
             },
@@ -75910,14 +75910,14 @@
             {
               "pos": 15,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+1.614"
             },
             {
               "pos": 16,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Ford Focus",
               "gap": "+1.614"
             },
@@ -75987,7 +75987,7 @@
             {
               "pos": 26,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+3.169"
             },
@@ -76106,7 +76106,7 @@
             {
               "pos": 12,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+0.863"
             },
@@ -76155,7 +76155,7 @@
             {
               "pos": 19,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+1.427"
             },
@@ -76253,7 +76253,7 @@
             {
               "pos": 2,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "+0.036"
             },
@@ -76267,14 +76267,14 @@
             {
               "pos": 4,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento GLI",
               "gap": "+0.668"
             },
             {
               "pos": 5,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Ford Focus",
               "gap": "+0.671"
             },
@@ -76323,7 +76323,7 @@
             {
               "pos": 12,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+1.028"
             },
@@ -76337,7 +76337,7 @@
             {
               "pos": 14,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+1.382"
             },
@@ -76498,7 +76498,7 @@
             {
               "pos": 6,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+10.139"
             },
@@ -76519,7 +76519,7 @@
             {
               "pos": 9,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+13.103"
             },
@@ -76659,7 +76659,7 @@
             {
               "pos": 13,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Ford Focus",
               "gap": "+10.004"
             },
@@ -76806,14 +76806,14 @@
             {
               "pos": 1,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "9:49.044"
             },
             {
               "pos": 2,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento GLI",
               "gap": "+4.131"
             },
@@ -76841,14 +76841,14 @@
             {
               "pos": 6,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+10.433"
             },
             {
               "pos": 7,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+12.379"
             },
@@ -76988,7 +76988,7 @@
             {
               "pos": 11,
               "number": "79",
-              "driver": "Andres Calderon",
+              "driver": "Calderã“n Andrã‰s",
               "team": "Peugeot 208",
               "gap": "+13.606"
             },
@@ -77114,7 +77114,7 @@
             {
               "pos": 29,
               "number": "192",
-              "driver": "Martin Blasig",
+              "driver": "Blasig Martãn",
               "team": "Peugeot 208",
               "gap": "+EX"
             }
@@ -77135,7 +77135,7 @@
             {
               "pos": 1,
               "number": "1",
-              "driver": "Julian Santero",
+              "driver": "Santero Juliãn",
               "team": "VW Virtus",
               "gap": "38:19.258"
             },
@@ -77156,7 +77156,7 @@
             {
               "pos": 4,
               "number": "24",
-              "driver": "Sebastian Gomez",
+              "driver": "Gomez Sebastiãn",
               "team": "VW Vento GLI",
               "gap": "+9.115"
             },
@@ -77254,14 +77254,14 @@
             {
               "pos": 18,
               "number": "144",
-              "driver": "Leonel Pernia",
+              "driver": "Pernãa Leonel",
               "team": "Ford Focus",
               "gap": "+36.737"
             },
             {
               "pos": 19,
               "number": "89",
-              "driver": "Jeremias Olmedo",
+              "driver": "Olmedo Jeremãas",
               "team": "Chevrolet Cruze",
               "gap": "+2 Vueltas"
             },
@@ -77296,7 +77296,7 @@
             {
               "pos": 24,
               "number": "9",
-              "driver": "Fabian Yannantuoni",
+              "driver": "Yannantuoni Fabiãn",
               "team": "Ford Focus",
               "gap": "+7 Vueltas"
             },
@@ -82150,7 +82150,7 @@
       "round": 9,
       "name": "Fecha 9 · Rio Cuarto",
       "circuit": {
-        "name": "Autódromo Ciudad de Rio Cuarto",
+        "name": "AutÃ³dromo Ciudad de Rio Cuarto",
         "city": "Rio Cuarto",
         "country": "Argentina",
         "flag": "AR",
@@ -82264,6 +82264,30 @@
       "source": "Wikipedia · 2026 Formula 2 Championship"
     },
     {
+      "id": "tcm-2026-9",
+      "seriesId": "tc-mouras",
+      "round": 9,
+      "name": "Fecha 9 · La Plata",
+      "circuit": {
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcm-2026-9-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-09-27T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 35
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tcpk-2026-8",
       "seriesId": "tc-pick-up",
       "round": 8,
@@ -82280,7 +82304,7 @@
           "id": "tcpk-2026-8-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-09-26T12:00:00-03:00",
+          "start": "2026-09-27T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 35
         }
@@ -82304,33 +82328,9 @@
           "id": "tcppk-2026-8-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-09-26T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tcm-2026-9",
-      "seriesId": "tc-mouras",
-      "round": 9,
-      "name": "Fecha 9 · La Plata",
-      "circuit": {
-        "name": "Roberto José Mouras",
-        "city": "La Plata",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcm-2026-9-final",
-          "kind": "final",
-          "name": "Final",
           "start": "2026-09-27T12:00:00-03:00",
           "timeKnown": false,
-          "durationMin": 35
+          "durationMin": 30
         }
       ],
       "source": "ACTC (calendario)"
@@ -82530,10 +82530,10 @@
       "id": "tn-2026-10",
       "seriesId": "tn",
       "round": 10,
-      "name": "Fecha 10 · San Martín",
+      "name": "Fecha 10 · San MartÃ­n",
       "circuit": {
-        "name": "Autódromo Ciudad de San Martín",
-        "city": "San Martín",
+        "name": "AutÃ³dromo Ciudad de San MartÃ­n",
+        "city": "San MartÃ­n",
         "country": "Argentina",
         "flag": "AR",
         "province": ""
@@ -82843,7 +82843,7 @@
       "round": 11,
       "name": "Fecha 11 · San Nicolas",
       "circuit": {
-        "name": "Autódromo San Nicolás Ciudad",
+        "name": "AutÃ³dromo San NicolÃ¡s Ciudad",
         "city": "San Nicolas",
         "country": "Argentina",
         "flag": "AR",
@@ -83218,7 +83218,7 @@
       "round": 12,
       "name": "Fecha 12 · Viedma",
       "circuit": {
-        "name": "Autódromo Ciudad de Viedma",
+        "name": "AutÃ³dromo Ciudad de Viedma",
         "city": "Viedma",
         "country": "Argentina",
         "flag": "AR",
@@ -84098,7 +84098,7 @@
       },
       {
         "pos": 39,
-        "driver": "Nicolás Jaime",
+        "driver": "Nicolã¡s Jaime",
         "team": "GR Competicion",
         "points": 2
       }
@@ -86097,7 +86097,7 @@
         {
           "pos": 33,
           "driver": "Daniel Costa Sanchez",
-          "team": "MSC Competición",
+          "team": "MSC CompeticiÃ³n",
           "points": 26
         },
         {

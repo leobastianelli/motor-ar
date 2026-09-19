@@ -1,34 +1,17 @@
 {
-  "generatedAt": "2026-09-17T11:30:42.142Z",
+  "generatedAt": "2026-09-19T07:53:57.629Z",
   "drivers": [
     {
-      "key": "adrian percaz",
+      "key": "agusta bonomo n",
       "keys": [
-        "adrian percaz"
+        "agustin bonomo",
+        "agusta bonomo n"
       ],
-      "slug": "adrian-percaz",
-      "name": "Adrian Percaz",
-      "aliases": [],
-      "series": [
-        "tn"
+      "slug": "agusta-n-bonomo",
+      "name": "Agustãn Bonomo",
+      "aliases": [
+        "Agustin Bonomo"
       ],
-      "numbers": {
-        "tn": "66"
-      },
-      "teams": {
-        "tn": "Ford Focus"
-      },
-      "firstSeen": "2026-02-07",
-      "lastSeen": "2026-06-07"
-    },
-    {
-      "key": "agustin bonomo",
-      "keys": [
-        "agustin bonomo"
-      ],
-      "slug": "agustin-bonomo",
-      "name": "Agustin Bonomo",
-      "aliases": [],
       "series": [
         "tn"
       ],
@@ -44,11 +27,14 @@
     {
       "key": "agustin canapino",
       "keys": [
-        "agustin canapino"
+        "agustin canapino",
+        "agusta canapino n"
       ],
       "slug": "agustin-canapino",
       "name": "Agustín Canapino",
-      "aliases": [],
+      "aliases": [
+        "Agustãn Canapino"
+      ],
       "series": [
         "tn",
         "tc",
@@ -213,6 +199,26 @@
       "lastSeen": "2026-08-16"
     },
     {
+      "key": "andra caldera n s",
+      "keys": [
+        "andra caldera n s"
+      ],
+      "slug": "andra-s-caldera-n",
+      "name": "Andrã‰s Calderã“n",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "79"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
       "key": "andres calderon",
       "keys": [
         "andres calderon"
@@ -256,13 +262,16 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "key": "antonino garcia",
+      "key": "a antonino garca",
       "keys": [
-        "antonino garcia"
+        "antonino garcia",
+        "a antonino garca"
       ],
-      "slug": "antonino-garcia",
-      "name": "Antonino Garcia",
-      "aliases": [],
+      "slug": "antonino-garca-a",
+      "name": "Antonino Garcãa",
+      "aliases": [
+        "Antonino Garcia"
+      ],
       "series": [
         "tn"
       ],
@@ -426,6 +435,29 @@
       "lastSeen": "2026-04-05"
     },
     {
+      "key": "blasig marta n",
+      "keys": [
+        "blasig martin",
+        "blasig marta n"
+      ],
+      "slug": "blasig-marta-n",
+      "name": "Blasig Martãn",
+      "aliases": [
+        "Martin Blasig"
+      ],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "192"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-04-04",
+      "lastSeen": "2026-08-30"
+    },
+    {
       "key": "braian quevedo",
       "keys": [
         "braian quevedo"
@@ -571,13 +603,16 @@
       "lastSeen": "2026-05-03"
     },
     {
-      "key": "damian kirstein",
+      "key": "damia kirstein n",
       "keys": [
-        "damian kirstein"
+        "damian kirstein",
+        "damia kirstein n"
       ],
-      "slug": "damian-kirstein",
-      "name": "Damian Kirstein",
-      "aliases": [],
+      "slug": "damia-n-kirstein",
+      "name": "Damiãn Kirstein",
+      "aliases": [
+        "Damian Kirstein"
+      ],
       "series": [
         "tn"
       ],
@@ -794,6 +829,29 @@
       "lastSeen": "2026-03-22"
     },
     {
+      "key": "donzino ma ximo",
+      "keys": [
+        "donzino maximo",
+        "donzino ma ximo"
+      ],
+      "slug": "donzino-ma-ximo",
+      "name": "Donzino Mãximo",
+      "aliases": [
+        "Maximo Donzino"
+      ],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "71"
+      },
+      "teams": {
+        "tn": "Ford F Kinetic"
+      },
+      "firstSeen": "2026-03-15",
+      "lastSeen": "2026-08-02"
+    },
+    {
       "key": "craparo elio",
       "keys": [
         "craparo elio"
@@ -954,13 +1012,16 @@
       "lastSeen": "2026-08-30"
     },
     {
-      "key": "fabian yannantuoni",
+      "key": "fabia n yannantuoni",
       "keys": [
-        "fabian yannantuoni"
+        "fabian yannantuoni",
+        "fabia n yannantuoni"
       ],
-      "slug": "fabian-yannantuoni",
-      "name": "Fabian Yannantuoni",
-      "aliases": [],
+      "slug": "fabia-n-yannantuoni",
+      "name": "Fabiãn Yannantuoni",
+      "aliases": [
+        "Fabian Yannantuoni"
+      ],
       "series": [
         "tn"
       ],
@@ -1515,13 +1576,41 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "key": "antolin gonzalo",
+      "key": "gomez n sebastia",
       "keys": [
-        "antolin gonzalo"
+        "gomez sebastian",
+        "ga mez n sebastia",
+        "gomez n sebastia"
       ],
-      "slug": "gonzalo-antolin",
-      "name": "Gonzalo Antolin",
-      "aliases": [],
+      "slug": "gomez-sebastia-n",
+      "name": "Gomez Sebastiãn",
+      "aliases": [
+        "Sebastian Gomez",
+        "Sebastiãn Gã“mez"
+      ],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "24"
+      },
+      "teams": {
+        "tn": "VW Vento GLI"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "antola gonzalo n",
+      "keys": [
+        "antolin gonzalo",
+        "antola gonzalo n"
+      ],
+      "slug": "gonzalo-antola-n",
+      "name": "Gonzalo Antolãn",
+      "aliases": [
+        "Gonzalo Antolin"
+      ],
       "series": [
         "tn"
       ],
@@ -1827,11 +1916,14 @@
     {
       "key": "jeremias olmedo",
       "keys": [
-        "jeremias olmedo"
+        "jeremias olmedo",
+        "as jerema olmedo"
       ],
       "slug": "jeremias-olmedo",
       "name": "Jeremías Olmedo",
-      "aliases": [],
+      "aliases": [
+        "Jeremãas Olmedo"
+      ],
       "series": [
         "tn",
         "tc"
@@ -1870,11 +1962,14 @@
     {
       "key": "jeronimo teti",
       "keys": [
-        "jeronimo teti"
+        "jeronimo teti",
+        "jera nimo teti"
       ],
       "slug": "jeronimo-teti",
       "name": "Jerónimo Teti",
-      "aliases": [],
+      "aliases": [
+        "Jerã“nimo Teti"
+      ],
       "series": [
         "tn",
         "tc"
@@ -2489,11 +2584,14 @@
     {
       "key": "julian santero",
       "keys": [
-        "julian santero"
+        "julian santero",
+        "julia n santero"
       ],
       "slug": "julian-santero",
       "name": "Julián Santero",
-      "aliases": [],
+      "aliases": [
+        "Juliãn Santero"
+      ],
       "series": [
         "tn",
         "tc",
@@ -2505,7 +2603,7 @@
         "tc-pick-up": "68"
       },
       "teams": {
-        "tn": "VW Virtus",
+        "tn": "Ford Focus",
         "tc": "BMW",
         "tc-pick-up": "Toyota"
       },
@@ -2574,13 +2672,16 @@
       "lastSeen": "2026-08-30"
     },
     {
-      "key": "gonzalez leandro",
+      "key": "gonza leandro lez",
       "keys": [
-        "gonzalez leandro"
+        "gonzalez leandro",
+        "gonza leandro lez"
       ],
-      "slug": "leandro-gonzalez",
-      "name": "Leandro Gonzalez",
-      "aliases": [],
+      "slug": "leandro-gonza-lez",
+      "name": "Leandro Gonzãlez",
+      "aliases": [
+        "Leandro Gonzalez"
+      ],
       "series": [
         "tn"
       ],
@@ -2637,13 +2738,16 @@
       "lastSeen": "2026-08-30"
     },
     {
-      "key": "leonel pernia",
+      "key": "a leonel perna",
       "keys": [
-        "leonel pernia"
+        "leonel pernia",
+        "a leonel perna"
       ],
-      "slug": "leonel-pernia",
-      "name": "Leonel Pernia",
-      "aliases": [],
+      "slug": "leonel-perna-a",
+      "name": "Leonel Pernãa",
+      "aliases": [
+        "Leonel Pernia"
+      ],
       "series": [
         "tn"
       ],
@@ -3030,13 +3134,16 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "key": "fernandez marcos",
+      "key": "ferna marcos ndez",
       "keys": [
-        "fernandez marcos"
+        "fernandez marcos",
+        "ferna marcos ndez"
       ],
-      "slug": "marcos-fernandez",
-      "name": "Marcos Fernandez",
-      "aliases": [],
+      "slug": "marcos-ferna-ndez",
+      "name": "Marcos Fernãndez",
+      "aliases": [
+        "Marcos Fernandez"
+      ],
       "series": [
         "tn"
       ],
@@ -3135,33 +3242,16 @@
       "lastSeen": "2026-04-26"
     },
     {
-      "key": "blasig martin",
+      "key": "leston marta n",
       "keys": [
-        "blasig martin"
+        "leston martin",
+        "leston marta n"
       ],
-      "slug": "martin-blasig",
-      "name": "Martin Blasig",
-      "aliases": [],
-      "series": [
-        "tn"
+      "slug": "marta-n-leston",
+      "name": "Martãn Leston",
+      "aliases": [
+        "Martin Leston"
       ],
-      "numbers": {
-        "tn": "192"
-      },
-      "teams": {
-        "tn": "Peugeot 208"
-      },
-      "firstSeen": "2026-04-04",
-      "lastSeen": "2026-08-30"
-    },
-    {
-      "key": "leston martin",
-      "keys": [
-        "leston martin"
-      ],
-      "slug": "martin-leston",
-      "name": "Martin Leston",
-      "aliases": [],
       "series": [
         "tn"
       ],
@@ -3258,6 +3348,49 @@
       "lastSeen": "2026-09-13"
     },
     {
+      "key": "as cohen mata",
+      "keys": [
+        "cohen matias",
+        "as cohen mata"
+      ],
+      "slug": "mata-as-cohen",
+      "name": "Matãas Cohen",
+      "aliases": [
+        "Matias Cohen"
+      ],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "77"
+      },
+      "teams": {
+        "tn": "VW Virtus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "as m mata mua oz",
+      "keys": [
+        "as m mata mua oz"
+      ],
+      "slug": "mata-as-mua-oz-m",
+      "name": "Matãas Muã‘oz M.",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "16"
+      },
+      "teams": {
+        "tn": "VENTO"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-02-08"
+    },
+    {
       "key": "canapino matias",
       "keys": [
         "canapino matias"
@@ -3276,26 +3409,6 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-09-13"
-    },
-    {
-      "key": "cohen matias",
-      "keys": [
-        "cohen matias"
-      ],
-      "slug": "matias-cohen",
-      "name": "Matias Cohen",
-      "aliases": [],
-      "series": [
-        "tn"
-      ],
-      "numbers": {
-        "tn": "77"
-      },
-      "teams": {
-        "tn": "VW Virtus"
-      },
-      "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-02"
     },
     {
       "key": "frano matias",
@@ -3426,26 +3539,6 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-08-30"
-    },
-    {
-      "key": "donzino maximo",
-      "keys": [
-        "donzino maximo"
-      ],
-      "slug": "maximo-donzino",
-      "name": "Maximo Donzino",
-      "aliases": [],
-      "series": [
-        "tn"
-      ],
-      "numbers": {
-        "tn": "71"
-      },
-      "teams": {
-        "tn": "Ford F Kinetic"
-      },
-      "firstSeen": "2026-03-15",
-      "lastSeen": "2026-08-02"
     },
     {
       "key": "ciaurro miguel",
@@ -3653,24 +3746,27 @@
     {
       "key": "jaime nicolas",
       "keys": [
-        "jaime nicolas"
+        "jaime nicolas",
+        "jaime nicola s"
       ],
       "slug": "nicolas-jaime",
       "name": "Nicolás Jaime",
-      "aliases": [],
+      "aliases": [
+        "Nicolã¡s Jaime"
+      ],
       "series": [
         "tc-mouras",
         "tn",
         "tc-pista"
       ],
       "numbers": {
-        "tc-mouras": "176",
         "tn": "176",
+        "tc-mouras": "176",
         "tc-pista": "176"
       },
       "teams": {
-        "tc-mouras": "Dodge",
         "tn": "Toyota Corolla",
+        "tc-mouras": "Dodge",
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-01-23",
@@ -3844,6 +3940,29 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "adria n perca z",
+      "keys": [
+        "adrian percaz",
+        "adria n perca z"
+      ],
+      "slug": "perca-z-adria-n",
+      "name": "Percãz Adriãn",
+      "aliases": [
+        "Adrian Percaz"
+      ],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "66"
+      },
+      "teams": {
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-06-07"
     },
     {
       "key": "cano ramiro",
@@ -4144,26 +4263,6 @@
       "lastSeen": "2026-08-02"
     },
     {
-      "key": "gomez sebastian",
-      "keys": [
-        "gomez sebastian"
-      ],
-      "slug": "sebastian-gomez",
-      "name": "Sebastian Gomez",
-      "aliases": [],
-      "series": [
-        "tn"
-      ],
-      "numbers": {
-        "tn": "24"
-      },
-      "teams": {
-        "tn": "VW Vento GLI"
-      },
-      "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
-    },
-    {
       "key": "salse sebastian",
       "keys": [
         "salse sebastian"
@@ -4184,13 +4283,16 @@
       "lastSeen": "2026-08-16"
     },
     {
-      "key": "fernandez sergio",
+      "key": "ferna ndez sergio",
       "keys": [
-        "fernandez sergio"
+        "fernandez sergio",
+        "ferna ndez sergio"
       ],
-      "slug": "sergio-fernandez",
-      "name": "Sergio Fernandez",
-      "aliases": [],
+      "slug": "sergio-ferna-ndez",
+      "name": "Sergio Fernãndez",
+      "aliases": [
+        "Sergio Fernandez"
+      ],
       "series": [
         "tn"
       ],
@@ -4264,13 +4366,16 @@
       "lastSeen": "2026-08-30"
     },
     {
-      "key": "martinez thiago",
+      "key": "marta nez thiago",
       "keys": [
-        "martinez thiago"
+        "martinez thiago",
+        "marta nez thiago"
       ],
-      "slug": "thiago-martinez",
-      "name": "Thiago Martinez",
-      "aliases": [],
+      "slug": "thiago-marta-nez",
+      "name": "Thiago Martãnez",
+      "aliases": [
+        "Thiago Martinez"
+      ],
       "series": [
         "tn"
       ],
@@ -4439,13 +4544,16 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "key": "tomas vitar",
+      "key": "s toma vitar",
       "keys": [
-        "tomas vitar"
+        "tomas vitar",
+        "s toma vitar"
       ],
-      "slug": "tomas-vitar",
-      "name": "Tomas Vitar",
-      "aliases": [],
+      "slug": "toma-s-vitar",
+      "name": "Tomãs Vitar",
+      "aliases": [
+        "Tomas Vitar"
+      ],
       "series": [
         "tn"
       ],
