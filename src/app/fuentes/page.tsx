@@ -20,6 +20,7 @@ const SOURCES: { name: string; url: string; what: string; license?: string }[] =
   { name: "Jolpica-F1", url: "https://api.jolpi.ca/ergast/f1/", what: "Calendario, horarios, resultados y campeonato de la Fórmula 1." },
   { name: "OpenF1", url: "https://openf1.org", what: "Resultados de prácticas y clasificación sprint de la Fórmula 1." },
   { name: "GT World Challenge Europe", url: "https://www.gt-world-challenge-europe.com", what: "Horarios oficiales (hora local y GMT) y resultados de cada sesión del Sprint Cup y del Endurance Cup, con clase y número de cada auto." },
+  { name: "Speedhive · MYLAPS", url: "https://speedhive.mylaps.com", what: "Cronometraje del Turismo Nacional: hora real de inicio de cada sesión y clasificación provisoria, mientras APAT no publica los resultados oficiales." },
   { name: "YouTube · GT World", url: "https://www.youtube.com/@GTWorld", what: "Transmisión y resumen de cada sesión del GT World Challenge Europe, desde el canal oficial y con la API oficial de YouTube." },
   { name: "Campeones · campeones.com.ar", url: "https://campeones.com.ar/category/tc2000/", what: "Notas de TC2000 de las que salen sede, hora de la carrera, pole y ganador de cada fecha." },
   { name: "SoloTC", url: "https://www.solotc.com.ar", what: "Notas de cronograma usadas para verificar horarios de las categorías de la ACTC." },

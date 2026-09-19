@@ -7,6 +7,7 @@ import { f2Season } from "./f2.mjs";
 import { gtwcSeason } from "./gtwc.mjs";
 import { gtwcOfficial, keepPreviousGtwc } from "./gtwc-official.mjs";
 import { gtwcYoutube, keepPreviousYoutube } from "./gtwc-youtube.mjs";
+import { keepPreviousSpeedhive, speedhiveTn } from "./speedhive-tn.mjs";
 import { actcTiming, keepPreviousTiming, TIMING_SERIES } from "./actc-timing.mjs";
 import { fiaF2, keepPreviousFia } from "./fia-f2.mjs";
 import { keepPreviousOpenf1, openf1Sessions } from "./openf1.mjs";
@@ -161,6 +162,19 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
     failures.push(`YouTube GT World: ${error.message} (se conservan los videos anteriores)`);
     events = keepPreviousYoutube(events, previous);
     meta.gtwcYoutube = previous.meta?.gtwcYoutube ?? null;
+  }
+
+  // Turismo Nacional: hora real y clasificación de cada sesión desde el cronometraje (Speedhive), sólo donde falta.
+  try {
+    const knownNames = [...(standings.tn ?? []).map((r) => r.driver), ...events.filter((e) => e.seriesId === "tn").flatMap((e) => e.sessions.flatMap((s) => s.results?.map((r) => r.driver) ?? []))];
+    const sh = await speedhiveTn(io, events, previous, { windowDays: io.timingWindowDays ?? 21, knownNames });
+    events = sh.events;
+    Object.assign(meta, sh.meta);
+    if (sh.meta.speedhiveTn.errors.length) failures.push("Speedhive TN: " + sh.meta.speedhiveTn.errors.join("; "));
+  } catch (error) {
+    failures.push("Speedhive TN: " + error.message + " (se conservan los datos anteriores)");
+    events = keepPreviousSpeedhive(events, previous);
+    meta.speedhiveTn = previous.meta?.speedhiveTn ?? null;
   }
 
   events.sort((a, b) => new Date(a.sessions[0].start) - new Date(b.sessions[0].start));
