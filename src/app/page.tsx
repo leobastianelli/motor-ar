@@ -137,7 +137,13 @@ export default async function Home() {
             ))
           ) : (
             <li>
-              <StateTag kind="no-data">Sin tiempos en vivo</StateTag>
+              {timingUrl ? (
+                <a href={timingUrl} target="_blank" rel="noreferrer">
+                  <StateTag kind="live">Tiempos en vivo en Speedhive ↗</StateTag>
+                </a>
+              ) : (
+                <StateTag kind="no-data">Sin tiempos en vivo</StateTag>
+              )}
             </li>
           )}
         </ol>
