@@ -47,6 +47,8 @@ export interface ResultRow {
   grid?: number;
   /** Número del auto, si la fuente lo publica. */
   number?: string;
+  /** Clase dentro de la carrera (GT: Pro, Gold, Silver o Bronze Cup), si la fuente la publica. */
+  class?: string;
   /** Posición tal como la publica la fuente ("R" = abandono, etc.). */
   positionText?: string;
   status?: string;

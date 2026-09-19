@@ -82,7 +82,8 @@ export function weekendWindow(now: string) {
 
 const normalize = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
 const SLUG_BY_NAME = new Map(drivers.flatMap((d) => [d.name, ...(d.aliases ?? [])].map((n) => [normalize(n), d.slug] as const)));
-const slugFor = (name: string) => SLUG_BY_NAME.get(normalize(name));
+// En las tripulaciones ("A / B / C", GT y resistencia) alcanza con que alguno de los pilotos sea uno de los nuestros.
+const slugFor = (name: string) => SLUG_BY_NAME.get(normalize(name)) ?? name.split(" / ").map((n) => SLUG_BY_NAME.get(normalize(n))).find(Boolean);
 
 const RACE_KINDS = ["carrera", "final", "sprint"];
 

@@ -46,7 +46,7 @@ export const drivers: Driver[] = [
     career: [
       { year: "2020", series: "F4 España", team: "MP Motorsport", highlight: "Primer año en monoplazas en Europa." },
       { year: "2023", series: "TCR South America", team: "Squadra Martino", highlight: "Campeón con cinco victorias; además, tercero en el TC2000." },
-      { year: "2026", series: "GT World Challenge Europe", team: "Team WRT", highlight: "Temporada en el Sprint Cup, con un segundo puesto en Magny-Cours." },
+      { year: "2026", series: "GT World Challenge Europe", team: "Team WRT", highlight: "Sprint y Endurance Cup con el BMW número 30 de Team WRT (clase Silver); segundo en la Carrera 2 de Magny-Cours." },
     ].reverse(),
   },
   {

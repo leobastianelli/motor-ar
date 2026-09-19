@@ -51,7 +51,7 @@ function Ranking({ rows }: { rows: ResultRow[] }) {
           <span className="driver-code">{tag(r)}</span>
           <strong>
             {r.driver}
-            {r.team && <small>{r.team}</small>}
+            {(r.team || r.class) && <small>{[r.team, r.class].filter(Boolean).join(" · ")}</small>}
           </strong>
           <time>{shownGap(r)}</time>
         </div>
