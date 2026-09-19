@@ -1,3 +1,4 @@
+import { repairMojibake } from "./common.mjs";
 import { wikiRawUrl } from "./wiki-pages.mjs";
 
 // Entrada/salida de las fuentes dentro de Next: cada URL queda en la caché de datos con su propio tiempo de revalidación,
@@ -9,7 +10,7 @@ async function text(url: string, options: { revalidate?: number; headers?: Recor
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const res = await fetch(url, { headers: { ...UA, ...options.headers }, next: { revalidate: options.revalidate ?? 3600 } });
-      if (res.ok) return await res.text();
+      if (res.ok) return repairMojibake(await res.text());
       lastError = new Error(`${res.status} al pedir ${url}`);
     } catch (error) {
       lastError = error;

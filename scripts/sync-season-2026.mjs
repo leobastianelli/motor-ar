@@ -2,6 +2,7 @@
 // El sitio en producción refresca estos datos solo; este script sirve para actualizar el repo.
 // Uso: npm run sync:season
 import fs from "node:fs";
+import { repairMojibake } from "../src/lib/sources/common.mjs";
 import { buildDriverIndex } from "../src/lib/sources/driver-index.mjs";
 import { buildSeason } from "../src/lib/sources/season.mjs";
 import { wikiRawUrl } from "../src/lib/sources/wiki-pages.mjs";
@@ -13,7 +14,7 @@ async function text(url, options = {}) {
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
       const res = await fetch(url, { headers: { ...UA, ...options.headers } });
-      if (res.ok) return await res.text();
+      if (res.ok) return repairMojibake(await res.text());
     } catch {
       // reintento
     }
