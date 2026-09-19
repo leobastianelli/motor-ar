@@ -138,9 +138,9 @@ export default async function Home() {
           ) : (
             <li>
               {timingUrl ? (
-                <a href={timingUrl} target="_blank" rel="noreferrer">
-                  <StateTag kind="live">Tiempos en vivo en Speedhive ↗</StateTag>
-                </a>
+                <Link href={`/eventos/${live.event.id}#tiempos-en-vivo`}>
+                  <StateTag kind="live">Ver los tiempos en vivo →</StateTag>
+                </Link>
               ) : (
                 <StateTag kind="no-data">Sin tiempos en vivo</StateTag>
               )}
@@ -156,9 +156,9 @@ export default async function Home() {
             </a>
           )}
           {timingUrl && (
-            <a href={timingUrl} target="_blank" rel="noreferrer">
-              Tiempos en vivo <span aria-hidden="true">↗</span>
-            </a>
+            <Link href={`/eventos/${live.event.id}#tiempos-en-vivo`}>
+              Tiempos en vivo <span aria-hidden="true">→</span>
+            </Link>
           )}
         </div>
       </section>

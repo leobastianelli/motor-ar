@@ -195,10 +195,10 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
             ))}
           </div>
           {timingUrl && (
-            <>
+            <section id="tiempos-en-vivo">
               <SectionTitle title="Tiempos en vivo" />
               <LiveTimingEmbed url={timingUrl} />
-            </>
+            </section>
           )}
         </div>
 
@@ -222,8 +222,8 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
             </a>
           )}
           {timingUrl && (
-            <a href={timingUrl} target="_blank" rel="noreferrer">
-              Tiempos en vivo <span aria-hidden="true">↗</span>
+            <a href="#tiempos-en-vivo">
+              Tiempos en vivo <span aria-hidden="true">↓</span>
             </a>
           )}
           <p>
