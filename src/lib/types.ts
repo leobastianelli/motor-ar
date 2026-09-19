@@ -47,6 +47,8 @@ export interface ResultRow {
   grid?: number;
   /** Número del auto, si la fuente lo publica. */
   number?: string;
+  /** Clase dentro de la carrera (GT: Pro, Gold, Silver o Bronze Cup), si la fuente la publica. */
+  class?: string;
   /** Posición tal como la publica la fuente ("R" = abandono, etc.). */
   positionText?: string;
   status?: string;
@@ -66,11 +68,13 @@ export interface Session {
   results?: ResultRow[];
   /** Documento oficial del que salen los resultados de esta sesión. */
   resultsSource?: { name: string; url: string };
+  /** Videos oficiales de la sesión en YouTube: la transmisión y los resúmenes. La dirección es youtube.com/watch?v=<id>. */
+  videos?: { id: string; kind: "live" | "highlights"; label?: string }[];
 }
 
 export interface Broadcast {
   name: string;
-  kind: "tv" | "streaming" | "youtube";
+  kind: "tv" | "streaming" | "youtube" | "timing";
   url?: string;
 }
 

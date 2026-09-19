@@ -42,7 +42,8 @@ export default async function Home() {
   const podium = season.getRecentResults(now, "nacional")[0];
   const [highlight, ...notes] = season.getArgentineHighlights(now);
   const nextEvents = season.getUpcomingEvents(now).filter((e) => ms(eventStart(e)) >= ms(to)).slice(0, 3);
-  const liveUrl = live?.event.broadcasts.find((b) => b.url)?.url;
+  const liveUrl = live?.event.broadcasts.find((b) => b.url && b.kind !== "timing")?.url;
+  const timingUrl = live?.event.broadcasts.find((b) => b.kind === "timing")?.url;
 
   // ——— Cabecera: una franja de datos que cambia con el momento ———
   const when = (s: { start: string; timeKnown?: boolean }) => {
@@ -142,10 +143,15 @@ export default async function Home() {
         </ol>
         <div className="watch">
           <span>Se ve por</span>
-          <strong>{live.event.broadcasts.map((b) => b.name).join(" · ") || "Sin datos de transmisión"}</strong>
+          <strong>{live.event.broadcasts.filter((b) => b.kind !== "timing").map((b) => b.name).join(" · ") || "Sin datos de transmisión"}</strong>
           {liveUrl && (
             <a href={liveUrl} target="_blank" rel="noreferrer">
               Abrir transmisión <span aria-hidden="true">↗</span>
+            </a>
+          )}
+          {timingUrl && (
+            <a href={timingUrl} target="_blank" rel="noreferrer">
+              Tiempos en vivo <span aria-hidden="true">↗</span>
             </a>
           )}
         </div>

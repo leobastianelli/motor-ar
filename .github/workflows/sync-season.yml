@@ -41,6 +41,7 @@ jobs:
       - name: Sincronizar
         env:
           TIMING_DAYS: ${{ github.event.inputs.timing_days || '21' }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: npm run sync:season
 
       - name: Subir cambios
