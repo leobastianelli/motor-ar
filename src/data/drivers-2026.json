@@ -1,17 +1,15 @@
 {
-  "generatedAt": "2026-09-19T07:53:57.629Z",
+  "generatedAt": "2026-09-20T08:21:45.796Z",
   "drivers": [
     {
-      "key": "agusta bonomo n",
+      "key": "agustin bonomo",
       "keys": [
         "agustin bonomo",
         "agusta bonomo n"
       ],
       "slug": "agusta-n-bonomo",
       "name": "Agustãn Bonomo",
-      "aliases": [
-        "Agustin Bonomo"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -32,9 +30,7 @@
       ],
       "slug": "agustin-canapino",
       "name": "Agustín Canapino",
-      "aliases": [
-        "Agustãn Canapino"
-      ],
+      "aliases": [],
       "series": [
         "tn",
         "tc",
@@ -262,16 +258,14 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "key": "a antonino garca",
+      "key": "antonino garcia",
       "keys": [
         "antonino garcia",
         "a antonino garca"
       ],
       "slug": "antonino-garca-a",
       "name": "Antonino Garcãa",
-      "aliases": [
-        "Antonino Garcia"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -435,16 +429,14 @@
       "lastSeen": "2026-04-05"
     },
     {
-      "key": "blasig marta n",
+      "key": "blasig martin",
       "keys": [
         "blasig martin",
         "blasig marta n"
       ],
       "slug": "blasig-marta-n",
       "name": "Blasig Martãn",
-      "aliases": [
-        "Martin Blasig"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -603,16 +595,14 @@
       "lastSeen": "2026-05-03"
     },
     {
-      "key": "damia kirstein n",
+      "key": "damian kirstein",
       "keys": [
         "damian kirstein",
         "damia kirstein n"
       ],
       "slug": "damia-n-kirstein",
       "name": "Damiãn Kirstein",
-      "aliases": [
-        "Damian Kirstein"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -829,16 +819,14 @@
       "lastSeen": "2026-03-22"
     },
     {
-      "key": "donzino ma ximo",
+      "key": "donzino maximo",
       "keys": [
         "donzino maximo",
         "donzino ma ximo"
       ],
       "slug": "donzino-ma-ximo",
       "name": "Donzino Mãximo",
-      "aliases": [
-        "Maximo Donzino"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -1012,16 +1000,32 @@
       "lastSeen": "2026-08-30"
     },
     {
-      "key": "fabia n yannantuoni",
+      "key": "companc ezequiel perez",
+      "keys": [
+        "companc ezequiel perez"
+      ],
+      "slug": "ezequiel-perez-companc",
+      "name": "Ezequiel Perez Companc",
+      "aliases": [],
+      "series": [
+        "gt3"
+      ],
+      "numbers": {},
+      "teams": {
+        "gt3": "Sainteloc Racing"
+      },
+      "firstSeen": "2026-04-10",
+      "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "fabian yannantuoni",
       "keys": [
         "fabian yannantuoni",
         "fabia n yannantuoni"
       ],
       "slug": "fabia-n-yannantuoni",
       "name": "Fabiãn Yannantuoni",
-      "aliases": [
-        "Fabian Yannantuoni"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -1576,7 +1580,7 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "key": "gomez n sebastia",
+      "key": "gomez sebastian",
       "keys": [
         "gomez sebastian",
         "ga mez n sebastia",
@@ -1584,10 +1588,7 @@
       ],
       "slug": "gomez-sebastia-n",
       "name": "Gomez Sebastiãn",
-      "aliases": [
-        "Sebastian Gomez",
-        "Sebastiãn Gã“mez"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -1601,16 +1602,14 @@
       "lastSeen": "2026-08-30"
     },
     {
-      "key": "antola gonzalo n",
+      "key": "antolin gonzalo",
       "keys": [
         "antolin gonzalo",
         "antola gonzalo n"
       ],
       "slug": "gonzalo-antola-n",
       "name": "Gonzalo Antolãn",
-      "aliases": [
-        "Gonzalo Antolin"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -1821,8 +1820,8 @@
       "teams": {
         "gt3": "Team WRT"
       },
-      "firstSeen": "2026-05-02",
-      "lastSeen": "2026-08-02"
+      "firstSeen": "2026-04-10",
+      "lastSeen": "2026-09-19"
     },
     {
       "key": "ignacio quintana",
@@ -1921,9 +1920,7 @@
       ],
       "slug": "jeremias-olmedo",
       "name": "Jeremías Olmedo",
-      "aliases": [
-        "Jeremãas Olmedo"
-      ],
+      "aliases": [],
       "series": [
         "tn",
         "tc"
@@ -1967,9 +1964,7 @@
       ],
       "slug": "jeronimo-teti",
       "name": "Jerónimo Teti",
-      "aliases": [
-        "Jerã“nimo Teti"
-      ],
+      "aliases": [],
       "series": [
         "tn",
         "tc"
@@ -2589,9 +2584,7 @@
       ],
       "slug": "julian-santero",
       "name": "Julián Santero",
-      "aliases": [
-        "Juliãn Santero"
-      ],
+      "aliases": [],
       "series": [
         "tn",
         "tc",
@@ -2672,16 +2665,14 @@
       "lastSeen": "2026-08-30"
     },
     {
-      "key": "gonza leandro lez",
+      "key": "gonzalez leandro",
       "keys": [
         "gonzalez leandro",
         "gonza leandro lez"
       ],
       "slug": "leandro-gonza-lez",
       "name": "Leandro Gonzãlez",
-      "aliases": [
-        "Leandro Gonzalez"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -2738,16 +2729,14 @@
       "lastSeen": "2026-08-30"
     },
     {
-      "key": "a leonel perna",
+      "key": "leonel pernia",
       "keys": [
         "leonel pernia",
         "a leonel perna"
       ],
       "slug": "leonel-perna-a",
       "name": "Leonel Pernãa",
-      "aliases": [
-        "Leonel Pernia"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -3134,16 +3123,14 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "key": "ferna marcos ndez",
+      "key": "fernandez marcos",
       "keys": [
         "fernandez marcos",
         "ferna marcos ndez"
       ],
       "slug": "marcos-ferna-ndez",
       "name": "Marcos Fernãndez",
-      "aliases": [
-        "Marcos Fernandez"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -3242,16 +3229,14 @@
       "lastSeen": "2026-04-26"
     },
     {
-      "key": "leston marta n",
+      "key": "leston martin",
       "keys": [
         "leston martin",
         "leston marta n"
       ],
       "slug": "marta-n-leston",
       "name": "Martãn Leston",
-      "aliases": [
-        "Martin Leston"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -3348,16 +3333,14 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "key": "as cohen mata",
+      "key": "cohen matias",
       "keys": [
         "cohen matias",
         "as cohen mata"
       ],
       "slug": "mata-as-cohen",
       "name": "Matãas Cohen",
-      "aliases": [
-        "Matias Cohen"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -3751,9 +3734,7 @@
       ],
       "slug": "nicolas-jaime",
       "name": "Nicolás Jaime",
-      "aliases": [
-        "Nicolã¡s Jaime"
-      ],
+      "aliases": [],
       "series": [
         "tc-mouras",
         "tn",
@@ -3942,16 +3923,14 @@
       "lastSeen": "2026-08-30"
     },
     {
-      "key": "adria n perca z",
+      "key": "adrian percaz",
       "keys": [
         "adrian percaz",
         "adria n perca z"
       ],
       "slug": "perca-z-adria-n",
       "name": "Percãz Adriãn",
-      "aliases": [
-        "Adrian Percaz"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -4283,16 +4262,14 @@
       "lastSeen": "2026-08-16"
     },
     {
-      "key": "ferna ndez sergio",
+      "key": "fernandez sergio",
       "keys": [
         "fernandez sergio",
         "ferna ndez sergio"
       ],
       "slug": "sergio-ferna-ndez",
       "name": "Sergio Fernãndez",
-      "aliases": [
-        "Sergio Fernandez"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -4366,16 +4343,14 @@
       "lastSeen": "2026-08-30"
     },
     {
-      "key": "marta nez thiago",
+      "key": "martinez thiago",
       "keys": [
         "martinez thiago",
         "marta nez thiago"
       ],
       "slug": "thiago-marta-nez",
       "name": "Thiago Martãnez",
-      "aliases": [
-        "Thiago Martinez"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -4544,16 +4519,14 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "key": "s toma vitar",
+      "key": "tomas vitar",
       "keys": [
         "tomas vitar",
         "s toma vitar"
       ],
       "slug": "toma-s-vitar",
       "name": "Tomãs Vitar",
-      "aliases": [
-        "Tomas Vitar"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
