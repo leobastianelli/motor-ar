@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T21:27:27.853Z",
+  "generatedAt": "2026-09-21T12:39:09.063Z",
   "drivers": [
     {
       "key": "agustin bonomo",
@@ -50,7 +50,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "agustin martinez",
@@ -172,7 +172,7 @@
         "tn": "Honda Civic"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "alvaro oroza",
@@ -232,7 +232,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "andres jakos",
@@ -319,7 +319,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "bautista roqueta",
@@ -447,7 +447,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-04-04",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "braian quevedo",
@@ -467,10 +467,10 @@
       },
       "teams": {
         "tc-pista": "Toyota",
-        "tn": "Ford Focus"
+        "tn": "Chevrolet Cruze"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "braian reinoso",
@@ -490,7 +490,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "bruno pace",
@@ -510,7 +510,7 @@
         "tn": "Toyota Etios"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "carlos okulovich",
@@ -749,7 +749,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "carlo de diego",
@@ -793,7 +793,7 @@
         "tn": "VW Gol Trend"
       },
       "firstSeen": "2026-04-04",
-      "lastSeen": "2026-05-03"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "di dino palma",
@@ -834,10 +834,10 @@
         "tn": "71"
       },
       "teams": {
-        "tn": "Ford F Kinetic"
+        "tn": "Ford F. Kinetic"
       },
       "firstSeen": "2026-03-15",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "craparo elio",
@@ -888,16 +888,19 @@
       "name": "Emiliano Spataro",
       "aliases": [],
       "series": [
-        "tc"
+        "tc",
+        "tn"
       ],
       "numbers": {
-        "tc": "27"
+        "tc": "27",
+        "tn": "117"
       },
       "teams": {
-        "tc": "Ford"
+        "tc": "Ford",
+        "tn": "Chevrolet Cruze"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "esteban luna",
@@ -977,7 +980,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "bastidas exequiel",
@@ -997,7 +1000,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "companc ezequiel perez",
@@ -1036,7 +1039,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "fabrizio maggini",
@@ -1099,7 +1102,7 @@
         "tc-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "chapur facundo",
@@ -1122,7 +1125,7 @@
         "tc": "Torino"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "facundo ledesma",
@@ -1185,7 +1188,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "cifre faustino",
@@ -1288,7 +1291,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "francisco luengo",
@@ -1328,7 +1331,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "franco morillo",
@@ -1382,7 +1385,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-03-15",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "franco vivian",
@@ -1507,16 +1510,19 @@
       "name": "Gaston Iansa",
       "aliases": [],
       "series": [
-        "tc-pick-up"
+        "tc-pick-up",
+        "tn"
       ],
       "numbers": {
-        "tc-pick-up": "55"
+        "tc-pick-up": "55",
+        "tn": "155"
       },
       "teams": {
-        "tc-pick-up": "Toyota"
+        "tc-pick-up": "Toyota",
+        "tn": "Chevrolet Onix"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-03-22"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "gaston martinez minetti",
@@ -1536,7 +1542,7 @@
         "tn": "Toyota Etios"
       },
       "firstSeen": "2026-03-15",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "foton gaston mazzacane",
@@ -1599,7 +1605,7 @@
         "tn": "VW Vento GLI"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "antolin gonzalo",
@@ -1910,7 +1916,7 @@
         "tn": "VW Virtus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "jeremias olmedo",
@@ -1934,7 +1940,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "jeremias scialchi",
@@ -2043,7 +2049,7 @@
         "tn": "Chevrolet Cruze"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "castellano jonatan",
@@ -2066,7 +2072,7 @@
         "tc": "Dodge"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "barrio jorge",
@@ -2090,7 +2096,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "alberto goya jose",
@@ -2173,7 +2179,7 @@
         "tc": "Mercedes-Benz"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "antonio juan sandin",
@@ -2240,7 +2246,7 @@
         "tn": "VW Vento GLI"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "eduardo juan kreitz",
@@ -2260,7 +2266,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "canela ignacio juan",
@@ -2280,7 +2286,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "ignacio juan maceira",
@@ -2414,7 +2420,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "juan martin trucco",
@@ -2596,12 +2602,12 @@
         "tc-pick-up": "68"
       },
       "teams": {
-        "tn": "Ford Focus",
+        "tn": "VW Virtus",
         "tc": "BMW",
         "tc-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "candela kevin",
@@ -2662,7 +2668,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "gonzalez leandro",
@@ -2683,7 +2689,7 @@
         "tn": "Chevrolet Cruze"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "forte leonardo",
@@ -2726,7 +2732,7 @@
         "tn": "Honda Civic"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "leonel pernia",
@@ -2747,7 +2753,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "carlo de luca",
@@ -2868,7 +2874,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "lucas valle",
@@ -2911,7 +2917,7 @@
         "tn": "Toyota Corolla"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "cotignola luciano",
@@ -3054,7 +3060,7 @@
         "tn": "Chevrolet Onix"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-06-07"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "marcelo vergagni",
@@ -3247,7 +3253,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "martin mura",
@@ -3267,7 +3273,7 @@
         "tn": "Chevrolet Onix"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "martin serrano",
@@ -3351,7 +3357,7 @@
         "tn": "VW Virtus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "as m mata mua oz",
@@ -3457,7 +3463,7 @@
         "tn": "VW Vento"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "matias rossi",
@@ -3501,7 +3507,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "bestani maximiliano",
@@ -3541,7 +3547,7 @@
         "tn": "VW Virtus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "eddy mion",
@@ -3601,7 +3607,7 @@
         "tn": "Toyota Etios"
       },
       "firstSeen": "2026-07-31",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "goya nestor omar",
@@ -3802,19 +3808,22 @@
         "nicolas trosset"
       ],
       "slug": "nicolas-trosset",
-      "name": "Nicolas Trosset",
+      "name": "Nicolás Trosset",
       "aliases": [],
       "series": [
-        "tc"
+        "tc",
+        "tn"
       ],
       "numbers": {
-        "tc": "88"
+        "tc": "88",
+        "tn": "188"
       },
       "teams": {
-        "tc": "Ford"
+        "tc": "Ford",
+        "tn": "Toyota Corolla"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "nicolas villamayor",
@@ -3900,7 +3909,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "grippo pedro",
@@ -3941,7 +3950,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-06-07"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "cano ramiro",
@@ -3961,7 +3970,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "bonis de ramiro",
@@ -4001,7 +4010,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "ian reutemann",
@@ -4179,7 +4188,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "balerini santino",
@@ -4199,7 +4208,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "ortiz santino",
@@ -4280,7 +4289,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "antonino sganga",
@@ -4340,7 +4349,7 @@
         "tn": "Ford F. Kinetic"
       },
       "firstSeen": "2026-04-04",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "martinez thiago",
@@ -4361,7 +4370,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "marchesin thomas",
@@ -4381,7 +4390,7 @@
         "tn": "Toyota Etios"
       },
       "firstSeen": "2026-05-02",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "pozner thomas",
@@ -4537,7 +4546,7 @@
         "tn": "Nissan March"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "aguirre valentin",
@@ -4548,16 +4557,19 @@
       "name": "Valentín Aguirre",
       "aliases": [],
       "series": [
-        "tc"
+        "tc",
+        "tn"
       ],
       "numbers": {
-        "tc": "133"
+        "tc": "133",
+        "tn": "133"
       },
       "teams": {
-        "tc": "Chevrolet"
+        "tc": "Chevrolet",
+        "tn": "Toyota Corolla"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "alaux valentino",
@@ -4597,7 +4609,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-09-20"
     },
     {
       "key": "simon volpi",
