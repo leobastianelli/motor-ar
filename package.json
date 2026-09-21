@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "node --test \"src/**/*.test.mjs\"",
     "sync:history": "node scripts/sync-history.mjs",
     "sync:season": "node scripts/sync-season-2026.mjs",
     "sync:gtworld": "node scripts/sync-gtworld.mjs",

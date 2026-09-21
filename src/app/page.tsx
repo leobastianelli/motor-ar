@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import { Agenda } from "@/components/agenda";
+import { AutoRefresh, MinutesLeft } from "@/components/live-clock";
 import { CatMark, CategoryLabel, Code, SectionTitle, StateTag } from "@/components/pista";
-import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, ms, weekendWindow, type HomeMode } from "@/lib/data";
-import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime, minutesLeft, raceWinner, surname } from "@/lib/format";
+import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, isSimulatedNow, ms, seriesTier, weekendWindow, type HomeMode } from "@/lib/data";
+import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime, raceWinner, surname } from "@/lib/format";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
-export const revalidate = 60;
+// La home es lo que la gente mira mientras pasa la carrera: se regenera seguido, y el navegador además la vuelve a pedir solo (AutoRefresh).
+export const revalidate = 15;
 
 type SectionId = "live" | "nuestros" | "agenda" | "resultados" | "viene";
 
@@ -22,21 +24,32 @@ const ORDER: Record<HomeMode, SectionId[]> = {
 // Acceso directo a cada categoría: mucha gente entra buscando una en particular. Primero las más buscadas.
 const JUMP = ["f1", "tc", "tc2000", "tn", "tc-pista", "f2", "gt3", "tc-mouras", "tc-pick-up"];
 
+const liveEnd = (s: { start: string; durationMin: number }) => new Date(ms(s.start) + s.durationMin * 60000).toISOString();
+
 export default async function Home() {
   const now = getNow();
   const season = await getSeason();
   const mode = season.getHomeMode(now);
   const { items, days, to } = season.getAgenda(now);
-  const live = season.getLiveItems(now)[0];
+  const liveNow = season.getLiveItems(now);
+  const live = liveNow[0];
+  const simulated = isSimulatedNow();
   const todayKey = dayKey(now);
   const nextArg = season.getNextArgentineSession(now);
 
-  const runners = getDriversAbroad().map((driver) => ({
-    driver,
-    series: getSeries(driver.seriesId)!,
-    status: season.getRunnerStatus(driver, now),
-    standing: season.getStandingPosition(driver),
-  }));
+  // Por orden de aparición: primero el que está en pista, después el próximo que corre y así hasta el último; los que no tienen nada cargado, al final.
+  const byAppearance = (a: { status: { at: number; state: string }; series: Parameters<typeof seriesTier>[0] }, b: typeof a) =>
+    Number(a.status.state === "no-data") - Number(b.status.state === "no-data") ||
+    (a.status.at < b.status.at ? -1 : a.status.at > b.status.at ? 1 : 0) ||
+    seriesTier(a.series) - seriesTier(b.series);
+  const runners = getDriversAbroad()
+    .map((driver) => ({
+      driver,
+      series: getSeries(driver.seriesId)!,
+      status: season.getRunnerStatus(driver, now),
+      standing: season.getStandingPosition(driver),
+    }))
+    .sort(byAppearance);
 
   const latest = season.getRecentResults(now)[0];
   const podium = season.getRecentResults(now, "nacional")[0];
@@ -110,11 +123,14 @@ export default async function Home() {
   // ——— Secciones ———
   const sections: Record<SectionId, ReactNode> = {
     live: live && (
-      <section key="live" className="live-board" aria-labelledby="live-title">
+      <div key="live">
+      <section className="live-board" aria-labelledby="live-title">
         <div className="live-flag">
           <span className="pulse" />
           <span id="live-title">En vivo</span>
-          <b>{minutesLeft(live.session, now)}′</b>
+          <b>
+            <MinutesLeft endsAt={liveEnd(live.session)} serverNow={now} simulated={simulated} />′
+          </b>
         </div>
         <div className="live-main">
           <CatMark series={live.series} />
@@ -122,7 +138,7 @@ export default async function Home() {
             <CategoryLabel series={live.series} detail={live.event.circuit.city} href={`/categorias/${live.series.id}`} />
             <h2>{live.session.name}</h2>
             <p className="lap">
-              Faltan {minutesLeft(live.session, now)} min <span>largó {fmtTime(live.session.start)}</span>
+              Faltan <MinutesLeft endsAt={liveEnd(live.session)} serverNow={now} simulated={simulated} /> min <span>largó {fmtTime(live.session.start)}</span>
             </p>
           </div>
         </div>
@@ -162,6 +178,17 @@ export default async function Home() {
           )}
         </div>
       </section>
+      {liveNow.length > 1 && (
+        <p className="also-live">
+          <b>También en vivo</b>
+          {liveNow.slice(1).map((l) => (
+            <Link key={l.session.id} href={`/eventos/${l.event.id}`} className="also-live-item">
+              <Code series={l.series} /> {l.session.name} <span>{l.event.circuit.city}</span>
+            </Link>
+          ))}
+        </p>
+      )}
+      </div>
     ),
 
     nuestros: runners.length > 0 && (
@@ -190,7 +217,7 @@ export default async function Home() {
       </section>
     ),
 
-    agenda: <Agenda key="agenda" items={items} days={days} today={todayKey} now={now} />,
+    agenda: <Agenda key="agenda" items={items} days={days} today={todayKey} now={now} simulated={simulated} />,
 
     resultados: (
       <section key="resultados" className="results-band">
@@ -295,6 +322,7 @@ export default async function Home() {
 
   return (
     <>
+      <AutoRefresh />
       <section className={`weekend-head mode-${mode}`}>
         <h1>
           {title} <span className="hero-date">{range}</span>

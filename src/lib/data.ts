@@ -4,6 +4,7 @@ import history from "@/data/history.json";
 import driverIndex from "@/data/drivers-2026.json";
 import manualOverrides from "@/data/manual-overrides.json";
 import { driverKey } from "./sources/driver-index.mjs";
+import { mergeSessionPatches } from "./sources/overrides.mjs";
 import { series, seriesById } from "@/data/series";
 import { dayKey, fmtDayShort, fmtTime, sessionStatus, type SessionStatus, type StateKind } from "./format";
 import { loadRawSeason, type RawSeason } from "./season-data";
@@ -14,6 +15,8 @@ import type { Broadcast, CategoryHistory, Driver, RaceEvent, ResultRow, Series, 
 
 // FIERROS_NOW permite simular otro momento (por ejemplo, para revisar la home de un lunes). Sin la variable, es la hora real.
 export const getNow = () => process.env.FIERROS_NOW ?? new Date().toISOString();
+/** Con FIERROS_NOW definida la hora está congelada: el navegador no debe reemplazarla por la real. */
+export const isSimulatedNow = () => Boolean(process.env.FIERROS_NOW);
 
 /**
  * Qué busca la gente según el momento: en pista o de jueves a domingo antes de que termine lo del día, lo que pasa y lo que viene;
@@ -62,6 +65,13 @@ export interface DriverSeason {
 export const getDriversAbroad = () => drivers.filter((d) => seriesById[d.seriesId]?.scope === "internacional");
 
 export const ms = (iso: string) => new Date(iso).getTime();
+
+/**
+ * Prioridad de una categoría cuando dos cosas pasan al mismo tiempo (el orden principal siempre es la hora):
+ * 1 = categoría argentina, 2 = categoría internacional con argentinos corriendo, 3 = el resto.
+ */
+const WITH_ARGENTINES = new Set(drivers.map((d) => d.seriesId));
+export const seriesTier = (s: Series): 1 | 2 | 3 => (s.scope !== "internacional" ? 1 : WITH_ARGENTINES.has(s.id) ? 2 : 3);
 export const eventStart = (e: RaceEvent) => e.sessions[0].start;
 const sessionEnd = (s: Session) =>
   s.timeKnown === false ? ms(`${dayKey(s.start)}T00:00:00-03:00`) + 86400000 : ms(s.start) + s.durationMin * 60000;
@@ -86,6 +96,9 @@ const SLUG_BY_NAME = new Map(drivers.flatMap((d) => [d.name, ...(d.aliases ?? []
 const slugFor = (name: string) => SLUG_BY_NAME.get(normalize(name)) ?? name.split(" / ").map((n) => SLUG_BY_NAME.get(normalize(n))).find(Boolean);
 
 const RACE_KINDS = ["carrera", "final", "sprint"];
+// Para "lo último que pasó" cuentan también las series (TN), pero no para estadísticas: una serie no es una carrera ganada.
+const RECENT_KINDS = [...RACE_KINDS, "serie"];
+const KIND_WEIGHT: Record<string, number> = { final: 0, carrera: 0, sprint: 1, serie: 2 };
 
 const VERB: Record<Session["kind"], string> = {
   practica: "Practica",
@@ -104,6 +117,8 @@ export interface FeedItem {
 }
 
 export interface RunnerStatus {
+  /** Cuándo vuelve a estar en pista (ms): sirve para ordenar por orden de aparición. Infinity si no hay nada cargado. */
+  at: number;
   state: StateKind;
   stateLabel: string;
   headline: string;
@@ -143,14 +158,7 @@ const MANUAL_STANDINGS = ((manualOverrides as unknown as { standings?: Record<st
 function applyOverride(e: RawEvent): RawEvent {
   const o = OVERRIDES[e.id];
   if (!o) return e;
-  const key = (s: { kind: string; name: string }) => `${s.kind}|${normalize(s.name)}`;
-  const sessions = [...e.sessions];
-  for (const patch of o.sessions ?? []) {
-    const i = sessions.findIndex((s) => key(s) === key(patch));
-    if (i >= 0) sessions[i] = { ...sessions[i], ...patch };
-    else sessions.push({ id: `${e.id}-manual-${sessions.length + 1}`, start: sessions[0]?.start ?? "", durationMin: 30, timeKnown: false, ...patch });
-  }
-  sessions.sort((a, b) => ms(a.start) - ms(b.start));
+  const sessions = mergeSessionPatches(e.id, e.sessions, o.sessions, dayKey) as RawEvent["sessions"];
   return { ...e, name: o.name ?? e.name, sessions };
 }
 
@@ -211,7 +219,7 @@ export function createSeason(raw: RawSeason) {
 
   const baseItems = events
     .flatMap((event) => event.sessions.map((session) => ({ session, event, series: seriesById[event.seriesId] })))
-    .sort((a, b) => ms(a.session.start) - ms(b.session.start));
+    .sort((a, b) => ms(a.session.start) - ms(b.session.start) || seriesTier(a.series) - seriesTier(b.series));
   const itemsAt = (now: string): FeedItem[] => baseItems.map((i) => ({ ...i, status: sessionStatus(i.session, now) }));
 
   const getStandings = (seriesId: string) => standings[seriesId] ?? [];
@@ -278,9 +286,10 @@ export function createSeason(raw: RawSeason) {
 
   const getRecentResults = (now: string, scope?: Series["scope"]) =>
     itemsAt(now)
-      .filter((i) => i.status === "done" && i.session.results?.length && RACE_KINDS.includes(i.session.kind))
+      .filter((i) => i.status === "done" && i.session.results?.length && RECENT_KINDS.includes(i.session.kind))
       .filter((i) => !scope || i.series.scope === scope)
-      .sort((a, b) => ms(b.session.start) - ms(a.session.start));
+      // Lo más reciente primero; con la misma hora (p. ej. TN sin horario), la final antes que las series.
+      .sort((a, b) => ms(b.session.start) - ms(a.session.start) || KIND_WEIGHT[a.session.kind] - KIND_WEIGHT[b.session.kind]);
 
   const getDriverResults = (slug: string, now: string) =>
     itemsAt(now)
@@ -291,21 +300,24 @@ export function createSeason(raw: RawSeason) {
   function getRunnerStatus(driver: Driver, now: string): RunnerStatus {
     const items = itemsAt(now).filter((i) => i.event.seriesId === driver.seriesId);
     const live = items.find((i) => i.status === "live");
+    const upcoming = items.find((i) => i.status === "upcoming");
+    const at = live ? ms(now) : upcoming ? ms(upcoming.session.start) : Infinity;
     if (live) {
-      return { state: "live", stateLabel: "En pista", headline: `${live.session.name} en curso`, detail: live.event.circuit.city, href: `/eventos/${live.event.id}` };
+      return { at, state: "live", stateLabel: "En pista", headline: `${live.session.name} en curso`, detail: live.event.circuit.city, href: `/eventos/${live.event.id}` };
     }
     const next = items.find((i) => i.status === "upcoming");
     const today = next && dayKey(next.session.start) === dayKey(now);
     const last = getDriverResults(driver.slug, now)[0];
     if (last && !today && ms(now) - ms(last.session.start) < 4 * 86400000) {
       const verb = last.session.kind === "clasificacion" ? "Clasificó" : last.session.kind === "practica" ? "Fue" : "Terminó";
-      return { state: "finished", stateLabel: "Final", headline: `${verb} ${last.row.pos}.º`, detail: `${last.session.name} · ${last.event.circuit.city}`, href: `/eventos/${last.event.id}` };
+      return { at, state: "finished", stateLabel: "Final", headline: `${verb} ${last.row.pos}.º`, detail: `${last.session.name} · ${last.event.circuit.city}`, href: `/eventos/${last.event.id}` };
     }
     // Sin equipo confirmado (p. ej. un piloto entre butacas) no hay forma de saber si va a estar en la próxima
     // fecha del calendario de la categoría: mejor "sin datos" que dar por hecho que corre.
     if (next && driver.team) {
       const when = next.session.timeKnown === false ? "" : `, ${fmtTime(next.session.start)}`;
       return {
+        at,
         state: "upcoming",
         stateLabel: "Próxima",
         headline: today ? `${VERB[next.session.kind]} hoy${when}` : `${next.session.name} · ${fmtDayShort(next.session.start)}`,
@@ -313,7 +325,7 @@ export function createSeason(raw: RawSeason) {
         href: `/eventos/${next.event.id}`,
       };
     }
-    return { state: "no-data", stateLabel: "Sin datos", headline: "Sin actividad próxima cargada", detail: "", href: `/pilotos/${driver.slug}` };
+    return { at: Infinity, state: "no-data", stateLabel: "Sin datos", headline: "Sin actividad próxima cargada", detail: "", href: `/pilotos/${driver.slug}` };
   }
 
   return {
@@ -358,7 +370,11 @@ export function createSeason(raw: RawSeason) {
       return { items, days, firstDay, to: new Date(end).toISOString() };
     },
 
-    getLiveItems: (now: string) => itemsAt(now).filter((i) => i.status === "live"),
+    /** Lo que está en pista ahora. Si hay varias cosas a la vez, primero la categoría argentina, después la internacional con argentinos y al final el resto; dentro de cada nivel, la que arrancó antes. */
+    getLiveItems: (now: string) =>
+      itemsAt(now)
+        .filter((i) => i.status === "live")
+        .sort((a, b) => seriesTier(a.series) - seriesTier(b.series) || ms(a.session.start) - ms(b.session.start)),
 
     getHomeMode(now: string): HomeMode {
       const items = itemsAt(now);
@@ -388,9 +404,9 @@ export function createSeason(raw: RawSeason) {
         .sort((a, b) => a.row.pos - b.row.pos || ms(b.session.start) - ms(a.session.start));
     },
 
+    /** Próxima sesión con participación argentina: categorías argentinas o internacionales donde corre alguno de los nuestros. */
     getNextArgentineSession(now: string) {
-      const seriesIds = new Set(getDriversAbroad().map((d) => d.seriesId));
-      return itemsAt(now).find((i) => seriesIds.has(i.event.seriesId) && i.status !== "done");
+      return itemsAt(now).find((i) => seriesTier(i.series) <= 2 && i.status === "upcoming");
     },
 
     getStandingPosition(driver: Driver) {

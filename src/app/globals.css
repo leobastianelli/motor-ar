@@ -425,3 +425,11 @@ button{color:inherit;font-family:inherit}
 .timing-mini li:has(.state.live){display:block}.timing-mini li a{text-decoration:none;color:inherit}
 .timing-embed{margin:0 0 50px}.timing-embed iframe{display:block;width:100%;height:min(640px,80vh);border:1px solid var(--ink);background:#111}.timing-embed-gate{border:1px solid var(--ink);padding:24px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}.timing-embed-gate p{margin:0;font-size:14px;max-width:52ch}.timing-embed-gate button{background:var(--ink);color:white;border:0;padding:14px 18px;font:inherit;font-weight:700;cursor:pointer}.timing-embed>a{display:inline-block;margin-top:10px;font-size:14px}
 #tiempos-en-vivo{scroll-margin-top:90px}
+
+/* Más de una cosa en vivo a la vez: la de mayor prioridad va arriba y el resto queda a mano, sin esconderlas. */
+.also-live{max-width:1240px;margin:0 auto;padding:12px 20px;border:1px solid var(--ink);border-top:0;background:#fff;display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;font-size:14px}
+.also-live>b{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--red)}
+.also-live-item{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:650}
+.also-live-item span{font-weight:400;color:var(--muted)}
+.also-live-item:hover{text-decoration:underline}
+@media(max-width:800px){.also-live{margin:0;border-left:0;border-right:0;padding:12px 16px}}

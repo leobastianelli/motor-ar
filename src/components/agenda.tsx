@@ -5,6 +5,7 @@ import { useState, type CSSProperties } from "react";
 import type { FeedItem } from "@/lib/data";
 import { dayKey, fmtDayNum, fmtWeekday, sessionState, sessionTime } from "@/lib/format";
 import type { Scope } from "@/lib/types";
+import { useNow } from "./live-clock";
 import { CategoryLabel, SectionTitle, StateTag } from "./pista";
 
 const FILTERS: { id: Scope | "all"; label: string }[] = [
@@ -21,7 +22,9 @@ function byEvent(rows: FeedItem[]) {
   return [...groups.values()];
 }
 
-export function Agenda({ items, days, today, now }: { items: FeedItem[]; days: { key: string; iso: string }[]; today: string; now: string }) {
+export function Agenda({ items, days, today, now: serverNow, simulated }: { items: FeedItem[]; days: { key: string; iso: string }[]; today: string; now: string; simulated?: boolean }) {
+  // Los estados y las cuentas regresivas ("En 3 min", "En vivo") se recalculan solos en el navegador.
+  const now = useNow(serverNow, simulated);
   const [picked, setPicked] = useState(days.some((d) => d.key === today) ? today : days[0]?.key);
   const [filter, setFilter] = useState<Scope | "all">("all");
   // Sólo los días con sesiones para el filtro elegido; si el día marcado quedó vacío, se pasa al primero que tenga.

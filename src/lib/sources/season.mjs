@@ -12,6 +12,7 @@ import { actcTiming, keepPreviousTiming, TIMING_SERIES } from "./actc-timing.mjs
 import { fiaF2, keepPreviousFia } from "./fia-f2.mjs";
 import { keepPreviousOpenf1, openf1Sessions } from "./openf1.mjs";
 import { applySchedules, buildConsensus, solotcNotes } from "./schedule-notes.mjs";
+import { protectSeason, protectStandings } from "./guard.mjs";
 import { tc2000Season } from "./tc2000.mjs";
 
 const SOURCES = [
@@ -176,6 +177,11 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
     events = keepPreviousSpeedhive(events, previous);
     meta.speedhiveTn = previous.meta?.speedhiveTn ?? null;
   }
+
+  // Red de seguridad final, para todas las categorías: nada que ya teníamos se pierde porque una fuente falló ese día.
+  const guarded = protectSeason(events, previous);
+  events = guarded.events;
+  failures.push(...guarded.warnings, ...protectStandings(standings, meta, previous));
 
   events.sort((a, b) => new Date(a.sessions[0].start) - new Date(b.sessions[0].start));
   return { generatedAt: new Date().toISOString(), events, standings, meta, failures };
