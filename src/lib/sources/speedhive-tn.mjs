@@ -2,6 +2,8 @@
 // cada sesión y clasificación de cada una, por clase. Lo sube el cronometrista ("Tiempos crono", que también cronometra a otras
 // categorías argentinas) después de cada sesión, con estado "provisorio": no es en vivo segundo a segundo ni reemplaza a los
 // resultados oficiales de APAT, que se prefieren cuando existen. Sólo completa lo que falta.
+import { belongsToEvent } from "./plausible.mjs";
+
 const API = "https://eventresults-api.speedhive.com/api/v0.2.3/eventresults";
 const ORG = 381036; // "Tiempos crono" (Buenos Aires)
 export const SPEEDHIVE_SOURCE = "Speedhive · cronometraje (provisorio)";
@@ -195,14 +197,14 @@ export function carryOver(event, old) {
   const byId = new Map(old.sessions.map((o) => [o.id, o]));
   const sessions = event.sessions.map((s) => {
     const prev = byId.get(s.id);
-    if (!prev) return s;
+    if (!prev || !belongsToEvent(event, prev)) return s;
     const out = { ...s };
     if (s.timeKnown !== true && prev.timeSources?.some((t) => t.name === TIME_SOURCE)) Object.assign(out, { start: prev.start, timeKnown: true, timeStatus: prev.timeStatus, timeSources: prev.timeSources });
     if (!s.results?.length && prev.resultsSource?.name === SPEEDHIVE_SOURCE) Object.assign(out, { results: prev.results, resultsSource: prev.resultsSource });
     return out;
   });
   const have = new Set(sessions.map((s) => s.id));
-  for (const o of old.sessions) if (!have.has(o.id) && o.resultsSource?.name === SPEEDHIVE_SOURCE) sessions.push(o);
+  for (const o of old.sessions) if (!have.has(o.id) && o.resultsSource?.name === SPEEDHIVE_SOURCE && belongsToEvent(event, o)) sessions.push(o);
   return { ...event, sessions: sessions.sort((a, b) => Date.parse(a.start) - Date.parse(b.start)) };
 }
 

@@ -2,6 +2,8 @@
 // entrenamientos, clasificación, series y final, con la clasificación completa, para las seis categorías de la ACTC.
 // El listado agrupa por categoría y fecha; cada sesión tiene una página con la tabla de pilotos.
 
+import { belongsToEvent } from "./plausible.mjs";
+
 const BASE = "https://tiempos.actc.org.ar";
 const TAB_SERIES = { TC: "tc", TCP: "tc-pista", TCM: "tc-mouras", TCPM: "tc-pista-mouras", TCPK: "tc-pick-up", TCPPK: "tc-pista-pick-up" };
 export const TIMING_SERIES = new Set(Object.values(TAB_SERIES));
@@ -211,7 +213,7 @@ const fromActc = (s) => s.resultsSource?.name === TIMING_SOURCE && s.results?.le
 export function keepPreviousTiming(events, previous) {
   const before = new Map((previous?.events ?? []).map((e) => [e.id, e]));
   return events.map((e) => {
-    const timed = before.get(e.id)?.sessions.filter(fromActc) ?? [];
+    const timed = before.get(e.id)?.sessions.filter((s) => fromActc(s) && belongsToEvent(e, s)) ?? [];
     return timed.length ? mergeTiming(e, timed) : e;
   });
 }
@@ -240,7 +242,7 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
       const t = Date.parse(`${d.day}T12:00:00-03:00`);
       return d.seriesId === event.seriesId && t <= end && t >= end - 3 * DAY;
     });
-    const stored = before.get(event.id)?.sessions.filter(fromActc) ?? [];
+    const stored = before.get(event.id)?.sessions.filter((s) => fromActc(s) && belongsToEvent(event, s)) ?? [];
     const recent = now - end < windowDays * DAY;
     if (!docs.length || (!recent && stored.length)) {
       out.push(stored.length ? mergeTiming(event, stored) : event);

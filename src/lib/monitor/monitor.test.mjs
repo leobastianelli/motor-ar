@@ -1,0 +1,236 @@
+import assert from "node:assert/strict";
+import { test } from "node:test";
+import { emptyState, evaluate, summaryDue } from "./alerts.mjs";
+import { compareStandings, dateIssues, tnDateConflicts, withConflicts, dateStatus, manualExpired, parseTc2000Home, pendingHours, resultsOverdue, sourceFailures, staleStandings, visibleEvents } from "./checks.mjs";
+import { chunk, renderAlerts, sendTelegram } from "./telegram.mjs";
+
+// Domingo 27/09/2026 (Balcarce, TC Pick Up): la carrera no tiene hora.
+const sunday = (over = {}) => ({
+  id: "tcpk-2026-8",
+  seriesId: "tc-pick-up",
+  round: 8,
+  name: "Fecha 8 · Balcarce",
+  circuit: { name: "Juan Manuel Fangio", city: "Balcarce" },
+  source: "ACTC (calendario)",
+  sessions: [{ id: "f", kind: "final", name: "Final", start: "2026-09-27T12:00:00-03:00", timeKnown: false, durationMin: 35 }],
+  ...over,
+});
+const at = (day, hh) => `2026-09-${day}T${hh}:00:00-03:00`;
+const tierOf = (id) => (id.startsWith("tc") ? 1 : 3);
+
+test("una fecha oficial con sede está confirmada; una manual o sin sede, tentativa; en conflicto, conflicto", () => {
+  assert.equal(dateStatus(sunday()).status, "confirmed");
+  assert.equal(dateStatus(sunday({ circuit: { name: "", city: "" }, name: "Fecha 10 ·" })).status, "tentative");
+  assert.equal(dateStatus(sunday({ source: "Carga manual · 0264Noticias" })).status, "tentative");
+  assert.equal(dateStatus(sunday({ source: "Carga manual · calendario oficial de ligierjuniorformulachampionship.com" })).status, "confirmed");
+  assert.equal(dateStatus(sunday({ dateConflict: "APAT dice 20/09 y Speedhive 21/09" })).status, "conflict");
+});
+
+test("los horarios pendientes empiezan a avisar 72 h antes y suben de nivel a las 48 h, a las 24 h y el mismo día", () => {
+  const e = [sunday()];
+  assert.equal(pendingHours(e, at("23", "12")).length, 0, "miércoles: todavía no");
+  assert.equal(pendingHours(e, at("24", "12"))[0].level, 1, "jueves");
+  assert.equal(pendingHours(e, at("25", "12"))[0].level, 2, "viernes");
+  assert.equal(pendingHours(e, at("26", "12"))[0].level, 3, "sábado");
+  const hoy = pendingHours(e, at("27", "08"))[0];
+  assert.equal(hoy.level, 4);
+  assert.equal(hoy.severity, "critical");
+  assert.match(hoy.title, /HOY/);
+});
+
+test("sin fecha confirmada no se avisa por horarios, y con hora conocida tampoco", () => {
+  assert.equal(pendingHours([sunday({ source: "Wikipedia" })], at("25", "12")).length, 0);
+  const conHora = sunday({ sessions: [{ id: "f", kind: "final", name: "Final", start: "2026-09-27T13:05:00-03:00", timeKnown: true, durationMin: 35 }] });
+  assert.equal(pendingHours([conHora], at("25", "12")).length, 0);
+});
+
+test("una fecha tentativa a menos de 14 días se avisa como fecha sin confirmar; a más de 14 días se calla", () => {
+  const manual = sunday({ id: "tc2000-2026-8", seriesId: "tc2000", source: "Carga manual · 0264Noticias", name: "Fecha 8 · San Juan" });
+  const issues = dateIssues([manual], at("21", "12"), { tierOf });
+  assert.equal(issues.length, 1);
+  assert.match(issues[0].title, /sin confirmar/);
+  assert.equal(dateIssues([manual], "2026-08-01T12:00:00-03:00", { tierOf }).length, 0);
+});
+
+test("GT tiene dos campeonatos con numeración propia: no es una fecha repetida", () => {
+  const gt = (id) => sunday({ id, seriesId: "gt3", round: 1 });
+  assert.equal(dateIssues([gt("gt3-2026-s1"), gt("gt3-2026-e1")], at("21", "12")).filter((i) => i.key.startsWith("fecha-duplicada")).length, 0);
+});
+
+test("dos veces el mismo número de fecha en una categoría es un problema", () => {
+  const a = sunday({ id: "tcm-2026-7" });
+  const b = sunday({ id: "tcm-2026-7b" });
+  assert.ok(dateIssues([a, b].map((e) => ({ ...e, seriesId: "tc-mouras", round: 7 })), at("21", "12")).some((i) => i.key.startsWith("fecha-duplicada")));
+});
+
+test("resultados: se avisa cuando pasaron 36 h y la fuente automática no publicó la carrera", () => {
+  const corrida = sunday({ sessions: [{ id: "f", kind: "final", name: "Final", start: "2026-09-13T12:00:00-03:00", timeKnown: false, durationMin: 35 }] });
+  const auto = new Set(["tc-pick-up"]);
+  assert.equal(resultsOverdue([corrida], at("14", "10"), { autoSeries: auto }).length, 0);
+  assert.equal(resultsOverdue([corrida], at("16", "10"), { autoSeries: auto }).length, 1);
+  assert.equal(resultsOverdue([corrida], at("16", "10"), { autoSeries: new Set() }).length, 0);
+});
+
+test("las fallas de fuente avisan desde la segunda vez, salvo si hubo pérdida de datos", () => {
+  const [suelta, perdida] = sourceFailures(["Speedhive TN: 500 al pedir la lista", "Se conservaron fechas que las fuentes dejaron de traer: tn 12"]);
+  assert.equal(suelta.consecutive, 2);
+  assert.equal(perdida.consecutive, 1);
+  assert.equal(perdida.severity, "high");
+});
+
+test("campeonato atrasado: la tabla llega a la fecha 11 y ya se corrieron 12", () => {
+  const races = Array.from({ length: 12 }, (_, i) => ({ id: `tc-${i}`, seriesId: "tc", sessions: [{ kind: "final", results: [{ pos: 1 }] }] }));
+  const out = staleStandings({ standings: {}, meta: {} }, { standings: { tc: { asOfRound: 11 } } }, races, { tierOf });
+  assert.equal(out.length, 1);
+  assert.match(out[0].body, /carga manual/);
+  assert.equal(staleStandings({ standings: {}, meta: {} }, { standings: { tc: { asOfRound: 12 } } }, races).length, 0);
+});
+
+test("una carga manual de un evento terminado hace más de 2 días se marca para limpiar", () => {
+  const vieja = sunday({ id: "tn-2026-9", sessions: [{ id: "f", kind: "final", name: "Final", start: "2026-09-13T12:00:00-03:00", timeKnown: true, durationMin: 35 }] });
+  assert.equal(manualExpired([vieja], { events: { "tn-2026-9": {} } }, at("21", "12")).length, 1);
+  assert.equal(manualExpired([vieja], { events: { "tn-2026-9": {} } }, at("14", "12")).length, 0);
+});
+
+test("las cargas manuales se suman a lo que ve la gente, igual que en el sitio", () => {
+  const out = visibleEvents([], { newEvents: [sunday({ id: "x" })] });
+  assert.equal(out.length, 1);
+  const patched = visibleEvents([sunday()], { events: { "tcpk-2026-8": { sessions: [{ kind: "final", name: "Final", start: "2026-09-27T13:05:00-03:00", timeKnown: true, durationMin: 35 }] } } });
+  assert.equal(patched[0].sessions[0].timeKnown, true);
+});
+
+const PORTADA = `CAMPEONATO CON DESCARTE
+CAMPEONATO DE PILOTOS
+CAMPEONATO DE EQUIPOS
+1°
+Matias Rossi
+128
+2°
+Emiliano Stang
+97
+3°
+Gabriel P. de Leon
+89
+VER LISTA COMPLETA
+1°
+TOYOTA GAZOO Racing
+225`;
+
+test("la portada de TC2000 se lee (con sus entidades HTML) y se compara con la tabla manual", () => {
+  assert.equal(parseTc2000Home(PORTADA.replace(/°/g, "&deg;").replace("Matias", "Mat&iacute;as"))[0].driver, "Matías Rossi");
+  const oficial = parseTc2000Home(PORTADA);
+  assert.deepEqual(oficial.map((r) => [r.pos, r.driver, r.points]), [[1, "Matias Rossi", 128], [2, "Emiliano Stang", 97], [3, "Gabriel P. de Leon", 89]]);
+  const igual = [{ pos: 1, driver: "Matías Rossi", points: 128 }, { pos: 2, driver: "Emiliano Stang", points: 97 }, { pos: 3, driver: "Gabriel P. de Leon", points: 89 }];
+  assert.equal(compareStandings(igual, oficial, { series: "tc2000", name: "TC2000" }).length, 0);
+  // Variantes del nombre y empates ordenados distinto no son diferencias.
+  const variantes = [{ pos: 2, driver: "Matías Rossi", points: 128 }, { pos: 1, driver: "Emiliano Stang", points: 97 }, { pos: 3, driver: "Gabriel Ponce de León", points: 89 }];
+  assert.equal(compareStandings(variantes, oficial, { series: "tc2000", name: "TC2000" }).length, 0);
+  const vieja = [{ pos: 1, driver: "Matías Rossi", points: 118 }, ...igual.slice(1)];
+  const dif = compareStandings(vieja, oficial, { series: "tc2000", name: "TC2000" });
+  assert.equal(dif.length, 1);
+  assert.match(dif[0].body, /Rossi/);
+});
+
+// ——— Motor de avisos ———
+
+const finding = (over = {}) => ({ key: "horarios:x", severity: "medium", level: 1, title: "Faltan horarios: X", body: "1 sesión sin hora.", tier: 1, ...over });
+
+test("un problema nuevo se avisa una vez y no se repite antes de su enfriamiento", () => {
+  const primera = evaluate([finding()], emptyState(), at("24", "12"));
+  assert.equal(primera.send.length, 1);
+  assert.equal(primera.send[0].kind, "nuevo");
+  const enseguida = evaluate([finding()], primera.state, at("24", "18"));
+  assert.equal(enseguida.send.length, 0, "medium enfría 24 h");
+  const pasado = evaluate([finding()], primera.state, at("25", "13"));
+  assert.equal(pasado.send.length, 1);
+  assert.equal(pasado.send[0].kind, "recordatorio");
+});
+
+test("si el problema empeora, se avisa en el acto aunque no haya pasado el enfriamiento", () => {
+  const a = evaluate([finding({ level: 1 })], emptyState(), at("24", "12"));
+  const b = evaluate([finding({ level: 2, severity: "high" })], a.state, at("24", "13"));
+  assert.equal(b.send.length, 1);
+  assert.equal(b.send[0].kind, "sube");
+});
+
+test("cuando el problema desaparece se avisa 'resuelto' una sola vez", () => {
+  const a = evaluate([finding()], emptyState(), at("24", "12"));
+  const b = evaluate([], a.state, at("24", "18"));
+  assert.deepEqual(b.resolved.map((r) => r.key), ["horarios:x"]);
+  assert.equal(evaluate([], b.state, at("25", "18")).resolved.length, 0);
+  // Si vuelve a aparecer, es un aviso nuevo.
+  assert.equal(evaluate([finding()], b.state, at("26", "12")).send[0].kind, "nuevo");
+});
+
+test("una falla que pide dos corridas seguidas no avisa la primera vez, y si se cura entre medio, empieza de cero", () => {
+  const f = finding({ key: "fuente:Speedhive", consecutive: 2, severity: "medium" });
+  const uno = evaluate([f], emptyState(), at("24", "06"));
+  assert.equal(uno.send.length, 0);
+  const curada = evaluate([], uno.state, at("24", "12"));
+  assert.equal(evaluate([f], curada.state, at("24", "18")).send.length, 0, "vuelve a contar desde uno");
+  assert.equal(evaluate([f], uno.state, at("24", "18")).send.length, 1, "dos seguidas: avisa");
+});
+
+test("los avisos salen primero los graves, después lo argentino y después lo más cercano", () => {
+  const out = evaluate(
+    [finding({ key: "a", severity: "medium", tier: 3 }), finding({ key: "b", severity: "critical", tier: 3 }), finding({ key: "c", severity: "medium", tier: 1, hours: 50 }), finding({ key: "d", severity: "medium", tier: 1, hours: 10 })],
+    emptyState(),
+    at("24", "12"),
+  );
+  assert.deepEqual(out.send.map((f) => f.key), ["b", "d", "c", "a"]);
+});
+
+test("el resumen diario sale desde las 06:00 y una sola vez por día", () => {
+  assert.equal(summaryDue(emptyState(), at("24", "05")), false);
+  assert.equal(summaryDue(emptyState(), at("24", "06")), true);
+  assert.equal(summaryDue({ lastSummary: at("24", "06") }, at("24", "12")), false);
+  assert.equal(summaryDue({ lastSummary: at("24", "06") }, at("25", "07")), true);
+});
+
+// ——— Mensajes ———
+
+test("el mensaje lleva los avisos, los resueltos y cómo pedir ayuda; sin novedades no hay mensaje", () => {
+  assert.equal(renderAlerts({ send: [], resolved: [] }), null);
+  const texto = renderAlerts({ send: [{ ...finding(), kind: "sube" }], resolved: [{ title: "Otra cosa" }] });
+  assert.match(texto, /⏰ Faltan horarios: X ⬆️ sube de nivel/);
+  assert.match(texto, /✅ Resuelto: Otra cosa/);
+  assert.match(texto, /pegale este mensaje a Claude/);
+});
+
+test("un texto largo se corta en partes que entran en Telegram", () => {
+  const largo = Array.from({ length: 400 }, (_, i) => `línea ${i} con bastante texto para ocupar lugar`).join("\n");
+  const partes = chunk(largo);
+  assert.ok(partes.length > 1);
+  assert.ok(partes.every((p) => p.length <= 3800));
+  assert.equal(partes.join("\n").replace(/\n+/g, "\n"), largo);
+});
+
+test("sin token no falla (queda simulado) y con token manda; el token nunca aparece en un error", async () => {
+  const log = console.log;
+  console.log = () => {};
+  try {
+    assert.equal((await sendTelegram("hola", {})).simulated, true);
+  } finally {
+    console.log = log;
+  }
+  const llamadas = [];
+  const ok = await sendTelegram("hola", { token: "SECRETO", chatId: "42", fetchImpl: async (url, init) => (llamadas.push([url, JSON.parse(init.body)]), { ok: true }) });
+  assert.equal(ok.sent, 1);
+  assert.equal(llamadas[0][1].chat_id, "42");
+  await assert.rejects(sendTelegram("hola", { token: "SECRETO", chatId: "42", fetchImpl: async () => ({ ok: false, status: 401 }) }), (e) => !/SECRETO/.test(e.message) && /401/.test(e.message));
+  await assert.rejects(sendTelegram("hola", { token: "SECRETO", chatId: "42", fetchImpl: async () => { throw new Error("fetch failed https://api.telegram.org/botSECRETO/sendMessage"); } }), (e) => !/SECRETO/.test(e.message));
+});
+
+test("las fechas del TN se cruzan con Speedhive: coinciden dentro de un día o se marcan en conflicto", () => {
+  const tn = (round, day) => ({ id: `tn-2026-${round}`, seriesId: "tn", round, sessions: [{ start: `${day}T12:00:00-03:00` }] });
+  const events = [tn(9, "2026-09-20"), tn(10, "2026-10-11")];
+  const speedhive = [
+    { name: "APAT TN - FECHA 9 - RIO CUARTO", startDate: "2026-09-19T00:00:00" },
+    { name: "APAT TN - FECHA 10 - X", startDate: "2026-10-18T00:00:00" },
+    { name: "KARTING REGIONAL", startDate: "2026-09-19T00:00:00" },
+  ];
+  const conflicts = tnDateConflicts(events, speedhive);
+  assert.deepEqual(Object.keys(conflicts), ["tn-2026-10"]);
+  assert.match(conflicts["tn-2026-10"], /Speedhive 2026-10-18/);
+  assert.equal(dateStatus(withConflicts(events, conflicts)[1]).status, "conflict");
+});

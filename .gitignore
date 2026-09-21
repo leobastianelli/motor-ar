@@ -44,3 +44,7 @@ next-env.d.ts
 /research/html/
 /research/wiki/
 /research/campeones/
+
+# Estado local del guardián y del vigilante
+.alert-state.json
+.watchdog-state.json

@@ -261,3 +261,13 @@ fichas de piloto no muestran carreras/victorias/podios. Pendiente: adaptador (lo
 
 `src/data/notas.ts`: reseñas con fuente citada. Resumen propio, cita de hasta 25 palabras, titular original, fecha y enlace al medio (lo verifica
 `npm test`). Se enlazan con pilotos, categorías y fechas por etiqueta y por los nombres que aparezcan en el resumen.
+
+## Calibración de fechas y resultados pegados al evento equivocado (2026-09-22)
+
+Los avisos por Telegram (ver `docs/avisos-telegram.md`) dependen de saber qué eventos hay y cuándo, así que las fechas se califican:
+confirmada (fuente oficial con sede), tentativa (sólo Wikipedia o carga manual, o "a confirmar") o en conflicto (dos fuentes no coinciden).
+
+Bug encontrado por el guardián: al corregir la Fecha 7 duplicada de TC Mouras/Pista Mouras, los números de fecha se corrieron y los
+resultados guardados, que se reasignan por id de evento, quedaron pegados a la fecha equivocada (La Plata de agosto colgada de "Fecha 9 ·
+Rosario", que todavía no se corrió). `src/lib/sources/plausible.mjs`: una sesión guardada sólo se conserva si su día cae en la ventana del
+evento (guard, resultados de la ACTC y Speedhive del TN).

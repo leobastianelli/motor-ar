@@ -1,3 +1,5 @@
+import { belongsToEvent } from "./plausible.mjs";
+
 // Protección contra pérdida de datos: una fuente que hoy responde vacía, a medias o con otro HTML no puede borrar lo que ya teníamos.
 // Se aplica a cada categoría, no sólo a una: lo que estaba en la versión anterior de la temporada nunca desaparece por un mal día de una fuente.
 
@@ -26,6 +28,8 @@ export function keepSessionData(event, old) {
   const sessions = event.sessions.map((s) => ({ ...s }));
   for (const before of old.sessions ?? []) {
     if (!before.results?.length) continue;
+    // Si el id del evento cambió de significado, los resultados de otra fecha no se le pegan.
+    if (!belongsToEvent(event, before)) continue;
     const now = byId.get(before.id) ?? byKey.get(sessionKey(before));
     if (!now) {
       sessions.push(before);
@@ -42,11 +46,36 @@ export function keepSessionData(event, old) {
   return { event: { ...event, sessions }, restored };
 }
 
+const TZ = "America/Argentina/Buenos_Aires";
+const dayFmt = new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" });
+
+/**
+ * Una sesión de un día que todavía no empezó no puede tener resultados: si los tiene, son de otra fecha (un id que cambió de significado,
+ * una fuente que mezcla eventos). Se descartan. Devuelve los eventos corregidos y cuántas sesiones se limpiaron.
+ */
+export function stripFutureResults(events, now = Date.now()) {
+  let stripped = 0;
+  const out = events.map((e) => {
+    let changed = false;
+    const sessions = e.sessions.map((s) => {
+      if (!s.results?.length) return s;
+      const dayStart = Date.parse(`${dayFmt.format(new Date(s.start))}T00:00:00-03:00`);
+      if (dayStart <= now) return s;
+      changed = true;
+      stripped++;
+      const { results, resultsSource, ...rest } = s;
+      return rest;
+    });
+    return changed ? { ...e, sessions } : e;
+  });
+  return { events: out, stripped };
+}
+
 /**
  * Cierra la temporada armada: ninguna categoría queda con menos fechas que antes y ninguna fecha pierde resultados.
  * Devuelve los eventos y las advertencias para `failures`.
  */
-export function protectSeason(events, previous) {
+export function protectSeason(events, previous, now = Date.now()) {
   const warnings = [];
   const before = new Map((previous.events ?? []).map((e) => [e.id, e]));
   const seriesIds = [...new Set((previous.events ?? []).map((e) => e.seriesId))];
@@ -65,7 +94,9 @@ export function protectSeason(events, previous) {
     return fixed.event;
   });
   if (restored) warnings.push(`Se conservaron resultados de ${restored} sesiones que las fuentes dejaron de traer`);
-  return { events: kept, warnings };
+  const clean = stripFutureResults(kept, now);
+  if (clean.stripped) warnings.push(`Se descartaron resultados de ${clean.stripped} sesiones que todavía no se corrieron (eran de otra fecha)`);
+  return { events: clean.events, warnings };
 }
 
 /** Campeonatos: una tabla que antes tenía filas no puede quedar vacía por una fuente caída. */

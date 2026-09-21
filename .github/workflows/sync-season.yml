@@ -12,6 +12,11 @@ on:
     - cron: "0 19 * * 0"
     # Viernes a las 15:00 y 22:00 UTC (12:00 y 19:00 en Argentina): la ACTC publica el cronograma con horas del fin de semana ese día.
     - cron: "0 15,22 * * 5"
+    # Jueves a las 14:00 y 20:00 UTC (11:00 y 17:00 en Argentina): los horarios de muchas categorías se conocen el jueves. Cada corrida termina
+    # con el guardián, que avisa por Telegram lo que siga faltando.
+    - cron: "0 14,20 * * 4"
+    # Todos los días a las 09:00 UTC (06:00 en Argentina): cierra el hueco lunes-jueves y trae el resumen diario del guardián.
+    - cron: "0 9 * * *"
   workflow_dispatch:
     inputs:
       timing_days:
@@ -60,3 +65,29 @@ jobs:
           git add src/data/season-2026.json src/data/drivers-2026.json
           git commit -m "datos: sincronización automática de la temporada"
           git push
+
+      # El guardián revisa qué falta o qué está mal (horarios pendientes, fuentes caídas, tablas viejas, fechas sin confirmar) y avisa por
+      # Telegram. Corre siempre, incluso si la sincronización falló. El estado (qué ya se avisó) viaja en la caché.
+      - name: Restaurar estado de avisos
+        if: always()
+        uses: actions/cache/restore@v4
+        with:
+          path: .alert-state.json
+          key: alert-state-${{ github.run_id }}
+          restore-keys: alert-state-
+
+      - name: Guardián de datos
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SYNC_STATUS: ${{ job.status }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: npm run guardian
+
+      - name: Guardar estado de avisos
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .alert-state.json
+          key: alert-state-${{ github.run_id }}
