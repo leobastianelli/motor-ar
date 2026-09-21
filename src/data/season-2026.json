@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T21:17:11.243Z",
+  "generatedAt": "2026-09-21T21:33:41.727Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -17534,7 +17534,7 @@
             {
               "pos": 8,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "+5.515"
             },
@@ -17674,7 +17674,7 @@
             {
               "pos": 15,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "+17.474"
             },
@@ -17807,7 +17807,7 @@
             {
               "pos": 16,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "+2.794"
             },
@@ -17955,7 +17955,7 @@
             {
               "pos": 7,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "+13.063"
             },
@@ -18067,7 +18067,7 @@
             {
               "pos": 13,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "+42.024"
             },
@@ -26011,16 +26011,6 @@
               "url": "https://www.gt-world-challenge-europe.com/event/246/circuit-paul-ricard",
               "start": "2026-04-11T12:05:00+02:00"
             }
-          ],
-          "videos": [
-            {
-              "id": "IWluCBcSAOE",
-              "kind": "live"
-            },
-            {
-              "id": "7CKcpKWCRYQ",
-              "kind": "highlights"
-            }
           ]
         },
         {
@@ -26525,25 +26515,10 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/circuit-paul-ricard/main-race"
-          },
-          "videos": [
-            {
-              "id": "b7u1j5GKroE",
-              "kind": "live"
-            },
-            {
-              "id": "yCnOgjzhHZc",
-              "kind": "highlights"
-            },
-            {
-              "id": "gFsI4V-PHHE",
-              "kind": "highlights",
-              "label": "Extendido"
-            }
-          ]
+          }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "tc2000-2026-2",
@@ -29991,7 +29966,7 @@
             {
               "pos": 13,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "+3.903"
             },
@@ -30126,7 +30101,7 @@
             {
               "pos": 15,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "",
               "status": "Sin tiempo"
@@ -30197,7 +30172,7 @@
             {
               "pos": 8,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "+2.152"
             }
@@ -30829,7 +30804,7 @@
             {
               "pos": 15,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "",
               "status": "Sin tiempo"
@@ -33106,17 +33081,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/brands-hatch/free-practice-1"
-          },
-          "videos": [
-            {
-              "id": "RgCj3b5IYAU",
-              "kind": "live"
-            },
-            {
-              "id": "z9WAlcC7218",
-              "kind": "highlights"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-s1-fp2",
@@ -33412,17 +33377,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/brands-hatch/free-practice-2"
-          },
-          "videos": [
-            {
-              "id": "KAnZLUvk8Z8",
-              "kind": "live"
-            },
-            {
-              "id": "8Ai1aLAs7Wg",
-              "kind": "highlights"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-s1-q1",
@@ -34310,22 +34265,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/brands-hatch/race-1"
-          },
-          "videos": [
-            {
-              "id": "ECei0R8_pZU",
-              "kind": "live"
-            },
-            {
-              "id": "axNDwTctj80",
-              "kind": "highlights"
-            },
-            {
-              "id": "aC0RkHbCM8w",
-              "kind": "highlights",
-              "label": "Extendido"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-s1-r2",
@@ -34615,25 +34555,10 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/brands-hatch/race-2"
-          },
-          "videos": [
-            {
-              "id": "Bq_iDo6Ul2I",
-              "kind": "live"
-            },
-            {
-              "id": "YY5AbDqa37s",
-              "kind": "highlights"
-            },
-            {
-              "id": "lLadH_Af-OM",
-              "kind": "highlights",
-              "label": "Extendido"
-            }
-          ]
+          }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "tn-2026-4",
@@ -40925,7 +40850,7 @@
             {
               "pos": 12,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "+2.377"
             },
@@ -41023,7 +40948,7 @@
             {
               "pos": 8,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "+3.028"
             },
@@ -41196,7 +41121,7 @@
             {
               "pos": 15,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "",
               "status": "Sin tiempo"
@@ -41275,7 +41200,7 @@
             {
               "pos": 8,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "+0.363"
             }
@@ -44328,13 +44253,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/monza/free-practice-1"
-          },
-          "videos": [
-            {
-              "id": "VpIFVbPr_zk",
-              "kind": "live"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-e2-fp2",
@@ -44812,13 +44731,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/monza/free-practice-2"
-          },
-          "videos": [
-            {
-              "id": "yAtb3SEzau8",
-              "kind": "live"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-e2-q",
@@ -45296,17 +45209,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/monza/qualifying-combined"
-          },
-          "videos": [
-            {
-              "id": "-OsoLYwz_Vk",
-              "kind": "live"
-            },
-            {
-              "id": "ggKMVYacUEU",
-              "kind": "highlights"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-e2-race",
@@ -45814,20 +45717,10 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/monza/main-race"
-          },
-          "videos": [
-            {
-              "id": "51rrcLZCpYE",
-              "kind": "live"
-            },
-            {
-              "id": "e_z4dptbjG8",
-              "kind": "highlights"
-            }
-          ]
+          }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "tcp-2026-6",
@@ -49774,8 +49667,8 @@
           "id": "tn-2026-5-c2-1-entrenamiento-clase-2",
           "kind": "practica",
           "name": "1° Entrenamiento Clase 2",
-          "start": "2026-06-05T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-06-05T10:55:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -49992,14 +49885,485 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-06-07"
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3541243",
+              "start": "2026-06-05T10:55:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tn-2026-5-c2-clasificacio-n-clase-2",
+          "kind": "clasificacion",
+          "name": "Clasificación Clase 2",
+          "start": "2026-06-05T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "131",
+              "driver": "Franco Bodrato Mionetto",
+              "team": "Peugeot 208",
+              "gap": "1:33.859"
+            },
+            {
+              "pos": 2,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+0.094"
+            },
+            {
+              "pos": 3,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+0.197"
+            },
+            {
+              "pos": 4,
+              "number": "29",
+              "driver": "Horacio Evolo",
+              "team": "Toyota Etios",
+              "gap": "+0.275"
+            },
+            {
+              "pos": 5,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+0.425"
+            },
+            {
+              "pos": 6,
+              "number": "92",
+              "driver": "Thomas Marchesin",
+              "team": "Toyota Etios",
+              "gap": "+0.440"
+            },
+            {
+              "pos": 7,
+              "number": "161",
+              "driver": "Lucas Petracchini",
+              "team": "Chevrolet Onix",
+              "gap": "+0.470"
+            },
+            {
+              "pos": 8,
+              "number": "11",
+              "driver": "Pedro Grippo",
+              "team": "Toyota Yaris",
+              "gap": "+0.510"
+            },
+            {
+              "pos": 9,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "+0.520"
+            },
+            {
+              "pos": 10,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+0.609"
+            },
+            {
+              "pos": 11,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+0.651"
+            },
+            {
+              "pos": 12,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+0.859"
+            },
+            {
+              "pos": 13,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Etios",
+              "gap": "+0.871"
+            },
+            {
+              "pos": 14,
+              "number": "78",
+              "driver": "Ignacio Grippo",
+              "team": "Toyota Etios",
+              "gap": "+0.877"
+            },
+            {
+              "pos": 15,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+0.960"
+            },
+            {
+              "pos": 16,
+              "number": "3",
+              "driver": "Renzo Blotta",
+              "team": "Peugeot 208",
+              "gap": "+0.965"
+            },
+            {
+              "pos": 17,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "+0.970"
+            },
+            {
+              "pos": 18,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+0.992"
+            },
+            {
+              "pos": 19,
+              "number": "132",
+              "driver": "Diego Casais",
+              "team": "Peugeot 208",
+              "gap": "+1.028"
+            },
+            {
+              "pos": 20,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+1.039"
+            },
+            {
+              "pos": 21,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+1.047"
+            },
+            {
+              "pos": 22,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+1.102"
+            },
+            {
+              "pos": 23,
+              "number": "19",
+              "driver": "Maximiliano Bestani",
+              "team": "Chevrolet Onix",
+              "gap": "+1.323"
+            },
+            {
+              "pos": 24,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+1.398"
+            },
+            {
+              "pos": 25,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+1.457"
+            },
+            {
+              "pos": 26,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+1.457"
+            },
+            {
+              "pos": 27,
+              "number": "87",
+              "driver": "Daniel Costa Sanchez",
+              "team": "Ford F Kinetic",
+              "gap": "+1.483"
+            },
+            {
+              "pos": 28,
+              "number": "100",
+              "driver": "Marcos Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+2.030"
+            },
+            {
+              "pos": 29,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+2.877"
+            },
+            {
+              "pos": 30,
+              "number": "71",
+              "driver": "Maximo Donzino",
+              "team": "Ford F Kinetic",
+              "gap": "+3.668"
+            },
+            {
+              "pos": 31,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+1:07.632"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-06-07"
           }
+        },
+        {
+          "id": "tn-2026-5-c2-2-entrenamiento-clase-2",
+          "kind": "practica",
+          "name": "2° Entrenamiento Clase 2",
+          "start": "2026-06-05T13:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "1:33.790"
+            },
+            {
+              "pos": 2,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+0.115"
+            },
+            {
+              "pos": 3,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+0.448"
+            },
+            {
+              "pos": 4,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+0.487"
+            },
+            {
+              "pos": 5,
+              "number": "131",
+              "driver": "Franco Bodrato Mionetto",
+              "team": "Peugeot 208",
+              "gap": "+0.501"
+            },
+            {
+              "pos": 6,
+              "number": "29",
+              "driver": "Horacio Evolo",
+              "team": "Toyota Etios",
+              "gap": "+0.621"
+            },
+            {
+              "pos": 7,
+              "number": "19",
+              "driver": "Maximiliano Bestani",
+              "team": "Chevrolet Onix",
+              "gap": "+0.636"
+            },
+            {
+              "pos": 8,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+0.642"
+            },
+            {
+              "pos": 9,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+0.643"
+            },
+            {
+              "pos": 10,
+              "number": "161",
+              "driver": "Lucas Petracchini",
+              "team": "Chevrolet Onix",
+              "gap": "+0.662"
+            },
+            {
+              "pos": 11,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+0.813"
+            },
+            {
+              "pos": 12,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "+0.896"
+            },
+            {
+              "pos": 13,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+0.940"
+            },
+            {
+              "pos": 14,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+0.981"
+            },
+            {
+              "pos": 15,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+1.000"
+            },
+            {
+              "pos": 16,
+              "number": "3",
+              "driver": "Renzo Blotta",
+              "team": "Peugeot 208",
+              "gap": "+1.080"
+            },
+            {
+              "pos": 17,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Etios",
+              "gap": "+1.150"
+            },
+            {
+              "pos": 18,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+1.319"
+            },
+            {
+              "pos": 19,
+              "number": "11",
+              "driver": "Pedro Grippo",
+              "team": "Toyota Yaris",
+              "gap": "+1.423"
+            },
+            {
+              "pos": 20,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+1.497"
+            },
+            {
+              "pos": 21,
+              "number": "132",
+              "driver": "Diego Casais",
+              "team": "Peugeot 208",
+              "gap": "+1.517"
+            },
+            {
+              "pos": 22,
+              "number": "78",
+              "driver": "Ignacio Grippo",
+              "team": "Toyota Etios",
+              "gap": "+1.599"
+            },
+            {
+              "pos": 23,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+1.644"
+            },
+            {
+              "pos": 24,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "+1.750"
+            },
+            {
+              "pos": 25,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "VW Gol Trend",
+              "gap": "+1.808"
+            },
+            {
+              "pos": 26,
+              "number": "100",
+              "driver": "Marcos Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+2.181"
+            },
+            {
+              "pos": 27,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+2.283"
+            },
+            {
+              "pos": 28,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+2.303"
+            },
+            {
+              "pos": 29,
+              "number": "71",
+              "driver": "Maximo Donzino",
+              "team": "Ford F Kinetic",
+              "gap": "+2.878"
+            },
+            {
+              "pos": 30,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+3.304"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-06-07"
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3541243",
+              "start": "2026-06-05T13:25:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-5-c3-1-entrenamiento-clase-3",
           "kind": "practica",
           "name": "1° Entrenamiento Clase 3",
-          "start": "2026-06-05T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-06-05T15:15:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -50237,469 +50601,312 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-06-07"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3541243",
+              "start": "2026-06-05T15:15:00-03:00"
+            }
+          ]
         },
         {
-          "id": "tn-2026-5-c2-2-entrenamiento-clase-2",
-          "kind": "practica",
-          "name": "2° Entrenamiento Clase 2",
-          "start": "2026-06-05T12:00:00-03:00",
-          "timeKnown": false,
+          "id": "tn-2026-5-c2-serie-1-clase-2",
+          "kind": "serie",
+          "name": "Serie 1 Clase 2",
+          "start": "2026-06-06T14:55:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
               "pos": 1,
-              "number": "89",
-              "driver": "Valentino Quattrocchi",
-              "team": "Toyota Yaris",
-              "gap": "1:33.790"
-            },
-            {
-              "pos": 2,
-              "number": "86",
-              "driver": "Martin Leston",
-              "team": "Peugeot 208",
-              "gap": "+0.115"
-            },
-            {
-              "pos": 3,
-              "number": "2",
-              "driver": "Francisco Coltrinari",
-              "team": "Peugeot 208",
-              "gap": "+0.448"
-            },
-            {
-              "pos": 4,
-              "number": "151",
-              "driver": "Exequiel Bastidas",
-              "team": "Toyota Yaris",
-              "gap": "+0.487"
-            },
-            {
-              "pos": 5,
               "number": "131",
               "driver": "Franco Bodrato Mionetto",
               "team": "Peugeot 208",
-              "gap": "+0.501"
+              "gap": "7:55.750"
             },
             {
-              "pos": 6,
-              "number": "29",
-              "driver": "Horacio Evolo",
-              "team": "Toyota Etios",
-              "gap": "+0.621"
-            },
-            {
-              "pos": 7,
-              "number": "19",
-              "driver": "Maximiliano Bestani",
-              "team": "Chevrolet Onix",
-              "gap": "+0.636"
-            },
-            {
-              "pos": 8,
-              "number": "95",
-              "driver": "Santino Balerini",
-              "team": "Peugeot 208",
-              "gap": "+0.642"
-            },
-            {
-              "pos": 9,
-              "number": "70",
-              "driver": "Juan Ignacio Canela",
-              "team": "Toyota Yaris",
-              "gap": "+0.643"
-            },
-            {
-              "pos": 10,
+              "pos": 2,
               "number": "161",
               "driver": "Lucas Petracchini",
               "team": "Chevrolet Onix",
-              "gap": "+0.662"
+              "gap": "+3.304"
             },
             {
-              "pos": 11,
-              "number": "98",
-              "driver": "Braian Reinoso",
-              "team": "Toyota Yaris",
-              "gap": "+0.813"
+              "pos": 3,
+              "number": "29",
+              "driver": "Horacio Evolo",
+              "team": "Toyota Etios",
+              "gap": "+3.811"
             },
             {
-              "pos": 12,
-              "number": "177",
-              "driver": "Tomas Vitar",
-              "team": "Nissan March",
-              "gap": "+0.896"
-            },
-            {
-              "pos": 13,
-              "number": "150",
-              "driver": "Juan Martin Eluchans",
-              "team": "Toyota Yaris",
-              "gap": "+0.940"
-            },
-            {
-              "pos": 14,
-              "number": "14",
-              "driver": "Juan Eduardo Kreitz",
-              "team": "Peugeot 208",
-              "gap": "+0.981"
-            },
-            {
-              "pos": 15,
-              "number": "79",
-              "driver": "Andres Calderon",
-              "team": "Peugeot 208",
-              "gap": "+1.000"
-            },
-            {
-              "pos": 16,
-              "number": "3",
-              "driver": "Renzo Blotta",
-              "team": "Peugeot 208",
-              "gap": "+1.080"
-            },
-            {
-              "pos": 17,
+              "pos": 4,
               "number": "117",
               "driver": "Pablo Collazo",
               "team": "Toyota Etios",
-              "gap": "+1.150"
+              "gap": "+6.313"
             },
             {
-              "pos": 18,
-              "number": "25",
-              "driver": "Santiago Robledo",
-              "team": "Toyota Yaris",
-              "gap": "+1.319"
-            },
-            {
-              "pos": 19,
-              "number": "11",
-              "driver": "Pedro Grippo",
-              "team": "Toyota Yaris",
-              "gap": "+1.423"
-            },
-            {
-              "pos": 20,
-              "number": "192",
-              "driver": "Martin Blasig",
+              "pos": 5,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
               "team": "Peugeot 208",
-              "gap": "+1.497"
+              "gap": "+9.111"
             },
             {
-              "pos": 21,
+              "pos": 6,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+10.415"
+            },
+            {
+              "pos": 7,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+10.539"
+            },
+            {
+              "pos": 8,
+              "number": "100",
+              "driver": "Marcos Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+10.775"
+            },
+            {
+              "pos": 9,
+              "number": "3",
+              "driver": "Renzo Blotta",
+              "team": "Peugeot 208",
+              "gap": "+11.708"
+            },
+            {
+              "pos": 10,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+12.499"
+            },
+            {
+              "pos": 11,
               "number": "132",
               "driver": "Diego Casais",
               "team": "Peugeot 208",
-              "gap": "+1.517"
+              "gap": "+1:31.392"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-06-07"
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3541243",
+              "start": "2026-06-06T14:55:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tn-2026-5-c2-serie-2-clase-2",
+          "kind": "serie",
+          "name": "Serie 2 Clase 2",
+          "start": "2026-06-06T15:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "7:59.798"
             },
             {
-              "pos": 22,
-              "number": "78",
-              "driver": "Ignacio Grippo",
-              "team": "Toyota Etios",
-              "gap": "+1.599"
+              "pos": 2,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+2.628"
             },
             {
-              "pos": 23,
-              "number": "43",
-              "driver": "Marcelo Guevara",
-              "team": "Chevrolet Onix",
-              "gap": "+1.644"
+              "pos": 3,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+4.804"
             },
             {
-              "pos": 24,
+              "pos": 4,
               "number": "193",
               "driver": "Franco Romano",
               "team": "Toyota Yaris",
-              "gap": "+1.750"
+              "gap": "+5.184"
             },
             {
-              "pos": 25,
+              "pos": 5,
+              "number": "78",
+              "driver": "Ignacio Grippo",
+              "team": "Toyota Etios",
+              "gap": "+5.806"
+            },
+            {
+              "pos": 6,
+              "number": "19",
+              "driver": "Maximiliano Bestani",
+              "team": "Chevrolet Onix",
+              "gap": "+6.024"
+            },
+            {
+              "pos": 7,
               "number": "221",
               "driver": "Thiago Ferrari",
               "team": "VW Gol Trend",
-              "gap": "+1.808"
+              "gap": "+7.002"
             },
             {
-              "pos": 26,
-              "number": "100",
-              "driver": "Marcos Fernandez",
+              "pos": 8,
+              "number": "79",
+              "driver": "Andres Calderon",
               "team": "Peugeot 208",
-              "gap": "+2.181"
+              "gap": "+8.556"
             },
             {
-              "pos": 27,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "Toyota Yaris",
-              "gap": "+2.283"
-            },
-            {
-              "pos": 28,
-              "number": "174",
-              "driver": "Sergio Fernandez",
-              "team": "Peugeot 208",
-              "gap": "+2.303"
-            },
-            {
-              "pos": 29,
-              "number": "71",
-              "driver": "Maximo Donzino",
-              "team": "Ford F Kinetic",
-              "gap": "+2.878"
-            },
-            {
-              "pos": 30,
+              "pos": 9,
               "number": "93",
               "driver": "Martin Mura",
               "team": "Chevrolet Onix",
-              "gap": "+3.304"
+              "gap": "+12.865"
+            },
+            {
+              "pos": 10,
+              "number": "11",
+              "driver": "Pedro Grippo",
+              "team": "Toyota Yaris",
+              "gap": "+18.868"
+            },
+            {
+              "pos": 11,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+3 Vueltas"
             }
           ],
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-06-07"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3541243",
+              "start": "2026-06-06T15:20:00-03:00"
+            }
+          ]
         },
         {
-          "id": "tn-2026-5-c2-clasificacio-n-clase-2",
-          "kind": "clasificacion",
-          "name": "Clasificación Clase 2",
-          "start": "2026-06-05T12:00:00-03:00",
-          "timeKnown": false,
+          "id": "tn-2026-5-c2-serie-3-clase-2",
+          "kind": "serie",
+          "name": "Serie 3 Clase 2",
+          "start": "2026-06-06T15:45:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
               "pos": 1,
-              "number": "131",
-              "driver": "Franco Bodrato Mionetto",
-              "team": "Peugeot 208",
-              "gap": "1:33.859"
-            },
-            {
-              "pos": 2,
-              "number": "89",
-              "driver": "Valentino Quattrocchi",
-              "team": "Toyota Yaris",
-              "gap": "+0.094"
-            },
-            {
-              "pos": 3,
               "number": "86",
               "driver": "Martin Leston",
               "team": "Peugeot 208",
-              "gap": "+0.197"
+              "gap": "8:00.700"
             },
             {
-              "pos": 4,
-              "number": "29",
-              "driver": "Horacio Evolo",
-              "team": "Toyota Etios",
-              "gap": "+0.275"
-            },
-            {
-              "pos": 5,
-              "number": "2",
-              "driver": "Francisco Coltrinari",
-              "team": "Peugeot 208",
-              "gap": "+0.425"
-            },
-            {
-              "pos": 6,
-              "number": "92",
-              "driver": "Thomas Marchesin",
-              "team": "Toyota Etios",
-              "gap": "+0.440"
-            },
-            {
-              "pos": 7,
-              "number": "161",
-              "driver": "Lucas Petracchini",
-              "team": "Chevrolet Onix",
-              "gap": "+0.470"
-            },
-            {
-              "pos": 8,
-              "number": "11",
-              "driver": "Pedro Grippo",
-              "team": "Toyota Yaris",
-              "gap": "+0.510"
-            },
-            {
-              "pos": 9,
+              "pos": 2,
               "number": "177",
               "driver": "Tomas Vitar",
               "team": "Nissan March",
-              "gap": "+0.520"
+              "gap": "+0.001"
             },
             {
-              "pos": 10,
-              "number": "14",
-              "driver": "Juan Eduardo Kreitz",
-              "team": "Peugeot 208",
-              "gap": "+0.609"
-            },
-            {
-              "pos": 11,
-              "number": "150",
-              "driver": "Juan Martin Eluchans",
-              "team": "Toyota Yaris",
-              "gap": "+0.651"
-            },
-            {
-              "pos": 12,
-              "number": "98",
-              "driver": "Braian Reinoso",
-              "team": "Toyota Yaris",
-              "gap": "+0.859"
-            },
-            {
-              "pos": 13,
-              "number": "117",
-              "driver": "Pablo Collazo",
+              "pos": 3,
+              "number": "92",
+              "driver": "Thomas Marchesin",
               "team": "Toyota Etios",
-              "gap": "+0.871"
+              "gap": "+0.179"
             },
             {
-              "pos": 14,
-              "number": "78",
-              "driver": "Ignacio Grippo",
-              "team": "Toyota Etios",
-              "gap": "+0.877"
-            },
-            {
-              "pos": 15,
-              "number": "25",
-              "driver": "Santiago Robledo",
-              "team": "Toyota Yaris",
-              "gap": "+0.960"
-            },
-            {
-              "pos": 16,
-              "number": "3",
-              "driver": "Renzo Blotta",
-              "team": "Peugeot 208",
-              "gap": "+0.965"
-            },
-            {
-              "pos": 17,
-              "number": "193",
-              "driver": "Franco Romano",
-              "team": "Toyota Yaris",
-              "gap": "+0.970"
-            },
-            {
-              "pos": 18,
+              "pos": 4,
               "number": "95",
               "driver": "Santino Balerini",
               "team": "Peugeot 208",
-              "gap": "+0.992"
+              "gap": "+0.222"
             },
             {
-              "pos": 19,
-              "number": "132",
-              "driver": "Diego Casais",
-              "team": "Peugeot 208",
-              "gap": "+1.028"
-            },
-            {
-              "pos": 20,
-              "number": "43",
-              "driver": "Marcelo Guevara",
-              "team": "Chevrolet Onix",
-              "gap": "+1.039"
-            },
-            {
-              "pos": 21,
-              "number": "192",
-              "driver": "Martin Blasig",
-              "team": "Peugeot 208",
-              "gap": "+1.047"
-            },
-            {
-              "pos": 22,
-              "number": "151",
-              "driver": "Exequiel Bastidas",
+              "pos": 5,
+              "number": "25",
+              "driver": "Santiago Robledo",
               "team": "Toyota Yaris",
-              "gap": "+1.102"
+              "gap": "+0.523"
             },
             {
-              "pos": 23,
-              "number": "19",
-              "driver": "Maximiliano Bestani",
-              "team": "Chevrolet Onix",
-              "gap": "+1.323"
-            },
-            {
-              "pos": 24,
+              "pos": 6,
               "number": "174",
               "driver": "Sergio Fernandez",
               "team": "Peugeot 208",
-              "gap": "+1.398"
+              "gap": "+4.693"
             },
             {
-              "pos": 25,
-              "number": "70",
-              "driver": "Juan Ignacio Canela",
-              "team": "Toyota Yaris",
-              "gap": "+1.457"
-            },
-            {
-              "pos": 26,
-              "number": "79",
-              "driver": "Andres Calderon",
+              "pos": 7,
+              "number": "192",
+              "driver": "Martin Blasig",
               "team": "Peugeot 208",
-              "gap": "+1.457"
+              "gap": "+6.604"
             },
             {
-              "pos": 27,
+              "pos": 8,
               "number": "87",
               "driver": "Daniel Costa Sanchez",
-              "team": "Ford F Kinetic",
-              "gap": "+1.483"
-            },
-            {
-              "pos": 28,
-              "number": "100",
-              "driver": "Marcos Fernandez",
               "team": "Peugeot 208",
-              "gap": "+2.030"
+              "gap": "+8.248"
             },
             {
-              "pos": 29,
-              "number": "93",
-              "driver": "Martin Mura",
-              "team": "Chevrolet Onix",
-              "gap": "+2.877"
-            },
-            {
-              "pos": 30,
+              "pos": 9,
               "number": "71",
               "driver": "Maximo Donzino",
               "team": "Ford F Kinetic",
-              "gap": "+3.668"
+              "gap": "+16.980"
             },
             {
-              "pos": 31,
-              "number": "47",
-              "driver": "Bautista Roqueta",
+              "pos": 10,
+              "number": "98",
+              "driver": "Braian Reinoso",
               "team": "Toyota Yaris",
-              "gap": "+1:07.632"
+              "gap": "+1:14.858"
             }
           ],
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-06-07"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3541243",
+              "start": "2026-06-06T15:45:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-5-c3-clasificacio-n-clase-3",
           "kind": "clasificacion",
           "name": "Clasificación Clase 3",
-          "start": "2026-06-06T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-06-06T16:10:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -50937,280 +51144,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-06-07"
-          }
-        },
-        {
-          "id": "tn-2026-5-c2-serie-1-clase-2",
-          "kind": "serie",
-          "name": "Serie 1 Clase 2",
-          "start": "2026-06-06T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 25,
-          "results": [
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
             {
-              "pos": 1,
-              "number": "131",
-              "driver": "Franco Bodrato Mionetto",
-              "team": "Peugeot 208",
-              "gap": "7:55.750"
-            },
-            {
-              "pos": 2,
-              "number": "161",
-              "driver": "Lucas Petracchini",
-              "team": "Chevrolet Onix",
-              "gap": "+3.304"
-            },
-            {
-              "pos": 3,
-              "number": "29",
-              "driver": "Horacio Evolo",
-              "team": "Toyota Etios",
-              "gap": "+3.811"
-            },
-            {
-              "pos": 4,
-              "number": "117",
-              "driver": "Pablo Collazo",
-              "team": "Toyota Etios",
-              "gap": "+6.313"
-            },
-            {
-              "pos": 5,
-              "number": "14",
-              "driver": "Juan Eduardo Kreitz",
-              "team": "Peugeot 208",
-              "gap": "+9.111"
-            },
-            {
-              "pos": 6,
-              "number": "151",
-              "driver": "Exequiel Bastidas",
-              "team": "Toyota Yaris",
-              "gap": "+10.415"
-            },
-            {
-              "pos": 7,
-              "number": "70",
-              "driver": "Juan Ignacio Canela",
-              "team": "Toyota Yaris",
-              "gap": "+10.539"
-            },
-            {
-              "pos": 8,
-              "number": "100",
-              "driver": "Marcos Fernandez",
-              "team": "Peugeot 208",
-              "gap": "+10.775"
-            },
-            {
-              "pos": 9,
-              "number": "3",
-              "driver": "Renzo Blotta",
-              "team": "Peugeot 208",
-              "gap": "+11.708"
-            },
-            {
-              "pos": 10,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "Toyota Yaris",
-              "gap": "+12.499"
-            },
-            {
-              "pos": 11,
-              "number": "132",
-              "driver": "Diego Casais",
-              "team": "Peugeot 208",
-              "gap": "+1:31.392"
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3541243",
+              "start": "2026-06-06T16:10:00-03:00"
             }
-          ],
-          "resultsSource": {
-            "name": "APAT · resultados oficiales",
-            "url": "https://apat.org.ar/resultados/c2/2026-06-07"
-          }
-        },
-        {
-          "id": "tn-2026-5-c2-serie-2-clase-2",
-          "kind": "serie",
-          "name": "Serie 2 Clase 2",
-          "start": "2026-06-06T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 25,
-          "results": [
-            {
-              "pos": 1,
-              "number": "2",
-              "driver": "Francisco Coltrinari",
-              "team": "Peugeot 208",
-              "gap": "7:59.798"
-            },
-            {
-              "pos": 2,
-              "number": "89",
-              "driver": "Valentino Quattrocchi",
-              "team": "Toyota Yaris",
-              "gap": "+2.628"
-            },
-            {
-              "pos": 3,
-              "number": "150",
-              "driver": "Juan Martin Eluchans",
-              "team": "Toyota Yaris",
-              "gap": "+4.804"
-            },
-            {
-              "pos": 4,
-              "number": "193",
-              "driver": "Franco Romano",
-              "team": "Toyota Yaris",
-              "gap": "+5.184"
-            },
-            {
-              "pos": 5,
-              "number": "78",
-              "driver": "Ignacio Grippo",
-              "team": "Toyota Etios",
-              "gap": "+5.806"
-            },
-            {
-              "pos": 6,
-              "number": "19",
-              "driver": "Maximiliano Bestani",
-              "team": "Chevrolet Onix",
-              "gap": "+6.024"
-            },
-            {
-              "pos": 7,
-              "number": "221",
-              "driver": "Thiago Ferrari",
-              "team": "VW Gol Trend",
-              "gap": "+7.002"
-            },
-            {
-              "pos": 8,
-              "number": "79",
-              "driver": "Andres Calderon",
-              "team": "Peugeot 208",
-              "gap": "+8.556"
-            },
-            {
-              "pos": 9,
-              "number": "93",
-              "driver": "Martin Mura",
-              "team": "Chevrolet Onix",
-              "gap": "+12.865"
-            },
-            {
-              "pos": 10,
-              "number": "11",
-              "driver": "Pedro Grippo",
-              "team": "Toyota Yaris",
-              "gap": "+18.868"
-            },
-            {
-              "pos": 11,
-              "number": "43",
-              "driver": "Marcelo Guevara",
-              "team": "Chevrolet Onix",
-              "gap": "+3 Vueltas"
-            }
-          ],
-          "resultsSource": {
-            "name": "APAT · resultados oficiales",
-            "url": "https://apat.org.ar/resultados/c2/2026-06-07"
-          }
-        },
-        {
-          "id": "tn-2026-5-c2-serie-3-clase-2",
-          "kind": "serie",
-          "name": "Serie 3 Clase 2",
-          "start": "2026-06-06T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 25,
-          "results": [
-            {
-              "pos": 1,
-              "number": "86",
-              "driver": "Martin Leston",
-              "team": "Peugeot 208",
-              "gap": "8:00.700"
-            },
-            {
-              "pos": 2,
-              "number": "177",
-              "driver": "Tomas Vitar",
-              "team": "Nissan March",
-              "gap": "+0.001"
-            },
-            {
-              "pos": 3,
-              "number": "92",
-              "driver": "Thomas Marchesin",
-              "team": "Toyota Etios",
-              "gap": "+0.179"
-            },
-            {
-              "pos": 4,
-              "number": "95",
-              "driver": "Santino Balerini",
-              "team": "Peugeot 208",
-              "gap": "+0.222"
-            },
-            {
-              "pos": 5,
-              "number": "25",
-              "driver": "Santiago Robledo",
-              "team": "Toyota Yaris",
-              "gap": "+0.523"
-            },
-            {
-              "pos": 6,
-              "number": "174",
-              "driver": "Sergio Fernandez",
-              "team": "Peugeot 208",
-              "gap": "+4.693"
-            },
-            {
-              "pos": 7,
-              "number": "192",
-              "driver": "Martin Blasig",
-              "team": "Peugeot 208",
-              "gap": "+6.604"
-            },
-            {
-              "pos": 8,
-              "number": "87",
-              "driver": "Daniel Costa Sanchez",
-              "team": "Peugeot 208",
-              "gap": "+8.248"
-            },
-            {
-              "pos": 9,
-              "number": "71",
-              "driver": "Maximo Donzino",
-              "team": "Ford F Kinetic",
-              "gap": "+16.980"
-            },
-            {
-              "pos": 10,
-              "number": "98",
-              "driver": "Braian Reinoso",
-              "team": "Toyota Yaris",
-              "gap": "+1:14.858"
-            }
-          ],
-          "resultsSource": {
-            "name": "APAT · resultados oficiales",
-            "url": "https://apat.org.ar/resultados/c2/2026-06-07"
-          }
+          ]
         },
         {
           "id": "tn-2026-5-c3-serie-1-clase-3",
           "kind": "serie",
           "name": "Serie 1 Clase 3",
-          "start": "2026-06-07T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-06-07T10:00:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -51294,14 +51243,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-06-07"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3541243",
+              "start": "2026-06-07T10:00:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-5-c3-serie-2-clase-3",
           "kind": "serie",
           "name": "Serie 2 Clase 3",
-          "start": "2026-06-07T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-06-07T10:25:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -51385,14 +51342,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-06-07"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3541243",
+              "start": "2026-06-07T10:25:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-5-c3-serie-3-clase-3",
           "kind": "serie",
           "name": "Serie 3 Clase 3",
-          "start": "2026-06-07T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-06-07T10:50:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -51476,14 +51441,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-06-07"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3541243",
+              "start": "2026-06-07T10:50:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-5-c2",
           "kind": "final",
           "name": "Final Clase 2",
-          "start": "2026-06-07T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-06-07T11:45:00-03:00",
+          "timeKnown": true,
           "durationMin": 35,
           "results": [
             {
@@ -51714,14 +51687,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-06-07"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3541243",
+              "start": "2026-06-07T11:45:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-5-c3",
           "kind": "final",
           "name": "Final Clase 3",
-          "start": "2026-06-07T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-06-07T12:45:00-03:00",
+          "timeKnown": true,
           "durationMin": 35,
           "results": [
             {
@@ -51959,7 +51940,15 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-06-07"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3541243",
+              "start": "2026-06-07T12:45:00-03:00"
+            }
+          ]
         }
       ],
       "source": "APAT (apat.org.ar)"
@@ -57306,13 +57295,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/crowdstrike-24-hours-of-spa/free-practice-2"
-          },
-          "videos": [
-            {
-              "id": "76IRcnM8drs",
-              "kind": "live"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-e3-q",
@@ -57894,17 +57877,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/crowdstrike-24-hours-of-spa/qualifying-combined"
-          },
-          "videos": [
-            {
-              "id": "aquzP2xUctI",
-              "kind": "live"
-            },
-            {
-              "id": "zsT9PMau-K0",
-              "kind": "highlights"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-e3-np",
@@ -58768,17 +58741,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/crowdstrike-24-hours-of-spa/super-pole"
-          },
-          "videos": [
-            {
-              "id": "7coTMUgnOJU",
-              "kind": "live"
-            },
-            {
-              "id": "qPuDSSCqCVY",
-              "kind": "highlights"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-e3-wu",
@@ -58793,12 +58756,6 @@
               "name": "GT World Challenge Europe (oficial)",
               "url": "https://www.gt-world-challenge-europe.com/event/249/crowdstrike-24-hours-of-spa",
               "start": "2026-06-26T19:20:00+02:00"
-            }
-          ],
-          "videos": [
-            {
-              "id": "_qrNys91N6w",
-              "kind": "live"
             }
           ]
         },
@@ -59418,41 +59375,10 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/crowdstrike-24-hours-of-spa/main-race"
-          },
-          "videos": [
-            {
-              "id": "YzU6_l-2ov8",
-              "kind": "live",
-              "label": "Parte 1"
-            },
-            {
-              "id": "PGSIoUyQVX0",
-              "kind": "live",
-              "label": "Parte 2"
-            },
-            {
-              "id": "sozJeZESyFY",
-              "kind": "live",
-              "label": "Últimas 7 horas"
-            },
-            {
-              "id": "aaZPHEWe_Gk",
-              "kind": "live",
-              "label": "Últimas 7 horas"
-            },
-            {
-              "id": "iHpYb8lnMjU",
-              "kind": "live",
-              "label": "Carrera completa"
-            },
-            {
-              "id": "mBkIYDDxXns",
-              "kind": "highlights"
-            }
-          ]
+          }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "f2-2026-6",
@@ -61135,7 +61061,7 @@
             {
               "pos": 13,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "+1.758"
             },
@@ -61261,7 +61187,7 @@
             {
               "pos": 14,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Ford",
               "gap": "+1.412"
             },
@@ -63725,8 +63651,8 @@
           "id": "tn-2026-6-c2-1-entrenamiento-clase-2",
           "kind": "practica",
           "name": "1° Entrenamiento Clase 2",
-          "start": "2026-07-04T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-07-03T15:40:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -63950,7 +63876,15 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-07-05"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3589935",
+              "start": "2026-07-03T15:40:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-6-c3-1-entrenamiento-clase-3",
@@ -65132,8 +65066,8 @@
           "id": "tn-2026-6-c2-serie-1-clase-2",
           "kind": "serie",
           "name": "Serie 1 Clase 2",
-          "start": "2026-07-05T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-07-05T09:55:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -65210,105 +65144,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-07-05"
-          }
-        },
-        {
-          "id": "tn-2026-6-c3-serie-1-clase-3",
-          "kind": "serie",
-          "name": "Serie 1 Clase 3",
-          "start": "2026-07-05T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 25,
-          "results": [
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
             {
-              "pos": 1,
-              "number": "86",
-              "driver": "Agustin Canapino",
-              "team": "Chevrolet Cruze",
-              "gap": "9:33.206"
-            },
-            {
-              "pos": 2,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "VW Vento",
-              "gap": "+5.018"
-            },
-            {
-              "pos": 3,
-              "number": "144",
-              "driver": "Leonel Pernia",
-              "team": "Honda Civic",
-              "gap": "+7.243"
-            },
-            {
-              "pos": 4,
-              "number": "19",
-              "driver": "Lucas Vicino",
-              "team": "Toyota Corolla",
-              "gap": "+8.920"
-            },
-            {
-              "pos": 5,
-              "number": "89",
-              "driver": "Jeremias Olmedo",
-              "team": "Chevrolet Cruze",
-              "gap": "+10.580"
-            },
-            {
-              "pos": 6,
-              "number": "27",
-              "driver": "Leandro Carducci",
-              "team": "Ford Focus",
-              "gap": "+10.764"
-            },
-            {
-              "pos": 7,
-              "number": "94",
-              "driver": "Gonzalo Antolin",
-              "team": "Chevrolet Cruze",
-              "gap": "+15.571"
-            },
-            {
-              "pos": 8,
-              "number": "77",
-              "driver": "Matias Cohen",
-              "team": "VW Virtus",
-              "gap": "+16.117"
-            },
-            {
-              "pos": 9,
-              "number": "46",
-              "driver": "Miguel Ciaurro",
-              "team": "VW Virtus",
-              "gap": "+3 Vueltas"
-            },
-            {
-              "pos": 10,
-              "number": "72",
-              "driver": "Lucas Tedeschi",
-              "team": "Ford Focus",
-              "gap": "+3 Vueltas"
-            },
-            {
-              "pos": 11,
-              "number": "8",
-              "driver": "Joel Gassmann",
-              "team": "Chevrolet Cruze",
-              "gap": "+EX"
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3589935",
+              "start": "2026-07-05T09:55:00-03:00"
             }
-          ],
-          "resultsSource": {
-            "name": "APAT · resultados oficiales",
-            "url": "https://apat.org.ar/resultados/c3/2026-07-05"
-          }
+          ]
         },
         {
           "id": "tn-2026-6-c2-serie-2-clase-2",
           "kind": "serie",
           "name": "Serie 2 Clase 2",
-          "start": "2026-07-05T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-07-05T10:20:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -65392,14 +65243,206 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-07-05"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3589935",
+              "start": "2026-07-05T10:20:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tn-2026-6-c2-serie-3-clase-2",
+          "kind": "serie",
+          "name": "Serie 3 Clase 2",
+          "start": "2026-07-05T10:45:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "161",
+              "driver": "Lucas Petracchini",
+              "team": "Chevrolet Onix",
+              "gap": "9:55.090"
+            },
+            {
+              "pos": 2,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+2.149"
+            },
+            {
+              "pos": 3,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+2.336"
+            },
+            {
+              "pos": 4,
+              "number": "131",
+              "driver": "Franco Bodrato Mionetto",
+              "team": "Peugeot 208",
+              "gap": "+3.293"
+            },
+            {
+              "pos": 5,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "+4.657"
+            },
+            {
+              "pos": 6,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+4.965"
+            },
+            {
+              "pos": 7,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+5.399"
+            },
+            {
+              "pos": 9,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+43.292"
+            },
+            {
+              "pos": 10,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Etios",
+              "gap": "+3 Vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-07-05"
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3589935",
+              "start": "2026-07-05T10:45:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tn-2026-6-c3-serie-1-clase-3",
+          "kind": "serie",
+          "name": "Serie 1 Clase 3",
+          "start": "2026-07-05T11:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "86",
+              "driver": "Agustin Canapino",
+              "team": "Chevrolet Cruze",
+              "gap": "9:33.206"
+            },
+            {
+              "pos": 2,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "VW Vento",
+              "gap": "+5.018"
+            },
+            {
+              "pos": 3,
+              "number": "144",
+              "driver": "Leonel Pernia",
+              "team": "Honda Civic",
+              "gap": "+7.243"
+            },
+            {
+              "pos": 4,
+              "number": "19",
+              "driver": "Lucas Vicino",
+              "team": "Toyota Corolla",
+              "gap": "+8.920"
+            },
+            {
+              "pos": 5,
+              "number": "89",
+              "driver": "Jeremias Olmedo",
+              "team": "Chevrolet Cruze",
+              "gap": "+10.580"
+            },
+            {
+              "pos": 6,
+              "number": "27",
+              "driver": "Leandro Carducci",
+              "team": "Ford Focus",
+              "gap": "+10.764"
+            },
+            {
+              "pos": 7,
+              "number": "94",
+              "driver": "Gonzalo Antolin",
+              "team": "Chevrolet Cruze",
+              "gap": "+15.571"
+            },
+            {
+              "pos": 8,
+              "number": "77",
+              "driver": "Matias Cohen",
+              "team": "VW Virtus",
+              "gap": "+16.117"
+            },
+            {
+              "pos": 9,
+              "number": "46",
+              "driver": "Miguel Ciaurro",
+              "team": "VW Virtus",
+              "gap": "+3 Vueltas"
+            },
+            {
+              "pos": 10,
+              "number": "72",
+              "driver": "Lucas Tedeschi",
+              "team": "Ford Focus",
+              "gap": "+3 Vueltas"
+            },
+            {
+              "pos": 11,
+              "number": "8",
+              "driver": "Joel Gassmann",
+              "team": "Chevrolet Cruze",
+              "gap": "+EX"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c3/2026-07-05"
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3589935",
+              "start": "2026-07-05T11:10:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-6-c3-serie-2-clase-3",
           "kind": "serie",
           "name": "Serie 2 Clase 3",
-          "start": "2026-07-05T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-07-05T11:35:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -65476,91 +65519,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-07-05"
-          }
-        },
-        {
-          "id": "tn-2026-6-c2-serie-3-clase-2",
-          "kind": "serie",
-          "name": "Serie 3 Clase 2",
-          "start": "2026-07-05T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 25,
-          "results": [
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
             {
-              "pos": 1,
-              "number": "161",
-              "driver": "Lucas Petracchini",
-              "team": "Chevrolet Onix",
-              "gap": "9:55.090"
-            },
-            {
-              "pos": 2,
-              "number": "150",
-              "driver": "Juan Martin Eluchans",
-              "team": "Toyota Yaris",
-              "gap": "+2.149"
-            },
-            {
-              "pos": 3,
-              "number": "2",
-              "driver": "Francisco Coltrinari",
-              "team": "Peugeot 208",
-              "gap": "+2.336"
-            },
-            {
-              "pos": 4,
-              "number": "131",
-              "driver": "Franco Bodrato Mionetto",
-              "team": "Peugeot 208",
-              "gap": "+3.293"
-            },
-            {
-              "pos": 5,
-              "number": "177",
-              "driver": "Tomas Vitar",
-              "team": "Nissan March",
-              "gap": "+4.657"
-            },
-            {
-              "pos": 6,
-              "number": "89",
-              "driver": "Valentino Quattrocchi",
-              "team": "Toyota Yaris",
-              "gap": "+4.965"
-            },
-            {
-              "pos": 7,
-              "number": "98",
-              "driver": "Braian Reinoso",
-              "team": "Toyota Yaris",
-              "gap": "+5.399"
-            },
-            {
-              "pos": 9,
-              "number": "93",
-              "driver": "Martin Mura",
-              "team": "Chevrolet Onix",
-              "gap": "+43.292"
-            },
-            {
-              "pos": 10,
-              "number": "117",
-              "driver": "Pablo Collazo",
-              "team": "Toyota Etios",
-              "gap": "+3 Vueltas"
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3589935",
+              "start": "2026-07-05T11:35:00-03:00"
             }
-          ],
-          "resultsSource": {
-            "name": "APAT · resultados oficiales",
-            "url": "https://apat.org.ar/resultados/c2/2026-07-05"
-          }
+          ]
         },
         {
           "id": "tn-2026-6-c2",
           "kind": "final",
           "name": "Final Clase 2",
-          "start": "2026-07-05T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-07-05T12:55:00-03:00",
+          "timeKnown": true,
           "durationMin": 35,
           "results": [
             {
@@ -65791,14 +65765,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-07-05"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3589935",
+              "start": "2026-07-05T12:55:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-6-c3",
           "kind": "final",
           "name": "Final Clase 3",
-          "start": "2026-07-05T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-07-05T13:50:00-03:00",
+          "timeKnown": true,
           "durationMin": 35,
           "results": [
             {
@@ -66022,7 +66004,15 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-07-05"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3589935",
+              "start": "2026-07-05T13:50:00-03:00"
+            }
+          ]
         }
       ],
       "source": "APAT (apat.org.ar)"
@@ -71005,13 +70995,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/misano/qualifying-1-combined"
-          },
-          "videos": [
-            {
-              "id": "3Ng4Mk_6bqQ",
-              "kind": "live"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-s2-r1",
@@ -71381,22 +71365,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/misano/race-1"
-          },
-          "videos": [
-            {
-              "id": "VNAfdw9Lm-o",
-              "kind": "live"
-            },
-            {
-              "id": "1ZQ4dVyJN38",
-              "kind": "highlights"
-            },
-            {
-              "id": "0gAbqfzkNw0",
-              "kind": "highlights",
-              "label": "Extendido"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-s2-q2",
@@ -71754,13 +71723,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/misano/qualifying-2"
-          },
-          "videos": [
-            {
-              "id": "EBSCN8ttgb8",
-              "kind": "live"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-s2-r2",
@@ -72122,25 +72085,10 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/misano/race-2"
-          },
-          "videos": [
-            {
-              "id": "iZh0_ZOdQC8",
-              "kind": "live"
-            },
-            {
-              "id": "cXh5PsUm-iA",
-              "kind": "highlights"
-            },
-            {
-              "id": "f9jLQo4v9ZQ",
-              "kind": "highlights",
-              "label": "Extendido"
-            }
-          ]
+          }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "f2-2026-9",
@@ -74833,7 +74781,7 @@
             {
               "pos": 14,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadie (h)",
               "team": "Toyota",
               "gap": "+1.189"
             }
@@ -76848,17 +76796,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/magny-cours/qualifying-1-combined"
-          },
-          "videos": [
-            {
-              "id": "1mhOUrj-Zx0",
-              "kind": "live"
-            },
-            {
-              "id": "mrvXNlOIsUQ",
-              "kind": "highlights"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-s3-r1",
@@ -77236,22 +77174,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/magny-cours/race-1"
-          },
-          "videos": [
-            {
-              "id": "bCYIMdGZBYA",
-              "kind": "live"
-            },
-            {
-              "id": "w4sO-SkIOw8",
-              "kind": "highlights"
-            },
-            {
-              "id": "JfltqXWIKTA",
-              "kind": "highlights",
-              "label": "Extendido"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-s3-q2",
@@ -77631,13 +77554,7 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/magny-cours/qualifying-2-combined"
-          },
-          "videos": [
-            {
-              "id": "wAmfpg3nlOU",
-              "kind": "live"
-            }
-          ]
+          }
         },
         {
           "id": "gt3-2026-s3-r2",
@@ -78023,25 +77940,10 @@
           "resultsSource": {
             "name": "GT World Challenge Europe (oficial)",
             "url": "https://www.gt-world-challenge-europe.com/results/2026/magny-cours/race-2"
-          },
-          "videos": [
-            {
-              "id": "NbY8E8uLIxs",
-              "kind": "live"
-            },
-            {
-              "id": "_WZ9xRDKk4A",
-              "kind": "highlights"
-            },
-            {
-              "id": "S3gCKY1U1AU",
-              "kind": "highlights",
-              "label": "Extendido"
-            }
-          ]
+          }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "tn-2026-7",
@@ -78060,8 +77962,8 @@
           "id": "tn-2026-7-c2-1-entrenamiento-clase-2",
           "kind": "practica",
           "name": "1° Entrenamiento Clase 2",
-          "start": "2026-07-31T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-07-31T10:00:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -78292,14 +78194,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-08-02"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-07-31T10:00:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-7-c3-1-entrenamiento-clase-3",
           "kind": "practica",
           "name": "1° Entrenamiento Clase 3",
-          "start": "2026-07-31T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-07-31T11:10:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -78530,14 +78440,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-02"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-07-31T11:10:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-7-c2-2-entrenamiento-clase-2",
           "kind": "practica",
           "name": "2° Entrenamiento Clase 2",
-          "start": "2026-07-31T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-07-31T12:45:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -78768,14 +78686,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-08-02"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-07-31T12:45:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-7-c3-2-entrenamiento-clase-3",
           "kind": "practica",
           "name": "2° Entrenamiento Clase 3",
-          "start": "2026-07-31T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-07-31T13:55:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -79006,14 +78932,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-02"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-07-31T13:55:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-7-c2-clasificacio-n-clase-2",
           "kind": "clasificacion",
           "name": "Clasificación Clase 2",
-          "start": "2026-07-31T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-07-31T15:30:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -79244,14 +79178,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-08-02"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-07-31T15:30:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-7-c3-clasificacio-n-clase-3",
           "kind": "clasificacion",
           "name": "Clasificación Clase 3",
-          "start": "2026-07-31T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-07-31T16:30:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -79482,98 +79424,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-02"
-          }
-        },
-        {
-          "id": "tn-2026-7-c2-serie-1-clase-2",
-          "kind": "serie",
-          "name": "Serie 1 Clase 2",
-          "start": "2026-08-01T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 25,
-          "results": [
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
             {
-              "pos": 1,
-              "number": "11",
-              "driver": "Pedro Grippo",
-              "team": "Toyota Yaris",
-              "gap": "9:34.715"
-            },
-            {
-              "pos": 2,
-              "number": "3",
-              "driver": "Renzo Blotta",
-              "team": "Peugeot 208",
-              "gap": "+0.556"
-            },
-            {
-              "pos": 3,
-              "number": "2",
-              "driver": "Francisco Coltrinari",
-              "team": "Peugeot 208",
-              "gap": "+2.325"
-            },
-            {
-              "pos": 4,
-              "number": "89",
-              "driver": "Valentino Quattrocchi",
-              "team": "Toyota Yaris",
-              "gap": "+2.543"
-            },
-            {
-              "pos": 5,
-              "number": "25",
-              "driver": "Santiago Robledo",
-              "team": "Toyota Yaris",
-              "gap": "+6.779"
-            },
-            {
-              "pos": 6,
-              "number": "78",
-              "driver": "Ignacio Grippo",
-              "team": "Toyota Etios",
-              "gap": "+8.464"
-            },
-            {
-              "pos": 7,
-              "number": "131",
-              "driver": "Franco Bodrato Mionetto",
-              "team": "Peugeot 208",
-              "gap": "+8.953"
-            },
-            {
-              "pos": 8,
-              "number": "221",
-              "driver": "Thiago Ferrari",
-              "team": "Ford F Kinetic",
-              "gap": "+8.954"
-            },
-            {
-              "pos": 9,
-              "number": "174",
-              "driver": "Sergio Fernandez",
-              "team": "Peugeot 208",
-              "gap": "+11.235"
-            },
-            {
-              "pos": 10,
-              "number": "56",
-              "driver": "Agustin Bonomo",
-              "team": "DS 3",
-              "gap": "+12.886"
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-07-31T16:30:00-03:00"
             }
-          ],
-          "resultsSource": {
-            "name": "APAT · resultados oficiales",
-            "url": "https://apat.org.ar/resultados/c2/2026-08-02"
-          }
+          ]
         },
         {
           "id": "tn-2026-7-c3-serie-1-clase-3",
           "kind": "serie",
           "name": "Serie 1 Clase 3",
-          "start": "2026-08-01T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-01T15:00:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -79657,105 +79523,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-02"
-          }
-        },
-        {
-          "id": "tn-2026-7-c2-serie-2-clase-2",
-          "kind": "serie",
-          "name": "Serie 2 Clase 2",
-          "start": "2026-08-01T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 25,
-          "results": [
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
             {
-              "pos": 1,
-              "number": "70",
-              "driver": "Juan Ignacio Canela",
-              "team": "Toyota Yaris",
-              "gap": "10:40.493"
-            },
-            {
-              "pos": 2,
-              "number": "151",
-              "driver": "Exequiel Bastidas",
-              "team": "Toyota Yaris",
-              "gap": "+0.460"
-            },
-            {
-              "pos": 3,
-              "number": "98",
-              "driver": "Braian Reinoso",
-              "team": "Toyota Yaris",
-              "gap": "+2.097"
-            },
-            {
-              "pos": 4,
-              "number": "79",
-              "driver": "Andres Calderon",
-              "team": "Peugeot 208",
-              "gap": "+2.368"
-            },
-            {
-              "pos": 5,
-              "number": "29",
-              "driver": "Horacio Evolo",
-              "team": "Toyota Etios",
-              "gap": "+4.117"
-            },
-            {
-              "pos": 6,
-              "number": "161",
-              "driver": "Lucas Petracchini",
-              "team": "Chevrolet Onix",
-              "gap": "+4.379"
-            },
-            {
-              "pos": 7,
-              "number": "84",
-              "driver": "Gaston Martinez Minetti",
-              "team": "Toyota Etios",
-              "gap": "+4.807"
-            },
-            {
-              "pos": 8,
-              "number": "97",
-              "driver": "Bruno Pace",
-              "team": "Toyota Etios",
-              "gap": "+5.252"
-            },
-            {
-              "pos": 9,
-              "number": "71",
-              "driver": "Maximo Donzino",
-              "team": "Ford F Kinetic",
-              "gap": "+6.098"
-            },
-            {
-              "pos": 10,
-              "number": "86",
-              "driver": "Martin Leston",
-              "team": "Peugeot 208",
-              "gap": "+40.761"
-            },
-            {
-              "pos": 11,
-              "number": "119",
-              "driver": "Nahuel Della Santina",
-              "team": "Toyota Etios",
-              "gap": "+4 Vueltas"
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-08-01T15:00:00-03:00"
             }
-          ],
-          "resultsSource": {
-            "name": "APAT · resultados oficiales",
-            "url": "https://apat.org.ar/resultados/c2/2026-08-02"
-          }
+          ]
         },
         {
           "id": "tn-2026-7-c3-serie-2-clase-3",
           "kind": "serie",
           "name": "Serie 2 Clase 3",
-          "start": "2026-08-01T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-01T15:25:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -79839,98 +79622,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-02"
-          }
-        },
-        {
-          "id": "tn-2026-7-c2-serie-3-clase-2",
-          "kind": "serie",
-          "name": "Serie 3 Clase 2",
-          "start": "2026-08-01T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 25,
-          "results": [
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
             {
-              "pos": 1,
-              "number": "95",
-              "driver": "Santino Balerini",
-              "team": "Peugeot 208",
-              "gap": "9:31.563"
-            },
-            {
-              "pos": 2,
-              "number": "117",
-              "driver": "Pablo Collazo",
-              "team": "Toyota Yaris",
-              "gap": "+2.640"
-            },
-            {
-              "pos": 3,
-              "number": "19",
-              "driver": "Maximiliano Bestani",
-              "team": "Chevrolet Onix",
-              "gap": "+4.044"
-            },
-            {
-              "pos": 4,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "Toyota Yaris",
-              "gap": "+11.384"
-            },
-            {
-              "pos": 5,
-              "number": "192",
-              "driver": "Martin Blasig",
-              "team": "Peugeot 208",
-              "gap": "+13.551"
-            },
-            {
-              "pos": 6,
-              "number": "92",
-              "driver": "Thomas Marchesin",
-              "team": "Toyota Etios",
-              "gap": "+14.935"
-            },
-            {
-              "pos": 7,
-              "number": "177",
-              "driver": "Tomas Vitar",
-              "team": "Nissan March",
-              "gap": "+14.936"
-            },
-            {
-              "pos": 8,
-              "number": "93",
-              "driver": "Martin Mura",
-              "team": "Chevrolet Onix",
-              "gap": "+15.728"
-            },
-            {
-              "pos": 9,
-              "number": "132",
-              "driver": "Diego Casais",
-              "team": "Peugeot 208",
-              "gap": "+16.169"
-            },
-            {
-              "pos": 10,
-              "number": "150",
-              "driver": "Juan Martin Eluchans",
-              "team": "Toyota Yaris",
-              "gap": "-"
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-08-01T15:25:00-03:00"
             }
-          ],
-          "resultsSource": {
-            "name": "APAT · resultados oficiales",
-            "url": "https://apat.org.ar/resultados/c2/2026-08-02"
-          }
+          ]
         },
         {
           "id": "tn-2026-7-c3-serie-3-clase-3",
           "kind": "serie",
           "name": "Serie 3 Clase 3",
-          "start": "2026-08-01T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-01T15:50:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -80007,14 +79714,305 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-02"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-08-01T15:50:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tn-2026-7-c2-serie-1-clase-2",
+          "kind": "serie",
+          "name": "Serie 1 Clase 2",
+          "start": "2026-08-01T17:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "11",
+              "driver": "Pedro Grippo",
+              "team": "Toyota Yaris",
+              "gap": "9:34.715"
+            },
+            {
+              "pos": 2,
+              "number": "3",
+              "driver": "Renzo Blotta",
+              "team": "Peugeot 208",
+              "gap": "+0.556"
+            },
+            {
+              "pos": 3,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+2.325"
+            },
+            {
+              "pos": 4,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+2.543"
+            },
+            {
+              "pos": 5,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+6.779"
+            },
+            {
+              "pos": 6,
+              "number": "78",
+              "driver": "Ignacio Grippo",
+              "team": "Toyota Etios",
+              "gap": "+8.464"
+            },
+            {
+              "pos": 7,
+              "number": "131",
+              "driver": "Franco Bodrato Mionetto",
+              "team": "Peugeot 208",
+              "gap": "+8.953"
+            },
+            {
+              "pos": 8,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "Ford F Kinetic",
+              "gap": "+8.954"
+            },
+            {
+              "pos": 9,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+11.235"
+            },
+            {
+              "pos": 10,
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "DS 3",
+              "gap": "+12.886"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-08-02"
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-08-01T17:00:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tn-2026-7-c2-serie-2-clase-2",
+          "kind": "serie",
+          "name": "Serie 2 Clase 2",
+          "start": "2026-08-01T17:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "10:40.493"
+            },
+            {
+              "pos": 2,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+0.460"
+            },
+            {
+              "pos": 3,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+2.097"
+            },
+            {
+              "pos": 4,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+2.368"
+            },
+            {
+              "pos": 5,
+              "number": "29",
+              "driver": "Horacio Evolo",
+              "team": "Toyota Etios",
+              "gap": "+4.117"
+            },
+            {
+              "pos": 6,
+              "number": "161",
+              "driver": "Lucas Petracchini",
+              "team": "Chevrolet Onix",
+              "gap": "+4.379"
+            },
+            {
+              "pos": 7,
+              "number": "84",
+              "driver": "Gaston Martinez Minetti",
+              "team": "Toyota Etios",
+              "gap": "+4.807"
+            },
+            {
+              "pos": 8,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "+5.252"
+            },
+            {
+              "pos": 9,
+              "number": "71",
+              "driver": "Maximo Donzino",
+              "team": "Ford F Kinetic",
+              "gap": "+6.098"
+            },
+            {
+              "pos": 10,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+40.761"
+            },
+            {
+              "pos": 11,
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "Toyota Etios",
+              "gap": "+4 Vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-08-02"
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-08-01T17:25:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tn-2026-7-c2-serie-3-clase-2",
+          "kind": "serie",
+          "name": "Serie 3 Clase 2",
+          "start": "2026-08-01T17:50:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "9:31.563"
+            },
+            {
+              "pos": 2,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Yaris",
+              "gap": "+2.640"
+            },
+            {
+              "pos": 3,
+              "number": "19",
+              "driver": "Maximiliano Bestani",
+              "team": "Chevrolet Onix",
+              "gap": "+4.044"
+            },
+            {
+              "pos": 4,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+11.384"
+            },
+            {
+              "pos": 5,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+13.551"
+            },
+            {
+              "pos": 6,
+              "number": "92",
+              "driver": "Thomas Marchesin",
+              "team": "Toyota Etios",
+              "gap": "+14.935"
+            },
+            {
+              "pos": 7,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "+14.936"
+            },
+            {
+              "pos": 8,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+15.728"
+            },
+            {
+              "pos": 9,
+              "number": "132",
+              "driver": "Diego Casais",
+              "team": "Peugeot 208",
+              "gap": "+16.169"
+            },
+            {
+              "pos": 10,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "-"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-08-02"
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-08-01T17:50:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-7-c2",
           "kind": "final",
           "name": "Final Clase 2",
-          "start": "2026-08-02T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-02T08:55:00-03:00",
+          "timeKnown": true,
           "durationMin": 35,
           "results": [
             {
@@ -80245,14 +80243,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-08-02"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-08-02T08:55:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-7-c3",
           "kind": "final",
           "name": "Final Clase 3",
-          "start": "2026-08-02T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-02T09:45:00-03:00",
+          "timeKnown": true,
           "durationMin": 35,
           "results": [
             {
@@ -80483,7 +80489,15 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-02"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3634191",
+              "start": "2026-08-02T09:45:00-03:00"
+            }
+          ]
         }
       ],
       "source": "APAT (apat.org.ar)"
@@ -82408,7 +82422,83 @@
               "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
               "start": "10:40"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": "1:27.980"
+            },
+            {
+              "pos": 2,
+              "number": "199",
+              "driver": "Damián Pérez",
+              "team": "Dodge",
+              "gap": "+0.034"
+            },
+            {
+              "pos": 3,
+              "number": "145",
+              "driver": "Iñaki Arrias",
+              "team": "Ford",
+              "gap": "+0.222"
+            },
+            {
+              "pos": 4,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "+0.347"
+            },
+            {
+              "pos": 5,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": "+0.407"
+            },
+            {
+              "pos": 6,
+              "number": "44",
+              "driver": "Juan Jose Conde",
+              "team": "Chevrolet",
+              "gap": "+0.841"
+            },
+            {
+              "pos": 7,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": "+1.092"
+            },
+            {
+              "pos": 8,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": "+1.267"
+            },
+            {
+              "pos": 9,
+              "number": "100",
+              "driver": "Leonardo Forte",
+              "team": "Ford",
+              "gap": "+1.892"
+            },
+            {
+              "pos": 10,
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": "+2.546"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/814/ver"
+          }
         },
         {
           "id": "tcpm-2026-8-practica-2entrenamiento",
@@ -82424,7 +82514,83 @@
               "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
               "start": "13:08"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": "1:27.964"
+            },
+            {
+              "pos": 2,
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": "+0.008"
+            },
+            {
+              "pos": 3,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": "+0.022"
+            },
+            {
+              "pos": 4,
+              "number": "199",
+              "driver": "Damián Pérez",
+              "team": "Dodge",
+              "gap": "+0.032"
+            },
+            {
+              "pos": 5,
+              "number": "145",
+              "driver": "Iñaki Arrias",
+              "team": "Ford",
+              "gap": "+0.277"
+            },
+            {
+              "pos": 6,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "+0.490"
+            },
+            {
+              "pos": 7,
+              "number": "44",
+              "driver": "Juan Jose Conde",
+              "team": "Chevrolet",
+              "gap": "+0.778"
+            },
+            {
+              "pos": 8,
+              "number": "100",
+              "driver": "Leonardo Forte",
+              "team": "Ford",
+              "gap": "+1.254"
+            },
+            {
+              "pos": 9,
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": "+1.772"
+            },
+            {
+              "pos": 10,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": "+1.919"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/818/ver"
+          }
         },
         {
           "id": "tcpm-2026-8-clasificacion-clasificacin",
@@ -82440,7 +82606,83 @@
               "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
               "start": "15:16"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "199",
+              "driver": "Damián Pérez",
+              "team": "Dodge",
+              "gap": "1:27.426"
+            },
+            {
+              "pos": 2,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "+0.056"
+            },
+            {
+              "pos": 3,
+              "number": "145",
+              "driver": "Iñaki Arrias",
+              "team": "Ford",
+              "gap": "+0.132"
+            },
+            {
+              "pos": 4,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": "+0.369"
+            },
+            {
+              "pos": 5,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": "+0.412"
+            },
+            {
+              "pos": 6,
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": "+0.441"
+            },
+            {
+              "pos": 7,
+              "number": "44",
+              "driver": "Juan Jose Conde",
+              "team": "Chevrolet",
+              "gap": "+0.818"
+            },
+            {
+              "pos": 8,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": "+1.191"
+            },
+            {
+              "pos": 9,
+              "number": "100",
+              "driver": "Leonardo Forte",
+              "team": "Ford",
+              "gap": "+1.807"
+            },
+            {
+              "pos": 10,
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": "+2.143"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/825/ver"
+          }
         },
         {
           "id": "tcpm-2026-8-serie-serienica",
@@ -82456,7 +82698,83 @@
               "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
               "start": "10:00"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": "10:07.872"
+            },
+            {
+              "pos": 2,
+              "number": "199",
+              "driver": "Damián Pérez",
+              "team": "Dodge",
+              "gap": "+5.878"
+            },
+            {
+              "pos": 3,
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": "+4.912"
+            },
+            {
+              "pos": 4,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "+7.446"
+            },
+            {
+              "pos": 5,
+              "number": "100",
+              "driver": "Leonardo Forte",
+              "team": "Ford",
+              "gap": "+16.000"
+            },
+            {
+              "pos": 6,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": "+14.730"
+            },
+            {
+              "pos": 7,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": "+63.397"
+            },
+            {
+              "pos": 8,
+              "number": "44",
+              "driver": "Juan Jose Conde",
+              "team": "Chevrolet",
+              "gap": "+2 vueltas"
+            },
+            {
+              "pos": 9,
+              "number": "145",
+              "driver": "Iñaki Arrias",
+              "team": "Ford",
+              "gap": "+4 vueltas"
+            },
+            {
+              "pos": 10,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": "+4 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/841/ver"
+          }
         },
         {
           "id": "tcpm-2026-8-final-final",
@@ -82476,92 +82794,84 @@
           "results": [
             {
               "pos": 1,
-              "number": "63",
-              "driver": "Ignacio Lovich",
-              "team": "Dodge",
-              "gap": "19:24.716"
-            },
-            {
-              "pos": 2,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "Dodge",
-              "gap": "+3.368"
-            },
-            {
-              "pos": 3,
-              "number": "115",
-              "driver": "Luca De Carlo",
-              "team": "Chevrolet",
-              "gap": "+3.602"
-            },
-            {
-              "pos": 4,
-              "number": "122",
-              "driver": "Dante Rubiera Hainze",
-              "team": "Ford",
-              "gap": "+3.603"
-            },
-            {
-              "pos": 5,
-              "number": "44",
-              "driver": "Juan Jose Conde",
-              "team": "Chevrolet",
-              "gap": "+12.182"
-            },
-            {
-              "pos": 6,
-              "number": "77",
-              "driver": "Ignacio Vilas",
-              "team": "Dodge",
-              "gap": "+17.749"
-            },
-            {
-              "pos": 7,
-              "number": "145",
-              "driver": "Iñaki Arrias",
-              "team": "Ford",
-              "gap": "+21.780"
-            },
-            {
-              "pos": 8,
-              "number": "144",
-              "driver": "Martin Taha",
-              "team": "Ford",
-              "gap": "+42.253"
-            },
-            {
-              "pos": 9,
-              "number": "111",
-              "driver": "Ignacio Quintana",
-              "team": "Torino",
-              "gap": "+47.238"
-            },
-            {
-              "pos": 10,
-              "number": "74",
-              "driver": "Facundo Ludueña",
-              "team": "Chevrolet",
-              "gap": "+49.076"
-            },
-            {
-              "pos": 11,
-              "number": "100",
-              "driver": "Leonardo Forte",
-              "team": "Ford",
-              "gap": "+49.077"
-            },
-            {
-              "pos": 12,
               "number": "199",
               "driver": "Damián Pérez",
               "team": "Dodge",
-              "gap": "+-578.578"
+              "gap": "20:05.123"
+            },
+            {
+              "pos": 2,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": "+6.620"
+            },
+            {
+              "pos": 3,
+              "number": "145",
+              "driver": "Iñaki Arrias",
+              "team": "Ford",
+              "gap": "+7.268"
+            },
+            {
+              "pos": 4,
+              "number": "100",
+              "driver": "Leonardo Forte",
+              "team": "Ford",
+              "gap": "+23.635"
+            },
+            {
+              "pos": 5,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": "+35.154"
+            },
+            {
+              "pos": 6,
+              "positionText": "EX",
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": "+9 vueltas"
+            },
+            {
+              "pos": 7,
+              "positionText": "EX",
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "+9 vueltas"
+            },
+            {
+              "pos": 8,
+              "positionText": "EX",
+              "number": "44",
+              "driver": "Juan Jose Conde",
+              "team": "Chevrolet",
+              "gap": "+11 vueltas"
+            },
+            {
+              "pos": 9,
+              "positionText": "EX",
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": "+2.288"
+            },
+            {
+              "pos": 10,
+              "positionText": "EX",
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/780/ver"
+            "url": "https://tiempos.actc.org.ar/resultados/851/ver"
           }
         }
       ],
@@ -89140,8 +89450,8 @@
           "id": "tn-2026-8-c2-1-entrenamiento-clase-2",
           "kind": "practica",
           "name": "1° Entrenamiento Clase 2",
-          "start": "2026-08-29T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-29T08:40:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -89351,14 +89661,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-08-30"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3677322",
+              "start": "2026-08-29T08:40:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-8-c3-1-entrenamiento-clase-3",
           "kind": "practica",
           "name": "1° Entrenamiento Clase 3",
-          "start": "2026-08-29T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-29T09:50:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -89568,14 +89886,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-30"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3677322",
+              "start": "2026-08-29T09:50:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-8-c2-2-entrenamiento-clase-2",
           "kind": "practica",
           "name": "2° Entrenamiento Clase 2",
-          "start": "2026-08-29T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-29T11:00:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -89785,14 +90111,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-08-30"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3677322",
+              "start": "2026-08-29T11:00:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-8-c3-2-entrenamiento-clase-3",
           "kind": "practica",
           "name": "2° Entrenamiento Clase 3",
           "start": "2026-08-29T12:00:00-03:00",
-          "timeKnown": false,
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -90002,7 +90336,15 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-30"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3677322",
+              "start": "2026-08-29T12:00:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-8-c2-clasificacio-n-clase-2",
@@ -90225,8 +90567,8 @@
           "id": "tn-2026-8-c3-clasificacio-n-clase-3",
           "kind": "clasificacion",
           "name": "Clasificación Clase 3",
-          "start": "2026-08-29T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-29T16:05:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -90436,14 +90778,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-30"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3677322",
+              "start": "2026-08-29T16:05:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-8-c2-serie-1-clase-2",
           "kind": "serie",
           "name": "Serie 1 Clase 2",
-          "start": "2026-08-30T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-30T10:00:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -90548,14 +90898,142 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-08-30"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3677322",
+              "start": "2026-08-30T10:00:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tn-2026-8-c2-serie-2-clase-2",
+          "kind": "serie",
+          "name": "Serie 2 Clase 2",
+          "start": "2026-08-30T10:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "10:04.293"
+            },
+            {
+              "pos": 2,
+              "number": "92",
+              "driver": "Thomas Marchesin",
+              "team": "Toyota Etios",
+              "gap": "+6.615"
+            },
+            {
+              "pos": 3,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+7.201"
+            },
+            {
+              "pos": 4,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+7.556"
+            },
+            {
+              "pos": 5,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "+11.318"
+            },
+            {
+              "pos": 6,
+              "number": "5",
+              "driver": "Juan Pablo Pastori",
+              "team": "Toyota Etios",
+              "gap": "+11.607"
+            },
+            {
+              "pos": 7,
+              "number": "3",
+              "driver": "Renzo Blotta",
+              "team": "Peugeot 208",
+              "gap": "+11.854"
+            },
+            {
+              "pos": 8,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+13.141"
+            },
+            {
+              "pos": 9,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "Ford F. Kinetic",
+              "gap": "+14.257"
+            },
+            {
+              "pos": 10,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Yaris",
+              "gap": "+19.229"
+            },
+            {
+              "pos": 11,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+21.712"
+            },
+            {
+              "pos": 12,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+48.140"
+            },
+            {
+              "pos": 13,
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "Toyota Etios",
+              "gap": "+1 Vuelta"
+            },
+            {
+              "pos": 14,
+              "number": "161",
+              "driver": "Lucas Petracchini",
+              "team": "Chevrolet Onix",
+              "gap": "+3 Vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-08-30"
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3677322",
+              "start": "2026-08-30T10:30:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-8-c3-serie-1-clase-3",
           "kind": "serie",
           "name": "Serie 1 Clase 3",
-          "start": "2026-08-30T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-30T11:00:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -90667,126 +91145,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-30"
-          }
-        },
-        {
-          "id": "tn-2026-8-c2-serie-2-clase-2",
-          "kind": "serie",
-          "name": "Serie 2 Clase 2",
-          "start": "2026-08-30T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 25,
-          "results": [
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
             {
-              "pos": 1,
-              "number": "2",
-              "driver": "Francisco Coltrinari",
-              "team": "Peugeot 208",
-              "gap": "10:04.293"
-            },
-            {
-              "pos": 2,
-              "number": "92",
-              "driver": "Thomas Marchesin",
-              "team": "Toyota Etios",
-              "gap": "+6.615"
-            },
-            {
-              "pos": 3,
-              "number": "86",
-              "driver": "Martin Leston",
-              "team": "Peugeot 208",
-              "gap": "+7.201"
-            },
-            {
-              "pos": 4,
-              "number": "89",
-              "driver": "Valentino Quattrocchi",
-              "team": "Toyota Yaris",
-              "gap": "+7.556"
-            },
-            {
-              "pos": 5,
-              "number": "97",
-              "driver": "Bruno Pace",
-              "team": "Toyota Etios",
-              "gap": "+11.318"
-            },
-            {
-              "pos": 6,
-              "number": "5",
-              "driver": "Juan Pablo Pastori",
-              "team": "Toyota Etios",
-              "gap": "+11.607"
-            },
-            {
-              "pos": 7,
-              "number": "3",
-              "driver": "Renzo Blotta",
-              "team": "Peugeot 208",
-              "gap": "+11.854"
-            },
-            {
-              "pos": 8,
-              "number": "25",
-              "driver": "Santiago Robledo",
-              "team": "Toyota Yaris",
-              "gap": "+13.141"
-            },
-            {
-              "pos": 9,
-              "number": "221",
-              "driver": "Thiago Ferrari",
-              "team": "Ford F. Kinetic",
-              "gap": "+14.257"
-            },
-            {
-              "pos": 10,
-              "number": "117",
-              "driver": "Pablo Collazo",
-              "team": "Toyota Yaris",
-              "gap": "+19.229"
-            },
-            {
-              "pos": 11,
-              "number": "174",
-              "driver": "Sergio Fernandez",
-              "team": "Peugeot 208",
-              "gap": "+21.712"
-            },
-            {
-              "pos": 12,
-              "number": "98",
-              "driver": "Braian Reinoso",
-              "team": "Toyota Yaris",
-              "gap": "+48.140"
-            },
-            {
-              "pos": 13,
-              "number": "119",
-              "driver": "Nahuel Della Santina",
-              "team": "Toyota Etios",
-              "gap": "+1 Vuelta"
-            },
-            {
-              "pos": 14,
-              "number": "161",
-              "driver": "Lucas Petracchini",
-              "team": "Chevrolet Onix",
-              "gap": "+3 Vueltas"
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3677322",
+              "start": "2026-08-30T11:00:00-03:00"
             }
-          ],
-          "resultsSource": {
-            "name": "APAT · resultados oficiales",
-            "url": "https://apat.org.ar/resultados/c2/2026-08-30"
-          }
+          ]
         },
         {
           "id": "tn-2026-8-c3-serie-2-clase-3",
           "kind": "serie",
           "name": "Serie 2 Clase 3",
-          "start": "2026-08-30T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-30T11:30:00-03:00",
+          "timeKnown": true,
           "durationMin": 25,
           "results": [
             {
@@ -90891,14 +91265,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-30"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3677322",
+              "start": "2026-08-30T11:30:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-8-c2",
           "kind": "final",
           "name": "Final Clase 2",
-          "start": "2026-08-30T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-30T12:20:00-03:00",
+          "timeKnown": true,
           "durationMin": 35,
           "results": [
             {
@@ -91108,14 +91490,22 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c2/2026-08-30"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3677322",
+              "start": "2026-08-30T12:20:00-03:00"
+            }
+          ]
         },
         {
           "id": "tn-2026-8-c3",
           "kind": "final",
           "name": "Final Clase 3",
-          "start": "2026-08-30T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-08-30T13:30:00-03:00",
+          "timeKnown": true,
           "durationMin": 35,
           "results": [
             {
@@ -91325,7 +91715,15 @@
           "resultsSource": {
             "name": "APAT · resultados oficiales",
             "url": "https://apat.org.ar/resultados/c3/2026-08-30"
-          }
+          },
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3677322",
+              "start": "2026-08-30T13:30:00-03:00"
+            }
+          ]
         }
       ],
       "source": "APAT (apat.org.ar)"
@@ -105831,22 +106229,22 @@
     },
     "timing": {
       "documents": 720,
-      "pagesFetched": 20,
-      "eventsWithResults": 53
+      "pagesFetched": 275,
+      "eventsWithResults": 52
     },
     "openf1": {
       "sessions": 131,
-      "requests": 12,
-      "sessionsWithResults": 37
+      "requests": 72,
+      "sessionsWithResults": 36
     },
     "fiaF2": {
-      "requests": 6,
+      "requests": 33,
       "eventsWithResults": 10
     },
     "gtwcOfficial": {
       "meetings": 10,
-      "sessions": 15,
-      "withResults": 6,
+      "sessions": 52,
+      "withResults": 41,
       "errors": []
     },
     "gtwcYoutube": {
@@ -105854,12 +106252,12 @@
     },
     "speedhiveTn": {
       "filledResults": 0,
-      "realTimes": 0,
+      "realTimes": 45,
       "addedSessions": 0,
       "errors": []
     }
   },
   "failures": [
-    "Se descartaron resultados de 1 sesiones que todavía no se corrieron (eran de otra fecha)"
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40"
   ]
 }
