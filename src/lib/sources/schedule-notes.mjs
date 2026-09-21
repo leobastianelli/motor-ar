@@ -43,7 +43,8 @@ function sessionOf(label) {
   const ordinal = label.match(/(\d)\s*[°ºª]/)?.[1];
   if (/entrenamiento|práctica|practica|ensayo|libre/i.test(label)) return { kind: "practica", name: `${ordinal ?? 1}° Entrenamiento` };
   if (/clasificaci/i.test(label)) return { kind: "clasificacion", name: "Clasificación" };
-  if (/serie|batería|bateria/i.test(label)) return { kind: "serie", name: `Serie ${ordinal ?? 1}` };
+  // "Serie única" (TC Mouras, Pista Mouras…) se llama así también en los resultados: el mismo nombre evita una sesión duplicada.
+  if (/serie|batería|bateria/i.test(label)) return { kind: "serie", name: /[uú]nica/i.test(label) ? "Serie única" : `Serie ${ordinal ?? 1}` };
   if (/sprint/i.test(label)) return { kind: "sprint", name: "Carrera sprint" };
   if (/final|carrera/i.test(label)) return { kind: "final", name: "Final" };
   return null;

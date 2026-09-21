@@ -1,6 +1,7 @@
 // Temporada 2026 de todas las categorías con fuente real. Si una fuente falla, se conservan sus datos anteriores.
 import { actcSeason } from "./actc.mjs";
 import { actcOfficialSchedules } from "./actc-official.mjs";
+import { ACTC_CATEGORIES, actcNotes, actcStandings } from "./actc-site.mjs";
 import { apatSeason } from "./apat.mjs";
 import { f1Season } from "./f1.mjs";
 import { f2Season } from "./f2.mjs";
@@ -34,7 +35,19 @@ const SCHEDULED_SERIES = new Set(["tc", "tc-pista", "tc-mouras", "tc-pista-moura
 async function withSchedules(io, events, previous, failures) {
   const national = events.filter((e) => SCHEDULED_SERIES.has(e.seriesId));
   try {
-    const notes = await solotcNotes(io);
+    // Dos fuentes de notas de cronograma: SoloTC y el sitio oficial de la ACTC (las seis categorías). Cada una puede fallar sola;
+    // sólo si fallan las dos se conservan los horarios anteriores.
+    const notes = [];
+    const noteErrors = [];
+    for (const [label, load] of [["SoloTC", solotcNotes], ["ACTC", actcNotes]]) {
+      try {
+        notes.push(...(await load(io)));
+      } catch (error) {
+        noteErrors.push(`${label}: ${error.message}`);
+      }
+    }
+    if (noteErrors.length) failures.push(`Cronogramas (${noteErrors.join("; ")})`);
+    if (noteErrors.length === 2) throw new Error(noteErrors.join("; "));
     let official = [];
     try {
       official = await actcOfficialSchedules(io);
@@ -94,6 +107,15 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
         if (previous.meta?.[id]) meta[id] = previous.meta[id];
       }
     }
+  }
+
+  // Campeonato oficial de la ACTC para las categorías que no tienen otra tabla (el del TC sale de Wikipedia y la carga manual).
+  const missingTables = ACTC_CATEGORIES.filter((c) => c.path !== "tc" && !standings[c.seriesId]?.length);
+  if (missingTables.length) {
+    const acs = await actcStandings(io, missingTables);
+    Object.assign(standings, acs.standings);
+    for (const [id, m] of Object.entries(acs.meta)) meta[id] = { ...meta[id], ...m };
+    failures.push(...acs.failures);
   }
 
   const scheduled = await withSchedules(io, events, previous, failures);

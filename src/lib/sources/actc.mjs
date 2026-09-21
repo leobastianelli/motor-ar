@@ -35,10 +35,14 @@ async function actcCalendar(io, category) {
     const dateText = decode(block.match(/calendar-date-pill[^>]*>([\s\S]*?)<\/span>/)?.[1] ?? "");
     const year = Number(dateText.match(/(\d{4})/)?.[1]);
     const dm = dayMonth(dateText);
-    if (round === null || year !== 2026 || !dm || byRound.has(round)) continue;
+    if (round === null || year !== 2026 || !dm) continue;
     const place = decode(block.match(/lucide-map-pin[\s\S]*?<\/svg>\s*<span[^>]*>([\s\S]*?)<\/span>/)?.[1] ?? "");
     const [circuit, location = ""] = place.split(/\s+[—–-]\s+/);
     const name = numbered ? (title.split(/\s+[—–-]\s+/)[1] ?? "") : title;
+    // La ACTC puede listar dos veces el mismo número de fecha: una "A CONFIRMAR" sin sede (una fecha que se movió) y la real.
+    // Gana la que tiene sede; si las dos la tienen o ninguna, la primera.
+    const isPlaceholder = (c) => !c || /confirmar/i.test(c);
+    if (byRound.has(round) && !(isPlaceholder(byRound.get(round).circuit) && !isPlaceholder(circuit))) continue;
     byRound.set(round, {
       round,
       name: titleCase(name),

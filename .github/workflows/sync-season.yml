@@ -10,6 +10,8 @@ on:
     - cron: "0 3 * * 6,0"
     # Domingo a las 19:00 UTC (16:00 en Argentina): después de las carreras principales del finde.
     - cron: "0 19 * * 0"
+    # Viernes a las 15:00 y 22:00 UTC (12:00 y 19:00 en Argentina): la ACTC publica el cronograma con horas del fin de semana ese día.
+    - cron: "0 15,22 * * 5"
   workflow_dispatch:
     inputs:
       timing_days:
