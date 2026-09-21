@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T12:39:08.964Z",
+  "generatedAt": "2026-09-21T21:17:11.243Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -62106,54 +62106,6 @@
       "source": "Wikipedia · Temporada 2026 de TC2000 · Campeones"
     },
     {
-      "id": "tcm-2026-7",
-      "seriesId": "tc-mouras",
-      "round": 7,
-      "name": "Fecha 7 · La Plata",
-      "circuit": {
-        "name": "Roberto José Mouras",
-        "city": "La Plata",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcm-2026-7-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-06-28T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 35
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tcpm-2026-7",
-      "seriesId": "tc-pista-mouras",
-      "round": 7,
-      "name": "Fecha 7 · La Plata",
-      "circuit": {
-        "name": "Roberto José Mouras",
-        "city": "La Plata",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcpm-2026-7-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-06-28T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
       "id": "f2-2026-7",
       "seriesId": "f2",
       "round": 7,
@@ -73745,10 +73697,10 @@
       "source": "Jolpica-F1"
     },
     {
-      "id": "tcpm-2026-8",
-      "seriesId": "tc-pista-mouras",
-      "round": 8,
-      "name": "Fecha 8 · La Plata",
+      "id": "tcm-2026-7",
+      "seriesId": "tc-mouras",
+      "round": 7,
+      "name": "Fecha 7 · La Plata",
       "circuit": {
         "name": "Roberto José Mouras",
         "city": "La Plata",
@@ -73758,7 +73710,424 @@
       },
       "sessions": [
         {
-          "id": "tcpm-2026-8-2-entrenamiento",
+          "id": "tcm-2026-7-1-entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-07-25T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "1:34.740"
+            },
+            {
+              "pos": 2,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "+0.167"
+            },
+            {
+              "pos": 3,
+              "number": "222",
+              "driver": "Marcelo Beraldi",
+              "team": "Ford",
+              "gap": "+0.191"
+            },
+            {
+              "pos": 4,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "+0.234"
+            },
+            {
+              "pos": 5,
+              "number": "118",
+              "driver": "Fabrizio Maggini",
+              "team": "Ford",
+              "gap": "+0.324"
+            },
+            {
+              "pos": 6,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "+0.929"
+            },
+            {
+              "pos": 7,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+1.143"
+            },
+            {
+              "pos": 8,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+1.450"
+            },
+            {
+              "pos": 9,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Chevrolet",
+              "gap": "+2.141"
+            },
+            {
+              "pos": 10,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+2.888"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/735/ver"
+          }
+        },
+        {
+          "id": "tcm-2026-7-2-entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-07-25T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "1:34.745"
+            },
+            {
+              "pos": 2,
+              "number": "118",
+              "driver": "Fabrizio Maggini",
+              "team": "Ford",
+              "gap": "+0.357"
+            },
+            {
+              "pos": 3,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "+0.361"
+            },
+            {
+              "pos": 4,
+              "number": "222",
+              "driver": "Marcelo Beraldi",
+              "team": "Ford",
+              "gap": "+0.367"
+            },
+            {
+              "pos": 5,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "+0.584"
+            },
+            {
+              "pos": 6,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "+0.652"
+            },
+            {
+              "pos": 7,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+0.709"
+            },
+            {
+              "pos": 8,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+1.740"
+            },
+            {
+              "pos": 9,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Chevrolet",
+              "gap": "+1.837"
+            },
+            {
+              "pos": 10,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+2.243"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/741/ver"
+          }
+        },
+        {
+          "id": "tcm-2026-7-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-07-25T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "1:33.612"
+            },
+            {
+              "pos": 2,
+              "number": "118",
+              "driver": "Fabrizio Maggini",
+              "team": "Ford",
+              "gap": "+0.179"
+            },
+            {
+              "pos": 3,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "+0.348"
+            },
+            {
+              "pos": 4,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+0.354"
+            },
+            {
+              "pos": 5,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "+0.366"
+            },
+            {
+              "pos": 6,
+              "number": "222",
+              "driver": "Marcelo Beraldi",
+              "team": "Ford",
+              "gap": "+0.428"
+            },
+            {
+              "pos": 7,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "+0.677"
+            },
+            {
+              "pos": 8,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+1.552"
+            },
+            {
+              "pos": 9,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+2.219"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/758/ver"
+          }
+        },
+        {
+          "id": "tcm-2026-7-serie-unica",
+          "kind": "serie",
+          "name": "Serie única",
+          "start": "2026-07-26T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "118",
+              "driver": "Fabrizio Maggini",
+              "team": "Ford",
+              "gap": "7:57.956"
+            },
+            {
+              "pos": 2,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "+0.666"
+            },
+            {
+              "pos": 3,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "+1.050"
+            },
+            {
+              "pos": 4,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+2.923"
+            },
+            {
+              "pos": 5,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "+3.367"
+            },
+            {
+              "pos": 6,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "+5.075"
+            },
+            {
+              "pos": 7,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+9.607"
+            },
+            {
+              "pos": 8,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Chevrolet",
+              "gap": "+9.796"
+            },
+            {
+              "pos": 9,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+34.160"
+            },
+            {
+              "pos": 10,
+              "number": "222",
+              "driver": "Marcelo Beraldi",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/763/ver"
+          }
+        },
+        {
+          "id": "tcm-2026-7-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-07-26T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 35,
+          "results": [
+            {
+              "pos": 1,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "22:31.922"
+            },
+            {
+              "pos": 2,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "+2.999"
+            },
+            {
+              "pos": 3,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "+8.373"
+            },
+            {
+              "pos": 4,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+15.321"
+            },
+            {
+              "pos": 5,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+24.857"
+            },
+            {
+              "pos": 6,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Chevrolet",
+              "gap": "+32.349"
+            },
+            {
+              "pos": 7,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+44.265"
+            },
+            {
+              "pos": 8,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/783/ver"
+          }
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
+      "id": "tcpm-2026-7",
+      "seriesId": "tc-pista-mouras",
+      "round": 7,
+      "name": "Fecha 7 · La Plata",
+      "circuit": {
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcpm-2026-7-2-entrenamiento",
           "kind": "practica",
           "name": "2° Entrenamiento",
           "start": "2026-07-25T12:00:00-03:00",
@@ -73856,7 +74225,7 @@
           }
         },
         {
-          "id": "tcpm-2026-8-clasificacion",
+          "id": "tcpm-2026-7-clasificacion",
           "kind": "clasificacion",
           "name": "Clasificación",
           "start": "2026-07-25T12:00:00-03:00",
@@ -73954,7 +74323,7 @@
           }
         },
         {
-          "id": "tcpm-2026-8-serie-unica",
+          "id": "tcpm-2026-7-serie-unica",
           "kind": "serie",
           "name": "Serie única",
           "start": "2026-07-26T12:00:00-03:00",
@@ -74052,10 +74421,10 @@
           }
         },
         {
-          "id": "tcpm-2026-8-final",
+          "id": "tcpm-2026-7-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-08-16T12:00:00-03:00",
+          "start": "2026-07-26T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 30,
           "results": [
@@ -82013,6 +82382,192 @@
       "source": "Campeones"
     },
     {
+      "id": "tcpm-2026-8",
+      "seriesId": "tc-pista-mouras",
+      "round": 8,
+      "name": "Fecha 8 · La Plata",
+      "circuit": {
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcpm-2026-8-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-08-15T10:40:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
+              "start": "10:40"
+            }
+          ]
+        },
+        {
+          "id": "tcpm-2026-8-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-08-15T13:08:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
+              "start": "13:08"
+            }
+          ]
+        },
+        {
+          "id": "tcpm-2026-8-clasificacion-clasificacin",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-08-15T15:16:00-03:00",
+          "timeKnown": true,
+          "durationMin": 8,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
+              "start": "15:16"
+            }
+          ]
+        },
+        {
+          "id": "tcpm-2026-8-serie-serienica",
+          "kind": "serie",
+          "name": "Serie única",
+          "start": "2026-08-16T10:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
+              "start": "10:00"
+            }
+          ]
+        },
+        {
+          "id": "tcpm-2026-8-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-08-16T12:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
+              "start": "12:10"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": "19:24.716"
+            },
+            {
+              "pos": 2,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": "+3.368"
+            },
+            {
+              "pos": 3,
+              "number": "115",
+              "driver": "Luca De Carlo",
+              "team": "Chevrolet",
+              "gap": "+3.602"
+            },
+            {
+              "pos": 4,
+              "number": "122",
+              "driver": "Dante Rubiera Hainze",
+              "team": "Ford",
+              "gap": "+3.603"
+            },
+            {
+              "pos": 5,
+              "number": "44",
+              "driver": "Juan Jose Conde",
+              "team": "Chevrolet",
+              "gap": "+12.182"
+            },
+            {
+              "pos": 6,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "+17.749"
+            },
+            {
+              "pos": 7,
+              "number": "145",
+              "driver": "Iñaki Arrias",
+              "team": "Ford",
+              "gap": "+21.780"
+            },
+            {
+              "pos": 8,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": "+42.253"
+            },
+            {
+              "pos": 9,
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": "+47.238"
+            },
+            {
+              "pos": 10,
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": "+49.076"
+            },
+            {
+              "pos": 11,
+              "number": "100",
+              "driver": "Leonardo Forte",
+              "team": "Ford",
+              "gap": "+49.077"
+            },
+            {
+              "pos": 12,
+              "number": "199",
+              "driver": "Damián Pérez",
+              "team": "Dodge",
+              "gap": "+-578.578"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/780/ver"
+          }
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tcm-2026-8",
       "seriesId": "tc-mouras",
       "round": 8,
@@ -82026,12 +82581,20 @@
       },
       "sessions": [
         {
-          "id": "tcm-2026-8-1-entrenamiento",
+          "id": "tcm-2026-8-practica-1entrenamiento",
           "kind": "practica",
           "name": "1° Entrenamiento",
-          "start": "2026-08-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-08-15T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
+              "start": "11:05"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -82131,12 +82694,20 @@
           }
         },
         {
-          "id": "tcm-2026-8-2-entrenamiento",
+          "id": "tcm-2026-8-practica-2entrenamiento",
           "kind": "practica",
           "name": "2° Entrenamiento",
-          "start": "2026-08-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-08-15T13:33:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
+              "start": "13:33"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -82236,12 +82807,20 @@
           }
         },
         {
-          "id": "tcm-2026-8-clasificacion",
+          "id": "tcm-2026-8-clasificacion-clasificacin",
           "kind": "clasificacion",
           "name": "Clasificación",
-          "start": "2026-08-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-08-15T15:29:00-03:00",
+          "timeKnown": true,
+          "durationMin": 8,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
+              "start": "15:29"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -82341,12 +82920,20 @@
           }
         },
         {
-          "id": "tcm-2026-8-serie-unica",
+          "id": "tcm-2026-8-serie-serienica",
           "kind": "serie",
           "name": "Serie única",
-          "start": "2026-08-16T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-08-16T10:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
+              "start": "10:25"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -82446,12 +83033,20 @@
           }
         },
         {
-          "id": "tcm-2026-8-final",
+          "id": "tcm-2026-8-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-08-16T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 35,
+          "start": "2026-08-16T12:45:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/cronograma-para-el-fin-de-semana_15198",
+              "start": "12:45"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -82550,448 +83145,6 @@
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
             "url": "https://tiempos.actc.org.ar/resultados/853/ver"
-          }
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tcpm-2026-9",
-      "seriesId": "tc-pista-mouras",
-      "round": 9,
-      "name": "Fecha 9 · Rosario",
-      "circuit": {
-        "name": "Juan Manuel Fangio-ROSARIO",
-        "city": "Rosario",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Santa Fe"
-      },
-      "sessions": [
-        {
-          "id": "tcpm-2026-9-1-entrenamiento",
-          "kind": "practica",
-          "name": "1° Entrenamiento",
-          "start": "2026-08-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "111",
-              "driver": "Ignacio Quintana",
-              "team": "Torino",
-              "gap": "1:27.980"
-            },
-            {
-              "pos": 2,
-              "number": "199",
-              "driver": "Damián Pérez",
-              "team": "Dodge",
-              "gap": "+0.034"
-            },
-            {
-              "pos": 3,
-              "number": "145",
-              "driver": "Iñaki Arrias",
-              "team": "Ford",
-              "gap": "+0.222"
-            },
-            {
-              "pos": 4,
-              "number": "77",
-              "driver": "Ignacio Vilas",
-              "team": "Dodge",
-              "gap": "+0.347"
-            },
-            {
-              "pos": 5,
-              "number": "63",
-              "driver": "Ignacio Lovich",
-              "team": "Dodge",
-              "gap": "+0.407"
-            },
-            {
-              "pos": 6,
-              "number": "44",
-              "driver": "Juan Jose Conde",
-              "team": "Chevrolet",
-              "gap": "+0.841"
-            },
-            {
-              "pos": 7,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "Dodge",
-              "gap": "+1.092"
-            },
-            {
-              "pos": 8,
-              "number": "144",
-              "driver": "Martin Taha",
-              "team": "Ford",
-              "gap": "+1.267"
-            },
-            {
-              "pos": 9,
-              "number": "100",
-              "driver": "Leonardo Forte",
-              "team": "Ford",
-              "gap": "+1.892"
-            },
-            {
-              "pos": 10,
-              "number": "74",
-              "driver": "Facundo Ludueña",
-              "team": "Chevrolet",
-              "gap": "+2.546"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/814/ver"
-          }
-        },
-        {
-          "id": "tcpm-2026-9-2-entrenamiento",
-          "kind": "practica",
-          "name": "2° Entrenamiento",
-          "start": "2026-08-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "Dodge",
-              "gap": "1:27.964"
-            },
-            {
-              "pos": 2,
-              "number": "111",
-              "driver": "Ignacio Quintana",
-              "team": "Torino",
-              "gap": "+0.008"
-            },
-            {
-              "pos": 3,
-              "number": "63",
-              "driver": "Ignacio Lovich",
-              "team": "Dodge",
-              "gap": "+0.022"
-            },
-            {
-              "pos": 4,
-              "number": "199",
-              "driver": "Damián Pérez",
-              "team": "Dodge",
-              "gap": "+0.032"
-            },
-            {
-              "pos": 5,
-              "number": "145",
-              "driver": "Iñaki Arrias",
-              "team": "Ford",
-              "gap": "+0.277"
-            },
-            {
-              "pos": 6,
-              "number": "77",
-              "driver": "Ignacio Vilas",
-              "team": "Dodge",
-              "gap": "+0.490"
-            },
-            {
-              "pos": 7,
-              "number": "44",
-              "driver": "Juan Jose Conde",
-              "team": "Chevrolet",
-              "gap": "+0.778"
-            },
-            {
-              "pos": 8,
-              "number": "100",
-              "driver": "Leonardo Forte",
-              "team": "Ford",
-              "gap": "+1.254"
-            },
-            {
-              "pos": 9,
-              "number": "74",
-              "driver": "Facundo Ludueña",
-              "team": "Chevrolet",
-              "gap": "+1.772"
-            },
-            {
-              "pos": 10,
-              "number": "144",
-              "driver": "Martin Taha",
-              "team": "Ford",
-              "gap": "+1.919"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/818/ver"
-          }
-        },
-        {
-          "id": "tcpm-2026-9-clasificacion",
-          "kind": "clasificacion",
-          "name": "Clasificación",
-          "start": "2026-08-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "199",
-              "driver": "Damián Pérez",
-              "team": "Dodge",
-              "gap": "1:27.426"
-            },
-            {
-              "pos": 2,
-              "number": "77",
-              "driver": "Ignacio Vilas",
-              "team": "Dodge",
-              "gap": "+0.056"
-            },
-            {
-              "pos": 3,
-              "number": "145",
-              "driver": "Iñaki Arrias",
-              "team": "Ford",
-              "gap": "+0.132"
-            },
-            {
-              "pos": 4,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "Dodge",
-              "gap": "+0.369"
-            },
-            {
-              "pos": 5,
-              "number": "63",
-              "driver": "Ignacio Lovich",
-              "team": "Dodge",
-              "gap": "+0.412"
-            },
-            {
-              "pos": 6,
-              "number": "111",
-              "driver": "Ignacio Quintana",
-              "team": "Torino",
-              "gap": "+0.441"
-            },
-            {
-              "pos": 7,
-              "number": "44",
-              "driver": "Juan Jose Conde",
-              "team": "Chevrolet",
-              "gap": "+0.818"
-            },
-            {
-              "pos": 8,
-              "number": "144",
-              "driver": "Martin Taha",
-              "team": "Ford",
-              "gap": "+1.191"
-            },
-            {
-              "pos": 9,
-              "number": "100",
-              "driver": "Leonardo Forte",
-              "team": "Ford",
-              "gap": "+1.807"
-            },
-            {
-              "pos": 10,
-              "number": "74",
-              "driver": "Facundo Ludueña",
-              "team": "Chevrolet",
-              "gap": "+2.143"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/825/ver"
-          }
-        },
-        {
-          "id": "tcpm-2026-9-serie-unica",
-          "kind": "serie",
-          "name": "Serie única",
-          "start": "2026-08-16T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "74",
-              "driver": "Facundo Ludueña",
-              "team": "Chevrolet",
-              "gap": "10:07.872"
-            },
-            {
-              "pos": 2,
-              "number": "199",
-              "driver": "Damián Pérez",
-              "team": "Dodge",
-              "gap": "+5.878"
-            },
-            {
-              "pos": 3,
-              "number": "111",
-              "driver": "Ignacio Quintana",
-              "team": "Torino",
-              "gap": "+4.912"
-            },
-            {
-              "pos": 4,
-              "number": "77",
-              "driver": "Ignacio Vilas",
-              "team": "Dodge",
-              "gap": "+7.446"
-            },
-            {
-              "pos": 5,
-              "number": "100",
-              "driver": "Leonardo Forte",
-              "team": "Ford",
-              "gap": "+16.000"
-            },
-            {
-              "pos": 6,
-              "number": "63",
-              "driver": "Ignacio Lovich",
-              "team": "Dodge",
-              "gap": "+14.730"
-            },
-            {
-              "pos": 7,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "Dodge",
-              "gap": "+63.397"
-            },
-            {
-              "pos": 8,
-              "number": "44",
-              "driver": "Juan Jose Conde",
-              "team": "Chevrolet",
-              "gap": "+2 vueltas"
-            },
-            {
-              "pos": 9,
-              "number": "145",
-              "driver": "Iñaki Arrias",
-              "team": "Ford",
-              "gap": "+4 vueltas"
-            },
-            {
-              "pos": 10,
-              "number": "144",
-              "driver": "Martin Taha",
-              "team": "Ford",
-              "gap": "+4 vueltas"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/841/ver"
-          }
-        },
-        {
-          "id": "tcpm-2026-9-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-09-27T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "199",
-              "driver": "Damián Pérez",
-              "team": "Dodge",
-              "gap": "20:05.123"
-            },
-            {
-              "pos": 2,
-              "number": "63",
-              "driver": "Ignacio Lovich",
-              "team": "Dodge",
-              "gap": "+6.620"
-            },
-            {
-              "pos": 3,
-              "number": "145",
-              "driver": "Iñaki Arrias",
-              "team": "Ford",
-              "gap": "+7.268"
-            },
-            {
-              "pos": 4,
-              "number": "100",
-              "driver": "Leonardo Forte",
-              "team": "Ford",
-              "gap": "+23.635"
-            },
-            {
-              "pos": 5,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "Dodge",
-              "gap": "+35.154"
-            },
-            {
-              "pos": 6,
-              "positionText": "EX",
-              "number": "74",
-              "driver": "Facundo Ludueña",
-              "team": "Chevrolet",
-              "gap": "+9 vueltas"
-            },
-            {
-              "pos": 7,
-              "positionText": "EX",
-              "number": "77",
-              "driver": "Ignacio Vilas",
-              "team": "Dodge",
-              "gap": "+9 vueltas"
-            },
-            {
-              "pos": 8,
-              "positionText": "EX",
-              "number": "44",
-              "driver": "Juan Jose Conde",
-              "team": "Chevrolet",
-              "gap": "+11 vueltas"
-            },
-            {
-              "pos": 9,
-              "positionText": "EX",
-              "number": "111",
-              "driver": "Ignacio Quintana",
-              "team": "Torino",
-              "gap": "+2.288"
-            },
-            {
-              "pos": 10,
-              "positionText": "EX",
-              "number": "144",
-              "driver": "Martin Taha",
-              "team": "Ford",
-              "gap": "",
-              "status": "Sin tiempo"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/851/ver"
           }
         }
       ],
@@ -100790,6 +100943,30 @@
       "source": "ACTC (calendario)"
     },
     {
+      "id": "tcpm-2026-9",
+      "seriesId": "tc-pista-mouras",
+      "round": 9,
+      "name": "Fecha 9 · Rosario",
+      "circuit": {
+        "name": "Juan Manuel Fangio-ROSARIO",
+        "city": "Rosario",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Santa Fe"
+      },
+      "sessions": [
+        {
+          "id": "tcpm-2026-9-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-09-27T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tcpk-2026-8",
       "seriesId": "tc-pick-up",
       "round": 8,
@@ -102895,6 +103072,681 @@
         "team": "CSA Racing",
         "points": 0.5
       }
+    ],
+    "tc-pista": [
+      {
+        "pos": 1,
+        "driver": "Bautista Damiani",
+        "team": "",
+        "points": 396,
+        "wins": 2
+      },
+      {
+        "pos": 2,
+        "driver": "Nicanor Santilli Pazos",
+        "team": "",
+        "points": 362,
+        "wins": 1
+      },
+      {
+        "pos": 3,
+        "driver": "Benjamín Antón",
+        "team": "",
+        "points": 362,
+        "wins": 2
+      },
+      {
+        "pos": 4,
+        "driver": "Gabriel Gandulia",
+        "team": "",
+        "points": 352.5,
+        "wins": 1
+      },
+      {
+        "pos": 5,
+        "driver": "Felipe Bernasconi",
+        "team": "",
+        "points": 341.5,
+        "wins": 1
+      },
+      {
+        "pos": 6,
+        "driver": "Santiago Biagi",
+        "team": "",
+        "points": 338,
+        "wins": 2
+      },
+      {
+        "pos": 7,
+        "driver": "Benjamin Ochoa",
+        "team": "",
+        "points": 329,
+        "wins": 0
+      },
+      {
+        "pos": 8,
+        "driver": "Manuel Borgert",
+        "team": "",
+        "points": 320.5,
+        "wins": 0
+      },
+      {
+        "pos": 9,
+        "driver": "Thomas Pozner",
+        "team": "",
+        "points": 313,
+        "wins": 0
+      },
+      {
+        "pos": 10,
+        "driver": "Eugenio Provens",
+        "team": "",
+        "points": 312.5,
+        "wins": 1
+      },
+      {
+        "pos": 11,
+        "driver": "Faustino Cifre",
+        "team": "",
+        "points": 306,
+        "wins": 0
+      },
+      {
+        "pos": 12,
+        "driver": "Juan Sebastian Gallo",
+        "team": "",
+        "points": 304,
+        "wins": 1
+      },
+      {
+        "pos": 13,
+        "driver": "Gustavo (h) Tadei",
+        "team": "",
+        "points": 255,
+        "wins": 0
+      },
+      {
+        "pos": 14,
+        "driver": "Juan Ignacio Maceira",
+        "team": "",
+        "points": 241.5,
+        "wins": 0
+      },
+      {
+        "pos": 15,
+        "driver": "Luciano Cotignola",
+        "team": "",
+        "points": 226.5,
+        "wins": 0
+      },
+      {
+        "pos": 16,
+        "driver": "Lucas Guerra",
+        "team": "",
+        "points": 172.5,
+        "wins": 0
+      },
+      {
+        "pos": 17,
+        "driver": "Facundo Ledesma",
+        "team": "",
+        "points": 108,
+        "wins": 0
+      },
+      {
+        "pos": 18,
+        "driver": "Juan Antonio Sandin",
+        "team": "",
+        "points": 105.5,
+        "wins": 0
+      },
+      {
+        "pos": 19,
+        "driver": "Braian Quevedo",
+        "team": "",
+        "points": 76,
+        "wins": 0
+      },
+      {
+        "pos": 20,
+        "driver": "Ian Reutemann",
+        "team": "",
+        "points": 62,
+        "wins": 0
+      }
+    ],
+    "tc-mouras": [
+      {
+        "pos": 1,
+        "driver": "Francisco Luengo",
+        "team": "",
+        "points": 332,
+        "wins": 3
+      },
+      {
+        "pos": 2,
+        "driver": "Nicolás Jaime",
+        "team": "",
+        "points": 322,
+        "wins": 2
+      },
+      {
+        "pos": 3,
+        "driver": "Valentino Alaux",
+        "team": "",
+        "points": 266.5,
+        "wins": 1
+      },
+      {
+        "pos": 4,
+        "driver": "Fabrizio Maggini",
+        "team": "",
+        "points": 245,
+        "wins": 1
+      },
+      {
+        "pos": 5,
+        "driver": "Santiago Arrigoni",
+        "team": "",
+        "points": 242.5,
+        "wins": 0
+      },
+      {
+        "pos": 6,
+        "driver": "Juan Tartaglino",
+        "team": "",
+        "points": 212,
+        "wins": 0
+      },
+      {
+        "pos": 7,
+        "driver": "Esteban Luna",
+        "team": "",
+        "points": 203.5,
+        "wins": 0
+      },
+      {
+        "pos": 8,
+        "driver": "Alejandro Martínez",
+        "team": "",
+        "points": 194,
+        "wins": 0
+      },
+      {
+        "pos": 9,
+        "driver": "Thiago Falivene",
+        "team": "",
+        "points": 188.5,
+        "wins": 1
+      },
+      {
+        "pos": 10,
+        "driver": "Marcelo Beraldi",
+        "team": "",
+        "points": 188.5,
+        "wins": 0
+      },
+      {
+        "pos": 11,
+        "driver": "Santino Ortiz",
+        "team": "",
+        "points": 180,
+        "wins": 0
+      },
+      {
+        "pos": 12,
+        "driver": "Esteban Mancuso",
+        "team": "",
+        "points": 175,
+        "wins": 0
+      },
+      {
+        "pos": 13,
+        "driver": "Alan Denis Cifre",
+        "team": "",
+        "points": 59,
+        "wins": 0
+      },
+      {
+        "pos": 14,
+        "driver": "Aldo Ortiz",
+        "team": "",
+        "points": 58,
+        "wins": 0
+      },
+      {
+        "pos": 15,
+        "driver": "Ramiro De Bonis",
+        "team": "",
+        "points": 55,
+        "wins": 0
+      },
+      {
+        "pos": 16,
+        "driver": "Nicolás Villamayor",
+        "team": "",
+        "points": 52.5,
+        "wins": 0
+      },
+      {
+        "pos": 17,
+        "driver": "Simon Volpi",
+        "team": "",
+        "points": 51,
+        "wins": 0
+      }
+    ],
+    "tc-pista-mouras": [
+      {
+        "pos": 1,
+        "driver": "Ignacio Lovich",
+        "team": "",
+        "points": 299,
+        "wins": 1
+      },
+      {
+        "pos": 2,
+        "driver": "Iñaki Arrias",
+        "team": "",
+        "points": 298,
+        "wins": 5
+      },
+      {
+        "pos": 3,
+        "driver": "Ignacio Vilas",
+        "team": "",
+        "points": 268,
+        "wins": 1
+      },
+      {
+        "pos": 4,
+        "driver": "Damian Pérez",
+        "team": "",
+        "points": 267,
+        "wins": 1
+      },
+      {
+        "pos": 5,
+        "driver": "Bautista Roqueta",
+        "team": "",
+        "points": 253,
+        "wins": 0
+      },
+      {
+        "pos": 6,
+        "driver": "Ignacio Quintana",
+        "team": "",
+        "points": 252.5,
+        "wins": 0
+      },
+      {
+        "pos": 7,
+        "driver": "Juan Conde",
+        "team": "",
+        "points": 249,
+        "wins": 0
+      },
+      {
+        "pos": 8,
+        "driver": "Hainze Dante Rubiera",
+        "team": "",
+        "points": 193.5,
+        "wins": 0
+      },
+      {
+        "pos": 9,
+        "driver": "Facundo Ludueña",
+        "team": "",
+        "points": 166.5,
+        "wins": 0
+      },
+      {
+        "pos": 10,
+        "driver": "Martín Taha",
+        "team": "",
+        "points": 143,
+        "wins": 0
+      },
+      {
+        "pos": 11,
+        "driver": "Leonardo Forte",
+        "team": "",
+        "points": 141.5,
+        "wins": 0
+      },
+      {
+        "pos": 12,
+        "driver": "Juan José Suarez",
+        "team": "",
+        "points": 114.5,
+        "wins": 0
+      },
+      {
+        "pos": 13,
+        "driver": "Máximo Costanzo",
+        "team": "—",
+        "points": 53,
+        "wins": 0
+      },
+      {
+        "pos": 14,
+        "driver": "Daniel Faggiano",
+        "team": "",
+        "points": 50.5,
+        "wins": 0
+      },
+      {
+        "pos": 15,
+        "driver": "Luca De Carlo",
+        "team": "",
+        "points": 35.5,
+        "wins": 0
+      },
+      {
+        "pos": 16,
+        "driver": "Lautaro Dominguez",
+        "team": "",
+        "points": 31,
+        "wins": 0
+      },
+      {
+        "pos": 17,
+        "driver": "Gabriel Villalba",
+        "team": "",
+        "points": 29,
+        "wins": 0
+      },
+      {
+        "pos": 18,
+        "driver": "Dino Di Palma",
+        "team": "",
+        "points": 23,
+        "wins": 0
+      }
+    ],
+    "tc-pick-up": [
+      {
+        "pos": 1,
+        "driver": "Mariano Werner",
+        "team": "",
+        "points": 268,
+        "wins": 2
+      },
+      {
+        "pos": 2,
+        "driver": "Otto Fritzler",
+        "team": "",
+        "points": 257,
+        "wins": 1
+      },
+      {
+        "pos": 3,
+        "driver": "Agustín Canapino",
+        "team": "",
+        "points": 251,
+        "wins": 1
+      },
+      {
+        "pos": 4,
+        "driver": "Gastón Mazzacane",
+        "team": "",
+        "points": 225.5,
+        "wins": 0
+      },
+      {
+        "pos": 5,
+        "driver": "Hernán Palazzo",
+        "team": "",
+        "points": 225,
+        "wins": 0
+      },
+      {
+        "pos": 6,
+        "driver": "Marco Dianda",
+        "team": "",
+        "points": 223.5,
+        "wins": 1
+      },
+      {
+        "pos": 7,
+        "driver": "Diego Azar",
+        "team": "",
+        "points": 222,
+        "wins": 1
+      },
+      {
+        "pos": 8,
+        "driver": "Ignacio Faín",
+        "team": "",
+        "points": 218.5,
+        "wins": 0
+      },
+      {
+        "pos": 9,
+        "driver": "Diego De Carlo",
+        "team": "",
+        "points": 197,
+        "wins": 0
+      },
+      {
+        "pos": 10,
+        "driver": "Tobias Martinez",
+        "team": "",
+        "points": 194,
+        "wins": 1
+      },
+      {
+        "pos": 11,
+        "driver": "Tomás Abdala",
+        "team": "",
+        "points": 180,
+        "wins": 0
+      },
+      {
+        "pos": 12,
+        "driver": "Gustavo (h) Tadei",
+        "team": "",
+        "points": 148.5,
+        "wins": 0
+      },
+      {
+        "pos": 13,
+        "driver": "Facundo Ardusso",
+        "team": "",
+        "points": 128.5,
+        "wins": 0
+      },
+      {
+        "pos": 14,
+        "driver": "Juan José Ebarlín",
+        "team": "",
+        "points": 115,
+        "wins": 0
+      },
+      {
+        "pos": 15,
+        "driver": "Andres Jakos",
+        "team": "",
+        "points": 89,
+        "wins": 0
+      },
+      {
+        "pos": 16,
+        "driver": "Ian Reutemann",
+        "team": "",
+        "points": 68,
+        "wins": 0
+      },
+      {
+        "pos": 17,
+        "driver": "Joaquín Ochoa",
+        "team": "",
+        "points": 58.5,
+        "wins": 0
+      },
+      {
+        "pos": 18,
+        "driver": "Gaston Iansa",
+        "team": "—",
+        "points": 57.5,
+        "wins": 0
+      },
+      {
+        "pos": 19,
+        "driver": "Julian Santero",
+        "team": "",
+        "points": 56,
+        "wins": 0
+      },
+      {
+        "pos": 20,
+        "driver": "Lucas Valle",
+        "team": "",
+        "points": 48,
+        "wins": 0
+      }
+    ],
+    "tc-pista-pick-up": [
+      {
+        "pos": 1,
+        "driver": "Tomás Pellandino",
+        "team": "",
+        "points": 298.5,
+        "wins": 2
+      },
+      {
+        "pos": 2,
+        "driver": "Santiago Biagi",
+        "team": "",
+        "points": 286.5,
+        "wins": 3
+      },
+      {
+        "pos": 3,
+        "driver": "Faustino Cifre",
+        "team": "",
+        "points": 247,
+        "wins": 1
+      },
+      {
+        "pos": 4,
+        "driver": "Antonino Sganga",
+        "team": "",
+        "points": 222,
+        "wins": 0
+      },
+      {
+        "pos": 5,
+        "driver": "Luis Catelli",
+        "team": "",
+        "points": 209.5,
+        "wins": 0
+      },
+      {
+        "pos": 6,
+        "driver": "Nicanor Santilli Pazos",
+        "team": "",
+        "points": 206.5,
+        "wins": 0
+      },
+      {
+        "pos": 7,
+        "driver": "Juan Pablo Alberti",
+        "team": "",
+        "points": 195,
+        "wins": 1
+      },
+      {
+        "pos": 8,
+        "driver": "Nahuel Cordone",
+        "team": "",
+        "points": 193,
+        "wins": 0
+      },
+      {
+        "pos": 9,
+        "driver": "Manuel Borgert",
+        "team": "",
+        "points": 173.5,
+        "wins": 0
+      },
+      {
+        "pos": 10,
+        "driver": "Néstor Omar Goya",
+        "team": "",
+        "points": 166.5,
+        "wins": 0
+      },
+      {
+        "pos": 11,
+        "driver": "Alvaro Oroza",
+        "team": "",
+        "points": 150,
+        "wins": 0
+      },
+      {
+        "pos": 12,
+        "driver": "José Alberto Goya",
+        "team": "",
+        "points": 149,
+        "wins": 0
+      },
+      {
+        "pos": 13,
+        "driver": "Gonzalo Aramburu",
+        "team": "",
+        "points": 139,
+        "wins": 0
+      },
+      {
+        "pos": 14,
+        "driver": "Juan Pablo Guiffrey",
+        "team": "",
+        "points": 135.5,
+        "wins": 0
+      },
+      {
+        "pos": 15,
+        "driver": "Marcelo Vergagni",
+        "team": "",
+        "points": 118,
+        "wins": 0
+      },
+      {
+        "pos": 16,
+        "driver": "Juan Antonio Sandin",
+        "team": "",
+        "points": 107,
+        "wins": 0
+      },
+      {
+        "pos": 17,
+        "driver": "Hernán Sala",
+        "team": "",
+        "points": 96,
+        "wins": 0
+      },
+      {
+        "pos": 18,
+        "driver": "Joaquin Rossoti",
+        "team": "—",
+        "points": 94,
+        "wins": 0
+      },
+      {
+        "pos": 19,
+        "driver": "José Carlos Montanari",
+        "team": "",
+        "points": 89.5,
+        "wins": 0
+      },
+      {
+        "pos": 20,
+        "driver": "Emiliano Simonetti",
+        "team": "",
+        "points": 82.5,
+        "wins": 0
+      }
     ]
   },
   "meta": {
@@ -104944,18 +105796,43 @@
         "Ezequiel Pérez Companc"
       ]
     },
+    "tc-pista": {
+      "standingsLabel": "Tabla oficial de la ACTC",
+      "standingsAsOfRound": 11,
+      "standingsSource": "https://actc.org.ar/tcp/campeonato"
+    },
+    "tc-mouras": {
+      "standingsLabel": "Tabla oficial de la ACTC",
+      "standingsAsOfRound": 8,
+      "standingsSource": "https://actc.org.ar/tcm/campeonato"
+    },
+    "tc-pista-mouras": {
+      "standingsLabel": "Tabla oficial de la ACTC",
+      "standingsAsOfRound": 8,
+      "standingsSource": "https://actc.org.ar/tcpm/campeonato"
+    },
+    "tc-pick-up": {
+      "standingsLabel": "Tabla oficial de la ACTC",
+      "standingsAsOfRound": 7,
+      "standingsSource": "https://actc.org.ar/tcpk/campeonato"
+    },
+    "tc-pista-pick-up": {
+      "standingsLabel": "Tabla oficial de la ACTC",
+      "standingsAsOfRound": 7,
+      "standingsSource": "https://actc.org.ar/tcppk/campeonato"
+    },
     "schedules": {
-      "notes": 15,
+      "notes": 16,
       "officialPdfs": 0,
-      "sessions": 126,
-      "confirmed": 0,
+      "sessions": 136,
+      "confirmed": 10,
       "conflicts": 0,
-      "eventsWithTimes": 20
+      "eventsWithTimes": 22
     },
     "timing": {
       "documents": 720,
-      "pagesFetched": 11,
-      "eventsWithResults": 51
+      "pagesFetched": 20,
+      "eventsWithResults": 53
     },
     "openf1": {
       "sessions": 131,
@@ -104982,5 +105859,7 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "Se descartaron resultados de 1 sesiones que todavía no se corrieron (eran de otra fecha)"
+  ]
 }
