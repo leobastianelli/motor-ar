@@ -52,7 +52,7 @@ function indexedSummary(entry: IndexedDriver, season: Season) {
   const others = ids.slice(1).map((id) => getSeries(id)?.name).filter(Boolean);
   return [
     `${entry.name} corre en ${main.name}${number ? ` con el número ${number}` : ""}${team ? `, con ${team}` : ""}.`,
-    s ? `En 2026 lleva ${count(s.races, "carrera", "carreras")}, ${count(s.wins, "victoria", "victorias")} y ${count(s.podiums, "podio", "podios")}${s.best ? `; su mejor resultado es un ${s.best}.º puesto` : ""}.` : "",
+    s && !main.partialResults ? `En 2026 lleva ${count(s.races, "carrera", "carreras")}, ${count(s.wins, "victoria", "victorias")} y ${count(s.podiums, "podio", "podios")}${s.best ? `; su mejor resultado es un ${s.best}.º puesto` : ""}.` : "",
     standing ? `Está ${standing.pos}.º en el campeonato con ${standing.points} puntos.` : "",
     others.length ? `También corrió en ${others.join(" y ")}.` : "",
   ]
@@ -126,14 +126,24 @@ function SeasonBlocks({ keys, season }: { keys: string[]; season: Season }) {
           <section key={id} className="section-block driver-auto-series" style={{ "--cat": series.color } as CSSProperties}>
             <SectionTitle title={<Link href={`/categorias/${series.id}`}>{series.name} 2026</Link>} />
             <div className="driver-auto-stats">
-              {[
-                ["Campeonato", standing ? `${standing.pos}.º` : "—", standing ? `${standing.points} pts` : ""],
-                ["Carreras", String(s.races), ""],
-                ["Victorias", String(s.wins), ""],
-                ["Podios", String(s.podiums), ""],
-                ["Poles", String(s.poles), ""],
-                ["Mejor resultado", s.best ? `${s.best}.º` : "—", ""],
-              ].map(([label, value, note]) => (
+              {(series.partialResults
+                ? [
+                    ["Campeonato", standing ? `${standing.pos}.º` : "—", standing ? `${standing.points} pts` : ""],
+                    ["Carreras", "—", ""],
+                    ["Victorias", "—", ""],
+                    ["Podios", "—", ""],
+                    ["Poles", "—", ""],
+                    ["Mejor resultado", "—", ""],
+                  ]
+                : [
+                    ["Campeonato", standing ? `${standing.pos}.º` : "—", standing ? `${standing.points} pts` : ""],
+                    ["Carreras", String(s.races), ""],
+                    ["Victorias", String(s.wins), ""],
+                    ["Podios", String(s.podiums), ""],
+                    ["Poles", String(s.poles), ""],
+                    ["Mejor resultado", s.best ? `${s.best}.º` : "—", ""],
+                  ]
+              ).map(([label, value, note]) => (
                 <div key={label}>
                   <span>{label}</span>
                   <strong>{value}</strong>
@@ -141,6 +151,7 @@ function SeasonBlocks({ keys, season }: { keys: string[]; season: Season }) {
                 </div>
               ))}
             </div>
+            {series.partialResults && <p className="source-note">{series.partialResults}</p>}
             <div className="driver-auto-results">
               {[...byEvent.values()].reverse().map((rows) => {
                 const { event } = rows[0];
@@ -386,7 +397,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
       { label: "Campeonato", value: standing ? `${standing.position}.º` : "—", note: standing?.label },
       { label: "Puntos", value: standing ? String(standing.points) : "—" },
       // Victorias contadas desde los resultados de la temporada, igual que en los bloques de abajo.
-      { label: "Victorias", value: String(season.getDriverSeason({ key: "", keys: [driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n)) }).bySeries[driver.seriesId]?.wins ?? 0) },
+      { label: "Victorias", value: series.partialResults ? "—" : String(season.getDriverSeason({ key: "", keys: [driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n)) }).bySeries[driver.seriesId]?.wins ?? 0), note: series.partialResults ? "sin la temporada completa" : undefined },
       { label: "Categoría", value: series.short, note: driver.team },
     ];
   }

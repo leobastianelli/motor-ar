@@ -201,6 +201,22 @@ export const drivers: Driver[] = [
     ].reverse(),
   },
   {
+    slug: "lazaro-bainotti",
+    name: "Lázaro Bainotti",
+    number: 11,
+    seriesId: "ligier-jfc",
+    team: "Speed Factory",
+    hometown: "Córdoba",
+    // Sólo se conoce la edad (15 años en septiembre de 2026): se deja sin fecha en vez de inventar un día y mes.
+    born: "",
+    tagline: "Cordobés de 15 años que corre en Estados Unidos, embajador de la Fundación Fangio y el ganador más joven en la historia de la F4 Ligier.",
+    career: [
+      { year: "Karting", series: "Karting · Argentina", team: "", highlight: "Empezó a los 10 años y corrió dos temporadas en Argentina antes de pasar a los autos." },
+      { year: "2025", series: "F4 Ligier · Estados Unidos", team: "", highlight: "A los 13 se mudó a Estados Unidos con su padre, el único lugar donde se corre en monoplazas antes de los 15, y subió a sus primeros podios." },
+      { year: "2026", series: "Ligier JFC · clase Gen. 1", team: "Speed Factory", highlight: "Ganó en Nueva Orleans, el ganador más joven de la historia de la categoría, y otra vez en Mid-Ohio; subcampeón de la Gen. 1 tras 12 carreras." },
+    ].reverse(),
+  },
+  {
     slug: "facundo-ardusso",
     name: "Facundo Ardusso",
     number: 83,

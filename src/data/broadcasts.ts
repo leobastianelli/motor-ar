@@ -58,5 +58,10 @@ export const broadcastsBySeries: Record<string, { items: Broadcast[]; source?: s
     items: [{ name: "GT World (YouTube, gratis)", kind: "youtube", url: "https://www.youtube.com/@GTWorld" }],
     source: "https://www.dailysportscar.com/2026/05/31/live-stream-gt-world-challenge-europe-monza.html",
   },
+  "ligier-jfc": {
+    // Las carreras se transmiten en YouTube y quedan incrustadas en la nota de cada fin de semana de la web de la serie.
+    items: [{ name: "YouTube (desde la web de la serie)", kind: "youtube", url: "https://ligierjuniorformulachampionship.com/news/" }],
+    source: "https://ligierjuniorformulachampionship.com/news/stream-race-2-from-vir/",
+  },
   "zonal-bsas": { items: [] },
 };

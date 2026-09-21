@@ -187,6 +187,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
             {nameParts[0]}
             {nameParts.length > 1 && (
               <>
+                {" "}
                 <br />
                 {nameParts.slice(1).join(" ")}
               </>

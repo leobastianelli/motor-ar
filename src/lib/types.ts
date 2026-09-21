@@ -16,6 +16,8 @@ export interface Series {
   /** Color de identidad de la categoría (no es el logo oficial). */
   color: string;
   founded?: number;
+  /** Si sólo cargamos parte de la temporada, qué falta. Con esto las estadísticas de los pilotos no se muestran como si fueran las del año. */
+  partialResults?: string;
 }
 
 export interface Circuit {

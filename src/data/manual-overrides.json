@@ -82,6 +82,99 @@
         { "id": "tc2000-2026-8-final", "kind": "final", "name": "Final", "start": "2026-09-27T12:00:00-03:00", "timeKnown": false, "durationMin": 50 }
       ],
       "source": "Carga manual · 0264Noticias y Passline (sede y días); horarios a confirmar"
+    },
+    {
+      "id": "ligier-jfc-2026-1",
+      "seriesId": "ligier-jfc",
+      "round": 1,
+      "name": "Fecha 1 · NOLA Motorsports Park",
+      "circuit": { "name": "NOLA Motorsports Park", "city": "Avondale", "country": "Estados Unidos", "flag": "US", "province": "Luisiana" },
+      "sessions": [
+        { "id": "ligier-jfc-2026-1-carreras", "kind": "carrera", "name": "Carreras", "start": "2026-04-12T12:00:00-04:00", "timeKnown": false, "durationMin": 30 }
+      ],
+      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (abril 9–12)"
+    },
+    {
+      "id": "ligier-jfc-2026-2",
+      "seriesId": "ligier-jfc",
+      "round": 2,
+      "name": "Fecha 2 · Road America",
+      "circuit": { "name": "Road America", "city": "Elkhart Lake", "country": "Estados Unidos", "flag": "US", "province": "Wisconsin" },
+      "sessions": [
+        { "id": "ligier-jfc-2026-2-carreras", "kind": "carrera", "name": "Carreras", "start": "2026-05-17T12:00:00-04:00", "timeKnown": false, "durationMin": 30 }
+      ],
+      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (mayo 14–17)"
+    },
+    {
+      "id": "ligier-jfc-2026-3",
+      "seriesId": "ligier-jfc",
+      "round": 3,
+      "name": "Fecha 3 · Mid-Ohio",
+      "circuit": { "name": "Mid-Ohio Sports Car Course", "city": "Lexington", "country": "Estados Unidos", "flag": "US", "province": "Ohio" },
+      "sessions": [
+        { "id": "ligier-jfc-2026-3-carreras", "kind": "carrera", "name": "Carreras", "start": "2026-06-14T12:00:00-04:00", "timeKnown": false, "durationMin": 30 }
+      ],
+      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (junio 11–14)"
+    },
+    {
+      "id": "ligier-jfc-2026-4",
+      "seriesId": "ligier-jfc",
+      "round": 4,
+      "name": "Fecha 4 · New Jersey Motorsports Park",
+      "circuit": { "name": "New Jersey Motorsports Park", "city": "Millville", "country": "Estados Unidos", "flag": "US", "province": "Nueva Jersey" },
+      "sessions": [
+        { "id": "ligier-jfc-2026-4-carreras", "kind": "carrera", "name": "Carreras", "start": "2026-08-02T12:00:00-04:00", "timeKnown": false, "durationMin": 30 }
+      ],
+      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (julio 31 – agosto 2)"
+    },
+    {
+      "id": "ligier-jfc-2026-5",
+      "seriesId": "ligier-jfc",
+      "round": 5,
+      "name": "Fecha 5 · VIRginia International Raceway",
+      "circuit": { "name": "VIRginia International Raceway", "city": "Alton", "country": "Estados Unidos", "flag": "US", "province": "Virginia" },
+      "sessions": [
+        {
+          "id": "ligier-jfc-2026-5-carrera-1", "kind": "carrera", "name": "Carrera 1 · Gen. 1", "start": "2026-09-19T10:30:00-04:00", "timeKnown": true, "timeStatus": "confirmed", "durationMin": 30,
+          "timeSources": [{ "name": "Ligier JFC · resultados provisorios (MyLaps)", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-13-Provisional-Race-Results-1.pdf", "start": "2026-09-19T10:30:00-04:00" }],
+          "resultsSource": { "name": "Ligier JFC · resultados provisorios (MyLaps), clase Gen. 1", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-13-Provisional-Race-Results-1.pdf" },
+          "results": [
+            {"pos": 1, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "29:50.372", "class": "Gen. 1"},
+            {"pos": 2, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "+10.473", "class": "Gen. 1"},
+            {"pos": 3, "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "+11.237", "class": "Gen. 1"},
+            {"pos": 4, "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "+37.092", "class": "Gen. 1"},
+            {"pos": 5, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "+37.784", "class": "Gen. 1"},
+            {"pos": 6, "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "+1 vuelta", "class": "Gen. 1"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-5-carrera-2", "kind": "carrera", "name": "Carrera 2 · Gen. 1", "start": "2026-09-20T10:05:00-04:00", "timeKnown": true, "timeStatus": "confirmed", "durationMin": 30,
+          "timeSources": [{ "name": "Ligier JFC · resultados provisorios (MyLaps)", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-14-Provisional-Race-Results.pdf", "start": "2026-09-20T10:05:00-04:00" }],
+          "resultsSource": { "name": "Ligier JFC · resultados provisorios (MyLaps) con la sanción de 5 s a Bainotti aplicada según la nota oficial, clase Gen. 1", "url": "https://ligierjuniorformulachampionship.com/news/jacir-clinches-2026-ligier-jfc-gen-1-title-with-race-2-win-while-kennedy-completes-gen-2-sweep-at-vir/" },
+          "results": [
+            {"pos": 1, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "31:43.403", "class": "Gen. 1"},
+            {"pos": 2, "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "+27.458", "class": "Gen. 1"},
+            {"pos": 3, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "+27.537", "class": "Gen. 1"},
+            {"pos": 4, "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "+36.046", "class": "Gen. 1"},
+            {"pos": 5, "number": "33", "driver": "Alexander Savage", "team": "G Tech Motorsports", "gap": "+39.647", "class": "Gen. 1"},
+            {"pos": 6, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "+46.291", "class": "Gen. 1"},
+            {"pos": 7, "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "+1 vuelta", "class": "Gen. 1"}
+          ]
+        },
+        { "id": "ligier-jfc-2026-5-carrera-3", "kind": "carrera", "name": "Carrera 3", "start": "2026-09-20T12:00:00-04:00", "timeKnown": false, "durationMin": 30 }
+      ],
+      "source": "Carga manual · ligierjuniorformulachampionship.com (calendario, resultados provisorios y notas de carrera)"
+    },
+    {
+      "id": "ligier-jfc-2026-6",
+      "seriesId": "ligier-jfc",
+      "round": 6,
+      "name": "Fecha 6 · Barber Motorsports Park",
+      "circuit": { "name": "Barber Motorsports Park", "city": "Leeds", "country": "Estados Unidos", "flag": "US", "province": "Alabama" },
+      "sessions": [
+        { "id": "ligier-jfc-2026-6-carreras", "kind": "carrera", "name": "Carreras", "start": "2026-10-18T12:00:00-04:00", "timeKnown": false, "durationMin": 30 }
+      ],
+      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (octubre 16–18, final de temporada)"
     }
   ]
 }
