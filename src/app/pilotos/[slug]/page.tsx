@@ -7,6 +7,8 @@ import { CategoryLabel, PhotoCredit, SectionTitle } from "@/components/pista";
 import { colapintoData, finishLabel, quotes, raceCode, raceName, recentMilestones, statusLabel, type ColapintoData } from "@/lib/colapinto";
 import { getAllDrivers, getDriver, getIndexedDriver, getIndexedDrivers, getNow, getSeason, getSeries, type Season } from "@/lib/data";
 import { fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/format";
+import { NotesBlock } from "@/components/notas";
+import { notesForDriver } from "@/lib/notas";
 import { getPhoto } from "@/lib/photos";
 import { driverKey } from "@/lib/sources/driver-index.mjs";
 import { breadcrumb, isoDate, JsonLd } from "@/components/json-ld";
@@ -103,6 +105,7 @@ async function IndexedDriverPage({ slug }: { slug: string }) {
       />
 
       <SeasonBlocks keys={entry.keys ?? [entry.key]} season={season} />
+      <NotesBlock notas={notesForDriver(entry.slug)} title={`Notas sobre ${entry.name}`} />
     </>
   );
 }
@@ -479,6 +482,8 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
           </div>
         </section>
       )}
+
+      <NotesBlock notas={notesForDriver(driver.slug)} title={`Notas sobre ${driver.name}`} />
 
       {!data && (
         <section className="section-block">

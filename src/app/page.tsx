@@ -3,22 +3,24 @@ import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
 import { Agenda } from "@/components/agenda";
 import { AutoRefresh, MinutesLeft } from "@/components/live-clock";
+import { NoteCard } from "@/components/notas";
 import { CatMark, CategoryLabel, Code, SectionTitle, StateTag } from "@/components/pista";
 import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, isSimulatedNow, ms, seriesTier, weekendWindow, type HomeMode } from "@/lib/data";
+import { getNotes } from "@/lib/notas";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime, raceWinner, surname } from "@/lib/format";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 // La home es lo que la gente mira mientras pasa la carrera: se regenera seguido, y el navegador además la vuelve a pedir solo (AutoRefresh).
 export const revalidate = 15;
 
-type SectionId = "live" | "nuestros" | "agenda" | "resultados" | "viene";
+type SectionId = "live" | "nuestros" | "agenda" | "resultados" | "viene" | "notas";
 
 // El orden de la home depende del momento de la semana: primero lo que más probablemente se busca, pero siempre está todo.
 const ORDER: Record<HomeMode, SectionId[]> = {
-  live: ["live", "agenda", "nuestros", "resultados", "viene"],
-  weekend: ["agenda", "nuestros", "resultados", "viene"],
-  results: ["resultados", "nuestros", "agenda", "viene"],
-  midweek: ["nuestros", "resultados", "agenda", "viene"],
+  live: ["live", "agenda", "nuestros", "resultados", "viene", "notas"],
+  weekend: ["agenda", "nuestros", "resultados", "viene", "notas"],
+  results: ["resultados", "nuestros", "agenda", "viene", "notas"],
+  midweek: ["nuestros", "resultados", "agenda", "viene", "notas"],
 };
 
 // Acceso directo a cada categoría: mucha gente entra buscando una en particular. Primero las más buscadas.
@@ -55,6 +57,7 @@ export default async function Home() {
   const podium = season.getRecentResults(now, "nacional")[0];
   const [highlight, ...notes] = season.getArgentineHighlights(now);
   const nextEvents = season.getUpcomingEvents(now).filter((e) => ms(eventStart(e)) >= ms(to)).slice(0, 3);
+  const latestNotes = getNotes().slice(0, 3);
   const liveUrl = live?.event.broadcasts.find((b) => b.url && b.kind !== "timing")?.url;
   const timingUrl = live?.event.broadcasts.find((b) => b.kind === "timing")?.url;
 
@@ -121,7 +124,7 @@ export default async function Home() {
   }
 
   // ——— Secciones ———
-  const sections: Record<SectionId, ReactNode> = {
+  const sections: Record<Exclude<SectionId, "notas">, ReactNode> = {
     live: live && (
       <div key="live">
       <section className="live-board" aria-labelledby="live-title">
@@ -320,6 +323,21 @@ export default async function Home() {
     ),
   };
 
+
+  const notas: ReactNode = latestNotes.length > 0 && (
+    <section key="notas" className="section-block">
+      <SectionTitle title="Lo que se dice">
+        <Link href="/notas">Ver todas</Link>
+      </SectionTitle>
+      <div className="nota-list">
+        {latestNotes.map((n) => (
+          <NoteCard key={n.slug} nota={n} />
+        ))}
+      </div>
+    </section>
+  );
+  const all: Record<SectionId, ReactNode> = { ...sections, notas };
+
   return (
     <>
       <AutoRefresh />
@@ -348,7 +366,7 @@ export default async function Home() {
           Todas
         </Link>
       </nav>
-      {ORDER[mode].map((id) => sections[id])}
+      {ORDER[mode].map((id) => all[id])}
     </>
   );
 }

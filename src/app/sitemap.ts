@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getAllDrivers, getAllSeries, getIndexedDrivers, getSeason } from "@/lib/data";
 import { legends } from "@/data/legends";
 import { allHorarioSlugs } from "@/lib/horarios";
+import { getNotes } from "@/lib/notas";
 import { SITE_URL } from "@/lib/site";
 
 export const revalidate = 3600;
@@ -19,6 +20,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...allHorarioSlugs().map((slug) => page(`/horarios/${slug}`, "hourly", 0.9)),
     page("/pilotos", "daily", 0.8),
     page("/categorias", "weekly", 0.7),
+    page("/notas", "daily", 0.7),
+    ...getNotes().map((n) => page(`/notas/${n.slug}`, "monthly", 0.5)),
     page("/historicos", "monthly", 0.5),
     page("/fuentes", "monthly", 0.2),
     page("/acerca", "monthly", 0.3),

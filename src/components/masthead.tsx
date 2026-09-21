@@ -11,6 +11,7 @@ const NAV = [
   { href: "/calendario", label: "Calendario" },
   { href: "/pilotos", label: "Pilotos" },
   { href: "/categorias", label: "Categorías" },
+  { href: "/notas", label: "Notas" },
   { href: "/historicos", label: "Historias" },
 ];
 

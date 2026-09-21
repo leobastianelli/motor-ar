@@ -462,3 +462,39 @@ button{color:inherit;font-family:inherit}
   .driver-hero.no-photo{min-height:340px}
   .driver-hero.no-photo .driver-title{bottom:auto;padding-top:48px;padding-bottom:40px}
 }
+
+/* Notas de medios */
+.nota-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:20px}
+.nota-card{display:flex;flex-direction:column;gap:8px;padding:18px 20px;background:#fff;border-radius:2px;border-top:4px solid var(--ink)}
+.nota-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin:0;font-size:13px;color:var(--muted)}
+.nota-meta b{color:var(--ink);font-weight:750}
+.nota-meta time{font-variant-numeric:tabular-nums;text-transform:uppercase;letter-spacing:.03em}
+.nota-card h3{margin:0;font-size:22px;line-height:1.1;font-weight:850;font-stretch:90%;letter-spacing:-.5px}
+.nota-card h3 a{text-decoration:none}
+.nota-card:hover h3 a{text-decoration:underline}
+.nota-summary{margin:0;font-size:15px;line-height:1.45;color:#3a3e40;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.notas-intro{max-width:64ch;margin:18px 0 0;font-size:16px;line-height:1.5;color:#3a3e40}
+.nota-page{margin-top:36px}
+.nota-head h1{font-size:clamp(34px,4.4vw,58px);line-height:.98;letter-spacing:-2px;margin:10px 0 0;white-space:normal}
+.nota-head .nota-meta a{font-weight:700}
+.nota-body{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:48px;align-items:start;margin-top:28px}
+.nota-lead{margin:0;font-size:20px;line-height:1.5;max-width:60ch}
+.nota-link{font-weight:700;text-decoration-thickness:2px;text-underline-offset:3px}
+.nota-quote{margin:26px 0 0;padding:4px 0 4px 20px;border-left:6px solid var(--blue-deep)}
+.nota-quote p{margin:0;font-size:24px;font-weight:650;font-stretch:92%;line-height:1.25}
+.nota-quote footer{margin-top:6px;font-size:13px;color:var(--muted)}
+.nota-source{display:flex;flex-direction:column;gap:6px;margin-top:30px;padding:20px;background:#fff;border-top:4px solid var(--ink)}
+.nota-source>span{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.nota-source>strong{font-size:17px;line-height:1.3}
+.nota-source>small{color:var(--muted)}
+.nota-source>p{margin:6px 0 0;font-size:13px;color:var(--muted)}
+.nota-cta{align-self:flex-start;margin-top:10px;padding:12px 16px;background:var(--ink);color:#fff;font-weight:700;text-decoration:none}
+.nota-cta:hover{background:var(--blue-deep)}
+.nota-related{background:#fff;padding:18px 20px;border-top:8px solid var(--ink)}
+.nota-related h2{margin:0 0 6px;font-size:26px;letter-spacing:-1px}
+.nota-related h3{margin:16px 0 4px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.nota-rel{display:flex;flex-direction:column;gap:5px;padding:12px 0;border-top:1px solid var(--rule);text-decoration:none}
+.nota-rel strong{font-size:17px}
+.nota-rel:hover strong{text-decoration:underline}
+.nota-rel-status{font-size:14px;color:#3a3e40}
+@media(max-width:800px){.nota-body{grid-template-columns:1fr;gap:28px}.nota-lead{font-size:18px}.nota-quote p{font-size:20px}.nota-page{margin-top:24px}}

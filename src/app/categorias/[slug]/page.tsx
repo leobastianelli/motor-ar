@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { breadcrumb, JsonLd } from "@/components/json-ld";
+import { NotesBlock } from "@/components/notas";
 import { PhotoCredit, SectionTitle } from "@/components/pista";
+import { notesForSeries } from "@/lib/notas";
 import { getAllSeries, getHistory, getNow, getSeason, getSeries } from "@/lib/data";
 import { getPhoto } from "@/lib/photos";
 import { fmtDayNum, fmtMonthShort, surname } from "@/lib/format";
@@ -303,6 +305,8 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
           </div>
         </section>
       )}
+
+      <NotesBlock notas={notesForSeries(series.id)} title={`Notas de ${series.short}`} />
 
       {history ? (
         <History history={history} />

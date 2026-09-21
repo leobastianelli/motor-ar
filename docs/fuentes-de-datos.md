@@ -230,3 +230,34 @@ atrasado, fechas ya corridas sin resultados cargados.
   `scripts/init-tareas-db.mjs`); hace falta `DATABASE_URL` en el entorno (`vercel env pull .env.local`).
 - **Auth:** una sola contraseña compartida (`TASKS_PASSWORD`), sin cuentas. La sesión es una cookie firmada con
   HMAC (`TASKS_SESSION_SECRET`), sin tabla de sesiones. Ver `src/lib/task-auth.ts`.
+
+## Protección contra pérdida de datos (2026-09-21)
+
+Causa del TN desaparecido el domingo 20/09: la instantánea guardada por la sincronización de las 05:21 no tenía ninguna fecha del TN
+(APAT devolvió el calendario sin filas y nadie lo notó). Como el sitio cae a esa instantánea cuando reconstruir la temporada tarda más
+de 6 segundos, durante el día el TN aparecía y desaparecía según la instancia que atendía la visita.
+
+- `src/lib/sources/guard.mjs` se aplica al final de `buildSeason` (producción y `npm run sync:season`): una fuente no puede achicar la
+  temporada. Si una categoría trae menos fechas que la versión anterior, o una fecha pierde resultados que ya tenía, se conserva lo anterior
+  y se registra en `failures`. Lo mismo para las tablas de campeonato.
+- APAT lanza un error si el calendario no trae ninguna fecha, así el flujo normal de fallas conserva lo anterior.
+- Una fecha que una fuente retire a propósito (calendario cancelado) hay que sacarla a mano de la instantánea.
+- `npm test` corre las pruebas de la protección, de la fusión de cargas manuales y de las notas.
+
+## Cargas manuales de horarios (`manual-overrides.json`)
+
+Cada sesión manual se reconoce por tipo + nombre. Si no coincide con ninguna pero la fuente ya publicó resultados de esa misma clase, tipo y día
+(p. ej. la carga dice "2 Series Clase 2" y APAT trae "Serie 1 Clase 2" y "Serie 2 Clase 2"), la hora pasa a la primera sesión de la fuente sin hora en
+vez de crear una fila duplicada "sin datos" (`src/lib/sources/overrides.mjs`).
+
+## Ligier JFC Junior Formula Championship
+
+Categoría internacional con participación argentina (Lázaro Bainotti, Speed Factory, clase Gen. 1). Sin adaptador automático todavía: el calendario
+oficial (ligierjuniorformulachampionship.com/schedule) y los resultados de VIR (PDF provisorios de MyLaps y notas de la serie) se cargaron a mano en
+`manual-overrides.json`. Sólo hay resultados de la clase Gen. 1 de las carreras 1 y 2 de VIR, por eso la categoría tiene `partialResults` y las
+fichas de piloto no muestran carreras/victorias/podios. Pendiente: adaptador (los resultados y campeonatos son PDF), carrera 3 de VIR y el resto de la temporada.
+
+## Notas de medios (`/notas`)
+
+`src/data/notas.ts`: reseñas con fuente citada. Resumen propio, cita de hasta 25 palabras, titular original, fecha y enlace al medio (lo verifica
+`npm test`). Se enlazan con pilotos, categorías y fechas por etiqueta y por los nombres que aparezcan en el resumen.
