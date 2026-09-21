@@ -40,6 +40,7 @@ npm run watchdog -- --dry
 ```
 
 ## Límites conocidos
+- **La comprobación de la tabla de TC2000 solo corre en local.** Su sitio responde 403 a los servidores de GitHub (no a una PC común) y no lo evadimos; en GitHub esa comprobación se saltea sin ruido. Para correrla: `npm run guardian -- --dry` en tu máquina.
 - El estado de los avisos (qué ya se avisó) viaja en la caché de GitHub Actions: si se pierde, un aviso se puede repetir una vez.
 - El vigilante corre cada hora, así que una caída se detecta en menos de ~1 h. El repositorio es privado y GitHub da 2.000 minutos de Actions por mes: el vigilante usa ~720.
 - Si GitHub Actions deja de ejecutar los procesos programados, no llega ningún aviso; por eso conviene que el resumen de las 06:00 llegue todos los días: si un día no llega, algo pasa.

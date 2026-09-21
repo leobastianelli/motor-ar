@@ -79,7 +79,9 @@ try {
   if (official.length >= 3 && mine) findings.push(...compareStandings(mine, official.slice(0, 13), { series: "tc2000", name: name("tc2000") }));
   else if (official.length < 3) notes.push("La portada de TC2000 no trajo la tabla de pilotos: puede haber cambiado su diseño.");
 } catch (error) {
-  notes.push(`No se pudo leer la portada de TC2000 (${error.message}).`);
+  // El sitio de TC2000 responde 403 a los servidores de GitHub (no a una PC común): no se evade. Esta comprobación sólo corre en local.
+  if (/^403/.test(error.message)) console.log("(portada de TC2000 no disponible desde este servidor: 403; la comprobación de su tabla sólo corre en local)");
+  else notes.push(`No se pudo leer la portada de TC2000 (${error.message}).`);
 }
 
 const { send, resolved, state: next } = evaluate(findings, state, NOW);
@@ -96,7 +98,7 @@ function summary() {
     const mark = status !== "confirmed" ? "❓ fecha sin confirmar" : raceKnown ? "✓ con horario" : "⏳ sin horario";
     return `• ${dayLabel(e.sessions[0].start)} ${name(e.seriesId)} · ${e.circuit?.city ?? e.name}: ${mark}`;
   };
-  const active = Object.values(next.alerts).filter((a) => a.active).length;
+  const active = Object.values(next.alerts).filter((a) => a.active && a.severity !== "info").length;
   const age = Math.round((nowMs - Date.parse(snapshot.generatedAt)) / 3600_000);
   return [
     `☀️ Fierros: resumen del día`,

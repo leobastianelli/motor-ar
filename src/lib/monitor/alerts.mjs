@@ -33,7 +33,7 @@ export function evaluate(findings, state, now) {
 
     if (!prev?.active) {
       send.push({ ...f, kind: "nuevo" });
-      next.alerts[f.key] = { active: true, level: f.level, lastSent: now, firstSeen: prev?.firstSeen ?? now, title: f.title };
+      next.alerts[f.key] = { active: true, level: f.level, severity: f.severity, lastSent: now, firstSeen: prev?.firstSeen ?? now, title: f.title };
       continue;
     }
     const escalated = f.level > prev.level;

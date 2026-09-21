@@ -77,11 +77,13 @@
       "round": 8,
       "name": "Fecha 8 · San Juan",
       "circuit": { "name": "Autódromo El Zonda Eduardo Copello", "city": "San Juan", "country": "Argentina", "flag": "AR", "province": "San Juan" },
+      "dateConfirmed": true,
       "sessions": [
+        { "id": "tc2000-2026-8-entrenamientos", "kind": "practica", "name": "Entrenamientos", "start": "2026-09-26T12:00:00-03:00", "timeKnown": false, "durationMin": 60 },
         { "id": "tc2000-2026-8-clasificacion", "kind": "clasificacion", "name": "Clasificación", "start": "2026-09-26T12:00:00-03:00", "timeKnown": false, "durationMin": 30 },
         { "id": "tc2000-2026-8-final", "kind": "final", "name": "Final", "start": "2026-09-27T12:00:00-03:00", "timeKnown": false, "durationMin": 50 }
       ],
-      "source": "Carga manual · 0264Noticias y Passline (sede y días); horarios a confirmar"
+      "source": "Carga manual · fecha confirmada por Fierros (sábado 26: entrenamientos y clasificación; domingo 27: final), coincide con 0264Noticias y Passline; horarios a confirmar"
     },
     {
       "id": "ligier-jfc-2026-1",

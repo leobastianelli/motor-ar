@@ -42,6 +42,8 @@ const OFFICIAL_SOURCE = /ACTC \(calendario\)|APAT|Jolpica|GT World Challenge Eur
  */
 export function dateStatus(event) {
   if (event.dateConflict) return { status: "conflict", reason: event.dateConflict };
+  // Una carga manual puede declarar que la fecha está confirmada (`dateConfirmed`): sólo faltan los horarios.
+  if (event.dateConfirmed) return { status: "confirmed", reason: "confirmada a mano" };
   if (!event.circuit?.city || /confirmar/i.test(`${event.name} ${event.circuit?.city} ${event.circuit?.name}`)) return { status: "tentative", reason: "sin sede confirmada" };
   if (event.sessions.some((s) => s.timeKnown !== false && (s.timeSources?.length || s.timeStatus === "confirmed"))) return { status: "confirmed", reason: "horario oficial publicado" };
   if (OFFICIAL_SOURCE.test(event.source ?? "")) return { status: "confirmed", reason: "fuente oficial" };
@@ -131,17 +133,16 @@ export function resultsOverdue(events, now, { autoSeries, after = 36, tierOf = (
  */
 export function sourceFailures(failures = []) {
   return failures.map((text) => {
-    const label = String(text).split(":")[0].trim().slice(0, 60);
-    const lostData = /Se conservaron/i.test(text);
-    return {
-      key: `fuente:${label}`,
-      severity: lostData ? "high" : "medium",
-      level: 1,
-      tier: 3,
-      consecutive: lostData ? 1 : 2,
-      title: `Falla de una fuente: ${label}`,
-      body: String(text).slice(0, 500),
-    };
+    const t = String(text);
+    // La protección del armado deja avisos que no son fallas de una fuente.
+    if (/^Se descartaron/i.test(t)) {
+      return { key: "correccion:automatica", severity: "info", level: 1, tier: 3, title: "Datos corregidos automáticamente", body: `${t.slice(0, 400)}. No hace falta hacer nada; se avisa por si se repite.` };
+    }
+    if (/^Se conservaron/i.test(t)) {
+      return { key: "fuente:perdio-datos", severity: "high", level: 1, tier: 3, title: "Una fuente dejó de traer datos (se conservaron los anteriores)", body: t.slice(0, 500) };
+    }
+    const label = t.split(":")[0].trim().slice(0, 60);
+    return { key: `fuente:${label}`, severity: "medium", level: 1, tier: 3, consecutive: 2, title: `Falla de una fuente: ${label}`, body: t.slice(0, 500) };
   });
 }
 

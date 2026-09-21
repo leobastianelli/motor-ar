@@ -24,6 +24,13 @@ test("una fecha oficial con sede está confirmada; una manual o sin sede, tentat
   assert.equal(dateStatus(sunday({ source: "Carga manual · 0264Noticias" })).status, "tentative");
   assert.equal(dateStatus(sunday({ source: "Carga manual · calendario oficial de ligierjuniorformulachampionship.com" })).status, "confirmed");
   assert.equal(dateStatus(sunday({ dateConflict: "APAT dice 20/09 y Speedhive 21/09" })).status, "conflict");
+  // Una carga manual puede declarar la fecha confirmada (sólo faltan los horarios).
+  assert.equal(dateStatus(sunday({ source: "Carga manual · Fierros", dateConfirmed: true })).status, "confirmed");
+});
+
+test("una fecha manual confirmada sin horarios sí dispara el aviso de horarios pendientes", () => {
+  const tc2000 = sunday({ id: "tc2000-2026-8", seriesId: "tc2000", source: "Carga manual · Fierros", dateConfirmed: true });
+  assert.equal(pendingHours([tc2000], at("24", "12"))[0].key, "horarios:tc2000-2026-8");
 });
 
 test("los horarios pendientes empiezan a avisar 72 h antes y suben de nivel a las 48 h, a las 24 h y el mismo día", () => {
@@ -71,11 +78,19 @@ test("resultados: se avisa cuando pasaron 36 h y la fuente automática no public
   assert.equal(resultsOverdue([corrida], at("16", "10"), { autoSeries: new Set() }).length, 0);
 });
 
-test("las fallas de fuente avisan desde la segunda vez, salvo si hubo pérdida de datos", () => {
-  const [suelta, perdida] = sourceFailures(["Speedhive TN: 500 al pedir la lista", "Se conservaron fechas que las fuentes dejaron de traer: tn 12"]);
+test("las fallas de fuente avisan desde la segunda vez; si hubo pérdida de datos, en el acto; las correcciones automáticas son sólo información", () => {
+  const [suelta, perdida, corregido] = sourceFailures([
+    "Speedhive TN: 500 al pedir la lista",
+    "Se conservaron fechas que las fuentes dejaron de traer: tn 12",
+    "Se descartaron resultados de 1 sesiones que todavía no se corrieron (eran de otra fecha)",
+  ]);
   assert.equal(suelta.consecutive, 2);
-  assert.equal(perdida.consecutive, 1);
+  assert.equal(suelta.key, "fuente:Speedhive TN");
+  assert.equal(perdida.consecutive, undefined);
   assert.equal(perdida.severity, "high");
+  assert.match(perdida.title, /dejó de traer datos/);
+  assert.equal(corregido.severity, "info");
+  assert.match(corregido.title, /corregidos automáticamente/);
 });
 
 test("campeonato atrasado: la tabla llega a la fecha 11 y ya se corrieron 12", () => {
