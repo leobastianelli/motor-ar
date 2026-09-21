@@ -195,7 +195,7 @@ export default async function Home() {
     ),
 
     nuestros: runners.length > 0 && (
-      <section key="nuestros" className="section-block nuestros" aria-labelledby="nuestros-title">
+      <section key="nuestros" id="nuestros" className="section-block nuestros" aria-labelledby="nuestros-title">
         <SectionTitle id="nuestros-title" title="Los nuestros">
           <Link href="/pilotos">Ver todos</Link>
         </SectionTitle>
@@ -223,7 +223,7 @@ export default async function Home() {
     agenda: <Agenda key="agenda" items={items} days={days} today={todayKey} now={now} simulated={simulated} />,
 
     resultados: (
-      <section key="resultados" className="results-band">
+      <section key="resultados" id="resultados" className="results-band">
         <div className="section-block">
           {/* Con resultados primero, la cabecera ya dice "Resultados del finde": no se repite el título. */}
           {mode !== "results" && (
@@ -300,7 +300,7 @@ export default async function Home() {
     ),
 
     viene: (
-      <section key="viene" className="section-block next-weeks">
+      <section key="viene" id="viene" className="section-block next-weeks">
         <SectionTitle title="Lo que viene">
           <Link href="/calendario">Ver calendario</Link>
         </SectionTitle>
@@ -325,7 +325,7 @@ export default async function Home() {
 
 
   const notas: ReactNode = latestNotes.length > 0 && (
-    <section key="notas" className="section-block">
+    <section key="notas" id="notas" className="section-block">
       <SectionTitle title="Lo que se dice">
         <Link href="/notas">Ver todas</Link>
       </SectionTitle>

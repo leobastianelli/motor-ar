@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { InstallPrompt } from "@/components/install-prompt";
 import { JsonLd } from "@/components/json-ld";
 import { Masthead } from "@/components/masthead";
+import { getMenu } from "@/lib/menu";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -28,7 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="es-AR" className={archivo.variable}>
       <body>
-        <Masthead />
+        <Masthead menu={getMenu()} />
         <main>{children}</main>
         <Footer />
         <JsonLd

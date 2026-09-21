@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState, type CSSProperties } from "react";
+import { useSyncExternalStore, type CSSProperties } from "react";
 import type { Scope } from "@/lib/types";
 import { CategoryLabel, SectionTitle } from "./pista";
 
@@ -21,9 +21,26 @@ const FILTERS: { id: Scope | "all"; label: string }[] = [
   { id: "zonal", label: "Zonales" },
 ];
 
-/** Calendario por mes con filtro en el navegador: la página se genera de antemano y abre al instante. */
+function subscribeHash(onChange: () => void) {
+  window.addEventListener("hashchange", onChange);
+  return () => window.removeEventListener("hashchange", onChange);
+}
+
+/**
+ * Calendario por mes con filtro en el navegador: la página se genera de antemano y abre al instante.
+ * El filtro vive en el #hash de la dirección (/calendario#nacional), así se puede enlazar desde el menú y compartir.
+ */
 export function CalendarView({ cards }: { cards: CalendarCard[] }) {
-  const [filter, setFilter] = useState<Scope | "all">("all");
+  const hash = useSyncExternalStore(
+    subscribeHash,
+    () => window.location.hash.slice(1),
+    () => "",
+  );
+  const filter: Scope | "all" = FILTERS.some((f) => f.id === hash) ? (hash as Scope) : "all";
+  const setFilter = (id: Scope | "all") => {
+    window.history.replaceState(null, "", id === "all" ? window.location.pathname : `#${id}`);
+    window.dispatchEvent(new HashChangeEvent("hashchange"));
+  };
   const visible = cards.filter((c) => filter === "all" || c.scope === filter);
   const months = [...new Set(visible.map((c) => c.month))];
 

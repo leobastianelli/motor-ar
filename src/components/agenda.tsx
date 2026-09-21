@@ -35,7 +35,7 @@ export function Agenda({ items, days, today, now: serverNow, simulated }: { item
   const rows = matching.filter((i) => dayKey(i.session.start) === day);
 
   return (
-    <section className="section-block agenda" aria-labelledby="agenda-title">
+    <section id="agenda" className="section-block agenda" aria-labelledby="agenda-title">
       <SectionTitle id="agenda-title" title="Agenda">
         <div className="filters" role="group" aria-label="Filtrar agenda">
           {FILTERS.map((f) => (

@@ -19,6 +19,9 @@ const SERIES_SLUGS: Record<string, string> = {
   "ligier-jfc": "ligier-jfc",
 };
 
+/** Categorías que tienen página de horarios. */
+export const horarioSeriesIds = () => Object.keys(SERIES_SLUGS);
+
 export const horarioSeriesSlug = (seriesId: string) => SERIES_SLUGS[seriesId] ?? seriesId;
 
 export type HorarioTarget = { kind: "series"; seriesId: string } | { kind: "driver"; driverSlug: string; seriesId: string };
