@@ -79,11 +79,13 @@
       "circuit": { "name": "Autódromo El Zonda Eduardo Copello", "city": "San Juan", "country": "Argentina", "flag": "AR", "province": "San Juan" },
       "dateConfirmed": true,
       "sessions": [
-        { "id": "tc2000-2026-8-entrenamientos", "kind": "practica", "name": "Entrenamientos", "start": "2026-09-26T12:00:00-03:00", "timeKnown": false, "durationMin": 60 },
-        { "id": "tc2000-2026-8-clasificacion", "kind": "clasificacion", "name": "Clasificación", "start": "2026-09-26T12:00:00-03:00", "timeKnown": false, "durationMin": 30 },
-        { "id": "tc2000-2026-8-final", "kind": "final", "name": "Final", "start": "2026-09-27T12:00:00-03:00", "timeKnown": false, "durationMin": 50 }
+        { "id": "tc2000-2026-8-shakedown", "kind": "practica", "name": "Shakedown", "start": "2026-09-26T09:50:00-03:00", "timeKnown": true, "durationMin": 10, "timeSources": [{ "name": "Carburando", "url": "https://www.carburando.com/", "start": "2026-09-26T09:50:00-03:00" }] },
+        { "id": "tc2000-2026-8-practica-1", "kind": "practica", "name": "Práctica oficial 1", "start": "2026-09-26T12:00:00-03:00", "timeKnown": true, "durationMin": 20, "timeSources": [{ "name": "Carburando", "url": "https://www.carburando.com/", "start": "2026-09-26T12:00:00-03:00" }] },
+        { "id": "tc2000-2026-8-practica-2", "kind": "practica", "name": "Práctica oficial 2", "start": "2026-09-26T14:50:00-03:00", "timeKnown": true, "durationMin": 20, "timeSources": [{ "name": "Carburando", "url": "https://www.carburando.com/", "start": "2026-09-26T14:50:00-03:00" }] },
+        { "id": "tc2000-2026-8-clasificacion", "kind": "clasificacion", "name": "Clasificación", "start": "2026-09-26T17:17:00-03:00", "timeKnown": true, "durationMin": 33, "timeSources": [{ "name": "Carburando", "url": "https://www.carburando.com/", "start": "2026-09-26T17:17:00-03:00" }] },
+        { "id": "tc2000-2026-8-final", "kind": "final", "name": "Final", "start": "2026-09-27T13:00:00-03:00", "timeKnown": true, "durationMin": 40, "timeSources": [{ "name": "Carburando", "url": "https://www.carburando.com/", "start": "2026-09-27T13:00:00-03:00" }] }
       ],
-      "source": "Carga manual · fecha confirmada por Fierros (sábado 26: entrenamientos y clasificación; domingo 27: final), coincide con 0264Noticias y Passline; horarios a confirmar"
+      "source": "Carga manual · horarios confirmados por Carburando (sábado 26: shakedown 09.50, práctica 1 12.00, práctica 2 14.50, clasificación 17.17; domingo 27: final 13.00), Autódromo Eduardo Copello, San Juan"
     },
     {
       "id": "ligier-jfc-2026-1",
