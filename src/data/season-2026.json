@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T21:33:41.727Z",
+  "generatedAt": "2026-09-22T13:47:38.540Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -106229,22 +106229,22 @@
     },
     "timing": {
       "documents": 720,
-      "pagesFetched": 275,
+      "pagesFetched": 11,
       "eventsWithResults": 52
     },
     "openf1": {
       "sessions": 131,
-      "requests": 72,
-      "sessionsWithResults": 36
+      "requests": 12,
+      "sessionsWithResults": 37
     },
     "fiaF2": {
-      "requests": 33,
+      "requests": 6,
       "eventsWithResults": 10
     },
     "gtwcOfficial": {
       "meetings": 10,
-      "sessions": 52,
-      "withResults": 41,
+      "sessions": 15,
+      "withResults": 6,
       "errors": []
     },
     "gtwcYoutube": {
@@ -106252,12 +106252,10 @@
     },
     "speedhiveTn": {
       "filledResults": 0,
-      "realTimes": 45,
+      "realTimes": 0,
       "addedSessions": 0,
       "errors": []
     }
   },
-  "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40"
-  ]
+  "failures": []
 }
