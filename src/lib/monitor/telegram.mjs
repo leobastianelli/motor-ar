@@ -49,22 +49,29 @@ export function chunk(text, size = 3800) {
 
 /**
  * Manda el texto a Telegram. Sin token o sin chat (todavía no se creó el bot) no falla: lo muestra en el log como simulado.
+ * `replyMarkup` (opcional) es un teclado en línea de Telegram, p. ej. { inline_keyboard: [[{ text, url }]] }: va en la última parte del mensaje.
  * Nunca escribe el token en ningún mensaje de error.
  */
-export async function sendTelegram(text, { token, chatId, fetchImpl = fetch } = {}) {
+export async function sendTelegram(text, { token, chatId, fetchImpl = fetch, replyMarkup } = {}) {
   if (!text) return { sent: 0 };
   if (!token || !chatId) {
     console.log(`\n[telegram simulado: falta TELEGRAM_BOT_TOKEN o TELEGRAM_CHAT_ID]\n${text}\n`);
     return { sent: 0, simulated: true };
   }
   let sent = 0;
-  for (const part of chunk(text)) {
+  const parts = chunk(text);
+  for (const [i, part] of parts.entries()) {
     let res;
     try {
       res = await fetchImpl(`https://api.telegram.org/bot${token}/sendMessage`, {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ chat_id: chatId, text: part, disable_web_page_preview: true }),
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: part,
+          disable_web_page_preview: true,
+          ...(replyMarkup && i === parts.length - 1 ? { reply_markup: replyMarkup } : {}),
+        }),
       });
     } catch {
       throw new Error("no se pudo conectar con Telegram");

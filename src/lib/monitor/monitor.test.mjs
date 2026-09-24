@@ -232,6 +232,10 @@ test("sin token no falla (queda simulado) y con token manda; el token nunca apar
   const ok = await sendTelegram("hola", { token: "SECRETO", chatId: "42", fetchImpl: async (url, init) => (llamadas.push([url, JSON.parse(init.body)]), { ok: true }) });
   assert.equal(ok.sent, 1);
   assert.equal(llamadas[0][1].chat_id, "42");
+  assert.equal("reply_markup" in llamadas[0][1], false, "los avisos del guardián siguen sin teclado");
+  const teclado = { inline_keyboard: [[{ text: "Publicar en X", url: "https://x.com/intent/post?text=hola" }]] };
+  await sendTelegram("hola", { token: "SECRETO", chatId: "42", replyMarkup: teclado, fetchImpl: async (url, init) => (llamadas.push([url, JSON.parse(init.body)]), { ok: true }) });
+  assert.deepEqual(llamadas[1][1].reply_markup, teclado);
   await assert.rejects(sendTelegram("hola", { token: "SECRETO", chatId: "42", fetchImpl: async () => ({ ok: false, status: 401 }) }), (e) => !/SECRETO/.test(e.message) && /401/.test(e.message));
   await assert.rejects(sendTelegram("hola", { token: "SECRETO", chatId: "42", fetchImpl: async () => { throw new Error("fetch failed https://api.telegram.org/botSECRETO/sendMessage"); } }), (e) => !/SECRETO/.test(e.message));
 });
