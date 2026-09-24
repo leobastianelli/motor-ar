@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Archivo } from "next/font/google";
+import { after } from "next/server";
 import { CookieBanner } from "@/components/cookie-banner";
 import { Footer } from "@/components/footer";
 import { InstallPrompt } from "@/components/install-prompt";
 import { JsonLd } from "@/components/json-ld";
 import { Masthead } from "@/components/masthead";
+import { hotPending, runHotRefresh } from "@/lib/hot-refresh";
 import { getMenu } from "@/lib/menu";
 import { getAllNotes } from "@/lib/notas";
+import { loadRawSeason } from "@/lib/season-data";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -27,6 +30,11 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: LayoutProps<"/">) {
+  // Si hay sesiones de F1 sin resultados (o sin video), se completan en este mismo proceso después de responder. El candado de la base evita
+  // que varias instancias lo hagan a la vez. En `next build` no: `after()` correría en la compilación.
+  if (process.env.NEXT_PHASE !== "phase-production-build" && hotPending((await loadRawSeason()).events)) {
+    after(() => runHotRefresh());
+  }
   return (
     <html lang="es-AR" className={archivo.variable}>
       <body>

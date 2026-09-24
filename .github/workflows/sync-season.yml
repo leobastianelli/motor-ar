@@ -47,6 +47,13 @@ jobs:
       - name: Instalar el driver de Neon
         if: github.event.schedule == '20 6-23 * * 0,4,5,6'
         run: npm install --no-save --no-package-lock --ignore-scripts @neondatabase/serverless
+      # Respaldo del refresco caliente por si nadie visita el sitio (el propio sitio lo dispara al renderizar, ver src/app/layout.tsx). Sólo en el
+      # reintento horario, que ya corre; el endpoint decide solo si hay algo que traer. Si falla, no frena la compuerta.
+      - name: Refresco caliente
+        if: github.event.schedule == '20 6-23 * * 0,4,5,6'
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: curl -sS --max-time 90 -H "Authorization: Bearer $CRON_SECRET" https://www.somosfierros.ar/api/caliente || echo "El refresco caliente no respondió."
       - id: decide
         env:
           SCHEDULE: ${{ github.event.schedule }}
