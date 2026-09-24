@@ -6,6 +6,7 @@ import { breadcrumb, JsonLd, sportsEventJsonLd } from "@/components/json-ld";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { getDriver, getNow, getSeason, getSeries, type Season } from "@/lib/data";
 import { dayKey, fmtDayShort, fmtRange, fmtTime, fmtWeekday, fmtDayNum, raceWinner, sessionState, sessionStatus, sessionTime } from "@/lib/format";
+import { driverKey } from "@/lib/sources/driver-index.mjs";
 import { allHorarioSlugs, horarioSeriesSlug, resolveHorario } from "@/lib/horarios";
 import { OG_DEFAULTS } from "@/lib/site";
 import type { RaceEvent } from "@/lib/types";
@@ -60,6 +61,9 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
   const driverRow = driver && lastRace?.results?.find((r) => r.driverSlug === driver.slug);
   const lastWinner = lastRace && raceWinner(lastRace.results);
   const title = driver ? `A qué hora corre ${driver.name}` : `Horario de ${series.name}`;
+  // Las sesiones ya corridas dicen cómo le fue al piloto, no sólo "Terminó".
+  const mine = driver ? new Set([driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n))) : null;
+  const myRow = (s: RaceEvent["sessions"][number]) => (mine ? s.results?.find((r) => r.driver.split(" / ").some((part) => mine.has(driverKey(part)))) : undefined);
   const byDay = next ? Map.groupBy(next.sessions, (s) => dayKey(s.start)) : new Map();
 
   const answer = next && nextSession
@@ -106,10 +110,17 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
                   <ul>
                     {sessions.map((s: RaceEvent["sessions"][number]) => {
                       const state = sessionState(s, now);
+                      const row = state.kind === "finished" ? myRow(s) : undefined;
                       return (
                         <li key={s.id}>
                           <time dateTime={s.start}>{sessionTime(s)}</time>
                           <strong>{s.name}</strong>
+                          {row && (
+                            <b className="horario-pos">
+                              {row.positionText && !/^d+$/.test(row.positionText) ? row.positionText : `${row.pos}.º`}
+                              {row.gap ? <small> {row.gap}</small> : null}
+                            </b>
+                          )}
                           <StateTag kind={state.kind}>{state.label}</StateTag>
                         </li>
                       );

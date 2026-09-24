@@ -621,3 +621,27 @@ button{color:inherit;font-family:inherit}
   .calendar-tape{margin-top:32px}
   .calendar-tape summary h2{font-size:24px}
 }
+
+/* Ficha del piloto: su posición en cada sesión (src/components/momento.tsx, variante `piloto`) y la próxima sesión en la portada. */
+.momento-pos{font-size:22px;font-weight:850;font-variant-numeric:tabular-nums;color:var(--ink)}
+.momento-ganador{display:block;font-size:13px;font-weight:400}
+.momento-piloto .momento-proxima{margin-top:16px}
+.next-race.is-live{background:var(--red);color:#fff}
+.horario-pos{font-size:18px;font-variant-numeric:tabular-nums}
+.horario-pos small{font-size:12px;font-weight:400;color:var(--muted)}
+.horario-day li:has(.horario-pos){grid-template-columns:80px 1fr auto auto}
+@media(max-width:800px){
+  /* La portada del piloto pasa a fluir en columna y se compacta: "Este fin de semana" tiene que verse sin hacer scroll. */
+  .driver-hero{min-height:0;height:auto;display:flex;flex-direction:column;align-items:stretch}
+  .driver-photo{position:relative;inset:auto;height:120px;flex:none}
+  .driver-photo:after{background:linear-gradient(180deg,transparent 50%,var(--ink))}
+  .driver-hero.no-photo .driver-photo{display:none}
+  .driver-title{position:relative;left:auto;right:auto;bottom:auto;padding:0 16px;margin-top:-8px}
+  .driver-title h1{font-size:44px;line-height:.86}
+  .mega-number{font-size:96px;right:-6px;top:-30px;letter-spacing:-10px}
+  .next-race{position:relative;left:auto;right:auto;bottom:auto;margin:14px 16px 16px;padding:10px 14px;border-top-width:5px}
+  .next-race>strong{font-size:19px;margin-top:2px}
+  .next-race time{font-size:16px;margin:0 0 6px}
+  .next-race a{padding-top:6px}
+  .horario-day li:has(.horario-pos){grid-template-columns:64px 1fr auto auto}
+}

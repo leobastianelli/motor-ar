@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
+import { AutoRefresh } from "@/components/live-clock";
+import { Momento, ProximaSesion } from "@/components/momento";
 import { CategoryLabel, PhotoCredit, SectionTitle } from "@/components/pista";
 import { colapintoData, finishLabel, quotes, raceCode, raceName, recentMilestones, statusLabel, type ColapintoData } from "@/lib/colapinto";
-import { getAllDrivers, getDriver, getIndexedDriver, getIndexedDrivers, getNow, getSeason, getSeries, type Season } from "@/lib/data";
-import { fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/format";
+import { getAllDrivers, getDriver, getIndexedDriver, getIndexedDrivers, getNow, getSeason, getSeries, isSimulatedNow, type Season } from "@/lib/data";
+import { fmtDayNum, fmtDayShort, fmtMonthShort } from "@/lib/format";
 import { NotesBlock } from "@/components/notas";
 import { notesForDriver } from "@/lib/notas";
 import { getPhoto } from "@/lib/photos";
@@ -62,6 +64,30 @@ function indexedSummary(entry: IndexedDriver, season: Season) {
     .join(" ");
 }
 
+/**
+ * "Este fin de semana en <ciudad>": cada sesión con la posición del piloto. Los resultados vienen del servidor; el navegador sólo
+ * recalcula estados y horas. Un piloto sin ficha sólo lo muestra si figura en los resultados de la fecha (si no, no sabemos que corre).
+ */
+function MomentoPiloto({ seriesIds, keys, season, now, confirmado }: { seriesIds: string[]; keys: string[]; season: Season; now: string; confirmado: boolean }) {
+  const data = season.getMomentoPiloto(seriesIds, keys, now);
+  if (!confirmado && !data.participa) return null;
+  if (data.modo === "resultados" && !data.participa) return null;
+  const event = data.fecha ? season.getEvent(data.fecha.id) : undefined;
+  return (
+    <>
+      <Momento
+        data={data}
+        now={now}
+        simulated={isSimulatedNow()}
+        piloto
+        broadcasts={(event?.broadcasts ?? []).map((b) => ({ name: b.name }))}
+        tiemposUrl={event?.broadcasts.find((b) => b.kind === "timing")?.url}
+      />
+      {(data.modo === "en-pista" || data.modo === "finde") && <AutoRefresh everyMs={60_000} />}
+    </>
+  );
+}
+
 /** Ficha armada sólo con resultados: categoría, estadísticas de la temporada y cada sesión. Sin datos biográficos. */
 async function IndexedDriverPage({ slug }: { slug: string }) {
   const entry = getIndexedDriver(slug);
@@ -104,6 +130,7 @@ async function IndexedDriverPage({ slug }: { slug: string }) {
         }}
       />
 
+      <MomentoPiloto seriesIds={entry.series} keys={entry.keys ?? [entry.key]} season={season} now={getNow()} confirmado={false} />
       <SeasonBlocks keys={entry.keys ?? [entry.key]} season={season} />
       <NotesBlock notas={await notesForDriver(entry.slug)} title={`Notas sobre ${entry.name}`} />
     </>
@@ -197,19 +224,10 @@ function NextRace({ driver, now, season }: { driver: Driver; now: string; season
   // Sin equipo confirmado (driver.team vacío, p. ej. entre butacas) no hay manera de saber si va a estar en la
   // próxima fecha del calendario de la categoría: mejor no decir nada que dar por hecho que corre.
   if (!driver.team) return null;
-  const next = season.getNextRace(driver.seriesId, now);
-  if (!next) return null;
-  return (
-    <div className="next-race">
-      <span>Próxima carrera</span>
-      <strong>{next.event.name}</strong>
-      <time dateTime={next.session.start}>
-        {fmtDayShort(next.session.start)} · {next.session.timeKnown === false ? "horario a confirmar" : fmtTime(next.session.start)}
-      </time>
-      <Link href={`/eventos/${next.event.id}`}>Ver evento</Link>
-    </div>
-  );
+  return <ProximaSesion data={season.getMomentoPiloto([driver.seriesId], driverKeys(driver), now)} now={now} simulated={isSimulatedNow()} />;
 }
+
+const driverKeys = (d: Driver) => [d.name, ...(d.aliases ?? [])].map((n) => driverKey(n));
 
 function ChampionshipChart({ points }: { points: { round: number; position: number }[] }) {
   const [x0, x1, y0, y1] = [60, 630, 35, 215];
@@ -451,6 +469,8 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
         </div>
         <NextRace driver={driver} now={now} season={season} />
       </section>
+
+      {driver.team && <MomentoPiloto seriesIds={[driver.seriesId]} keys={driverKeys(driver)} season={season} now={now} confirmado />}
 
       <section className="season-ribbon">
         {ribbon.map((item) => (
