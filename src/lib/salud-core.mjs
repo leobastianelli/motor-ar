@@ -79,15 +79,54 @@ export function pendingSessions(events, now, { after = 15, before = 48 } = {}) {
 }
 
 /**
- * Cuerpo de /api/salud. `stored` es la última fila del almacén leída sin caché ({ id, origin, createdAt }) o null si no se pudo.
- * @param {{ source: any, stored: any, storeError?: string, failures?: string[], events?: any[], now: string }} args
+ * Sesiones de categorías con fuente automática que terminaron en los últimos `days` días y tienen resultados, con su ganador (posición 1,
+ * igual que la página del evento). La prueba de humo verifica que la página de cada evento nombre a ese ganador.
+ * [{ evento, categoria, sesion, ganador, terminoHaceMin }]
  */
-export function healthReport({ source, stored, storeError, failures = [], events = [], now }) {
+export function recentWinners(events, now, { days = 3 } = {}) {
+  const nowMs = Date.parse(now);
+  const out = [];
+  for (const e of events) {
+    if (!AUTOMATIC_SERIES.has(e.seriesId)) continue;
+    for (const s of e.sessions) {
+      const winner = s.results?.find((r) => r.pos === 1)?.driver;
+      if (!winner) continue;
+      const min = Math.round((nowMs - (Date.parse(s.start) + (s.durationMin ?? 60) * MIN)) / MIN);
+      if (min >= 0 && min <= days * 24 * 60) out.push({ evento: e.id, categoria: e.seriesId, sesion: s.name, ganador: winner, terminoHaceMin: min });
+    }
+  }
+  return out.sort((a, b) => a.terminoHaceMin - b.terminoHaceMin);
+}
+
+/** Id de la fecha con la sesión con resultados más reciente (de cualquier categoría), o null si ninguna tiene resultados. */
+export function latestEventWithResults(events) {
+  let best = null;
+  for (const e of events) {
+    for (const s of e.sessions) {
+      const at = Date.parse(s.start);
+      if (s.results?.length && (!best || at > best.at)) best = { id: e.id, at };
+    }
+  }
+  return best?.id ?? null;
+}
+
+/** Cuántas notas muestra el menú (ver getMenu en menu.ts): una crónica más abajo no está en el menú y no se le exige. */
+export const MENU_NOTES = 4;
+
+/**
+ * Cuerpo de /api/salud. `stored` es la última fila del almacén leída sin caché ({ id, origin, createdAt }) o null si no se pudo.
+ * `notes` son todas las notas en el orden del menú y de /notas ([{ slug, title, auto }]).
+ * @param {{ source: any, stored: any, storeError?: string, failures?: string[], events?: any[], notes?: { slug: string, title: string, auto?: unknown }[], now: string }} args
+ */
+export function healthReport({ source, stored, storeError, failures = [], events = [], notes = [], now }) {
   return {
     sirviendo: { versionId: source.versionId, origin: source.origin, generatedAt: source.generatedAt, createdAt: source.createdAt, servedFrom: source.servedFrom },
     almacen: stored ? { ultimaVersion: stored.id, createdAt: stored.createdAt, origin: stored.origin } : { ultimaVersion: null, createdAt: null, origin: null, error: storeError ?? "sin datos" },
     edadMin: ageMin(source, now),
     fallas: failures,
     pendientes: pendingSessions(events, now),
+    ganadoresRecientes: recentWinners(events, now),
+    eventoReciente: latestEventWithResults(events),
+    cronicas: notes.flatMap((n, i) => (n.auto ? [{ slug: n.slug, title: n.title, enMenu: i < MENU_NOTES }] : [])),
   };
 }

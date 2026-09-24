@@ -53,14 +53,18 @@ function driverOf(cell) {
 
 const lapsBehind = /^\+(\d+) Laps?$/i;
 
-/** Tabla de resultados oficial → filas con la misma forma que las demás fuentes de F1. Devuelve [] si la sesión todavía no tiene tabla. */
+/**
+ * Tabla de resultados oficial → filas con la misma forma que las demás fuentes de F1. Devuelve [] si la sesión todavía no publicó la tabla
+ * (sin <table>, o con las columnas esperadas y sin filas). Si hay una tabla que no se puede leer (otras columnas u otras clases en las filas)
+ * lanza un error: un cambio de HTML no puede pasar por "todavía no hay resultados".
+ */
 export function parseResults(html, mode) {
   const table = String(html).match(/<table[\s\S]*?<\/table>/)?.[0];
   if (!table) return [];
   const heads = [...table.matchAll(/<th[^>]*>([\s\S]*?)<\/th>/g)].map((m) => norm(clean(m[1])));
   const col = (re) => heads.findIndex((h) => re.test(h));
   const at = { pos: col(/^pos/), no: col(/^no/), driver: col(/^driver/), team: col(/^team/), time: col(/time|gap|retired/), pts: col(/^pts|points/), q1: col(/^q1/), q2: col(/^q2/), q3: col(/^q3/) };
-  if (at.pos < 0 || at.driver < 0) return [];
+  if (at.pos < 0 || at.driver < 0) throw new Error(`la tabla oficial no tiene las columnas esperadas (encabezados: ${heads.join(", ") || "ninguno"})`);
 
   const rows = [];
   for (const tr of table.matchAll(/<tr[^>]*body-row[^>]*>([\s\S]*?)<\/tr>/g)) {
@@ -97,6 +101,7 @@ export function parseResults(html, mode) {
     for (const k of Object.keys(row)) if (row[k] === undefined) delete row[k];
     rows.push(row);
   }
+  if (!rows.length && /<tr[^>]*>\s*<td/.test(table)) throw new Error("la tabla oficial tiene filas pero ninguna coincide con el formato esperado");
   return rows;
 }
 
