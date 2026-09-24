@@ -12,6 +12,8 @@ import { keepPreviousSpeedhive, speedhiveTn } from "./speedhive-tn.mjs";
 import { actcTiming, keepPreviousTiming, TIMING_SERIES } from "./actc-timing.mjs";
 import { fiaF2, keepPreviousFia } from "./fia-f2.mjs";
 import { keepPreviousOpenf1, openf1Sessions } from "./openf1.mjs";
+import { f1OfficialSessions, keepPreviousF1Official } from "./f1-official.mjs";
+import { f1Videos, keepPreviousF1Videos } from "./f1-youtube.mjs";
 import { applySchedules, buildConsensus, solotcNotes } from "./schedule-notes.mjs";
 import { protectSeason, protectStandings } from "./guard.mjs";
 import { tc2000Season } from "./tc2000.mjs";
@@ -147,6 +149,31 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
     failures.push(`OpenF1: ${error.message} (se conservan los resultados anteriores)`);
     events = keepPreviousOpenf1(events, previous);
     meta.openf1 = previous.meta?.openf1 ?? null;
+  }
+
+  // Fórmula 1: lo que siga sin resultados (prácticas mientras OpenF1 está bloqueado por una sesión en vivo, clasificación, sprint y carrera
+  // antes de que Jolpica los publique) sale de la página oficial de resultados.
+  const f1Names = [...(standings.f1 ?? []).map((r) => r.driver), ...events.filter((e) => e.seriesId === "f1").flatMap((e) => e.sessions.flatMap((s) => s.results?.map((r) => r.driver) ?? []))];
+  try {
+    const official = await f1OfficialSessions(io, events, previous, { windowDays: io.timingWindowDays ?? 10, delayMs: io.f1OfficialDelayMs ?? 500, knownNames: f1Names });
+    events = official.events;
+    meta.f1Official = official.meta.f1Official;
+    if (official.meta.f1Official.errors.length) failures.push(`F1 oficial: ${official.meta.f1Official.errors.join("; ")}`);
+  } catch (error) {
+    failures.push(`F1 oficial: ${error.message} (se conservan los resultados anteriores)`);
+    events = keepPreviousF1Official(events, previous);
+    meta.f1Official = previous.meta?.f1Official ?? null;
+  }
+
+  // Fórmula 1: resúmenes de cada sesión del canal oficial de YouTube.
+  try {
+    const yt = await f1Videos(io, events, previous, { apiKey: io.youtubeKey ?? process.env.YOUTUBE_API_KEY, windowDays: io.timingWindowDays ?? 21 });
+    events = yt.events;
+    meta.f1Youtube = yt.meta.f1Youtube;
+  } catch (error) {
+    failures.push(`YouTube F1: ${error.message} (se conservan los videos anteriores)`);
+    events = keepPreviousF1Videos(events, previous);
+    meta.f1Youtube = previous.meta?.f1Youtube ?? null;
   }
 
   // Fórmula 2: clasificaciones oficiales de la FIA para todas las sesiones.

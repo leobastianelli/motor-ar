@@ -125,6 +125,35 @@ export function resultsOverdue(events, now, { autoSeries, after = 36, tierOf = (
   return out;
 }
 
+/**
+ * Sesiones de una categoría con resultados por sesión (F1: prácticas, clasificación, sprint y carrera) que terminaron y siguen sin resultados.
+ * A diferencia de `resultsOverdue` (36 h, sólo la carrera), acá se insiste rápido: los resultados de una sesión tienen que estar a los minutos.
+ * Sube de nivel a la hora y a las 3 horas; después de `before` horas (2 días) se deja de avisar (queda para `resultsOverdue`).
+ */
+export function sessionResultsMissing(events, now, { seriesIds, after = 0.5, before = 48, tierOf = () => 3, name = (id) => id } = {}) {
+  const nowMs = Date.parse(now);
+  const out = [];
+  for (const e of events) {
+    if (!seriesIds.has(e.seriesId)) continue;
+    const late = e.sessions
+      .filter((s) => s.timeKnown !== false && !s.results?.length)
+      .map((s) => ({ s, hours: (nowMs - (Date.parse(s.start) + (s.durationMin ?? 60) * 60_000)) / HOUR }))
+      .filter(({ hours }) => hours >= after && hours < before);
+    if (!late.length) continue;
+    const worst = Math.max(...late.map((x) => x.hours));
+    const level = worst >= 3 ? 3 : worst >= 1 ? 2 : 1;
+    out.push({
+      key: `sesion-sin-resultados:${e.id}`,
+      severity: level >= 3 ? "high" : "medium",
+      level,
+      tier: tierOf(e.seriesId),
+      title: `Sesiones sin resultados: ${name(e.seriesId)} · ${e.circuit?.city ?? e.name}`,
+      body: `${late.map(({ s, hours }) => `${s.name} (terminó hace ${hours < 1 ? `${Math.round(hours * 60)} min` : `${Math.round(hours)} h`})`).join(", ")}. Se vuelven a pedir en cada sincronización.`,
+    });
+  }
+  return out;
+}
+
 // ——— Fuentes caídas ———
 
 /**

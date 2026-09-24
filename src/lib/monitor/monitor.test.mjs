@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { emptyState, evaluate, summaryDue } from "./alerts.mjs";
-import { compareStandings, dateIssues, tnDateConflicts, withConflicts, dateStatus, manualExpired, parseTc2000Home, pendingHours, resultsOverdue, sourceFailures, staleStandings, visibleEvents } from "./checks.mjs";
+import { compareStandings, dateIssues, tnDateConflicts, withConflicts, dateStatus, manualExpired, parseTc2000Home, pendingHours, resultsOverdue, sessionResultsMissing, sourceFailures, staleStandings, visibleEvents } from "./checks.mjs";
 import { chunk, renderAlerts, sendTelegram } from "./telegram.mjs";
 
 // Domingo 27/09/2026 (Balcarce, TC Pick Up): la carrera no tiene hora.
@@ -248,4 +248,28 @@ test("las fechas del TN se cruzan con Speedhive: coinciden dentro de un día o s
   assert.deepEqual(Object.keys(conflicts), ["tn-2026-10"]);
   assert.match(conflicts["tn-2026-10"], /Speedhive 2026-10-18/);
   assert.equal(dateStatus(withConflicts(events, conflicts)[1]).status, "conflict");
+});
+
+test("resultados por sesión: se insiste a la media hora, sube a la hora y a las 3 horas, y no avisa de lo que no terminó", () => {
+  const f1 = {
+    id: "f1-2026-15",
+    seriesId: "f1",
+    round: 15,
+    name: "GP de Azerbaiyán",
+    circuit: { city: "Bakú" },
+    sessions: [
+      { id: "p1", kind: "practica", name: "Práctica 1", start: "2026-09-24T08:30:00Z", timeKnown: true, durationMin: 60 },
+      { id: "p2", kind: "practica", name: "Práctica 2", start: "2026-09-24T12:00:00Z", timeKnown: true, durationMin: 60 },
+    ],
+  };
+  const opts = { seriesIds: new Set(["f1"]) };
+  const check = (iso) => sessionResultsMissing([f1], iso, opts);
+  assert.equal(check("2026-09-24T09:40:00Z").length, 0, "la práctica 1 terminó hace 10 minutos");
+  assert.equal(check("2026-09-24T10:05:00Z")[0].level, 1);
+  assert.equal(check("2026-09-24T10:45:00Z")[0].level, 2);
+  assert.equal(check("2026-09-24T13:00:00Z")[0].level, 3, "la práctica 1 terminó hace 3,5 horas");
+  assert.match(check("2026-09-24T13:00:00Z")[0].body, /Práctica 1.*Práctica 2|Práctica 1/);
+  assert.equal(sessionResultsMissing([f1], "2026-09-24T13:00:00Z", { seriesIds: new Set(["tn"]) }).length, 0);
+  const done = { ...f1, sessions: f1.sessions.map((s) => ({ ...s, results: [{ pos: 1, driver: "X", team: "", gap: "" }] })) };
+  assert.equal(sessionResultsMissing([done], "2026-09-24T13:00:00Z", opts).length, 0);
 });

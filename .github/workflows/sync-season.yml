@@ -17,6 +17,9 @@ on:
     - cron: "0 14,20 * * 4"
     # Todos los días a las 09:00 UTC (06:00 en Argentina): cierra el hueco lunes-jueves y trae el resumen diario del guardián.
     - cron: "0 9 * * *"
+    # Reintento por hora (de jueves a domingo, 06:20 a 23:20 UTC): sólo sincroniza si una sesión de F1 terminó hace poco y sigue sin resultados
+    # (ver la compuerta `gate`). Las demás corridas no pasan por la compuerta: sincronizan siempre.
+    - cron: "20 6-23 * * 0,4,5,6"
   workflow_dispatch:
     inputs:
       timing_days:
@@ -32,7 +35,28 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Compuerta: barata (no instala nada). En el reintento horario decide si vale la pena sincronizar; en cualquier otro disparo, sincroniza.
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      run: ${{ steps.decide.outputs.run }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: decide
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          if [ "$SCHEDULE" = "20 6-23 * * 0,4,5,6" ]; then
+            node scripts/pending-sessions.mjs | tee /tmp/gate.txt
+            echo "run=$(grep -q '^Hay resultados' /tmp/gate.txt && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          fi
+
   sync:
+    needs: gate
+    if: needs.gate.outputs.run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:

@@ -1,7 +1,8 @@
 import { drivers } from "@/data/drivers";
 import { notas, type Nota } from "@/data/notas";
 import { series } from "@/data/series";
-import { getIndexedDrivers } from "./data";
+import { getIndexedDrivers, getNow, getSeason, seriesTier } from "./data";
+import { autoNotes } from "./notas-auto";
 
 // Capa de acceso a las notas de medios (src/data/notas.ts) y enlazado con pilotos, categorías y fechas.
 
@@ -60,8 +61,29 @@ export function related(nota: Nota) {
   return { drivers: [...found.drivers], series: [...found.series], events: nota.events ?? [] };
 }
 
-export const getNotes = (): Nota[] => [...notas].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
-export const getNote = (slug: string) => notas.find((n) => n.slug === slug);
-export const notesForDriver = (slug: string) => getNotes().filter((n) => related(n).drivers.includes(slug));
-export const notesForSeries = (id: string) => getNotes().filter((n) => related(n).series.includes(id));
-export const notesForEvent = (id: string) => getNotes().filter((n) => n.events?.includes(id));
+const byDate = (a: Nota, b: Nota) => b.publishedAt.localeCompare(a.publishedAt);
+
+/** Notas de medios cargadas a mano (src/data/notas.ts). Síncrono: lo usan el menú y el mapa del sitio. */
+export const getNotes = (): Nota[] => [...notas].sort(byDate);
+
+/**
+ * Todas las notas: las de medios y las crónicas automáticas de las fechas de estos días (una por fecha, se arman con los resultados
+ * apenas entran). A igual día, las de medios primero; las crónicas ya vienen ordenadas por prioridad de categoría.
+ */
+export async function getAllNotes(): Promise<Nota[]> {
+  const season = await getSeason();
+  const seriesOf = new Map(series.map((s) => [s.id, s]));
+  const auto = autoNotes(season.getAllEvents(), {
+    now: getNow(),
+    argentines: new Set(drivers.map((d) => d.slug)),
+    tierOf: (id) => (seriesOf.get(id) ? seriesTier(seriesOf.get(id)!) : 3),
+    seriesName: (id) => seriesOf.get(id),
+  });
+  const rank = new Map(auto.map((n, i) => [n.slug, i]));
+  return [...notas, ...auto].sort((a, b) => byDate(a, b) || Number(!!a.auto) - Number(!!b.auto) || (rank.get(a.slug) ?? 0) - (rank.get(b.slug) ?? 0));
+}
+
+export const getNote = async (slug: string) => (await getAllNotes()).find((n) => n.slug === slug);
+export const notesForDriver = async (slug: string) => (await getAllNotes()).filter((n) => related(n).drivers.includes(slug));
+export const notesForSeries = async (id: string) => (await getAllNotes()).filter((n) => related(n).series.includes(id));
+export const notesForEvent = async (id: string) => (await getAllNotes()).filter((n) => n.events?.includes(id));

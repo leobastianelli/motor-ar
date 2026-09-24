@@ -17,6 +17,10 @@ export interface Nota {
   drivers?: string[];
   series?: string[];
   events?: string[];
+  /** Nota armada sola con los resultados de una fecha (src/lib/notas-auto.ts): no viene de un medio, `source` apunta a la fecha en Fierros. */
+  auto?: { sources: string[] };
+  /** Párrafos adicionales (en las automáticas, lo ocurrido en los días anteriores del fin de semana). */
+  details?: string[];
 }
 
 export const notas: Nota[] = [

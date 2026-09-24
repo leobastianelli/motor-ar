@@ -105,7 +105,7 @@ async function IndexedDriverPage({ slug }: { slug: string }) {
       />
 
       <SeasonBlocks keys={entry.keys ?? [entry.key]} season={season} />
-      <NotesBlock notas={notesForDriver(entry.slug)} title={`Notas sobre ${entry.name}`} />
+      <NotesBlock notas={await notesForDriver(entry.slug)} title={`Notas sobre ${entry.name}`} />
     </>
   );
 }
@@ -483,7 +483,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
         </section>
       )}
 
-      <NotesBlock notas={notesForDriver(driver.slug)} title={`Notas sobre ${driver.name}`} />
+      <NotesBlock notas={await notesForDriver(driver.slug)} title={`Notas sobre ${driver.name}`} />
 
       {!data && (
         <section className="section-block">

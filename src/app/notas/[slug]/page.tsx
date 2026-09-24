@@ -21,7 +21,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata(props: PageProps<"/notas/[slug]">): Promise<Metadata> {
-  const nota = getNote((await props.params).slug);
+  const nota = await getNote((await props.params).slug);
   if (!nota) return { title: "Nota" };
   return {
     title: nota.title,
@@ -32,7 +32,7 @@ export async function generateMetadata(props: PageProps<"/notas/[slug]">): Promi
 }
 
 export default async function NotaPage(props: PageProps<"/notas/[slug]">) {
-  const nota = getNote((await props.params).slug);
+  const nota = await getNote((await props.params).slug);
   if (!nota) notFound();
   const now = getNow();
   const season = await getSeason();
@@ -72,7 +72,7 @@ export default async function NotaPage(props: PageProps<"/notas/[slug]">) {
               inLanguage: "es-AR",
               description: nota.summary,
               publisher: { "@type": "Organization", name: "Fierros" },
-              isBasedOn: { "@type": "NewsArticle", headline: nota.source.headline, url: nota.source.url, publisher: { "@type": "Organization", name: nota.source.medio } },
+              ...(nota.auto ? {} : { isBasedOn: { "@type": "NewsArticle", headline: nota.source.headline, url: nota.source.url, publisher: { "@type": "Organization", name: nota.source.medio } } }),
             },
             breadcrumb([
               ["Inicio", "/"],
@@ -97,12 +97,28 @@ export default async function NotaPage(props: PageProps<"/notas/[slug]">) {
             <p className="nota-lead">
               <LinkedText text={nota.summary} />
             </p>
+            {nota.details?.map((p, i) => (
+              <p key={i} className="nota-detail">
+                <LinkedText text={p} />
+              </p>
+            ))}
             {nota.quote && (
               <blockquote className="nota-quote">
                 <p>“{nota.quote}”</p>
                 <footer>{nota.source.medio}</footer>
               </blockquote>
             )}
+            {nota.auto ? (
+              <div className="nota-source">
+                <span>Fuente</span>
+                <strong>Resultados oficiales de la fecha</strong>
+                <small>{nota.auto.sources.length ? nota.auto.sources.join(" · ") : "Fuentes oficiales de la categoría"}</small>
+                <Link href={nota.source.url} className="nota-cta">
+                  Ver todos los resultados de {nota.source.headline} <span aria-hidden="true">→</span>
+                </Link>
+                <p>Crónica automática de Fierros: se arma sola con los resultados apenas se publican y se actualiza con cada sesión.</p>
+              </div>
+            ) : (
             <div className="nota-source">
               <span>Fuente</span>
               <strong>{nota.source.headline}</strong>
@@ -115,6 +131,7 @@ export default async function NotaPage(props: PageProps<"/notas/[slug]">) {
               </a>
               <p>Este es un resumen propio de Fierros. El texto completo y sus derechos son del medio.</p>
             </div>
+            )}
           </div>
 
           <aside className="nota-related" aria-label="En Fierros">
