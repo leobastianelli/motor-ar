@@ -1,7 +1,8 @@
 import Link from "next/link";
+import { DataAge } from "./data-status";
 import { Logo } from "./logo";
 
-export function Footer() {
+export function Footer({ updatedAt }: { updatedAt?: string | null }) {
   return (
     <footer className="footer">
       <Link className="brand" href="/" aria-label="Fierros, inicio">
@@ -16,6 +17,7 @@ export function Footer() {
         <a href="https://leobastianelli.dev" target="_blank" rel="noreferrer author">
           Leo Bastianelli
         </a>
+        {updatedAt && <DataAge createdAt={updatedAt} />}
       </p>
       <nav aria-label="Pie de página">
         <Link href="/calendario">Calendario</Link>

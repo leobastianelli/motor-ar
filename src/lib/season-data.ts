@@ -37,7 +37,9 @@ interface LatestMeta {
 // Consulta chica, se puede guardar en la caché de datos: se invalida con revalidateTag("season", ...) cuando un escritor publica una versión.
 const latest = unstable_cache(
   async (): Promise<LatestMeta | null> => {
-    const rows = (await sql()`SELECT id, origin, generated_at::text AS "generatedAt", created_at::text AS "createdAt" FROM season_versions ORDER BY id DESC LIMIT 1`) as unknown as LatestMeta[];
+    // Fechas en ISO 8601 estricto: el texto por defecto de Postgres ("2026-09-24 19:14:06.888+00") Safari no lo entiende, y el pie de página lo
+    // parsea en el navegador.
+    const rows = (await sql()`SELECT id, origin, to_char(generated_at AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') AS "generatedAt", to_char(created_at AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') AS "createdAt" FROM season_versions ORDER BY id DESC LIMIT 1`) as unknown as LatestMeta[];
     return rows[0] ?? null;
   },
   ["season-latest"],

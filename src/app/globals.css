@@ -555,3 +555,5 @@ button{color:inherit;font-family:inherit}
 .notas-chips button.is-selected{background:var(--ink);color:#fff}
 .notas-count{margin:18px 0 0;font-size:13px;color:var(--muted)}
 .notas-clear{font:inherit;text-decoration:underline;background:none;border:0;padding:0;cursor:pointer;color:inherit}
+.stale-notice{background:#fff3cd;color:#3d2e00;border-bottom:1px solid #d9b84a;padding:10px max(16px,calc((100vw - 1240px)/2));font-size:14px}
+.data-age{display:block;margin-top:6px;font-size:13px;color:var(--muted)}

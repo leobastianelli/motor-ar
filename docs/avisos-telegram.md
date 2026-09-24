@@ -5,7 +5,7 @@ Dos procesos avisan cuando algo falta o falla. **Sólo envían mensajes**: no le
 | Proceso | Cuándo corre | Qué revisa |
 |---|---|---|
 | **Guardián** (`scripts/guardian.mjs`) | Al final de cada sincronización de datos (lun y jue 03:00, todos los días 06:00, jue 11:00 y 17:00, vie 12:00 y 19:00, sáb y dom 00:00, dom 16:00; hora argentina) | Horarios que faltan, fechas sin confirmar o en conflicto, fuentes que fallaron, campeonatos atrasados, resultados que no aparecen, cargas manuales viejas |
-| **Vigilante** (`scripts/watchdog.mjs`) | Cada hora, aparte del sincronizador | Que el sitio responda y que los datos se estén sincronizando (si el sincronizador deja de correr, este lo nota) |
+| **Vigilante** (`scripts/watchdog.mjs`) | Cada hora, aparte del sincronizador | Que el sitio responda, que los datos se estén sincronizando (si el sincronizador deja de correr, este lo nota) y, leyendo `/api/salud` de producción, que el sitio sirva la última versión de los datos |
 
 ## Cómo funciona un aviso
 - **Nuevo problema:** se avisa una vez, con lo necesario para pegárselo a Claude y resolverlo.
@@ -22,6 +22,15 @@ Sólo para eventos con **fecha confirmada** (si la fecha no es sólida, no sabem
 - **Confirmada:** la publica una fuente oficial (ACTC, APAT, Jolpica, FIA, GT World) y tiene sede.
 - **Tentativa:** viene sólo de Wikipedia o de una carga manual, o la fuente la marca "a confirmar".
 - **En conflicto:** dos fuentes no coinciden (hoy se cruza el TN de APAT contra Speedhive).
+
+### Avisos del vigilante sobre la versión de los datos
+Salen de `https://www.somosfierros.ar/api/salud` (qué versión sirve el sitio, cuál es la última del almacén y qué sesiones esperan resultados).
+- **`/api/salud` no responde:** no se puede saber qué versión sirve el sitio.
+- **"El sitio está usando el respaldo":** `servedFrom` no es `store`. El sitio no pudo leer el almacén y muestra la última versión vista o la instantánea del repo (además se ve un aviso de "datos desactualizados" arriba de cada página).
+- **"El sitio no toma la versión nueva":** el almacén tiene una versión más nueva (de hace más de 10 min) que la que sirve el sitio: falló la invalidación de las páginas. Una versión vieja **no** avisa mientras sea la última del almacén.
+- **"La home muestra una versión vieja":** el `<meta name="fierros-datos">` de la home tiene una versión anterior a la última del almacén (de hace más de 10 min), en dos corridas seguidas. `/api/salud` puede estar al día y las páginas no: esto mira lo que ve la gente.
+- **"Sin resultados: <sesión>":** una sesión de una categoría con fuente automática terminó hace más de 60 min y sigue sin resultados.
+- **"El sitio está lento: /":** la home tardó más de 3 s (desde la segunda corrida seguida). Tiene que salir del caché.
 
 ## Puesta en marcha (una sola vez)
 Hasta que se carguen los secretos, todo corre igual pero el mensaje sólo se muestra en el log de Actions ("telegram simulado").
