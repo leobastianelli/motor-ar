@@ -17,7 +17,7 @@ const titleCase = (slug) => slug.replace(/-/g, " ").replace(/(^|\s)\S/g, (m) => 
 
 /**
  * Sesiones de una fecha desde los datos estructurados (JSON-LD) de su página oficial, en orden: Map nombre → { start, end }.
- * Los datos nombran "Qualifying" a toda clasificación y "Race" a toda carrera: si hay dos clasificaciones se numeran, y de las carreras
+ * Los datos nombran "Qualifying" a toda clasificación y "Race" a toda carrera: si hay dos clasificaciones con tres carreras se numeran, y de las carreras
  * la primera es la sprint y las siguientes, las principales ("Feature Race", "Feature Race 2").
  */
 export function parseOfficialSchedule(html) {
@@ -26,15 +26,20 @@ export function parseOfficialSchedule(html) {
     const found = html.slice(m.index, m.index + 900).match(/"startDate":"([^"]+T[^"]+)","endDate":"([^"]+)"/);
     if (found) ordered.push({ name: m[1], start: found[1], end: found[2] });
   }
-  const qualifyings = ordered.filter((s) => s.name === "Qualifying").length;
+  const qualis = ordered.filter((s) => s.name === "Qualifying");
+  // Dos clasificaciones con clasificación propia sólo si alimentan grillas distintas (Baku 2026: tres carreras). Con dos carreras son grupos de
+  // una misma clasificación (Mónaco: grupos A y B, una sola clasificación combinada) y se muestran como una sola sesión.
+  const split = qualis.length > 1 && ordered.filter((s) => s.name === "Race").length >= 3;
   const sessions = new Map();
   let races = 0;
   let quali = 0;
   for (const s of ordered) {
     let key = s.name;
+    let slot = { start: s.start, end: s.end };
     if (s.name === "Race") key = races++ === 0 ? "Sprint Race" : races === 2 ? "Feature Race" : `Feature Race ${races - 1}`;
-    else if (s.name === "Qualifying" && qualifyings > 1) key = `Qualifying ${++quali}`;
-    if (OFFICIAL_SESSIONS[key] && !sessions.has(key)) sessions.set(key, { start: s.start, end: s.end });
+    else if (s.name === "Qualifying" && split) key = `Qualifying ${++quali}`;
+    else if (s.name === "Qualifying" && qualis.length > 1) slot = { start: qualis[0].start, end: qualis.at(-1).end };
+    if (OFFICIAL_SESSIONS[key] && !sessions.has(key)) sessions.set(key, slot);
   }
   return sessions;
 }
