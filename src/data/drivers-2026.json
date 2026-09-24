@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T21:39:32.204Z",
+  "generatedAt": "2026-09-24T22:20:56.120Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -229,9 +229,7 @@
       ],
       "slug": "andres-calderon",
       "name": "Andrés Calderón",
-      "aliases": [
-        "Andres Calderon"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
@@ -3434,9 +3432,7 @@
       ],
       "slug": "matias-munoz-marchesi",
       "name": "Matías Muñoz Marchesi",
-      "aliases": [
-        "Matias Munoz Marchesi"
-      ],
+      "aliases": [],
       "series": [
         "tn"
       ],
