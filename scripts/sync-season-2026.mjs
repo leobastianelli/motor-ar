@@ -48,7 +48,16 @@ const season = await buildSeason(io, previous, (label, part) => {
 });
 for (const failure of season.failures) console.error(`ERROR ${failure} (se conservan los datos anteriores)`);
 
-fs.writeFileSync(OUTPUT, JSON.stringify(season, null, 2));
+// Con almacén: se publica como versión nueva (fusionada con lo que otro escritor haya guardado mientras tanto). `saved` es lo que quedó vigente,
+// y es lo que va al archivo de respaldo y al índice de pilotos.
+let saved = season;
+if (start.sql) {
+  const written = await writeVersion(start.sql, { raw: season, parentId: start.versionId, origin: "sync" });
+  saved = written.raw;
+  console.log(written.unchanged ? `Sin cambios: sigue vigente la versión ${written.id} del almacén.` : `Versión ${written.id} escrita en el almacén.`);
+}
+
+fs.writeFileSync(OUTPUT, JSON.stringify(saved, null, 2));
 console.log(`\n${season.events.length} eventos → ${OUTPUT}`);
 
 // Índice de pilotos: se completa con lo nuevo y conserva a todos los que ya estaban.
