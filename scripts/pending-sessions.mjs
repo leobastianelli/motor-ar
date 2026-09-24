@@ -1,4 +1,4 @@
-// Compuerta del reintento por hora de la sincronización: ¿hay sesiones de F1 que terminaron hace poco y todavía no tienen resultados?
+// Compuerta del reintento por hora de la sincronización: ¿hay sesiones de categorías con fuente automática que terminaron hace poco y todavía no tienen resultados?
 // Es barata (lee la instantánea del repo, sin instalar nada ni pedir a ninguna fuente): si no hay nada pendiente, la sincronización completa
 // no corre y no gasta minutos de Actions. Escribe `needed=true|false` en $GITHUB_OUTPUT.
 // Uso: node scripts/pending-sessions.mjs
@@ -10,7 +10,10 @@ const manual = JSON.parse(fs.readFileSync("src/data/manual-overrides.json", "utf
 const events = visibleEvents(snapshot.events, manual);
 
 // Entre 10 minutos y 4 horas después de terminar: más tarde ya lo insiste el guardián por Telegram y lo toma la próxima sincronización.
-const pending = sessionResultsMissing(events, new Date().toISOString(), { seriesIds: new Set(["f1"]), after: 10 / 60, before: 4 });
+// Categorías con fuente automática (ver SOURCES en src/lib/sources/season.mjs). TC2000 y GT3 se cargan a mano y no cuentan. Como el sitio ya no
+// reconstruye la temporada al renderizar, todas dependen de la sincronización.
+const AUTOMATIC = new Set(["f1", "f2", "tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn"]);
+const pending = sessionResultsMissing(events, new Date().toISOString(), { seriesIds: AUTOMATIC, after: 10 / 60, before: 4 });
 const needed = pending.length > 0;
 for (const p of pending) console.log(`Pendiente: ${p.title}. ${p.body}`);
 console.log(needed ? "Hay resultados por traer: se sincroniza." : "Nada pendiente: no se sincroniza.");
