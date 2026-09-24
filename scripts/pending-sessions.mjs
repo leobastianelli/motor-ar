@@ -4,8 +4,11 @@
 // Uso: node scripts/pending-sessions.mjs
 import fs from "node:fs";
 import { sessionResultsMissing, visibleEvents } from "../src/lib/monitor/checks.mjs";
+import { loadSeason } from "./season-source.mjs";
 
-const snapshot = JSON.parse(fs.readFileSync("src/data/season-2026.json", "utf8"));
+// Lee el almacén (el archivo del repo ya no se actualiza cada hora) y sólo cae al archivo si el almacén falla, diciéndolo.
+const { raw: snapshot, label } = await loadSeason("src/data/season-2026.json");
+console.log(`Datos: ${label}`);
 const manual = JSON.parse(fs.readFileSync("src/data/manual-overrides.json", "utf8"));
 const events = visibleEvents(snapshot.events, manual);
 
