@@ -122,6 +122,22 @@ export function momentoDeCategoria(events, now, { argentineSlugs = [], failures 
   };
 }
 
+/**
+ * El momento de UNA fecha (la página del evento): lo mismo que `momentoDeCategoria` con esa fecha sola, pero con las sesiones
+ * y la fecha siempre presentes, también cuando ya terminó hace tiempo o falta mucho (ahí la categoría diría "entre semana"
+ * y no traería sesiones). `modo` sigue diciendo si está en pista, en fin de semana, con resultados recientes o lejos.
+ * @param {any} event
+ * @param {string} now ISO
+ * @param {{ argentineSlugs?: Iterable<string>, failures?: string[] }} [options]
+ */
+export function momentoDeEvento(event, now, { argentineSlugs = [], failures = [] } = {}) {
+  const m = momentoDeCategoria([event], now, { argentineSlugs, failures });
+  if (m.sesiones.length) return m;
+  const slugs = new Set(argentineSlugs);
+  const sesiones = [...event.sessions].sort((a, b) => Date.parse(a.start) - Date.parse(b.start)).map((s) => resumenSesion(s, now, event.seriesId, failures, slugs));
+  return { ...m, fecha: resumenFecha(event, now, slugs, failures), sesiones, proximaSesion: sesiones.find((s) => s.estado !== "terminada") };
+}
+
 /** Estado de una sesión del momento a la hora `now`, con el mismo criterio que el servidor (para el navegador). */
 export const estadoDeSesion = (s, now) => ESTADO[sessionStatus({ start: s.start, durationMin: s.durationMin, timeKnown: s.timeKnown, hasResults: s.hasResults }, now)];
 

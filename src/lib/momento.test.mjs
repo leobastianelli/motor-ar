@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { estadoDeSesion, momentoDeCategoria, momentoDePiloto } from "./momento.mjs";
+import { estadoDeSesion, momentoDeCategoria, momentoDeEvento, momentoDePiloto } from "./momento.mjs";
 import { driverKey } from "./sources/driver-index.mjs";
 
 const row = (pos, driver, extra = {}) => ({ pos, driver, team: "X", gap: "", ...extra });
@@ -178,4 +178,28 @@ test("piloto en varias categorías: gana la que está en pista; sin eventos, ent
   const vacio = momentoDePiloto([], "2026-09-24T09:00:00Z", KEYS);
   assert.equal(vacio.modo, "entre-semana");
   assert.equal(vacio.participa, false);
+});
+
+test("momentoDeEvento: una fecha ya corrida trae sus sesiones y los argentinos, aunque hayan pasado semanas", () => {
+  const ev = madrid([row(1, "Max Verstappen"), colapinto(9)]);
+  const m = momentoDeEvento(ev, "2026-10-20T12:00:00Z", opts);
+  assert.equal(m.modo, "entre-semana");
+  assert.equal(m.fecha.id, "f1-14");
+  assert.equal(m.sesiones.length, 1);
+  assert.equal(m.sesiones[0].estado, "terminada");
+  assert.deepEqual(m.sesiones[0].argentinos.map((a) => [a.slug, a.pos]), [["franco-colapinto", 9]]);
+  assert.equal(m.fecha.carrera.ganador.name, "Max Verstappen");
+});
+
+test("momentoDeEvento: una fecha lejana trae todas sus sesiones como próximas", () => {
+  const m = momentoDeEvento(baku(), "2026-09-01T12:00:00Z", opts);
+  assert.equal(m.sesiones.length, 5);
+  assert.ok(m.sesiones.every((s) => s.estado === "proxima"));
+  assert.equal(m.fecha.id, "f1-15");
+});
+
+test("momentoDeEvento: en pista sólo mira esta fecha, no otras de la categoría", () => {
+  const m = momentoDeEvento(baku({ p1: [row(1, "Lando Norris"), colapinto(18)] }), "2026-09-24T08:45:00Z", opts);
+  assert.equal(m.modo, "en-pista");
+  assert.equal(m.sesiones.find((s) => s.id === "p1").estado, "en-vivo");
 });

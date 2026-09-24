@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import type { CSSProperties } from "react";
+import type { ComponentProps, CSSProperties } from "react";
 import { breadcrumb, JsonLd, sportsEventJsonLd } from "@/components/json-ld";
+import { AutoRefresh } from "@/components/live-clock";
 import { LiveTimingEmbed } from "@/components/live-timing-embed";
+import { Argentinos, Momento, ResultadoCarrera } from "@/components/momento";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
-import { getNow, getSeason, getSeries } from "@/lib/data";
+import { getNow, getSeason, getSeries, isSimulatedNow } from "@/lib/data";
 import { noResultsReason } from "@/lib/salud-core.mjs";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtRange, fmtWeekday, raceWinner, sessionState, sessionStatus, sessionTime } from "@/lib/format";
 import { OG_DEFAULTS } from "@/lib/site";
@@ -62,6 +64,17 @@ function Ranking({ rows }: { rows: ResultRow[] }) {
   );
 }
 
+/** "Argentinos: Colapinto 11.º", arriba de la tabla, para verlo aunque esté plegada. Sin argentinos en la sesión, no ocupa lugar. */
+function ArgentinosLinea({ rows, small }: { rows: ComponentProps<typeof Argentinos>["rows"]; small?: boolean }) {
+  if (rows.length === 0) return null;
+  const Tag = small ? "small" : "p";
+  return (
+    <Tag className="arg-line">
+      <b>Argentinos</b> <Argentinos rows={rows} />
+    </Tag>
+  );
+}
+
 function SourceLink({ session }: { session: Session }) {
   if (!session.resultsSource) return null;
   return (
@@ -81,6 +94,10 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
   const now = getNow();
   const series = getSeries(event.seriesId)!;
   const siblings = season.getSiblingEvents(event);
+  const momento = season.getMomentoEvento(event, now);
+  // Los argentinos de cada sesión (posición o "abandonó"), ya calculados con la lista de pilotos de la categoría.
+  const argentinosPorSesion = new Map(momento.sesiones.map((m) => [m.id, m.argentinos]));
+  const argentinosDe = (s: Session) => argentinosPorSesion.get(s.id) ?? [];
 
   const byDay = Map.groupBy(event.sessions, (s) => dayKey(s.start));
   // Todas las sesiones con resultados, de la más reciente a la primera.
@@ -100,6 +117,128 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
   const jsonLdWinner = rowsComplete ? rows[0] : undefined;
   const jsonLdDescription = `${series.name} en ${event.circuit.city}: horarios en hora argentina, dónde verlo y resultados de cada sesión${jsonLdWinner ? `. Ganó ${jsonLdWinner.driver}` : ""}.`;
   const jsonLd = sportsEventJsonLd(event, series, jsonLdDescription);
+
+  const where = (
+          <aside className="broadcast">
+            <h2>Dónde verlo</h2>
+            {event.broadcasts.map((b) => (
+              <div key={b.name}>
+                <span>{BROADCAST_KIND[b.kind]}</span>
+                <strong>{b.name}</strong>
+              </div>
+            ))}
+            {event.broadcasts.length === 0 && (
+              <div>
+                <span>Sin datos</span>
+                <strong>No tenemos una transmisión confirmada en Argentina</strong>
+              </div>
+            )}
+            {streamUrl && (
+              <a href={streamUrl} target="_blank" rel="noreferrer">
+                Abrir transmisión <span aria-hidden="true">↗</span>
+              </a>
+            )}
+            {timingUrl && (
+              <a href="#tiempos-en-vivo">
+                Tiempos en vivo <span aria-hidden="true">↓</span>
+              </a>
+            )}
+            <p>
+              {!timesUnknown
+                ? "Los horarios ya están convertidos a Argentina."
+                : event.sessions.some((s) => s.timeKnown)
+                  ? "Algunos horarios de esta fecha todavía no se publicaron."
+                  : "La fuente todavía no publica los horarios de esta fecha."}
+              {event.source && ` Datos: ${event.source}.`}
+              {scheduleSources.length > 0 && " Horarios: "}
+              {scheduleSources.map((x, i) => (
+                <span key={x.url}>
+                  {i > 0 && " · "}
+                  <a href={x.url} target="_blank" rel="noreferrer">
+                    {x.name}
+                  </a>
+                </span>
+              ))}
+              {scheduleSources.length > 0 && "."}
+              {broadcastSource && (
+                <>
+                  {" "}
+                  <a href={broadcastSource} target="_blank" rel="noreferrer">
+                    Fuente de la transmisión
+                  </a>
+                </>
+              )}
+            </p>
+          </aside>
+  );
+
+  const schedule = (
+          <div>
+            <SectionTitle title="Cronograma" />
+            <div className="event-days">
+              {[...byDay.entries()].map(([key, sessions]) => (
+                <section key={key}>
+                  <h3>
+                    {fmtWeekday(sessions[0].start)} {fmtDayNum(sessions[0].start)}
+                  </h3>
+                  <div>
+                    {sessions.map((s) => {
+                      const status = sessionStatus(s, now);
+                      const state = sessionState(s, now);
+                      // El nombre en negrita es el 1.º; si la fuente sólo publicó parte de la tabla y no incluye al
+                      // 1.º, se muestra la mejor posición conocida en vez de hacer pasar a otro piloto por ganador.
+                      const winner = raceWinner(s.results);
+                      const top = winner ?? s.results?.[0];
+                      return (
+                        <div key={s.id} className={`session${status === "live" ? " live-session" : ""}${status === "done" ? " done" : ""}`}>
+                          <time dateTime={s.start}>{sessionTime(s)}</time>
+                          <div>
+                            <strong>{s.name}</strong>
+                            <span>
+                              {status === "live" && "En curso"}
+                              {status === "upcoming" &&
+                                (s.timeKnown === false
+                                  ? "Horario a confirmar"
+                                  : s.timeStatus === "confirmed"
+                                    ? "Horario confirmado"
+                                    : s.timeStatus === "tentative"
+                                      ? `Horario según ${s.timeSources?.map((x) => x.name).join(", ")}`
+                                      : `${s.durationMin} min estimados`)}
+                              {status === "done" && (top ? <a href={`#${s.id}`}>Terminó · ver resultados</a> : `Terminó · ${noResultsReason(s, event.seriesId, season.failures, now)?.toLowerCase() ?? "sin resultados cargados"}`)}
+                            </span>
+                            {s.videos && s.videos.length > 0 && (
+                              <span className="session-videos">
+                                {s.videos.map((v) => (
+                                  <a key={v.id} href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noreferrer">
+                                    <span aria-hidden="true">▶</span> {v.kind === "live" ? (status === "done" ? "Ver la sesión" : "Ver en vivo") : "Resumen"}
+                                    {v.label ? ` · ${v.label}` : ""}
+                                  </a>
+                                ))}
+                              </span>
+                            )}
+                          </div>
+                          {status === "done" && top ? (
+                            <b className="session-winner">{winner ? top.driver : `${top.positionText ?? `${top.pos}.º`} ${top.driver}`}</b>
+                          ) : (
+                            <StateTag as="b" kind={state.kind}>
+                              {state.label}
+                            </StateTag>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </section>
+              ))}
+            </div>
+            {timingUrl && (
+              <section id="tiempos-en-vivo">
+                <SectionTitle title="Tiempos en vivo" />
+                <LiveTimingEmbed url={timingUrl} />
+              </section>
+            )}
+          </div>
+  );
 
   return (
     <>
@@ -125,6 +264,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
             {fmtRange(event.sessions[0].start, event.sessions.at(-1)!.start)} · {event.circuit.city}
           </p>
           <h1>{event.name}</h1>
+          <ResultadoCarrera carrera={momento.fecha?.carrera} />
         </div>
         <div className="event-meta">
           <p>{event.circuit.name}</p>
@@ -136,154 +276,17 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
         </div>
       </section>
 
-      <section className="event-grid section-block">
-        <div>
-          <SectionTitle title="Cronograma" />
-          <div className="event-days">
-            {[...byDay.entries()].map(([key, sessions]) => (
-              <section key={key}>
-                <h3>
-                  {fmtWeekday(sessions[0].start)} {fmtDayNum(sessions[0].start)}
-                </h3>
-                <div>
-                  {sessions.map((s) => {
-                    const status = sessionStatus(s, now);
-                    const state = sessionState(s, now);
-                    // El nombre en negrita es el 1.º; si la fuente sólo publicó parte de la tabla y no incluye al
-                    // 1.º, se muestra la mejor posición conocida en vez de hacer pasar a otro piloto por ganador.
-                    const winner = raceWinner(s.results);
-                    const top = winner ?? s.results?.[0];
-                    return (
-                      <div key={s.id} className={`session${status === "live" ? " live-session" : ""}${status === "done" ? " done" : ""}`}>
-                        <time dateTime={s.start}>{sessionTime(s)}</time>
-                        <div>
-                          <strong>{s.name}</strong>
-                          <span>
-                            {status === "live" && "En curso"}
-                            {status === "upcoming" &&
-                              (s.timeKnown === false
-                                ? "Horario a confirmar"
-                                : s.timeStatus === "confirmed"
-                                  ? "Horario confirmado"
-                                  : s.timeStatus === "tentative"
-                                    ? `Horario según ${s.timeSources?.map((x) => x.name).join(", ")}`
-                                    : `${s.durationMin} min estimados`)}
-                            {status === "done" && (top ? <a href={`#${s.id}`}>Terminó · ver resultados</a> : `Terminó · ${noResultsReason(s, event.seriesId, season.failures, now)?.toLowerCase() ?? "sin resultados cargados"}`)}
-                          </span>
-                          {s.videos && s.videos.length > 0 && (
-                            <span className="session-videos">
-                              {s.videos.map((v) => (
-                                <a key={v.id} href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noreferrer">
-                                  <span aria-hidden="true">▶</span> {v.kind === "live" ? (status === "done" ? "Ver la sesión" : "Ver en vivo") : "Resumen"}
-                                  {v.label ? ` · ${v.label}` : ""}
-                                </a>
-                              ))}
-                            </span>
-                          )}
-                        </div>
-                        {status === "done" && top ? (
-                          <b className="session-winner">{winner ? top.driver : `${top.positionText ?? `${top.pos}.º`} ${top.driver}`}</b>
-                        ) : (
-                          <StateTag as="b" kind={state.kind}>
-                            {state.label}
-                          </StateTag>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
-              </section>
-            ))}
-          </div>
-          {timingUrl && (
-            <section id="tiempos-en-vivo">
-              <SectionTitle title="Tiempos en vivo" />
-              <LiveTimingEmbed url={timingUrl} />
-            </section>
-          )}
-        </div>
+      <Momento evento data={momento} now={now} simulated={isSimulatedNow()} broadcasts={[]} tiemposUrl={timingUrl} />
+      {(momento.modo === "en-pista" || momento.modo === "finde") && <AutoRefresh everyMs={60_000} />}
 
-        <aside className="broadcast">
-          <h2>Dónde verlo</h2>
-          {event.broadcasts.map((b) => (
-            <div key={b.name}>
-              <span>{BROADCAST_KIND[b.kind]}</span>
-              <strong>{b.name}</strong>
-            </div>
-          ))}
-          {event.broadcasts.length === 0 && (
-            <div>
-              <span>Sin datos</span>
-              <strong>No tenemos una transmisión confirmada en Argentina</strong>
-            </div>
-          )}
-          {streamUrl && (
-            <a href={streamUrl} target="_blank" rel="noreferrer">
-              Abrir transmisión <span aria-hidden="true">↗</span>
-            </a>
-          )}
-          {timingUrl && (
-            <a href="#tiempos-en-vivo">
-              Tiempos en vivo <span aria-hidden="true">↓</span>
-            </a>
-          )}
-          <p>
-            {!timesUnknown
-              ? "Los horarios ya están convertidos a Argentina."
-              : event.sessions.some((s) => s.timeKnown)
-                ? "Algunos horarios de esta fecha todavía no se publicaron."
-                : "La fuente todavía no publica los horarios de esta fecha."}
-            {event.source && ` Datos: ${event.source}.`}
-            {scheduleSources.length > 0 && " Horarios: "}
-            {scheduleSources.map((x, i) => (
-              <span key={x.url}>
-                {i > 0 && " · "}
-                <a href={x.url} target="_blank" rel="noreferrer">
-                  {x.name}
-                </a>
-              </span>
-            ))}
-            {scheduleSources.length > 0 && "."}
-            {broadcastSource && (
-              <>
-                {" "}
-                <a href={broadcastSource} target="_blank" rel="noreferrer">
-                  Fuente de la transmisión
-                </a>
-              </>
-            )}
-          </p>
-        </aside>
-      </section>
-
-      {siblings.length > 0 && (
-        <section className="section-block siblings">
-          <SectionTitle title="Corren el mismo finde" />
-          <div className="date-strip">
-            {siblings.map((e) => {
-              const s = getSeries(e.seriesId)!;
-              const finished = e.sessions.filter((x) => x.results?.length && sessionStatus(x, now) === "done").at(-1);
-              const winner = finished && raceWinner(finished.results);
-              return (
-                <Link key={e.id} href={`/eventos/${e.id}`} className="next-card list-link" style={{ "--cat": s.color } as CSSProperties}>
-                  <CategoryLabel series={s} />
-                  <strong>{winner ? `${finished!.name}: ganó ${winner.driver}` : finished ? `${finished.name}: terminó` : `Fecha ${e.round}`}</strong>
-                  <time dateTime={e.sessions.at(-1)!.start}>
-                    {fmtDayShort(e.sessions.at(-1)!.start)} · {e.sessions.length} {e.sessions.length === 1 ? "sesión" : "sesiones"}
-                  </time>
-                </Link>
-              );
-            })}
-          </div>
-        </section>
-      )}
-
+      {/* Con resultados, el último resultado y dónde verlo van antes que el cronograma; sin ellos, el cronograma manda. */}
       {latest && rows.length > 0 && (
         <section className="classification-wrap" id="resultados">
           <div className="section-block">
             <SectionTitle title={latest.name} inverse>
               <time dateTime={latest.start}>{fmtDayShort(latest.start)}</time>
             </SectionTitle>
+            <ArgentinosLinea rows={argentinosDe(latest)} />
             <div id={latest.id} className="session-result">
               <div className="pole">
                 <span>{rows[0].positionText ?? rows[0].pos}</span>
@@ -321,24 +324,67 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
             )}
             <SourceLink session={latest} />
 
-            {earlier.length > 0 && (
-              <div className="earlier-sessions">
-                <h3>Sesiones anteriores</h3>
-                {earlier.map((s) => (
-                  <details key={s.id} id={s.id} className="full-results">
-                    <summary>
-                      <strong>{s.name}</strong> · {fmtDayShort(s.start)} · 1.º {s.results![0].driver}
-                      <span>{s.results!.length === 1 ? "Solo el 1.º" : `${s.results!.length} pilotos`}</span>
-                    </summary>
-                    <Ranking rows={s.results!} />
-                    <SourceLink session={s} />
-                  </details>
-                ))}
-              </div>
-            )}
           </div>
         </section>
       )}
+
+      <section className={`event-grid section-block${latest ? " where-first" : ""}`}>
+        {latest ? (
+          <>
+            {where}
+            {schedule}
+          </>
+        ) : (
+          <>
+            {schedule}
+            {where}
+          </>
+        )}
+      </section>
+
+      {earlier.length > 0 && (
+        <section className="classification-wrap earlier-wrap">
+          <div className="section-block">
+              <div className="earlier-sessions">
+                  <h3>Sesiones anteriores</h3>
+                  {earlier.map((s) => (
+                    <details key={s.id} id={s.id} className="full-results">
+                      <summary>
+                        <strong>{s.name}</strong> · {fmtDayShort(s.start)} · 1.º {s.results![0].driver}
+                        <span>{s.results!.length === 1 ? "Solo el 1.º" : `${s.results!.length} pilotos`}</span>
+                        <ArgentinosLinea rows={argentinosDe(s)} small />
+                      </summary>
+                      <Ranking rows={s.results!} />
+                      <SourceLink session={s} />
+                    </details>
+                  ))}
+              </div>
+          </div>
+        </section>
+      )}
+
+      {siblings.length > 0 && (
+        <section className="section-block siblings">
+          <SectionTitle title="Corren el mismo finde" />
+          <div className="date-strip">
+            {siblings.map((e) => {
+              const s = getSeries(e.seriesId)!;
+              const finished = e.sessions.filter((x) => x.results?.length && sessionStatus(x, now) === "done").at(-1);
+              const winner = finished && raceWinner(finished.results);
+              return (
+                <Link key={e.id} href={`/eventos/${e.id}`} className="next-card list-link" style={{ "--cat": s.color } as CSSProperties}>
+                  <CategoryLabel series={s} />
+                  <strong>{winner ? `${finished!.name}: ganó ${winner.driver}` : finished ? `${finished.name}: terminó` : `Fecha ${e.round}`}</strong>
+                  <time dateTime={e.sessions.at(-1)!.start}>
+                    {fmtDayShort(e.sessions.at(-1)!.start)} · {e.sessions.length} {e.sessions.length === 1 ? "sesión" : "sesiones"}
+                  </time>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
     </>
   );
 }
