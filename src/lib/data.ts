@@ -5,7 +5,7 @@ import history from "@/data/history.json";
 import driverIndex from "@/data/drivers-2026.json";
 import manualOverrides from "@/data/manual-overrides.json";
 import { driverKey } from "./sources/driver-index.mjs";
-import { momentoDeCategoria, momentoDePiloto } from "./momento.mjs";
+import { momentoDeCategoria, momentoDeEvento, momentoDePiloto } from "./momento.mjs";
 import { mergeSessionPatches } from "./sources/overrides.mjs";
 import { series, seriesById } from "@/data/series";
 import { dayKey, fmtDayShort, fmtTime, sessionStatus, type SessionStatus, type StateKind } from "./format";
@@ -345,6 +345,12 @@ export function createSeason(raw: RawSeason) {
     return { at: Infinity, state: "no-data", stateLabel: "Sin datos", headline: "Sin actividad próxima cargada", detail: "", href: `/pilotos/${driver.slug}` };
   }
 
+  /** "Los nuestros" son los pilotos con ficha de las categorías internacionales; en las nacionales corre todo el mundo y no hay a quién destacar. */
+  const momentoOptions = (seriesId: string) => ({
+    argentineSlugs: seriesById[seriesId]?.scope === "internacional" ? drivers.filter((d) => d.seriesId === seriesId).map((d) => d.slug) : [],
+    failures: raw.failures ?? [],
+  });
+
   return {
     updatedAt: raw.generatedAt,
     /** Versión de la temporada que se sirve y de dónde salió (almacén, última vista o instantánea). */
@@ -370,13 +376,10 @@ export function createSeason(raw: RawSeason) {
 
     /**
      * En qué situación está una categoría (en pista, fin de semana, resultados o entre semana) y qué mostrar: ver src/lib/momento.mjs.
-     * "Los nuestros" son los pilotos con ficha de las categorías internacionales; en las nacionales corre todo el mundo y no hay a quién destacar.
      */
-    getMomentoCategoria: (seriesId: string, now: string) =>
-      momentoDeCategoria(events.filter((e) => e.seriesId === seriesId), now, {
-        argentineSlugs: seriesById[seriesId]?.scope === "internacional" ? drivers.filter((d) => d.seriesId === seriesId).map((d) => d.slug) : [],
-        failures: raw.failures ?? [],
-      }),
+    getMomentoCategoria: (seriesId: string, now: string) => momentoDeCategoria(events.filter((e) => e.seriesId === seriesId), now, momentoOptions(seriesId)),
+    /** Lo mismo, limitado a una fecha: la página del evento. */
+    getMomentoEvento: (event: RaceEvent, now: string) => momentoDeEvento(event, now, momentoOptions(event.seriesId)),
     /**
      * El momento de un piloto: el de su categoría (o la más activa, si corre en varias) con su fila en cada sesión.
      * `keys` son las formas en que las fuentes escriben su nombre (`driverKey`).

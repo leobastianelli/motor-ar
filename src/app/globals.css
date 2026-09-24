@@ -660,3 +660,31 @@ button{color:inherit;font-family:inherit}
 .agenda-pending{margin:24px 0 4px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 @media(max-width:800px){.schedule-row.agenda-row{grid-template-columns:60px 1fr auto;gap:12px;padding:12px 0}.agenda-main strong{font-size:16px}}
 
+
+/* Página del evento: la franja "Ahora", el resultado en la portada y los argentinos de cada tabla. */
+.event-result{margin:14px 0 0;font-size:clamp(20px,2.4vw,30px);font-weight:800;letter-spacing:-.5px;line-height:1.15}
+.event-result a{text-decoration:none;color:inherit}
+.momento-lineas{display:grid;gap:0;margin-top:4px}
+.momento-linea{margin:0;padding:12px 4px;border-bottom:1px solid var(--line);font-size:16px}
+.momento-linea>b{display:block;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.momento-linea.is-live{border-left:9px solid var(--red);padding-left:12px;background:#fff}
+.momento-linea a{color:var(--ink);font-weight:650}
+.momento-ultimo{display:grid;gap:2px}
+.momento-ultimo>span{display:block}
+.momento-args-line{font-size:20px;font-weight:800;color:var(--blue-deep)}
+.momento-args-line a{color:inherit;text-decoration:none}
+.arg-line{margin:14px 0 0;padding:10px 14px;background:var(--blue);color:var(--ink);font-size:18px;font-weight:800}
+.arg-line a{color:inherit;text-decoration:none}
+.arg-line b{font-size:12px;letter-spacing:.04em;text-transform:uppercase;margin-right:6px}
+.full-results summary small.arg-line{display:block;margin:8px 0 0;padding:4px 8px;font-size:14px}
+.event-grid.where-first .broadcast{order:2}
+.earlier-wrap{padding-bottom:40px}
+.earlier-wrap .section-block{margin-top:40px}
+.earlier-wrap .earlier-sessions{margin-top:0}
+@media(max-width:800px){
+  .momento-linea{font-size:15px;padding:10px 4px}
+  .momento-args-line{font-size:18px}
+  .event-result{font-size:20px}
+  .event-hero{padding-top:20px;padding-bottom:18px;gap:10px}
+}
+.momento-faltan{display:block;margin-top:2px;font-size:13px;color:var(--muted)}

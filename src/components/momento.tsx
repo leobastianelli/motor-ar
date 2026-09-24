@@ -19,12 +19,12 @@ type Argentino = Sesion["argentinos"][number];
 const placeName = (f: Pick<Fecha, "name" | "city">) => (f.city && !f.name.includes(f.city) ? `${f.name} · ${f.city}` : f.name);
 const shortName = (name: string) => name.split(" / ").map(surname).join(" / ");
 
-function Piloto({ name, slug }: { name: string; slug?: string }) {
+export function Piloto({ name, slug }: { name: string; slug?: string }) {
   return slug ? <Link href={`/pilotos/${slug}`}>{shortName(name)}</Link> : <>{shortName(name)}</>;
 }
 
 /** "Colapinto 11.º" — o "Colapinto abandonó" si no terminó. */
-function Argentinos({ rows }: { rows: Argentino[] }) {
+export function Argentinos({ rows }: { rows: Argentino[] }) {
   return (
     <>
       {rows.map((a, i) => (
@@ -191,11 +191,109 @@ function ProximaLinea({ fecha, now }: { fecha: Fecha; now: string }) {
   );
 }
 
-export function Momento({ data, now: serverNow, simulated, broadcasts, tiemposUrl, piloto }: { data: MomentoData; now: string; simulated?: boolean; broadcasts: Pick<Broadcast, "name">[]; tiemposUrl?: string; piloto?: boolean }) {
+/** Para la portada de un evento ya corrido: "Ganó X · Colapinto 9.º", para que la respuesta esté antes que cualquier tabla. */
+export function ResultadoCarrera({ carrera }: { carrera?: Fecha["carrera"] }) {
+  if (!carrera || carrera.estado !== "terminada" || !carrera.hasResults || !carrera.ganador) return null;
+  return (
+    <p className="event-result">
+      Ganó <Piloto name={carrera.ganador.name} slug={carrera.ganador.slug} />
+      {carrera.argentinos.length > 0 && (
+        <>
+          {" · "}
+          <Argentinos rows={carrera.argentinos} />
+        </>
+      )}
+    </p>
+  );
+}
+
+/**
+ * La franja "Ahora" de la página de un evento: qué está en pista, qué viene y el último resultado con los argentinos.
+ * Los estados se recalculan con la hora del navegador; lo que llegó con la página (ganadores, posiciones) no cambia.
+ */
+function Ahora({ data, now, tiemposUrl }: { data: MomentoData; now: string; tiemposUrl?: string }) {
+  const sesiones = (data.sesiones as Sesion[]).map((s) => ({ s, estado: estadoDeSesion(s, now) as Sesion["estado"] }));
+  const live = sesiones.find((r) => r.estado === "en-vivo");
+  const next = sesiones.find((r) => r.estado === "proxima");
+  const terminadas = sesiones.filter((r) => r.estado === "terminada");
+  // El último resultado es el de la última sesión que lo tiene; si otra más reciente todavía no lo publicó, se dice aparte.
+  const last = terminadas.filter((r) => r.s.hasResults).at(-1) ?? terminadas.at(-1);
+  const sinResultados = terminadas.at(-1) && terminadas.at(-1) !== last ? terminadas.at(-1) : undefined;
+  const title = live ? "En pista ahora" : next ? (last ? "Ahora" : "Próxima sesión") : "Resultado";
+  return (
+    <section className={`section-block momento momento-evento momento-${data.modo}`} aria-labelledby="momento-title">
+      <SectionTitle id="momento-title" title={title}>
+        {live && <StateTag kind="live">EN VIVO</StateTag>}
+      </SectionTitle>
+      <div className="momento-lineas">
+        {live && (
+          <p className="momento-linea is-live">
+            <b>En vivo</b>
+            <strong>{live.s.name}</strong>
+            {" · "}
+            {tiemposUrl ? <a href="#tiempos-en-vivo">Tiempos en vivo</a> : "En pista ahora"}
+          </p>
+        )}
+        {next && (
+          <p className="momento-linea">
+            <b>Próxima</b>
+            <strong>{next.s.name}</strong>
+            {" · "}
+            {next.s.timeKnown ? (
+              <>
+                <time dateTime={next.s.start}>
+                  {fmtDayShort(next.s.start)} {fmtTime(next.s.start)}
+                </time>{" "}
+                · {relative(next.s.start, now)}
+              </>
+            ) : (
+              "horario a confirmar"
+            )}
+          </p>
+        )}
+        {last && (
+          <div className="momento-linea momento-ultimo">
+            <b>Último resultado · {last.s.name}</b>
+            {last.s.hasResults ? (
+              <>
+                <span>
+                  {last.s.ganador ? (
+                    <>
+                      {last.s.kind === "practica" || last.s.kind === "clasificacion" ? "Mejor tiempo" : "Ganó"}: <Piloto name={last.s.ganador.name} slug={last.s.ganador.slug} />
+                    </>
+                  ) : (
+                    "Resultados parciales"
+                  )}
+                </span>
+                {last.s.argentinos.length > 0 && (
+                  <span className="momento-args-line">
+                    Argentinos: <Argentinos rows={last.s.argentinos} />
+                  </span>
+                )}
+              </>
+            ) : (
+              <span>{last.s.motivo ?? "Resultados todavía no publicados"}</span>
+            )}
+            {sinResultados && (
+              <small className="momento-faltan">
+                {sinResultados.s.name}: {(sinResultados.s.motivo ?? "resultados todavía no publicados").replace(/^./, (m) => m.toLowerCase())}
+              </small>
+            )}
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
+export function Momento({ data, now: serverNow, simulated, broadcasts, tiemposUrl, piloto, evento }: { data: MomentoData; now: string; simulated?: boolean; broadcasts: Pick<Broadcast, "name">[]; tiemposUrl?: string; piloto?: boolean; evento?: boolean }) {
   // "Próxima" pasa a "En vivo" y a "Terminó" solo, aunque el HTML sea de hace un minuto.
   const now = useNow(serverNow, simulated);
   const { modo, fecha, ultimaFecha, proximaFecha } = data;
   const title = (prefix: string, f: Fecha) => `${prefix}: ${placeName(f)}`;
+
+  // En la página de un evento es una franja corta: la fecha ya es el tema de la página.
+  if (evento) return <Ahora data={data} now={now} tiemposUrl={tiemposUrl} />;
 
   // En la ficha de un piloto, entre semana no hay bloque (la portada ya dice cuál es su próxima sesión); si la fecha
   // terminó hace poco, se ve la misma lista de sesiones, con su posición en cada una.
