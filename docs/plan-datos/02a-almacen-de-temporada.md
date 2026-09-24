@@ -2,6 +2,8 @@
 
 Leer primero `docs/plan-datos/00-indice.md`. Supone terminada la etapa 01.
 
+> **No mergear esta etapa sola.** Con 02a el sitio lee del almacén, pero hasta 02b nadie escribe ahí: la sync sigue actualizando sólo el archivo del repo, y el sitio quedaría congelado en la siembra (salvo lo caliente de F1). 02b se arma sobre la rama de 02a y se mergean juntas: primero 02a, enseguida 02b.
+
 ## Objetivo
 
 Que exista **una** temporada vigente, guardada en Neon con un número de versión, y que todo el sitio la lea de ahí. En esta etapa sólo se construye el almacén y el lector. Los escritores vienen en 02b (sync) y 02c (refresco caliente). Hasta entonces, el almacén tiene la instantánea sembrada y `withHotSources` sigue aplicándose encima, como en la etapa 01.
