@@ -2,7 +2,7 @@ import { drivers } from "@/data/drivers";
 import { legends } from "@/data/legends";
 import { series } from "@/data/series";
 import { horarioSeriesSlug, horarioSeriesIds } from "./horarios";
-import { getNotes } from "./notas";
+import type { Nota } from "@/data/notas";
 import type { Scope } from "./types";
 
 // Estructura del menú principal: cada ítem lleva sus subelementos. Se arma en el servidor con los datos del sitio (categorías,
@@ -40,7 +40,8 @@ const byScope = (make: (s: (typeof series)[number]) => MenuLink | null): MenuGro
 
 const chip = (s: (typeof series)[number]) => ({ code: s.code, color: s.color });
 
-export function getMenu(): MenuItem[] {
+/** `notes`: las notas más recientes, ya ordenadas (las de medios y las crónicas automáticas; ver getAllNotes en notas.ts). */
+export function getMenu(notes: Nota[]): MenuItem[] {
   const hasHorario = new Set(horarioSeriesIds());
   const seriesById = new Map(series.map((s) => [s.id, s]));
 
@@ -95,7 +96,7 @@ export function getMenu(): MenuItem[] {
     {
       href: "/notas",
       label: "Notas",
-      groups: [{ label: "Últimas notas", links: getNotes().slice(0, 4).map((n) => ({ label: n.title, href: `/notas/${n.slug}`, hint: n.source.medio })) }],
+      groups: [{ label: "Últimas notas", links: notes.slice(0, 4).map((n) => ({ label: n.title, href: `/notas/${n.slug}`, hint: n.source.medio })) }],
       all: { label: "Todas las notas", href: "/notas" },
     },
     {
