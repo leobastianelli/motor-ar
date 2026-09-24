@@ -23,13 +23,16 @@ import {
   withConflicts,
 } from "../src/lib/monitor/checks.mjs";
 import { renderAlerts, sendTelegram } from "../src/lib/monitor/telegram.mjs";
+import { loadSeason } from "./season-source.mjs";
 
 const DRY = process.argv.includes("--dry");
 const NOW = process.env.GUARDIAN_NOW ?? new Date().toISOString();
 const STATE_PATH = process.env.ALERT_STATE ?? ".alert-state.json";
 const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
 
-const snapshot = JSON.parse(fs.readFileSync(process.env.SEASON_FILE ?? "src/data/season-2026.json", "utf8"));
+// Mira lo que el sitio muestra: la última versión del almacén (con DATABASE_URL); si no hay o falla, el archivo del repo.
+const { raw: snapshot, label: seasonLabel, createdAt: seasonCreatedAt } = await loadSeason(process.env.SEASON_FILE ?? "src/data/season-2026.json");
+console.log(`Datos: ${seasonLabel}`);
 const manual = JSON.parse(fs.readFileSync("src/data/manual-overrides.json", "utf8"));
 const state = fs.existsSync(STATE_PATH) ? JSON.parse(fs.readFileSync(STATE_PATH, "utf8")) : emptyState();
 
@@ -101,11 +104,12 @@ function summary() {
     return `• ${dayLabel(e.sessions[0].start)} ${name(e.seriesId)} · ${e.circuit?.city ?? e.name}: ${mark}`;
   };
   const active = Object.values(next.alerts).filter((a) => a.active && a.severity !== "info").length;
-  const age = Math.round((nowMs - Date.parse(snapshot.generatedAt)) / 3600_000);
+  // Una sincronización sin cambios no escribe versión nueva, así que la edad es la de la última versión escrita, no la de la última corrida.
+  const age = Math.round((nowMs - Date.parse(seasonCreatedAt ?? snapshot.generatedAt)) / 3600_000);
   return [
     `☀️ Fierros: resumen del día`,
     active ? `⚠️ ${active} ${active === 1 ? "problema abierto" : "problemas abiertos"}.` : "✅ Todo al día: ningún problema abierto.",
-    `Datos sincronizados hace ${age} h.`,
+    `Última versión de datos (${seasonLabel}): hace ${age} h.`,
     "",
     soon.length ? "Próximos 5 días:" : "No hay eventos en los próximos 5 días.",
     ...soon.map(line),

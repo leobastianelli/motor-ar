@@ -12,7 +12,7 @@ const sql = neon(url);
 await sql`
   CREATE TABLE IF NOT EXISTS season_versions (
     id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    parent_id INTEGER REFERENCES season_versions(id),
+    parent_id INTEGER REFERENCES season_versions(id) ON DELETE SET NULL,
     origin TEXT NOT NULL CHECK (origin IN ('seed', 'sync', 'hot')),
     generated_at TIMESTAMPTZ NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
@@ -20,6 +20,10 @@ await sql`
     body TEXT NOT NULL
   )
 `;
+
+// Tablas creadas antes de 02b tienen la clave sin ON DELETE: sin esto la poda de versiones viejas (writeVersion) no puede borrar el eslabón más antiguo.
+await sql`ALTER TABLE season_versions DROP CONSTRAINT IF EXISTS season_versions_parent_id_fkey`;
+await sql`ALTER TABLE season_versions ADD CONSTRAINT season_versions_parent_id_fkey FOREIGN KEY (parent_id) REFERENCES season_versions(id) ON DELETE SET NULL`;
 
 const [{ n }] = await sql`SELECT count(*)::int AS n FROM season_versions`;
 if (n === 0) {

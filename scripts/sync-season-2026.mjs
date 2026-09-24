@@ -1,7 +1,10 @@
-// Regenera la instantánea src/data/season-2026.json (respaldo del sitio y datos de compilación).
-// El sitio en producción refresca estos datos solo; este script sirve para actualizar el repo.
+// Sincronización completa de la temporada. Con DATABASE_URL: parte de la última versión del almacén (Neon), escribe una versión nueva
+// (fusionando con lo que otro escritor haya guardado mientras corría) y le avisa al sitio con /api/refresh. Sin DATABASE_URL (uso local):
+// parte del archivo. En ambos casos regenera src/data/season-2026.json (respaldo y datos de compilación) y drivers-2026.json.
 // Uso: npm run sync:season
 import fs from "node:fs";
+import { writeVersion } from "../src/lib/season-store-write.mjs";
+import { loadSeason } from "./season-source.mjs";
 import { repairMojibake } from "../src/lib/sources/common.mjs";
 import { buildDriverIndex } from "../src/lib/sources/driver-index.mjs";
 import { buildSeason } from "../src/lib/sources/season.mjs";
@@ -33,7 +36,9 @@ async function bytes(url) {
 const io = { text, bytes, json: async (url, options) => JSON.parse(await text(url, options)), wiki: (key) => text(wikiRawUrl(key)), sleep, timingWindowDays: Number(process.env.TIMING_DAYS ?? 400), timingDelayMs: 700 };
 
 const OUTPUT = "src/data/season-2026.json";
-const previous = fs.existsSync(OUTPUT) ? JSON.parse(fs.readFileSync(OUTPUT, "utf8")) : undefined;
+const start = await loadSeason(OUTPUT, { requireStore: true });
+const previous = start.raw;
+console.log(`Se parte de: ${start.label}`);
 
 const season = await buildSeason(io, previous, (label, part) => {
   const sessions = part.events.flatMap((e) => e.sessions);
@@ -43,12 +48,32 @@ const season = await buildSeason(io, previous, (label, part) => {
 });
 for (const failure of season.failures) console.error(`ERROR ${failure} (se conservan los datos anteriores)`);
 
-fs.writeFileSync(OUTPUT, JSON.stringify(season, null, 2));
+// Con almacén: se publica como versión nueva (fusionada con lo que otro escritor haya guardado mientras tanto). `saved` es lo que quedó vigente,
+// y es lo que va al archivo de respaldo y al índice de pilotos.
+let saved = season;
+if (start.sql) {
+  const written = await writeVersion(start.sql, { raw: season, parentId: start.versionId, origin: "sync" });
+  saved = written.raw;
+  console.log(written.unchanged ? `Sin cambios: sigue vigente la versión ${written.id} del almacén.` : `Versión ${written.id} escrita en el almacén.`);
+}
+
+fs.writeFileSync(OUTPUT, JSON.stringify(saved, null, 2));
 console.log(`\n${season.events.length} eventos → ${OUTPUT}`);
 
 // Índice de pilotos: se completa con lo nuevo y conserva a todos los que ya estaban.
 const INDEX = "src/data/drivers-2026.json";
 const previousIndex = fs.existsSync(INDEX) ? JSON.parse(fs.readFileSync(INDEX, "utf8")) : undefined;
-const index = buildDriverIndex(season, previousIndex);
+const index = buildDriverIndex(saved, previousIndex);
 fs.writeFileSync(INDEX, JSON.stringify(index, null, 2));
 console.log(`${index.drivers.length} pilotos → ${INDEX}`);
+
+// Avisa al sitio que hay datos vigentes (revalida las páginas). Si falla, la corrida falla: el guardián avisa y no queda una versión escrita
+// que el sitio no muestra sin que nadie se entere.
+if (start.sql) {
+  const site = (process.env.SITE_URL ?? "https://www.somosfierros.ar").replace(/\/$/, "");
+  const secret = process.env.CRON_SECRET;
+  if (!secret) throw new Error("Falta CRON_SECRET: sin él no se puede invalidar el sitio (/api/refresh)");
+  const res = await fetch(`${site}/api/refresh`, { headers: { authorization: `Bearer ${secret}` }, signal: AbortSignal.timeout(60_000) });
+  if (!res.ok) throw new Error(`/api/refresh respondió ${res.status}: el sitio no se invalidó`);
+  console.log(`Sitio invalidado (${site}/api/refresh → ${res.status}).`);
+}
