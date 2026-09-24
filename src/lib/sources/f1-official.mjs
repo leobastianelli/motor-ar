@@ -117,7 +117,9 @@ export async function f1OfficialSessions(io, events, previous, { windowDays = 10
   if (!events.some(pending)) return { events, meta: { f1Official: { requests: 0, sessionsWithResults: 0, errors: [] } } };
 
   const f1Events = events.filter((e) => e.seriesId === "f1").sort((a, b) => (a.round ?? 0) - (b.round ?? 0));
-  const index = parseIndex(await io.text(`${BASE}`, { revalidate: 3600 }));
+  // Una sesión que termina recién aparece en el índice cuando se refresca: misma regla que las páginas de sesión.
+  const recent = events.some((e) => e.seriesId === "f1" && e.sessions.some((s) => BY_NAME.has(s.name) && sessionEnd(s) <= now && now - sessionEnd(s) < 6 * HOUR));
+  const index = parseIndex(await io.text(`${BASE}`, { revalidate: recent ? 120 : 6 * 3600 }));
   if (index.length !== f1Events.length) throw new Error(`el índice oficial lista ${index.length} fechas y el calendario ${f1Events.length}`);
   const pageOf = new Map(f1Events.map((e, i) => [e.id, index[i]]));
 

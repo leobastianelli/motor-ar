@@ -1,3 +1,4 @@
+import { cache } from "react";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { drivers } from "@/data/drivers";
 import history from "@/data/history.json";
@@ -438,8 +439,9 @@ export type Season = ReturnType<typeof createSeason>;
 
 let cached: { raw: RawSeason; season: Season } | null = null;
 
-export async function getSeason(): Promise<Season> {
+/** Una sola temporada por pedido: el layout, la página y los metadatos comparten el resultado. */
+export const getSeason = cache(async (): Promise<Season> => {
   const raw = await loadRawSeason();
   if (cached?.raw !== raw) cached = { raw, season: createSeason(raw) };
   return cached.season;
-}
+});

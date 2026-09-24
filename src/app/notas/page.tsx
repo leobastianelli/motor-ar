@@ -11,8 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/notas" },
 };
 
-// Depende de los resultados que van entrando: se arma en cada pedido (con los datos de la temporada ya en caché), no queda una copia vieja.
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 
 export default async function NotasPage() {
   const norm = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
