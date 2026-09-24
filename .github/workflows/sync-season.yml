@@ -1,5 +1,5 @@
-# Actualiza la instantánea de la temporada (src/data/season-2026.json) desde las fuentes y la sube al repo.
-# Vercel publica solo cada push, así los resultados quedan guardados aunque salgan de la ventana de 10 días del sitio.
+# Sincroniza la temporada desde las fuentes y la escribe en el almacén (tabla season_versions de Neon), que es lo que lee el sitio; después invalida las
+# páginas (/api/refresh). La instantánea src/data/season-2026.json es sólo el respaldo: se sube al repo una vez por día (vercel.json evita redesplegar por ella).
 name: Sincronizar temporada
 
 on:
@@ -43,9 +43,14 @@ jobs:
       run: ${{ steps.decide.outputs.run }}
     steps:
       - uses: actions/checkout@v4
+      # La compuerta lee el almacén (el archivo del repo ya no se actualiza cada hora). Sólo necesita el driver de Neon, no todo el árbol de dependencias.
+      - name: Instalar el driver de Neon
+        if: github.event.schedule == '20 6-23 * * 0,4,5,6'
+        run: npm install --no-save --no-package-lock --ignore-scripts @neondatabase/serverless
       - id: decide
         env:
           SCHEDULE: ${{ github.event.schedule }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           if [ "$SCHEDULE" = "20 6-23 * * 0,4,5,6" ]; then
             node scripts/pending-sessions.mjs | tee /tmp/gate.txt
@@ -73,20 +78,32 @@ jobs:
         env:
           TIMING_DAYS: ${{ github.event.inputs.timing_days || '21' }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          # Tiene que ser el mismo valor que CRON_SECRET en Vercel: /api/refresh lo exige.
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
         run: npm run sync:season
 
+      # drivers-2026.json lo importa el código, así que su cambio se commitea siempre (y despliega). La instantánea de la temporada es el respaldo:
+      # se commitea sólo en la corrida diaria de las 09:00 UTC o a mano.
       - name: Subir cambios
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+          EVENT: ${{ github.event_name }}
         run: |
+          FILES="src/data/drivers-2026.json"
+          if [ "$SCHEDULE" = "0 9 * * *" ] || [ "$EVENT" = "workflow_dispatch" ]; then
+            FILES="$FILES src/data/season-2026.json"
+          fi
           git add -N src/data/drivers-2026.json 2>/dev/null || true
-          if git diff --quiet -- src/data/season-2026.json src/data/drivers-2026.json; then
-            echo "Sin cambios en la temporada ni en los pilotos."
+          if git diff --quiet -- $FILES; then
+            echo "Sin cambios que subir al repo ($FILES)."
             exit 0
           fi
           # Vercel bloquea deploys cuyo commit no venga de un email asociado a una cuenta de GitHub,
           # así que se commitea con el email de la cuenta en vez de uno de bot.
           git config user.name "fierros-sync"
           git config user.email "leonelbastianelli@gmail.com"
-          git add src/data/season-2026.json src/data/drivers-2026.json
+          git add $FILES
           git commit -m "datos: sincronización automática de la temporada"
           # La sincronización tarda varios minutos y en ese lapso puede entrar otro commit a main (un PR, otra corrida): en vez de fallar, se
           # reaplica el commit de datos sobre lo nuevo (`-X theirs` en un rebase = gana la instantánea recién generada) y se reintenta.
