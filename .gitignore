@@ -48,3 +48,4 @@ next-env.d.ts
 # Estado local del guardián y del vigilante
 .alert-state.json
 .watchdog-state.json
+.redes-state.json
