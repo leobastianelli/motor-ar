@@ -15,11 +15,7 @@ const FILTERS: { id: Scope | "all"; label: string }[] = [
   { id: "zonal", label: "Zonales" },
 ];
 
-const VIEWS = [
-  { id: "hora", label: "Por hora" },
-  { id: "categoria", label: "Por categoría" },
-] as const;
-type View = (typeof VIEWS)[number]["id"];
+type View = "hora" | "categoria";
 
 const end = (i: FeedItem) => new Date(i.session.start).getTime() + i.session.durationMin * 60000;
 
@@ -71,14 +67,6 @@ export function Agenda({ items, days, today, now: serverNow, simulated }: { item
         </div>
       </SectionTitle>
 
-      <div className="filters agenda-views" role="group" aria-label="Ordenar agenda">
-        {VIEWS.map((v) => (
-          <button key={v.id} type="button" className={v.id === view ? "is-selected" : undefined} aria-pressed={v.id === view} onClick={() => setView(v.id)}>
-            {v.label}
-          </button>
-        ))}
-      </div>
-
       {visibleDays.length > 1 && (
         <div className="day-tabs" role="group" aria-label="Día" style={{ gridTemplateColumns: `repeat(${visibleDays.length}, 1fr)` }}>
           {visibleDays.map((d) => (
@@ -88,6 +76,11 @@ export function Agenda({ items, days, today, now: serverNow, simulated }: { item
           ))}
         </div>
       )}
+
+      {/* Cambiar de vista es secundario: un enlace de texto, no otra fila de botones antes de ver la primera sesión. */}
+      <button type="button" className="agenda-view-toggle" onClick={() => setView(view === "hora" ? "categoria" : "hora")}>
+        {view === "hora" ? "Ver por categoría" : "Ver por hora"}
+      </button>
 
       <div className="schedule">
         {view === "hora" && <ByTime rows={rows} now={now} />}
@@ -130,21 +123,22 @@ function ByTime({ rows, now }: { rows: FeedItem[]; now: string }) {
   const row = ({ session, event, series }: FeedItem) => {
     const state = sessionState(session, now);
     const others = coincide.get(session.id) ?? [];
+    // "Próxima" en todas las filas es ruido: el estado se muestra sólo cuando dice algo (en vivo, en 20 min, mañana, terminó).
+    const showState = !(state.kind === "upcoming" && state.label === "Próxima");
     return (
-      <Link key={session.id} href={`/eventos/${event.id}`} className={`schedule-row agenda-row list-link${state.kind === "live" ? " current" : ""}`} style={{ "--cat": series.color } as CSSProperties}>
+      <Link key={session.id} href={`/eventos/${event.id}`} className={`schedule-row agenda-row list-link${state.kind === "live" ? " current" : ""}`}>
         <time dateTime={session.start} title={session.timeKnown === false ? "Horario a confirmar" : undefined}>
           {sessionTime(session)}
         </time>
-        <div>
-          <strong>
-            <Code series={series} /> {session.name}
-          </strong>
-          <span>
+        <div className="agenda-main">
+          <strong>{session.name}</strong>
+          <span className="agenda-meta">
+            <Code series={series} />
             {series.name} · {event.circuit.city}
-            {others.length > 0 && <em className="agenda-overlap"> · Coincide con {others.join(", ")}</em>}
           </span>
+          {others.length > 0 && <span className="agenda-overlap">Coincide con {others.join(", ")}</span>}
         </div>
-        <StateTag kind={state.kind}>{state.label}</StateTag>
+        {showState && <StateTag kind={state.kind}>{state.label}</StateTag>}
       </Link>
     );
   };
