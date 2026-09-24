@@ -11,6 +11,26 @@
         { "kind": "carrera", "name": "Carrera principal 2", "id": "f2-2026-12-carrera-2", "start": "2026-09-26T04:00:00-03:00", "timeKnown": true, "durationMin": 65, "timeSources": [{ "name": "FIA Formula 2 (horarios oficiales)", "url": "https://www.fiaformula2.com/en/racing/2026/baku", "start": "2026-09-26T04:00:00-03:00" }] }
       ]
     },
+    "tcpk-2026-8": {
+      "sessions": [
+        { "kind": "practica", "name": "1° Entrenamiento", "start": "2026-09-26T09:50:00-03:00", "timeKnown": true, "timeStatus": "tentative", "durationMin": 65, "timeSources": [{ "name": "Carburando (cronograma del fin de semana)", "url": "https://www.carburando.com/notas/tc-pick-up-en-balcarce-los-horarios-y-cronograma-completo-1", "start": "2026-09-26T09:50:00-03:00" }] },
+        { "kind": "practica", "name": "2° Entrenamiento", "start": "2026-09-26T12:10:00-03:00", "timeKnown": true, "timeStatus": "tentative", "durationMin": 45, "timeSources": [{ "name": "Carburando (cronograma del fin de semana)", "url": "https://www.carburando.com/notas/tc-pick-up-en-balcarce-los-horarios-y-cronograma-completo-1", "start": "2026-09-26T12:10:00-03:00" }] },
+        { "kind": "clasificacion", "name": "Clasificación", "start": "2026-09-26T16:10:00-03:00", "timeKnown": true, "timeStatus": "tentative", "durationMin": 40, "timeSources": [{ "name": "Carburando (cronograma del fin de semana)", "url": "https://www.carburando.com/notas/tc-pick-up-en-balcarce-los-horarios-y-cronograma-completo-1", "start": "2026-09-26T16:10:00-03:00" }] },
+        { "kind": "serie", "name": "Serie 1", "start": "2026-09-27T11:35:00-03:00", "timeKnown": true, "timeStatus": "tentative", "durationMin": 20, "timeSources": [{ "name": "Carburando (cronograma del fin de semana)", "url": "https://www.carburando.com/notas/tc-pick-up-en-balcarce-los-horarios-y-cronograma-completo-1", "start": "2026-09-27T11:35:00-03:00" }] },
+        { "kind": "serie", "name": "Serie 2", "start": "2026-09-27T12:00:00-03:00", "timeKnown": true, "timeStatus": "tentative", "durationMin": 20, "timeSources": [{ "name": "Carburando (cronograma del fin de semana)", "url": "https://www.carburando.com/notas/tc-pick-up-en-balcarce-los-horarios-y-cronograma-completo-1", "start": "2026-09-27T12:00:00-03:00" }] },
+        { "kind": "final", "name": "Final", "start": "2026-09-27T14:10:00-03:00", "timeKnown": true, "timeStatus": "tentative", "durationMin": 40, "timeSources": [{ "name": "Carburando (cronograma del fin de semana)", "url": "https://www.carburando.com/notas/tc-pick-up-en-balcarce-los-horarios-y-cronograma-completo-1", "start": "2026-09-27T14:10:00-03:00" }] }
+      ]
+    },
+    "tcppk-2026-8": {
+      "sessions": [
+        { "kind": "practica", "name": "1° Entrenamiento", "start": "2026-09-26T09:05:00-03:00", "timeKnown": true, "timeStatus": "tentative", "durationMin": 40, "timeSources": [{ "name": "Carburando (cronograma del fin de semana)", "url": "https://www.carburando.com/notas/tc-pick-up-en-balcarce-los-horarios-y-cronograma-completo-1", "start": "2026-09-26T09:05:00-03:00" }] },
+        { "kind": "practica", "name": "2° Entrenamiento", "start": "2026-09-26T11:35:00-03:00", "timeKnown": true, "timeStatus": "tentative", "durationMin": 30, "timeSources": [{ "name": "Carburando (cronograma del fin de semana)", "url": "https://www.carburando.com/notas/tc-pick-up-en-balcarce-los-horarios-y-cronograma-completo-1", "start": "2026-09-26T11:35:00-03:00" }] },
+        { "kind": "clasificacion", "name": "Clasificación", "start": "2026-09-26T15:20:00-03:00", "timeKnown": true, "timeStatus": "tentative", "durationMin": 40, "timeSources": [{ "name": "Carburando (cronograma del fin de semana)", "url": "https://www.carburando.com/notas/tc-pick-up-en-balcarce-los-horarios-y-cronograma-completo-1", "start": "2026-09-26T15:20:00-03:00" }] },
+        { "kind": "serie", "name": "Serie 1", "start": "2026-09-27T10:45:00-03:00", "timeKnown": true, "timeStatus": "tentative", "durationMin": 20, "timeSources": [{ "name": "Carburando (cronograma del fin de semana)", "url": "https://www.carburando.com/notas/tc-pick-up-en-balcarce-los-horarios-y-cronograma-completo-1", "start": "2026-09-27T10:45:00-03:00" }] },
+        { "kind": "serie", "name": "Serie 2", "start": "2026-09-27T11:10:00-03:00", "timeKnown": true, "timeStatus": "tentative", "durationMin": 20, "timeSources": [{ "name": "Carburando (cronograma del fin de semana)", "url": "https://www.carburando.com/notas/tc-pick-up-en-balcarce-los-horarios-y-cronograma-completo-1", "start": "2026-09-27T11:10:00-03:00" }] },
+        { "kind": "final", "name": "Final", "start": "2026-09-27T13:10:00-03:00", "timeKnown": true, "timeStatus": "tentative", "durationMin": 30, "timeSources": [{ "name": "Carburando (cronograma del fin de semana)", "url": "https://www.carburando.com/notas/tc-pick-up-en-balcarce-los-horarios-y-cronograma-completo-1", "start": "2026-09-27T13:10:00-03:00" }] }
+      ]
+    },
     "tn-2026-9": {
       "sessions": [
         { "kind": "practica", "name": "1° Entrenamiento Clase 2", "start": "2026-09-19T08:40:00-03:00", "timeKnown": true, "durationMin": 65, "timeSources": [{ "name": "APAT (Instagram @apat_tn)", "url": "https://www.instagram.com/apat_tn/", "start": "2026-09-19T08:40:00-03:00" }] },
