@@ -1,6 +1,6 @@
 # 05 — Medición (ya) y URL descriptivas (después, con datos)
 
-## Parte A — Medición. La hace el dueño y conviene hacerla YA, antes de la etapa 01
+## Parte A — Medición (Search Console ya está verificado y en uso; el punto de partida del 24/09 está en `00-indice.md`)
 
 Sin esto no hay forma de saber si los cambios de producto y de SEO sirven.
 

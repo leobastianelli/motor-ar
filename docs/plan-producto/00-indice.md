@@ -29,9 +29,25 @@ La home cambia el orden de sus secciones según el momento: en pista, fin de sem
 | S5 | `lastModified` del sitemap es "ahora" para las 442 URL | Google aprende a ignorar esa fecha. |
 | S6 | Hay encabezados antes del `<h1>` en todas las páginas | El menú desplegable usa `<h3>` ("Nacionales", "Internacionales"…). |
 | S7 | Las URL de los eventos no dicen nada | `/eventos/f1-2026-15` en vez de algo como `/f1/2026/gp-de-azerbaiyan`. |
-| S8 | No se sabe qué busca la gente | No hay verificación de Google Search Console en el HTML (puede estar hecha por DNS: confirmarlo). Sin eso no se puede medir nada de esto. |
+| S8 | Medición | Search Console ya está verificado y en uso. El punto de partida está en la sección de abajo. |
 
 Lo que ya está bien: las páginas `/horarios/...` ("A qué hora corre Franco Colapinto: horario y dónde verlo"), los datos estructurados de eventos (`SportsEvent`) y de notas (`Article`), las URL canónicas, el `robots.txt` y la velocidad (0,2 a 0,8 s).
+
+## Qué dice Search Console (exportado el 24/09/2026: el sitio aparece en Google desde el 15/09)
+
+Son pocos datos (12 clics, 249 impresiones), pero la dirección es clara:
+
+1. **La gente busca horarios.** 68 de las 79 consultas incluyen "horario", "hora" u "hoy" ("a qué hora es la carrera de f1", "tc hoy", "horarios turismo pista").
+2. **Donde ya aparecemos arriba es en lo argentino y lo de nicho, no en la F1 genérica.**
+   - Primera página: fichas de pilotos nacionales (Teti 7.º, Tartaglino 7,4, Conde 7,8, Cifre 9,6, Maceira 10), `/horarios/julian-santero` (2.º), `/horarios/tc-pick-up` (8,5, **7 de los 12 clics**) y `/horarios/formula-2` (13,9, 3 clics).
+   - Las consultas genéricas de F1 ("horario f1", 55 variantes) están en la posición 64 promedio: compiten con Olé, TyC e Infobae.
+3. **El formato que funciona es el de `/horarios/...`**: título con "A qué hora…/Horario de… y dónde verlo". Las etapas 02 y 04 tienen que llevar ese formato a pilotos, categorías y eventos.
+4. **Móvil primero:** posición media 7,5 en el celular contra 44 en la computadora. Las capturas en 375 px no son opcionales.
+
+Qué cambia en el plan:
+- **La ficha del piloto (etapa 02) es la de más retorno:** ya rankea y es donde entra la gente que busca a un piloto por nombre. Va inmediatamente después de la 01.
+- En la etapa 04, priorizar los títulos de pilotos, horarios y categorías nacionales ("TC hoy", "TC Pick Up hoy"). La F1 genérica se gana a través de Colapinto y de los eventos ("GP de X 2026 horario Argentina"), no de "horario f1".
+- **Hallazgo de calidad:** 19 fichas de pilotos de TN tienen el nombre roto ("Agustãn Bonomo", `/pilotos/agusta-n-bonomo`), y Google ya indexó al menos una. Quedó como tarea aparte: arreglar la fuente, corregir los nombres y redirigir con 301.
 
 ## La solución en una línea
 
@@ -47,7 +63,7 @@ Una sola pieza, **"el momento"**, que para una categoría, un piloto o un evento
 | `04-seo-titulos-y-sitemap.md` | Títulos y descripciones según el momento, crónicas en el sitemap, `lastModified` real, encabezados del menú | Sonnet | Chico |
 | `05-urls-y-medicion.md` | Search Console y medición. Después, con datos, URL descriptivas con redirecciones 301 | Dueño + Sonnet | Chico, pero delicado |
 
-**Lo único urgente de la etapa 05 es la parte del dueño (Search Console), que se puede hacer ya.** El cambio de URL va al final y se decide con datos.
+Search Console ya está en uso. De la etapa 05 queda el cambio de URL, que va al final y se decide con datos.
 
 ## Reglas para todas las etapas
 
