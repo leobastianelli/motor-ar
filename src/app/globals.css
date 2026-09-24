@@ -592,7 +592,8 @@ button{color:inherit;font-family:inherit}
 .calendar-tape summary h2{margin:0;display:flex;align-items:baseline;gap:8px}
 .calendar-tape summary h2::after{content:"−";margin-left:auto}
 .calendar-tape:not([open]) summary h2::after{content:"+"}
-.calendar-tape summary h2 span{font-size:16px;font-weight:500;color:var(--muted)}
+.calendar-tape summary h2 span{font-size:16px;font-weight:500;color:var(--muted);white-space:nowrap}
+.calendar-tape summary h2{font-size:26px;flex-wrap:wrap}
 .calendar-tape[open] summary{margin-bottom:8px}
 .nuestros-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 24px}
 .nuestros-list a{display:grid;gap:2px;padding:14px 4px;border-bottom:1px solid var(--line);text-decoration:none}
@@ -600,19 +601,23 @@ button{color:inherit;font-family:inherit}
 .nuestros-list span,.nuestros-list em{font-size:14px;font-style:normal;color:var(--muted)}
 .nuestros-list a:hover strong{text-decoration:underline}
 @media(max-width:800px){
-  .category-hero{min-height:0;padding:24px 16px 104px}
-  .category-hero img{height:88px}
-  .category-hero h1{font-size:46px;padding-right:118px}
-  .category-hero .lede{margin-top:14px;font-size:15px}
+  .category-hero{min-height:0;padding:22px 16px 92px}
+  .category-hero img{height:76px}
+  .category-hero .cat-poster{top:18px;right:16px;width:88px;height:96px}
+  .category-hero .cat-poster span{font-size:34px}
+  .category-hero .cat-poster b{font-size:15px}
+  .category-hero .cat-poster small{font-size:11px}
+  .category-hero h1{font-size:46px;padding-right:108px}
+  .category-hero .lede{margin-top:12px;font-size:14px;padding-right:108px}
   .category-hero>.photo-credit{bottom:4px}
   .momento{margin-top:24px}
   .momento .section-title h2{font-size:24px;letter-spacing:-.5px}
-  .momento-row{grid-template-columns:64px 1fr;padding:10px 4px}
-  .momento-row .state{grid-column:2;justify-self:start}
+  .momento-row{grid-template-columns:60px 1fr auto;gap:8px;padding:10px 4px}
   .momento-row.is-live{padding-left:8px}
   .momento-when time{font-size:20px}
   .momento-foot{display:block}
   .momento-cta{display:block;margin-top:16px;text-align:center}
   .momento-podio{grid-template-columns:1fr}
   .calendar-tape{margin-top:32px}
+  .calendar-tape summary h2{font-size:24px}
 }

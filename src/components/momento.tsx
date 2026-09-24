@@ -13,6 +13,8 @@ type Sesion = MomentoData["sesiones"][number];
 type Fecha = NonNullable<MomentoData["fecha"]>;
 type Argentino = Sesion["argentinos"][number];
 
+/** "GP de Azerbaiyán · Baku"; si el nombre ya trae el lugar ("Fecha 11 · San Luis"), no se repite. */
+const placeName = (f: Pick<Fecha, "name" | "city">) => (f.city && !f.name.includes(f.city) ? `${f.name} · ${f.city}` : f.name);
 const shortName = (name: string) => name.split(" / ").map(surname).join(" / ");
 
 function Piloto({ name, slug }: { name: string; slug?: string }) {
@@ -59,7 +61,7 @@ function estadoVisual(s: Sesion, now: string): { kind: StateKind; label: string;
   const estado = estadoDeSesion(s, now) as Sesion["estado"];
   if (estado === "en-vivo") return { kind: "live", label: "En vivo", estado };
   if (estado === "terminada") return s.hasResults ? { kind: "finished", label: "Terminó", estado } : { kind: "no-data", label: "Sin datos", estado };
-  if (!s.timeKnown) return { kind: "upcoming", label: "Hora a confirmar", estado };
+  if (!s.timeKnown) return { kind: "upcoming", label: "A confirmar", estado };
   const minutes = (new Date(s.start).getTime() - new Date(now).getTime()) / 60000;
   return { kind: "upcoming", label: minutes <= 180 ? capitalize(relative(s.start, now)) : "Próxima", estado };
 }
@@ -75,8 +77,11 @@ function Transmision({ broadcasts }: { broadcasts: Pick<Broadcast, "name">[] }) 
 
 function Finde({ data, fecha, now, broadcasts, tiemposUrl }: { data: MomentoData; fecha: Fecha; now: string; broadcasts: Pick<Broadcast, "name">[]; tiemposUrl?: string }) {
   // El estado de cada fila se recalcula acá, con la hora del navegador; el resto (ganadores, posiciones) llegó con la página.
-  const rows = data.sesiones.map((s) => ({ s, v: estadoVisual(s, now) }));
-  const next = rows.find((r) => r.v.estado !== "terminada");
+  // Lo que pasa ahora y lo que viene va primero (en la primera pantalla del celular); lo ya corrido, después, lo más reciente arriba.
+  const all = data.sesiones.map((s) => ({ s, v: estadoVisual(s, now) }));
+  const pending = all.filter((r) => r.v.estado !== "terminada");
+  const rows = [...pending, ...all.filter((r) => r.v.estado === "terminada").reverse()];
+  const next = pending[0];
   return (
     <>
       <ol className="momento-list">
@@ -98,7 +103,7 @@ function Finde({ data, fecha, now, broadcasts, tiemposUrl }: { data: MomentoData
                     <Link href={`/eventos/${fecha.id}${tiemposUrl ? "#tiempos-en-vivo" : ""}`}>{tiemposUrl ? "Tiempos en vivo" : "Ver la fecha"}</Link>
                   </>
                 )}
-                {v.estado === "proxima" && (s.timeKnown ? `${fmtDayLong(s.start)}, ${fmtTime(s.start)} (hora argentina)` : "Horario todavía sin publicar")}
+                {v.estado === "proxima" && (s.timeKnown ? `${capitalize(relative(s.start, now))} · hora argentina` : "Horario todavía sin publicar")}
               </span>
             </span>
             <StateTag kind={v.kind}>{v.kind === "live" ? "EN VIVO" : v.label}</StateTag>
@@ -122,7 +127,7 @@ function Carrera({ fecha }: { fecha: Fecha }) {
   if (!c.hasResults || c.podio.length === 0) {
     return (
       <p className="empty-state">
-        {c.name}: {c.hasResults ? "resultados parciales, sin el podio completo" : (c.motivo ?? "resultados todavía no publicados")}.
+        Resultados de la carrera: {c.hasResults ? "parciales, sin el podio completo" : (c.motivo ?? "todavía no publicados").replace(/^./, (m) => m.toLowerCase())}.
       </p>
     );
   }
@@ -152,10 +157,7 @@ function ProximaLinea({ fecha, now }: { fecha: Fecha; now: string }) {
   const p = fecha.primeraSesion;
   return (
     <>
-      <Link href={`/eventos/${fecha.id}`}>
-        {fecha.name}
-        {fecha.city ? ` · ${fecha.city}` : ""}
-      </Link>
+      <Link href={`/eventos/${fecha.id}`}>{placeName(fecha)}</Link>
       , {fmtDayLong(p.start)}
       {p.timeKnown ? `, ${fmtTime(p.start)} (${p.name})` : ", horario a confirmar"} · {relative(p.start, now)}
     </>
@@ -166,7 +168,7 @@ export function Momento({ data, now: serverNow, simulated, broadcasts, tiemposUr
   // "Próxima" pasa a "En vivo" y a "Terminó" solo, aunque el HTML sea de hace un minuto.
   const now = useNow(serverNow, simulated);
   const { modo, fecha, ultimaFecha, proximaFecha } = data;
-  const title = (prefix: string, f: Fecha) => `${prefix}: ${f.name}${f.city ? ` · ${f.city}` : ""}`;
+  const title = (prefix: string, f: Fecha) => `${prefix}: ${placeName(f)}`;
 
   return (
     <section className={`section-block momento momento-${modo}`} aria-labelledby="momento-title">
