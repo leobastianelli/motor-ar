@@ -7,6 +7,7 @@ import { InstallPrompt } from "@/components/install-prompt";
 import { JsonLd } from "@/components/json-ld";
 import { Masthead } from "@/components/masthead";
 import { getMenu } from "@/lib/menu";
+import { getAllNotes } from "@/lib/notas";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -25,11 +26,11 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image" },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="es-AR" className={archivo.variable}>
       <body>
-        <Masthead menu={getMenu()} />
+        <Masthead menu={getMenu(await getAllNotes())} />
         <main>{children}</main>
         <Footer />
         <JsonLd
