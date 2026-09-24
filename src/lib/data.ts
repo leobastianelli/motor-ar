@@ -291,6 +291,19 @@ export function createSeason(raw: RawSeason) {
       // Lo más reciente primero; con la misma hora (p. ej. TN sin horario), la final antes que las series.
       .sort((a, b) => ms(b.session.start) - ms(a.session.start) || KIND_WEIGHT[a.session.kind] - KIND_WEIGHT[b.session.kind]);
 
+  /**
+   * Sesiones de cualquier tipo (también prácticas y clasificaciones) que terminaron hace poco y ya tienen resultados: lo primero que
+   * busca alguien que entra justo después de una sesión. Lo que terminó más recientemente va primero; a igual hora, la categoría argentina.
+   */
+  const getJustFinished = (now: string, hours = 30) =>
+    itemsAt(now)
+      .filter((i) => {
+        if (i.status !== "done" || !i.session.results?.length || i.session.timeKnown === false) return false;
+        const ended = ms(i.session.start) + i.session.durationMin * 60000;
+        return ms(now) - ended < hours * 3600000;
+      })
+      .sort((a, b) => ms(b.session.start) + b.session.durationMin * 60000 - (ms(a.session.start) + a.session.durationMin * 60000) || seriesTier(a.series) - seriesTier(b.series));
+
   const getDriverResults = (slug: string, now: string) =>
     itemsAt(now)
       .filter((i) => i.status === "done" && i.session.results?.some((r) => r.driverSlug === slug))
@@ -351,6 +364,7 @@ export function createSeason(raw: RawSeason) {
     getEventsForSeries,
     getNextSession,
     getRecentResults,
+    getJustFinished,
     getDriverResults,
     getRunnerStatus,
 

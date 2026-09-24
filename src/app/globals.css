@@ -543,3 +543,5 @@ button{color:inherit;font-family:inherit}
 }
 /* Al saltar a una sección de la home desde el menú, que no quede tapada por la cabecera fija. */
 [id="agenda"],[id="nuestros"],[id="resultados"],[id="viene"],[id="notas"]{scroll-margin-top:96px}
+
+.recent-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 32px}.recent-grid .podium{margin-bottom:24px}.podium li.podium-ours{background:var(--blue);color:var(--ink);padding-left:12px;padding-right:12px}.podium li.podium-ours div span{color:var(--ink)}

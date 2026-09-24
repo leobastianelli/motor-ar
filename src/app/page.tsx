@@ -13,14 +13,14 @@ export const metadata: Metadata = { alternates: { canonical: "/" } };
 // La home es lo que la gente mira mientras pasa la carrera: se regenera seguido, y el navegador además la vuelve a pedir solo (AutoRefresh).
 export const revalidate = 15;
 
-type SectionId = "live" | "nuestros" | "agenda" | "resultados" | "viene" | "notas";
+type SectionId = "live" | "recien" | "nuestros" | "agenda" | "resultados" | "viene" | "notas";
 
 // El orden de la home depende del momento de la semana: primero lo que más probablemente se busca, pero siempre está todo.
 const ORDER: Record<HomeMode, SectionId[]> = {
-  live: ["live", "agenda", "nuestros", "resultados", "viene", "notas"],
-  weekend: ["agenda", "nuestros", "resultados", "viene", "notas"],
+  live: ["live", "recien", "agenda", "nuestros", "resultados", "viene", "notas"],
+  weekend: ["recien", "agenda", "nuestros", "resultados", "viene", "notas"],
   results: ["resultados", "nuestros", "agenda", "viene", "notas"],
-  midweek: ["nuestros", "resultados", "agenda", "viene", "notas"],
+  midweek: ["recien", "nuestros", "resultados", "agenda", "viene", "notas"],
 };
 
 // Acceso directo a cada categoría: mucha gente entra buscando una en particular. Primero las más buscadas.
@@ -53,6 +53,8 @@ export default async function Home() {
     }))
     .sort(byAppearance);
 
+  const justFinished = season.getJustFinished(now).slice(0, 6);
+  const argentineSlugs = new Set(getDriversAbroad().map((d) => d.slug));
   const latest = season.getRecentResults(now)[0];
   const podium = season.getRecentResults(now, "nacional")[0];
   const [highlight, ...notes] = season.getArgentineHighlights(now);
@@ -216,6 +218,57 @@ export default async function Home() {
               </p>
             </Link>
           ))}
+        </div>
+      </section>
+    ),
+
+    recien: justFinished.length > 0 && (
+      <section key="recien" id="recien" className="results-band">
+        <div className="section-block">
+          <SectionTitle title="Recién terminó" inverse>
+            <Link href="/calendario">Calendario</Link>
+          </SectionTitle>
+          <div className="recent-grid">
+            {justFinished.map((i) => {
+              const ours = (i.session.results ?? []).filter((r) => r.driverSlug && argentineSlugs.has(r.driverSlug) && r.pos > 3);
+              return (
+                <article key={i.session.id} className="podium">
+                  <div className="podium-head">
+                    <div>
+                      <CategoryLabel series={i.series} detail={`${fmtDayNum(i.session.start)} ${fmtMonthShort(i.session.start)}`} href={`/categorias/${i.series.id}`} />
+                      <strong>
+                        <Link href={`/eventos/${i.event.id}`} className="list-link">
+                          {i.session.name} · {i.event.circuit.city}
+                        </Link>
+                      </strong>
+                    </div>
+                  </div>
+                  <ol>
+                    {i.session.results!.slice(0, 3).map((r) => (
+                      <li key={r.pos}>
+                        <b>{r.pos}</b>
+                        <div>
+                          <strong>{r.driver}</strong>
+                          <span>{r.team}</span>
+                        </div>
+                        <time>{r.gap}</time>
+                      </li>
+                    ))}
+                    {ours.map((r) => (
+                      <li key={`ours-${r.pos}`} className="podium-ours">
+                        <b>{r.pos}</b>
+                        <div>
+                          <strong>{r.driver}</strong>
+                          <span>{r.team}</span>
+                        </div>
+                        <time>{r.gap}</time>
+                      </li>
+                    ))}
+                  </ol>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </section>
     ),
