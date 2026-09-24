@@ -3,14 +3,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { breadcrumb, JsonLd } from "@/components/json-ld";
+import { CalendarioPlegable } from "@/components/calendario-plegable";
+import { AutoRefresh } from "@/components/live-clock";
+import { Momento } from "@/components/momento";
 import { NotesBlock } from "@/components/notas";
 import { PhotoCredit, SectionTitle } from "@/components/pista";
 import { notesForSeries } from "@/lib/notas";
-import { getAllSeries, getHistory, getNow, getSeason, getSeries } from "@/lib/data";
+import { getAllSeries, getHistory, getNow, getSeason, getSeries, isSimulatedNow } from "@/lib/data";
+import { drivers } from "@/data/drivers";
 import { getPhoto } from "@/lib/photos";
-import { fmtDayNum, fmtMonthShort, surname } from "@/lib/format";
+import { fmtDayNum, fmtMonthShort, fmtRange, surname } from "@/lib/format";
 import { OG_DEFAULTS } from "@/lib/site";
-import type { CategoryHistory, StandingRow } from "@/lib/types";
+import type { CategoryHistory, RaceEvent, StandingRow } from "@/lib/types";
 
 export const revalidate = 60;
 
@@ -28,6 +32,15 @@ export async function generateMetadata(props: PageProps<"/categorias/[slug]">): 
 
 const SCOPE_LABEL = { nacional: "Automovilismo nacional", internacional: "Categoría internacional", zonal: "Automovilismo zonal" };
 const shortDate = (iso: string) => `${fmtDayNum(iso).padStart(2, "0")} ${fmtMonthShort(iso)}`;
+
+/** Día de la carrera principal de una fecha; si no la hay cargada, el rango de días de la fecha. */
+function raceDay(e: RaceEvent) {
+  const race = e.sessions.filter((s) => s.kind === "carrera" || s.kind === "final").at(-1);
+  if (race) return { value: shortDate(race.start), note: `${e.circuit.city} · carrera` };
+  const first = e.sessions[0].start;
+  const last = e.sessions.at(-1)!.start;
+  return { value: shortDate(last), note: `${e.circuit.city} · ${fmtRange(first, last).replace(/ de w+$/, "")}` };
+}
 
 function curiosity(history: CategoryHistory) {
   const first = history.champions[0];
@@ -161,6 +174,9 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
   const history = getHistory(series.id);
   const photo = getPhoto(`series-${series.id}`);
   const nameParts = series.name.split(" ");
+  const momento = season.getMomentoCategoria(series.id, now);
+  const momentoEvent = momento.fecha ? season.getEvent(momento.fecha.id) : undefined;
+  const nuestros = drivers.filter((d) => d.seriesId === series.id);
 
   return (
     <>
@@ -208,6 +224,15 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
         )}
       </section>
 
+      <Momento
+        data={momento}
+        now={now}
+        simulated={isSimulatedNow()}
+        broadcasts={(momentoEvent?.broadcasts ?? []).map((b) => ({ name: b.name }))}
+        tiemposUrl={momentoEvent?.broadcasts.find((b) => b.kind === "timing")?.url}
+      />
+      {(momento.modo === "en-pista" || momento.modo === "finde") && <AutoRefresh everyMs={60_000} />}
+
       <section className="season-ribbon category-stats">
         <div>
           <span>Temporada</span>
@@ -232,8 +257,8 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
         </div>
         <div>
           <span>Próxima</span>
-          <strong>{next ? shortDate(next.sessions.at(-1)!.start) : "—"}</strong>
-          {next && <small>{next.circuit.city}</small>}
+          <strong>{next ? raceDay(next).value : "—"}</strong>
+          {next && <small>{raceDay(next).note}</small>}
         </div>
       </section>
 
@@ -263,24 +288,28 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
             </p>
           )}
         </div>
-        <aside className="calendar-tape" style={{ borderTopColor: series.color }}>
-          <h2>Calendario</h2>
+        <aside>
           {events.length > 0 ? (
-            <ol>
-              {events.map((e) => (
-                <li key={e.id} className={season.getNextSession(e, now) ? undefined : "done"}>
-                  <b>{String(e.round).padStart(2, "0")}</b>
-                  <span>
-                    <Link href={`/eventos/${e.id}`} className="list-link">
-                      {e.circuit.city}
-                    </Link>
-                  </span>
-                  <time>{shortDate(e.sessions.at(-1)!.start)}</time>
-                </li>
-              ))}
-            </ol>
+            <CalendarioPlegable total={events.length} color={series.color}>
+              <ol>
+                {events.map((e) => (
+                  <li key={e.id} className={season.getNextSession(e, now) ? undefined : "done"}>
+                    <b>{String(e.round).padStart(2, "0")}</b>
+                    <span>
+                      <Link href={`/eventos/${e.id}`} className="list-link">
+                        {e.circuit.city}
+                      </Link>
+                    </span>
+                    <time>{shortDate(e.sessions.at(-1)!.start)}</time>
+                  </li>
+                ))}
+              </ol>
+            </CalendarioPlegable>
           ) : (
-            <p className="empty-state">Sin fechas cargadas.</p>
+            <div className="calendar-tape" style={{ borderTopColor: series.color }}>
+              <h2>Calendario</h2>
+              <p className="empty-state">Sin fechas cargadas.</p>
+            </div>
           )}
         </aside>
       </section>
@@ -303,6 +332,28 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
               )}
             </div>
           </div>
+        </section>
+      )}
+
+      {nuestros.length > 0 && (
+        <section className="section-block nuestros" aria-labelledby="nuestros-title">
+          <SectionTitle id="nuestros-title" title={series.scope === "internacional" ? `Argentinos en ${series.short}` : `Pilotos de ${series.short} con ficha`} />
+          <ul className="nuestros-list">
+            {nuestros.map((d) => {
+              const pos = season.getStandingPosition(d);
+              const last = season.getDriverResults(d.slug, now)[0];
+              return (
+                <li key={d.slug}>
+                  <Link href={`/pilotos/${d.slug}`} className="list-link">
+                    <strong>{d.name}</strong>
+                    <span>{d.team}</span>
+                    <em>{pos ? `${pos.position}.º en el campeonato · ${pos.points} pts` : "Sin posición en el campeonato todavía"}</em>
+                    <em>{last ? `Último resultado: ${last.row.pos}.º · ${last.session.name}, ${last.event.circuit.city}` : "Sin resultados cargados todavía"}</em>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </section>
       )}
 
