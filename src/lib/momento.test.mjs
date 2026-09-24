@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { estadoDeSesion, momentoDeCategoria } from "./momento.mjs";
+import { estadoDeSesion, momentoDeCategoria, momentoDePiloto } from "./momento.mjs";
+import { driverKey } from "./sources/driver-index.mjs";
 
 const row = (pos, driver, extra = {}) => ({ pos, driver, team: "X", gap: "", ...extra });
 const ses = (id, name, kind, start, extra = {}) => ({ id, name, kind, start, durationMin: 60, ...extra });
@@ -142,4 +143,39 @@ test("estadoDeSesion: el navegador recalcula con el mismo criterio que el servid
   assert.equal(estadoDeSesion(s, "2026-09-25T08:30:00Z"), "en-vivo");
   assert.equal(estadoDeSesion(s, "2026-09-25T09:30:00Z"), "terminada");
   assert.equal(estadoDeSesion({ ...s, timeKnown: false }, "2026-09-25T08:30:00Z"), "proxima");
+});
+
+const KEYS = [driverKey("Franco Colapinto")];
+
+test("piloto: cada sesión ya corrida lleva su fila, y la próxima sesión es la P3 (no la carrera)", () => {
+  const e = baku({ p1: [row(1, "Max Verstappen"), colapinto(18, { gap: "+1.802" })], p2: [row(1, "Lando Norris"), colapinto(11, { gap: "+2.132" })] });
+  const m = momentoDePiloto([e], "2026-09-24T20:00:00-03:00", KEYS);
+  assert.equal(m.modo, "finde");
+  assert.deepEqual(m.sesiones.map((s) => s.fila), [{ pos: 18, gap: "+1.802" }, { pos: 11, gap: "+2.132" }, undefined, undefined, undefined]);
+  assert.equal(m.proximaSesion.name, "Práctica 3");
+  assert.equal(m.participa, true);
+});
+
+test("piloto: quien no corrió una sesión no tiene fila en ella; quien no terminó, su estado", () => {
+  const e = baku({ p1: [row(1, "Max Verstappen"), colapinto(18)], p2: [row(1, "Lando Norris")], r: [row(1, "Max Verstappen"), colapinto(17, { positionText: "R" })] });
+  const m = momentoDePiloto([e], "2026-09-26T14:00:00Z", KEYS);
+  assert.equal(m.sesiones[1].fila, undefined);
+  assert.deepEqual(m.sesiones.at(-1).fila, { pos: 17, noTermino: "abandonó" });
+});
+
+test("piloto: una tripulación 'A / B / C' cuenta si está uno de ellos, y un piloto sin resultados no participa", () => {
+  const gt = { id: "gt-1", seriesId: "gt3", round: 1, name: "6 Horas", circuit: { city: "Spa" }, sessions: [ses("c", "Carrera", "carrera", "2026-09-24T08:30:00Z", { results: [row(4, "Nico Varrone / Otro Piloto / Tercero")] })] };
+  const m = momentoDePiloto([gt], "2026-09-24T12:00:00Z", [driverKey("Nico Varrone")]);
+  assert.deepEqual(m.sesiones[0].fila, { pos: 4 });
+  assert.equal(momentoDePiloto([gt], "2026-09-24T12:00:00Z", [driverKey("Otro Nadie")]).participa, false);
+});
+
+test("piloto en varias categorías: gana la que está en pista; sin eventos, entre-semana vacío", () => {
+  const tn = { id: "tn-1", seriesId: "tn", round: 1, name: "Fecha 1", circuit: { city: "Rosario" }, sessions: [ses("t", "Final", "final", "2026-09-24T08:40:00Z")] };
+  const m = momentoDePiloto([madrid(), tn], "2026-09-24T09:00:00Z", KEYS);
+  assert.equal(m.modo, "en-pista");
+  assert.equal(m.fecha.id, "tn-1");
+  const vacio = momentoDePiloto([], "2026-09-24T09:00:00Z", KEYS);
+  assert.equal(vacio.modo, "entre-semana");
+  assert.equal(vacio.participa, false);
 });

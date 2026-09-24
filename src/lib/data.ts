@@ -5,7 +5,7 @@ import history from "@/data/history.json";
 import driverIndex from "@/data/drivers-2026.json";
 import manualOverrides from "@/data/manual-overrides.json";
 import { driverKey } from "./sources/driver-index.mjs";
-import { momentoDeCategoria } from "./momento.mjs";
+import { momentoDeCategoria, momentoDePiloto } from "./momento.mjs";
 import { mergeSessionPatches } from "./sources/overrides.mjs";
 import { series, seriesById } from "@/data/series";
 import { dayKey, fmtDayShort, fmtTime, sessionStatus, type SessionStatus, type StateKind } from "./format";
@@ -377,6 +377,12 @@ export function createSeason(raw: RawSeason) {
         argentineSlugs: seriesById[seriesId]?.scope === "internacional" ? drivers.filter((d) => d.seriesId === seriesId).map((d) => d.slug) : [],
         failures: raw.failures ?? [],
       }),
+    /**
+     * El momento de un piloto: el de su categoría (o la más activa, si corre en varias) con su fila en cada sesión.
+     * `keys` son las formas en que las fuentes escriben su nombre (`driverKey`).
+     */
+    getMomentoPiloto: (seriesIds: string[], keys: string[], now: string) =>
+      momentoDePiloto(events.filter((e) => seriesIds.includes(e.seriesId)), now, keys, { failures: raw.failures ?? [] }),
     getEventsForSeries,
     getNextSession,
     getRecentResults,

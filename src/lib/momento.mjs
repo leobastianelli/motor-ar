@@ -3,6 +3,7 @@
 // `session-status.mjs`, la misma fuente que usa `format.ts`.
 import { noResultsReason } from "./salud-core.mjs";
 import { sessionEnd, sessionStatus } from "./session-status.mjs";
+import { driverKey } from "./sources/driver-index.mjs";
 
 const HOUR = 3_600_000;
 /** Un evento que empieza dentro de este plazo (o que ya empezó y no terminó) es "el fin de semana". */
@@ -123,3 +124,44 @@ export function momentoDeCategoria(events, now, { argentineSlugs = [], failures 
 
 /** Estado de una sesión del momento a la hora `now`, con el mismo criterio que el servidor (para el navegador). */
 export const estadoDeSesion = (s, now) => ESTADO[sessionStatus({ start: s.start, durationMin: s.durationMin, timeKnown: s.timeKnown, hasResults: s.hasResults }, now)];
+
+/** La fila de un piloto en una tabla: en las tripulaciones ("A / B / C") alcanza con que esté uno de ellos. */
+function filaDe(results, keys) {
+  const r = (results ?? []).find((x) => x.driver.split(" / ").some((p) => keys.has(driverKey(p))));
+  if (!r) return undefined;
+  return {
+    pos: r.pos,
+    ...(classified(r) ? {} : { noTermino: NO_TERMINO[String(r.positionText).toUpperCase()] ?? "sin clasificar" }),
+    ...(r.gap ? { gap: r.gap } : {}),
+  };
+}
+
+// Qué categoría manda cuando un piloto corre en varias: lo que pasa ahora, después lo próximo, después lo último.
+const PRIORIDAD = { "en-pista": 0, finde: 1, resultados: 2, "entre-semana": 3 };
+
+/**
+ * El momento de un piloto: el de su categoría, y a cada sesión le suma **su** fila (posición, diferencia, "no terminó").
+ * Si corre en más de una categoría, gana la que tiene algo en pista o más cerca. `participa` dice si figura en algún resultado
+ * de la fecha mostrada (para un piloto sin ficha, es lo único que prueba que corre esa fecha).
+ * @param {any[]} events eventos de las categorías del piloto
+ * @param {string} now ISO
+ * @param {Iterable<string>} driverKeys `driverKey` de cada forma en que las fuentes escriben al piloto
+ * @param {{ failures?: string[] }} [options]
+ */
+export function momentoDePiloto(events, now, driverKeys, { failures = [] } = {}) {
+  const keys = new Set(driverKeys);
+  const ids = [...new Set(events.map((e) => e.seriesId))];
+  const candidatos = ids.map((id) => {
+    const evs = events.filter((e) => e.seriesId === id);
+    const m = momentoDeCategoria(evs, now, { failures });
+    return { m, evs, start: m.fecha ? Date.parse(m.fecha.start) : Infinity };
+  });
+  candidatos.sort((a, b) => PRIORIDAD[a.m.modo] - PRIORIDAD[b.m.modo] || a.start - b.start);
+  const elegido = candidatos[0];
+  if (!elegido) return { ...momentoDeCategoria([], now, { failures }), participa: false };
+
+  const { m, evs } = elegido;
+  const crudas = new Map((evs.find((e) => e.id === m.fecha?.id)?.sessions ?? []).map((s) => [s.id, s]));
+  const sesiones = m.sesiones.map((s) => ({ ...s, fila: filaDe(crudas.get(s.id)?.results, keys) }));
+  return { ...m, sesiones, proximaSesion: sesiones.find((s) => s.estado !== "terminada"), participa: sesiones.some((s) => s.fila) };
+}
