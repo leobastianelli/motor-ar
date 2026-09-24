@@ -44,6 +44,8 @@ export interface IndexedDriver {
   teams: Record<string, string>;
   firstSeen: string;
   lastSeen: string;
+  /** Direcciones que tuvo antes (redirigen con 301 a `slug`). */
+  formerSlugs?: string[];
 }
 // Los pilotos con ficha completa (drivers.ts) no se repiten: se descartan por nombre o por cualquiera de sus alias.
 const CURATED_KEYS = new Set(drivers.flatMap((d) => [d.name, ...(d.aliases ?? [])].map((n) => driverKey(n))));

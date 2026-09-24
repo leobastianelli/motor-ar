@@ -2,6 +2,7 @@
 // Fuentes: Wikipedia (CC BY-SA 4.0) y Jolpica-F1. Requiere scripts/fetch-wiki.mjs.
 // Uso: node scripts/sync-history.mjs
 import fs from "node:fs";
+import { repairMojibake } from "../src/lib/sources/common.mjs";
 import { wikiRawUrl } from "../src/lib/sources/wiki-pages.mjs";
 import { clean, flagOf, intOf, section, tables, texts } from "../src/lib/sources/wikitext.mjs";
 
@@ -91,7 +92,8 @@ function tn() {
 }
 
 function f1() {
-  const rows = JSON.parse(fs.readFileSync("research/jolpica-f1-champions.json", "utf8").replace(/^﻿/, ""));
+  // La descarga se guardó leyendo UTF-8 como Windows-1252 ("HÃ¤kkinen"): se repara al leer.
+  const rows = JSON.parse(repairMojibake(fs.readFileSync("research/jolpica-f1-champions.json", "utf8").replace(/^﻿/, "")));
   const champions = rows.map((r) => ({ year: r.season, driver: r.driver, detail: r.team, make: r.team, argentine: r.nationality === "Argentine" }));
   return {
     source: { label: "Jolpica-F1 API", url: "https://api.jolpi.ca/ergast/f1/", license: "Datos abiertos" },

@@ -1,9 +1,12 @@
 // Arma src/data/colapinto/f1-races.json a partir de las descargas de Jolpica en research/.
 // Uso: node scripts/build-colapinto-f1.mjs
 import fs from "node:fs";
+import { repairMojibake } from "../src/lib/sources/common.mjs";
 
 const R = "research/";
-const load = (f) => JSON.parse(fs.readFileSync(R + f, "utf8").replace(/^﻿/, "")).MRData.RaceTable.Races;
+// Las descargas de research/ se guardaron leyendo UTF-8 como Windows-1252 ("SÃ£o Paulo"): se reparan al leer.
+const read = (f) => repairMojibake(fs.readFileSync(R + f, "utf8").replace(/^﻿/, ""));
+const load = (f) => JSON.parse(read(f)).MRData.RaceTable.Races;
 const TEAMMATE = { 2024: "albon", 2025: "gasly", 2026: "gasly" };
 
 const races = [];
@@ -52,7 +55,7 @@ for (const season of [2024, 2025, 2026]) {
   }
 }
 
-const progression = JSON.parse(fs.readFileSync(R + "jolpica-2026-progression.json", "utf8").replace(/^﻿/, ""));
+const progression = JSON.parse(read("jolpica-2026-progression.json"));
 
 fs.writeFileSync(
   "src/data/colapinto/f1-races.json",

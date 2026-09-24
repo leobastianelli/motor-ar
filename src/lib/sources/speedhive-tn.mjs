@@ -2,6 +2,7 @@
 // cada sesión y clasificación de cada una, por clase. Lo sube el cronometrista ("Tiempos crono", que también cronometra a otras
 // categorías argentinas) después de cada sesión, con estado "provisorio": no es en vivo segundo a segundo ni reemplaza a los
 // resultados oficiales de APAT, que se prefieren cuando existen. Sólo completa lo que falta.
+import { repairMojibake } from "./common.mjs";
 import { belongsToEvent } from "./plausible.mjs";
 
 const API = "https://eventresults-api.speedhive.com/api/v0.2.3/eventresults";
@@ -20,7 +21,7 @@ const titleCase = (s) => s.toLowerCase().replace(/(^|[\s'-])([a-zà-ÿ])/g, (m, 
  * escritura (sirve para apellidos compuestos); si no, se pasa el primer apellido al final.
  */
 export function personName(raw, known) {
-  const clean = String(raw).replace(/\s+/g, " ").trim();
+  const clean = repairMojibake(String(raw)).replace(/\s+/g, " ").trim();
   const match = known.get(tokenKey(clean));
   if (match) return match;
   const [first, ...rest] = clean.split(" ");
