@@ -33,9 +33,5 @@ Van en ese orden: cada uno supone terminado el anterior. Al final de 02b y de 02
 - **Prohibido agregar otra capa de caché, otro timeout o otro estado a nivel de módulo** para tapar un síntoma. Si algo no llega a tiempo, se muestra marcado como viejo; no se sirve en silencio otra versión.
 - **Las fuentes nunca se achican:** toda escritura de una temporada nueva pasa por la protección de `src/lib/sources/guard.mjs`.
 - En un worktree nuevo, correr `npm ci` (un enlace a `node_modules` de otro directorio rompe Turbopack).
-- `git push` y `gh` pueden fallar con "repository not found" si la cuenta activa de `gh` no es `leobastianelli`. En ese caso, pedírselo al dueño; no intentar cambiar credenciales.
+- El repo es de la cuenta de GitHub `leobastianelli`. Si `git push` o `gh` dan "repository not found", es porque la cuenta activa de `gh` es otra: avisarle al dueño.
 - Los secretos (variables de entorno en Vercel y secretos de GitHub Actions) **los carga el dueño**. La sesión dice exactamente qué nombre y qué valor hacen falta, y espera.
-
-## Antes de la etapa 01: confirmar qué está desplegado
-
-Producción tiene el buscador de `/notas` (commit `e5c6a51`, rama `claude/notas-buscador-auditoria`), pero el 24/09 ese commit no estaba en el `main` local. Antes de empezar, averiguar si ya se mergeó. Si producción se desplegó desde una rama, la próxima sincronización automática de `main` lo va a pisar, y eso hay que resolverlo primero (mergear esa rama o volver atrás).
