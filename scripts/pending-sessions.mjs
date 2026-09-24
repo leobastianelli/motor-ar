@@ -4,6 +4,7 @@
 // Uso: node scripts/pending-sessions.mjs
 import fs from "node:fs";
 import { sessionResultsMissing, visibleEvents } from "../src/lib/monitor/checks.mjs";
+import { AUTOMATIC_SERIES } from "../src/lib/salud-core.mjs";
 import { loadSeason } from "./season-source.mjs";
 
 // Lee el almacén (el archivo del repo ya no se actualiza cada hora) y sólo cae al archivo si el almacén falla, diciéndolo.
@@ -13,10 +14,8 @@ const manual = JSON.parse(fs.readFileSync("src/data/manual-overrides.json", "utf
 const events = visibleEvents(snapshot.events, manual);
 
 // Entre 10 minutos y 4 horas después de terminar: más tarde ya lo insiste el guardián por Telegram y lo toma la próxima sincronización.
-// Categorías con fuente automática (ver SOURCES en src/lib/sources/season.mjs). TC2000 y GT3 se cargan a mano y no cuentan. Como el sitio ya no
-// reconstruye la temporada al renderizar, todas dependen de la sincronización.
-const AUTOMATIC = new Set(["f1", "f2", "tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn"]);
-const pending = sessionResultsMissing(events, new Date().toISOString(), { seriesIds: AUTOMATIC, after: 10 / 60, before: 4 });
+// Categorías con fuente automática: ver AUTOMATIC_SERIES. Como el sitio ya no reconstruye la temporada al renderizar, todas dependen de la sincronización.
+const pending = sessionResultsMissing(events, new Date().toISOString(), { seriesIds: AUTOMATIC_SERIES, after: 10 / 60, before: 4 });
 const needed = pending.length > 0;
 for (const p of pending) console.log(`Pendiente: ${p.title}. ${p.body}`);
 console.log(needed ? "Hay resultados por traer: se sincroniza." : "Nada pendiente: no se sincroniza.");

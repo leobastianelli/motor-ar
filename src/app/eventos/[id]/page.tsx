@@ -7,6 +7,7 @@ import { LiveTimingEmbed } from "@/components/live-timing-embed";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { getNow, getSeason, getSeries } from "@/lib/data";
+import { noResultsReason } from "@/lib/salud-core.mjs";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtRange, fmtWeekday, raceWinner, sessionState, sessionStatus, sessionTime } from "@/lib/format";
 import { OG_DEFAULTS } from "@/lib/site";
 import type { Broadcast, ResultRow, Session } from "@/lib/types";
@@ -167,7 +168,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                                   : s.timeStatus === "tentative"
                                     ? `Horario según ${s.timeSources?.map((x) => x.name).join(", ")}`
                                     : `${s.durationMin} min estimados`)}
-                            {status === "done" && (top ? <a href={`#${s.id}`}>Terminó · ver resultados</a> : "Terminó · sin resultados cargados")}
+                            {status === "done" && (top ? <a href={`#${s.id}`}>Terminó · ver resultados</a> : `Terminó · ${noResultsReason(s, event.seriesId, season.failures, now)?.toLowerCase() ?? "sin resultados cargados"}`)}
                           </span>
                           {s.videos && s.videos.length > 0 && (
                             <span className="session-videos">

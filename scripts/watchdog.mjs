@@ -4,7 +4,7 @@
 import fs from "node:fs";
 import { emptyState, evaluate } from "../src/lib/monitor/alerts.mjs";
 import { renderAlerts, sendTelegram } from "../src/lib/monitor/telegram.mjs";
-import { siteFindings, syncFindings } from "../src/lib/monitor/watchdog-checks.mjs";
+import { saludFindings, siteFindings, syncFindings } from "../src/lib/monitor/watchdog-checks.mjs";
 
 const DRY = process.argv.includes("--dry");
 const NOW = process.env.WATCHDOG_NOW ?? new Date().toISOString();
@@ -20,7 +20,7 @@ async function probe(path) {
     const t0 = Date.now();
     try {
       const res = await fetch(`${SITE}${path}`, { headers: { "User-Agent": "fierros-watchdog/0.1" }, signal: AbortSignal.timeout(20_000) });
-      const body = path === "/" ? await res.text() : "";
+      const body = path === "/" || path === "/api/salud" ? await res.text() : "";
       last = { path, ok: res.ok, status: res.status, ms: Date.now() - t0, body };
       if (res.ok) return last;
     } catch {
@@ -31,7 +31,17 @@ async function probe(path) {
   return last;
 }
 
-const findings = siteFindings(await Promise.all(["/", "/calendario", "/categorias/tc"].map(probe)));
+const probed = await Promise.all(["/", "/calendario", "/categorias/tc", "/api/salud"].map(probe));
+// /api/salud se juzga aparte: no responder no es "el sitio está caído", es "no sabemos qué versión sirve".
+const findings = siteFindings(probed.filter((r) => r.path !== "/api/salud"));
+const saludProbe = probed.find((r) => r.path === "/api/salud");
+let salud = null;
+try {
+  if (saludProbe?.ok) salud = JSON.parse(saludProbe.body);
+} catch {
+  // Respondió pero no es JSON: cuenta como que no responde.
+}
+findings.push(...saludFindings(salud, NOW));
 
 // Corridas del sincronizador (necesita el token de GitHub; sin él, sólo se vigila el sitio).
 if (process.env.GITHUB_TOKEN && process.env.GITHUB_REPOSITORY) {

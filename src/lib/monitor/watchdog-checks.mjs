@@ -1,5 +1,8 @@
 // Chequeos del vigilante: lo que puede fallar sin que nadie lo vea. Puros, como los del guardián.
 const HOUR = 3600_000;
+const MIN = 60_000;
+// La home tiene que salir del caché: si tarda más que esto, algo la está reconstruyendo en cada pedido.
+const HOME_SLOW_MS = 3_000;
 
 /**
  * Estado del sitio a partir de las respuestas de sus páginas clave: [{ path, ok, status, ms, body }].
@@ -19,8 +22,8 @@ export function siteFindings(results) {
         title: `El sitio no responde bien: ${r.path}`,
         body: r.ok ? "Respondió pero sin el contenido esperado." : `Respuesta ${r.status ?? "sin conexión"} después de varios intentos.`,
       });
-    } else if (r.ms > 10_000) {
-      out.push({ key: `sitio-lento:${r.path}`, severity: "medium", level: 1, tier: 3, consecutive: 2, title: `El sitio está lento: ${r.path}`, body: `Tardó ${Math.round(r.ms / 1000)} s en responder.` });
+    } else if (r.ms > (r.path === "/" ? HOME_SLOW_MS : 10_000)) {
+      out.push({ key: `sitio-lento:${r.path}`, severity: "medium", level: 1, tier: 3, consecutive: 2, title: `El sitio está lento: ${r.path}`, body: `Tardó ${Math.round(r.ms / 100) / 10} s en responder.` });
     }
   }
   return out;
@@ -43,6 +46,54 @@ export function syncFindings(runs, now, { maxHours = 30 } = {}) {
   } else if (nowMs - Date.parse(lastOk.created_at) > maxHours * HOUR) {
     const hours = Math.round((nowMs - Date.parse(lastOk.created_at)) / HOUR);
     out.push({ key: "sync:atrasado", severity: "critical", level: 1, tier: 3, title: "Los datos dejaron de sincronizarse", body: `La última sincronización exitosa fue hace ${hours} h (debería ser al menos una por día). ${lastOk.html_url}` });
+  }
+  return out;
+}
+
+/**
+ * Salud de los datos a partir de /api/salud (ver src/app/api/salud/route.ts): `salud` es el JSON, o null si no respondió.
+ * - no responde → el sitio no puede decir qué versión sirve
+ * - servedFrom distinto de "store" → el sitio está usando el respaldo (instantánea del repo o última versión vista)
+ * - la última versión del almacén lleva más de 10 min y el sitio sirve otra → la invalidación de las páginas no funcionó
+ * - sesiones sin resultados hace más de 60 min → la fuente no las publicó o el sitio no las tomó
+ */
+export function saludFindings(salud, now, { staleMin = 10, pendingMin = 60 } = {}) {
+  if (!salud) {
+    return [{ key: "salud:no-responde", severity: "high", level: 1, tier: 1, title: "/api/salud no responde", body: "No se puede saber qué versión de los datos sirve el sitio." }];
+  }
+  const out = [];
+  const { sirviendo, almacen } = salud;
+  if (sirviendo?.servedFrom !== "store") {
+    out.push({
+      key: "salud:respaldo",
+      severity: "high",
+      level: 1,
+      tier: 1,
+      title: "El sitio está usando el respaldo",
+      body: `Sirve "${sirviendo?.servedFrom ?? "?"}" en vez de la última versión del almacén${sirviendo?.error ? ` (${String(sirviendo.error).slice(0, 200)})` : ""}. Los datos pueden estar viejos.`,
+    });
+  }
+  const storedAge = almacen?.createdAt ? (Date.parse(now) - Date.parse(almacen.createdAt)) / MIN : 0;
+  if (almacen?.ultimaVersion != null && almacen.ultimaVersion !== sirviendo?.versionId && storedAge > staleMin) {
+    out.push({
+      key: "salud:version-vieja",
+      severity: "high",
+      level: 1,
+      tier: 1,
+      title: "El sitio no toma la versión nueva",
+      body: `El almacén tiene la versión ${almacen.ultimaVersion} (${almacen.origin}, hace ${Math.round(storedAge)} min) y el sitio sirve la ${sirviendo?.versionId ?? "instantánea"}. Falló la invalidación de las páginas.`,
+    });
+  }
+  for (const p of salud.pendientes ?? []) {
+    if (p.terminoHaceMin <= pendingMin) continue;
+    out.push({
+      key: `salud:pendiente:${p.categoria}:${p.sesion}`,
+      severity: "medium",
+      level: 1,
+      tier: 3,
+      title: `Sin resultados: ${p.sesion}`,
+      body: `Terminó hace ${Math.round(p.terminoHaceMin / 60 * 10) / 10} h (${p.categoria}) y todavía no tiene resultados.`,
+    });
   }
   return out;
 }
