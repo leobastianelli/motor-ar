@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T14:00:56.856Z",
+  "generatedAt": "2026-09-24T11:36:44.332Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -102780,7 +102780,7 @@
         "pos": 4,
         "driver": "Alex Dunne",
         "team": "Rodin Motorsport",
-        "points": 139
+        "points": 141
       },
       {
         "pos": 5,
@@ -102808,21 +102808,21 @@
       },
       {
         "pos": 9,
+        "driver": "Martinius Stenshorne",
+        "team": "Rodin Motorsport",
+        "points": 72
+      },
+      {
+        "pos": 10,
         "driver": "Laurens van Hoepen",
         "team": "Trident",
         "points": 72
       },
       {
-        "pos": 10,
+        "pos": 11,
         "driver": "Tasanapol Inthraphuvasak",
         "team": "ART Grand Prix",
         "points": 71
-      },
-      {
-        "pos": 11,
-        "driver": "Martinius Stenshorne",
-        "team": "Rodin Motorsport",
-        "points": 70
       },
       {
         "pos": 12,
@@ -103401,17 +103401,17 @@
       },
       {
         "pos": 2,
-        "driver": "Nicanor Santilli Pazos",
-        "team": "",
-        "points": 362,
-        "wins": 1
-      },
-      {
-        "pos": 3,
         "driver": "Benjamín Antón",
         "team": "",
         "points": 362,
         "wins": 2
+      },
+      {
+        "pos": 3,
+        "driver": "Nicanor Santilli Pazos",
+        "team": "",
+        "points": 362,
+        "wins": 1
       },
       {
         "pos": 4,
@@ -106102,7 +106102,7 @@
           ]
         }
       ],
-      "campeonesFeed": true,
+      "campeonesFeed": false,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -106177,5 +106177,7 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026 (se conservan los resultados anteriores)"
+  ]
 }
