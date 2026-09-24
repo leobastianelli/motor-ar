@@ -31,10 +31,10 @@ test("terminó hace 7 h sin resultados: ya no es cosa del refresco caliente", ()
   assert.deepEqual([n.needed, n.results], [false, []]);
 });
 
-test("sin video: se busca hasta 3 días, después no", () => {
+test("sin video: se busca hasta 12 h, después no", () => {
   const done = { results: [{ pos: 1 }] };
-  assert.equal(hotNeeds(f1(70, done), NOW).needed, true);
-  assert.equal(hotNeeds(f1(73, done), NOW).needed, false);
+  assert.equal(hotNeeds(f1(11, done), NOW).needed, true);
+  assert.equal(hotNeeds(f1(13, done), NOW).needed, false);
 });
 
 test("una sesión que no terminó, sin hora confirmada o de otra categoría no cuenta", () => {

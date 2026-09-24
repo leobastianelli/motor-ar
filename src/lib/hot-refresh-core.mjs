@@ -4,16 +4,18 @@ import { F1_OFFICIAL_SESSION_NAMES } from "./sources/f1-official.mjs";
 
 const MIN = 60_000;
 const HOUR = 60 * MIN;
-const DAY = 24 * HOUR;
 /** Una sesión recién terminada no está en la página oficial hasta pasados unos minutos; después de 6 h ya lo toma la sincronización. */
 export const RESULTS_AFTER_MS = 5 * MIN;
 export const RESULTS_UNTIL_MS = 6 * HOUR;
-/** Los resúmenes de YouTube se buscan durante los 3 días siguientes a cada sesión. */
-export const VIDEOS_WINDOW_MS = 3 * DAY;
+/**
+ * Los resúmenes de YouTube se buscan en caliente durante las 12 h siguientes a cada sesión (el canal oficial los publica en la primera hora o dos).
+ * Más tarde los trae la sincronización completa (ventana de 21 días): así una sesión sin resumen no dispara el refresco cada 3 minutos por días.
+ */
+export const VIDEOS_WINDOW_MS = 12 * HOUR;
 
 const endOf = (s) => Date.parse(s.start) + (s.durationMin ?? 60) * MIN;
 
-/** → { results: ids de sesiones de F1 terminadas hace 5 min a 6 h sin resultados, videos: ids de las terminadas en los últimos 3 días sin video }. */
+/** → { results: ids de sesiones de F1 terminadas hace 5 min a 6 h sin resultados, videos: ids de las terminadas en las últimas 12 h sin video }. */
 export function hotNeeds(events, nowMs) {
   const results = [];
   const videos = [];

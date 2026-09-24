@@ -61,6 +61,10 @@ export async function runHotRefresh(): Promise<HotOutcome> {
     }
     if (errors.length) console.warn(`Refresco caliente: ${errors.join("; ")}`);
 
+    // Sin cambios no se llama a writeVersion: releería la temporada entera (unos 3 MB) sólo para confirmar que es igual.
+    if (JSON.stringify(events) === JSON.stringify(base.events)) {
+      return errors.length ? { status: "error", error: errors.join("; ") } : { status: "unchanged", versionId: latest.id };
+    }
     const written = await writeVersion(db, { raw: { ...base, events }, parentId: latest.id, origin: "hot" });
     if (written.unchanged) return errors.length ? { status: "error", error: errors.join("; ") } : { status: "unchanged", versionId: written.id };
 
