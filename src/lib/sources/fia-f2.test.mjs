@@ -121,6 +121,19 @@ test("horario oficial: dos clasificaciones y tres carreras (Baku 2026) no se pis
     ])}]</script>`,
   );
   assert.deepEqual([...normal.keys()], ["Practice", "Qualifying", "Sprint Race", "Feature Race"]);
+
+  // Mónaco: dos grupos de clasificación y dos carreras → una sola clasificación (combinada), del inicio del grupo A al fin del B.
+  const monaco = parseOfficialSchedule(
+    `<script>[${jsonLd([
+      ["Practice", "2026-06-04T13:00:00.000Z", "2026-06-04T13:45:00.000Z"],
+      ["Qualifying", "2026-06-05T13:10:00.000Z", "2026-06-05T13:26:00.000Z"],
+      ["Qualifying", "2026-06-05T13:34:00.000Z", "2026-06-05T13:50:00.000Z"],
+      ["Race", "2026-06-06T12:15:00.000Z", "2026-06-06T13:00:00.000Z"],
+      ["Race", "2026-06-07T07:25:00.000Z", "2026-06-07T08:30:00.000Z"],
+    ])}]</script>`,
+  );
+  assert.deepEqual([...monaco.keys()], ["Practice", "Qualifying", "Sprint Race", "Feature Race"]);
+  assert.deepEqual(monaco.get("Qualifying"), { start: "2026-06-05T13:10:00.000Z", end: "2026-06-05T13:50:00.000Z" });
 });
 
 test("fiaformula2.com: lee las sesiones embebidas y la clasificación de la última terminada", () => {
