@@ -25,6 +25,10 @@ await sql`
 await sql`ALTER TABLE season_versions DROP CONSTRAINT IF EXISTS season_versions_parent_id_fkey`;
 await sql`ALTER TABLE season_versions ADD CONSTRAINT season_versions_parent_id_fkey FOREIGN KEY (parent_id) REFERENCES season_versions(id) ON DELETE SET NULL`;
 
+// Candado del refresco caliente (una fila): impide que varias instancias del sitio lo corran a la vez. Ver src/lib/hot-refresh.ts.
+await sql`CREATE TABLE IF NOT EXISTS hot_lock (id INTEGER PRIMARY KEY, at TIMESTAMPTZ NOT NULL)`;
+await sql`INSERT INTO hot_lock (id, at) VALUES (1, 'epoch') ON CONFLICT (id) DO NOTHING`;
+
 const [{ n }] = await sql`SELECT count(*)::int AS n FROM season_versions`;
 if (n === 0) {
   const body = readFileSync(new URL("../src/data/season-2026.json", import.meta.url), "utf8");
@@ -40,4 +44,4 @@ if (n === 0) {
 } else {
   console.log(`La tabla ya tiene ${n} versión(es); no se siembra.`);
 }
-console.log("Tabla `season_versions` lista.");
+console.log("Tablas `season_versions` y `hot_lock` listas.");

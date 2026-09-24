@@ -2,15 +2,12 @@ import { unstable_cache } from "next/cache";
 import snapshot from "@/data/season-2026.json";
 import { sql } from "./db";
 import { createReader } from "./season-store-core.mjs";
-import { nextIo } from "./sources/io-next";
-import { f1OfficialSessions } from "./sources/f1-official.mjs";
-import { f1Videos } from "./sources/f1-youtube.mjs";
 
 /** De dónde salió la temporada que se está mostrando (la etapa 03 lo hace visible). */
 export interface SeasonSource {
   /** Id de la fila de `season_versions`; null si se sirve la instantánea del repo. */
   versionId: number | null;
-  /** "seed" | "sync" | "hot" | "snapshot", con "+hot" si encima se aplicaron los resultados calientes. */
+  /** "seed" | "sync" | "hot" | "snapshot". */
   origin: string;
   generatedAt: string;
   createdAt: string | null;
@@ -62,49 +59,14 @@ const read = createReader({ latest: process.env.DATABASE_URL ? latest : noStore,
 let based: { raw: RawSeason; key: string; out: RawSeason } | null = null;
 
 /**
- * Datos de la temporada: la versión vigente del almacén (Neon) más lo "caliente" (resultados de F1 y videos), que se completa al pedir la página.
+ * Datos de la temporada: la versión vigente del almacén (Neon). El render sólo lee: no busca nada en fuentes externas. Los escritores son la
+ * sincronización completa y el refresco caliente (src/lib/hot-refresh.ts), que publican versiones nuevas e invalidan las páginas.
  * Si el almacén falla se usa la última versión vista o, en su defecto, la instantánea del repo, y `source.servedFrom` lo dice.
- * `PISTA_LIVE=0` o la compilación sin base devuelven la temporada sin lo caliente.
  */
 export async function loadRawSeason(): Promise<RawSeason> {
   const { raw, source } = await read();
   const key = JSON.stringify(source);
-  // Mismo objeto mientras no cambie la versión ni el estado: getSeason() y lo caliente comparan por identidad.
+  // Mismo objeto mientras no cambie la versión ni el estado: getSeason() compara por identidad.
   if (!based || based.raw !== raw || based.key !== key) based = { raw, key, out: { ...raw, source } };
-  const base = based.out;
-  if (process.env.NEXT_PHASE === "phase-production-build" || process.env.PISTA_LIVE === "0") return base;
-  return withHotSources(base);
+  return based.out;
 }
-
-type HotFn = (io: typeof nextIo, events: unknown[], previous: RawSeason, options?: Record<string, unknown>) => Promise<{ events: unknown[] }>;
-const hotResults = f1OfficialSessions as unknown as HotFn;
-const hotVideos = f1Videos as unknown as HotFn;
-/** Cuánto se espera lo "caliente" antes de mostrar lo que haya: son pocos pedidos con caché, no la temporada entera. */
-const HOT_WAIT_MS = 5_000;
-const HOT_TTL_MS = 30_000;
-let hot: { base: RawSeason; at: number; value: Promise<RawSeason> } | null = null;
-
-const f1Json = (events: unknown[]) => JSON.stringify(events.filter((e) => (e as { seriesId: string }).seriesId === "f1"));
-
-/**
- * Lo que tiene que estar al día apenas termina una sesión, sin esperar a reconstruir toda la temporada (que tarda minutos y mientras tanto
- * se muestra la última instantánea): los resultados de F1 que falten (página oficial) y los resúmenes de YouTube. Son unos pocos pedidos
- * con caché por URL; ante cualquier falla se devuelve la base tal cual.
- */
-function withHotSources(base: RawSeason): Promise<RawSeason> {
-  if (hot && hot.base === base && Date.now() - hot.at < HOT_TTL_MS) return waitHot(hot.value, base);
-  const value = (async () => {
-    try {
-      const names = [...(base.standings.f1 ?? []).map((r) => (r as { driver: string }).driver)];
-      const results = await hotResults(nextIo, base.events, base, { knownNames: names, windowDays: 10 });
-      const videos = await hotVideos(nextIo, results.events, base, {});
-      const changed = f1Json(videos.events) !== f1Json(base.events);
-      return changed ? { ...base, events: videos.events, source: { ...base.source!, origin: `${base.source!.origin}+hot` } } : base;
-    } catch {
-      return base;
-    }
-  })();
-  hot = { base, at: Date.now(), value };
-  return waitHot(value, base);
-}
-const waitHot = (value: Promise<RawSeason>, base: RawSeason) => Promise.race([value, new Promise<RawSeason>((resolve) => setTimeout(() => resolve(base), HOT_WAIT_MS))]);

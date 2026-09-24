@@ -17,6 +17,8 @@ const SESSIONS = [
   { name: "Carrera", path: "race-result", mode: "race" },
 ];
 const BY_NAME = new Map(SESSIONS.map((s) => [s.name, s]));
+/** Nombres de las sesiones cuyos resultados se piden a la página oficial (el refresco caliente decide con esto si hay algo por traer). */
+export const F1_OFFICIAL_SESSION_NAMES = new Set(BY_NAME.keys());
 
 const clean = (html) =>
   String(html)
