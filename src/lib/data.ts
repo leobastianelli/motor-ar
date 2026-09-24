@@ -5,6 +5,7 @@ import history from "@/data/history.json";
 import driverIndex from "@/data/drivers-2026.json";
 import manualOverrides from "@/data/manual-overrides.json";
 import { driverKey } from "./sources/driver-index.mjs";
+import { momentoDeCategoria } from "./momento.mjs";
 import { mergeSessionPatches } from "./sources/overrides.mjs";
 import { series, seriesById } from "@/data/series";
 import { dayKey, fmtDayShort, fmtTime, sessionStatus, type SessionStatus, type StateKind } from "./format";
@@ -366,6 +367,16 @@ export function createSeason(raw: RawSeason) {
     },
     getStandings,
     getSeasonMeta: (seriesId: string): SeasonMeta => meta[seriesId] ?? {},
+
+    /**
+     * En qué situación está una categoría (en pista, fin de semana, resultados o entre semana) y qué mostrar: ver src/lib/momento.mjs.
+     * "Los nuestros" son los pilotos con ficha de las categorías internacionales; en las nacionales corre todo el mundo y no hay a quién destacar.
+     */
+    getMomentoCategoria: (seriesId: string, now: string) =>
+      momentoDeCategoria(events.filter((e) => e.seriesId === seriesId), now, {
+        argentineSlugs: seriesById[seriesId]?.scope === "internacional" ? drivers.filter((d) => d.seriesId === seriesId).map((d) => d.slug) : [],
+        failures: raw.failures ?? [],
+      }),
     getEventsForSeries,
     getNextSession,
     getRecentResults,

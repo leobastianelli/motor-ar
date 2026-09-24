@@ -557,3 +557,67 @@ button{color:inherit;font-family:inherit}
 .notas-clear{font:inherit;text-decoration:underline;background:none;border:0;padding:0;cursor:pointer;color:inherit}
 .stale-notice{background:#fff3cd;color:#3d2e00;border-bottom:1px solid #d9b84a;padding:10px max(16px,calc((100vw - 1240px)/2));font-size:14px}
 .data-age{display:block;margin-top:6px;font-size:13px;color:var(--muted)}
+
+/* El momento de la categoría (src/components/momento.tsx) y la portada baja en el celular. */
+.momento{margin-top:var(--space-6)}
+.momento .section-title{grid-template-columns:1fr auto}
+.momento .section-title h2{font-size:clamp(28px,3.4vw,44px);line-height:1;letter-spacing:-1.5px}
+.momento-list,.momento-podio{list-style:none;margin:0;padding:0}
+.momento-row{display:grid;grid-template-columns:96px 1fr auto;gap:8px 16px;align-items:center;padding:12px 8px;border-bottom:1px solid var(--line)}
+.momento-row.is-next{background:#fff}
+.momento-row.is-live{border-left:9px solid var(--red);padding-left:12px;background:#fff}
+.momento-when{display:flex;flex-direction:column}
+.momento-when small{font-size:12px;color:var(--muted)}
+.momento-when time{font-size:24px;font-weight:850;font-variant-numeric:tabular-nums;line-height:1.05}
+.momento-what strong{display:block}
+.momento-what>span{display:block;font-size:14px;color:var(--muted)}
+.momento-what a{color:var(--ink);font-weight:650}
+.momento-arg{white-space:nowrap}
+.momento-foot{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between;margin-top:16px}
+.momento-where,.momento-next,.momento-last,.momento-args{margin:0;font-size:15px}
+.momento-where b,.momento-last b,.momento-args b{display:block;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.momento-args{margin-top:12px}
+.momento-next{margin-top:14px;font-size:17px;font-weight:650}
+.momento-last{margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
+.momento-cta{display:inline-block;background:var(--ink);color:#fff;padding:12px 18px;font-weight:700;text-decoration:none}
+.momento-cta:hover{background:var(--blue-deep)}
+.momento-podio{display:grid;grid-template-columns:repeat(3,1fr);margin-top:12px;border-top:1px solid var(--ink)}
+.momento-podio li{display:flex;gap:10px;align-items:baseline;padding:12px 8px;border-bottom:1px solid var(--line)}
+.momento-podio b{font-size:28px;line-height:1}
+.momento-podio strong{font-size:18px}
+.momento-podio a,.momento-args a,.momento-last a,.momento-where a{color:inherit}
+.momento .empty-state{margin:0}
+.calendar-tape summary{cursor:pointer;list-style:none}
+.calendar-tape summary::-webkit-details-marker{display:none}
+.calendar-tape summary h2{margin:0;display:flex;align-items:baseline;gap:8px}
+.calendar-tape summary h2::after{content:"−";margin-left:auto}
+.calendar-tape:not([open]) summary h2::after{content:"+"}
+.calendar-tape summary h2 span{font-size:16px;font-weight:500;color:var(--muted);white-space:nowrap}
+.calendar-tape summary h2{font-size:26px;flex-wrap:wrap}
+.calendar-tape[open] summary{margin-bottom:8px}
+.nuestros-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 24px}
+.nuestros-list a{display:grid;gap:2px;padding:14px 4px;border-bottom:1px solid var(--line);text-decoration:none}
+.nuestros-list strong{font-size:20px}
+.nuestros-list span,.nuestros-list em{font-size:14px;font-style:normal;color:var(--muted)}
+.nuestros-list a:hover strong{text-decoration:underline}
+@media(max-width:800px){
+  .category-hero{min-height:0;padding:22px 16px 92px}
+  .category-hero img{height:76px}
+  .category-hero .cat-poster{top:18px;right:16px;width:88px;height:96px}
+  .category-hero .cat-poster span{font-size:34px}
+  .category-hero .cat-poster b{font-size:15px}
+  .category-hero .cat-poster small{font-size:11px}
+  .category-hero h1{font-size:46px;padding-right:108px}
+  .category-hero .lede{margin-top:12px;font-size:14px;padding-right:108px}
+  .category-hero>.photo-credit{bottom:4px}
+  .momento{margin-top:24px}
+  .momento .section-title h2{font-size:24px;letter-spacing:-.5px}
+  .momento-row{grid-template-columns:60px 1fr auto;gap:8px;padding:10px 4px}
+  .momento-row.is-live{padding-left:8px}
+  .momento-when time{font-size:20px}
+  .momento-foot{display:block}
+  .momento-cta{display:block;margin-top:16px;text-align:center}
+  .momento-podio{grid-template-columns:1fr}
+  .calendar-tape{margin-top:32px}
+  .calendar-tape summary h2{font-size:24px}
+}

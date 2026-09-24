@@ -1,6 +1,7 @@
+import { TZ, dayKey, dayStart, sessionStatus as sessionStatusOf } from "./session-status.mjs";
 import type { ResultRow, Session } from "./types";
 
-export const TZ = "America/Argentina/Buenos_Aires";
+export { TZ, dayKey };
 
 const f = (options: Intl.DateTimeFormatOptions) => new Intl.DateTimeFormat("es-AR", { timeZone: TZ, ...options });
 const timeFmt = f({ hour: "2-digit", minute: "2-digit", hour12: false });
@@ -11,7 +12,6 @@ const monthShortFmt = f({ month: "short" });
 const dayShortFmt = f({ weekday: "short", day: "numeric" });
 const dayLongFmt = f({ weekday: "long", day: "numeric", month: "long" });
 const monthYearFmt = f({ month: "long", year: "numeric" });
-const keyFmt = new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" });
 
 export const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
@@ -24,8 +24,6 @@ export const fmtMonthShort = (iso: string) => monthShortFmt.format(new Date(iso)
 export const fmtDayShort = (iso: string) => capitalize(dayShortFmt.format(new Date(iso)).replace(".", ""));
 export const fmtDayLong = (iso: string) => dayLongFmt.format(new Date(iso));
 export const fmtMonth = (iso: string) => monthYearFmt.format(new Date(iso));
-/** YYYY-MM-DD en hora argentina, útil para agrupar por día. */
-export const dayKey = (iso: string) => keyFmt.format(new Date(iso));
 
 /** "11–13 de septiembre" o "13 de septiembre". */
 export function fmtRange(fromIso: string, toIso: string) {
@@ -51,22 +49,8 @@ export function relative(iso: string, nowIso: string): string {
 
 export type SessionStatus = "live" | "upcoming" | "done";
 
-const dayStart = (iso: string) => new Date(`${dayKey(iso)}T00:00:00-03:00`).getTime();
-
-export function sessionStatus(session: Session, nowIso: string): SessionStatus {
-  const now = new Date(nowIso).getTime();
-  if (session.timeKnown === false) {
-    // Sin horario: nunca "en vivo". Se da por terminada con resultados o al terminar el día.
-    const start = dayStart(session.start);
-    if (now < start) return "upcoming";
-    return session.results?.length || now >= start + 86400000 ? "done" : "upcoming";
-  }
-  const start = new Date(session.start).getTime();
-  const end = start + session.durationMin * 60000;
-  if (now < start) return "upcoming";
-  if (now < end) return "live";
-  return "done";
-}
+/** Una sola fuente para el estado de una sesión: ver src/lib/session-status.mjs. */
+export const sessionStatus = (session: Session, nowIso: string): SessionStatus => sessionStatusOf(session, nowIso);
 
 /** Los cuatro estados del sistema visual: en vivo, próxima, finalizada y sin datos. */
 export type StateKind = "live" | "upcoming" | "finished" | "no-data";
