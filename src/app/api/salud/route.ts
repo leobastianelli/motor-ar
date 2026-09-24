@@ -2,6 +2,7 @@ import manual from "@/data/manual-overrides.json";
 import { getNow } from "@/lib/data";
 import { sql } from "@/lib/db";
 import { visibleEvents } from "@/lib/monitor/checks.mjs";
+import { getAllNotes } from "@/lib/notas";
 import { healthReport } from "@/lib/salud-core.mjs";
 import { loadRawSeason } from "@/lib/season-data";
 

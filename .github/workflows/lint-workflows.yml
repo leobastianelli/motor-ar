@@ -15,5 +15,6 @@ jobs:
       - uses: actions/checkout@v4
         with:
           sparse-checkout: .github
+      # SC2086 (comillas en variables) se ignora: en sync-season.yml `$FILES` se separa en palabras a propósito. Lo que importa acá son los errores de sintaxis.
       - name: actionlint
-        run: docker run --rm -v "$PWD:/repo" --workdir /repo rhysd/actionlint:1.7.7 -color
+        run: docker run --rm -v "$PWD:/repo" --workdir /repo rhysd/actionlint:1.7.7 -color -ignore 'SC2086'
