@@ -88,7 +88,15 @@ jobs:
           git config user.email "leonelbastianelli@gmail.com"
           git add src/data/season-2026.json src/data/drivers-2026.json
           git commit -m "datos: sincronización automática de la temporada"
-          git push
+          # La sincronización tarda varios minutos y en ese lapso puede entrar otro commit a main (un PR, otra corrida): en vez de fallar, se
+          # reaplica el commit de datos sobre lo nuevo (`-X theirs` en un rebase = gana la instantánea recién generada) y se reintenta.
+          for attempt in 1 2 3 4; do
+            git push && exit 0
+            echo "Push rechazado (intento $attempt): se reaplica sobre main."
+            git pull --rebase -X theirs origin main
+          done
+          echo "No se pudo subir la sincronización tras 4 intentos." >&2
+          exit 1
 
       # El guardián revisa qué falta o qué está mal (horarios pendientes, fuentes caídas, tablas viejas, fechas sin confirmar) y avisa por
       # Telegram. Corre siempre, incluso si la sincronización falló. El estado (qué ya se avisó) viaja en la caché.
