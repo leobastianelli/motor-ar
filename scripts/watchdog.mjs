@@ -4,6 +4,7 @@
 import fs from "node:fs";
 import { emptyState, evaluate } from "../src/lib/monitor/alerts.mjs";
 import { renderAlerts, sendTelegram } from "../src/lib/monitor/telegram.mjs";
+import { parseDataMeta } from "../src/lib/salud-core.mjs";
 import { saludFindings, siteFindings, syncFindings } from "../src/lib/monitor/watchdog-checks.mjs";
 
 const DRY = process.argv.includes("--dry");
@@ -41,7 +42,11 @@ try {
 } catch {
   // Respondió pero no es JSON: cuenta como que no responde.
 }
-findings.push(...saludFindings(salud, NOW));
+// Versión que muestra la home (<meta name="fierros-datos" content="v=…;…">), para compararla con la última del almacén.
+const homeBody = probed.find((r) => r.path === "/")?.body ?? "";
+const homeMeta = homeBody.match(/<meta[^>]+name="fierros-datos"[^>]+content="([^"]*)"/)?.[1];
+const homeVersion = parseDataMeta(homeMeta?.replace(/&amp;/g, "&"))?.v;
+findings.push(...saludFindings(salud, NOW, { homeVersion }));
 
 // Corridas del sincronizador (necesita el token de GitHub; sin él, sólo se vigila el sitio).
 if (process.env.GITHUB_TOKEN && process.env.GITHUB_REPOSITORY) {

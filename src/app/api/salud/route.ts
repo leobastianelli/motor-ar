@@ -15,7 +15,7 @@ export async function GET() {
   let stored: { id: number; origin: string; createdAt: string } | null = null;
   let storeError: string | undefined;
   try {
-    const rows = (await sql()`SELECT id, origin, created_at::text AS "createdAt" FROM season_versions ORDER BY id DESC LIMIT 1`) as unknown as { id: number; origin: string; createdAt: string }[];
+    const rows = (await sql()`SELECT id, origin, to_char(created_at AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') AS "createdAt" FROM season_versions ORDER BY id DESC LIMIT 1`) as unknown as { id: number; origin: string; createdAt: string }[];
     stored = rows[0] ?? null;
   } catch (error) {
     storeError = error instanceof Error ? error.message : String(error);

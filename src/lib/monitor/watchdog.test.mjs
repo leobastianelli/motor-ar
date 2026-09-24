@@ -87,3 +87,12 @@ test("pendientes: sólo los de más de 60 min, con el nombre de la sesión", () 
   assert.equal(out.length, 1);
   assert.match(out[0].title, /Marina Bay · Carrera/);
 });
+
+test("la home con una versión vieja avisa (pasados 10 min, dos corridas seguidas)", () => {
+  const nueva = salud({ almacen: { ultimaVersion: 13, createdAt: "2026-09-24T11:30:00Z", origin: "hot" }, sirviendo: { ...salud().sirviendo, versionId: 13 } });
+  const out = saludFindings(nueva, NOW, { homeVersion: "12" });
+  const home = out.find((f) => f.key === "salud:home-vieja");
+  assert.ok(home && home.consecutive === 2);
+  assert.deepEqual(saludFindings(nueva, NOW, { homeVersion: "13" }).map((f) => f.key), []);
+  assert.deepEqual(saludFindings(nueva, NOW).map((f) => f.key), []);
+});

@@ -57,7 +57,7 @@ export function syncFindings(runs, now, { maxHours = 30 } = {}) {
  * - la última versión del almacén lleva más de 10 min y el sitio sirve otra → la invalidación de las páginas no funcionó
  * - sesiones sin resultados hace más de 60 min → la fuente no las publicó o el sitio no las tomó
  */
-export function saludFindings(salud, now, { staleMin = 10, pendingMin = 60 } = {}) {
+export function saludFindings(salud, now, { staleMin = 10, pendingMin = 60, homeVersion } = {}) {
   if (!salud) {
     return [{ key: "salud:no-responde", severity: "high", level: 1, tier: 1, title: "/api/salud no responde", body: "No se puede saber qué versión de los datos sirve el sitio." }];
   }
@@ -82,6 +82,19 @@ export function saludFindings(salud, now, { staleMin = 10, pendingMin = 60 } = {
       tier: 1,
       title: "El sitio no toma la versión nueva",
       body: `El almacén tiene la versión ${almacen.ultimaVersion} (${almacen.origin}, hace ${Math.round(storedAge)} min) y el sitio sirve la ${sirviendo?.versionId ?? "instantánea"}. Falló la invalidación de las páginas.`,
+    });
+  }
+  // Lo que importa es lo que ve la gente: la versión del <meta name="fierros-datos"> de la home (ISR), que puede quedar vieja aunque /api/salud
+  // (dinámico) ya vea la nueva. Dos corridas seguidas: la primera visita después de invalidar puede recibir la copia anterior mientras regenera.
+  if (homeVersion != null && almacen?.ultimaVersion != null && String(almacen.ultimaVersion) !== String(homeVersion) && storedAge > staleMin) {
+    out.push({
+      key: "salud:home-vieja",
+      severity: "high",
+      level: 1,
+      tier: 1,
+      consecutive: 2,
+      title: "La home muestra una versión vieja",
+      body: `El almacén tiene la versión ${almacen.ultimaVersion} (hace ${Math.round(storedAge)} min) y la home muestra la ${homeVersion}. Las páginas no se regeneraron.`,
     });
   }
   for (const p of salud.pendientes ?? []) {
