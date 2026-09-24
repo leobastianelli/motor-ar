@@ -91,7 +91,7 @@ test("completa la práctica que terminó y no pide lo que ya tiene resultados ni
     event(14, "f1-2026-14", "Spanish Grand Prix", [session("Práctica 1", "2026-09-11T11:30:00Z", [{ pos: 1, driver: "X", team: "", gap: "" }])]),
     event(15, "f1-2026-15", "Azerbaijan Grand Prix", [session("Práctica 1", "2026-09-24T08:30:00Z"), session("Práctica 2", "2026-09-24T12:00:00Z"), session("Práctica 3", "2026-09-25T08:30:00Z")]),
   ];
-  const fake = io({ [BASE]: INDEX, [`${BASE}/1295/azerbaijan/practice/1`]: PRACTICE, [`${BASE}/1295/azerbaijan/practice/2`]: table(["Pos."], []) });
+  const fake = io({ [BASE]: INDEX, [`${BASE}/1295/azerbaijan/practice/1`]: PRACTICE, [`${BASE}/1295/azerbaijan/practice/2`]: table(["Pos.", "No.", "Driver", "Team", "Time / Gap", "Laps"], []) });
   const { events: out, meta } = await f1OfficialSessions(fake, events, {}, { now: NOW, knownNames: ["Sergio Pérez"] });
   const [p1, p2, p3] = out[1].sessions;
   assert.equal(p1.results.length, 3);

@@ -1,0 +1,37 @@
+# Prueba de humo de cada despliegue: verifica el sitio en línea (versión de los datos, páginas, resultados y notas), no el repo.
+# Vercel publica el estado del despliegue en GitHub; el workflow corre cuando pasa a "success".
+# Necesita el secreto VERCEL_AUTOMATION_BYPASS_SECRET (Protection Bypass for Automation) para entrar a los previews protegidos.
+name: humo
+
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+
+jobs:
+  humo:
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            scripts
+            src/lib
+          sparse-checkout-cone-mode: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Prueba de humo
+        env:
+          TARGET_URL: ${{ github.event.deployment_status.target_url }}
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # Sólo en producción se avisa por Telegram; en un preview falla el check y nada más.
+          ALERT: ${{ github.event.deployment_status.environment == 'Production' && '--telegram' || '' }}
+        run: node scripts/humo.mjs "$TARGET_URL" $ALERT

@@ -21,6 +21,7 @@ export async function GET() {
     storeError = error instanceof Error ? error.message : String(error);
   }
   const events = visibleEvents(raw.events as never, manual);
-  const body = healthReport({ source: raw.source!, stored, storeError, failures: raw.failures ?? [], events, now });
+  const notes = (await getAllNotes()).map((n) => ({ slug: n.slug, title: n.title, auto: n.auto }));
+  const body = healthReport({ source: raw.source!, stored, storeError, failures: raw.failures ?? [], events, notes, now });
   return Response.json(body, { headers: { "Cache-Control": "no-store" } });
 }

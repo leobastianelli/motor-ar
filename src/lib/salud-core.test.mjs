@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { ageMin, dataMetaContent, healthReport, isFallback, noResultsReason, parseDataMeta, pendingSessions } from "./salud-core.mjs";
+import { ageMin, dataMetaContent, healthReport, isFallback, noResultsReason, parseDataMeta, pendingSessions, recentWinners, latestEventWithResults } from "./salud-core.mjs";
 
 const NOW = "2026-09-24T15:00:00Z";
 const source = { versionId: 12, origin: "hot", generatedAt: "2026-09-24T14:30:00Z", createdAt: "2026-09-24T14:31:00Z", servedFrom: "store" };
@@ -71,4 +71,24 @@ test("el informe junta lo que se sirve, lo que hay en el almacén y lo pendiente
   assert.equal(r.edadMin, 29);
   assert.deepEqual(r.fallas, ["F1: x"]);
   assert.equal(healthReport({ source, stored: null, storeError: "boom", now: NOW }).almacen.error, "boom");
+});
+
+test("ganadores recientes: sólo categorías automáticas, sesiones terminadas en los últimos 3 días y con posición 1", () => {
+  const now = "2026-09-24T18:00:00Z";
+  const ev = (id, seriesId, sessions) => ({ id, seriesId, sessions });
+  const s = (name, start, results) => ({ name, start, durationMin: 60, ...(results ? { results } : {}) });
+  const events = [
+    ev("f1-15", "f1", [s("Práctica 1", "2026-09-24T08:30:00Z", [{ pos: 1, driver: "George Russell" }]), s("Carrera", "2026-09-10T12:00:00Z", [{ pos: 1, driver: "Viejo" }]), s("Práctica 2", "2026-09-24T17:30:00Z", [{ pos: 1, driver: "En curso" }])]),
+    ev("tc2000-1", "tc2000", [s("Final", "2026-09-24T08:00:00Z", [{ pos: 1, driver: "Manual" }])]),
+  ];
+  const w = recentWinners(events, now);
+  assert.deepEqual(w.map((x) => [x.evento, x.sesion, x.ganador]), [["f1-15", "Práctica 1", "George Russell"]]);
+  assert.equal(latestEventWithResults(events), "f1-15");
+  assert.equal(latestEventWithResults([ev("x", "f1", [s("Carrera", "2026-09-24T08:00:00Z")])]), null);
+});
+
+test("el informe lista las crónicas automáticas y marca cuáles entran en el menú", () => {
+  const notes = [{ slug: "a", title: "A", auto: {} }, { slug: "m", title: "M" }, { slug: "b", title: "B", auto: {} }, { slug: "c", title: "C" }, { slug: "d", title: "D", auto: {} }];
+  const r = healthReport({ source, stored: null, notes, now: "2026-09-24T18:00:00Z" });
+  assert.deepEqual(r.cronicas, [{ slug: "a", title: "A", enMenu: true }, { slug: "b", title: "B", enMenu: true }, { slug: "d", title: "D", enMenu: false }]);
 });

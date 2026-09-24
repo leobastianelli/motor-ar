@@ -1,0 +1,19 @@
+# Valida la sintaxis de los workflows en cada PR. El 24/09/2026 un YAML inválido dejó la sincronización parada una hora sin que nada avisara.
+name: Validar workflows
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  actionlint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github
+      - name: actionlint
+        run: docker run --rm -v "$PWD:/repo" --workdir /repo rhysd/actionlint:1.7.7 -color
