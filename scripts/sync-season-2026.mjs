@@ -64,8 +64,13 @@ console.log(`\n${season.events.length} eventos → ${OUTPUT}`);
 const INDEX = "src/data/drivers-2026.json";
 const previousIndex = fs.existsSync(INDEX) ? JSON.parse(fs.readFileSync(INDEX, "utf8")) : undefined;
 const index = buildDriverIndex(saved, previousIndex);
-fs.writeFileSync(INDEX, JSON.stringify(index, null, 2));
-console.log(`${index.drivers.length} pilotos → ${INDEX}`);
+// El índice lo importa el código, así que cada cambio del archivo es un despliegue: si sólo cambiaría `generatedAt`, no se toca.
+if (previousIndex && JSON.stringify(index.drivers) === JSON.stringify(previousIndex.drivers)) {
+  console.log(`${index.drivers.length} pilotos, sin cambios → ${INDEX} queda igual`);
+} else {
+  fs.writeFileSync(INDEX, JSON.stringify(index, null, 2));
+  console.log(`${index.drivers.length} pilotos → ${INDEX}`);
+}
 
 // Avisa al sitio que hay datos vigentes (revalida las páginas). Si falla, la corrida falla: el guardián avisa y no queda una versión escrita
 // que el sitio no muestra sin que nadie se entere.

@@ -132,6 +132,8 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           SYNC_STATUS: ${{ job.status }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          # Para que revise lo que muestra el sitio (la última versión del almacén), no el archivo del repo.
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: npm run guardian
 
       - name: Guardar estado de avisos
