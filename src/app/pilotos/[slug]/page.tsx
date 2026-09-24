@@ -8,7 +8,7 @@ import { Momento, ProximaSesion } from "@/components/momento";
 import { CategoryLabel, PhotoCredit, SectionTitle } from "@/components/pista";
 import { colapintoData, finishLabel, quotes, raceCode, raceName, recentMilestones, statusLabel, type ColapintoData } from "@/lib/colapinto";
 import { getAllDrivers, getDriver, getIndexedDriver, getIndexedDrivers, getNow, getSeason, getSeries, isSimulatedNow, type Season } from "@/lib/data";
-import { fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/format";
+import { fmtDayNum, fmtDayShort, fmtMonthShort } from "@/lib/format";
 import { NotesBlock } from "@/components/notas";
 import { notesForDriver } from "@/lib/notas";
 import { getPhoto } from "@/lib/photos";
