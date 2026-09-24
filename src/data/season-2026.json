@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T11:36:44.332Z",
+  "generatedAt": "2026-09-24T18:13:39.934Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -101168,7 +101168,195 @@
           "name": "Práctica 1",
           "start": "2026-09-24T08:30:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "1:45.387"
+            },
+            {
+              "pos": 2,
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "+0.400"
+            },
+            {
+              "pos": 3,
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "+0.404"
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+0.437"
+            },
+            {
+              "pos": 5,
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+0.878"
+            },
+            {
+              "pos": 6,
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+1.011"
+            },
+            {
+              "pos": 7,
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "+1.053"
+            },
+            {
+              "pos": 8,
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+1.214"
+            },
+            {
+              "pos": 9,
+              "number": "31",
+              "driver": "Esteban Ocon",
+              "code": "OCO",
+              "team": "Haas F1 Team",
+              "gap": "+1.237"
+            },
+            {
+              "pos": 10,
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "+1.301"
+            },
+            {
+              "pos": 11,
+              "number": "27",
+              "driver": "Nico Hulkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+1.484"
+            },
+            {
+              "pos": 12,
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+1.506"
+            },
+            {
+              "pos": 13,
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "+1.552"
+            },
+            {
+              "pos": 14,
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "+1.594"
+            },
+            {
+              "pos": 15,
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+1.607"
+            },
+            {
+              "pos": 16,
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "+1.656"
+            },
+            {
+              "pos": 17,
+              "number": "11",
+              "driver": "Sergio Perez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "+1.866"
+            },
+            {
+              "pos": 18,
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "+2.136"
+            },
+            {
+              "pos": 19,
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+2.448"
+            },
+            {
+              "pos": 20,
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "+2.486"
+            },
+            {
+              "pos": 21,
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "+3.160"
+            },
+            {
+              "pos": 22,
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "+3.928"
+            }
+          ],
+          "resultsSource": {
+            "name": "OpenF1",
+            "url": "https://api.openf1.org/v1/session_result?session_key=11370"
+          },
+          "videos": [
+            {
+              "id": "Os85ZjKi8Co",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-15-secondpractice",
@@ -101176,7 +101364,195 @@
           "name": "Práctica 2",
           "start": "2026-09-24T12:00:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "1:43.347"
+            },
+            {
+              "pos": 2,
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+0.552"
+            },
+            {
+              "pos": 3,
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "+0.827"
+            },
+            {
+              "pos": 4,
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "+1.126"
+            },
+            {
+              "pos": 5,
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+1.318"
+            },
+            {
+              "pos": 6,
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "+1.484"
+            },
+            {
+              "pos": 7,
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "+1.496"
+            },
+            {
+              "pos": 8,
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+1.510"
+            },
+            {
+              "pos": 9,
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "+1.521"
+            },
+            {
+              "pos": 10,
+              "number": "31",
+              "driver": "Esteban Ocon",
+              "code": "OCO",
+              "team": "Haas F1 Team",
+              "gap": "+1.943"
+            },
+            {
+              "pos": 11,
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "+2.132"
+            },
+            {
+              "pos": 12,
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "+2.334"
+            },
+            {
+              "pos": 13,
+              "number": "11",
+              "driver": "Sergio Perez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "+2.413"
+            },
+            {
+              "pos": 14,
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "+2.447"
+            },
+            {
+              "pos": 15,
+              "number": "27",
+              "driver": "Nico Hulkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+2.507"
+            },
+            {
+              "pos": 16,
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "+2.776"
+            },
+            {
+              "pos": 17,
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+2.874"
+            },
+            {
+              "pos": 18,
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+3.044"
+            },
+            {
+              "pos": 19,
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "+3.390"
+            },
+            {
+              "pos": 20,
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+3.454"
+            },
+            {
+              "pos": 21,
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "+4.056"
+            },
+            {
+              "pos": 22,
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+4.542"
+            }
+          ],
+          "resultsSource": {
+            "name": "OpenF1",
+            "url": "https://api.openf1.org/v1/session_result?session_key=11371"
+          },
+          "videos": [
+            {
+              "id": "cLgOcaTO2M0",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-15-thirdpractice",
@@ -106102,7 +106478,7 @@
           ]
         }
       ],
-      "campeonesFeed": false,
+      "campeonesFeed": true,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -106154,8 +106530,18 @@
     },
     "openf1": {
       "sessions": 131,
-      "requests": 12,
-      "sessionsWithResults": 37
+      "requests": 16,
+      "sessionsWithResults": 39
+    },
+    "f1Official": {
+      "requests": 0,
+      "sessionsWithResults": 0,
+      "errors": []
+    },
+    "f1Youtube": {
+      "scanned": 15,
+      "sessions": 2,
+      "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
       "requests": 6,
@@ -106177,7 +106563,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026 (se conservan los resultados anteriores)"
-  ]
+  "failures": []
 }
