@@ -42,6 +42,13 @@ test("una falla de otra categoría no cuenta, y una de video tampoco", () => {
   assert.equal(noResultsReason(session(), "tc", ["Tiempos ACTC: caída"], NOW), "No pudimos consultar la fuente");
 });
 
+test("publicada pero sin leer: no se le echa la culpa a la fuente (Baku 2026: práctica y clasificación 1 de F2)", () => {
+  assert.equal(noResultsReason(session({ resultsUnread: true }), "f2", [], NOW), "La fuente los publicó, pero no pudimos leerlos");
+  assert.equal(noResultsReason(session({ resultsUnread: true }), "f2", ["FIA F2: caída"], NOW), "No pudimos consultar la fuente");
+  const [row] = pendingSessions([{ id: "f2-2026-12", seriesId: "f2", circuit: { city: "Baku" }, sessions: [session({ name: "Práctica", resultsUnread: true })] }], NOW);
+  assert.deepEqual(row, { categoria: "f2", sesion: "Baku · Práctica", terminoHaceMin: 120, publicadosSinLeer: true });
+});
+
 test("pendientes: sólo categorías automáticas, entre 15 min y 48 h", () => {
   const ev = (seriesId, s) => ({ id: seriesId, seriesId, name: "GP", circuit: { city: "Monza" }, sessions: [s] });
   const out = pendingSessions(

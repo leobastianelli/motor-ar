@@ -46,6 +46,7 @@ export const sourceFailed = (seriesId, failures = []) => {
  * Por qué una sesión terminada hace más de 30 min no tiene resultados, o `null` si todavía es pronto o sí los tiene.
  * - la fuente de la categoría falló en la última sincronización → "No pudimos consultar la fuente"
  * - la categoría no tiene fuente automática → "Resultados sin cargar todavía"
+ * - la fuente publicó la clasificación pero no la pudimos leer (`resultsUnread`, p. ej. sólo salió en PDF) → "La fuente los publicó, pero no pudimos leerlos"
  * - la fuente respondió pero no publicó nada → "La fuente todavía no los publicó"
  */
 export function noResultsReason(session, seriesId, failures, now) {
@@ -53,7 +54,8 @@ export function noResultsReason(session, seriesId, failures, now) {
   const endedMin = (Date.parse(now) - (Date.parse(session.start) + (session.durationMin ?? 60) * MIN)) / MIN;
   if (!(endedMin > 30)) return null;
   if (!AUTOMATIC_SERIES.has(seriesId)) return "Resultados sin cargar todavía";
-  return sourceFailed(seriesId, failures) ? "No pudimos consultar la fuente" : "La fuente todavía no los publicó";
+  if (sourceFailed(seriesId, failures)) return "No pudimos consultar la fuente";
+  return session.resultsUnread ? "La fuente los publicó, pero no pudimos leerlos" : "La fuente todavía no los publicó";
 }
 
 /**
@@ -68,7 +70,9 @@ export function pendingSessions(events, now, { after = 15, before = 48 } = {}) {
     for (const s of e.sessions) {
       if (s.timeKnown === false || s.results?.length) continue;
       const min = Math.round((nowMs - (Date.parse(s.start) + (s.durationMin ?? 60) * MIN)) / MIN);
-      if (min >= after && min < before * 60) out.push({ categoria: e.seriesId, sesion: `${e.circuit?.city ?? e.name} · ${s.name}`, terminoHaceMin: min });
+      if (min >= after && min < before * 60) {
+        out.push({ categoria: e.seriesId, sesion: `${e.circuit?.city ?? e.name} · ${s.name}`, terminoHaceMin: min, ...(s.resultsUnread ? { publicadosSinLeer: true } : {}) });
+      }
     }
   }
   return out.sort((a, b) => b.terminoHaceMin - a.terminoHaceMin);

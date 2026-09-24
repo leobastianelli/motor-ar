@@ -70,6 +70,8 @@ export interface Session {
   results?: ResultRow[];
   /** Documento oficial del que salen los resultados de esta sesión. */
   resultsSource?: { name: string; url: string };
+  /** La sesión terminó y el organizador ya publicó la clasificación, pero ninguna fuente automática la pudo leer (p. ej. sólo salió en PDF). */
+  resultsUnread?: boolean;
   /** Videos oficiales de la sesión en YouTube: la transmisión y los resúmenes. La dirección es youtube.com/watch?v=<id>. */
   videos?: { id: string; kind: "live" | "highlights"; label?: string }[];
 }

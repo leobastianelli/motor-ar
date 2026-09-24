@@ -3,35 +3,52 @@ import { FLAGICON_ISO, dateOnly, dayMonth, resultsFromStandings } from "./common
 import { biggest, flagOf, intOf, section, tables } from "./wikitext.mjs";
 
 const OFFICIAL = "https://www.fiaformula2.com/en/racing/2026";
-const OFFICIAL_SESSIONS = [
-  ["Practice", "practica", "Práctica"],
-  ["Qualifying", "clasificacion", "Clasificación"],
-  ["Sprint Race", "sprint", "Carrera sprint"],
-  ["Feature Race", "carrera", "Carrera principal"],
-];
+/** Sesión oficial → [tipo, nombre, sufijo del id]. Baku 2026 tuvo dos clasificaciones y dos carreras principales. */
+const OFFICIAL_SESSIONS = {
+  Practice: ["practica", "Práctica", "practica"],
+  Qualifying: ["clasificacion", "Clasificación", "clasificacion"],
+  "Qualifying 1": ["clasificacion", "Clasificación 1", "clasificacion-1"],
+  "Qualifying 2": ["clasificacion", "Clasificación 2", "clasificacion-2"],
+  "Sprint Race": ["sprint", "Carrera sprint", "sprint"],
+  "Feature Race": ["carrera", "Carrera principal", "carrera"],
+  "Feature Race 2": ["carrera", "Carrera principal 2", "carrera-2"],
+};
 const titleCase = (slug) => slug.replace(/-/g, " ").replace(/(^|\s)\S/g, (m) => m.toUpperCase());
 
-/** Horarios por fecha desde los datos estructurados (JSON-LD) de cada página oficial. */
+/**
+ * Sesiones de una fecha desde los datos estructurados (JSON-LD) de su página oficial, en orden: Map nombre → { start, end }.
+ * Los datos nombran "Qualifying" a toda clasificación y "Race" a toda carrera: si hay dos clasificaciones se numeran, y de las carreras
+ * la primera es la sprint y las siguientes, las principales ("Feature Race", "Feature Race 2").
+ */
+export function parseOfficialSchedule(html) {
+  const ordered = [];
+  for (const m of html.matchAll(/"@id":"https:\/\/www\.fiaformula2\.com\/en\/racing\/2026\/[a-z-]+#[^"]*","name":"([^"]+?) - [^"]*"/g)) {
+    const found = html.slice(m.index, m.index + 900).match(/"startDate":"([^"]+T[^"]+)","endDate":"([^"]+)"/);
+    if (found) ordered.push({ name: m[1], start: found[1], end: found[2] });
+  }
+  const qualifyings = ordered.filter((s) => s.name === "Qualifying").length;
+  const sessions = new Map();
+  let races = 0;
+  let quali = 0;
+  for (const s of ordered) {
+    let key = s.name;
+    if (s.name === "Race") key = races++ === 0 ? "Sprint Race" : races === 2 ? "Feature Race" : `Feature Race ${races - 1}`;
+    else if (s.name === "Qualifying" && qualifyings > 1) key = `Qualifying ${++quali}`;
+    if (OFFICIAL_SESSIONS[key] && !sessions.has(key)) sessions.set(key, { start: s.start, end: s.end });
+  }
+  return sessions;
+}
+
+/** Horarios por fecha desde la página oficial de cada una. */
 export async function officialSchedule(io) {
   const list = await io.text(OFFICIAL, { revalidate: 86400 });
   const slugs = [...new Set([...list.matchAll(/href="\/en\/racing\/2026\/([a-z-]+)"/g)].map((m) => m[1]))];
   const rounds = [];
   for (const slug of slugs) {
-    const html = await io.text(`${OFFICIAL}/${slug}`, { revalidate: 6 * 3600 });
-    // Los datos estructurados nombran "Race" a las dos carreras: la primera es la sprint y la segunda la principal.
-    const ordered = [];
-    for (const m of html.matchAll(/"@id":"https:\/\/www\.fiaformula2\.com\/en\/racing\/2026\/[a-z-]+#[^"]*","name":"([^"]+?) - [^"]*"/g)) {
-      const found = html.slice(m.index, m.index + 900).match(/"startDate":"([^"]+T[^"]+)","endDate":"([^"]+)"/);
-      if (found) ordered.push({ name: m[1], start: found[1], end: found[2] });
-    }
-    const sessions = new Map();
-    let races = 0;
-    for (const s of ordered) {
-      const key = s.name === "Race" ? (races++ === 0 ? "Sprint Race" : "Feature Race") : s.name;
-      if (!sessions.has(key)) sessions.set(key, { start: s.start, end: s.end });
-    }
+    const sessions = parseOfficialSchedule(await io.text(`${OFFICIAL}/${slug}`, { revalidate: 6 * 3600 }));
     // Fechas futuras sin cronograma publicado traen horarios de relleno (práctica y clasificación a la misma hora).
-    const placeholder = sessions.get("Practice")?.start && sessions.get("Practice").start === sessions.get("Qualifying")?.start;
+    const firstQuali = sessions.get("Qualifying") ?? sessions.get("Qualifying 1");
+    const placeholder = sessions.get("Practice")?.start && sessions.get("Practice").start === firstQuali?.start;
     if (sessions.has("Feature Race") && !placeholder) rounds.push({ slug, city: titleCase(slug), sessions });
     await io.sleep(250);
   }
@@ -88,20 +105,24 @@ export async function f2Season(io) {
   const events = calendar.map((c) => {
     const i = (c.round - 1) * 2;
     const results = { sprint: perRace[i], carrera: perRace[i + 1] };
-    const match = official.find((o) => o.sessions.get("Feature Race") && c.feature && sameDay(o.sessions.get("Feature Race").start, c.feature));
+    // Wikipedia fecha la ronda por la carrera principal; si hubo dos (Baku 2026), puede ser el día de cualquiera de ellas.
+    const match = official.find((o) =>
+      ["Feature Race", "Feature Race 2"].some((key) => o.sessions.get(key) && c.feature && sameDay(o.sessions.get(key).start, c.feature)),
+    );
     const withResults = (kind) => (results[kind]?.length ? { results: results[kind] } : {});
 
     const sessions = match
-      ? OFFICIAL_SESSIONS.filter(([key]) => match.sessions.has(key)).map(([key, kind, name]) => {
-          const s = match.sessions.get(key);
+      ? [...match.sessions].map(([key, s]) => {
+          const [kind, name, suffix] = OFFICIAL_SESSIONS[key];
           return {
-            id: `f2-2026-${c.round}-${kind}`,
+            id: `f2-2026-${c.round}-${suffix}`,
             kind,
             name,
             start: s.start,
             timeKnown: true,
             durationMin: Math.max(1, Math.round((new Date(s.end) - new Date(s.start)) / 60000)),
-            ...withResults(kind),
+            // Wikipedia trae una sprint y una principal por ronda: sus resultados van a la primera de cada tipo.
+            ...(suffix === kind ? withResults(kind) : {}),
           };
         })
       : [
