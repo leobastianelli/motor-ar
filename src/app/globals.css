@@ -545,3 +545,13 @@ button{color:inherit;font-family:inherit}
 [id="agenda"],[id="nuestros"],[id="resultados"],[id="viene"],[id="notas"]{scroll-margin-top:96px}
 
 .recent-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:0 32px}.recent-grid .podium{margin-bottom:24px}.podium li.podium-ours{background:var(--blue);color:var(--ink);padding-left:12px;padding-right:12px}.podium li.podium-ours div span{color:var(--ink)}
+
+.notas-filters{display:grid;gap:14px;margin-top:24px}
+.notas-search{display:grid;gap:6px;font-size:13px;font-weight:700;max-width:520px}
+.notas-search input{font:inherit;font-weight:400;font-size:16px;padding:12px 14px;border:1px solid var(--ink);background:#fff;border-radius:0}
+.notas-search input:focus-visible,.notas-chips button:focus-visible,.notas-clear:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.notas-chips{display:flex;flex-wrap:wrap;gap:8px}
+.notas-chips button{font:inherit;font-size:14px;font-weight:650;padding:8px 12px;border:1px solid var(--ink);background:transparent;cursor:pointer;color:var(--ink)}
+.notas-chips button.is-selected{background:var(--ink);color:#fff}
+.notas-count{margin:18px 0 0;font-size:13px;color:var(--muted)}
+.notas-clear{font:inherit;text-decoration:underline;background:none;border:0;padding:0;cursor:pointer;color:inherit}
