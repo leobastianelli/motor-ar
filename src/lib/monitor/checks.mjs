@@ -148,7 +148,7 @@ export function sessionResultsMissing(events, now, { seriesIds, after = 0.5, bef
       level,
       tier: tierOf(e.seriesId),
       title: `Sesiones sin resultados: ${name(e.seriesId)} · ${e.circuit?.city ?? e.name}`,
-      body: `${late.map(({ s, hours }) => `${s.name} (terminó hace ${hours < 1 ? `${Math.round(hours * 60)} min` : `${Math.round(hours)} h`})`).join(", ")}. Se vuelven a pedir en cada sincronización.`,
+      body: `${late.map(({ s, hours }) => `${s.name} (terminó hace ${hours < 1 ? `${Math.round(hours * 60)} min` : `${Math.round(hours)} h`}${s.resultsUnread ? "; la fuente los publicó y no los pudimos leer" : ""})`).join(", ")}. Se vuelven a pedir en cada sincronización.`,
     });
   }
   return out;
