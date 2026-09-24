@@ -4,7 +4,9 @@ Leer primero `docs/plan-lanzamiento/00-plan.md` (formatos) y `docs/plan-datos/00
 
 ## Objetivo
 
-Que Leonel no escriba a mano cada publicación. Cuando pasa algo publicable, le llega por Telegram (el mismo bot del guardián) un **borrador listo para copiar y pegar en X**: texto de hasta 280 caracteres con un dato concreto y el enlace. Nada se publica solo: la publicación la hace una persona.
+Que Leonel no escriba a mano cada publicación. Cuando pasa algo publicable, le llega por Telegram (el mismo bot del guardián) el texto armado, con un dato concreto y el enlace, y un botón **"Publicar en X"**. El botón abre la app de X con el texto ya escrito, mediante un enlace de intención: `https://x.com/intent/post?text=<texto codificado>`. Leonel lo revisa y toca Publicar. **Tocar el botón es la confirmación: nada sale sin que él lo apruebe.**
+
+Por qué así y no con la API de X (decidido el 24/09/2026): desde febrero de 2026 la API no tiene plan gratis y cobra USD 0,20 por publicación con enlace, además de pedir una cuenta de desarrollador y claves. El enlace de intención es gratis, no necesita claves ni webhook, y publica la cuenta de Leonel desde su app, como una persona. Si el volumen lo justifica, se cambia a la API más adelante, y sólo cambia qué hace el botón.
 
 ## Qué construir
 
@@ -14,7 +16,7 @@ Que Leonel no escriba a mano cada publicación. Cuando pasa algo publicable, le 
    - **A qué hora corre** (el día de la sesión, a las 08:00): para las sesiones de ese día de pilotos argentinos que corren afuera (`getDriversAbroad`), con la hora, dónde verlo y enlace a `/horarios/<piloto>`.
    - Cada borrador tiene una clave estable (por ejemplo `sesion:<id>`), para no mandarlo dos veces.
 2. **Envío:** un paso nuevo en el job `gate` del workflow `sync-season.yml`, que ya corre cada hora de jueves a domingo, y también después del paso de la sincronización. Llama a `scripts/borradores-redes.mjs`, que lee la última versión del almacén (`scripts/season-source.mjs`), calcula los borradores y los manda con `sendTelegram` de `src/lib/monitor/telegram.mjs`. Qué se mandó se guarda como el estado de avisos del guardián (`actions/cache` con una clave propia, por ejemplo `.redes-state.json`). **Validar el YAML** (actionlint corre en el PR).
-3. **Formato del mensaje de Telegram:** el borrador en un bloque fácil de copiar, y abajo, en otra línea, "Para X" / "Para Instagram (con la placa)". Si hay imagen (la agenda), el enlace a `/placa/imagen`.
+3. **Mensaje de Telegram:** el texto del borrador y un teclado en línea (`reply_markup.inline_keyboard`) con un botón de tipo `url`, "Publicar en X", que apunta al enlace de intención con el texto codificado (`encodeURIComponent`). Es un botón de enlace: no necesita webhook ni manejar respuestas. `sendTelegram` hoy manda sólo texto: agregarle un parámetro opcional para el teclado, sin romper los avisos del guardián. Para la agenda, además, el enlace a `/placa/imagen`, para bajarla y adjuntarla a mano si se quiere.
 
 ## Reglas de contenido (las mismas del sitio)
 
@@ -25,7 +27,7 @@ Que Leonel no escriba a mano cada publicación. Cuando pasa algo publicable, le 
 
 ## Qué NO hacer
 
-- No publicar en X automáticamente. La API de X de pago queda fuera de alcance, y una cuenta nueva que publica sola puede quedar limitada.
+- No publicar en X automáticamente ni usar la API de X (paga y con claves): el botón abre X y la persona publica.
 - No mandar un borrador si faltan datos (por ejemplo, sin el 3.º puesto o sin la hora confirmada).
 
 ## Verificación
