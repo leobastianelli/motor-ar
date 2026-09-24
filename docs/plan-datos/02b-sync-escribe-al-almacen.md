@@ -2,6 +2,8 @@
 
 Leer primero `docs/plan-datos/00-indice.md`. Supone terminadas 01 y 02a (existe `season_versions` y el sitio lee de ahí).
 
+> **Se arma sobre la rama de 02a (sin mergear) y se mergea junto con ella**: ver el aviso al principio de `02a-almacen-de-temporada.md`.
+
 ## Objetivo
 
 - La sync completa (GitHub Actions, `scripts/sync-season-2026.mjs`) parte de la última versión del almacén y escribe una versión nueva sin pisar lo que otro escritor haya guardado mientras corría. Después invalida el sitio.
