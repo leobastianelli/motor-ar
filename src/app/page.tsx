@@ -6,7 +6,7 @@ import { AutoRefresh, MinutesLeft } from "@/components/live-clock";
 import { NoteCard } from "@/components/notas";
 import { CatMark, CategoryLabel, Code, SectionTitle, StateTag } from "@/components/pista";
 import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, isSimulatedNow, ms, seriesTier, weekendWindow, type HomeMode } from "@/lib/data";
-import { getNotes } from "@/lib/notas";
+import { getAllNotes } from "@/lib/notas";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime, raceWinner, surname } from "@/lib/format";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
@@ -57,7 +57,7 @@ export default async function Home() {
   const podium = season.getRecentResults(now, "nacional")[0];
   const [highlight, ...notes] = season.getArgentineHighlights(now);
   const nextEvents = season.getUpcomingEvents(now).filter((e) => ms(eventStart(e)) >= ms(to)).slice(0, 3);
-  const latestNotes = getNotes().slice(0, 3);
+  const latestNotes = (await getAllNotes()).slice(0, 3);
   const liveUrl = live?.event.broadcasts.find((b) => b.url && b.kind !== "timing")?.url;
   const timingUrl = live?.event.broadcasts.find((b) => b.kind === "timing")?.url;
 

@@ -15,6 +15,7 @@ import {
   parseTc2000Home,
   pendingHours,
   resultsOverdue,
+  sessionResultsMissing,
   sourceFailures,
   staleStandings,
   tnDateConflicts,
@@ -67,6 +68,7 @@ const findings = [
   ...dateIssues(events, NOW, { tierOf, name }),
   ...pendingHours(events, NOW, { tierOf, name }),
   ...resultsOverdue(events, NOW, { autoSeries: AUTO_RESULTS, tierOf, name }),
+  ...sessionResultsMissing(events, NOW, { seriesIds: new Set(["f1"]), tierOf, name }),
   ...staleStandings(snapshot, manual, events, { tierOf, name }),
   ...manualExpired(events, manual, NOW),
 ];

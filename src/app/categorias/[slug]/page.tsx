@@ -306,7 +306,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
         </section>
       )}
 
-      <NotesBlock notas={notesForSeries(series.id)} title={`Notas de ${series.short}`} />
+      <NotesBlock notas={await notesForSeries(series.id)} title={`Notas de ${series.short}`} />
 
       {history ? (
         <History history={history} />

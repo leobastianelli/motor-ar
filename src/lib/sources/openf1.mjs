@@ -52,7 +52,15 @@ export function keepPreviousOpenf1(events, previous) {
 }
 
 export async function openf1Sessions(io, events, previous, { windowDays = 10, delayMs = 1000 } = {}) {
-  const catalog = await io.json(`${BASE}/sessions?year=2026`, { revalidate: 3600 });
+  let catalog;
+  try {
+    catalog = await io.json(`${BASE}/sessions?year=2026`, { revalidate: 600 });
+  } catch (error) {
+    // Con cualquier sesión de F1 en vivo, OpenF1 rechaza (401) todo pedido sin clave, también los de sesiones pasadas. No es una falla:
+    // los resultados que ya teníamos se conservan y la fuente oficial (f1-official.mjs) cubre lo que falte hasta que se libere.
+    if (/^401\b/.test(String(error.message))) return { events: keepPreviousOpenf1(events, previous), meta: { sessions: 0, requests: 0, sessionsWithResults: 0, restrictedWhileLive: true } };
+    throw error;
+  }
   const before = new Map((previous?.events ?? []).map((e) => [e.id, e]));
   const now = Date.now();
   let requests = 0;
@@ -82,7 +90,9 @@ export async function openf1Sessions(io, events, previous, { windowDays = 10, de
         continue;
       }
       try {
-        const revalidate = recent ? 1800 : 30 * 86400;
+        // Recién terminada: OpenF1 tarda unos minutos en publicar la tabla y una respuesta vacía no puede quedar guardada media hora.
+        const ended = now - (Date.parse(s.start) + (s.durationMin ?? 60) * 60000);
+        const revalidate = ended < 3 * 3600000 ? 120 : recent ? 1800 : 30 * 86400;
         const results = await io.json(`${BASE}/session_result?session_key=${match.session_key}`, { revalidate });
         await io.sleep(delayMs);
         const drivers = await io.json(`${BASE}/drivers?session_key=${match.session_key}`, { revalidate });
