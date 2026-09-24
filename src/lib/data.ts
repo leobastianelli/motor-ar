@@ -344,6 +344,8 @@ export function createSeason(raw: RawSeason) {
 
   return {
     updatedAt: raw.generatedAt,
+    /** Versión de la temporada que se sirve y de dónde salió (almacén, última vista o instantánea). */
+    source: raw.source,
     failures: raw.failures ?? [],
     getAllEvents: () => events,
     getEvent: (id: string) => events.find((e) => e.id === id),

@@ -16,6 +16,7 @@
     "sync:tn": "node scripts/sync-tn.mjs",
     "sync": "npm run sync:history && npm run sync:season",
     "sync:photos": "node scripts/fetch-photos.mjs",
+    "db:season:init": "dotenv -e .env.local -- node scripts/init-season-db.mjs",
     "db:migrate": "dotenv -e .env.local -- node scripts/init-tareas-db.mjs",
     "db:task": "dotenv -e .env.local -- node scripts/task-cli.mjs"
   },
