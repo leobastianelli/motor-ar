@@ -53,7 +53,8 @@ jobs:
         if: github.event.schedule == '20 6-23 * * 0,4,5,6'
         env:
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
-        run: curl -sS --max-time 90 -H "Authorization: Bearer $CRON_SECRET" https://www.somosfierros.ar/api/caliente || echo "El refresco caliente no respondió."
+        run: |
+          curl -sS --max-time 90 -H "Authorization: Bearer $CRON_SECRET" https://www.somosfierros.ar/api/caliente || echo "El refresco caliente no respondió."
       - id: decide
         env:
           SCHEDULE: ${{ github.event.schedule }}
