@@ -1,5 +1,6 @@
 // Índice de pilotos argentinos que aparecen en los resultados: identidad estable (dirección, nombre, categorías, número, equipo).
 // Se guarda en el repo con cada sincronización y nunca borra a nadie, aunque una fuente deje de publicar a un piloto.
+import { repairMojibake } from "./common.mjs";
 
 /** Categorías nacionales: todos sus pilotos entran al índice. En las internacionales, sólo los marcados como argentinos. */
 export const NATIONAL_SERIES = new Set(["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "tc2000"]);
@@ -32,16 +33,40 @@ const hasAccent = (s) => /[^\x00-\x7f]/.test(s);
 /** Cuál variante del nombre mostrar: con acentos, sin restos raros y la más usada. */
 const score = (d) => (hasAccent(d.name) ? 1000 : 0) + (/\b[a-z]\b/i.test(d.name.replace(/\b[A-Z]\.?\s/g, "")) ? 0 : 100) + d.count;
 
+/** "Maximo Donzino" con los acentos de "Donzino Máximo": el orden de la fuente de hoy y la escritura acentuada de la otra variante. */
+function withAccentsOf(name, accented) {
+  const words = new Map(accented.split(" ").map((w) => [fold(w), w]));
+  return name
+    .split(" ")
+    .map((w) => (hasAccent(words.get(fold(w)) ?? "") ? words.get(fold(w)) : w))
+    .join(" ");
+}
+
 export function buildDriverIndex(season, previous) {
   const byKey = new Map();
-  for (const d of previous?.drivers ?? []) for (const key of d.keys ?? [d.key]) byKey.set(key, { ...d, key, keys: [key], count: 0, series: [...d.series], numbers: { ...d.numbers }, teams: { ...d.teams } });
+  // Cada piloto del índice anterior entra con una copia por cada forma de su nombre; `group` las mantiene juntas, y `published` guarda las
+  // direcciones que ya tuvo (si cambia, la vieja redirige a la nueva). Un nombre que quedó guardado con los acentos rotos ("Calderã“n") se
+  // repara acá y entra también con la forma reparada: si esa forma ya es de otro piloto del índice, los dos se unifican.
+  const sameAs = [];
+  const repaired = [];
+  (previous?.drivers ?? []).forEach((d, group) => {
+    const name = repairMojibake(d.name);
+    const published = [d.slug, ...(d.formerSlugs ?? [])];
+    const copy = (key) => ({ ...d, name, key, keys: [key], group, published, repaired: name !== d.name, count: 0, series: [...d.series], numbers: { ...d.numbers }, teams: { ...d.teams } });
+    for (const key of d.keys ?? [d.key]) byKey.set(key, copy(key));
+    if (name !== d.name) repaired.push([driverKey(name), copy(driverKey(name)), (d.keys ?? [d.key])[0]]);
+  });
+  for (const [key, entry, own] of repaired) {
+    if (byKey.has(key)) sameAs.push([key, own]);
+    else byKey.set(key, entry);
+  }
   const abroad = new Map([
     ["f2", new Set((season.meta?.f2?.argentines ?? []).map(driverKey))],
     ["gt3", new Set((season.meta?.gt3?.argentines ?? []).map(driverKey))],
   ]);
 
   const seen = (rawName, seriesId, row, day) => {
-    const name = cleanDriverName(rawName);
+    const name = cleanDriverName(repairMojibake(rawName));
     const key = driverKey(name);
     if (key.split(" ").length < 2) return;
     let d = byKey.get(key);
@@ -50,6 +75,11 @@ export function buildDriverIndex(season, previous) {
       byKey.set(key, d);
     }
     d.count++;
+    // Un nombre reparado puede venir con el orden cambiado ("Donzino Máximo", armado desde "APELLIDO NOMBRE"): manda el de la fuente de hoy.
+    if (d.repaired) {
+      d.name = withAccentsOf(name, d.name);
+      d.repaired = false;
+    }
     if (hasAccent(name) && !hasAccent(d.name)) d.name = name;
     if (!d.series.includes(seriesId)) d.series.push(seriesId);
     if (row.number) d.numbers[seriesId] = row.number;
@@ -82,6 +112,13 @@ export function buildDriverIndex(season, previous) {
   const parent = new Map(entries.map((d) => [d.key, d.key]));
   const find = (k) => (parent.get(k) === k ? k : (parent.set(k, find(parent.get(k))), parent.get(k)));
   const union = (a, b) => parent.set(find(a), find(b));
+  const byGroup = new Map();
+  for (const d of entries) {
+    if (d.group === undefined) continue;
+    if (byGroup.has(d.group)) union(d.key, byGroup.get(d.group));
+    else byGroup.set(d.group, d.key);
+  }
+  for (const [a, b] of sameAs) union(a, b);
   const byLetters = new Map();
   for (const d of entries) {
     const l = letters(d.key);
@@ -110,23 +147,35 @@ export function buildDriverIndex(season, previous) {
   const drivers = [];
   const slugs = new Set();
   for (const list of merged.values()) {
-    const best = [...list].sort((a, b) => score(b) - score(a))[0];
-    let slug = slugify(best.name);
-    for (let n = 2; slugs.has(slug); n++) slug = `${slugify(best.name)}-${n}`;
+    // Un nombre reparado que la temporada ya no trae sólo aporta sus acentos: el orden y la forma completa son los de las otras variantes
+    // ("Matias Munoz Marchesi" + "Matías Muñoz M." → "Matías Muñoz Marchesi"). Si es la única variante, queda tal cual.
+    const current = list.filter((d) => !d.repaired);
+    const stale = list.filter((d) => d.repaired);
+    const named = current.length ? current : stale;
+    const best = [...named].sort((a, b) => score(b) - score(a))[0];
+    const name = current.length ? stale.reduce((n, d) => withAccentsOf(n, d.name), best.name) : best.name;
+    let slug = slugify(name);
+    for (let n = 2; slugs.has(slug); n++) slug = `${slugify(name)}-${n}`;
     slugs.add(slug);
     const byRecent = [...list].sort((a, b) => a.lastSeen.localeCompare(b.lastSeen));
     drivers.push({
       key: best.key,
       keys: [...new Set(list.flatMap((d) => d.keys ?? [d.key]))],
       slug,
-      name: best.name,
-      aliases: [...new Set(list.map((d) => d.name).filter((n) => n !== best.name))],
+      name,
+      aliases: [...new Set(named.map((d) => d.name).filter((n) => n !== name))],
       series: [...new Set(list.flatMap((d) => d.series))],
       numbers: Object.assign({}, ...byRecent.map((d) => d.numbers)),
       teams: Object.assign({}, ...byRecent.map((d) => d.teams)),
       firstSeen: list.map((d) => d.firstSeen).sort()[0],
       lastSeen: list.map((d) => d.lastSeen).sort().at(-1),
+      formerSlugs: [...new Set(list.flatMap((d) => d.published ?? []))].filter((s) => s !== slug),
     });
+  }
+  // Direcciones viejas: se conservan para redirigir (next.config.ts), salvo las que hoy son de otro piloto.
+  for (const d of drivers) {
+    d.formerSlugs = d.formerSlugs.filter((s) => !slugs.has(s)).sort();
+    if (!d.formerSlugs.length) delete d.formerSlugs;
   }
   drivers.sort((a, b) => a.name.localeCompare(b.name, "es"));
   return { generatedAt: new Date().toISOString(), drivers };

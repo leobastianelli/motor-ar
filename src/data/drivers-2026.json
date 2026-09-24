@@ -1,14 +1,38 @@
 {
-  "generatedAt": "2026-09-24T19:30:51.819Z",
+  "generatedAt": "2026-09-24T21:39:32.204Z",
   "drivers": [
+    {
+      "key": "adrian percaz",
+      "keys": [
+        "adrian percaz",
+        "adria n perca z"
+      ],
+      "slug": "adrian-percaz",
+      "name": "Adrián Percáz",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "66"
+      },
+      "teams": {
+        "tn": "Ford Focus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "perca-z-adria-n"
+      ]
+    },
     {
       "key": "agustin bonomo",
       "keys": [
         "agustin bonomo",
         "agusta bonomo n"
       ],
-      "slug": "agusta-n-bonomo",
-      "name": "Agustãn Bonomo",
+      "slug": "agustin-bonomo",
+      "name": "Agustín Bonomo",
       "aliases": [],
       "series": [
         "tn"
@@ -20,7 +44,10 @@
         "tn": "DS 3"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-08-02",
+      "formerSlugs": [
+        "agusta-n-bonomo"
+      ]
     },
     {
       "key": "agustin canapino",
@@ -195,33 +222,16 @@
       "lastSeen": "2026-08-16"
     },
     {
-      "key": "andra caldera n s",
-      "keys": [
-        "andra caldera n s"
-      ],
-      "slug": "andra-s-caldera-n",
-      "name": "Andrã‰s Calderã“n",
-      "aliases": [],
-      "series": [
-        "tn"
-      ],
-      "numbers": {
-        "tn": "79"
-      },
-      "teams": {
-        "tn": "Peugeot 208"
-      },
-      "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
-    },
-    {
       "key": "andres calderon",
       "keys": [
+        "andra caldera n s",
         "andres calderon"
       ],
       "slug": "andres-calderon",
-      "name": "Andres Calderon",
-      "aliases": [],
+      "name": "Andrés Calderón",
+      "aliases": [
+        "Andres Calderon"
+      ],
       "series": [
         "tn"
       ],
@@ -232,7 +242,10 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "andra-s-caldera-n"
+      ]
     },
     {
       "key": "andres jakos",
@@ -263,8 +276,8 @@
         "antonino garcia",
         "a antonino garca"
       ],
-      "slug": "antonino-garca-a",
-      "name": "Antonino Garcãa",
+      "slug": "antonino-garcia",
+      "name": "Antonino García",
       "aliases": [],
       "series": [
         "tn"
@@ -276,7 +289,10 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-04-05"
+      "lastSeen": "2026-04-05",
+      "formerSlugs": [
+        "antonino-garca-a"
+      ]
     },
     {
       "key": "augusto carinelli",
@@ -429,27 +445,6 @@
       "lastSeen": "2026-04-05"
     },
     {
-      "key": "blasig martin",
-      "keys": [
-        "blasig martin",
-        "blasig marta n"
-      ],
-      "slug": "blasig-marta-n",
-      "name": "Blasig Martãn",
-      "aliases": [],
-      "series": [
-        "tn"
-      ],
-      "numbers": {
-        "tn": "192"
-      },
-      "teams": {
-        "tn": "Peugeot 208"
-      },
-      "firstSeen": "2026-04-04",
-      "lastSeen": "2026-09-20"
-    },
-    {
       "key": "braian quevedo",
       "keys": [
         "braian quevedo"
@@ -600,8 +595,8 @@
         "damian kirstein",
         "damia kirstein n"
       ],
-      "slug": "damia-n-kirstein",
-      "name": "Damiãn Kirstein",
+      "slug": "damian-kirstein",
+      "name": "Damián Kirstein",
       "aliases": [],
       "series": [
         "tn"
@@ -613,7 +608,10 @@
         "tn": "Toyota Etios"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-04-05"
+      "lastSeen": "2026-04-05",
+      "formerSlugs": [
+        "damia-n-kirstein"
+      ]
     },
     {
       "key": "damian perez",
@@ -819,27 +817,6 @@
       "lastSeen": "2026-03-22"
     },
     {
-      "key": "donzino maximo",
-      "keys": [
-        "donzino maximo",
-        "donzino ma ximo"
-      ],
-      "slug": "donzino-ma-ximo",
-      "name": "Donzino Mãximo",
-      "aliases": [],
-      "series": [
-        "tn"
-      ],
-      "numbers": {
-        "tn": "71"
-      },
-      "teams": {
-        "tn": "Ford F. Kinetic"
-      },
-      "firstSeen": "2026-03-15",
-      "lastSeen": "2026-09-20"
-    },
-    {
       "key": "craparo elio",
       "keys": [
         "craparo elio"
@@ -1026,8 +1003,8 @@
         "fabian yannantuoni",
         "fabia n yannantuoni"
       ],
-      "slug": "fabia-n-yannantuoni",
-      "name": "Fabiãn Yannantuoni",
+      "slug": "fabian-yannantuoni",
+      "name": "Fabián Yannantuoni",
       "aliases": [],
       "series": [
         "tn"
@@ -1039,7 +1016,10 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "fabia-n-yannantuoni"
+      ]
     },
     {
       "key": "fabrizio maggini",
@@ -1586,35 +1566,13 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "key": "gomez sebastian",
-      "keys": [
-        "gomez sebastian",
-        "ga mez n sebastia",
-        "gomez n sebastia"
-      ],
-      "slug": "gomez-sebastia-n",
-      "name": "Gomez Sebastiãn",
-      "aliases": [],
-      "series": [
-        "tn"
-      ],
-      "numbers": {
-        "tn": "24"
-      },
-      "teams": {
-        "tn": "VW Vento GLI"
-      },
-      "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
-    },
-    {
       "key": "antolin gonzalo",
       "keys": [
         "antolin gonzalo",
         "antola gonzalo n"
       ],
-      "slug": "gonzalo-antola-n",
-      "name": "Gonzalo Antolãn",
+      "slug": "gonzalo-antolin",
+      "name": "Gonzalo Antolín",
       "aliases": [],
       "series": [
         "tn"
@@ -1626,7 +1584,10 @@
         "tn": "Chevrolet Cruze"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-08-02",
+      "formerSlugs": [
+        "gonzalo-antola-n"
+      ]
     },
     {
       "key": "aramburu gonzalo",
@@ -2676,8 +2637,8 @@
         "gonzalez leandro",
         "gonza leandro lez"
       ],
-      "slug": "leandro-gonza-lez",
-      "name": "Leandro Gonzãlez",
+      "slug": "leandro-gonzalez",
+      "name": "Leandro González",
       "aliases": [],
       "series": [
         "tn"
@@ -2689,7 +2650,10 @@
         "tn": "Chevrolet Cruze"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "leandro-gonza-lez"
+      ]
     },
     {
       "key": "forte leonardo",
@@ -2740,8 +2704,8 @@
         "leonel pernia",
         "a leonel perna"
       ],
-      "slug": "leonel-perna-a",
-      "name": "Leonel Pernãa",
+      "slug": "leonel-pernia",
+      "name": "Leonel Pernía",
       "aliases": [],
       "series": [
         "tn"
@@ -2753,7 +2717,10 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "leonel-perna-a"
+      ]
     },
     {
       "key": "carlo de luca",
@@ -3134,8 +3101,8 @@
         "fernandez marcos",
         "ferna marcos ndez"
       ],
-      "slug": "marcos-ferna-ndez",
-      "name": "Marcos Fernãndez",
+      "slug": "marcos-fernandez",
+      "name": "Marcos Fernández",
       "aliases": [],
       "series": [
         "tn"
@@ -3147,7 +3114,10 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-06-07"
+      "lastSeen": "2026-06-07",
+      "formerSlugs": [
+        "marcos-ferna-ndez"
+      ]
     },
     {
       "key": "landa marcos",
@@ -3235,13 +3205,37 @@
       "lastSeen": "2026-04-26"
     },
     {
+      "key": "blasig martin",
+      "keys": [
+        "blasig martin",
+        "blasig marta n"
+      ],
+      "slug": "martin-blasig",
+      "name": "Martín Blasig",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "192"
+      },
+      "teams": {
+        "tn": "Peugeot 208"
+      },
+      "firstSeen": "2026-04-04",
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "blasig-marta-n"
+      ]
+    },
+    {
       "key": "leston martin",
       "keys": [
         "leston martin",
         "leston marta n"
       ],
-      "slug": "marta-n-leston",
-      "name": "Martãn Leston",
+      "slug": "martin-leston",
+      "name": "Martín Leston",
       "aliases": [],
       "series": [
         "tn"
@@ -3253,7 +3247,10 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "marta-n-leston"
+      ]
     },
     {
       "key": "martin mura",
@@ -3339,47 +3336,6 @@
       "lastSeen": "2026-09-13"
     },
     {
-      "key": "cohen matias",
-      "keys": [
-        "cohen matias",
-        "as cohen mata"
-      ],
-      "slug": "mata-as-cohen",
-      "name": "Matãas Cohen",
-      "aliases": [],
-      "series": [
-        "tn"
-      ],
-      "numbers": {
-        "tn": "77"
-      },
-      "teams": {
-        "tn": "VW Virtus"
-      },
-      "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
-    },
-    {
-      "key": "as m mata mua oz",
-      "keys": [
-        "as m mata mua oz"
-      ],
-      "slug": "mata-as-mua-oz-m",
-      "name": "Matãas Muã‘oz M.",
-      "aliases": [],
-      "series": [
-        "tn"
-      ],
-      "numbers": {
-        "tn": "16"
-      },
-      "teams": {
-        "tn": "VENTO"
-      },
-      "firstSeen": "2026-02-07",
-      "lastSeen": "2026-02-08"
-    },
-    {
       "key": "canapino matias",
       "keys": [
         "canapino matias"
@@ -3398,6 +3354,30 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "cohen matias",
+      "keys": [
+        "cohen matias",
+        "as cohen mata"
+      ],
+      "slug": "matias-cohen",
+      "name": "Matías Cohen",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "77"
+      },
+      "teams": {
+        "tn": "VW Virtus"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "mata-as-cohen"
+      ]
     },
     {
       "key": "frano matias",
@@ -3448,11 +3428,15 @@
     {
       "key": "marchesi matias munoz",
       "keys": [
-        "marchesi matias munoz"
+        "as m mata mua oz",
+        "marchesi matias munoz",
+        "m matias munoz"
       ],
       "slug": "matias-munoz-marchesi",
-      "name": "Matias Munoz Marchesi",
-      "aliases": [],
+      "name": "Matías Muñoz Marchesi",
+      "aliases": [
+        "Matias Munoz Marchesi"
+      ],
       "series": [
         "tn"
       ],
@@ -3463,7 +3447,10 @@
         "tn": "VW Vento"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "mata-as-mua-oz-m"
+      ]
     },
     {
       "key": "matias rossi",
@@ -3528,6 +3515,30 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "donzino maximo",
+      "keys": [
+        "donzino maximo",
+        "donzino ma ximo"
+      ],
+      "slug": "maximo-donzino",
+      "name": "Máximo Donzino",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "71"
+      },
+      "teams": {
+        "tn": "Ford F. Kinetic"
+      },
+      "firstSeen": "2026-03-15",
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "donzino-ma-ximo"
+      ]
     },
     {
       "key": "ciaurro miguel",
@@ -3932,27 +3943,6 @@
       "lastSeen": "2026-08-30"
     },
     {
-      "key": "adrian percaz",
-      "keys": [
-        "adrian percaz",
-        "adria n perca z"
-      ],
-      "slug": "perca-z-adria-n",
-      "name": "Percãz Adriãn",
-      "aliases": [],
-      "series": [
-        "tn"
-      ],
-      "numbers": {
-        "tn": "66"
-      },
-      "teams": {
-        "tn": "Ford Focus"
-      },
-      "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
-    },
-    {
       "key": "cano ramiro",
       "keys": [
         "cano ramiro"
@@ -4251,6 +4241,31 @@
       "lastSeen": "2026-08-02"
     },
     {
+      "key": "gomez sebastian",
+      "keys": [
+        "gomez sebastian",
+        "ga mez n sebastia",
+        "gomez n sebastia"
+      ],
+      "slug": "sebastian-gomez",
+      "name": "Sebastián Gomez",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "24"
+      },
+      "teams": {
+        "tn": "VW Vento GLI"
+      },
+      "firstSeen": "2026-02-07",
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "gomez-sebastia-n"
+      ]
+    },
+    {
       "key": "salse sebastian",
       "keys": [
         "salse sebastian"
@@ -4276,8 +4291,8 @@
         "fernandez sergio",
         "ferna ndez sergio"
       ],
-      "slug": "sergio-ferna-ndez",
-      "name": "Sergio Fernãndez",
+      "slug": "sergio-fernandez",
+      "name": "Sergio Fernández",
       "aliases": [],
       "series": [
         "tn"
@@ -4289,7 +4304,10 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "sergio-ferna-ndez"
+      ]
     },
     {
       "key": "antonino sganga",
@@ -4357,8 +4375,8 @@
         "martinez thiago",
         "marta nez thiago"
       ],
-      "slug": "thiago-marta-nez",
-      "name": "Thiago Martãnez",
+      "slug": "thiago-martinez",
+      "name": "Thiago Martínez",
       "aliases": [],
       "series": [
         "tn"
@@ -4370,7 +4388,10 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "thiago-marta-nez"
+      ]
     },
     {
       "key": "marchesin thomas",
@@ -4533,8 +4554,8 @@
         "tomas vitar",
         "s toma vitar"
       ],
-      "slug": "toma-s-vitar",
-      "name": "Tomãs Vitar",
+      "slug": "tomas-vitar",
+      "name": "Tomás Vitar",
       "aliases": [],
       "series": [
         "tn"
@@ -4546,7 +4567,10 @@
         "tn": "Nissan March"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-09-20",
+      "formerSlugs": [
+        "toma-s-vitar"
+      ]
     },
     {
       "key": "aguirre valentin",
