@@ -1,5 +1,4 @@
 import snapshot from "@/data/season-2026.json";
-import { buildSeason } from "./sources/season.mjs";
 import { nextIo } from "./sources/io-next";
 import { f1OfficialSessions } from "./sources/f1-official.mjs";
 import { f1Videos } from "./sources/f1-youtube.mjs";
