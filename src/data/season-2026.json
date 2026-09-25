@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T13:14:54.110Z",
+  "generatedAt": "2026-09-25T14:24:06.233Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -93429,7 +93429,7 @@
               "number": "7",
               "driver": "Dino Beganovic",
               "team": "DAMS Lucas Oil",
-              "gap": "1:03:29.190",
+              "gap": "1:3:29.190",
               "points": 25
             },
             {
@@ -93437,7 +93437,7 @@
               "number": "15",
               "driver": "Alex Dunne",
               "team": "Rodin Motorsport",
-              "gap": "+7.320",
+              "gap": "+7.32",
               "points": 19
             },
             {
@@ -93459,9 +93459,9 @@
             {
               "pos": 5,
               "number": "20",
-              "driver": "E. Fittipaldi",
+              "driver": "Emerson Fittipaldi",
               "team": "AIX Racing",
-              "gap": "+19.630",
+              "gap": "+19.63",
               "points": 10
             },
             {
@@ -93600,8 +93600,8 @@
             }
           ],
           "resultsSource": {
-            "name": "FIA · clasificación oficial",
-            "url": "https://www.fia.com/events/formula-2-championship/season-2026/madrid/feature-race-classification"
+            "name": "FIA Formula 2 · clasificación oficial",
+            "url": "https://www.fiaformula2.com/en/racing/2026/madrid"
           }
         }
       ],
@@ -102283,7 +102283,7 @@
             {
               "pos": 15,
               "number": "27",
-              "driver": "Nico Hülkenberg",
+              "driver": "Nico Hulkenberg",
               "code": "HUL",
               "team": "Audi",
               "gap": "+2.076"
@@ -102291,7 +102291,7 @@
             {
               "pos": 16,
               "number": "11",
-              "driver": "Sergio Pérez",
+              "driver": "Sergio Perez",
               "code": "PER",
               "team": "Cadillac",
               "gap": "+2.082"
@@ -102346,8 +102346,8 @@
             }
           ],
           "resultsSource": {
-            "name": "Fórmula 1 (oficial)",
-            "url": "https://www.formula1.com/en/results/2026/races/1295/azerbaijan/practice/3"
+            "name": "OpenF1",
+            "url": "https://api.openf1.org/v1/session_result?session_key=11372"
           },
           "videos": [
             {
@@ -102362,7 +102362,169 @@
           "name": "Clasificación",
           "start": "2026-09-25T12:00:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "1:42.526"
+            },
+            {
+              "pos": 2,
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "1:43.363"
+            },
+            {
+              "pos": 3,
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "1:43.364"
+            },
+            {
+              "pos": 4,
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull",
+              "gap": "1:43.500"
+            },
+            {
+              "pos": 5,
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "1:43.672"
+            },
+            {
+              "pos": 6,
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "1:43.858"
+            },
+            {
+              "pos": 7,
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine F1 Team",
+              "gap": "1:44.047"
+            },
+            {
+              "pos": 8,
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull",
+              "gap": "1:44.081"
+            },
+            {
+              "pos": 9,
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "1:44.566"
+            },
+            {
+              "pos": 10,
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine F1 Team",
+              "gap": "1:44.963"
+            },
+            {
+              "pos": 11,
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "1:44.775"
+            },
+            {
+              "pos": 12,
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "RB F1 Team",
+              "gap": "1:44.860"
+            },
+            {
+              "pos": 13,
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "1:45.001"
+            },
+            {
+              "pos": 14,
+              "driver": "Esteban Ocon",
+              "code": "OCO",
+              "team": "Haas F1 Team",
+              "gap": "1:45.016"
+            },
+            {
+              "pos": 15,
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "RB F1 Team",
+              "gap": "1:45.106"
+            },
+            {
+              "pos": 16,
+              "driver": "Andrea Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "1:45.504"
+            },
+            {
+              "pos": 17,
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "1:45.799"
+            },
+            {
+              "pos": 18,
+              "driver": "Nico Hülkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "1:45.920"
+            },
+            {
+              "pos": 19,
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "1:46.593"
+            },
+            {
+              "pos": 20,
+              "driver": "Sergio Pérez",
+              "code": "PER",
+              "team": "Cadillac F1 Team",
+              "gap": "1:46.658"
+            },
+            {
+              "pos": 21,
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "1:47.337"
+            },
+            {
+              "pos": 22,
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac F1 Team",
+              "gap": "1:48.290"
+            }
+          ],
+          "videos": [
+            {
+              "id": "nMrCLLJemBM",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-15-race",
@@ -105214,7 +105376,7 @@
   },
   "meta": {
     "f1": {
-      "standingsAsOfRound": 14,
+      "standingsAsOfRound": 15,
       "progression": [
         {
           "round": 1,
@@ -107299,19 +107461,17 @@
     },
     "openf1": {
       "sessions": 131,
-      "requests": 16,
-      "sessionsWithResults": 39
+      "requests": 18,
+      "sessionsWithResults": 40
     },
     "f1Official": {
-      "requests": 2,
-      "sessionsWithResults": 1,
-      "errors": [
-        "GP de Azerbaiyán · Clasificación: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
-      ]
+      "requests": 0,
+      "sessionsWithResults": 0,
+      "errors": []
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 3,
+      "sessions": 4,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
@@ -107342,8 +107502,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026 (se conservan los resultados anteriores)",
-    "F1 oficial: GP de Azerbaiyán · Clasificación: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
-  ]
+  "failures": []
 }
