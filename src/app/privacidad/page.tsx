@@ -57,6 +57,11 @@ export default function PrivacyPage() {
           vivo también se pueden ver dentro de Fierros: sólo se cargan si tocás &quot;Ver los tiempos acá&quot;, y desde ese momento Speedhive puede usar
           sus propias cookies, con su política de privacidad.
         </p>
+        <p>
+          Los resúmenes de las sesiones se ven con el reproductor de YouTube en modo sin cookies (youtube-nocookie.com). Antes de tocar play sólo se
+          muestra una miniatura de la imagen del video; el reproductor de YouTube no se carga hasta ese momento. Al tocar play, YouTube recibe la visita
+          y puede aplicar su propia política de privacidad.
+        </p>
 
         <h2>Preferencias guardadas en tu navegador</h2>
         <p>Algunas elecciones, como un filtro de la agenda, pueden quedar guardadas sólo en tu navegador. No se envían a ningún servidor.</p>

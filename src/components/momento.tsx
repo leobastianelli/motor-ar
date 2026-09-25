@@ -59,23 +59,43 @@ function FilaPiloto({ s }: { s: Sesion }) {
   );
 }
 
+/** Enlace al resumen de la sesión: lleva a la fecha, al ancla de esa sesión (ahí está el video). No embebe nada acá. */
+function ResumenLink({ fechaId, sessionId }: { fechaId: string; sessionId: string }) {
+  return (
+    <Link href={`/eventos/${fechaId}#${sessionId}`} className="momento-resumen">
+      <span aria-hidden="true">▶</span> Resumen
+    </Link>
+  );
+}
+
 /** Qué decir de una sesión terminada, sin dejar nunca un hueco: ganador y argentinos, o por qué no hay resultados. */
-function Terminada({ s, piloto }: { s: Sesion; piloto?: boolean }) {
+function Terminada({ s, piloto, fechaId }: { s: Sesion; piloto?: boolean; fechaId: string }) {
   if (!s.hasResults) return <>{s.motivo ?? "Resultados todavía no publicados"}</>;
-  if (piloto) return <FilaPiloto s={s} />;
   return (
     <>
-      {s.ganador ? (
-        <>
-          {s.kind === "practica" || s.kind === "clasificacion" ? "Mejor tiempo" : "Ganó"}: <Piloto name={s.ganador.name} slug={s.ganador.slug} />
-        </>
+      {piloto ? (
+        <FilaPiloto s={s} />
       ) : (
-        "Resultados parciales"
+        <>
+          {s.ganador ? (
+            <>
+              {s.kind === "practica" || s.kind === "clasificacion" ? "Mejor tiempo" : "Ganó"}: <Piloto name={s.ganador.name} slug={s.ganador.slug} />
+            </>
+          ) : (
+            "Resultados parciales"
+          )}
+          {s.argentinos.length > 0 && (
+            <>
+              {" · "}
+              <Argentinos rows={s.argentinos} />
+            </>
+          )}
+        </>
       )}
-      {s.argentinos.length > 0 && (
+      {s.hasResumen && (
         <>
           {" · "}
-          <Argentinos rows={s.argentinos} />
+          <ResumenLink fechaId={fechaId} sessionId={s.id} />
         </>
       )}
     </>
@@ -123,7 +143,7 @@ function Finde({ data, fecha, now, broadcasts, tiemposUrl, piloto }: { data: Mom
             <span className="momento-what">
               <strong>{s.name}</strong>
               <span>
-                {v.estado === "terminada" && <Terminada s={s} piloto={piloto} />}
+                {v.estado === "terminada" && <Terminada s={s} piloto={piloto} fechaId={fecha.id} />}
                 {v.estado === "en-vivo" && (
                   <>
                     En pista ahora ·{" "}

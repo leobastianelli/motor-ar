@@ -14,6 +14,10 @@ const nextConfig: NextConfig = {
   async redirects() {
     return driverRedirects;
   },
+  images: {
+    // Miniaturas de los resúmenes en YouTube (VideoSesion). No se permite ningún otro dominio remoto.
+    remotePatterns: [{ protocol: "https", hostname: "i.ytimg.com", port: "", pathname: "/vi/**", search: "" }],
+  },
 };
 
 export default nextConfig;

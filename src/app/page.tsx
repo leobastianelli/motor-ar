@@ -5,6 +5,7 @@ import { Agenda } from "@/components/agenda";
 import { AutoRefresh, MinutesLeft } from "@/components/live-clock";
 import { NoteCard } from "@/components/notas";
 import { CatMark, CategoryLabel, Code, SectionTitle, StateTag } from "@/components/pista";
+import { VideoLinkThumb } from "@/components/video-sesion";
 import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, isSimulatedNow, ms, seriesTier, weekendWindow, type HomeMode } from "@/lib/data";
 import { getAllNotes } from "@/lib/notas";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime, raceWinner, surname } from "@/lib/format";
@@ -231,17 +232,20 @@ export default async function Home() {
           <div className="recent-grid">
             {justFinished.map((i) => {
               const ours = (i.session.results ?? []).filter((r) => r.driverSlug && argentineSlugs.has(r.driverSlug) && r.pos > 3);
+              const resumen = i.session.videos?.find((v) => v.kind === "highlights");
+              const eventoHref = `/eventos/${i.event.id}`;
               return (
                 <article key={i.session.id} className="podium">
                   <div className="podium-head">
                     <div>
                       <CategoryLabel series={i.series} detail={`${fmtDayNum(i.session.start)} ${fmtMonthShort(i.session.start)}`} href={`/categorias/${i.series.id}`} />
                       <strong>
-                        <Link href={`/eventos/${i.event.id}`} className="list-link">
+                        <Link href={resumen ? `${eventoHref}#${i.session.id}` : eventoHref} className="list-link">
                           {i.session.name} · {i.event.circuit.city}
                         </Link>
                       </strong>
                     </div>
+                    {resumen && <VideoLinkThumb videoId={resumen.id} href={`${eventoHref}#${i.session.id}`} ariaLabel={`Ver el resumen de ${i.session.name} en YouTube`} />}
                   </div>
                   <ol>
                     {i.session.results!.slice(0, 3).map((r) => (
