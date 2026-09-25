@@ -1,5 +1,6 @@
 # Sincroniza la temporada desde las fuentes y la escribe en el almacén (tabla season_versions de Neon), que es lo que lee el sitio; después invalida las
-# páginas (/api/refresh). También arma los borradores para redes y los manda por Telegram (scripts/borradores-redes.mjs). La instantánea src/data/season-2026.json es sólo el respaldo: se sube al repo una vez por día (vercel.json evita redesplegar por ella).
+# páginas (/api/refresh). Los borradores para redes ya no salen de aquí: los manda /api/pulso (cron externo cada 5 min, ver
+# docs/plan-lanzamiento/01-borradores-para-redes.md). La instantánea src/data/season-2026.json es sólo el respaldo: se sube al repo una vez por día (vercel.json evita redesplegar por ella).
 name: Sincronizar temporada
 
 on:
@@ -69,30 +70,6 @@ jobs:
           else
             echo "run=true" >> "$GITHUB_OUTPUT"
           fi
-
-      # Borradores para redes: después del refresco caliente (que ya escribió al almacén lo que terminó hace minutos). Cada borrador llega por Telegram
-      # con un botón "Publicar en X"; qué se mandó viaja en la caché para no repetirlo. Si falla no frena la sincronización.
-      - name: Restaurar estado de borradores
-        uses: actions/cache/restore@v4
-        with:
-          path: .redes-state.json
-          key: redes-state-gate-${{ github.run_id }}
-          restore-keys: redes-state-
-
-      - name: Borradores para redes
-        continue-on-error: true
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: node scripts/borradores-redes.mjs
-
-      - name: Guardar estado de borradores
-        if: always()
-        uses: actions/cache/save@v4
-        with:
-          path: .redes-state.json
-          key: redes-state-gate-${{ github.run_id }}
 
   sync:
     needs: gate
@@ -177,28 +154,3 @@ jobs:
         with:
           path: .alert-state.json
           key: alert-state-${{ github.run_id }}
-
-      # Después de sincronizar: si la sincronización trajo resultados nuevos, sus borradores salen ahora y no en la próxima corrida horaria.
-      - name: Restaurar estado de borradores
-        if: always()
-        uses: actions/cache/restore@v4
-        with:
-          path: .redes-state.json
-          key: redes-state-sync-${{ github.run_id }}
-          restore-keys: redes-state-
-
-      - name: Borradores para redes
-        if: always()
-        continue-on-error: true
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: node scripts/borradores-redes.mjs
-
-      - name: Guardar estado de borradores
-        if: always()
-        uses: actions/cache/save@v4
-        with:
-          path: .redes-state.json
-          key: redes-state-sync-${{ github.run_id }}

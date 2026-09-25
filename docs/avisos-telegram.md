@@ -50,7 +50,8 @@ npm run watchdog -- --dry
 
 ## Límites conocidos
 - **La comprobación de la tabla de TC2000 solo corre en local.** Su sitio responde 403 a los servidores de GitHub (no a una PC común) y no lo evadimos; en GitHub esa comprobación se saltea sin ruido. Para correrla: `npm run guardian -- --dry` en tu máquina.
-- El estado de los avisos (qué ya se avisó) viaja en la caché de GitHub Actions: si se pierde, un aviso se puede repetir una vez.
+- El estado de los avisos del guardián y del vigilante (qué ya se avisó) viaja en la caché de GitHub Actions: si se pierde, un aviso se puede repetir una vez. Los borradores para redes ya no usan esa caché: su estado vive en la tabla `redes_enviados` de Neon (ver más abajo).
 - El vigilante corre cada hora, así que una caída se detecta en menos de ~1 h. El repositorio es privado y GitHub da 2.000 minutos de Actions por mes: el vigilante usa ~720.
-- Si GitHub Actions deja de ejecutar los procesos programados, no llega ningún aviso; por eso conviene que el resumen de las 06:00 llegue todos los días: si un día no llega, algo pasa.
+- **GitHub Actions descarta corridas programadas cuando hay muchos crons juntos** (medido el 24/09/2026: la sincronización horaria y el vigilante perdieron 4 corridas cada uno en un solo día). Por eso lo que depende de la hora al minuto — los borradores para redes y el disparo de la sincronización cuando hace falta — pasó a `/api/pulso`, llamado por un cron externo (cron-job.org) cada 5 min de jueves a lunes; ver `docs/plan-lanzamiento/01-borradores-para-redes.md`, sección "Disparo con cron-job.org". Los crons de GitHub Actions siguen de respaldo (el resumen diario, el guardián y el vigilante no cambiaron).
+- Si `/api/pulso` deja de responder (o cron-job.org deja de llamarlo), no llega ningún borrador nuevo y la sincronización sólo corre por los crons de respaldo de GitHub; por eso conviene que el resumen de las 06:00 llegue todos los días: si un día no llega, algo pasa.
 - No hay carga por Telegram todavía: el bot no recibe mensajes (eso viene después, con confirmación obligatoria antes de publicar cualquier dato).
