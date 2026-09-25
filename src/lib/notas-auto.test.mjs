@@ -63,3 +63,18 @@ test("las fechas viejas o sin resultados no generan nota, y las categorías arge
   const notes = autoNotes([old, empty, baku, tc], opts);
   assert.deepEqual(notes.map((n) => n.slug), ["tc-2026-11-cronica", "f1-2026-15-cronica"]);
 });
+
+test("el título para buscadores nombra la categoría sin tocar el titular visible", () => {
+  const [n] = autoNotes([baku], { ...opts, seriesName: () => ({ name: "Fórmula 1", short: "F1" }) });
+  assert.equal(n.title, "GP de Azerbaiyán: Kimi Antonelli fue el más rápido en la práctica 2");
+  assert.equal(n.seoTitle, "Fórmula 1, GP de Azerbaiyán: Kimi Antonelli fue el más rápido en la práctica 2");
+  const f2 = { ...baku, id: "f2-2026-9", seriesId: "f2", name: "Baku" };
+  const [m] = autoNotes([f2], { ...opts, seriesName: () => ({ name: "Fórmula 2", short: "F2" }) });
+  assert.equal(m.seoTitle, "Fórmula 2 en Baku: Kimi Antonelli fue el más rápido en la práctica 2");
+});
+
+test("crónica nacional: el lugar, sin el número de fecha", () => {
+  const tn = { ...baku, id: "tn-2026-9", seriesId: "tn", name: "Fecha 9 · Rio Cuarto" };
+  const [n] = autoNotes([tn], { ...opts, seriesName: () => ({ name: "TN APAT", short: "TN" }) });
+  assert.equal(n.seoTitle, "TN APAT en Rio Cuarto: Kimi Antonelli fue el más rápido en la práctica 2");
+});

@@ -23,10 +23,11 @@ export function generateStaticParams() {
 export async function generateMetadata(props: PageProps<"/notas/[slug]">): Promise<Metadata> {
   const nota = await getNote((await props.params).slug);
   if (!nota) return { title: "Nota" };
+  const title = nota.seoTitle ?? nota.title;
   return {
-    title: nota.title,
+    title,
     description: nota.summary,
-    openGraph: { title: nota.title, description: nota.summary, type: "article", ...OG_DEFAULTS },
+    openGraph: { title, description: nota.summary, type: "article", ...OG_DEFAULTS },
     alternates: { canonical: `/notas/${nota.slug}` },
   };
 }

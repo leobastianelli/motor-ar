@@ -150,8 +150,13 @@ export function Masthead({ menu }: { menu: MenuItem[] }) {
                   <div id={panelId} className="nav-panel" hidden={!expanded}>
                     <div className="nav-panel-inner">
                       {item.groups.map((group, i) => (
-                        <div key={group.label ?? i} className={`nav-group${group.links.length > 8 ? " wide" : ""}`}>
-                          {group.label && <h3>{group.label}</h3>}
+                        <div key={group.label ?? i} className={`nav-group${group.links.length > 8 ? " wide" : ""}`} role={group.label ? "group" : undefined} aria-labelledby={group.label ? `${panelId}-g${i}` : undefined}>
+                          {/* Un <p>, no un encabezado: el menú viene antes del <h1> de cada página y no debe figurar en su esquema. */}
+                          {group.label && (
+                            <p id={`${panelId}-g${i}`} className="nav-group-title">
+                              {group.label}
+                            </p>
+                          )}
                           <ul>
                             {group.links.map((link) => (
                               <li key={link.href}>

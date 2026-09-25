@@ -513,7 +513,7 @@ button{color:inherit;font-family:inherit}
 .nav-item.is-open .nav-toggle svg{transform:rotate(180deg)}
 .nav-toggle:focus-visible,.masthead .site-nav .nav-panel a:focus-visible{outline:2px solid var(--blue-deep);outline-offset:2px}
 .nav-panel[hidden]{display:none!important}
-.nav-group h3{margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.nav-group-title{margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .nav-group ul{list-style:none;margin:0;padding:0}
 .nav-group li{break-inside:avoid}
 .masthead .site-nav .nav-panel a{display:flex;align-items:center;gap:10px;padding:7px 0;color:var(--ink);box-shadow:none;border:0;font-size:15px;font-weight:400}
