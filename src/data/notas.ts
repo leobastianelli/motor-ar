@@ -9,6 +9,8 @@ export interface Nota {
   slug: string;
   /** Titular de Fierros: propio, no el del medio. */
   title: string;
+  /** Titular para buscadores y para el <title> de la página, cuando conviene que nombre la categoría (las crónicas: "Fórmula 2 en Baku: …"). Sin esto se usa `title`. */
+  seoTitle?: string;
   /** Fecha de publicación de la nota original (AAAA-MM-DD). */
   publishedAt: string;
   source: { medio: string; url: string; headline: string; author?: string };

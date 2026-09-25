@@ -57,6 +57,17 @@ function headline(event: RaceEvent, s: Session): string {
   }
 }
 
+/**
+ * Titular para buscadores: con el nombre de la categoría delante ("Fórmula 2 en Baku: …", "Fórmula 1, GP de Azerbaiyán: …").
+ * `title` empieza con el nombre de la fecha; en las nacionales ("Fecha 9 · Rio Cuarto") queda sólo el lugar.
+ */
+export function seoHeadline(seriesName: string, eventName: string, title: string): string {
+  if (title.toLowerCase().includes(seriesName.toLowerCase())) return title;
+  if (/^(GP|Gran Premio)\b/i.test(eventName)) return `${seriesName}, ${title}`;
+  const place = eventName.replace(/^Fecha \d+ · /, "");
+  return `${seriesName} en ${place}${title.startsWith(eventName) ? title.slice(eventName.length) : `: ${title}`}`;
+}
+
 interface Options {
   now: string;
   /** Slugs de los pilotos argentinos con ficha, para destacar cómo les fue. */
@@ -111,6 +122,7 @@ export function autoNotes(events: RaceEvent[], { now, argentines, tierOf, series
     out.push({
       slug: `${event.id}-cronica`,
       title: headline(event, main),
+      seoTitle: seoHeadline(series.name, event.name, headline(event, main)),
       publishedAt: latestDay,
       source: { medio: `Fierros · ${series.short}`, url: `/eventos/${event.id}`, headline: event.name },
       summary,

@@ -11,6 +11,7 @@ import { broadcastsBySeries } from "@/data/broadcasts";
 import { getNow, getSeason, getSeries, isSimulatedNow } from "@/lib/data";
 import { noResultsReason } from "@/lib/salud-core.mjs";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtRange, fmtWeekday, raceWinner, sessionState, sessionStatus, sessionTime } from "@/lib/format";
+import { descripcionMomento, tituloEvento } from "@/lib/seo-titulos.mjs";
 import { OG_DEFAULTS } from "@/lib/site";
 import type { Broadcast, ResultRow, Session } from "@/lib/types";
 
@@ -24,9 +25,14 @@ export async function generateMetadata(props: PageProps<"/eventos/[id]">): Promi
   const event = (await getSeason()).getEvent((await props.params).id);
   if (!event) return { title: "Evento" };
   const series = getSeries(event.seriesId);
-  const title = `${series?.name ?? ""} · ${event.name}`.replace(/^ · /, "");
+  const season = await getSeason();
+  const now = getNow();
+  const momento = season.getMomentoEvento(event, now);
   const winner = raceWinner(event.sessions.filter((s) => ["final", "carrera"].includes(s.kind) && s.results?.length).at(-1)?.results);
-  const description = `${series?.name ?? "Fecha"} en ${event.circuit.city}: horarios en hora argentina, dónde verlo y resultados de cada sesión${winner ? `. Ganó ${winner.driver}` : ""}.`;
+  const fallback = `${series?.name ?? "Fecha"} en ${event.circuit.city}: horarios en hora argentina, dónde verlo y resultados de cada sesión${winner ? `. Ganó ${winner.driver}` : ""}.`;
+  // Título y descripción salen del momento de la fecha (src/lib/seo-titulos.mjs) y se regeneran con la página.
+  const title = series ? tituloEvento(series, { name: event.name, city: event.circuit.city }, event.sessions[0].start.slice(0, 4), momento) : event.name;
+  const description = series ? descripcionMomento(series, momento, { broadcasts: event.broadcasts, fallback, fechaPropia: true }) : fallback;
   return { title, description, openGraph: { title, description, ...OG_DEFAULTS }, alternates: { canonical: `/eventos/${event.id}` } };
 }
 

@@ -13,6 +13,7 @@ import { getAllSeries, getHistory, getNow, getSeason, getSeries, isSimulatedNow 
 import { drivers } from "@/data/drivers";
 import { getPhoto } from "@/lib/photos";
 import { fmtDayNum, fmtMonthShort, fmtRange, surname } from "@/lib/format";
+import { descripcionMomento, tituloCategoria } from "@/lib/seo-titulos.mjs";
 import { OG_DEFAULTS } from "@/lib/site";
 import type { CategoryHistory, RaceEvent, StandingRow } from "@/lib/types";
 
@@ -26,8 +27,15 @@ export async function generateMetadata(props: PageProps<"/categorias/[slug]">): 
   const series = getSeries((await props.params).slug);
   if (!series) return { title: "Categoría" };
   const history = getHistory(series.id);
-  const description = `${series.name}: calendario 2026 en hora argentina, campeonato, resultados de cada fecha${history ? ` e historia con ${history.champions.length} campeones desde ${history.firstYear}` : ""}.`;
-  return { title: series.name, description, openGraph: { title: series.name, description, ...OG_DEFAULTS }, alternates: { canonical: `/categorias/${series.id}` } };
+  const fallback = `${series.name}: calendario 2026 en hora argentina, campeonato, resultados de cada fecha${history ? ` e historia con ${history.champions.length} campeones desde ${history.firstYear}` : ""}.`;
+  // Título y descripción salen del momento de la categoría (src/lib/seo-titulos.mjs) y se regeneran con la página.
+  const season = await getSeason();
+  const now = getNow();
+  const momento = season.getMomentoCategoria(series.id, now);
+  const fecha = momento.fecha ? season.getEvent(momento.fecha.id) : undefined;
+  const title = tituloCategoria(series, now.slice(0, 4), momento, now);
+  const description = descripcionMomento(series, momento, { broadcasts: fecha?.broadcasts, fallback });
+  return { title, description, openGraph: { title, description, ...OG_DEFAULTS }, alternates: { canonical: `/categorias/${series.id}` } };
 }
 
 const SCOPE_LABEL = { nacional: "Automovilismo nacional", internacional: "Categoría internacional", zonal: "Automovilismo zonal" };
