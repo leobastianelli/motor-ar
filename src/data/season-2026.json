@@ -816,10 +816,10 @@
       "id": "tn-2026-1",
       "seriesId": "tn",
       "round": 1,
-      "name": "Fecha 1 · Parana",
+      "name": "Fecha 1 · Paraná",
       "circuit": {
-        "name": "Autódromo Ciudad de Parana",
-        "city": "Parana",
+        "name": "Autódromo Ciudad de Paraná",
+        "city": "Paraná",
         "country": "Argentina",
         "flag": "AR",
         "province": ""
@@ -34500,10 +34500,10 @@
       "id": "tn-2026-4",
       "seriesId": "tn",
       "round": 4,
-      "name": "Fecha 4 · Albardon",
+      "name": "Fecha 4 · Albardón",
       "circuit": {
         "name": "Circuito San Juan Villicum",
-        "city": "Albardon",
+        "city": "Albardón",
         "country": "Argentina",
         "flag": "AR",
         "province": ""
@@ -63574,10 +63574,10 @@
       "id": "tn-2026-6",
       "seriesId": "tn",
       "round": 6,
-      "name": "Fecha 6 · Termas De Rio Hondo",
+      "name": "Fecha 6 · Termas de Río Hondo",
       "circuit": {
         "name": "Circuito Termas de Rio Hondo",
-        "city": "Termas De Rio Hondo",
+        "city": "Termas de Río Hondo",
         "country": "Argentina",
         "flag": "AR",
         "province": ""
@@ -77885,10 +77885,10 @@
       "id": "tn-2026-7",
       "seriesId": "tn",
       "round": 7,
-      "name": "Fecha 7 · Albardon",
+      "name": "Fecha 7 · Albardón",
       "circuit": {
         "name": "Circuito San Juan Villicum",
-        "city": "Albardon",
+        "city": "Albardón",
         "country": "Argentina",
         "flag": "AR",
         "province": ""
@@ -80442,10 +80442,10 @@
       "id": "tcp-2026-9",
       "seriesId": "tc-pista",
       "round": 9,
-      "name": "Fecha 9 · Albardon",
+      "name": "Fecha 9 · Albardón",
       "circuit": {
         "name": "San Juan Villicum",
-        "city": "Albardon",
+        "city": "Albardón",
         "country": "Argentina",
         "flag": "AR",
         "province": "San Juan"
@@ -81216,10 +81216,10 @@
       "id": "tc-2026-9",
       "seriesId": "tc",
       "round": 9,
-      "name": "Fecha 9 · Albardon",
+      "name": "Fecha 9 · Albardón",
       "circuit": {
         "name": "San Juan Villicum",
-        "city": "Albardon",
+        "city": "Albardón",
         "country": "Argentina",
         "flag": "AR",
         "province": "San Juan"
@@ -85424,10 +85424,10 @@
       "id": "tcp-2026-10",
       "seriesId": "tc-pista",
       "round": 10,
-      "name": "Fecha 10 · Parana",
+      "name": "Fecha 10 · Paraná",
       "circuit": {
-        "name": "Ciudad de Parana",
-        "city": "Parana",
+        "name": "Ciudad de Paraná",
+        "city": "Paraná",
         "country": "Argentina",
         "flag": "AR",
         "province": "Entre Rios"
@@ -85678,10 +85678,10 @@
       "id": "tc-2026-10",
       "seriesId": "tc",
       "round": 10,
-      "name": "Fecha 10 · Parana",
+      "name": "Fecha 10 · Paraná",
       "circuit": {
-        "name": "Ciudad de Parana",
-        "city": "Parana",
+        "name": "Ciudad de Paraná",
+        "city": "Paraná",
         "country": "Argentina",
         "flag": "AR",
         "province": "Entre Rios"
@@ -98795,10 +98795,10 @@
       "id": "tn-2026-9",
       "seriesId": "tn",
       "round": 9,
-      "name": "Fecha 9 · Rio Cuarto",
+      "name": "Fecha 9 · Río Cuarto",
       "circuit": {
-        "name": "Autódromo Ciudad de Rio Cuarto",
-        "city": "Rio Cuarto",
+        "name": "Autódromo Ciudad de Río Cuarto",
+        "city": "Río Cuarto",
         "country": "Argentina",
         "flag": "AR",
         "province": ""
@@ -101987,7 +101987,7 @@
       "id": "f1-2026-16",
       "seriesId": "f1",
       "round": 16,
-      "name": "Bahrain Grand Prix in Malaysia",
+      "name": "GP de Baréin (en Malasia)",
       "officialName": "Bahrain Grand Prix in Malaysia",
       "circuit": {
         "name": "Sepang International Circuit",
@@ -102154,10 +102154,10 @@
       "id": "tc-2026-12",
       "seriesId": "tc",
       "round": 12,
-      "name": "Fecha 12 · San Nicolas",
+      "name": "Fecha 12 · San Nicolás",
       "circuit": {
-        "name": "Ciudad San Nicolas",
-        "city": "San Nicolas",
+        "name": "Ciudad San Nicolás",
+        "city": "San Nicolás",
         "country": "Argentina",
         "flag": "AR",
         "province": "Buenos Aires"
@@ -102178,10 +102178,10 @@
       "id": "tcp-2026-12",
       "seriesId": "tc-pista",
       "round": 12,
-      "name": "Fecha 12 · San Nicolas",
+      "name": "Fecha 12 · San Nicolás",
       "circuit": {
-        "name": "Ciudad San Nicolas",
-        "city": "San Nicolas",
+        "name": "Ciudad San Nicolás",
+        "city": "San Nicolás",
         "country": "Argentina",
         "flag": "AR",
         "province": "Buenos Aires"
@@ -102793,10 +102793,10 @@
       "id": "tc-2026-14",
       "seriesId": "tc",
       "round": 14,
-      "name": "Fecha 14 · Rio Cuarto",
+      "name": "Fecha 14 · Río Cuarto",
       "circuit": {
-        "name": "Parque Ciudad de Rio Cuarto",
-        "city": "Rio Cuarto",
+        "name": "Parque Ciudad de Río Cuarto",
+        "city": "Río Cuarto",
         "country": "Argentina",
         "flag": "AR",
         "province": "Cordoba"
@@ -102817,10 +102817,10 @@
       "id": "tcp-2026-14",
       "seriesId": "tc-pista",
       "round": 14,
-      "name": "Fecha 14 · Rio Cuarto",
+      "name": "Fecha 14 · Río Cuarto",
       "circuit": {
-        "name": "Parque Ciudad de Rio Cuarto",
-        "city": "Rio Cuarto",
+        "name": "Parque Ciudad de Río Cuarto",
+        "city": "Río Cuarto",
         "country": "Argentina",
         "flag": "AR",
         "province": "Cordoba"

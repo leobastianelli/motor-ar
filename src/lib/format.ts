@@ -1,4 +1,4 @@
-import { TZ, dayKey, dayStart, sessionStatus as sessionStatusOf } from "./session-status.mjs";
+import { TZ, dayKey, dayStart, relativeDayInfo, sessionStatus as sessionStatusOf } from "./session-status.mjs";
 import type { ResultRow, Session } from "./types";
 
 export { TZ, dayKey };
@@ -33,18 +33,30 @@ export function fmtRange(fromIso: string, toIso: string) {
   return a === b ? `${b} de ${month}` : `${a}–${b} de ${month}`;
 }
 
+/**
+ * Distancia a `iso` en palabras, en días calendario de Argentina (hoy/mañana/pasado mañana/en N días), salvo que
+ * falten o hayan pasado menos de 3 h, donde se usa el minuto u hora exacta. Ver `relativeDayInfo` en session-status.mjs.
+ */
 export function relative(iso: string, nowIso: string): string {
-  const diffMin = Math.round((new Date(iso).getTime() - new Date(nowIso).getTime()) / 60000);
-  const abs = Math.abs(diffMin);
-  const future = diffMin > 0;
-  let amount: string;
-  if (abs < 60) amount = `${abs} min`;
-  else if (abs < 60 * 24) amount = `${Math.round(abs / 60)} h`;
-  else {
-    const days = Math.round(abs / (60 * 24));
-    amount = days === 1 ? "1 día" : `${days} días`;
+  const info = relativeDayInfo(iso, nowIso);
+  switch (info.kind) {
+    case "minutes":
+      return info.future ? `en ${info.amount} min` : `hace ${info.amount} min`;
+    case "hours":
+      return info.future ? `en ${info.amount} h` : `hace ${info.amount} h`;
+    case "today":
+      return `hoy a las ${fmtTime(iso)}`;
+    case "tomorrow":
+      return "mañana";
+    case "day-after-tomorrow":
+      return "pasado mañana";
+    case "yesterday":
+      return "ayer";
+    case "days":
+      return info.future ? `en ${info.amount} días` : `hace ${info.amount} días`;
+    default:
+      return "";
   }
-  return future ? `en ${amount}` : `hace ${amount}`;
 }
 
 export type SessionStatus = "live" | "upcoming" | "done";

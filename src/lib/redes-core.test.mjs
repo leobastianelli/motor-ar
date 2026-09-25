@@ -52,6 +52,28 @@ test("terminó la clasificación: pole, 2.º y 3.º, argentino con su posición 
   assert.ok(!/EN VIVO/i.test(d.text));
 });
 
+test("más de una sesión del mismo tipo (F2 Baku): el borrador usa el nombre de la sesión, no el genérico", () => {
+  const q1 = session({ id: "f2-16-q1", name: "Clasificación 1", results: podium });
+  const q2 = session({ id: "f2-16-q2", name: "Clasificación 2", results: podium });
+  const [d1, d2] = run([event({ seriesId: "f2", sessions: [q1, q2] })], AFTER_QUALI);
+  assert.match(d1.text, /^🏁 F2 · GP de Malasia\. Clasificación 1: pole de George Russell;/);
+  assert.match(d2.text, /^🏁 F2 · GP de Malasia\. Clasificación 2: pole de George Russell;/);
+});
+
+test("una sola sesión de ese tipo: el borrador sigue usando el rótulo genérico", () => {
+  const q = session({ results: podium });
+  const [d] = run([event({ sessions: [q] })], AFTER_QUALI);
+  assert.match(d.text, /^🏁 F1 · GP de Malasia\. Clasificación: pole de George Russell;/);
+});
+
+test("carrera repetida en la misma fecha (Carrera principal y Carrera principal 2): usa el nombre de cada una", () => {
+  const r1 = session({ id: "f2-16-r1", kind: "carrera", name: "Carrera principal", results: podium });
+  const r2 = session({ id: "f2-16-r2", kind: "carrera", name: "Carrera principal 2", results: podium });
+  const [d1, d2] = run([event({ seriesId: "f2", sessions: [r1, r2] })], AFTER_QUALI);
+  assert.match(d1.text, /^🏁 F2 · GP de Malasia\. Carrera principal: ganó George Russell;/);
+  assert.match(d2.text, /^🏁 F2 · GP de Malasia\. Carrera principal 2: ganó George Russell;/);
+});
+
 test("un argentino que no terminó la carrera se cuenta como abandono, no como posición", () => {
   const race = session({
     id: "f1-16-r",
