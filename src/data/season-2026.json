@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T22:20:54.279Z",
+  "generatedAt": "2026-09-25T11:57:53.918Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -816,10 +816,10 @@
       "id": "tn-2026-1",
       "seriesId": "tn",
       "round": 1,
-      "name": "Fecha 1 · Paraná",
+      "name": "Fecha 1 · Parana",
       "circuit": {
-        "name": "Autódromo Ciudad de Paraná",
-        "city": "Paraná",
+        "name": "Autódromo Ciudad de Parana",
+        "city": "Parana",
         "country": "Argentina",
         "flag": "AR",
         "province": ""
@@ -34500,10 +34500,10 @@
       "id": "tn-2026-4",
       "seriesId": "tn",
       "round": 4,
-      "name": "Fecha 4 · Albardón",
+      "name": "Fecha 4 · Albardon",
       "circuit": {
         "name": "Circuito San Juan Villicum",
-        "city": "Albardón",
+        "city": "Albardon",
         "country": "Argentina",
         "flag": "AR",
         "province": ""
@@ -63574,10 +63574,10 @@
       "id": "tn-2026-6",
       "seriesId": "tn",
       "round": 6,
-      "name": "Fecha 6 · Termas de Río Hondo",
+      "name": "Fecha 6 · Termas De Rio Hondo",
       "circuit": {
         "name": "Circuito Termas de Rio Hondo",
-        "city": "Termas de Río Hondo",
+        "city": "Termas De Rio Hondo",
         "country": "Argentina",
         "flag": "AR",
         "province": ""
@@ -77885,10 +77885,10 @@
       "id": "tn-2026-7",
       "seriesId": "tn",
       "round": 7,
-      "name": "Fecha 7 · Albardón",
+      "name": "Fecha 7 · Albardon",
       "circuit": {
         "name": "Circuito San Juan Villicum",
-        "city": "Albardón",
+        "city": "Albardon",
         "country": "Argentina",
         "flag": "AR",
         "province": ""
@@ -98795,10 +98795,10 @@
       "id": "tn-2026-9",
       "seriesId": "tn",
       "round": 9,
-      "name": "Fecha 9 · Río Cuarto",
+      "name": "Fecha 9 · Rio Cuarto",
       "circuit": {
-        "name": "Autódromo Ciudad de Río Cuarto",
-        "city": "Río Cuarto",
+        "name": "Autódromo Ciudad de Rio Cuarto",
+        "city": "Rio Cuarto",
         "country": "Argentina",
         "flag": "AR",
         "province": ""
@@ -101434,7 +101434,109 @@
           "name": "Carrera sprint",
           "start": "2026-09-25T04:15:00.000Z",
           "timeKnown": true,
-          "durationMin": 50
+          "durationMin": 50,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Dino Beganovic",
+              "team": "DAMS Lucas Oil"
+            },
+            {
+              "pos": 2,
+              "driver": "Laurens van Hoepen",
+              "team": "Trident"
+            },
+            {
+              "pos": 3,
+              "driver": "Alex Dunne",
+              "team": "Rodin Motorsport"
+            },
+            {
+              "pos": 4,
+              "driver": "Martinius Stenshorne",
+              "team": "Rodin Motorsport"
+            },
+            {
+              "pos": 5,
+              "driver": "Nikola Tsolov",
+              "team": "Campos Racing"
+            },
+            {
+              "pos": 6,
+              "driver": "Roman Bilinski",
+              "team": "DAMS Lucas Oil"
+            },
+            {
+              "pos": 7,
+              "driver": "Sebastián Montoya",
+              "team": "Prema Racing"
+            },
+            {
+              "pos": 8,
+              "driver": "Kush Maini",
+              "team": "ART Grand Prix"
+            },
+            {
+              "pos": 9,
+              "driver": "Colton Herta",
+              "team": "Hitech"
+            },
+            {
+              "pos": 10,
+              "driver": "John Bennett",
+              "team": "Trident"
+            },
+            {
+              "pos": 11,
+              "driver": "Tasanapol Inthraphuvasak",
+              "team": "ART Grand Prix"
+            },
+            {
+              "pos": 12,
+              "driver": "Cian Shields",
+              "team": "AIX Racing"
+            },
+            {
+              "pos": 13,
+              "driver": "Rafael Villagómez",
+              "team": "Van Amersfoort Racing"
+            },
+            {
+              "pos": 14,
+              "driver": "Gabriele Minì",
+              "team": "MP Motorsport"
+            },
+            {
+              "pos": 15,
+              "driver": "Rafael Câmara",
+              "team": "Invicta Racing"
+            },
+            {
+              "pos": 16,
+              "driver": "Oliver Goethe",
+              "team": "MP Motorsport"
+            },
+            {
+              "pos": 17,
+              "driver": "Hiyu Yamakoshi",
+              "team": "Van Amersfoort Racing"
+            },
+            {
+              "pos": 18,
+              "driver": "Emerson Fittipaldi Jr.",
+              "team": "AIX Racing"
+            },
+            {
+              "pos": 19,
+              "driver": "Ritomo Miyata",
+              "team": "Hitech"
+            },
+            {
+              "pos": 20,
+              "driver": "Noel León",
+              "team": "Campos Racing"
+            }
+          ]
         },
         {
           "id": "f2-2026-12-carrera",
@@ -101442,7 +101544,205 @@
           "name": "Carrera principal",
           "start": "2026-09-25T10:15:00.000Z",
           "timeKnown": true,
-          "durationMin": 65
+          "durationMin": 65,
+          "results": [
+            {
+              "pos": 1,
+              "number": "15",
+              "driver": "Alex Dunne",
+              "team": "Rodin Motorsport",
+              "gap": "1:11:45.095",
+              "points": 26
+            },
+            {
+              "pos": 2,
+              "number": "14",
+              "driver": "Martinius Stenshorne",
+              "team": "Rodin Motorsport",
+              "gap": "+4.395",
+              "points": 18
+            },
+            {
+              "pos": 3,
+              "number": "7",
+              "driver": "Dino Beganovic",
+              "team": "DAMS Lucas Oil",
+              "gap": "+6.614",
+              "points": 15
+            },
+            {
+              "pos": 4,
+              "number": "1",
+              "driver": "Rafael Câmara",
+              "team": "Invicta Racing",
+              "gap": "+7.669",
+              "points": 12
+            },
+            {
+              "pos": 5,
+              "number": "5",
+              "driver": "Noel León",
+              "team": "Campos Racing",
+              "gap": "+7.719",
+              "points": 10
+            },
+            {
+              "pos": 6,
+              "number": "9",
+              "driver": "Gabriele Minì",
+              "team": "MP Motorsport",
+              "gap": "+10.874",
+              "points": 8
+            },
+            {
+              "pos": 7,
+              "number": "8",
+              "driver": "Roman Bilinski",
+              "team": "DAMS Lucas Oil",
+              "gap": "+11.151",
+              "points": 6
+            },
+            {
+              "pos": 8,
+              "number": "23",
+              "driver": "Rafael Villagómez",
+              "team": "Van Amersfoort Racing",
+              "gap": "+15.376",
+              "points": 4
+            },
+            {
+              "pos": 9,
+              "number": "22",
+              "driver": "Hiyu Yamakoshi",
+              "team": "Van Amersfoort Racing",
+              "gap": "+16.509",
+              "points": 2
+            },
+            {
+              "pos": 10,
+              "number": "16",
+              "driver": "Kush Maini",
+              "team": "ART Grand Prix",
+              "gap": "+19.176",
+              "points": 1
+            },
+            {
+              "pos": 11,
+              "number": "17",
+              "driver": "Tasanapol Inthraphuvasak",
+              "team": "ART Grand Prix",
+              "gap": "+20.759",
+              "points": 0
+            },
+            {
+              "pos": 12,
+              "number": "20",
+              "driver": "Emerson Fittipaldi",
+              "team": "AIX Racing",
+              "gap": "+24.121",
+              "points": 0
+            },
+            {
+              "pos": 13,
+              "number": "4",
+              "driver": "Colton Herta",
+              "team": "Hitech",
+              "gap": "+59.572",
+              "points": 0
+            },
+            {
+              "pos": 14,
+              "number": "10",
+              "driver": "Oliver Goethe",
+              "team": "MP Motorsport",
+              "gap": "+61.765",
+              "points": 0
+            },
+            {
+              "pos": 15,
+              "positionText": "NC",
+              "number": "21",
+              "driver": "Cian Shields",
+              "team": "AIX Racing",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 16,
+              "positionText": "NC",
+              "number": "25",
+              "driver": "John Bennett",
+              "team": "Trident",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 17,
+              "positionText": "NC",
+              "number": "24",
+              "driver": "Laurens van Hoepen",
+              "team": "Trident",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 18,
+              "positionText": "NC",
+              "number": "3",
+              "driver": "Ritomo Miyata",
+              "team": "Hitech",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 19,
+              "positionText": "NC",
+              "number": "2",
+              "driver": "Joshua Dürksen",
+              "team": "Invicta Racing",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 20,
+              "positionText": "NC",
+              "number": "6",
+              "driver": "Nikola Tsolov",
+              "team": "Campos Racing",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 21,
+              "positionText": "NC",
+              "number": "12",
+              "driver": "Mari Boya",
+              "team": "PREMA Racing",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 22,
+              "positionText": "NC",
+              "number": "11",
+              "driver": "Sebastián Montoya",
+              "team": "PREMA Racing",
+              "gap": "",
+              "points": 0,
+              "status": "No largó"
+            }
+          ],
+          "resultsSource": {
+            "name": "FIA Formula 2 · clasificación oficial",
+            "url": "https://www.fiaformula2.com/en/racing/2026/baku"
+          }
         },
         {
           "id": "f2-2026-12-carrera-2",
@@ -101866,7 +102166,195 @@
           "name": "Práctica 3",
           "start": "2026-09-25T08:30:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "1:43.922"
+            },
+            {
+              "pos": 2,
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "+0.099"
+            },
+            {
+              "pos": 3,
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+0.111"
+            },
+            {
+              "pos": 4,
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+0.351"
+            },
+            {
+              "pos": 5,
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "+0.622"
+            },
+            {
+              "pos": 6,
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "+0.715"
+            },
+            {
+              "pos": 7,
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+0.824"
+            },
+            {
+              "pos": 8,
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "+0.977"
+            },
+            {
+              "pos": 9,
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "+1.254"
+            },
+            {
+              "pos": 10,
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "+1.670"
+            },
+            {
+              "pos": 11,
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+1.683"
+            },
+            {
+              "pos": 12,
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+1.770"
+            },
+            {
+              "pos": 13,
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "+1.932"
+            },
+            {
+              "pos": 14,
+              "number": "31",
+              "driver": "Esteban Ocon",
+              "code": "OCO",
+              "team": "Haas F1 Team",
+              "gap": "+1.996"
+            },
+            {
+              "pos": 15,
+              "number": "27",
+              "driver": "Nico Hülkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+2.076"
+            },
+            {
+              "pos": 16,
+              "number": "11",
+              "driver": "Sergio Pérez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "+2.082"
+            },
+            {
+              "pos": 17,
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "+2.154"
+            },
+            {
+              "pos": 18,
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "+2.300"
+            },
+            {
+              "pos": 19,
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+2.349"
+            },
+            {
+              "pos": 20,
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+2.590"
+            },
+            {
+              "pos": 21,
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "+4.665"
+            },
+            {
+              "pos": 22,
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "+5.357"
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 1 (oficial)",
+            "url": "https://www.formula1.com/en/results/2026/races/1295/azerbaijan/practice/3"
+          },
+          "videos": [
+            {
+              "id": "tEotawWhuWg",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-15-qualifying",
@@ -103411,63 +103899,63 @@
     "f2": [
       {
         "pos": 1,
-        "driver": "Nikola Tsolov",
-        "team": "Campos Racing",
-        "points": 177
+        "driver": "Rafael Câmara",
+        "team": "Invicta Racing",
+        "points": 182
       },
       {
         "pos": 2,
-        "driver": "Rafael Câmara",
-        "team": "Invicta Racing",
-        "points": 170
+        "driver": "Nikola Tsolov",
+        "team": "Campos Racing",
+        "points": 181
       },
       {
         "pos": 3,
-        "driver": "Gabriele Minì",
-        "team": "MP Motorsport",
-        "points": 153
+        "driver": "Alex Dunne",
+        "team": "Rodin Motorsport",
+        "points": 174
       },
       {
         "pos": 4,
-        "driver": "Alex Dunne",
-        "team": "Rodin Motorsport",
-        "points": 141
+        "driver": "Gabriele Minì",
+        "team": "MP Motorsport",
+        "points": 161
       },
       {
         "pos": 5,
-        "driver": "Noel León",
-        "team": "Campos Racing",
-        "points": 119
+        "driver": "Dino Beganovic",
+        "team": "DAMS Lucas Oil",
+        "points": 131
       },
       {
         "pos": 6,
-        "driver": "Dino Beganovic",
-        "team": "DAMS Lucas Oil",
-        "points": 106
+        "driver": "Noel León",
+        "team": "Campos Racing",
+        "points": 129
       },
       {
         "pos": 7,
+        "driver": "Martinius Stenshorne",
+        "team": "Rodin Motorsport",
+        "points": 95
+      },
+      {
+        "pos": 8,
         "driver": "Joshua Dürksen",
         "team": "Invicta Racing",
         "points": 90
       },
       {
-        "pos": 8,
+        "pos": 9,
         "driver": "Kush Maini",
         "team": "ART Grand Prix",
-        "points": 88
-      },
-      {
-        "pos": 9,
-        "driver": "Martinius Stenshorne",
-        "team": "Rodin Motorsport",
-        "points": 72
+        "points": 90
       },
       {
         "pos": 10,
         "driver": "Laurens van Hoepen",
         "team": "Trident",
-        "points": 72
+        "points": 80
       },
       {
         "pos": 11,
@@ -103483,14 +103971,14 @@
       },
       {
         "pos": 13,
-        "driver": "John Bennett",
-        "team": "Trident",
-        "points": 38
+        "driver": "Rafael Villagómez",
+        "team": "Van Amersfoort Racing",
+        "points": 42
       },
       {
         "pos": 14,
-        "driver": "Rafael Villagómez",
-        "team": "Van Amersfoort Racing",
+        "driver": "John Bennett",
+        "team": "Trident",
         "points": 38
       },
       {
@@ -103501,21 +103989,21 @@
       },
       {
         "pos": 16,
-        "driver": "Sebastián Montoya",
-        "team": "Prema Racing",
-        "points": 28
+        "driver": "Roman Bilinski",
+        "team": "DAMS Lucas Oil",
+        "points": 35
       },
       {
         "pos": 17,
-        "driver": "Emerson Fittipaldi Jr.",
-        "team": "AIX Racing",
-        "points": 28
+        "driver": "Sebastián Montoya",
+        "team": "Prema Racing",
+        "points": 30
       },
       {
         "pos": 18,
-        "driver": "Roman Bilinski",
-        "team": "DAMS Lucas Oil",
-        "points": 26
+        "driver": "Emerson Fittipaldi Jr.",
+        "team": "AIX Racing",
+        "points": 28
       },
       {
         "pos": 19,
@@ -103540,6 +104028,12 @@
         "driver": "Cian Shields",
         "team": "AIX Racing",
         "points": 10
+      },
+      {
+        "pos": 23,
+        "driver": "Hiyu Yamakoshi",
+        "team": "Van Amersfoort Racing",
+        "points": 2
       }
     ],
     "tc": [
@@ -106354,7 +106848,7 @@
       "argentines": [
         "Nico Varrone"
       ],
-      "standingsAsOfRound": 11
+      "standingsAsOfRound": 12
     },
     "tc": {
       "standingsLabel": "Copa de Oro",
@@ -106809,17 +107303,17 @@
       "sessionsWithResults": 39
     },
     "f1Official": {
-      "requests": 0,
-      "sessionsWithResults": 0,
+      "requests": 1,
+      "sessionsWithResults": 1,
       "errors": []
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 2,
+      "sessions": 3,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
-      "requests": 6,
+      "requests": 7,
       "officialRequests": 3,
       "eventsWithResults": 12,
       "unread": [
@@ -106846,5 +107340,7 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026 (se conservan los resultados anteriores)"
+  ]
 }
