@@ -39,6 +39,21 @@ const COUNTRY_ES = {
   "United Arab Emirates": "Emiratos Árabes Unidos", Malaysia: "Malasia",
 };
 
+// Jolpica a veces nombra una fecha "<Gran Premio> in <País>" cuando se corre en un país distinto
+// al habitual (ronda 16 de 2026: "Bahrain Grand Prix in Malaysia", corrida en Sepang). Traducimos
+// el nombre del GP y agregamos la aclaración del país en castellano en vez de dejar el texto en inglés.
+export function translateRaceName(raceName) {
+  if (GP_ES[raceName]) return GP_ES[raceName];
+  const relocated = raceName.match(/^(.+) in ([A-Za-zÀ-ÿ ]+)$/);
+  if (relocated) {
+    const [, baseName, country] = relocated;
+    const baseEs = GP_ES[baseName];
+    const countryEs = COUNTRY_ES[country];
+    if (baseEs && countryEs) return `${baseEs} (en ${countryEs})`;
+  }
+  return raceName;
+}
+
 const SESSIONS = [
   ["FirstPractice", "practica", "Práctica 1", 60],
   ["SecondPractice", "practica", "Práctica 2", 60],
@@ -129,7 +144,7 @@ export async function f1Season(io) {
       id: `f1-2026-${race.round}`,
       seriesId: "f1",
       round: Number(race.round),
-      name: GP_ES[race.raceName] ?? race.raceName,
+      name: translateRaceName(race.raceName),
       officialName: race.raceName,
       circuit: {
         name: race.Circuit.circuitName,

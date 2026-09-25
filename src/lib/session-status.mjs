@@ -40,3 +40,37 @@ export function sessionStatus(session, nowIso) {
 
 /** Cuándo termina la sesión (ms). Sin horario confirmado, al terminar el día. */
 export const sessionEnd = (/** @type {SessionLike} */ s) => (s.timeKnown === false ? dayStart(s.start) + 86400000 : new Date(s.start).getTime() + s.durationMin * 60000);
+
+/**
+ * @typedef {
+ *   | { kind: "minutes" | "hours", amount: number, future: boolean }
+ *   | { kind: "today" }
+ *   | { kind: "tomorrow" }
+ *   | { kind: "day-after-tomorrow" }
+ *   | { kind: "yesterday" }
+ *   | { kind: "days", amount: number, future: boolean }
+ * } RelativeDayInfo
+ */
+
+/**
+ * Distancia entre `iso` y `nowIso` en días calendario de Argentina (no en bloques de 24 h), salvo que falten (o hayan
+ * pasado) menos de 3 h, donde importa más el minuto/hora exacto que el día. `format.ts` lo traduce a texto.
+ * @param {string} iso
+ * @param {string} nowIso
+ * @returns {RelativeDayInfo}
+ */
+export function relativeDayInfo(iso, nowIso) {
+  const diffMin = Math.round((new Date(iso).getTime() - new Date(nowIso).getTime()) / 60000);
+  const abs = Math.abs(diffMin);
+  const future = diffMin > 0;
+  if (abs <= 180) {
+    if (abs < 60) return { kind: "minutes", amount: abs, future };
+    return { kind: "hours", amount: Math.round(abs / 60), future };
+  }
+  const days = Math.round((dayStart(iso) - dayStart(nowIso)) / 86400000);
+  if (days === 0) return { kind: "today" };
+  if (days === 1) return { kind: "tomorrow" };
+  if (days === 2) return { kind: "day-after-tomorrow" };
+  if (days === -1) return { kind: "yesterday" };
+  return { kind: "days", amount: Math.abs(days), future: days > 0 };
+}

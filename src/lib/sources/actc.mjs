@@ -23,6 +23,19 @@ export const SUPPORT = [
 
 const titleCase = (s) => s.toLowerCase().replace(/(^|[\s-])([a-záéíóúñü])/g, (m, p, c) => p + c.toUpperCase());
 
+// La página de calendario de la ACTC (actc.org.ar) publica los lugares sin tildes ("SAN NICOLAS", "Rio Cuarto",
+// "Parana", "Albardon"): la Wikipedia sí las tiene, así que la misma fecha puede quedar escrita de dos formas
+// según de qué fuente salió. Se corrige en el nombre de la sede y de la fecha (nunca en el id: éste sale del
+// número de ronda, no del texto), con una tabla chica de ciudades argentinas conocidas en vez de adivinar acentos.
+const CITY_FIXES = [
+  [/\bsan nicol[aá]s\b/gi, "San Nicolás"],
+  [/\brio cuarto\b/gi, "Río Cuarto"],
+  [/\bparan[aá]\b/gi, "Paraná"],
+  [/\balbardon\b/gi, "Albardón"],
+  [/\btermas de rio hondo\b/gi, "Termas de Río Hondo"],
+];
+export const fixCityAccents = (text) => CITY_FIXES.reduce((s, [re, fix]) => s.replace(re, fix), text);
+
 /** Fechas del calendario oficial de una categoría de la ACTC ("tc", "tcp", ...). */
 async function actcCalendar(io, category) {
   const html = await io.text(`https://actc.org.ar/${category}/calendario`, { revalidate: 6 * 3600 });
@@ -36,9 +49,9 @@ async function actcCalendar(io, category) {
     const year = Number(dateText.match(/(\d{4})/)?.[1]);
     const dm = dayMonth(dateText);
     if (round === null || year !== 2026 || !dm) continue;
-    const place = decode(block.match(/lucide-map-pin[\s\S]*?<\/svg>\s*<span[^>]*>([\s\S]*?)<\/span>/)?.[1] ?? "");
+    const place = fixCityAccents(decode(block.match(/lucide-map-pin[\s\S]*?<\/svg>\s*<span[^>]*>([\s\S]*?)<\/span>/)?.[1] ?? ""));
     const [circuit, location = ""] = place.split(/\s+[—–-]\s+/);
-    const name = numbered ? (title.split(/\s+[—–-]\s+/)[1] ?? "") : title;
+    const name = fixCityAccents(numbered ? (title.split(/\s+[—–-]\s+/)[1] ?? "") : title);
     // La ACTC puede listar dos veces el mismo número de fecha: una "A CONFIRMAR" sin sede (una fecha que se movió) y la real.
     // Gana la que tiene sede; si las dos la tienen o ninguna, la primera.
     const isPlaceholder = (c) => !c || /confirmar/i.test(c);
