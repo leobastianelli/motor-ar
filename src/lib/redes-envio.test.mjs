@@ -1,6 +1,9 @@
 import assert from "node:assert/strict";
-import { test } from "node:test";
-import { enviarBorradores } from "./redes-envio.mjs";
+import { beforeEach, test } from "node:test";
+import { enviarBorradores, olvidarConocidos } from "./redes-envio.mjs";
+
+// La memoria de claves ya enviadas es por instancia (módulo): cada prueba arranca de cero.
+beforeEach(() => olvidarConocidos());
 
 const series = [{ id: "f1", name: "Fórmula 1", short: "F1", scope: "internacional" }];
 const drivers = [{ slug: "franco-colapinto", name: "Franco Colapinto", seriesId: "f1", team: "Alpine" }];
@@ -101,3 +104,18 @@ test("sin sql (sin DATABASE_URL) pero con credenciales: manda sin poder deduplic
   assert.equal(out.enviados.length, 1);
   assert.equal(sent.length, 1);
 });
+
+test("una clave ya enviada no se vuelve a consultar en la base en la llamada siguiente (Neon puede dormir)", async () => {
+  const { sql } = fakeSql();
+  let queries = 0;
+  const counting = async (...args) => { queries++; return sql(...args); };
+  const fetchImpl = async () => ({ ok: true });
+  const args = { raw: raw(), now: NOW, catalog, events: raw().events, sql: counting, creds: { token: "t", chatId: "c", fetchImpl } };
+  const first = await enviarBorradores(args);
+  assert.equal(first.enviados.length, 1);
+  assert.equal(queries, 1);
+  const second = await enviarBorradores(args);
+  assert.deepEqual(second, { candidatos: [], enviados: [], simulado: false, errores: [] });
+  assert.equal(queries, 1);
+});
+

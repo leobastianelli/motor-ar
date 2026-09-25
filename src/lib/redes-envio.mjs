@@ -9,6 +9,13 @@ import { sendTelegram } from "./monitor/telegram.mjs";
 
 const KIND_LABEL = { agenda: "agenda del finde", resultado: "resultado", horario: "horario" };
 
+// Claves que esta instancia ya sabe que están en `redes_enviados` (las mandó o encontró la reserva tomada). Un borrador sigue siendo candidato
+// durante horas después de mandarse: sin esto, cada llamada de /api/pulso (cada 5 min) volvería a preguntarle a Neon por cada uno y no lo dejaría
+// dormir. Con esto, cada instancia pregunta una vez por clave.
+const conocidos = new Set();
+/** Sólo para pruebas. */
+export const olvidarConocidos = () => conocidos.clear();
+
 /** Texto del mensaje de Telegram para un borrador (usado también por la herramienta local para mostrarlo). */
 export function draftMessage(d) {
   return [
@@ -33,7 +40,8 @@ export const draftKeyboard = (d) => ({ inline_keyboard: [[{ text: "Publicar en X
  */
 export async function enviarBorradores({ raw, now, catalog, manual = {}, events, sql, dry = false, creds = {} }) {
   // borradores() decide con lo que pasa ahora, no con lo ya mandado (eso lo resuelve la reserva en la base): enviados siempre vacío acá.
-  const candidatos = borradores(raw, now, { enviados: {}, catalog, manual, events });
+  const todos = borradores(raw, now, { enviados: {}, catalog, manual, events });
+  const candidatos = dry ? todos : todos.filter((d) => !conocidos.has(d.key));
   if (!candidatos.length) return { candidatos: [], enviados: [], simulado: false, errores: [] };
 
   const sinCredenciales = !creds.token || !creds.chatId;
@@ -50,10 +58,14 @@ export async function enviarBorradores({ raw, now, catalog, manual = {}, events,
       reservado = rows.length > 0;
     }
     // No se reservó: otra llamada (o esta misma, ya corrida) lo mandó primero.
-    if (!reservado) continue;
+    if (!reservado) {
+      conocidos.add(d.key);
+      continue;
+    }
     try {
       await sendTelegram(draftMessage(d), { ...creds, replyMarkup: draftKeyboard(d) });
       enviados.push({ key: d.key, kind: d.kind });
+      conocidos.add(d.key);
     } catch (error) {
       errores.push(`${d.key}: ${error.message}`);
       // No se pudo mandar: se libera la reserva para que la próxima corrida lo vuelva a intentar.

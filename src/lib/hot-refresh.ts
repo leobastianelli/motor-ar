@@ -46,7 +46,11 @@ export async function runHotRefresh(): Promise<HotOutcome> {
     const locked = await query`UPDATE hot_lock SET at = now() WHERE id = 1 AND at < now() - make_interval(mins => ${LOCK_MINUTES}::integer) RETURNING at`;
     if (!(locked as unknown[]).length) return { status: "locked" };
 
-    const latest = await readLatest(db);
+    // La base es la versión que el sitio ya tiene en memoria (memo por id: no se baja el cuerpo de ~3 MB en cada llamada). Si el sitio está
+    // sirviendo el respaldo, se lee del almacén. Si la de memoria quedó atrás, writeVersion lo detecta (verifica el padre) y fusiona.
+    const source = (inMemory as { source?: { versionId: number | null; servedFrom: string } }).source;
+    const latest =
+      source?.servedFrom === "store" && source.versionId != null ? { id: source.versionId, raw: inMemory as unknown } : await readLatest(db);
     if (!latest) return { status: "skipped", reason: "el almacén no tiene versiones" };
     const base = latest.raw as Raw;
     const needs = hotNeeds(base.events, Date.now());
