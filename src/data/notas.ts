@@ -27,6 +27,21 @@ export interface Nota {
 
 export const notas: Nota[] = [
   {
+    slug: "colapinto-larga-noveno-en-baku-por-la-sancion-a-sainz",
+    title: "Colapinto larga noveno en Bakú por la sanción a Sainz",
+    publishedAt: "2026-09-25",
+    source: {
+      medio: "Infobae",
+      url: "https://www.infobae.com/deportes/2026/09/25/franco-colapinto-afronta-la-ultima-practica-libre-en-el-gran-premio-de-baku/",
+      headline: "Tras una sanción a Sainz, Franco Colapinto largará 9° el Gran Premio de Azerbaiyán en el circuito callejero de Bakú",
+    },
+    summary:
+      "Franco Colapinto clasificó 10.º en Bakú, pero largará 9.º: Carlos Sainz, que había quedado noveno, recibió cinco puestos de sanción por no reducir la velocidad con bandera amarilla y saldrá 14.º. George Russell parte desde la pole; la carrera es el sábado a las 08:00, hora argentina.",
+    drivers: ["franco-colapinto"],
+    series: ["f1"],
+    events: ["f1-2026-15"],
+  },
+  {
     slug: "bainotti-15-anos-motorhome-y-la-f1",
     title: "Bainotti: 15 años, motorhome y el sueño de la F1",
     publishedAt: "2026-09-16",
