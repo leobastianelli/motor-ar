@@ -1,0 +1,64 @@
+// Envío de borradores para redes: función compartida por /api/pulso y scripts/borradores-redes.mjs (herramienta local, --dry).
+// Calcula los borradores candidatos con `borradores()` (redes-core.mjs, lógica pura) y, para cada uno, se "reserva" en la tabla `redes_enviados`
+// de Neon con INSERT ... ON CONFLICT DO NOTHING RETURNING ANTES de mandarlo por Telegram: si dos llamadas se solapan (el cron externo puede
+// pisarse con el reintento horario de GitHub Actions), sólo una gana la reserva y manda el mensaje.
+// Sin credenciales de Telegram no se manda nada real, así que tampoco se reserva: si se reservara sin mandar, quedaría marcado como enviado
+// para siempre aunque nadie lo haya visto.
+import { borradores, X_LIMIT, xIntentUrl, xLength } from "./redes-core.mjs";
+import { sendTelegram } from "./monitor/telegram.mjs";
+
+const KIND_LABEL = { agenda: "agenda del finde", resultado: "resultado", horario: "horario" };
+
+/** Texto del mensaje de Telegram para un borrador (usado también por la herramienta local para mostrarlo). */
+export function draftMessage(d) {
+  return [
+    `📝 Borrador para X (${KIND_LABEL[d.kind]})`,
+    "",
+    d.text,
+    "",
+    `${xLength(d.text)}/${X_LIMIT} caracteres`,
+    ...(d.image ? [`Placa para adjuntar: ${d.image}`] : []),
+  ].join("\n");
+}
+
+/** Teclado en línea de Telegram con el botón "Publicar en X" (enlace de intención). */
+export const draftKeyboard = (d) => ({ inline_keyboard: [[{ text: "Publicar en X", url: xIntentUrl(d.text) }]] });
+
+/**
+ * Calcula los borradores nuevos para este momento y los manda por Telegram.
+ * - `sql`: función de Neon (etiqueta de plantilla), o null/undefined si no hay DATABASE_URL. Sólo se consulta si hay candidatos.
+ * - `dry`: no reserva ni manda nada; sólo devuelve los candidatos (para la herramienta local).
+ * - `creds`: { token, chatId, fetchImpl? } de sendTelegram. Sin token o chatId, se simula (no se reserva ni se manda).
+ * → { candidatos, enviados: [{ key, kind }], simulado, motivo?, errores: [string] }
+ */
+export async function enviarBorradores({ raw, now, catalog, manual = {}, events, sql, dry = false, creds = {} }) {
+  // borradores() decide con lo que pasa ahora, no con lo ya mandado (eso lo resuelve la reserva en la base): enviados siempre vacío acá.
+  const candidatos = borradores(raw, now, { enviados: {}, catalog, manual, events });
+  if (!candidatos.length) return { candidatos: [], enviados: [], simulado: false, errores: [] };
+
+  const sinCredenciales = !creds.token || !creds.chatId;
+  if (dry || sinCredenciales) {
+    return { candidatos, enviados: [], simulado: true, motivo: dry ? "--dry" : "sin TELEGRAM_BOT_TOKEN o TELEGRAM_CHAT_ID", errores: [] };
+  }
+
+  const enviados = [];
+  const errores = [];
+  for (const d of candidatos) {
+    let reservado = true;
+    if (sql) {
+      const rows = await sql`INSERT INTO redes_enviados (clave, enviado_at) VALUES (${d.key}, now()) ON CONFLICT (clave) DO NOTHING RETURNING clave`;
+      reservado = rows.length > 0;
+    }
+    // No se reservó: otra llamada (o esta misma, ya corrida) lo mandó primero.
+    if (!reservado) continue;
+    try {
+      await sendTelegram(draftMessage(d), { ...creds, replyMarkup: draftKeyboard(d) });
+      enviados.push({ key: d.key, kind: d.kind });
+    } catch (error) {
+      errores.push(`${d.key}: ${error.message}`);
+      // No se pudo mandar: se libera la reserva para que la próxima corrida lo vuelva a intentar.
+      if (sql) await sql`DELETE FROM redes_enviados WHERE clave = ${d.key}`.catch(() => {});
+    }
+  }
+  return { candidatos, enviados, simulado: false, errores };
+}

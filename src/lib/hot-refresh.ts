@@ -1,6 +1,7 @@
 import { revalidatePath, revalidateTag } from "next/cache";
 import { sql } from "./db";
 import { hotNeeds } from "./hot-refresh-core.mjs";
+import { loadRawSeason } from "./season-data";
 import { readLatest, writeVersion } from "./season-store-write.mjs";
 import { nextIo } from "./sources/io-next";
 import { f1OfficialSessions } from "./sources/f1-official.mjs";
@@ -34,6 +35,12 @@ const LOCK_MINUTES = 3;
 export async function runHotRefresh(): Promise<HotOutcome> {
   if (!process.env.DATABASE_URL) return { status: "skipped", reason: "sin DATABASE_URL" };
   try {
+    // Precomprobación con la temporada que el sitio ya tiene en memoria (con caché, no baja el cuerpo si no cambió): si no hace falta nada, no se
+    // toca ni el candado ni el cuerpo de 3 MB. La llaman igual el layout, /api/caliente y /api/pulso: la comprobación vive acá para que a
+    // ninguno de los tres se le escape.
+    const inMemory = await loadRawSeason();
+    if (!hotPending(inMemory.events)) return { status: "skipped", reason: "nada pendiente (según la temporada en memoria)" };
+
     const query = sql();
     const db = query as unknown as Store;
     const locked = await query`UPDATE hot_lock SET at = now() WHERE id = 1 AND at < now() - make_interval(mins => ${LOCK_MINUTES}::integer) RETURNING at`;
