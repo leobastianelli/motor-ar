@@ -6,6 +6,7 @@ import { breadcrumb, JsonLd, sportsEventJsonLd } from "@/components/json-ld";
 import { AutoRefresh } from "@/components/live-clock";
 import { LiveTimingEmbed } from "@/components/live-timing-embed";
 import { Argentinos, Momento, ResultadoCarrera } from "@/components/momento";
+import { VideoSesion } from "@/components/video-sesion";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { getNow, getSeason, getSeries, isSimulatedNow } from "@/lib/data";
@@ -109,10 +110,16 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
   // Todas las sesiones con resultados, de la más reciente a la primera.
   const withResults = event.sessions.filter((s) => s.results?.length && sessionStatus(s, now) === "done").reverse();
   const [latest, ...earlier] = withResults;
+  // El resumen de estas sesiones se ve más abajo, en esta misma página (por eso el enlace del cronograma es un ancla y no youtube.com).
+  const withResultsIds = new Set(withResults.map((s) => s.id));
+  const resumenDe = (s: Session) => s.videos?.find((v) => v.kind === "highlights");
+  const transmisionDe = (s: Session) => s.videos?.find((v) => v.kind === "live");
   const rows = latest?.results ?? [];
   const isRace = latest ? RACE_KINDS.includes(latest.kind) : false;
   // Si la fuente no publicó al 1.º, `rows[0]` es la mejor posición disponible, no el ganador.
   const rowsComplete = rows.length > 0 && rows[0].pos === 1;
+  const latestResumen = latest && resumenDe(latest);
+  const latestTransmision = latest && transmisionDe(latest);
   const streamUrl = event.broadcasts.find((b) => b.url && b.kind !== "timing")?.url;
   const timingUrl = event.broadcasts.find((b) => b.kind === "timing")?.url;
   const broadcastSource = broadcastsBySeries[event.seriesId]?.source;
@@ -214,12 +221,21 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                             </span>
                             {s.videos && s.videos.length > 0 && (
                               <span className="session-videos">
-                                {s.videos.map((v) => (
-                                  <a key={v.id} href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noreferrer">
-                                    <span aria-hidden="true">▶</span> {v.kind === "live" ? (status === "done" ? "Ver la sesión" : "Ver en vivo") : "Resumen"}
-                                    {v.label ? ` · ${v.label}` : ""}
-                                  </a>
-                                ))}
+                                {s.videos.map((v) => {
+                                  // El resumen se ve en esta misma página (más abajo, en la sesión): el enlace es un ancla, no youtube.com.
+                                  const aca = v.kind === "highlights" && withResultsIds.has(s.id);
+                                  return aca ? (
+                                    <a key={v.id} href={`#${s.id}`}>
+                                      <span aria-hidden="true">▶</span> Resumen
+                                      {v.label ? ` · ${v.label}` : ""}
+                                    </a>
+                                  ) : (
+                                    <a key={v.id} href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noreferrer">
+                                      <span aria-hidden="true">▶</span> {v.kind === "live" ? (status === "done" ? "Ver la sesión" : "Ver en vivo") : "Resumen"}
+                                      {v.label ? ` · ${v.label}` : ""}
+                                    </a>
+                                  );
+                                })}
                               </span>
                             )}
                           </div>
@@ -293,27 +309,37 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
               <time dateTime={latest.start}>{fmtDayShort(latest.start)}</time>
             </SectionTitle>
             <ArgentinosLinea rows={argentinosDe(latest)} />
-            <div id={latest.id} className="session-result">
-              <div className="pole">
-                <span>{rows[0].positionText ?? rows[0].pos}</span>
-                <div>
-                  <p>{rowsComplete ? (isRace ? "Ganador" : "Mejor tiempo") : "Mejor resultado disponible"}</p>
-                  <h3>{rows[0].driver}</h3>
-                  <b>{rows[0].gap || rows[0].team}</b>
+            <div id={latest.id}>
+              {latestResumen && (
+                <VideoSesion
+                  videoId={latestResumen.id}
+                  title={`Resumen · ${latest.name}${latestResumen.label ? ` · ${latestResumen.label}` : ""}`}
+                  ariaLabel={`Ver el resumen de ${latest.name} en YouTube`}
+                  liveUrl={latestTransmision ? `https://www.youtube.com/watch?v=${latestTransmision.id}` : undefined}
+                />
+              )}
+              <div className="session-result">
+                <div className="pole">
+                  <span>{rows[0].positionText ?? rows[0].pos}</span>
+                  <div>
+                    <p>{rowsComplete ? (isRace ? "Ganador" : "Mejor tiempo") : "Mejor resultado disponible"}</p>
+                    <h3>{rows[0].driver}</h3>
+                    <b>{rows[0].gap || rows[0].team}</b>
+                  </div>
                 </div>
+                <ol className="podium compact">
+                  {rows.slice(1, 3).map((r) => (
+                    <li key={r.pos}>
+                      <b>{r.positionText ?? r.pos}</b>
+                      <div>
+                        <strong>{r.driver}</strong>
+                        <span>{r.team}</span>
+                      </div>
+                      <time>{r.gap}</time>
+                    </li>
+                  ))}
+                </ol>
               </div>
-              <ol className="podium compact">
-                {rows.slice(1, 3).map((r) => (
-                  <li key={r.pos}>
-                    <b>{r.positionText ?? r.pos}</b>
-                    <div>
-                      <strong>{r.driver}</strong>
-                      <span>{r.team}</span>
-                    </div>
-                    <time>{r.gap}</time>
-                  </li>
-                ))}
-              </ol>
             </div>
             {!rowsComplete && (
               <p className="empty-state">
@@ -353,17 +379,29 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
           <div className="section-block">
               <div className="earlier-sessions">
                   <h3>Sesiones anteriores</h3>
-                  {earlier.map((s) => (
-                    <details key={s.id} id={s.id} className="full-results">
-                      <summary>
-                        <strong>{s.name}</strong> · {fmtDayShort(s.start)} · 1.º {s.results![0].driver}
-                        <span>{s.results!.length === 1 ? "Solo el 1.º" : `${s.results!.length} pilotos`}</span>
-                        <ArgentinosLinea rows={argentinosDe(s)} small />
-                      </summary>
-                      <Ranking rows={s.results!} />
-                      <SourceLink session={s} />
-                    </details>
-                  ))}
+                  {earlier.map((s) => {
+                    const resumen = resumenDe(s);
+                    const transmision = transmisionDe(s);
+                    return (
+                      <details key={s.id} id={s.id} className="full-results">
+                        <summary>
+                          <strong>{s.name}</strong> · {fmtDayShort(s.start)} · 1.º {s.results![0].driver}
+                          <span>{s.results!.length === 1 ? "Solo el 1.º" : `${s.results!.length} pilotos`}</span>
+                          <ArgentinosLinea rows={argentinosDe(s)} small />
+                        </summary>
+                        {resumen && (
+                          <VideoSesion
+                            videoId={resumen.id}
+                            title={`Resumen · ${s.name}${resumen.label ? ` · ${resumen.label}` : ""}`}
+                            ariaLabel={`Ver el resumen de ${s.name} en YouTube`}
+                            liveUrl={transmision ? `https://www.youtube.com/watch?v=${transmision.id}` : undefined}
+                          />
+                        )}
+                        <Ranking rows={s.results!} />
+                        <SourceLink session={s} />
+                      </details>
+                    );
+                  })}
               </div>
           </div>
         </section>

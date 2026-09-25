@@ -56,6 +56,8 @@ function resumenSesion(s, now, seriesId, failures, argentineSlugs) {
     estado: ESTADO[sessionStatus(s, now)],
     ganador: ganadorDe(s.results),
     argentinos: argentinosDe(s.results, argentineSlugs),
+    // Sólo si tiene resumen en YouTube: alcanza para armar el enlace a la fecha (no viaja el id del video).
+    hasResumen: (s.videos ?? []).some((v) => v.kind === "highlights"),
     ...(hasResults ? {} : { motivo: noResultsReason(s, seriesId, failures, late) ?? undefined }),
   };
 }

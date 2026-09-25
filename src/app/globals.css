@@ -422,6 +422,44 @@ button{color:inherit;font-family:inherit}
 @media(max-width:800px){.install-prompt{flex-direction:column;align-items:stretch;padding:16px}.install-prompt p{font-size:13px}.install-prompt-actions{justify-content:stretch}.install-prompt-actions button{flex:1}}
 
 .session .session-videos{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px}.session .session-videos a{font-size:13px;font-weight:700;color:inherit;text-decoration:underline;text-underline-offset:3px}.session .session-videos a:hover{color:var(--red)}
+
+/* VideoSesion: fachada del resumen (miniatura + play; el iframe sin cookies sólo entra al tocar). */
+.video-sesion{margin:var(--space-4) 0 var(--space-5);isolation:isolate}
+.video-sesion-frame{position:relative;aspect-ratio:16/9;background:var(--ink);overflow:hidden}
+.video-sesion-frame img{object-fit:cover}
+.video-sesion-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-sesion-play{position:absolute;inset:0;display:block;width:100%;height:100%;padding:0;border:0;background:transparent;cursor:pointer}
+.video-sesion-icon{position:absolute;inset:0;display:grid;place-items:center}
+.video-sesion-icon svg{transition:transform 150ms ease}
+.video-sesion-icon svg path:first-child{fill:rgba(16,18,19,.82);transition:fill 150ms ease}
+.video-sesion-play:hover .video-sesion-icon svg,.video-sesion-play:focus-visible .video-sesion-icon svg{transform:scale(1.08)}
+.video-sesion-play:hover .video-sesion-icon svg path:first-child,.video-sesion-play:focus-visible .video-sesion-icon svg path:first-child{fill:var(--red)}
+.video-sesion-play:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
+.video-sesion-meta{display:flex;justify-content:space-between;align-items:baseline;gap:var(--space-3);margin-top:var(--space-2)}
+.video-sesion-meta strong{font-size:16px;font-weight:700}
+.video-sesion-meta span{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;flex:none}
+.video-sesion-links{margin:var(--space-1) 0 0;font-size:13px}
+.video-sesion-links a{color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+.video-sesion-links a:hover{color:var(--red)}
+.classification-wrap .video-sesion-meta span,.classification-wrap .video-sesion-links a{color:#abb0b1}
+.classification-wrap .video-sesion-links a:hover{color:var(--red)}
+@media(prefers-reduced-motion:reduce){.video-sesion-icon svg,.video-sesion-icon svg path:first-child{transition:none}.video-sesion-play:hover .video-sesion-icon svg,.video-sesion-play:focus-visible .video-sesion-icon svg{transform:none}}
+
+/* Miniatura chica con play, sólo enlace (no embebe nada): para no repetir un reproductor por fila. */
+.video-mini{position:relative;display:block;width:64px;height:36px;flex:none;isolation:isolate;overflow:hidden;background:var(--ink)}
+.video-mini img{object-fit:cover}
+.video-mini-icon{position:absolute;inset:0;display:grid;place-items:center;background:rgba(16,18,19,.35);transition:background-color 150ms ease}
+.video-mini-icon svg path:first-child{fill:#fff}
+.video-mini:hover .video-mini-icon,.video-mini:focus-visible .video-mini-icon{background:rgba(16,18,19,.6)}
+.video-mini:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.video-mini-icon{transition:none}}
+
+/* Enlace al resumen dentro de una fila del momento (lleva al ancla de la fecha; no embebe nada acá). */
+.momento-resumen{margin-left:2px}
+.momento-resumen:hover{color:var(--red)}
+
+.podium-head{align-items:center}
+.podium-head .video-mini{margin-left:auto}
 .timing-mini li:has(.state.live){display:block}.timing-mini li a{text-decoration:none;color:inherit}
 .timing-embed{margin:0 0 50px}.timing-embed iframe{display:block;width:100%;height:min(640px,80vh);border:1px solid var(--ink);background:#111}.timing-embed-gate{border:1px solid var(--ink);padding:24px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}.timing-embed-gate p{margin:0;font-size:14px;max-width:52ch}.timing-embed-gate button{background:var(--ink);color:white;border:0;padding:14px 18px;font:inherit;font-weight:700;cursor:pointer}.timing-embed>a{display:inline-block;margin-top:10px;font-size:14px}
 #tiempos-en-vivo{scroll-margin-top:90px}
