@@ -105,8 +105,13 @@ export function sessionDraft({ event, session, series, leader, argentines }) {
   if (podium.some((r) => !r?.driver) || !series) return null;
   const url = `${BASE_URL}/eventos/${event.id}`;
   const isQuali = session.kind === "clasificacion";
-  const head = (name) =>
-    isQuali ? `Clasificación: pole de ${name(podium[0])}` : session.kind === "sprint" ? `Sprint: ganó ${name(podium[0])}` : `Ganó ${name(podium[0])}`;
+  // Cuando una fecha tiene más de una sesión del mismo tipo (F2 Baku: "Clasificación 1" y "Clasificación 2"; una fecha
+  // con "Carrera principal" y "Carrera principal 2"), "Clasificación" o "Ganó" a secas no distingue cuál fue: se usa
+  // el nombre propio de la sesión.
+  const sameKindCount = event.sessions.filter((s) => s.kind === session.kind).length;
+  const genericLabel = isQuali ? "Clasificación" : session.kind === "sprint" ? "Sprint" : null;
+  const label = sameKindCount > 1 ? session.name : genericLabel;
+  const head = (name) => (label ? `${label}: ${isQuali ? "pole de" : "ganó"} ${name(podium[0])}` : `Ganó ${name(podium[0])}`);
   for (const full of [true, false]) {
     const name = (r) => (full ? r.driver : surname(r.driver));
     for (const withLeader of [true, false]) {

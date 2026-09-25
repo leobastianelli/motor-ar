@@ -14,6 +14,7 @@ import { notesForDriver } from "@/lib/notas";
 import { getPhoto } from "@/lib/photos";
 import { driverKey } from "@/lib/sources/driver-index.mjs";
 import { breadcrumb, isoDate, JsonLd } from "@/components/json-ld";
+import { descripcionPiloto, tituloPiloto } from "@/lib/seo-titulos.mjs";
 import { OG_DEFAULTS } from "@/lib/site";
 import type { IndexedDriver } from "@/lib/data";
 import type { Driver } from "@/lib/types";
@@ -32,10 +33,21 @@ export async function generateMetadata(props: PageProps<"/pilotos/[slug]">): Pro
   const name = curated?.name ?? indexed?.name;
   if (!name) return { title: "Piloto" };
   const seriesNames = (curated ? [curated.seriesId] : (indexed?.series ?? [])).map((id) => getSeries(id)?.name).filter(Boolean).join(", ");
-  const description = indexed
-    ? indexedSummary(indexed, await getSeason())
+  const season = await getSeason();
+  const fallback = indexed
+    ? indexedSummary(indexed, season)
     : `${name}${seriesNames ? ` (${seriesNames})` : ""}: ${curated?.tagline ?? ""} Temporada 2026, campeonato y resultados fecha por fecha.`;
-  return { title: name, description, openGraph: { title: name, description, ...OG_DEFAULTS }, alternates: { canonical: `/pilotos/${slug}` } };
+  // Título y descripción salen del momento del piloto (src/lib/seo-titulos.mjs) y se regeneran con la página. Sólo dicen "hoy" o
+  // "horarios en <ciudad>" si esa fecha es suya: ficha con equipo, o figura en los resultados.
+  const now = getNow();
+  const seriesIds = curated ? [curated.seriesId] : [...(indexed?.series ?? [])];
+  const keys = curated ? driverKeys(curated) : (indexed?.keys ?? [indexed!.key]);
+  const momento = season.getMomentoPiloto(seriesIds, keys, now);
+  const corre = curated ? Boolean(curated.team) || momento.participa : momento.participa;
+  const fecha = momento.fecha ? season.getEvent(momento.fecha.id) : undefined;
+  const title = tituloPiloto(name, now.slice(0, 4), momento, now, corre);
+  const description = descripcionPiloto(name, momento, { broadcasts: fecha?.broadcasts, fallback, corre });
+  return { title, description, openGraph: { title, description, ...OG_DEFAULTS }, alternates: { canonical: `/pilotos/${slug}` } };
 }
 
 const RACES = new Set(["final", "carrera", "sprint"]);
