@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { estadoDeSesion, momentoDeCategoria, momentoDeEvento, momentoDePiloto } from "./momento.mjs";
+import { estadoDeSesion, momentoDeCategoria, momentoDeEvento, momentoDePiloto, nombreVisibleSesion } from "./momento.mjs";
 import { driverKey } from "./sources/driver-index.mjs";
 
 const row = (pos, driver, extra = {}) => ({ pos, driver, team: "X", gap: "", ...extra });
@@ -202,4 +202,19 @@ test("momentoDeEvento: en pista sólo mira esta fecha, no otras de la categoría
   const m = momentoDeEvento(baku({ p1: [row(1, "Lando Norris"), colapinto(18)] }), "2026-09-24T08:45:00Z", opts);
   assert.equal(m.modo, "en-pista");
   assert.equal(m.sesiones.find((s) => s.id === "p1").estado, "en-vivo");
+});
+
+test("nombreVisibleSesion: con dos carreras principales, la primera se ve como 'Carrera principal 1' (sin tocar el name guardado)", () => {
+  const sesiones = [
+    ses("carrera", "Carrera principal", "carrera", "2026-09-26T11:00:00Z"),
+    ses("carrera-2", "Carrera principal 2", "carrera", "2026-09-27T11:00:00Z"),
+  ];
+  assert.equal(nombreVisibleSesion(sesiones[0], sesiones), "Carrera principal 1");
+  assert.equal(nombreVisibleSesion(sesiones[1], sesiones), "Carrera principal 2");
+  assert.equal(sesiones[0].name, "Carrera principal");
+});
+
+test("nombreVisibleSesion: con una sola carrera principal, el nombre no cambia", () => {
+  const sesiones = [ses("carrera", "Carrera principal", "carrera", "2026-09-26T11:00:00Z")];
+  assert.equal(nombreVisibleSesion(sesiones[0], sesiones), "Carrera principal");
 });

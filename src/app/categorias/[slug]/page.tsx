@@ -181,7 +181,6 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
   const meta = season.getSeasonMeta(series.id);
   const history = getHistory(series.id);
   const photo = getPhoto(`series-${series.id}`);
-  const nameParts = series.name.split(" ");
   const momento = season.getMomentoCategoria(series.id, now);
   const momentoEvent = momento.fecha ? season.getEvent(momento.fecha.id) : undefined;
   const nuestros = drivers.filter((d) => d.seriesId === series.id);
@@ -209,16 +208,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
         </div>
         <div>
           <p className="kicker">{SCOPE_LABEL[series.scope]}</p>
-          <h1>
-            {nameParts[0]}
-            {nameParts.length > 1 && (
-              <>
-                {" "}
-                <br />
-                {nameParts.slice(1).join(" ")}
-              </>
-            )}
-          </h1>
+          <h1>{series.name}</h1>
           <p className="lede">
             {series.org}. Calendario, campeonato
             {history ? ` y ${history.seasons} temporadas de archivo` : ""}, siempre en hora argentina.

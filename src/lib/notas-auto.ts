@@ -1,4 +1,5 @@
 import type { Nota } from "@/data/notas";
+import { nombreVisibleSesion } from "./momento.mjs";
 import type { RaceEvent, ResultRow, Session, SessionKind } from "./types";
 
 // Notas automáticas: una crónica por fecha que se arma sola con los resultados que van entrando (prácticas, clasificación, sprint, carrera).
@@ -32,18 +33,18 @@ const classified = (r: ResultRow) => !r.status && (!r.positionText || /^\d+$/.te
 const top = (s: Session, n: number) => (s.results ?? []).filter(classified).sort((a, b) => a.pos - b.pos).slice(0, n);
 
 /** Un renglón por sesión: "Práctica 1: 1.º George Russell (1:45.387), 2.º Max Verstappen (+0.400), 3.º …". */
-function line(s: Session): string {
+function line(s: Session, siblings: Session[]): string {
   const rows = top(s, 3);
   if (!rows.length) return "";
   const parts = rows.map((r) => `${ordinal(r.pos)} ${r.driver}${r.gap ? ` (${r.gap})` : ""}`);
-  return `${s.name}: ${parts.join(", ")}.`;
+  return `${nombreVisibleSesion(s, siblings)}: ${parts.join(", ")}.`;
 }
 
 /** Titular según la sesión más importante del último día con resultados. */
 function headline(event: RaceEvent, s: Session): string {
   const first = top(s, 1)[0];
   if (!first) return event.name;
-  const name = lower(s.name);
+  const name = lower(nombreVisibleSesion(s, event.sessions));
   switch (s.kind) {
     case "carrera":
     case "final":
@@ -111,12 +112,15 @@ export function autoNotes(events: RaceEvent[], { now, argentines, tierOf, series
       for (const r of s.results ?? []) {
         if (!r.driverSlug || !argentines.has(r.driverSlug) || shown.has(r.driver)) continue;
         shown.add(r.driver);
-        home.push(r.status ? `${r.driver} no completó la ${lower(s.name)}` : `${r.driver} fue ${ordinal(r.pos)} en la ${lower(s.name)}`);
+        const visible = lower(nombreVisibleSesion(s, event.sessions));
+        home.push(r.status ? `${r.driver} no completó la ${visible}` : `${r.driver} fue ${ordinal(r.pos)} en la ${visible}`);
       }
     }
 
-    const summary = [...lead.map(line).filter(Boolean), ...(home.length ? [`${home.slice(0, 3).join("; ")}.`] : [])].join(" ");
-    const details = ordered.slice(1).map(([day, list]) => `${capitalize(dayName(new Date(`${day}T12:00:00-03:00`)))}: ${pick(list).map(line).filter(Boolean).join(" ")}`);
+    const summary = [...lead.map((s) => line(s, event.sessions)).filter(Boolean), ...(home.length ? [`${home.slice(0, 3).join("; ")}.`] : [])].join(" ");
+    const details = ordered
+      .slice(1)
+      .map(([day, list]) => `${capitalize(dayName(new Date(`${day}T12:00:00-03:00`)))}: ${pick(list).map((s) => line(s, event.sessions)).filter(Boolean).join(" ")}`);
 
     const sources = [...new Set(done.map((s) => s.resultsSource?.name).filter((n): n is string => !!n))];
     out.push({

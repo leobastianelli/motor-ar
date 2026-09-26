@@ -3,6 +3,7 @@
 // lleva un botón que abre X con el texto escrito y la persona confirma (ver scripts/borradores-redes.mjs).
 // Reglas de contenido: sólo datos que el sitio ya muestra, un enlace por borrador, sin "EN VIVO", y si falta un dato no se manda.
 import { dateStatus, dayKey } from "./monitor/checks.mjs";
+import { nombreVisibleSesion } from "./momento.mjs";
 
 export const BASE_URL = "https://www.somosfierros.ar";
 export const X_LIMIT = 280;
@@ -110,7 +111,7 @@ export function sessionDraft({ event, session, series, leader, argentines }) {
   // el nombre propio de la sesión.
   const sameKindCount = event.sessions.filter((s) => s.kind === session.kind).length;
   const genericLabel = isQuali ? "Clasificación" : session.kind === "sprint" ? "Sprint" : null;
-  const label = sameKindCount > 1 ? session.name : genericLabel;
+  const label = sameKindCount > 1 ? nombreVisibleSesion(session, event.sessions) : genericLabel;
   const head = (name) => (label ? `${label}: ${isQuali ? "pole de" : "ganó"} ${name(podium[0])}` : `Ganó ${name(podium[0])}`);
   for (const full of [true, false]) {
     const name = (r) => (full ? r.driver : surname(r.driver));

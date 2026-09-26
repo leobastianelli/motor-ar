@@ -35,7 +35,7 @@ export default async function NotasPage() {
   return (
     <>
       <section className="section-block notas-page">
-        <SectionTitle title="Notas" />
+        <SectionTitle title="Notas" as="h1" />
         <p className="notas-intro">
           Lo que dicen los medios, reseñado en pocas líneas y con la fuente siempre a la vista, y la crónica de cada fecha, que se arma sola con los resultados apenas entran. Cada nota está
           enlazada con los pilotos, las categorías y las fechas de las que habla.

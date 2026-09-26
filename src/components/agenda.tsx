@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState, type CSSProperties } from "react";
 import type { FeedItem } from "@/lib/data";
 import { dayKey, fmtDayNum, fmtWeekday, sessionState, sessionTime } from "@/lib/format";
+import { nombreVisibleSesion } from "@/lib/momento.mjs";
 import type { Scope } from "@/lib/types";
 import { useNow } from "./live-clock";
 import { CategoryLabel, Code, SectionTitle, StateTag } from "./pista";
@@ -99,7 +100,7 @@ export function Agenda({ items, days, today, now: serverNow, simulated }: { item
                     <time dateTime={session.start} title={session.timeKnown === false ? "Horario a confirmar" : undefined}>
                       {sessionTime(session)}
                     </time>
-                    <strong>{session.name}</strong>
+                    <strong>{nombreVisibleSesion(session, event.sessions)}</strong>
                     <StateTag kind={state.kind}>{state.label}</StateTag>
                   </Link>
                 );
@@ -131,7 +132,7 @@ function ByTime({ rows, now }: { rows: FeedItem[]; now: string }) {
           {sessionTime(session)}
         </time>
         <div className="agenda-main">
-          <strong>{session.name}</strong>
+          <strong>{nombreVisibleSesion(session, event.sessions)}</strong>
           <span className="agenda-meta">
             <Code series={series} />
             {series.name} · {event.circuit.city}
