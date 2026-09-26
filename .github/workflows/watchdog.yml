@@ -1,9 +1,11 @@
-# Vigilante independiente: cada hora revisa que el sitio responda y que los datos se estén sincronizando, y avisa por Telegram si no.
+# Vigilante independiente: revisa que el sitio responda y que los datos se estén sincronizando, y avisa por Telegram si no.
 # Está aparte del sincronizador a propósito: si el sincronizador deja de correr, este lo nota.
+# Sin `schedule`: GitHub Actions descarta la mayoría de las corridas programadas (ver docs/avisos-telegram.md), así que el disparo real cada
+# 30 min lo hace cron-job.org contra GET /api/vigilante (misma orquestación, estado en Neon en vez de esta caché). Este workflow queda para
+# correrlo a mano (workflow_dispatch) o de respaldo; no lo dispares también con un cron acá, para no mandar avisos duplicados con estados
+# distintos (el de acá vive en la caché de Actions, el del endpoint en Neon).
 name: Vigilante
 on:
-  schedule:
-    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:

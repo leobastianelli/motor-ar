@@ -116,8 +116,11 @@ export function Agenda({ items, days, today, now: serverNow, simulated }: { item
   );
 }
 
-/** Todas las sesiones del día en una sola lista por hora. Las que no tienen hora confirmada van al final, aparte. */
-function ByTime({ rows, now }: { rows: FeedItem[]; now: string }) {
+/**
+ * Todas las sesiones del día en una sola lista por hora. Las que no tienen hora confirmada van al final, aparte.
+ * Se exporta para que `/hoy` (src/app/hoy/page.tsx) reutilice la misma fila en vez de duplicarla.
+ */
+export function ByTime({ rows, now }: { rows: FeedItem[]; now: string }) {
   const coincide = overlaps(rows);
   const timed = rows.filter((r) => r.session.timeKnown !== false);
   const pending = rows.filter((r) => r.session.timeKnown === false);

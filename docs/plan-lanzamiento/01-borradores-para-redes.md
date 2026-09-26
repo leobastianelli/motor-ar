@@ -50,16 +50,28 @@ GitHub Actions descarta la mayoría de sus corridas programadas: el 24/09 la sin
 2. **Borradores para redes:** `src/lib/redes-envio.mjs` (`enviarBorradores`) calcula los borradores candidatos con `borradores()` (`redes-core.mjs`) y, por cada uno, se reserva en la tabla `redes_enviados` de Neon (`clave TEXT PRIMARY KEY, enviado_at TIMESTAMPTZ`) con `INSERT ... ON CONFLICT DO NOTHING RETURNING` **antes** de mandarlo por Telegram: si el cron externo se solapa con otra corrida, sólo una gana la reserva. El estado ya no viaja en la caché de GitHub Actions (`.redes-state.json`, sacada de `sync-season.yml`): vive en esa tabla, así que sobrevive entre corridas de cron-job.org y de Actions por igual. Sin `TELEGRAM_BOT_TOKEN` o `TELEGRAM_CHAT_ID` se simula (no se reserva ni se manda nada) y la respuesta lo dice. `scripts/borradores-redes.mjs` sigue existiendo como herramienta local (usa la misma función; `--dry` no toca la base ni Telegram).
 3. **Sincronización completa a demanda:** si hay sesiones de categorías con fuente automática que terminaron hace más de 10 min y menos de 6 h sin resultados (`pendingForDispatch`, `src/lib/pulso-core.mjs`, sobre la temporada en memoria con `visibleEvents` + manual-overrides, igual que `/api/salud`), y no se disparó ninguna sincronización en los últimos 45 min (candado de una fila, `pulso_estado`, tomado con un `UPDATE` condicional igual que `hot_lock`; `src/lib/pulso-dispatch.mjs`), se dispara el workflow `sync-season.yml` con la API de GitHub (`POST .../actions/workflows/sync-season.yml/dispatches`, `{"ref":"main","inputs":{"timing_days":"21"}}`, con `GITHUB_DISPATCH_TOKEN`). Sin ese token, o sin `DATABASE_URL`, se saltea y lo dice. La tabla `pulso_estado` (y `redes_enviados`) sólo se consulta cuando hay algo pendiente o candidatos: una llamada sin nada que hacer no toca Neon.
 
-Los crons de GitHub Actions **no se sacaron**: quedan de respaldo (la compuerta horaria de `sync-season.yml` sigue igual). Sólo se sacaron de ahí los pasos de borradores (y la caché `.redes-state.json`), que ahora manda `/api/pulso`.
+Los crons de GitHub Actions **no se sacaron** del todo: la compuerta horaria de `sync-season.yml` sigue igual. Sólo se sacaron de ahí los pasos de borradores (y la caché `.redes-state.json`, que ahora manda `/api/pulso`) y, más tarde, el `schedule` del vigilante (ver abajo).
+
+### El vigilante también pasó a cron-job.org (26/09/2026)
+
+El mismo problema (GitHub Actions descarta corridas programadas) afectaba al vigilante (`scripts/watchdog.mjs`, antes con cron horario propio): si el sitio se caía de noche, el aviso por Telegram podía llegar horas tarde o nunca. Se resolvió igual que los borradores: `GET https://www.somosfierros.ar/api/vigilante` (mismo `PULSO_SECRET`, mismo patrón de respuesta), llamado por un segundo job de cron-job.org cada 30 min, **todos los días** (a diferencia de `/api/pulso`, esto no depende de que haya carreras esa semana). Hace lo mismo que `scripts/watchdog.mjs` (misma orquestación, `src/lib/monitor/watchdog-run.mjs`: prueba las páginas clave por HTTP, lee `/api/salud`, revisa las corridas del sincronizador con `GITHUB_DISPATCH_TOKEN` y evalúa con `evaluate`), pero guarda qué ya se avisó en la tabla `vigilante_estado` de Neon en vez de la caché de GitHub Actions. El workflow `.github/workflows/watchdog.yml` perdió su `schedule` (queda sólo `workflow_dispatch`, para correrlo a mano): si se reactivara un cron ahí a la vez que cron-job.org llama al endpoint, mandarían avisos duplicados con estados distintos.
 
 ### Variables que hay que cargar
 
-- **En Vercel** (Project Settings → Environment Variables): `PULSO_SECRET` (uno nuevo, elegido por el dueño), `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` (los mismos del guardián, si ya existen) y `GITHUB_DISPATCH_TOKEN` (un fine-grained personal access token de GitHub con permiso `Actions: write` sobre `leobastianelli/motor-ar`).
-- **En Neon:** correr `npm run db:season:init` (crea, si no existen, `redes_enviados` y `pulso_estado`; es idempotente).
-- **En cron-job.org:** un job nuevo →
-  - URL: `https://www.somosfierros.ar/api/pulso`
-  - Método: `GET`
-  - Header: `Authorization: Bearer <el mismo valor de PULSO_SECRET>`
-  - Frecuencia: cada 5 minutos
-  - Días: jueves a lunes (el resto de la semana no corre nada que dependa de la hora)
-  - Timeout: al menos 60 s (coincide con `maxDuration` del endpoint)
+- **En Vercel** (Project Settings → Environment Variables): `PULSO_SECRET` (uno nuevo, elegido por el dueño, compartido entre `/api/pulso` y `/api/vigilante`), `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID` (los mismos del guardián, si ya existen) y `GITHUB_DISPATCH_TOKEN` (un fine-grained personal access token de GitHub con permiso `Actions: write` — que incluye lectura — sobre `leobastianelli/motor-ar`; `/api/vigilante` lo reutiliza para leer las corridas del sincronizador).
+- **En Neon:** correr `npm run db:season:init` (crea, si no existen, `redes_enviados`, `pulso_estado` y `vigilante_estado`; es idempotente).
+- **En cron-job.org:** dos jobs →
+  - **Borradores/sincronización:**
+    - URL: `https://www.somosfierros.ar/api/pulso`
+    - Método: `GET`
+    - Header: `Authorization: Bearer <el mismo valor de PULSO_SECRET>`
+    - Frecuencia: cada 5 minutos
+    - Días: jueves a lunes (el resto de la semana no corre nada que dependa de la hora)
+    - Timeout: al menos 60 s (coincide con `maxDuration` del endpoint)
+  - **Vigilante:**
+    - URL: `https://www.somosfierros.ar/api/vigilante`
+    - Método: `GET`
+    - Header: `Authorization: Bearer <el mismo valor de PULSO_SECRET>`
+    - Frecuencia: cada 30 minutos (`*/30 * * * *`)
+    - Días: todos
+    - Timeout: al menos 60 s (coincide con `maxDuration` del endpoint)
