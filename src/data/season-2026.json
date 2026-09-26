@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T20:05:50.955Z",
+  "generatedAt": "2026-09-26T20:56:44.209Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -93429,7 +93429,7 @@
               "number": "7",
               "driver": "Dino Beganovic",
               "team": "DAMS Lucas Oil",
-              "gap": "1:03:29.190",
+              "gap": "1:3:29.190",
               "points": 25
             },
             {
@@ -93437,7 +93437,7 @@
               "number": "15",
               "driver": "Alex Dunne",
               "team": "Rodin Motorsport",
-              "gap": "+7.320",
+              "gap": "+7.32",
               "points": 19
             },
             {
@@ -93459,9 +93459,9 @@
             {
               "pos": 5,
               "number": "20",
-              "driver": "E. Fittipaldi",
+              "driver": "Emerson Fittipaldi",
               "team": "AIX Racing",
-              "gap": "+19.630",
+              "gap": "+19.63",
               "points": 10
             },
             {
@@ -93600,8 +93600,8 @@
             }
           ],
           "resultsSource": {
-            "name": "FIA · clasificación oficial",
-            "url": "https://www.fia.com/events/formula-2-championship/season-2026/madrid/feature-race-classification"
+            "name": "FIA Formula 2 · clasificación oficial",
+            "url": "https://www.fiaformula2.com/en/racing/2026/madrid"
           }
         }
       ],
@@ -103788,6 +103788,149 @@
           }
         },
         {
+          "id": "tcpk-2026-8-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-09-26T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Mariano Werner Foton",
+              "team": "",
+              "gap": "1:39.866"
+            },
+            {
+              "pos": 2,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Toyota",
+              "gap": "+0.943"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": "+0.945"
+            },
+            {
+              "pos": 4,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Ford",
+              "gap": "+1.183"
+            },
+            {
+              "pos": 5,
+              "number": "147",
+              "driver": "Marco Dianda Vw",
+              "team": "",
+              "gap": "+1.243"
+            },
+            {
+              "pos": 6,
+              "number": "115",
+              "driver": "Diego Ciantini",
+              "team": "Ford",
+              "gap": "+1.278"
+            },
+            {
+              "pos": 7,
+              "number": "112",
+              "driver": "Lucas Valle",
+              "team": "Toyota",
+              "gap": "+1.508"
+            },
+            {
+              "pos": 8,
+              "number": "214",
+              "driver": "Santiago Mangoni",
+              "team": "Chevrolet",
+              "gap": "+1.827"
+            },
+            {
+              "pos": 9,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": "+2.570"
+            },
+            {
+              "pos": 10,
+              "number": "121",
+              "driver": "Omar Martinez",
+              "team": "Toyota",
+              "gap": "+10.820"
+            },
+            {
+              "pos": 11,
+              "number": "11",
+              "driver": "Gaston Mazzacane Foton",
+              "team": "",
+              "gap": "+2.001"
+            },
+            {
+              "pos": 12,
+              "number": "126",
+              "driver": "Thomas Ricciardi",
+              "team": "Ford",
+              "gap": "+2.173"
+            },
+            {
+              "pos": 13,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": "+2.258"
+            },
+            {
+              "pos": 14,
+              "number": "13",
+              "driver": "Diego De Carlo Vw",
+              "team": "",
+              "gap": "+4.139"
+            },
+            {
+              "pos": 15,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 16,
+              "number": "77",
+              "driver": "Jose Ciantini",
+              "team": "Toyota",
+              "gap": "+4.345"
+            },
+            {
+              "pos": 17,
+              "number": "107",
+              "driver": "Tobías Martínez",
+              "team": "Chevrolet",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 18,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Toyota",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/945/ver"
+          }
+        },
+        {
           "id": "tcpk-2026-8-final",
           "kind": "final",
           "name": "Final",
@@ -109088,8 +109231,8 @@
       "eventsWithTimes": 18
     },
     "timing": {
-      "documents": 742,
-      "pagesFetched": 20,
+      "documents": 744,
+      "pagesFetched": 21,
       "eventsWithResults": 56
     },
     "openf1": {
