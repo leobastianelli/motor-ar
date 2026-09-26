@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T13:32:46.600Z",
+  "generatedAt": "2026-09-26T14:11:54.364Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -103035,6 +103035,12 @@
               "points": 0,
               "grid": 0
             }
+          ],
+          "videos": [
+            {
+              "id": "I9oahfzac0I",
+              "kind": "highlights"
+            }
           ]
         }
       ],
@@ -108199,7 +108205,7 @@
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 4,
+      "sessions": 5,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
