@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T19:14:55.837Z",
+  "generatedAt": "2026-09-26T21:18:49.315Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -806,7 +806,8 @@
         "tc-pista-pick-up": "13"
       },
       "teams": {
-        "tc": "Chevrolet"
+        "tc": "Chevrolet",
+        "tc-pick-up": "Volkswagen"
       },
       "firstSeen": "2026-02-21",
       "lastSeen": "2026-09-26"
@@ -1584,7 +1585,7 @@
       "lastSeen": "2026-09-20"
     },
     {
-      "key": "foton gaston mazzacane",
+      "key": "gaston mazzacane",
       "keys": [
         "gaston mazzacane",
         "foton gaston mazzacane"
@@ -1600,7 +1601,9 @@
         "tc-pick-up": "11",
         "tc-pista-pick-up": "11"
       },
-      "teams": {},
+      "teams": {
+        "tc-pick-up": "Foton"
+      },
       "firstSeen": "2026-02-21",
       "lastSeen": "2026-09-26"
     },
@@ -2496,7 +2499,9 @@
       "numbers": {
         "tc-pista-pick-up": "133"
       },
-      "teams": {},
+      "teams": {
+        "tc-pista-pick-up": "Volkswagen"
+      },
       "firstSeen": "2026-02-21",
       "lastSeen": "2026-09-26"
     },
@@ -3148,7 +3153,7 @@
       },
       "teams": {
         "tc": "Dodge",
-        "tc-pick-up": "Ford",
+        "tc-pick-up": "Volkswagen",
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
@@ -3258,7 +3263,8 @@
         "tc": "11"
       },
       "teams": {
-        "tc": "Ford"
+        "tc": "Ford",
+        "tc-pick-up": "Foton"
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-09-26"
@@ -3755,7 +3761,8 @@
         "tc-pista-pick-up": "123"
       },
       "teams": {
-        "tc-pista": "Ford"
+        "tc-pista": "Ford",
+        "tc-pista-pick-up": "Foton"
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-09-26"

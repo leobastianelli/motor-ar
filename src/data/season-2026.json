@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T20:56:44.209Z",
+  "generatedAt": "2026-09-26T21:18:47.808Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -17491,7 +17491,7 @@
             {
               "pos": 11,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+115.589"
             }
@@ -17540,7 +17540,7 @@
             {
               "pos": 5,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+1.469"
             },
@@ -17554,7 +17554,7 @@
             {
               "pos": 7,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+2.368"
             },
@@ -17568,7 +17568,7 @@
             {
               "pos": 9,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+9.469"
             },
@@ -17701,14 +17701,14 @@
             {
               "pos": 10,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+0.956"
             },
             {
               "pos": 12,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+0.940"
             },
@@ -17729,7 +17729,7 @@
             {
               "pos": 14,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+1.331"
             },
@@ -17807,7 +17807,7 @@
             {
               "pos": 6,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+11.723"
             },
@@ -17877,14 +17877,14 @@
             {
               "pos": 5,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+5.464"
             },
             {
               "pos": 6,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+6.769"
             },
@@ -17933,7 +17933,7 @@
             {
               "pos": 3,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+10.577"
             },
@@ -17961,7 +17961,7 @@
             {
               "pos": 7,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+19.960"
             },
@@ -17989,7 +17989,7 @@
             {
               "pos": 11,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+32.962"
             },
@@ -18082,7 +18082,7 @@
             {
               "pos": 3,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+1.551"
             },
@@ -18223,7 +18223,7 @@
             {
               "pos": 8,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+1.442"
             },
@@ -18330,7 +18330,7 @@
             {
               "pos": 2,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+0.555"
             },
@@ -18563,7 +18563,7 @@
             {
               "pos": 1,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "7:43.363"
             },
@@ -18787,7 +18787,7 @@
             {
               "pos": 5,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+21.695"
             },
@@ -18913,7 +18913,7 @@
             {
               "pos": 5,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+21.695"
             },
@@ -29818,7 +29818,7 @@
             {
               "pos": 1,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "1:28.437"
             },
@@ -29874,7 +29874,7 @@
             {
               "pos": 9,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+2.108"
             },
@@ -29909,7 +29909,7 @@
             {
               "pos": 14,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "",
               "status": "Sin tiempo"
@@ -29939,14 +29939,14 @@
             {
               "pos": 1,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "1:28.576"
             },
             {
               "pos": 2,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+0.226"
             },
@@ -30016,7 +30016,7 @@
             {
               "pos": 12,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+1.826"
             },
@@ -30192,7 +30192,7 @@
             {
               "pos": 1,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "30:41.185"
             },
@@ -30248,7 +30248,7 @@
             {
               "pos": 9,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+22.420"
             },
@@ -30262,7 +30262,7 @@
             {
               "pos": 11,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+30.745"
             },
@@ -30348,7 +30348,7 @@
             {
               "pos": 5,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+0.865"
             },
@@ -30453,7 +30453,7 @@
             {
               "pos": 20,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+21.482"
             },
@@ -30516,7 +30516,7 @@
             {
               "pos": 6,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+0.376"
             },
@@ -30537,7 +30537,7 @@
             {
               "pos": 9,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+0.718"
             },
@@ -30642,14 +30642,14 @@
             {
               "pos": 1,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "1:28.576"
             },
             {
               "pos": 2,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+0.226"
             },
@@ -30719,7 +30719,7 @@
             {
               "pos": 12,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+1.826"
             },
@@ -30867,7 +30867,7 @@
             {
               "pos": 4,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+7.775"
             },
@@ -30972,7 +30972,7 @@
             {
               "pos": 6,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+9.788"
             },
@@ -30986,7 +30986,7 @@
             {
               "pos": 8,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+11.374"
             },
@@ -40730,7 +40730,7 @@
             {
               "pos": 4,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+0.714"
             },
@@ -40793,7 +40793,7 @@
             {
               "pos": 13,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+10.461"
             },
@@ -40807,7 +40807,7 @@
             {
               "pos": 15,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+29.851"
             },
@@ -40835,7 +40835,7 @@
             {
               "pos": 1,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "1:27.928"
             },
@@ -40863,7 +40863,7 @@
             {
               "pos": 5,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+1.590"
             },
@@ -40919,7 +40919,7 @@
             {
               "pos": 13,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "",
               "status": "Sin tiempo"
@@ -40957,7 +40957,7 @@
             {
               "pos": 1,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "1:28.353"
             },
@@ -40971,7 +40971,7 @@
             {
               "pos": 3,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+0.527"
             },
@@ -40986,7 +40986,7 @@
             {
               "pos": 5,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+0.644"
             },
@@ -41234,14 +41234,14 @@
             {
               "pos": 2,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+0.281"
             },
             {
               "pos": 3,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+5.035"
             },
@@ -41297,7 +41297,7 @@
             {
               "pos": 11,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+19.282"
             },
@@ -41390,7 +41390,7 @@
             {
               "pos": 5,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+1.120"
             },
@@ -41474,7 +41474,7 @@
             {
               "pos": 17,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+10.461"
             },
@@ -41516,7 +41516,7 @@
             {
               "pos": 1,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "1:47.762"
             },
@@ -41530,7 +41530,7 @@
             {
               "pos": 3,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+1.181"
             },
@@ -41615,7 +41615,7 @@
             {
               "pos": 3,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+0.822"
             },
@@ -41735,7 +41735,7 @@
             {
               "pos": 20,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "",
               "status": "Sin tiempo"
@@ -41764,7 +41764,7 @@
             {
               "pos": 2,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+2.714"
             },
@@ -41890,7 +41890,7 @@
             {
               "pos": 8,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+-264.712"
             },
@@ -42031,7 +42031,7 @@
             {
               "pos": 17,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+-996.736"
             },
@@ -61053,7 +61053,7 @@
             {
               "pos": 4,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+0.280"
             },
@@ -61074,7 +61074,7 @@
             {
               "pos": 7,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+0.208"
             },
@@ -61088,7 +61088,7 @@
             {
               "pos": 9,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+2418.449"
             },
@@ -61173,7 +61173,7 @@
             {
               "pos": 4,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+0.821"
             },
@@ -61201,7 +61201,7 @@
             {
               "pos": 8,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+-269.585"
             }
@@ -61257,7 +61257,7 @@
             {
               "pos": 6,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+9.450"
             }
@@ -61327,7 +61327,7 @@
             {
               "pos": 8,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+11.378"
             },
@@ -61341,14 +61341,14 @@
             {
               "pos": 10,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+12.299"
             },
             {
               "pos": 11,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+-454.640"
             },
@@ -61588,7 +61588,7 @@
             {
               "pos": 11,
               "number": "100",
-              "driver": "Leonardo Forte Vw",
+              "driver": "Leonardo Forte",
               "team": "",
               "gap": "+4.420"
             },
@@ -61609,7 +61609,7 @@
             {
               "pos": 14,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+24.317"
             },
@@ -61623,7 +61623,7 @@
             {
               "pos": 16,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "",
               "status": "Sin tiempo"
@@ -61680,7 +61680,7 @@
             {
               "pos": 6,
               "number": "100",
-              "driver": "Leonardo Forte Vw",
+              "driver": "Leonardo Forte",
               "team": "",
               "gap": "+2.926"
             },
@@ -61715,7 +61715,7 @@
             {
               "pos": 1,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "7:40.502"
             },
@@ -61743,7 +61743,7 @@
             {
               "pos": 5,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+4.077"
             },
@@ -61785,7 +61785,7 @@
             {
               "pos": 1,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "27:47.603"
             },
@@ -61799,7 +61799,7 @@
             {
               "pos": 3,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+18.788"
             },
@@ -61862,7 +61862,7 @@
             {
               "pos": 12,
               "number": "100",
-              "driver": "Leonardo Forte Vw",
+              "driver": "Leonardo Forte",
               "team": "",
               "gap": "+73.548"
             },
@@ -74521,7 +74521,7 @@
             {
               "pos": 1,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "1:29.436"
             },
@@ -74563,7 +74563,7 @@
             {
               "pos": 7,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+0.729"
             },
@@ -74605,7 +74605,7 @@
             {
               "pos": 14,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+7.710"
             }
@@ -74626,7 +74626,7 @@
             {
               "pos": 1,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "1:28.970"
             },
@@ -74647,14 +74647,14 @@
             {
               "pos": 4,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+0.191"
             },
             {
               "pos": 5,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+0.500"
             },
@@ -74738,7 +74738,7 @@
             {
               "pos": 1,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "7:29.241"
             },
@@ -74752,7 +74752,7 @@
             {
               "pos": 3,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+3.254"
             },
@@ -74808,7 +74808,7 @@
             {
               "pos": 2,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+1.631"
             },
@@ -74857,14 +74857,14 @@
             {
               "pos": 1,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "30:32.078"
             },
             {
               "pos": 2,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+0.112"
             },
@@ -74927,7 +74927,7 @@
             {
               "pos": 12,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+38.245"
             },
@@ -75139,7 +75139,7 @@
             {
               "pos": 3,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+0.503"
             },
@@ -75153,7 +75153,7 @@
             {
               "pos": 5,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+0.996"
             },
@@ -75230,7 +75230,7 @@
             {
               "pos": 16,
               "number": "100",
-              "driver": "Leonardo Forte Vw",
+              "driver": "Leonardo Forte",
               "team": "",
               "gap": "+4.445"
             }
@@ -75286,14 +75286,14 @@
             {
               "pos": 6,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+0.525"
             },
             {
               "pos": 7,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+1.035"
             },
@@ -75335,7 +75335,7 @@
             {
               "pos": 13,
               "number": "100",
-              "driver": "Leonardo Forte Vw",
+              "driver": "Leonardo Forte",
               "team": "",
               "gap": "+2.432"
             },
@@ -75399,7 +75399,7 @@
             {
               "pos": 4,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+6.285"
             },
@@ -75413,7 +75413,7 @@
             {
               "pos": 6,
               "number": "100",
-              "driver": "Leonardo Forte Vw",
+              "driver": "Leonardo Forte",
               "team": "",
               "gap": "+50.069"
             },
@@ -75462,7 +75462,7 @@
             {
               "pos": 4,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+9.208"
             },
@@ -75525,7 +75525,7 @@
             {
               "pos": 3,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+6.929"
             },
@@ -75560,7 +75560,7 @@
             {
               "pos": 8,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+32.724"
             },
@@ -75595,7 +75595,7 @@
             {
               "pos": 13,
               "number": "100",
-              "driver": "Leonardo Forte Vw",
+              "driver": "Leonardo Forte",
               "team": "",
               "gap": "+80.642"
             },
@@ -83404,7 +83404,7 @@
             {
               "pos": 1,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "1:55.396"
             },
@@ -83460,14 +83460,14 @@
             {
               "pos": 10,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+4.904"
             },
             {
               "pos": 11,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+6.652"
             },
@@ -83502,7 +83502,7 @@
             {
               "pos": 2,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+0.007"
             },
@@ -83558,14 +83558,14 @@
             {
               "pos": 10,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+2.354"
             },
             {
               "pos": 12,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+8.280"
             }
@@ -83607,7 +83607,7 @@
             {
               "pos": 4,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+0.614"
             },
@@ -83635,7 +83635,7 @@
             {
               "pos": 8,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+2.785"
             },
@@ -83649,7 +83649,7 @@
             {
               "pos": 10,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+5.701"
             },
@@ -83747,7 +83747,7 @@
             {
               "pos": 3,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+2.213"
             },
@@ -83761,14 +83761,14 @@
             {
               "pos": 5,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+14.966"
             },
             {
               "pos": 6,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+20.577"
             }
@@ -83803,7 +83803,7 @@
             {
               "pos": 3,
               "number": "3",
-              "driver": "Mariano Werner Foton",
+              "driver": "Mariano Werner",
               "team": "",
               "gap": "+2.808"
             },
@@ -83831,14 +83831,14 @@
             {
               "pos": 8,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
+              "driver": "Diego De Carlo",
               "team": "",
               "gap": "+43.083"
             },
             {
               "pos": 9,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
+              "driver": "Gaston Mazzacane",
               "team": "",
               "gap": "+-181.469"
             },
@@ -83910,7 +83910,7 @@
             {
               "pos": 3,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+1.489"
             },
@@ -83924,7 +83924,7 @@
             {
               "pos": 5,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+2.017"
             },
@@ -84002,7 +84002,7 @@
             {
               "pos": 1,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "1:54.543"
             },
@@ -84037,7 +84037,7 @@
             {
               "pos": 6,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+2.808"
             },
@@ -84128,14 +84128,14 @@
             {
               "pos": 5,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+0.811"
             },
             {
               "pos": 6,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+1.388"
             },
@@ -84255,7 +84255,7 @@
             {
               "pos": 2,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+2.817"
             },
@@ -84339,7 +84339,7 @@
             {
               "pos": 6,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
+              "driver": "Nicanor Santilli Pazos",
               "team": "",
               "gap": "+31.447"
             },
@@ -84360,7 +84360,7 @@
             {
               "pos": 9,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
+              "driver": "Juan Pablo Alberti",
               "team": "",
               "gap": "+40.855"
             },
@@ -93429,7 +93429,7 @@
               "number": "7",
               "driver": "Dino Beganovic",
               "team": "DAMS Lucas Oil",
-              "gap": "1:3:29.190",
+              "gap": "1:03:29.190",
               "points": 25
             },
             {
@@ -93437,7 +93437,7 @@
               "number": "15",
               "driver": "Alex Dunne",
               "team": "Rodin Motorsport",
-              "gap": "+7.32",
+              "gap": "+7.320",
               "points": 19
             },
             {
@@ -93459,9 +93459,9 @@
             {
               "pos": 5,
               "number": "20",
-              "driver": "Emerson Fittipaldi",
+              "driver": "E. Fittipaldi",
               "team": "AIX Racing",
-              "gap": "+19.63",
+              "gap": "+19.630",
               "points": 10
             },
             {
@@ -93600,8 +93600,8 @@
             }
           ],
           "resultsSource": {
-            "name": "FIA Formula 2 · clasificación oficial",
-            "url": "https://www.fiaformula2.com/en/racing/2026/madrid"
+            "name": "FIA · clasificación oficial",
+            "url": "https://www.fia.com/events/formula-2-championship/season-2026/madrid/feature-race-classification"
           }
         }
       ],
@@ -103270,6 +103270,111 @@
           }
         },
         {
+          "id": "tcm-2026-9-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-09-26T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "1:40.540"
+            },
+            {
+              "pos": 2,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "+0.260"
+            },
+            {
+              "pos": 3,
+              "number": "75",
+              "driver": "Matias Frano",
+              "team": "Ford",
+              "gap": "+0.284"
+            },
+            {
+              "pos": 4,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "+0.394"
+            },
+            {
+              "pos": 5,
+              "number": "118",
+              "driver": "Fabrizio Maggini",
+              "team": "Ford",
+              "gap": "+0.826"
+            },
+            {
+              "pos": 6,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Dodge",
+              "gap": "+0.946"
+            },
+            {
+              "pos": 7,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+0.988"
+            },
+            {
+              "pos": 8,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+1.139"
+            },
+            {
+              "pos": 9,
+              "number": "121",
+              "driver": "Francisco Nonnenmacher",
+              "team": "Ford",
+              "gap": "+1.294"
+            },
+            {
+              "pos": 10,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Dodge",
+              "gap": "+1.591"
+            },
+            {
+              "pos": 11,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+1.623"
+            },
+            {
+              "pos": 12,
+              "number": "222",
+              "driver": "Marcelo Beraldi",
+              "team": "Ford",
+              "gap": "+4.589"
+            },
+            {
+              "pos": 13,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "+21.427"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/948/ver"
+          }
+        },
+        {
           "id": "tcm-2026-9-final",
           "kind": "final",
           "name": "Final",
@@ -103483,6 +103588,97 @@
           }
         },
         {
+          "id": "tcpm-2026-9-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-09-26T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "145",
+              "driver": "Iñaki Arrias",
+              "team": "Ford",
+              "gap": "1:41.022"
+            },
+            {
+              "pos": 2,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": "+0.539"
+            },
+            {
+              "pos": 3,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": "+0.619"
+            },
+            {
+              "pos": 4,
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": "+1.313"
+            },
+            {
+              "pos": 5,
+              "number": "122",
+              "driver": "Dante Rubiera Hainze",
+              "team": "Ford",
+              "gap": "+1.423"
+            },
+            {
+              "pos": 6,
+              "number": "44",
+              "driver": "Juan José Conde",
+              "team": "Chevrolet",
+              "gap": "+1.539"
+            },
+            {
+              "pos": 7,
+              "number": "199",
+              "driver": "Damián Pérez",
+              "team": "Dodge",
+              "gap": "+1.603"
+            },
+            {
+              "pos": 8,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "+1.692"
+            },
+            {
+              "pos": 9,
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": "+3.708"
+            },
+            {
+              "pos": 10,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": "+4.091"
+            },
+            {
+              "pos": 11,
+              "number": "48",
+              "driver": "Mauricio Etcheberry",
+              "team": "Chevrolet",
+              "gap": "+5.463"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/947/ver"
+          }
+        },
+        {
           "id": "tcpm-2026-9-final",
           "kind": "final",
           "name": "Final",
@@ -103601,15 +103797,15 @@
             {
               "pos": 13,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
-              "team": "",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
               "gap": "+2.552"
             },
             {
               "pos": 14,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
-              "team": "",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
               "gap": "+2.750"
             },
             {
@@ -103622,15 +103818,15 @@
             {
               "pos": 16,
               "number": "147",
-              "driver": "Marco Dianda Vw",
-              "team": "",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
               "gap": "+11.078"
             },
             {
               "pos": 17,
               "number": "3",
-              "driver": "Mariano Werner Foton",
-              "team": "",
+              "driver": "Mariano Werner",
+              "team": "Foton",
               "gap": "+11.548"
             },
             {
@@ -103678,8 +103874,8 @@
             {
               "pos": 4,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
-              "team": "",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
               "gap": "+0.513"
             },
             {
@@ -103713,15 +103909,15 @@
             {
               "pos": 9,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
-              "team": "",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
               "gap": "+1.779"
             },
             {
               "pos": 10,
               "number": "147",
-              "driver": "Marco Dianda Vw",
-              "team": "",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
               "gap": "+1.940"
             },
             {
@@ -103748,8 +103944,8 @@
             {
               "pos": 14,
               "number": "3",
-              "driver": "Mariano Werner Foton",
-              "team": "",
+              "driver": "Mariano Werner",
+              "team": "Foton",
               "gap": "+5.394"
             },
             {
@@ -103798,8 +103994,8 @@
             {
               "pos": 1,
               "number": "3",
-              "driver": "Mariano Werner Foton",
-              "team": "",
+              "driver": "Mariano Werner",
+              "team": "Foton",
               "gap": "1:39.866"
             },
             {
@@ -103826,8 +104022,8 @@
             {
               "pos": 5,
               "number": "147",
-              "driver": "Marco Dianda Vw",
-              "team": "",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
               "gap": "+1.243"
             },
             {
@@ -103868,8 +104064,8 @@
             {
               "pos": 11,
               "number": "11",
-              "driver": "Gaston Mazzacane Foton",
-              "team": "",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
               "gap": "+2.001"
             },
             {
@@ -103889,8 +104085,8 @@
             {
               "pos": 14,
               "number": "13",
-              "driver": "Diego De Carlo Vw",
-              "team": "",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
               "gap": "+4.139"
             },
             {
@@ -104000,8 +104196,8 @@
             {
               "pos": 6,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
-              "team": "",
+              "driver": "Juan Pablo Alberti",
+              "team": "Volkswagen",
               "gap": "+2.916"
             },
             {
@@ -104049,8 +104245,8 @@
             {
               "pos": 13,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
-              "team": "",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Foton",
               "gap": "+147.036"
             }
           ],
@@ -104091,8 +104287,8 @@
             {
               "pos": 4,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
-              "team": "",
+              "driver": "Juan Pablo Alberti",
+              "team": "Volkswagen",
               "gap": "+0.988"
             },
             {
@@ -104112,8 +104308,8 @@
             {
               "pos": 7,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
-              "team": "",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Foton",
               "gap": "+2.113"
             },
             {
@@ -104203,15 +104399,15 @@
             {
               "pos": 4,
               "number": "133",
-              "driver": "Juan Pablo Alberti Vw",
-              "team": "",
+              "driver": "Juan Pablo Alberti",
+              "team": "Volkswagen",
               "gap": "+0.703"
             },
             {
               "pos": 5,
               "number": "123",
-              "driver": "Santilli Pazos Nicanor Foton",
-              "team": "",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Foton",
               "gap": "+0.738"
             },
             {
@@ -109231,8 +109427,8 @@
       "eventsWithTimes": 18
     },
     "timing": {
-      "documents": 744,
-      "pagesFetched": 21,
+      "documents": 746,
+      "pagesFetched": 23,
       "eventsWithResults": 56
     },
     "openf1": {
