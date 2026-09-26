@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { breadcrumb, JsonLd } from "@/components/json-ld";
+import { AgregarCalendario } from "@/components/agregar-calendario";
 import { CalendarioPlegable } from "@/components/calendario-plegable";
 import { AutoRefresh } from "@/components/live-clock";
 import { Momento } from "@/components/momento";
@@ -230,6 +231,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
         tiemposUrl={momentoEvent?.broadcasts.find((b) => b.kind === "timing")?.url}
       />
       {(momento.modo === "en-pista" || momento.modo === "finde") && <AutoRefresh everyMs={60_000} />}
+      <AgregarCalendario kind="categoria" id={series.id} />
 
       <section className="season-ribbon category-stats">
         <div>

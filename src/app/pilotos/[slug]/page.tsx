@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
+import { AgregarCalendario } from "@/components/agregar-calendario";
 import { AutoRefresh } from "@/components/live-clock";
 import { Momento, ProximaSesion } from "@/components/momento";
 import { CategoryLabel, PhotoCredit, SectionTitle } from "@/components/pista";
@@ -80,7 +81,7 @@ function indexedSummary(entry: IndexedDriver, season: Season) {
  * "Este fin de semana en <ciudad>": cada sesión con la posición del piloto. Los resultados vienen del servidor; el navegador sólo
  * recalcula estados y horas. Un piloto sin ficha sólo lo muestra si figura en los resultados de la fecha (si no, no sabemos que corre).
  */
-function MomentoPiloto({ seriesIds, keys, season, now, confirmado }: { seriesIds: string[]; keys: string[]; season: Season; now: string; confirmado: boolean }) {
+function MomentoPiloto({ seriesIds, keys, season, now, confirmado, slug }: { seriesIds: string[]; keys: string[]; season: Season; now: string; confirmado: boolean; slug: string }) {
   const data = season.getMomentoPiloto(seriesIds, keys, now);
   if (!confirmado && !data.participa) return null;
   if (data.modo === "resultados" && !data.participa) return null;
@@ -96,6 +97,7 @@ function MomentoPiloto({ seriesIds, keys, season, now, confirmado }: { seriesIds
         tiemposUrl={event?.broadcasts.find((b) => b.kind === "timing")?.url}
       />
       {(data.modo === "en-pista" || data.modo === "finde") && <AutoRefresh everyMs={60_000} />}
+      <AgregarCalendario kind="piloto" id={slug} />
     </>
   );
 }
@@ -142,7 +144,7 @@ async function IndexedDriverPage({ slug }: { slug: string }) {
         }}
       />
 
-      <MomentoPiloto seriesIds={entry.series} keys={entry.keys ?? [entry.key]} season={season} now={getNow()} confirmado={false} />
+      <MomentoPiloto seriesIds={entry.series} keys={entry.keys ?? [entry.key]} season={season} now={getNow()} confirmado={false} slug={entry.slug} />
       <SeasonBlocks keys={entry.keys ?? [entry.key]} season={season} />
       <NotesBlock notas={await notesForDriver(entry.slug)} title={`Notas sobre ${entry.name}`} />
     </>
@@ -482,7 +484,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
         <NextRace driver={driver} now={now} season={season} />
       </section>
 
-      {driver.team && <MomentoPiloto seriesIds={[driver.seriesId]} keys={driverKeys(driver)} season={season} now={now} confirmado />}
+      {driver.team && <MomentoPiloto seriesIds={[driver.seriesId]} keys={driverKeys(driver)} season={season} now={now} confirmado slug={driver.slug} />}
 
       <section className="season-ribbon">
         {ribbon.map((item) => (
