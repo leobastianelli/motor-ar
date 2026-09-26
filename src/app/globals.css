@@ -784,3 +784,12 @@ button{color:inherit;font-family:inherit}
 @media(min-width:801px){.season-ribbon:has(>:nth-child(4):last-child){grid-template-columns:repeat(4,1fr)}}
 @media(max-width:800px){.season-ribbon:has(>:nth-child(4):last-child)>div:last-child{grid-column:auto}}
 
+/* Jerarquía (docs/plan-producto/06-jerarquia-visual.md, regla 1): el título de sección es un solo estilo en todo el sitio y bastante más
+   chico que el <h1> (64–126 px), para que se distinga de un vistazo qué es página, qué es sección y qué es contenido. */
+.section-title h2,.momento .section-title h2,.calendar-tape h2,.calendar-tape summary h2{font-size:36px;line-height:1;letter-spacing:-1px}
+@media(max-width:800px){.section-title h2,.momento .section-title h2,.calendar-tape h2,.calendar-tape summary h2{font-size:26px;letter-spacing:-.5px}}
+/* Nivel 3 nunca más grande que el nivel 2. */
+.driver-editorial aside h3{font-size:22px;line-height:1.15}
+@media(max-width:800px){.driver-editorial aside h3{font-size:19px}}
+.broadcast h3{font-size:26px}
+@media(max-width:800px){.weekend-head h1{font-size:52px}.arg-highlight h3{font-size:22px}.pole h3{font-size:24px}.broadcast h3{font-size:22px}}
