@@ -212,6 +212,8 @@ Las categorías que acompañan al TC salen del calendario de actc.org.ar (`/tcm`
 - `broadcasts` reemplaza la lista de dónde verlo.
 - Se aplica en cada carga, tanto con datos en vivo como con la instantánea. Hay que hacer commit y push para que llegue a producción.
 - **Fechas nuevas:** `newEvents` es una lista de fechas completas (mismo formato que en `season-2026.json`), para cuando ninguna fuente las publica todavía, como pasa con TC2000 en Wikipedia. Si después una fuente trae una fecha con el mismo `id`, gana la fuente. Para agregarle horarios o resultados más adelante, basta con editar esa misma entrada.
+- **Toda carga cita su fuente.** Una sesión con horario lleva `timeSources: [{ name, url }]` (url https); una sesión con `results` lleva `resultsSource: { name, url }`; una tabla en `standings` lleva `source`. `src/lib/sources/overrides.test.mjs` lo exige y falla con el id de lo que falte (las excepciones actuales, temporales, están anotadas ahí mismo). No inventar una fuente para pasar la prueba: si no hay, se anota como excepción.
+- **El guardián no pide sacar una carga que sigue haciendo falta.** `manualExpired` (`src/lib/monitor/checks.mjs`) compara, para cada evento con carga manual ya terminado, lo cargado contra la temporada que trae la fuente *sin* la carga: si la fuente ya trae la misma hora y los mismos resultados, avisa "carga manual ya cumplida: se puede sacar"; si algo sólo existe a mano (la fuente nunca lo trajo), avisa "carga manual necesaria" listando qué falta, sin pedir que se saque.
 
 ## Fotos
 

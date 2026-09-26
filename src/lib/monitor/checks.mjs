@@ -5,7 +5,7 @@
 //   · level: sube a medida que el problema se acerca o empeora (el aviso insiste más).
 // Reglas del proyecto que rigen acá: los avisos de horarios sólo salen para eventos con fecha CONFIRMADA (si la fecha no es sólida no
 // sabemos qué está pendiente), y lo argentino va primero.
-import { mergeSessionPatches } from "../sources/overrides.mjs";
+import { mergeSessionPatches, sessionKey } from "../sources/overrides.mjs";
 
 const HOUR = 3600_000;
 const DAY = 24 * HOUR;
@@ -202,14 +202,38 @@ export function staleStandings(snapshot, manual, events, { tierOf = () => 3, nam
   return out;
 }
 
-/** Cargas manuales de un evento que ya terminó hace más de 2 días: se pueden revisar o limpiar. */
-export function manualExpired(events, manual, now) {
+/**
+ * ¿Una sesión de la carga manual (`patch`) ya la trae la fuente sola (sin aplicar la carga)? Se buscan por tipo + nombre, igual que al
+ * fusionar (`sessionKey`, ver overrides.mjs). Sólo importa lo que la carga aportó: si puso hora, que la fuente tenga hora; si puso
+ * resultados, que la fuente tenga resultados.
+ */
+function manualSessionCovered(sourceEvent, patch) {
+  const src = sourceEvent?.sessions?.find((s) => sessionKey(s) === sessionKey(patch));
+  if (!src) return { covered: false, reason: `"${patch.name}"` };
+  if (patch.start && patch.timeKnown !== false && (src.timeKnown === false || !src.start)) return { covered: false, reason: `la hora de "${patch.name}"` };
+  if (patch.results?.length && !src.results?.length) return { covered: false, reason: `los resultados de "${patch.name}"` };
+  return { covered: true };
+}
+
+/**
+ * Cargas manuales (`manual.events`) de un evento que ya terminó hace más de 2 días. No alcanza con que haya terminado: hay que fijarse si
+ * la fuente (sin aplicar la carga, `sourceEvents`) ya trae todo lo que la carga puso a mano. Si sí, se puede sacar. Si la fuente nunca
+ * trajo algo (un horario o un resultado que sólo existe a mano), sacar la carga borraría ese dato: se avisa distinto, sin pedir que se
+ * saque, diciendo qué falta.
+ */
+export function manualExpired(events, sourceEvents, manual, now) {
   const nowMs = Date.parse(now);
   const out = [];
+  const sourceById = new Map(sourceEvents.map((e) => [e.id, e]));
   for (const id of Object.keys(manual.events ?? {})) {
     const e = events.find((x) => x.id === id);
-    if (e && endOfEvent(e) + 2 * DAY < nowMs) {
-      out.push({ key: `manual-vencida:${id}`, severity: "info", level: 1, tier: 3, title: `Carga manual ya cumplida: ${id}`, body: "El evento terminó hace más de 2 días. Revisar que la fuente automática tenga todo y sacar la carga de manual-overrides.json." });
+    if (!e || endOfEvent(e) + 2 * DAY >= nowMs) continue;
+    const patches = manual.events[id]?.sessions ?? [];
+    const missing = patches.map((p) => manualSessionCovered(sourceById.get(id), p)).filter((r) => !r.covered).map((r) => r.reason);
+    if (!missing.length) {
+      out.push({ key: `manual-vencida:${id}`, severity: "info", level: 1, tier: 3, title: `Carga manual ya cumplida: ${id}`, body: "El evento terminó hace más de 2 días y la fuente automática ya trae todo lo que se había cargado a mano: se puede sacar la carga de manual-overrides.json." });
+    } else {
+      out.push({ key: `manual-necesaria:${id}`, severity: "info", level: 1, tier: 3, title: `Carga manual necesaria: ${id}`, body: `La fuente todavía no trae ${missing.join(", ")}. No sacar la carga de manual-overrides.json: se perdería ese dato.` });
     }
   }
   return out;
