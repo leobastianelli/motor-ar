@@ -1,6 +1,6 @@
 import { dayKey } from "@/lib/format";
 import { SITE_URL } from "@/lib/site";
-import type { RaceEvent, Series } from "@/lib/types";
+import type { RaceEvent, Series, Session } from "@/lib/types";
 
 /** Datos estructurados (schema.org) para buscadores. El contenido se escapa para que no pueda cerrar el script. */
 export function JsonLd({ data }: { data: object }) {
@@ -39,6 +39,30 @@ export function sportsEventJsonLd(event: RaceEvent, series: Pick<Series, "name" 
     ...(competitors?.length ? { competitor: competitors, performer: competitors } : {}),
   };
 }
+
+/**
+ * `SportsEvent` de una sola sesión, para `/hoy`: la lista mezcla sesiones de fechas distintas, así que no alcanza
+ * con `sportsEventJsonLd` (que describe toda una fecha). Sin `image`/`competitor`: no hay una fecha propia de la
+ * que sacarlos sin repetir trabajo, y no son obligatorios para `SportsEvent`.
+ */
+export function sportsEventFromSession(session: Session, event: RaceEvent, series: Pick<Series, "name" | "org" | "orgUrl">) {
+  return {
+    "@type": "SportsEvent",
+    name: `${series.name} · ${session.name}`,
+    sport: "Automovilismo",
+    startDate: session.timeKnown === false ? dayKey(session.start) : session.start,
+    eventStatus: "https://schema.org/EventScheduled",
+    location: { "@type": "Place", name: event.circuit.name, address: [event.circuit.city, event.circuit.province, event.circuit.country].filter(Boolean).join(", ") },
+    organizer: { "@type": "Organization", name: series.org, ...(series.orgUrl ? { url: series.orgUrl } : {}) },
+    url: `${SITE_URL}/eventos/${event.id}`,
+  };
+}
+
+/** `ItemList` genérica de schema.org, en el orden dado (1-based). */
+export const itemListJsonLd = (items: object[]) => ({
+  "@type": "ItemList",
+  itemListElement: items.map((item, i) => ({ "@type": "ListItem", position: i + 1, item })),
+});
 
 /** Migas de pan: [["Inicio", "/"], ["Pilotos", "/pilotos"], ...]. */
 export const breadcrumb = (items: [string, string][]) => ({

@@ -46,6 +46,8 @@ export function getMenu(notes: Nota[]): MenuItem[] {
   const seriesById = new Map(series.map((s) => [s.id, s]));
 
   return [
+    // Sin `groups`: es un enlace directo, sin desplegable, para que se vea en el celular sin abrir nada.
+    { href: "/hoy", label: "Hoy", groups: [] },
     {
       href: "/",
       label: "Este finde",
