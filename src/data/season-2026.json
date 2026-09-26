@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T14:11:54.364Z",
+  "generatedAt": "2026-09-26T14:54:57.245Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -103047,6 +103047,170 @@
       "source": "Jolpica-F1"
     },
     {
+      "id": "tcpk-2026-8",
+      "seriesId": "tc-pick-up",
+      "round": 8,
+      "name": "Fecha 8 · Balcarce",
+      "circuit": {
+        "name": "Juan Manuel Fangio-BALCARCE",
+        "city": "Balcarce",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcpk-2026-8-1-entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-09-26T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Ford",
+              "gap": "1:41.098"
+            },
+            {
+              "pos": 2,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Toyota",
+              "gap": "+0.554"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": "+0.934"
+            },
+            {
+              "pos": 4,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": "+1.013"
+            },
+            {
+              "pos": 5,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": "+1.054"
+            },
+            {
+              "pos": 6,
+              "number": "112",
+              "driver": "Lucas Valle",
+              "team": "Toyota",
+              "gap": "+1.290"
+            },
+            {
+              "pos": 7,
+              "number": "107",
+              "driver": "Tobías Martínez",
+              "team": "Chevrolet",
+              "gap": "+1.468"
+            },
+            {
+              "pos": 8,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": "+1.583"
+            },
+            {
+              "pos": 9,
+              "number": "214",
+              "driver": "Santiago Mangoni",
+              "team": "Chevrolet",
+              "gap": "+1.768"
+            },
+            {
+              "pos": 10,
+              "number": "115",
+              "driver": "Diego Ciantini",
+              "team": "Ford",
+              "gap": "+1.809"
+            },
+            {
+              "pos": 11,
+              "number": "126",
+              "driver": "Thomas Ricciardi",
+              "team": "Ford",
+              "gap": "+1.886"
+            },
+            {
+              "pos": 12,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Toyota",
+              "gap": "+2.442"
+            },
+            {
+              "pos": 13,
+              "number": "11",
+              "driver": "Gaston Mazzacane Foton",
+              "team": "",
+              "gap": "+2.552"
+            },
+            {
+              "pos": 14,
+              "number": "13",
+              "driver": "Diego De Carlo Vw",
+              "team": "",
+              "gap": "+2.750"
+            },
+            {
+              "pos": 15,
+              "number": "77",
+              "driver": "Jose Ciantini",
+              "team": "Toyota",
+              "gap": "+4.452"
+            },
+            {
+              "pos": 16,
+              "number": "147",
+              "driver": "Marco Dianda Vw",
+              "team": "",
+              "gap": "+11.078"
+            },
+            {
+              "pos": 17,
+              "number": "3",
+              "driver": "Mariano Werner Foton",
+              "team": "",
+              "gap": "+11.548"
+            },
+            {
+              "pos": 18,
+              "number": "121",
+              "driver": "Omar Martinez",
+              "team": "Toyota",
+              "gap": "+14.914"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/926/ver"
+          }
+        },
+        {
+          "id": "tcpk-2026-8-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-09-27T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 35
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tcppk-2026-8",
       "seriesId": "tc-pista-pick-up",
       "round": 8,
@@ -103219,30 +103383,6 @@
           "start": "2026-09-27T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 30
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tcpk-2026-8",
-      "seriesId": "tc-pick-up",
-      "round": 8,
-      "name": "Fecha 8 · Balcarce",
-      "circuit": {
-        "name": "Juan Manuel Fangio-BALCARCE",
-        "city": "Balcarce",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcpk-2026-8-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-09-27T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 35
         }
       ],
       "source": "ACTC (calendario)"
@@ -108189,9 +108329,9 @@
       "eventsWithTimes": 18
     },
     "timing": {
-      "documents": 722,
-      "pagesFetched": 12,
-      "eventsWithResults": 53
+      "documents": 724,
+      "pagesFetched": 13,
+      "eventsWithResults": 54
     },
     "openf1": {
       "sessions": 131,
