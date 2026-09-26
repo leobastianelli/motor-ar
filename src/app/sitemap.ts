@@ -32,6 +32,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const drivers = new Set([...getAllDrivers().map((d) => d.slug), ...getIndexedDrivers().map((d) => d.slug)]);
   return [
     page("/", "hourly", 1, seasonDate),
+    page("/hoy", "hourly", 0.9, seasonDate),
     page("/calendario", "daily", 0.9, seasonDate),
     page("/horarios", "daily", 0.9, seasonDate),
     ...allHorarioSlugs().map((slug) => page(`/horarios/${slug}`, "hourly", 0.9, seasonDate)),

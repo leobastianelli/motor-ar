@@ -26,7 +26,7 @@ function hayHoy(m, now) {
 }
 
 /** La primera variante que entra en el largo; si ninguna, la más corta. Las variantes van de la más completa a la más corta. */
-function elegir(variantes, max = TITULO_MAX) {
+export function elegir(variantes, max = TITULO_MAX) {
   const unicas = [...new Set(variantes.filter(Boolean))];
   return unicas.find((t) => t.length <= max) ?? unicas.at(-1);
 }
@@ -120,7 +120,7 @@ export function tituloPiloto(name, year, m, now, corre) {
 // ---- Descripciones ----
 
 /** Une oraciones mientras entren en el largo. La primera siempre va. */
-function juntar(oraciones, max = DESCRIPCION_MAX) {
+export function juntar(oraciones, max = DESCRIPCION_MAX) {
   let out = "";
   for (const o of oraciones.filter(Boolean)) {
     const next = out ? `${out} ${o}` : o;

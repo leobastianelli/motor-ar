@@ -5,6 +5,7 @@ import history from "@/data/history.json";
 import driverIndex from "@/data/drivers-2026.json";
 import manualOverrides from "@/data/manual-overrides.json";
 import { driverKey } from "./sources/driver-index.mjs";
+import { diaDeHoy } from "./hoy.mjs";
 import { momentoDeCategoria, momentoDeEvento, momentoDePiloto } from "./momento.mjs";
 import { mergeSessionPatches } from "./sources/overrides.mjs";
 import { series, seriesById } from "@/data/series";
@@ -408,6 +409,12 @@ export function createSeason(raw: RawSeason) {
       const days = [...new Set(items.map((i) => dayKey(i.session.start)))].map((key) => ({ key, iso: `${key}T12:00:00-03:00` }));
       return { items, days, firstDay, to: new Date(end).toISOString() };
     },
+
+    /**
+     * Qué corre hoy (día calendario argentino), de todas las categorías: ver src/lib/hoy.mjs. Si hoy no hay nada,
+     * trae el próximo día con actividad. A diferencia de `getAgenda`, incluye también lo que ya terminó hoy.
+     */
+    getToday: (now: string) => diaDeHoy(itemsAt(now), now),
 
     /** Lo que está en pista ahora. Si hay varias cosas a la vez, primero la categoría argentina, después la internacional con argentinos y al final el resto; dentro de cada nivel, la que arrancó antes. */
     getLiveItems: (now: string) =>
