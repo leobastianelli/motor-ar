@@ -66,12 +66,13 @@ test("una sola sesión de ese tipo: el borrador sigue usando el rótulo genéric
   assert.match(d.text, /^🏁 F1 · GP de Malasia\. Clasificación: pole de George Russell;/);
 });
 
-test("carrera repetida en la misma fecha (Carrera principal y Carrera principal 2): usa el nombre de cada una", () => {
+test("carrera repetida en la misma fecha (Carrera principal y Carrera principal 2): la primera se distingue como 'Carrera principal 1', sin tocar el name guardado", () => {
   const r1 = session({ id: "f2-16-r1", kind: "carrera", name: "Carrera principal", results: podium });
   const r2 = session({ id: "f2-16-r2", kind: "carrera", name: "Carrera principal 2", results: podium });
   const [d1, d2] = run([event({ seriesId: "f2", sessions: [r1, r2] })], AFTER_QUALI);
-  assert.match(d1.text, /^🏁 F2 · GP de Malasia\. Carrera principal: ganó George Russell;/);
+  assert.match(d1.text, /^🏁 F2 · GP de Malasia\. Carrera principal 1: ganó George Russell;/);
   assert.match(d2.text, /^🏁 F2 · GP de Malasia\. Carrera principal 2: ganó George Russell;/);
+  assert.equal(r1.name, "Carrera principal");
 });
 
 test("un argentino que no terminó la carrera se cuenta como abandono, no como posición", () => {

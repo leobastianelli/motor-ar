@@ -143,6 +143,18 @@ export function momentoDeEvento(event, now, { argentineSlugs = [], failures = []
 /** Estado de una sesión del momento a la hora `now`, con el mismo criterio que el servidor (para el navegador). */
 export const estadoDeSesion = (s, now) => ESTADO[sessionStatus({ start: s.start, durationMin: s.durationMin, timeKnown: s.timeKnown, hasResults: s.hasResults }, now)];
 
+/**
+ * Nombre de una sesión tal como se muestra (no el `name` guardado). Cuando una fecha tiene dos carreras principales
+ * (F2 en Baku 2026: "Carrera principal" y "Carrera principal 2"), la primera se ve como "Carrera principal 1" para que
+ * se distinga de la segunda. Sólo cambia lo que se muestra: el `name` y el `id` guardados no se tocan (de eso depende
+ * el emparejamiento de la carga manual y de `guard.mjs`).
+ */
+export function nombreVisibleSesion(session, sesionesDeLaFecha) {
+  const name = session.name;
+  const tieneSegunda = (sesionesDeLaFecha ?? []).some((s) => s.name === `${name} 2`);
+  return tieneSegunda ? `${name} 1` : name;
+}
+
 /** La fila de un piloto en una tabla: en las tripulaciones ("A / B / C") alcanza con que esté uno de ellos. */
 function filaDe(results, keys) {
   const r = (results ?? []).find((x) => x.driver.split(" / ").some((p) => keys.has(driverKey(p))));

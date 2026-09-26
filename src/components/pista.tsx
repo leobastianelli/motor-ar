@@ -80,16 +80,19 @@ export function SectionTitle({
   id,
   title,
   inverse = false,
+  as: Tag = "h2",
   children,
 }: {
   id?: string;
   title: ReactNode;
   inverse?: boolean;
+  /** "h1" cuando este título es el encabezado principal de la página (p. ej. /notas); visualmente es igual al h2 de siempre. */
+  as?: "h1" | "h2";
   children?: ReactNode;
 }) {
   return (
     <header className={`section-title${inverse ? " inverse" : ""}`}>
-      <h2 id={id}>{title}</h2>
+      <Tag id={id}>{title}</Tag>
       {children}
     </header>
   );

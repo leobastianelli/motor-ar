@@ -73,6 +73,20 @@ test("el título para buscadores nombra la categoría sin tocar el titular visib
   assert.equal(m.seoTitle, "Fórmula 2 en Baku: Kimi Antonelli fue el más rápido en la práctica 2");
 });
 
+test("dos carreras principales en la misma fecha (F2): la crónica distingue la primera como 'Carrera principal 1', sin tocar el name guardado", () => {
+  const r1 = session("carrera", "carrera", "Carrera principal", "2026-09-26T11:00:00Z", [row(1, "George Russell", ""), row(2, "Kimi Antonelli", "+0.5"), row(3, "Max Verstappen", "+0.8")]);
+  const r2Sesion = session("carrera-2", "carrera", "Carrera principal 2", "2026-09-27T11:00:00Z");
+  const eventoTrasR1 = { ...baku, id: "f2-2026-15", seriesId: "f2", sessions: [r1, r2Sesion] };
+  const [prev] = autoNotes([eventoTrasR1], { ...opts, now: "2026-09-26T13:00:00Z" });
+  assert.match(prev.summary, /Carrera principal 1: 1\.º George Russell/);
+  assert.equal(r1.name, "Carrera principal");
+
+  const r2 = { ...r2Sesion, results: [row(1, "Max Verstappen", ""), row(2, "George Russell", "+0.3"), row(3, "Kimi Antonelli", "+0.6")] };
+  const eventoCompleto = { ...baku, id: "f2-2026-15", seriesId: "f2", sessions: [r1, r2] };
+  const [n] = autoNotes([eventoCompleto], { ...opts, now: "2026-09-27T15:00:00Z" });
+  assert.match(n.title, /carrera principal 2/);
+});
+
 test("crónica nacional: el lugar, sin el número de fecha", () => {
   const tn = { ...baku, id: "tn-2026-9", seriesId: "tn", name: "Fecha 9 · Rio Cuarto" };
   const [n] = autoNotes([tn], { ...opts, seriesName: () => ({ name: "TN APAT", short: "TN" }) });

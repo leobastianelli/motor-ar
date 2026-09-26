@@ -3,7 +3,7 @@
 import Link from "next/link";
 import type { Season } from "@/lib/data";
 import { capitalize, fmtDayLong, fmtDayShort, fmtTime, relative, surname, type StateKind } from "@/lib/format";
-import { estadoDeSesion } from "@/lib/momento.mjs";
+import { estadoDeSesion, nombreVisibleSesion } from "@/lib/momento.mjs";
 import type { Broadcast } from "@/lib/types";
 import { useNow } from "./live-clock";
 import { SectionTitle, StateTag } from "./pista";
@@ -141,7 +141,7 @@ function Finde({ data, fecha, now, broadcasts, tiemposUrl, piloto }: { data: Mom
               </time>
             </span>
             <span className="momento-what">
-              <strong>{s.name}</strong>
+              <strong>{nombreVisibleSesion(s, data.sesiones)}</strong>
               <span>
                 {v.estado === "terminada" && <Terminada s={s} piloto={piloto} fechaId={fecha.id} />}
                 {v.estado === "en-vivo" && (
@@ -249,7 +249,7 @@ function Ahora({ data, now, tiemposUrl }: { data: MomentoData; now: string; tiem
         {live && (
           <p className="momento-linea is-live">
             <b>En vivo</b>
-            <strong>{live.s.name}</strong>
+            <strong>{nombreVisibleSesion(live.s, data.sesiones)}</strong>
             {" · "}
             {tiemposUrl ? <a href="#tiempos-en-vivo">Tiempos en vivo</a> : "En pista ahora"}
           </p>
@@ -257,7 +257,7 @@ function Ahora({ data, now, tiemposUrl }: { data: MomentoData; now: string; tiem
         {next && (
           <p className="momento-linea">
             <b>Próxima</b>
-            <strong>{next.s.name}</strong>
+            <strong>{nombreVisibleSesion(next.s, data.sesiones)}</strong>
             {" · "}
             {next.s.timeKnown ? (
               <>
@@ -273,7 +273,7 @@ function Ahora({ data, now, tiemposUrl }: { data: MomentoData; now: string; tiem
         )}
         {last && (
           <div className="momento-linea momento-ultimo">
-            <b>Último resultado · {last.s.name}</b>
+            <b>Último resultado · {nombreVisibleSesion(last.s, data.sesiones)}</b>
             {last.s.hasResults ? (
               <>
                 <span>
@@ -296,7 +296,7 @@ function Ahora({ data, now, tiemposUrl }: { data: MomentoData; now: string; tiem
             )}
             {sinResultados && (
               <small className="momento-faltan">
-                {sinResultados.s.name}: {(sinResultados.s.motivo ?? "resultados todavía no publicados").replace(/^./, (m) => m.toLowerCase())}
+                {nombreVisibleSesion(sinResultados.s, data.sesiones)}: {(sinResultados.s.motivo ?? "resultados todavía no publicados").replace(/^./, (m) => m.toLowerCase())}
               </small>
             )}
           </div>
@@ -416,7 +416,7 @@ export function ProximaSesion({ data, now: serverNow, simulated }: { data: Momen
     return (
       <div className="next-race is-live">
         <span>EN VIVO ahora</span>
-        <strong>{enVivo.name}</strong>
+        <strong>{nombreVisibleSesion(enVivo, sesiones)}</strong>
         <time dateTime={enVivo.start}>{placeName(fecha)}</time>
         <Link href={`/eventos/${fecha.id}`}>Ver evento</Link>
       </div>
@@ -426,7 +426,7 @@ export function ProximaSesion({ data, now: serverNow, simulated }: { data: Momen
     return (
       <div className="next-race">
         <span>Próxima sesión</span>
-        <strong>{next.name}</strong>
+        <strong>{nombreVisibleSesion(next, sesiones)}</strong>
         <time dateTime={next.start}>
           {fmtDayShort(next.start)} · {next.timeKnown ? fmtTime(next.start) : "horario a confirmar"}
         </time>

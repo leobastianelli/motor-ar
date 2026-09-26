@@ -10,6 +10,7 @@ import { VideoSesion } from "@/components/video-sesion";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { getNow, getSeason, getSeries, isSimulatedNow } from "@/lib/data";
+import { nombreVisibleSesion } from "@/lib/momento.mjs";
 import { noResultsReason } from "@/lib/salud-core.mjs";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtRange, fmtWeekday, raceWinner, sessionState, sessionStatus, sessionTime } from "@/lib/format";
 import { descripcionMomento, tituloEvento } from "@/lib/seo-titulos.mjs";
@@ -206,7 +207,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                         <div key={s.id} className={`session${status === "live" ? " live-session" : ""}${status === "done" ? " done" : ""}`}>
                           <time dateTime={s.start}>{sessionTime(s)}</time>
                           <div>
-                            <strong>{s.name}</strong>
+                            <strong>{nombreVisibleSesion(s, event.sessions)}</strong>
                             <span>
                               {status === "live" && "En curso"}
                               {status === "upcoming" &&
@@ -305,7 +306,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
       {latest && rows.length > 0 && (
         <section className="classification-wrap" id="resultados">
           <div className="section-block">
-            <SectionTitle title={latest.name} inverse>
+            <SectionTitle title={nombreVisibleSesion(latest, event.sessions)} inverse>
               <time dateTime={latest.start}>{fmtDayShort(latest.start)}</time>
             </SectionTitle>
             <ArgentinosLinea rows={argentinosDe(latest)} />
@@ -313,8 +314,8 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
               {latestResumen && (
                 <VideoSesion
                   videoId={latestResumen.id}
-                  title={`Resumen · ${latest.name}${latestResumen.label ? ` · ${latestResumen.label}` : ""}`}
-                  ariaLabel={`Ver el resumen de ${latest.name} en YouTube`}
+                  title={`Resumen · ${nombreVisibleSesion(latest, event.sessions)}${latestResumen.label ? ` · ${latestResumen.label}` : ""}`}
+                  ariaLabel={`Ver el resumen de ${nombreVisibleSesion(latest, event.sessions)} en YouTube`}
                   liveUrl={latestTransmision ? `https://www.youtube.com/watch?v=${latestTransmision.id}` : undefined}
                 />
               )}
@@ -385,15 +386,15 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                     return (
                       <details key={s.id} id={s.id} className="full-results">
                         <summary>
-                          <strong>{s.name}</strong> · {fmtDayShort(s.start)} · 1.º {s.results![0].driver}
+                          <strong>{nombreVisibleSesion(s, event.sessions)}</strong> · {fmtDayShort(s.start)} · 1.º {s.results![0].driver}
                           <span>{s.results!.length === 1 ? "Solo el 1.º" : `${s.results!.length} pilotos`}</span>
                           <ArgentinosLinea rows={argentinosDe(s)} small />
                         </summary>
                         {resumen && (
                           <VideoSesion
                             videoId={resumen.id}
-                            title={`Resumen · ${s.name}${resumen.label ? ` · ${resumen.label}` : ""}`}
-                            ariaLabel={`Ver el resumen de ${s.name} en YouTube`}
+                            title={`Resumen · ${nombreVisibleSesion(s, event.sessions)}${resumen.label ? ` · ${resumen.label}` : ""}`}
+                            ariaLabel={`Ver el resumen de ${nombreVisibleSesion(s, event.sessions)} en YouTube`}
                             liveUrl={transmision ? `https://www.youtube.com/watch?v=${transmision.id}` : undefined}
                           />
                         )}
@@ -418,7 +419,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
               return (
                 <Link key={e.id} href={`/eventos/${e.id}`} className="next-card list-link" style={{ "--cat": s.color } as CSSProperties}>
                   <CategoryLabel series={s} />
-                  <strong>{winner ? `${finished!.name}: ganó ${winner.driver}` : finished ? `${finished.name}: terminó` : `Fecha ${e.round}`}</strong>
+                  <strong>{winner ? `${nombreVisibleSesion(finished!, e.sessions)}: ganó ${winner.driver}` : finished ? `${nombreVisibleSesion(finished, e.sessions)}: terminó` : `Fecha ${e.round}`}</strong>
                   <time dateTime={e.sessions.at(-1)!.start}>
                     {fmtDayShort(e.sessions.at(-1)!.start)} · {e.sessions.length} {e.sessions.length === 1 ? "sesión" : "sesiones"}
                   </time>
