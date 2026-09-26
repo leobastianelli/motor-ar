@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T14:24:06.233Z",
+  "generatedAt": "2026-09-26T08:21:29.292Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -101438,105 +101438,189 @@
           "results": [
             {
               "pos": 1,
+              "number": "7",
               "driver": "Dino Beganovic",
-              "team": "DAMS Lucas Oil"
+              "team": "DAMS Lucas Oil",
+              "gap": "45:48.207",
+              "points": 10
             },
             {
               "pos": 2,
+              "number": "24",
               "driver": "Laurens van Hoepen",
-              "team": "Trident"
+              "team": "Trident",
+              "gap": "+1.058",
+              "points": 8
             },
             {
               "pos": 3,
+              "number": "15",
               "driver": "Alex Dunne",
-              "team": "Rodin Motorsport"
+              "team": "Rodin Motorsport",
+              "gap": "+1.476",
+              "points": 7
             },
             {
               "pos": 4,
+              "number": "14",
               "driver": "Martinius Stenshorne",
-              "team": "Rodin Motorsport"
+              "team": "Rodin Motorsport",
+              "gap": "+1.920",
+              "points": 5
             },
             {
               "pos": 5,
+              "number": "6",
               "driver": "Nikola Tsolov",
-              "team": "Campos Racing"
+              "team": "Campos Racing",
+              "gap": "+3.341",
+              "points": 4
             },
             {
               "pos": 6,
+              "number": "8",
               "driver": "Roman Bilinski",
-              "team": "DAMS Lucas Oil"
+              "team": "DAMS Lucas Oil",
+              "gap": "+4.006",
+              "points": 3
             },
             {
               "pos": 7,
+              "number": "11",
               "driver": "Sebastián Montoya",
-              "team": "Prema Racing"
+              "team": "PREMA Racing",
+              "gap": "+4.160",
+              "points": 2
             },
             {
               "pos": 8,
+              "number": "16",
               "driver": "Kush Maini",
-              "team": "ART Grand Prix"
+              "team": "ART Grand Prix",
+              "gap": "+5.698",
+              "points": 1
             },
             {
               "pos": 9,
+              "number": "4",
               "driver": "Colton Herta",
-              "team": "Hitech"
+              "team": "Hitech",
+              "gap": "+6.555",
+              "points": 0
             },
             {
               "pos": 10,
+              "number": "25",
               "driver": "John Bennett",
-              "team": "Trident"
+              "team": "Trident",
+              "gap": "+8.327",
+              "points": 0
             },
             {
               "pos": 11,
+              "number": "17",
               "driver": "Tasanapol Inthraphuvasak",
-              "team": "ART Grand Prix"
+              "team": "ART Grand Prix",
+              "gap": "+8.359",
+              "points": 0
             },
             {
               "pos": 12,
+              "number": "21",
               "driver": "Cian Shields",
-              "team": "AIX Racing"
+              "team": "AIX Racing",
+              "gap": "+9.297",
+              "points": 0
             },
             {
               "pos": 13,
+              "number": "23",
               "driver": "Rafael Villagómez",
-              "team": "Van Amersfoort Racing"
+              "team": "Van Amersfoort Racing",
+              "gap": "+13.151",
+              "points": 0
             },
             {
               "pos": 14,
+              "number": "9",
               "driver": "Gabriele Minì",
-              "team": "MP Motorsport"
+              "team": "MP Motorsport",
+              "gap": "+18.600",
+              "points": 0
             },
             {
               "pos": 15,
-              "driver": "Rafael Câmara",
-              "team": "Invicta Racing"
+              "number": "10",
+              "driver": "Oliver Goethe",
+              "team": "MP Motorsport",
+              "gap": "+24.774",
+              "points": 0
             },
             {
               "pos": 16,
-              "driver": "Oliver Goethe",
-              "team": "MP Motorsport"
+              "number": "1",
+              "driver": "Rafael Câmara",
+              "team": "Invicta Racing",
+              "gap": "+26.204",
+              "points": 0
             },
             {
               "pos": 17,
+              "number": "22",
               "driver": "Hiyu Yamakoshi",
-              "team": "Van Amersfoort Racing"
+              "team": "Van Amersfoort Racing",
+              "gap": "+47.348",
+              "points": 0
             },
             {
               "pos": 18,
-              "driver": "Emerson Fittipaldi Jr.",
-              "team": "AIX Racing"
+              "number": "20",
+              "driver": "E. Fittipaldi",
+              "team": "AIX Racing",
+              "gap": "+52.610",
+              "points": 0
             },
             {
               "pos": 19,
+              "number": "3",
               "driver": "Ritomo Miyata",
-              "team": "Hitech"
+              "team": "Hitech",
+              "gap": "+DNF",
+              "points": 0
             },
             {
               "pos": 20,
+              "number": "5",
               "driver": "Noel León",
-              "team": "Campos Racing"
+              "team": "Campos Racing",
+              "gap": "+DNF",
+              "points": 0
+            },
+            {
+              "pos": 21,
+              "positionText": "NC",
+              "number": "12",
+              "driver": "Mari Boya",
+              "team": "PREMA Racing",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 22,
+              "positionText": "NC",
+              "number": "2",
+              "driver": "Joshua Dürksen",
+              "team": "Invicta Racing",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
             }
-          ]
+          ],
+          "resultsSource": {
+            "name": "FIA · clasificación oficial",
+            "url": "https://www.fia.com/events/formula-2-championship/season-2026/baku/sprint-race-classification"
+          }
         },
         {
           "id": "f2-2026-12-carrera",
@@ -104063,43 +104147,43 @@
         "pos": 1,
         "driver": "Rafael Câmara",
         "team": "Invicta Racing",
-        "points": 182
+        "points": 207
       },
       {
         "pos": 2,
         "driver": "Nikola Tsolov",
         "team": "Campos Racing",
-        "points": 181
+        "points": 200
       },
       {
         "pos": 3,
         "driver": "Alex Dunne",
         "team": "Rodin Motorsport",
-        "points": 174
+        "points": 189
       },
       {
         "pos": 4,
         "driver": "Gabriele Minì",
         "team": "MP Motorsport",
-        "points": 161
+        "points": 163
       },
       {
         "pos": 5,
         "driver": "Dino Beganovic",
         "team": "DAMS Lucas Oil",
-        "points": 131
+        "points": 137
       },
       {
         "pos": 6,
         "driver": "Noel León",
         "team": "Campos Racing",
-        "points": 129
+        "points": 133
       },
       {
         "pos": 7,
         "driver": "Martinius Stenshorne",
         "team": "Rodin Motorsport",
-        "points": 95
+        "points": 107
       },
       {
         "pos": 8,
@@ -104117,7 +104201,7 @@
         "pos": 10,
         "driver": "Laurens van Hoepen",
         "team": "Trident",
-        "points": 80
+        "points": 90
       },
       {
         "pos": 11,
@@ -104153,7 +104237,7 @@
         "pos": 16,
         "driver": "Roman Bilinski",
         "team": "DAMS Lucas Oil",
-        "points": 35
+        "points": 36
       },
       {
         "pos": 17,
@@ -104175,15 +104259,15 @@
       },
       {
         "pos": 20,
-        "driver": "Nico Varrone",
-        "team": "Van Amersfoort Racing",
-        "points": 15
+        "driver": "Mari Boya",
+        "team": "Prema Racing",
+        "points": 21
       },
       {
         "pos": 21,
-        "driver": "Mari Boya",
-        "team": "Prema Racing",
-        "points": 13
+        "driver": "Nico Varrone",
+        "team": "Van Amersfoort Racing",
+        "points": 15
       },
       {
         "pos": 22,
@@ -107502,5 +107586,7 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "Se descartaron resultados de 1 sesiones que todavía no se corrieron (eran de otra fecha)"
+  ]
 }
