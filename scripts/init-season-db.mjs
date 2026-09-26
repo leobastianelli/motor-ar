@@ -2,6 +2,7 @@
 // Se corre a mano contra la base de Neon: `npm run db:season:init` (o con DATABASE_URL en el entorno). Se puede repetir sin duplicar la siembra.
 import { readFileSync } from "node:fs";
 import { neon } from "@neondatabase/serverless";
+import { encodeBody } from "../src/lib/season-body.mjs";
 import { summarize } from "../src/lib/season-store-core.mjs";
 
 const url = process.env.DATABASE_URL;
@@ -25,6 +26,10 @@ await sql`
 await sql`ALTER TABLE season_versions DROP CONSTRAINT IF EXISTS season_versions_parent_id_fkey`;
 await sql`ALTER TABLE season_versions ADD CONSTRAINT season_versions_parent_id_fkey FOREIGN KEY (parent_id) REFERENCES season_versions(id) ON DELETE SET NULL`;
 
+// Cuerpo comprimido (ver src/lib/season-body.mjs): las versiones nuevas guardan sólo `body_br`; `body` queda para las viejas.
+await sql`ALTER TABLE season_versions ADD COLUMN IF NOT EXISTS body_br TEXT`;
+await sql`ALTER TABLE season_versions ALTER COLUMN body DROP NOT NULL`;
+
 // Candado del refresco caliente (una fila): impide que varias instancias del sitio lo corran a la vez. Ver src/lib/hot-refresh.ts.
 await sql`CREATE TABLE IF NOT EXISTS hot_lock (id INTEGER PRIMARY KEY, at TIMESTAMPTZ NOT NULL)`;
 await sql`INSERT INTO hot_lock (id, at) VALUES (1, 'epoch') ON CONFLICT (id) DO NOTHING`;
@@ -43,8 +48,8 @@ if (n === 0) {
   const raw = JSON.parse(body);
   // El WHERE NOT EXISTS evita duplicar la siembra si dos corridas se pisan.
   const inserted = await sql`
-    INSERT INTO season_versions (origin, generated_at, summary, body)
-    SELECT 'seed', ${raw.generatedAt}::timestamptz, ${JSON.stringify(summarize(raw))}::jsonb, ${body}
+    INSERT INTO season_versions (origin, generated_at, summary, body_br, body)
+    SELECT 'seed', ${raw.generatedAt}::timestamptz, ${JSON.stringify(summarize(raw))}::jsonb, ${encodeBody(body)}, ${body}
     WHERE NOT EXISTS (SELECT 1 FROM season_versions)
     RETURNING id
   `;

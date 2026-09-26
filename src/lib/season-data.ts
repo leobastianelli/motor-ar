@@ -1,6 +1,10 @@
+import { readFile, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { unstable_cache } from "next/cache";
 import snapshot from "@/data/season-2026.json";
 import { sql } from "./db";
+import { decodeBody } from "./season-body.mjs";
 import { createReader } from "./season-store-core.mjs";
 
 /** De dónde salió la temporada que se está mostrando (la etapa 03 lo hace visible). */
@@ -46,11 +50,28 @@ const latest = unstable_cache(
   { tags: ["season"] },
 );
 
-// Consulta pesada (unos 3 MB): sin envolver. El lector la repite sólo cuando cambia el id de versión.
-async function body(id: number): Promise<string> {
-  const rows = (await sql()`SELECT body FROM season_versions WHERE id = ${id}`) as unknown as { body: string }[];
+// Consulta pesada (~140 KB comprimida; ~1,5 MB en versiones viejas sin comprimir): sin envolver. El lector la repite sólo cuando cambia el id.
+async function fetchBody(id: number): Promise<string> {
+  const rows = (await sql()`SELECT body_br, CASE WHEN body_br IS NULL THEN body END AS body FROM season_versions WHERE id = ${id}`) as unknown as {
+    body_br: string | null;
+    body: string | null;
+  }[];
   if (!rows[0]) throw new Error(`La versión ${id} no existe`);
-  return rows[0].body;
+  return decodeBody(rows[0]);
+}
+
+// En `next build` cada proceso que arma páginas (~15) tiene su propio memo: sin esto, cada compilación bajaba la temporada 15 veces. Se comparte
+// con un archivo temporal por id de versión (las versiones son inmutables: un archivo con ese id nunca queda viejo).
+async function body(id: number): Promise<string> {
+  if (process.env.NEXT_PHASE !== "phase-production-build") return fetchBody(id);
+  const file = join(tmpdir(), `fierros-temporada-v${id}.json`);
+  try {
+    return await readFile(file, "utf8");
+  } catch {
+    const text = await fetchBody(id);
+    await writeFile(file, text).catch(() => {});
+    return text;
+  }
 }
 
 const noStore = async (): Promise<null> => {
