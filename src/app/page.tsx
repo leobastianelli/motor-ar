@@ -27,6 +27,9 @@ const ORDER: Record<HomeMode, SectionId[]> = {
 // Acceso directo a cada categoría: mucha gente entra buscando una en particular. Primero las más buscadas.
 const JUMP = ["f1", "tc", "tc2000", "tn", "tc-pista", "f2", "gt3", "tc-mouras", "tc-pick-up"];
 
+// Carreras y finales pesan como tarjeta completa (podio); clasificaciones, sprints y entrenamientos, una línea compacta.
+const RACE_KINDS = new Set(["final", "carrera", "sprint"]);
+
 const liveEnd = (s: { start: string; durationMin: number }) => new Date(ms(s.start) + s.durationMin * 60000).toISOString();
 
 export default async function Home() {
@@ -54,7 +57,8 @@ export default async function Home() {
     }))
     .sort(byAppearance);
 
-  const justFinished = season.getJustFinished(now).slice(0, 6);
+  // Como máximo 4: "Recién terminó" tiene que caber en la primera pantalla, no listar todo lo del día.
+  const justFinished = season.getJustFinished(now).slice(0, 4);
   const argentineSlugs = new Set(getDriversAbroad().map((d) => d.slug));
   const latest = season.getRecentResults(now)[0];
   const podium = season.getRecentResults(now, "nacional")[0];
@@ -142,7 +146,7 @@ export default async function Home() {
           <CatMark series={live.series} />
           <div>
             <CategoryLabel series={live.series} detail={live.event.circuit.city} href={`/categorias/${live.series.id}`} />
-            <h2>{live.session.name}</h2>
+            <h3>{live.session.name}</h3>
             <p className="lap">
               Faltan <MinutesLeft endsAt={liveEnd(live.session)} serverNow={now} simulated={simulated} /> min <span>largó {fmtTime(live.session.start)}</span>
             </p>
@@ -157,17 +161,13 @@ export default async function Home() {
                 <span>{r.gap}</span>
               </li>
             ))
-          ) : (
+          ) : timingUrl ? (
             <li>
-              {timingUrl ? (
-                <Link href={`/eventos/${live.event.id}#tiempos-en-vivo`}>
-                  <StateTag kind="live">Ver los tiempos en vivo →</StateTag>
-                </Link>
-              ) : (
-                <StateTag kind="no-data">Sin tiempos en vivo</StateTag>
-              )}
+              <Link href={`/eventos/${live.event.id}#tiempos-en-vivo`}>
+                <StateTag kind="live">Ver los tiempos en vivo →</StateTag>
+              </Link>
             </li>
-          )}
+          ) : null}
         </ol>
         <div className="watch">
           <span>Se ve por</span>
@@ -231,9 +231,41 @@ export default async function Home() {
           </SectionTitle>
           <div className="recent-grid">
             {justFinished.map((i) => {
-              const ours = (i.session.results ?? []).filter((r) => r.driverSlug && argentineSlugs.has(r.driverSlug) && r.pos > 3);
               const resumen = i.session.videos?.find((v) => v.kind === "highlights");
               const eventoHref = `/eventos/${i.event.id}`;
+              const isRace = RACE_KINDS.has(i.session.kind);
+
+              // Entrenamientos y clasificaciones pesan menos: una línea con quién hizo el mejor tiempo y los argentinos, sin podio.
+              if (!isRace) {
+                const top = raceWinner(i.session.results) ?? i.session.results![0];
+                const argRows = (i.session.results ?? []).filter((r) => r.driverSlug && argentineSlugs.has(r.driverSlug));
+                return (
+                  <article key={i.session.id} className="podium podium-compact">
+                    <div className="podium-head">
+                      <div>
+                        <CategoryLabel series={i.series} detail={`${fmtDayNum(i.session.start)} ${fmtMonthShort(i.session.start)}`} href={`/categorias/${i.series.id}`} />
+                        <strong>
+                          <Link href={resumen ? `${eventoHref}#${i.session.id}` : eventoHref} className="list-link">
+                            {i.session.name} · {i.event.circuit.city}
+                          </Link>
+                        </strong>
+                      </div>
+                      {resumen && <VideoLinkThumb videoId={resumen.id} href={`${eventoHref}#${i.session.id}`} ariaLabel={`Ver el resumen de ${i.session.name} en YouTube`} />}
+                    </div>
+                    <p className="podium-compact-line">
+                      {i.session.kind === "practica" || i.session.kind === "clasificacion" ? "Mejor tiempo" : "Ganó"}: <b>{top.driver}</b>
+                      {argRows.length > 0 && (
+                        <>
+                          {" · "}
+                          {argRows.map((r) => `${r.driver} ${r.pos}.º`).join(", ")}
+                        </>
+                      )}
+                    </p>
+                  </article>
+                );
+              }
+
+              const ours = (i.session.results ?? []).filter((r) => r.driverSlug && argentineSlugs.has(r.driverSlug) && r.pos > 3);
               return (
                 <article key={i.session.id} className="podium">
                   <div className="podium-head">
@@ -273,6 +305,9 @@ export default async function Home() {
               );
             })}
           </div>
+          <p className="results-band-cta">
+            <Link href="/calendario">Ver todos los resultados <span aria-hidden="true">→</span></Link>
+          </p>
         </div>
       </section>
     ),
@@ -280,11 +315,12 @@ export default async function Home() {
     agenda: <Agenda key="agenda" items={items} days={days} today={todayKey} now={now} simulated={simulated} />,
 
     resultados: (
-      <section key="resultados" id="resultados" className="results-band">
+      // Sobre fondo claro: "Recién terminó" ya es la única banda oscura de la home (regla de una banda oscura por página).
+      <section key="resultados" id="resultados" className="resultados-light">
         <div className="section-block">
           {/* Con resultados primero, la cabecera ya dice "Resultados del finde": no se repite el título. */}
           {mode !== "results" && (
-            <SectionTitle title="Resultados" inverse>
+            <SectionTitle title="Resultados">
               <Link href="/calendario">Calendario</Link>
             </SectionTitle>
           )}

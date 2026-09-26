@@ -324,13 +324,8 @@ export function Momento({ data, now: serverNow, simulated, broadcasts, tiemposUr
         <SectionTitle id="momento-title" title={`${modo === "resultados" ? "Último fin de semana" : "Este fin de semana"} en ${fecha.city ?? fecha.name}`}>
           {modo === "en-pista" && <StateTag kind="live">EN VIVO</StateTag>}
         </SectionTitle>
+        {/* "Próxima fecha" ya está en la tarjeta de la portada (ProximaSesion): no se repite acá. */}
         <Finde data={data} fecha={fecha} now={now} broadcasts={broadcasts} tiemposUrl={tiemposUrl} piloto />
-        {modo === "resultados" && (
-          <p className="momento-where momento-proxima">
-            <b>Próxima fecha</b>
-            {proximaFecha ? <ProximaLinea fecha={proximaFecha} now={now} /> : "todavía no hay una cargada"}
-          </p>
-        )}
       </section>
     );
   }

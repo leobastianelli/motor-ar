@@ -419,7 +419,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
     const trend = data.championshipTrend();
     const stats = data.seasonStats(2026);
     ribbon = [
-      { label: "Temporada", value: "2026" },
+      // "Temporada 2026" no dice nada que no diga ya el resto de la página: se saca.
       { label: "Campeonato", value: `${trend.position}.º`, note: trend.label },
       { label: "Puntos", value: String(stats.points) },
       { label: "Mejor resultado", value: stats.best ? `${stats.best.finishPos}.º` : "—", note: stats.best ? raceName(stats.best.race) : undefined },
@@ -428,7 +428,6 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
   } else {
     const standing = season.getStandingPosition(driver);
     ribbon = [
-      { label: "Temporada", value: "2026" },
       { label: "Campeonato", value: standing ? `${standing.position}.º` : "—", note: standing?.label },
       { label: "Puntos", value: standing ? String(standing.points) : "—" },
       // Victorias contadas desde los resultados de la temporada, igual que en los bloques de abajo.

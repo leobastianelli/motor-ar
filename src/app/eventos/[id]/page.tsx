@@ -134,7 +134,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
 
   const where = (
           <aside className="broadcast">
-            <h2>Dónde verlo</h2>
+            <h3>Dónde verlo</h3>
             {event.broadcasts.map((b) => (
               <div key={b.name}>
                 <span>{BROADCAST_KIND[b.kind]}</span>
@@ -375,8 +375,9 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
         )}
       </section>
 
+      {/* Una sola banda oscura por página: la del último resultado, arriba. Las sesiones anteriores van sobre fondo claro. */}
       {earlier.length > 0 && (
-        <section className="classification-wrap earlier-wrap">
+        <section className="earlier-wrap">
           <div className="section-block">
               <div className="earlier-sessions">
                   <h3>Sesiones anteriores</h3>
