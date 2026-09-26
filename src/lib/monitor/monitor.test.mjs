@@ -101,10 +101,57 @@ test("campeonato atrasado: la tabla llega a la fecha 11 y ya se corrieron 12", (
   assert.equal(staleStandings({ standings: {}, meta: {} }, { standings: { tc: { asOfRound: 12 } } }, races).length, 0);
 });
 
-test("una carga manual de un evento terminado hace más de 2 días se marca para limpiar", () => {
+test("una carga manual de un evento terminado hace más de 2 días, sin sesiones propias, se marca para limpiar", () => {
   const vieja = sunday({ id: "tn-2026-9", sessions: [{ id: "f", kind: "final", name: "Final", start: "2026-09-13T12:00:00-03:00", timeKnown: true, durationMin: 35 }] });
-  assert.equal(manualExpired([vieja], { events: { "tn-2026-9": {} } }, at("21", "12")).length, 1);
-  assert.equal(manualExpired([vieja], { events: { "tn-2026-9": {} } }, at("14", "12")).length, 0);
+  assert.equal(manualExpired([vieja], [vieja], { events: { "tn-2026-9": {} } }, at("21", "12")).length, 1);
+  assert.equal(manualExpired([vieja], [vieja], { events: { "tn-2026-9": {} } }, at("14", "12")).length, 0);
+});
+
+test("carga manual vencida: si la fuente (sin la carga) ya trae la misma hora y los mismos resultados, avisa que se puede sacar", () => {
+  const conManual = sunday({
+    id: "tn-2026-9",
+    sessions: [{ id: "f", kind: "final", name: "Final", start: "2026-09-13T12:00:00-03:00", timeKnown: true, durationMin: 35, results: [{ pos: 1 }] }],
+  });
+  const fuente = sunday({
+    id: "tn-2026-9",
+    sessions: [{ id: "f", kind: "final", name: "Final", start: "2026-09-13T12:00:00-03:00", timeKnown: true, durationMin: 35, results: [{ pos: 1 }] }],
+  });
+  const manual = { events: { "tn-2026-9": { sessions: [{ kind: "final", name: "Final", start: "2026-09-13T12:00:00-03:00", timeKnown: true, results: [{ pos: 1 }] }] } } };
+  const out = manualExpired([conManual], [fuente], manual, at("21", "12"));
+  assert.equal(out.length, 1);
+  assert.equal(out[0].key, "manual-vencida:tn-2026-9");
+  assert.match(out[0].title, /ya cumplida/);
+});
+
+test("carga manual vencida: si la fuente nunca trajo la hora o los resultados, NO avisa que se saque, avisa qué falta", () => {
+  const conManual = sunday({
+    id: "tn-2026-9",
+    sessions: [{ id: "f", kind: "final", name: "Final", start: "2026-09-13T12:00:00-03:00", timeKnown: true, durationMin: 35, results: [{ pos: 1 }] }],
+  });
+  // La fuente sola nunca tuvo hora para esta sesión (timeKnown: false): ese dato sólo existe a mano.
+  const fuenteSinHora = sunday({
+    id: "tn-2026-9",
+    sessions: [{ id: "f", kind: "final", name: "Final", start: "", timeKnown: false, durationMin: 35 }],
+  });
+  const manual = { events: { "tn-2026-9": { sessions: [{ kind: "final", name: "Final", start: "2026-09-13T12:00:00-03:00", timeKnown: true, results: [{ pos: 1 }] }] } } };
+  const out = manualExpired([conManual], [fuenteSinHora], manual, at("21", "12"));
+  assert.equal(out.length, 1);
+  assert.equal(out[0].key, "manual-necesaria:tn-2026-9");
+  assert.match(out[0].title, /necesaria/);
+  assert.match(out[0].body, /la hora de "Final"/);
+  assert.doesNotMatch(out[0].body, /se puede sacar/);
+});
+
+test("carga manual vencida: si la fuente nunca trajo esa sesión (no existe con ese tipo + nombre), tampoco avisa que se saque", () => {
+  const conManual = sunday({
+    id: "tn-2026-9",
+    sessions: [{ id: "f", kind: "final", name: "Final Clase 2", start: "2026-09-13T12:00:00-03:00", timeKnown: true, durationMin: 35 }],
+  });
+  const fuenteSinEsaSesion = sunday({ id: "tn-2026-9", sessions: [{ id: "otra", kind: "final", name: "Final Clase 3", start: "2026-09-13T12:00:00-03:00", timeKnown: true, durationMin: 35 }] });
+  const manual = { events: { "tn-2026-9": { sessions: [{ kind: "final", name: "Final Clase 2", start: "2026-09-13T12:00:00-03:00", timeKnown: true }] } } };
+  const out = manualExpired([conManual], [fuenteSinEsaSesion], manual, at("21", "12"));
+  assert.equal(out[0].key, "manual-necesaria:tn-2026-9");
+  assert.match(out[0].body, /"Final Clase 2"/);
 });
 
 test("las cargas manuales se suman a lo que ve la gente, igual que en el sitio", () => {

@@ -7,8 +7,11 @@ const norm = (s) => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toL
 const classOf = (name) => String(name).match(/clase\s*(\d)/i)?.[1] ?? "";
 const TIME_FIELDS = ["start", "timeKnown", "timeStatus", "timeSources"];
 
+/** Identidad de una sesión para fusionarla con una carga manual: tipo + nombre (mismo criterio en toda la carga manual). */
+export const sessionKey = (s) => `${s.kind}|${norm(s.name)}`;
+
 export function mergeSessionPatches(eventId, sourceSessions, patches, dayKey) {
-  const key = (s) => `${s.kind}|${norm(s.name)}`;
+  const key = sessionKey;
   const sessions = sourceSessions.map((s) => ({ ...s }));
   const touched = new Set();
   const unmatched = [];
