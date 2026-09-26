@@ -5,7 +5,7 @@ Dos procesos avisan cuando algo falta o falla. **Sólo envían mensajes**: no le
 | Proceso | Cuándo corre | Qué revisa |
 |---|---|---|
 | **Guardián** (`scripts/guardian.mjs`) | Al final de cada sincronización de datos (lun y jue 03:00, todos los días 06:00, jue 11:00 y 17:00, vie 12:00 y 19:00, sáb y dom 00:00, dom 16:00; hora argentina) | Horarios que faltan, fechas sin confirmar o en conflicto, fuentes que fallaron, campeonatos atrasados, resultados que no aparecen, cargas manuales viejas |
-| **Vigilante** (`scripts/watchdog.mjs`) | Cada hora, aparte del sincronizador | Que el sitio responda, que los datos se estén sincronizando (si el sincronizador deja de correr, este lo nota) y, leyendo `/api/salud` de producción, que el sitio sirva la última versión de los datos |
+| **Vigilante** (`GET /api/vigilante`, orquestación en `src/lib/monitor/watchdog-run.mjs`) | Cada 30 min, llamado por cron-job.org (igual que `/api/pulso`; ver más abajo) | Que el sitio responda, que los datos se estén sincronizando (si el sincronizador deja de correr, este lo nota) y, leyendo `/api/salud` de producción, que el sitio sirva la última versión de los datos |
 
 ## Cómo funciona un aviso
 - **Nuevo problema:** se avisa una vez, con lo necesario para pegárselo a Claude y resolverlo.
@@ -39,7 +39,7 @@ Hasta que se carguen los secretos, todo corre igual pero el mensaje sólo se mue
 2. Abrí el chat con tu bot nuevo y mandale `/start` (si no le escribís primero, no puede escribirte).
 3. Averiguá tu **chat id**: en una ventana privada abrí `https://api.telegram.org/bot<TOKEN>/getUpdates` (reemplazá `<TOKEN>`) y buscá `"chat":{"id":123456789`. Ese número es tu chat id. No compartas esa pantalla.
 4. En GitHub: repositorio → **Settings → Secrets and variables → Actions → New repository secret**. Creá `TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_ID`. O desde tu terminal: `gh secret set TELEGRAM_BOT_TOKEN` (te pide el valor sin mostrarlo).
-5. Probá: pestaña **Actions → "Sincronizar temporada" → Run workflow**. Al terminar tiene que llegarte el resumen diario. Después **Actions → "Vigilante" → Run workflow** (si todo está bien no manda nada).
+5. Probá: pestaña **Actions → "Sincronizar temporada" → Run workflow**. Al terminar tiene que llegarte el resumen diario. Después **Actions → "Vigilante" → Run workflow** (si todo está bien no manda nada; queda para correrlo a mano, ver "Límites conocidos").
 
 ## Probar en tu máquina
 ```bash
@@ -50,8 +50,7 @@ npm run watchdog -- --dry
 
 ## Límites conocidos
 - **La comprobación de la tabla de TC2000 solo corre en local.** Su sitio responde 403 a los servidores de GitHub (no a una PC común) y no lo evadimos; en GitHub esa comprobación se saltea sin ruido. Para correrla: `npm run guardian -- --dry` en tu máquina.
-- El estado de los avisos del guardián y del vigilante (qué ya se avisó) viaja en la caché de GitHub Actions: si se pierde, un aviso se puede repetir una vez. Los borradores para redes ya no usan esa caché: su estado vive en la tabla `redes_enviados` de Neon (ver más abajo).
-- El vigilante corre cada hora, así que una caída se detecta en menos de ~1 h. El repositorio es privado y GitHub da 2.000 minutos de Actions por mes: el vigilante usa ~720.
-- **GitHub Actions descarta corridas programadas cuando hay muchos crons juntos** (medido el 24/09/2026: la sincronización horaria y el vigilante perdieron 4 corridas cada uno en un solo día). Por eso lo que depende de la hora al minuto — los borradores para redes y el disparo de la sincronización cuando hace falta — pasó a `/api/pulso`, llamado por un cron externo (cron-job.org) cada 5 min de jueves a lunes; ver `docs/plan-lanzamiento/01-borradores-para-redes.md`, sección "Disparo con cron-job.org". Los crons de GitHub Actions siguen de respaldo (el resumen diario, el guardián y el vigilante no cambiaron).
+- El estado de los avisos del guardián (qué ya se avisó) viaja en la caché de GitHub Actions: si se pierde, un aviso se puede repetir una vez. El del vigilante vive en la tabla `vigilante_estado` de Neon y el de los borradores para redes en `redes_enviados` (ver más abajo): ninguno de los dos depende de esa caché.
+- **GitHub Actions descarta corridas programadas cuando hay muchos crons juntos** (medido el 24/09/2026: la sincronización horaria y el vigilante perdieron 4 corridas cada uno en un solo día). Por eso lo que depende de la hora al minuto — los borradores para redes, el disparo de la sincronización cuando hace falta y, desde ahora, el vigilante — pasó a llamarse por un cron externo (cron-job.org): `/api/pulso` cada 5 min de jueves a lunes y `/api/vigilante` cada 30 min, todos los días; ver `docs/plan-lanzamiento/01-borradores-para-redes.md`, sección "Disparo con cron-job.org". El workflow `.github/workflows/watchdog.yml` ya no tiene `schedule` (queda para correrlo a mano); no lo reactives con un cron a la vez que cron-job.org llama a `/api/vigilante`, porque mandarían avisos duplicados con estados distintos (uno en la caché de Actions, el otro en Neon). El resumen diario y el guardián siguen con los crons de GitHub Actions.
 - Si `/api/pulso` deja de responder (o cron-job.org deja de llamarlo), no llega ningún borrador nuevo y la sincronización sólo corre por los crons de respaldo de GitHub; por eso conviene que el resumen de las 06:00 llegue todos los días: si un día no llega, algo pasa.
 - No hay carga por Telegram todavía: el bot no recibe mensajes (eso viene después, con confirmación obligatoria antes de publicar cualquier dato).
