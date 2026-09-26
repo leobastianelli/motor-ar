@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
 import { breadcrumb, JsonLd } from "@/components/json-ld";
 import { LinkedText, noteDate } from "@/components/notas";
-import { CategoryLabel, StateTag } from "@/components/pista";
+import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { notas } from "@/data/notas";
 import { getDriver, getIndexedDriver, getNow, getSeason, getSeries } from "@/lib/data";
 import { getNote, related } from "@/lib/notas";
@@ -136,7 +136,7 @@ export default async function NotaPage(props: PageProps<"/notas/[slug]">) {
           </div>
 
           <aside className="nota-related" aria-label="En Fierros">
-            <h2>En Fierros</h2>
+            <SectionTitle title="En Fierros" />
             {drivers.length > 0 && (
               <section>
                 <h3>Pilotos</h3>
