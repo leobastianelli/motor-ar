@@ -793,3 +793,25 @@ button{color:inherit;font-family:inherit}
 @media(max-width:800px){.driver-editorial aside h3{font-size:19px}}
 .broadcast h3{font-size:26px}
 @media(max-width:800px){.weekend-head h1{font-size:52px}.arg-highlight h3{font-size:22px}.pole h3{font-size:24px}.broadcast h3{font-size:22px}}
+/* Resultados sobre fondo claro (#59): los estilos de .result-notes estaban pensados para la banda oscura. */
+.resultados-light .result-notes .cat-label b{color:var(--ink)}
+.resultados-light .result-notes .cat-label>span:last-child:not(.code){color:var(--muted)}
+/* La etiqueta de la categoría es un span dentro del enlace: que no la apague el gris de los textos secundarios. */
+.result-notes a span.code,.resultados-light .result-notes a span.code{color:#fff}
+/* Con nombres largos ("Ligier JFC Junior Formula Championship") el lugar pasa abajo en vez de cortarse ("Al…"). */
+.arg-highlight .cat-label,.result-notes .cat-label{flex-wrap:wrap;row-gap:2px}
+.arg-highlight .cat-label>span:last-child:not(.code),.result-notes .cat-label>span:last-child:not(.code){white-space:normal;overflow:visible}
+/* El encabezado de cada resultado pinta de gris sus textos secundarios (.podium-head div span): la etiqueta de la categoría y su nombre
+   son spans y quedaban apagados, en la banda oscura y en la clara. */
+.podium-head span.code,.resultados-light .podium-head span.code{color:#fff}
+.resultados-light .podium-head .cat-label b{color:var(--ink)}
+.results-band .podium-head .cat-label b{color:#fff}
+/* Contraste después de pasar secciones a fondo claro (#59): textos secundarios pensados para la banda oscura. */
+.earlier-wrap .rank-row strong small{color:var(--muted)}
+.earlier-sessions .arg-line,.earlier-sessions .arg-line a{color:var(--ink)}
+.full-results summary span{color:var(--muted)}
+.classification-wrap .full-results summary span,.results-band .full-results summary span{color:#abb0b1}
+.champ-row.leader div span{color:var(--ink);opacity:.8}
+/* Filas celestes (argentinos): todo el texto en tinta, también los secundarios. */
+.rank-row.argentine,.rank-row.argentine small,.rank-row.argentine span,.earlier-wrap .rank-row.argentine strong small{color:var(--ink)}
+.earlier-wrap .full-results summary .arg-line span,.full-results summary .arg-line span{color:var(--ink)}
