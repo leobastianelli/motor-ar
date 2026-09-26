@@ -42,6 +42,11 @@ await sql`CREATE TABLE IF NOT EXISTS redes_enviados (clave TEXT PRIMARY KEY, env
 await sql`CREATE TABLE IF NOT EXISTS pulso_estado (id INTEGER PRIMARY KEY, last_dispatch_at TIMESTAMPTZ)`;
 await sql`INSERT INTO pulso_estado (id, last_dispatch_at) VALUES (1, NULL) ON CONFLICT (id) DO NOTHING`;
 
+// Estado de avisos de GET /api/vigilante (una fila): qué ya se avisó, para no repetirlo. Reemplaza la caché de GitHub Actions
+// (.watchdog-state.json) ahora que cron-job.org llama al endpoint cada 30 min. Ver src/lib/monitor/vigilante-estado.mjs.
+await sql`CREATE TABLE IF NOT EXISTS vigilante_estado (id INTEGER PRIMARY KEY, estado JSONB, actualizado TIMESTAMPTZ)`;
+await sql`INSERT INTO vigilante_estado (id, estado, actualizado) VALUES (1, '{"alerts":{},"fails":{},"lastSummary":null}'::jsonb, now()) ON CONFLICT (id) DO NOTHING`;
+
 const [{ n }] = await sql`SELECT count(*)::int AS n FROM season_versions`;
 if (n === 0) {
   const body = readFileSync(new URL("../src/data/season-2026.json", import.meta.url), "utf8");
@@ -57,4 +62,4 @@ if (n === 0) {
 } else {
   console.log(`La tabla ya tiene ${n} versión(es); no se siembra.`);
 }
-console.log("Tablas `season_versions`, `hot_lock`, `redes_enviados` y `pulso_estado` listas.");
+console.log("Tablas `season_versions`, `hot_lock`, `redes_enviados`, `pulso_estado` y `vigilante_estado` listas.");
