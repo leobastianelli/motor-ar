@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T14:54:59.182Z",
+  "generatedAt": "2026-09-26T18:39:20.297Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -138,7 +138,7 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-07-25",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "alejandro inella",
@@ -179,7 +179,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "alfonso domenech",
@@ -719,7 +719,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "azar diego",
@@ -935,7 +935,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "esteban mancuso",
@@ -955,7 +955,7 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "eugenio provens",
@@ -1077,7 +1077,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "aldrighetti facundo",
@@ -1168,11 +1168,14 @@
     {
       "key": "facundo luduena",
       "keys": [
-        "facundo luduena"
+        "facundo luduena",
+        "facundo luduena mouras"
       ],
       "slug": "facundo-luduena",
       "name": "Facundo Ludueña",
-      "aliases": [],
+      "aliases": [
+        "Facundo Ludueña Mouras"
+      ],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -1329,7 +1332,27 @@
         "tc-mouras": "Chevrolet"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-26"
+    },
+    {
+      "key": "francisco nonnenmacher",
+      "keys": [
+        "francisco nonnenmacher"
+      ],
+      "slug": "francisco-nonnenmacher",
+      "name": "Francisco Nonnenmacher",
+      "aliases": [],
+      "series": [
+        "tc-mouras"
+      ],
+      "numbers": {
+        "tc-mouras": "121"
+      },
+      "teams": {
+        "tc-mouras": "Ford"
+      },
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "bodrato franco mionetto",
@@ -2334,8 +2357,10 @@
         "conde jose juan"
       ],
       "slug": "juan-jose-conde",
-      "name": "Juan Jose Conde",
-      "aliases": [],
+      "name": "Juan José Conde",
+      "aliases": [
+        "Juan Jose Conde"
+      ],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -2577,7 +2602,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "catalan juan magni tomas",
@@ -2982,7 +3007,7 @@
         "tc-pista-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "di jose luis palma",
@@ -3065,7 +3090,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "guevara marcelo",
@@ -3461,7 +3486,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-04-25",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "jalaf matias",
@@ -3528,6 +3553,26 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "etcheberry mauricio",
+      "keys": [
+        "etcheberry mauricio"
+      ],
+      "slug": "mauricio-etcheberry",
+      "name": "Mauricio Etcheberry",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "48"
+      },
+      "teams": {
+        "tc-pista-mouras": "Chevrolet"
+      },
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "lambiris mauricio",
@@ -3824,7 +3869,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "moscardini nicolas",
@@ -4190,7 +4235,7 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "biagi santiago",
@@ -4695,7 +4740,7 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "quattrocchi valentino",
