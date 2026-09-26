@@ -73,7 +73,7 @@ const findings = [
   ...resultsOverdue(events, NOW, { autoSeries: AUTO_RESULTS, tierOf, name }),
   ...sessionResultsMissing(events, NOW, { seriesIds: new Set(["f1"]), tierOf, name }),
   ...staleStandings(snapshot, manual, events, { tierOf, name }),
-  ...manualExpired(events, manual, NOW),
+  ...manualExpired(events, snapshot.events, manual, NOW),
 ];
 
 // La portada de TC2000 (la única página de su sitio que su robots.txt permite) vigila la tabla cargada a mano.
