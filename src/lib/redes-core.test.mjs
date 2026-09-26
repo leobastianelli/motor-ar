@@ -200,6 +200,55 @@ test("agenda: fecha sin confirmar no entra, y si no cabe en 280 se corta por el 
   assert.deepEqual(horas, [...horas].sort((x, y) => x - y), "queda en orden de hora");
 });
 
+test("así quedó el finde: domingo desde las 20:00, una línea por categoría con fuente automática, en orden de hora (argentinos desempatan) y con la posición del argentino que corrió afuera", () => {
+  const f1Race = { id: "f1-16-r", kind: "carrera", name: "Carrera", start: "2026-10-04T18:00:00Z", timeKnown: true, durationMin: 120, results: [row(1, "Max Verstappen"), row(2, "George Russell"), row(5, "Franco Colapinto")] };
+  const f1 = event({ seriesId: "f1", sessions: [f1Race] });
+  const tcFinal = { id: "tc-f", kind: "final", name: "Final", start: "2026-10-03T15:00:00-03:00", timeKnown: true, durationMin: 40, results: [row(1, "Mariano Werner"), row(2, "Otto Fritzler")] };
+  const tc = { id: "tc-2026-8", seriesId: "tc", round: 8, name: "Fecha 8 · San Nicolás", circuit: { city: "San Nicolás" }, source: "ACTC (calendario)", sessions: [tcFinal] };
+  const wecRace = { id: "wec-r", kind: "carrera", name: "Carrera", start: "2026-10-02T10:00:00Z", timeKnown: true, durationMin: 180, results: [row(1, "Kevin Estre")] };
+  const wec = { id: "wec-1", seriesId: "wec", sessions: [wecRace] };
+  // Sólo hizo la clasificación: sin carrera todavía, no se menciona.
+  const f2q = event({ id: "f2-16", seriesId: "f2", sessions: [session({ id: "f2-16-q", start: "2026-10-03T08:00:00Z", results: podium })] });
+  // Carga manual: no es fuente automática, no entra aunque tenga resultado.
+  const tnManual = { id: "tn-1", seriesId: "tn", round: 1, name: "Fecha 1", source: "Carga manual · calendario", sessions: [{ id: "tn-f", kind: "final", name: "Final", start: "2026-10-03T15:00:00-03:00", timeKnown: true, durationMin: 30, results: [row(1, "Un piloto")] }] };
+
+  const domingo2000 = "2026-10-04T23:00:00Z"; // 20:00 hora argentina
+  const [d] = run([f1, tc, wec, f2q, tnManual], domingo2000);
+  assert.equal(d.kind, "resumen");
+  assert.equal(d.key, "resumen:2026-10-04");
+  assert.equal(
+    d.text,
+    "🏁 Así quedó el finde (hora argentina):\nWEC: ganó Kevin Estre\nTC: ganó Mariano Werner\nF1: ganó Max Verstappen; Colapinto terminó 5.º\nhttps://www.somosfierros.ar/",
+  );
+  assert.ok(xLength(d.text) <= X_LIMIT);
+  assert.doesNotMatch(d.text, /F2/, "sin carrera todavía: no se menciona");
+  assert.doesNotMatch(d.text, /Un piloto|TN/, "carga manual: no entra");
+
+  // Antes de las 20:00 del domingo, nada.
+  assert.equal(run([f1], "2026-10-04T22:00:00Z").filter((x) => x.kind === "resumen").length, 0);
+  // El lunes antes del mediodía todavía sale (carrera nocturna); después del mediodía, no.
+  assert.equal(run([f1], "2026-10-05T14:00:00Z").filter((x) => x.kind === "resumen").length, 1, "lunes 11:00 ARG: todavía");
+  assert.equal(run([f1], "2026-10-05T16:00:00Z").filter((x) => x.kind === "resumen").length, 0, "lunes 13:00 ARG: ya no");
+  // Ya enviado.
+  assert.equal(run([f1], domingo2000, { enviados: { "resumen:2026-10-04": "x" } }).filter((x) => x.kind === "resumen").length, 0);
+});
+
+test("así quedó el finde: si no entra en 280, se corta por el final (menos prioritario) y cierra con «y más en»", () => {
+  const muchos = Array.from({ length: 30 }, (_, i) => ({
+    id: `tc-${i}`, seriesId: "tc", round: i, name: `Fecha ${i}`, circuit: { city: `Ciudad número ${i}` }, source: "ACTC (calendario)",
+    sessions: [{ id: `tc-f${i}`, kind: "final", name: "Final", start: `2026-10-04T${String(10 + (i % 12)).padStart(2, "0")}:00:00-03:00`, timeKnown: true, durationMin: 30, results: [row(1, `Piloto Con Nombre Largo Número ${i}`)] }],
+  }));
+  const [d] = run(muchos, "2026-10-04T23:00:00Z");
+  assert.ok(xLength(d.text) <= X_LIMIT);
+  assert.match(d.text, /\ny más en https:\/\/www\.somosfierros\.ar\/$/);
+});
+
+test("así quedó el finde: sin nada que contar (sin carreras, sin resultados), no hay borrador", () => {
+  const soloQuali = event({ sessions: [session({ results: podium })] });
+  assert.equal(run([soloQuali], "2026-10-04T23:00:00Z").filter((x) => x.kind === "resumen").length, 0);
+  assert.equal(run([], "2026-10-04T23:00:00Z").filter((x) => x.kind === "resumen").length, 0);
+});
+
 test("el enlace de intención de X codifica el texto", () => {
   const url = xIntentUrl("Ganó Peña & Cía\nhttps://www.somosfierros.ar/");
   assert.ok(url.startsWith("https://x.com/intent/post?text="));

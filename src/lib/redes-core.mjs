@@ -266,6 +266,80 @@ function agendaDraft({ events, now, catalog, enviados }) {
   return { key, kind: "agenda", at: Date.parse(now), text: compose(n), link: url, image: `${BASE_URL}/placa/imagen` };
 }
 
+// ——— Así quedó el finde ———
+
+/** Una carga manual no es una fuente automática: el resumen del finde sólo cuenta con lo que sincroniza solo. */
+const isAutoSource = (event) => !/^carga manual/i.test(event.source ?? "");
+const classified = (r) => !r.positionText || /^\d+$/.test(r.positionText);
+/** La carrera o final principal, si ya se corrió; a diferencia de `mainSession` (agenda), no cae a una sesión clasificatoria. */
+const mainRace = (event) => event.sessions.filter((s) => RACE_KINDS.has(s.kind)).at(-1);
+
+/**
+ * Domingo del fin de semana que se resume: hoy si ya es domingo desde las 20:00, o ayer si es lunes antes del
+ * mediodía (para no perderse la última carrera si terminó pasada la medianoche). Fuera de esa ventana, null.
+ */
+function summarySunday(now) {
+  const wd = weekday(now);
+  const hour = hourOf(now);
+  if (wd === "domingo" && hour >= 20) return dayKey(now);
+  if (wd === "lunes" && hour < 12) return dayKey(new Date(Date.parse(now) - DAY).toISOString());
+  return null;
+}
+
+/** Viernes, sábado y domingo del fin de semana que terminó ese domingo, en formato dayKey. */
+const summaryDays = (sunday) => [2, 1, 0].map((k) => dayKey(new Date(Date.parse(`${sunday}T00:00:00-03:00`) - k * DAY).toISOString()));
+
+function summaryDraft({ events, now, catalog, enviados }) {
+  const sunday = summarySunday(now);
+  if (!sunday) return null;
+  const key = `resumen:${sunday}`;
+  if (enviados[key]) return null;
+  const days = summaryDays(sunday);
+  const { byId, tierOf } = tiers(catalog.series, catalog.drivers);
+  const find = driverIndex(catalog.drivers);
+
+  const items = events
+    .filter((e) => byId[e.seriesId] && isAutoSource(e))
+    .map((e) => ({ e, main: mainRace(e) }))
+    .filter(({ main }) => main && days.includes(dayKey(main.start)) && main.results?.length)
+    .map(({ e, main }) => {
+      const winner = main.results.find((r) => r.pos === 1 && classified(r));
+      if (!winner) return null;
+      // Los argentinos que corren afuera (tier 2): su posición, salvo que ya sean el ganador (evita repetirlo).
+      const argentines =
+        tierOf(e.seriesId) === 2
+          ? main.results
+              .map((row) => ({ row, driver: find(row.driver) }))
+              .filter(({ driver, row }) => driver && driver.seriesId === e.seriesId && row.pos !== 1)
+          : [];
+      return { e, main, winner: winner.driver, argentines };
+    })
+    .filter(Boolean)
+    // La hora manda; entre dos a la misma hora, primero las argentinas (misma regla que la home).
+    .sort((a, b) => Date.parse(a.main.start) - Date.parse(b.main.start) || tierOf(a.e.seriesId) - tierOf(b.e.seriesId));
+  if (!items.length) return null;
+
+  const line = ({ e, main, winner, argentines }) => {
+    // Cuando la fecha tiene más de una sesión del mismo tipo (dos "Carrera principal"), se aclara cuál fue.
+    const sameKindCount = e.sessions.filter((s) => s.kind === main.kind).length;
+    const label = sameKindCount > 1 ? nombreVisibleSesion(main, e.sessions) : null;
+    const argNote = argentines.map(({ driver, row }) => `${surname(driver.name)} ${outcome(row, main.kind)}`).join(" y ");
+    return `${byId[e.seriesId].short}${label ? ` (${label})` : ""}: ganó ${winner}${argNote ? `; ${argNote}` : ""}`;
+  };
+  const head = "🏁 Así quedó el finde (hora argentina):";
+  const url = `${BASE_URL}/`;
+  const compose = (n) => {
+    const shown = items.slice(0, n).map(line);
+    const more = n < items.length ? `\ny más en ${url}` : `\n${url}`;
+    return `${head}\n${shown.join("\n")}${more}`;
+  };
+  // El corte se hace por el final de la lista ordenada, que es lo menos prioritario (misma regla que la agenda).
+  let n = items.length;
+  while (n > 0 && !fits(compose(n))) n--;
+  if (n === 0) return null;
+  return { key, kind: "resumen", at: Date.parse(now), text: compose(n), link: url };
+}
+
 // ——— Punto de entrada ———
 
 /**
@@ -277,5 +351,6 @@ export function borradores(season, now, { enviados = {}, catalog, manual = {}, e
   const evs = events ?? season.events;
   const ctx = { events: evs, season, manual, now, catalog, enviados };
   const agenda = agendaDraft(ctx);
-  return [...(agenda ? [agenda] : []), ...timeDrafts(ctx), ...resultDrafts(ctx)];
+  const resumen = summaryDraft(ctx);
+  return [...(agenda ? [agenda] : []), ...(resumen ? [resumen] : []), ...timeDrafts(ctx), ...resultDrafts(ctx)];
 }

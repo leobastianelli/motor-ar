@@ -78,7 +78,7 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
         data={{
           "@context": "https://schema.org",
           "@graph": [
-            ...(next ? [sportsEventJsonLd(next, series, answer)] : []),
+            ...(next ? [sportsEventJsonLd(next, series, answer, now)] : []),
             breadcrumb([
               ["Inicio", "/"],
               ["Horarios", "/horarios"],

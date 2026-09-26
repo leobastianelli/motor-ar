@@ -105,6 +105,21 @@ test("sin sql (sin DATABASE_URL) pero con credenciales: manda sin poder deduplic
   assert.equal(sent.length, 1);
 });
 
+test("agenda del viernes (con placa): se manda como foto adjunta, no como enlace de texto", async () => {
+  const { sql } = fakeSql();
+  const race = { id: "f1-16-r", kind: "carrera", name: "Carrera", start: "2026-10-04T07:00:00Z", timeKnown: true, durationMin: 120 };
+  const viernesEvent = { ...event(), sessions: [session(), race] };
+  const llamadas = [];
+  const fetchImpl = async (url) => { llamadas.push(url); return { ok: true }; };
+  // Viernes 2/10 a las 09:00 hora argentina.
+  const viernes9 = "2026-10-02T12:00:00Z";
+  const out = await enviarBorradores({ raw: { events: [viernesEvent], standings: {}, meta: {} }, now: viernes9, catalog, events: [viernesEvent], sql, creds: { token: "t", chatId: "c", fetchImpl } });
+  const agenda = out.enviados.find((d) => d.kind === "agenda");
+  assert.ok(agenda, "generó el borrador de agenda");
+  assert.ok(llamadas.some((u) => u.endsWith("/sendPhoto")), "usa sendPhoto para la agenda con placa");
+  assert.equal(llamadas.some((u) => u.endsWith("/sendMessage")), false, "no hace falta el mensaje de texto: la foto salió bien");
+});
+
 test("una clave ya enviada no se vuelve a consultar en la base en la llamada siguiente (Neon puede dormir)", async () => {
   const { sql } = fakeSql();
   let queries = 0;

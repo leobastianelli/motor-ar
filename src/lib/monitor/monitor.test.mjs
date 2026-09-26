@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { emptyState, evaluate, summaryDue } from "./alerts.mjs";
 import { compareStandings, dateIssues, tnDateConflicts, withConflicts, dateStatus, manualExpired, parseTc2000Home, pendingHours, resultsOverdue, sessionResultsMissing, sourceFailures, staleStandings, visibleEvents } from "./checks.mjs";
-import { chunk, renderAlerts, sendTelegram } from "./telegram.mjs";
+import { chunk, renderAlerts, sendTelegram, sendTelegramPhoto } from "./telegram.mjs";
 
 // Domingo 27/09/2026 (Balcarce, TC Pick Up): la carrera no tiene hora.
 const sunday = (over = {}) => ({
@@ -285,6 +285,45 @@ test("sin token no falla (queda simulado) y con token manda; el token nunca apar
   assert.deepEqual(llamadas[1][1].reply_markup, teclado);
   await assert.rejects(sendTelegram("hola", { token: "SECRETO", chatId: "42", fetchImpl: async () => ({ ok: false, status: 401 }) }), (e) => !/SECRETO/.test(e.message) && /401/.test(e.message));
   await assert.rejects(sendTelegram("hola", { token: "SECRETO", chatId: "42", fetchImpl: async () => { throw new Error("fetch failed https://api.telegram.org/botSECRETO/sendMessage"); } }), (e) => !/SECRETO/.test(e.message));
+});
+
+test("sendTelegramPhoto: manda la foto con sendPhoto y el mismo botón; sin token, simula", async () => {
+  const log = console.log;
+  console.log = () => {};
+  try {
+    assert.equal((await sendTelegramPhoto("https://www.somosfierros.ar/placa/imagen", "hola", {})).simulated, true);
+  } finally {
+    console.log = log;
+  }
+  const llamadas = [];
+  const teclado = { inline_keyboard: [[{ text: "Publicar en X", url: "https://x.com/intent/post?text=hola" }]] };
+  const ok = await sendTelegramPhoto("https://www.somosfierros.ar/placa/imagen", "hola", {
+    token: "SECRETO",
+    chatId: "42",
+    replyMarkup: teclado,
+    fetchImpl: async (url, fetchInit) => (llamadas.push([url, JSON.parse(fetchInit.body)]), { ok: true }),
+  });
+  assert.equal(ok.sent, 1);
+  assert.match(llamadas[0][0], /\/sendPhoto$/);
+  assert.equal(llamadas[0][1].photo, "https://www.somosfierros.ar/placa/imagen");
+  assert.equal(llamadas[0][1].caption, "hola");
+  assert.deepEqual(llamadas[0][1].reply_markup, teclado);
+});
+
+test("sendTelegramPhoto: si sendPhoto falla, cae a sendMessage con el mismo texto", async () => {
+  const llamadas = [];
+  const out = await sendTelegramPhoto("https://www.somosfierros.ar/placa/imagen", "hola con enlace", {
+    token: "SECRETO",
+    chatId: "42",
+    fetchImpl: async (url) => {
+      llamadas.push(url);
+      if (url.endsWith("/sendPhoto")) return { ok: false, status: 400 };
+      return { ok: true };
+    },
+  });
+  assert.equal(out.sent, 1);
+  assert.equal(llamadas.length, 2);
+  assert.match(llamadas[1], /\/sendMessage$/);
 });
 
 test("las fechas del TN se cruzan con Speedhive: coinciden dentro de un día o se marcan en conflicto", () => {

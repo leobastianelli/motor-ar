@@ -130,7 +130,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
   // Datos estructurados para buscadores: evento deportivo con lugar, fechas, organizador y quién compitió.
   const jsonLdWinner = rowsComplete ? rows[0] : undefined;
   const jsonLdDescription = `${series.name} en ${event.circuit.city}: horarios en hora argentina, dónde verlo y resultados de cada sesión${jsonLdWinner ? `. Ganó ${jsonLdWinner.driver}` : ""}.`;
-  const jsonLd = sportsEventJsonLd(event, series, jsonLdDescription);
+  const jsonLd = sportsEventJsonLd(event, series, jsonLdDescription, now);
 
   const where = (
           <aside className="broadcast">
