@@ -39,16 +39,18 @@ interface LatestMeta {
 }
 
 // Consulta chica, se puede guardar en la caché de datos: se invalida con revalidateTag("season", ...) cuando un escritor publica una versión.
-const latest = unstable_cache(
-  async (): Promise<LatestMeta | null> => {
-    // Fechas en ISO 8601 estricto: el texto por defecto de Postgres ("2026-09-24 19:14:06.888+00") Safari no lo entiende, y el pie de página lo
-    // parsea en el navegador.
-    const rows = (await sql()`SELECT id, origin, to_char(generated_at AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') AS "generatedAt", to_char(created_at AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') AS "createdAt" FROM season_versions ORDER BY id DESC LIMIT 1`) as unknown as LatestMeta[];
-    return rows[0] ?? null;
-  },
-  ["season-latest"],
-  { tags: ["season"] },
-);
+async function queryLatest(): Promise<LatestMeta | null> {
+  // Fechas en ISO 8601 estricto: el texto por defecto de Postgres ("2026-09-24 19:14:06.888+00") Safari no lo entiende, y el pie de página lo
+  // parsea en el navegador.
+  const rows = (await sql()`SELECT id, origin, to_char(generated_at AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') AS "generatedAt", to_char(created_at AT TIME ZONE 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS.MS"Z"') AS "createdAt" FROM season_versions ORDER BY id DESC LIMIT 1`) as unknown as LatestMeta[];
+  return rows[0] ?? null;
+}
+
+// En producción, en caché hasta que un escritor publica una versión y la invalida (revalidateTag("season", ...) desde /api/refresh).
+// En los previews no: la invalidación sólo le llega a producción, así que un preview quedaba mezclando versiones (la home armada con una y
+// /api/salud leyendo otra) y la prueba de humo de cualquier PR fallaba por eso. Tienen poco tráfico y la consulta es chica.
+const latest =
+  process.env.VERCEL_ENV === "preview" ? queryLatest : unstable_cache(queryLatest, ["season-latest"], { tags: ["season"] });
 
 // Consulta pesada (~140 KB comprimida; ~1,5 MB en versiones viejas sin comprimir): sin envolver. El lector la repite sólo cuando cambia el id.
 async function fetchBody(id: number): Promise<string> {
