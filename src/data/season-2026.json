@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T09:05:26.354Z",
+  "generatedAt": "2026-09-26T12:59:24.323Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -102812,6 +102812,135 @@
       "source": "Jolpica-F1"
     },
     {
+      "id": "tcppk-2026-8",
+      "seriesId": "tc-pista-pick-up",
+      "round": 8,
+      "name": "Fecha 8 · Balcarce",
+      "circuit": {
+        "name": "Juan Manuel Fangio-BALCARCE",
+        "city": "Balcarce",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcppk-2026-8-1-entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-09-26T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "132",
+              "driver": "Tomas Pellandino",
+              "team": "Ford",
+              "gap": "1:44.394"
+            },
+            {
+              "pos": 2,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+0.776"
+            },
+            {
+              "pos": 3,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Toyota",
+              "gap": "+0.816"
+            },
+            {
+              "pos": 4,
+              "number": "107",
+              "driver": "Sganga Antonino",
+              "team": "Ford",
+              "gap": "+1.210"
+            },
+            {
+              "pos": 5,
+              "number": "127",
+              "driver": "Nahuel Cordone",
+              "team": "Ford",
+              "gap": "+2.592"
+            },
+            {
+              "pos": 6,
+              "number": "133",
+              "driver": "Juan Pablo Alberti Vw",
+              "team": "",
+              "gap": "+2.916"
+            },
+            {
+              "pos": 7,
+              "number": "76",
+              "driver": "Juan José Suárez",
+              "team": "Ford",
+              "gap": "+3.595"
+            },
+            {
+              "pos": 8,
+              "number": "15",
+              "driver": "Jose Alberto Goya",
+              "team": "Ford",
+              "gap": "+3.725"
+            },
+            {
+              "pos": 9,
+              "number": "88",
+              "driver": "Alvaro Oroza",
+              "team": "Ford",
+              "gap": "+4.247"
+            },
+            {
+              "pos": 10,
+              "number": "129",
+              "driver": "Bruno Boccanera",
+              "team": "Ford",
+              "gap": "+5.326"
+            },
+            {
+              "pos": 11,
+              "number": "66",
+              "driver": "Gonzalo Aramburu",
+              "team": "Toyota",
+              "gap": "+5.670"
+            },
+            {
+              "pos": 12,
+              "number": "14",
+              "driver": "Nestor Omar Goya",
+              "team": "Ford",
+              "gap": "+9.153"
+            },
+            {
+              "pos": 13,
+              "number": "123",
+              "driver": "Santilli Pazos Nicanor Foton",
+              "team": "",
+              "gap": "+147.036"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/924/ver"
+          }
+        },
+        {
+          "id": "tcppk-2026-8-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-09-27T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tcm-2026-9",
       "seriesId": "tc-mouras",
       "round": 9,
@@ -102879,30 +103008,6 @@
           "start": "2026-09-27T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 35
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tcppk-2026-8",
-      "seriesId": "tc-pista-pick-up",
-      "round": 8,
-      "name": "Fecha 8 · Balcarce",
-      "circuit": {
-        "name": "Juan Manuel Fangio-BALCARCE",
-        "city": "Balcarce",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcppk-2026-8-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-09-27T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
         }
       ],
       "source": "ACTC (calendario)"
@@ -107729,9 +107834,9 @@
       "eventsWithTimes": 18
     },
     "timing": {
-      "documents": 720,
-      "pagesFetched": 11,
-      "eventsWithResults": 52
+      "documents": 722,
+      "pagesFetched": 12,
+      "eventsWithResults": 53
     },
     "openf1": {
       "sessions": 131,
@@ -107777,6 +107882,7 @@
     }
   },
   "failures": [
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026 (se conservan los resultados anteriores)",
     "Se descartaron resultados de 1 sesiones que todavía no se corrieron (eran de otra fecha)"
   ]
 }
