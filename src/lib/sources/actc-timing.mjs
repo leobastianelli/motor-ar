@@ -100,7 +100,7 @@ const FIRST_NAMES = new Set(
 const MAKE_WORDS = {
   chevrolet: "Chevrolet", camaro: "Chevrolet", s10: "Chevrolet", ford: "Ford", mustang: "Ford", ranger: "Ford", toyota: "Toyota", camry: "Toyota",
   hilux: "Toyota", toyoya: "Toyota", dodge: "Dodge", challenger: "Dodge", torino: "Torino", mercedes: "Mercedes-Benz", benz: "Mercedes-Benz", bmw: "BMW", ram: "RAM",
-  volkswagen: "Volkswagen", amarok: "Volkswagen", nissan: "Nissan", frontier: "Nissan", fiat: "Fiat",
+  volkswagen: "Volkswagen", vw: "Volkswagen", amarok: "Volkswagen", nissan: "Nissan", frontier: "Nissan", fiat: "Fiat", foton: "Foton",
 };
 const NOISE = new Set([
   "tc", "tcp", "tcm", "tcpm", "tcpk", "tcppk", "actc", "n", "no", "piloto", "nombre", "marca", "apellido",
