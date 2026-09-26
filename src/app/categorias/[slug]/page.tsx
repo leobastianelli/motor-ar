@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { breadcrumb, JsonLd } from "@/components/json-ld";
+import { breadcrumb, itemListJsonLd, JsonLd, seasonEventSummary } from "@/components/json-ld";
 import { AgregarCalendario } from "@/components/agregar-calendario";
 import { CalendarioPlegable } from "@/components/calendario-plegable";
 import { AutoRefresh } from "@/components/live-clock";
@@ -193,6 +193,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
           "@context": "https://schema.org",
           "@graph": [
             { "@type": "SportsOrganization", name: series.name, sport: "Automovilismo", ...(series.founded ? { foundingDate: String(series.founded) } : {}), parentOrganization: { "@type": "Organization", name: series.org } },
+            ...(events.length > 0 ? [itemListJsonLd(events.map(seasonEventSummary))] : []),
             breadcrumb([
               ["Inicio", "/"],
               ["Categorías", "/categorias"],

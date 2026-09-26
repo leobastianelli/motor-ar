@@ -5,9 +5,9 @@
 // Sin credenciales de Telegram no se manda nada real, así que tampoco se reserva: si se reservara sin mandar, quedaría marcado como enviado
 // para siempre aunque nadie lo haya visto.
 import { borradores, X_LIMIT, xIntentUrl, xLength } from "./redes-core.mjs";
-import { sendTelegram } from "./monitor/telegram.mjs";
+import { sendTelegram, sendTelegramPhoto } from "./monitor/telegram.mjs";
 
-const KIND_LABEL = { agenda: "agenda del finde", resultado: "resultado", horario: "horario" };
+const KIND_LABEL = { agenda: "agenda del finde", resultado: "resultado", horario: "horario", resumen: "así quedó el finde" };
 
 // Claves que esta instancia ya sabe que están en `redes_enviados` (las mandó o encontró la reserva tomada). Un borrador sigue siendo candidato
 // durante horas después de mandarse: sin esto, cada llamada de /api/pulso (cada 5 min) volvería a preguntarle a Neon por cada uno y no lo dejaría
@@ -63,7 +63,9 @@ export async function enviarBorradores({ raw, now, catalog, manual = {}, events,
       continue;
     }
     try {
-      await sendTelegram(draftMessage(d), { ...creds, replyMarkup: draftKeyboard(d) });
+      // La agenda del viernes lleva la placa (image) adjunta como foto; el resto son mensajes de texto simples.
+      if (d.image) await sendTelegramPhoto(d.image, draftMessage(d), { ...creds, replyMarkup: draftKeyboard(d) });
+      else await sendTelegram(draftMessage(d), { ...creds, replyMarkup: draftKeyboard(d) });
       enviados.push({ key: d.key, kind: d.kind });
       conocidos.add(d.key);
     } catch (error) {
