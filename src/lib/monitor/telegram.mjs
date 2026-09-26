@@ -81,3 +81,32 @@ export async function sendTelegram(text, { token, chatId, fetchImpl = fetch, rep
   }
   return { sent };
 }
+
+/**
+ * Manda una foto a Telegram (la placa del viernes) con el mismo botón "Publicar en X" en el pie. `photoUrl` tiene que
+ * ser pública: Telegram la descarga sola, no hace falta subir el archivo. `caption` admite hasta 1024 caracteres
+ * (los borradores del sitio entran de sobra). Si `sendPhoto` falla (Telegram no pudo bajar la imagen, error de red),
+ * cae a `sendTelegram` con el mismo texto como mensaje simple, como se mandaba antes de adjuntar la imagen.
+ */
+export async function sendTelegramPhoto(photoUrl, caption, { token, chatId, fetchImpl = fetch, replyMarkup } = {}) {
+  if (!token || !chatId) {
+    console.log(`\n[telegram simulado: falta TELEGRAM_BOT_TOKEN o TELEGRAM_CHAT_ID]\n[foto] ${photoUrl}\n${caption}\n`);
+    return { sent: 0, simulated: true };
+  }
+  try {
+    const res = await fetchImpl(`https://api.telegram.org/bot${token}/sendPhoto`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chatId,
+        photo: photoUrl,
+        caption,
+        ...(replyMarkup ? { reply_markup: replyMarkup } : {}),
+      }),
+    });
+    if (!res.ok) throw new Error(`Telegram respondió ${res.status}`);
+    return { sent: 1 };
+  } catch {
+    return sendTelegram(caption, { token, chatId, fetchImpl, replyMarkup });
+  }
+}
