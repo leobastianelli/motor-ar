@@ -1,5 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
+import { decodeBody } from "./season-body.mjs";
 import { writeVersion, MAX_ATTEMPTS } from "./season-store-write.mjs";
 
 const res = [{ pos: 1, driver: "A" }];
@@ -14,16 +15,16 @@ function fakeSql(rows, before = () => {}) {
     const q = strings.join("?");
     if (q.includes("SELECT id, origin")) {
       const last = rows.at(-1);
-      return last ? [{ id: last.id, origin: last.origin, createdAt: "c", body: last.body }] : [];
+      return last ? [{ id: last.id, origin: last.origin, createdAt: "c", body: last.body, body_br: last.body_br }] : [];
     }
     if (q.includes("INSERT INTO season_versions")) {
       before(inserts.length);
       inserts.push(values);
-      const [parent, origin, , , body] = values;
+      const [parent, origin, , , body_br, body] = values;
       const max = rows.at(-1)?.id ?? null;
       if (max !== parent) return [];
       const id = (max ?? 0) + 1;
-      rows.push({ id, origin, body });
+      rows.push({ id, origin, body_br, body });
       return [{ id }];
     }
     if (q.includes("DELETE FROM")) return [];
@@ -53,7 +54,7 @@ test("carrera: otro escritor entra antes de insertar y su dato se conserva", asy
   });
   const out = await writeVersion(sql, { raw: raw([ev("e1"), ev("e2")]), parentId: 1, origin: "sync" });
   assert.deepEqual([out.unchanged, out.id], [false, 3]);
-  const saved = JSON.parse(rows.at(-1).body);
+  const saved = JSON.parse(decodeBody(rows.at(-1)));
   assert.deepEqual(saved.events.map((e) => e.id), ["e1", "e2"]);
   assert.deepEqual(saved.events[0].sessions[0].results, res);
 });
@@ -79,3 +80,13 @@ test("tabla vacía: primera versión sin padre", async () => {
   const out = await writeVersion(sql, { raw: raw([ev("e1")]), parentId: null, origin: "seed" });
   assert.equal(out.id, 1);
 });
+
+test("la versión nueva se escribe comprimida y también plana (compatibilidad), y se lee la comprimida", async () => {
+  const rows = [row(1, raw([ev("a")]))];
+  const { sql } = fakeSql(rows);
+  await writeVersion(sql, { raw: raw([ev("a", res)]), parentId: 1, origin: "sync" });
+  const nueva = rows.at(-1);
+  assert.ok(nueva.body_br && nueva.body_br.length < nueva.body.length);
+  assert.deepEqual(JSON.parse(decodeBody({ body_br: nueva.body_br })), JSON.parse(nueva.body));
+});
+
