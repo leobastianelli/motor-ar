@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T18:39:20.297Z",
+  "generatedAt": "2026-09-26T19:14:55.837Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -1173,9 +1173,7 @@
       ],
       "slug": "facundo-luduena",
       "name": "Facundo Ludueña",
-      "aliases": [
-        "Facundo Ludueña Mouras"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -2358,9 +2356,7 @@
       ],
       "slug": "juan-jose-conde",
       "name": "Juan José Conde",
-      "aliases": [
-        "Juan Jose Conde"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
