@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T19:24:57.889Z",
+  "generatedAt": "2026-09-27T20:18:50.992Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -103439,12 +103439,214 @@
           }
         },
         {
+          "id": "tcm-2026-9-serie-1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-09-27T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "1:41.928"
+            },
+            {
+              "pos": 2,
+              "number": "75",
+              "driver": "Matias Frano",
+              "team": "Ford",
+              "gap": "+-0.446"
+            },
+            {
+              "pos": 3,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "+0.004"
+            },
+            {
+              "pos": 4,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "+-0.026"
+            },
+            {
+              "pos": 5,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Dodge",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 6,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+1.584"
+            },
+            {
+              "pos": 7,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+1.195"
+            },
+            {
+              "pos": 8,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+2 vueltas"
+            },
+            {
+              "pos": 9,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Dodge",
+              "gap": "+2 vueltas"
+            },
+            {
+              "pos": 10,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "+2 vueltas"
+            },
+            {
+              "pos": 11,
+              "number": "121",
+              "driver": "Francisco Nonnenmacher",
+              "team": "Ford",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 12,
+              "number": "222",
+              "driver": "Marcelo Beraldi",
+              "team": "Ford",
+              "gap": "+3.888"
+            },
+            {
+              "pos": 13,
+              "number": "118",
+              "driver": "Fabrizio Maggini",
+              "team": "Ford",
+              "gap": "+1 vuelta"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/965/ver"
+          }
+        },
+        {
           "id": "tcm-2026-9-final",
           "kind": "final",
           "name": "Final",
           "start": "2026-09-27T12:00:00-03:00",
           "timeKnown": false,
-          "durationMin": 35
+          "durationMin": 35,
+          "results": [
+            {
+              "pos": 1,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "1:41.561"
+            },
+            {
+              "pos": 2,
+              "number": "118",
+              "driver": "Fabrizio Maggini",
+              "team": "Ford",
+              "gap": "+0.762"
+            },
+            {
+              "pos": 3,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Dodge",
+              "gap": "+0.497"
+            },
+            {
+              "pos": 4,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+1.174"
+            },
+            {
+              "pos": 5,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+1.192"
+            },
+            {
+              "pos": 6,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+1.277"
+            },
+            {
+              "pos": 7,
+              "number": "121",
+              "driver": "Francisco Nonnenmacher",
+              "team": "Ford",
+              "gap": "+1.581"
+            },
+            {
+              "pos": 8,
+              "number": "222",
+              "driver": "Marcelo Beraldi",
+              "team": "Ford",
+              "gap": "+2.063"
+            },
+            {
+              "pos": 9,
+              "number": "141",
+              "driver": "Francisco V Luengo",
+              "team": "Chevrolet",
+              "gap": "+0.137"
+            },
+            {
+              "pos": 10,
+              "number": "23",
+              "driver": "Alejandro V Martinez",
+              "team": "Dodge",
+              "gap": "+1.407"
+            },
+            {
+              "pos": 11,
+              "number": "26",
+              "driver": "Valentino V Alaux",
+              "team": "Dodge",
+              "gap": "+-0.310"
+            },
+            {
+              "pos": 12,
+              "number": "75",
+              "driver": "Matias V Frano",
+              "team": "Ford",
+              "gap": "+-0.126"
+            },
+            {
+              "pos": 13,
+              "number": "139",
+              "driver": "Santiago V Arrigoni",
+              "team": "Dodge",
+              "gap": "+2 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/967/ver"
+          }
         }
       ],
       "source": "ACTC (calendario)"
@@ -103743,12 +103945,186 @@
           }
         },
         {
+          "id": "tcpm-2026-9-serie-1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-09-27T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": "1:43.371"
+            },
+            {
+              "pos": 2,
+              "number": "145",
+              "driver": "Iñaki Arrias",
+              "team": "Ford",
+              "gap": "+0.024"
+            },
+            {
+              "pos": 3,
+              "number": "199",
+              "driver": "Damián Pérez",
+              "team": "Dodge",
+              "gap": "+1.872"
+            },
+            {
+              "pos": 4,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "+1.456"
+            },
+            {
+              "pos": 5,
+              "number": "44",
+              "driver": "Juan José Conde",
+              "team": "Chevrolet",
+              "gap": "+3.414"
+            },
+            {
+              "pos": 6,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": "+9.760"
+            },
+            {
+              "pos": 7,
+              "number": "122",
+              "driver": "Dante Rubiera Hainze",
+              "team": "Ford",
+              "gap": "+5.302"
+            },
+            {
+              "pos": 8,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 9,
+              "number": "48",
+              "driver": "Mauricio Etcheberry",
+              "team": "Chevrolet",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 10,
+              "number": "111",
+              "driver": "Ignacio V Quintana",
+              "team": "Torino",
+              "gap": "+4 vueltas"
+            },
+            {
+              "pos": 11,
+              "number": "74",
+              "driver": "Facundo V Ludueña Vuelta",
+              "team": "Chevrolet",
+              "gap": "+4 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/964/ver"
+          }
+        },
+        {
           "id": "tcpm-2026-9-final",
           "kind": "final",
           "name": "Final",
           "start": "2026-09-27T12:00:00-03:00",
           "timeKnown": false,
-          "durationMin": 30
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": "1:42.605"
+            },
+            {
+              "pos": 2,
+              "number": "145",
+              "driver": "Iñaki Arrias",
+              "team": "Ford",
+              "gap": "+0.070"
+            },
+            {
+              "pos": 3,
+              "number": "122",
+              "driver": "Dante Rubiera Hainze",
+              "team": "Ford",
+              "gap": "+-0.264"
+            },
+            {
+              "pos": 4,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "+0.441"
+            },
+            {
+              "pos": 5,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": "+1.415"
+            },
+            {
+              "pos": 6,
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": "+1.807"
+            },
+            {
+              "pos": 7,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": "+2.708"
+            },
+            {
+              "pos": 8,
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": "+2.453"
+            },
+            {
+              "pos": 9,
+              "number": "48",
+              "driver": "Mauricio Etcheberry",
+              "team": "Chevrolet",
+              "gap": "+4.020"
+            },
+            {
+              "pos": 10,
+              "number": "44",
+              "driver": "Juan José Conde",
+              "team": "Chevrolet",
+              "gap": "+0.732"
+            },
+            {
+              "pos": 11,
+              "number": "199",
+              "driver": "Damian V Perez",
+              "team": "Dodge",
+              "gap": "+0.386"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/966/ver"
+          }
         }
       ],
       "source": "ACTC (calendario)"
@@ -104327,9 +104703,16 @@
             {
               "pos": 8,
               "number": "77",
-              "driver": "Jose Ciantini",
+              "driver": "Jose Ciantini Vuelta",
               "team": "Toyota",
               "gap": "+1 vuelta"
+            },
+            {
+              "pos": 9,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Toyota",
+              "gap": "+5 vueltas"
             }
           ],
           "resultsSource": {
@@ -104343,7 +104726,140 @@
           "name": "Final",
           "start": "2026-09-27T12:00:00-03:00",
           "timeKnown": false,
-          "durationMin": 35
+          "durationMin": 35,
+          "results": [
+            {
+              "pos": 1,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": "41:27.488"
+            },
+            {
+              "pos": 2,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Ford",
+              "gap": "+1.790"
+            },
+            {
+              "pos": 3,
+              "number": "112",
+              "driver": "Lucas Valle",
+              "team": "Toyota",
+              "gap": "+2.349"
+            },
+            {
+              "pos": 4,
+              "number": "121",
+              "driver": "Omar Martinez",
+              "team": "Toyota",
+              "gap": "+3.321"
+            },
+            {
+              "pos": 5,
+              "number": "115",
+              "driver": "Diego Ciantini",
+              "team": "Ford",
+              "gap": "+5.864"
+            },
+            {
+              "pos": 6,
+              "number": "126",
+              "driver": "Thomas Ricciardi",
+              "team": "Ford",
+              "gap": "+7.574"
+            },
+            {
+              "pos": 7,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": "+18.583"
+            },
+            {
+              "pos": 8,
+              "number": "77",
+              "driver": "Jose Ciantini",
+              "team": "Toyota",
+              "gap": "+19.846"
+            },
+            {
+              "pos": 9,
+              "number": "11",
+              "driver": "Gaston Mazzacane Vuelta",
+              "team": "Foton",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 10,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
+              "gap": "+2 vueltas"
+            },
+            {
+              "pos": 11,
+              "number": "214",
+              "driver": "Santiago Mangoni",
+              "team": "Chevrolet",
+              "gap": "+6 vueltas"
+            },
+            {
+              "pos": 12,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Toyota",
+              "gap": "+7 vueltas"
+            },
+            {
+              "pos": 13,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": "+11 vueltas"
+            },
+            {
+              "pos": 14,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Toyota",
+              "gap": "+11 vueltas"
+            },
+            {
+              "pos": 15,
+              "number": "107",
+              "driver": "Tobías Martínez",
+              "team": "Chevrolet",
+              "gap": "+15 vueltas"
+            },
+            {
+              "pos": 16,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
+              "gap": "+16 vueltas"
+            },
+            {
+              "pos": 17,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": "+17 vueltas"
+            },
+            {
+              "pos": 18,
+              "number": "3",
+              "driver": "Werner",
+              "team": "Foton",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/963/ver"
+          }
         }
       ],
       "source": "ACTC (calendario)"
@@ -104789,7 +105305,15 @@
               "number": "14",
               "driver": "Nestor Omar Goya",
               "team": "Ford",
-              "gap": "+-520.531"
+              "gap": "+5 vueltas"
+            },
+            {
+              "pos": 6,
+              "number": "133",
+              "driver": "Alberti",
+              "team": "Volkswagen",
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -104836,7 +105360,7 @@
             {
               "pos": 5,
               "number": "88",
-              "driver": "Alvaro Oroza",
+              "driver": "Alvaro Oroza Vuelta",
               "team": "Ford",
               "gap": "+1 vuelta"
             },
@@ -104866,13 +105390,20 @@
               "number": "10",
               "driver": "Luis Catelli",
               "team": "Toyota",
-              "gap": "+1 vuelta"
+              "gap": "+18 vueltas"
             },
             {
               "pos": 10,
               "number": "132",
               "driver": "Tomas Pellandino",
               "team": "Ford",
+              "gap": "+19 vueltas"
+            },
+            {
+              "pos": 11,
+              "number": "133",
+              "driver": "Alberti",
+              "team": "Volkswagen",
               "gap": "",
               "status": "Sin tiempo"
             }
@@ -109883,8 +110414,8 @@
       "eventsWithTimes": 18
     },
     "timing": {
-      "documents": 760,
-      "pagesFetched": 28,
+      "documents": 765,
+      "pagesFetched": 33,
       "eventsWithResults": 56
     },
     "openf1": {
