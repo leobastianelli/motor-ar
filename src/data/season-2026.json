@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T14:29:43.249Z",
+  "generatedAt": "2026-09-27T15:09:15.852Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -104191,6 +104191,83 @@
           }
         },
         {
+          "id": "tcpk-2026-8-serie-1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-09-27T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "Foton",
+              "gap": "1:41.566"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": "+0.355"
+            },
+            {
+              "pos": 3,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
+              "gap": "+0.617"
+            },
+            {
+              "pos": 4,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": "+0.622"
+            },
+            {
+              "pos": 5,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": "+1.004"
+            },
+            {
+              "pos": 6,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
+              "gap": "+0.890"
+            },
+            {
+              "pos": 7,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": "+1.385"
+            },
+            {
+              "pos": 8,
+              "number": "107",
+              "driver": "Tobías Martínez",
+              "team": "Chevrolet",
+              "gap": "+0.603"
+            },
+            {
+              "pos": 9,
+              "number": "112",
+              "driver": "Lucas Valle",
+              "team": "Toyota",
+              "gap": "+1.481"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/951/ver"
+          }
+        },
+        {
           "id": "tcpk-2026-8-final",
           "kind": "final",
           "name": "Final",
@@ -104548,57 +104625,57 @@
           "results": [
             {
               "pos": 1,
-              "number": "144",
-              "driver": "Faustino Cifre",
-              "team": "Ford",
-              "gap": "1:43.544"
-            },
-            {
-              "pos": 2,
               "number": "107",
               "driver": "Sganga Antonino",
               "team": "Ford",
-              "gap": "+0.357"
+              "gap": "10:40.354"
             },
             {
-              "pos": 3,
+              "pos": 2,
               "number": "123",
               "driver": "Nicanor Santilli Pazos",
               "team": "Foton",
-              "gap": "+0.118"
+              "gap": "+1.555"
             },
             {
-              "pos": 4,
+              "pos": 3,
               "number": "10",
               "driver": "Luis Catelli",
               "team": "Toyota",
-              "gap": "+1.911"
+              "gap": "+2.068"
+            },
+            {
+              "pos": 4,
+              "number": "144",
+              "driver": "Cifre Faustino Recargo",
+              "team": "Ford",
+              "gap": "+4.323"
             },
             {
               "pos": 5,
               "number": "132",
-              "driver": "Tomas Pellandino",
+              "driver": "Tomas Pellandino Vuelta",
               "team": "Ford",
-              "gap": "+5.205"
+              "gap": "+1 vuelta"
             },
             {
               "pos": 6,
               "number": "15",
               "driver": "Jose Alberto Goya",
               "team": "Ford",
-              "gap": "+4.614"
+              "gap": "+3 vueltas"
             },
             {
               "pos": 7,
               "number": "66",
               "driver": "Gonzalo Aramburu",
               "team": "Toyota",
-              "gap": "+47.176"
+              "gap": "+4 vueltas"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/949/ver"
+            "url": "https://tiempos.actc.org.ar/resultados/952/ver"
           }
         },
         {
@@ -104614,40 +104691,40 @@
               "number": "127",
               "driver": "Nahuel Cordone",
               "team": "Ford",
-              "gap": "1:44.006"
+              "gap": "8:45.462"
             },
             {
               "pos": 2,
-              "number": "133",
-              "driver": "Juan Pablo Alberti",
-              "team": "Volkswagen",
-              "gap": "+-0.178"
-            },
-            {
-              "pos": 3,
               "number": "76",
               "driver": "Juan José Suárez",
               "team": "Ford",
-              "gap": "+1.380"
+              "gap": "+8.471"
             },
             {
-              "pos": 4,
+              "pos": 3,
               "number": "67",
               "driver": "Santiago Biagi",
               "team": "Toyota",
-              "gap": "+0.064"
+              "gap": "+9.455"
             },
             {
-              "pos": 5,
+              "pos": 4,
               "number": "88",
               "driver": "Alvaro Oroza",
               "team": "Ford",
-              "gap": "+3.690"
+              "gap": "+22.084"
+            },
+            {
+              "pos": 5,
+              "number": "14",
+              "driver": "Nestor Omar Goya",
+              "team": "Ford",
+              "gap": "+-520.531"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/950/ver"
+            "url": "https://tiempos.actc.org.ar/resultados/953/ver"
           }
         },
         {
@@ -109570,7 +109647,8 @@
             "https://campeones.com.ar/vivian-fue-el-mejor-del-shakedown-de-tc2000-en-el-zonda/",
             "https://campeones.com.ar/todo-listo-para-la-carrera-homenaje-a-henry-martin-de-tc2000-en-el-zonda-eduardo-copello/",
             "https://campeones.com.ar/la-preparacion-de-henry-martin-para-su-carrera-homenaje-en-tc2000/",
-            "https://campeones.com.ar/rossi-lidero-la-tanda-de-tanques-llenos-de-tc2000-en-el-zonda/"
+            "https://campeones.com.ar/rossi-lidero-la-tanda-de-tanques-llenos-de-tc2000-en-el-zonda/",
+            "https://campeones.com.ar/tc2000-grilla-de-largada-de-la-carrera-homenaje-a-henry-martin/"
           ]
         }
       ],
@@ -109620,8 +109698,8 @@
       "eventsWithTimes": 18
     },
     "timing": {
-      "documents": 748,
-      "pagesFetched": 25,
+      "documents": 752,
+      "pagesFetched": 26,
       "eventsWithResults": 56
     },
     "openf1": {
@@ -109666,7 +109744,6 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40",
     "Se conservaron fechas que las fuentes dejaron de traer: tc2000 1",
     "Se descartaron resultados de 1 sesiones que todavía no se corrieron (eran de otra fecha)"
   ]
