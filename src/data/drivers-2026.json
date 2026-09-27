@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T16:55:16.696Z",
+  "generatedAt": "2026-09-27T20:14:56.750Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -138,7 +138,7 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-07-25",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "alejandro inella",
@@ -161,11 +161,14 @@
     {
       "key": "alejandro martinez",
       "keys": [
-        "alejandro martinez"
+        "alejandro martinez",
+        "alejandro martinez v"
       ],
       "slug": "alejandro-martinez",
       "name": "Alejandro Martínez",
-      "aliases": [],
+      "aliases": [
+        "Alejandro V Martinez"
+      ],
       "series": [
         "tc-mouras",
         "tc-pista"
@@ -179,7 +182,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "alfonso domenech",
@@ -204,11 +207,14 @@
     {
       "key": "alvaro oroza",
       "keys": [
-        "alvaro oroza"
+        "alvaro oroza",
+        "alvaro oroza vuelta"
       ],
       "slug": "alvaro-oroza",
       "name": "Alvaro Oroza",
-      "aliases": [],
+      "aliases": [
+        "Alvaro Oroza Vuelta"
+      ],
       "series": [
         "tc-pista-pick-up"
       ],
@@ -634,11 +640,14 @@
     {
       "key": "damian perez",
       "keys": [
-        "damian perez"
+        "damian perez",
+        "damian perez v"
       ],
       "slug": "damian-perez",
       "name": "Damián Pérez",
-      "aliases": [],
+      "aliases": [
+        "Damian V Perez"
+      ],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -719,7 +728,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "azar diego",
@@ -952,7 +961,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "esteban mancuso",
@@ -972,7 +981,7 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "eugenio provens",
@@ -1094,7 +1103,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "aldrighetti facundo",
@@ -1186,11 +1195,14 @@
       "key": "facundo luduena",
       "keys": [
         "facundo luduena",
-        "facundo luduena mouras"
+        "facundo luduena mouras",
+        "facundo luduena v vuelta"
       ],
       "slug": "facundo-luduena",
       "name": "Facundo Ludueña",
-      "aliases": [],
+      "aliases": [
+        "Facundo V Ludueña Vuelta"
+      ],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -1333,11 +1345,14 @@
     {
       "key": "francisco luengo",
       "keys": [
-        "francisco luengo"
+        "francisco luengo",
+        "francisco luengo v"
       ],
       "slug": "francisco-luengo",
       "name": "Francisco Luengo",
-      "aliases": [],
+      "aliases": [
+        "Francisco V Luengo"
+      ],
       "series": [
         "tc-mouras"
       ],
@@ -1348,7 +1363,7 @@
         "tc-mouras": "Chevrolet"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "francisco nonnenmacher",
@@ -1368,7 +1383,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-09-26",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "bodrato franco mionetto",
@@ -1605,11 +1620,14 @@
       "key": "gaston mazzacane",
       "keys": [
         "gaston mazzacane",
-        "foton gaston mazzacane"
+        "foton gaston mazzacane",
+        "gaston mazzacane vuelta"
       ],
       "slug": "gaston-mazzacane-foton",
       "name": "Gaston Mazzacane Foton",
-      "aliases": [],
+      "aliases": [
+        "Gaston Mazzacane Vuelta"
+      ],
       "series": [
         "tc-pick-up",
         "tc-pista-pick-up"
@@ -1714,7 +1732,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "hernan palazzo",
@@ -1873,11 +1891,14 @@
     {
       "key": "ignacio quintana",
       "keys": [
-        "ignacio quintana"
+        "ignacio quintana",
+        "ignacio quintana v"
       ],
       "slug": "ignacio-quintana",
       "name": "Ignacio Quintana",
-      "aliases": [],
+      "aliases": [
+        "Ignacio V Quintana"
+      ],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -2182,11 +2203,14 @@
     {
       "key": "ciantini jose",
       "keys": [
-        "ciantini jose"
+        "ciantini jose",
+        "ciantini jose vuelta"
       ],
       "slug": "jose-ciantini",
       "name": "Jose Ciantini",
-      "aliases": [],
+      "aliases": [
+        "Jose Ciantini Vuelta"
+      ],
       "series": [
         "tc-pick-up"
       ],
@@ -2621,7 +2645,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "catalan juan magni tomas",
@@ -3109,7 +3133,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "guevara marcelo",
@@ -3485,11 +3509,14 @@
     {
       "key": "frano matias",
       "keys": [
-        "frano matias"
+        "frano matias",
+        "frano matias v"
       ],
       "slug": "matias-frano",
       "name": "Matias Frano",
-      "aliases": [],
+      "aliases": [
+        "Matias V Frano"
+      ],
       "series": [
         "tc-pick-up",
         "tc-pista-pick-up",
@@ -3506,7 +3533,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-04-25",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "jalaf matias",
@@ -3592,7 +3619,7 @@
         "tc-pista-mouras": "Chevrolet"
       },
       "firstSeen": "2026-09-26",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "lambiris mauricio",
@@ -3890,7 +3917,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "moscardini nicolas",
@@ -4238,11 +4265,14 @@
       "key": "arrigoni santiago",
       "keys": [
         "arrigoni santiago",
-        "arrigone santiago"
+        "arrigone santiago",
+        "arrigoni santiago v"
       ],
       "slug": "santiago-arrigoni",
       "name": "Santiago Arrigoni",
-      "aliases": [],
+      "aliases": [
+        "Santiago V Arrigoni"
+      ],
       "series": [
         "tc-mouras",
         "tc-pista"
@@ -4256,7 +4286,7 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "biagi santiago",
@@ -4748,11 +4778,14 @@
     {
       "key": "alaux valentino",
       "keys": [
-        "alaux valentino"
+        "alaux valentino",
+        "alaux v valentino"
       ],
       "slug": "valentino-alaux",
       "name": "Valentino Alaux",
-      "aliases": [],
+      "aliases": [
+        "Valentino V Alaux"
+      ],
       "series": [
         "tc-mouras"
       ],
@@ -4763,7 +4796,7 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "quattrocchi valentino",
