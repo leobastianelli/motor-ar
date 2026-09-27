@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T18:34:42.453Z",
+  "generatedAt": "2026-09-27T19:24:57.889Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -104803,7 +104803,84 @@
           "name": "Final",
           "start": "2026-09-27T12:00:00-03:00",
           "timeKnown": false,
-          "durationMin": 30
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "107",
+              "driver": "Sganga Antonino",
+              "team": "Ford",
+              "gap": "35:01.255"
+            },
+            {
+              "pos": 2,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+0.205"
+            },
+            {
+              "pos": 3,
+              "number": "14",
+              "driver": "Nestor Omar Goya",
+              "team": "Ford",
+              "gap": "+6.367"
+            },
+            {
+              "pos": 4,
+              "number": "15",
+              "driver": "Jose Alberto Goya",
+              "team": "Ford",
+              "gap": "+49.363"
+            },
+            {
+              "pos": 5,
+              "number": "88",
+              "driver": "Alvaro Oroza",
+              "team": "Ford",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 6,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Foton",
+              "gap": "+3 vueltas"
+            },
+            {
+              "pos": 7,
+              "number": "127",
+              "driver": "Nahuel Cordone",
+              "team": "Ford",
+              "gap": "+4 vueltas"
+            },
+            {
+              "pos": 8,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Toyota",
+              "gap": "+8 vueltas"
+            },
+            {
+              "pos": 9,
+              "number": "10",
+              "driver": "Luis Catelli",
+              "team": "Toyota",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 10,
+              "number": "132",
+              "driver": "Tomas Pellandino",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/962/ver"
+          }
         }
       ],
       "source": "ACTC (calendario)"
@@ -109806,8 +109883,8 @@
       "eventsWithTimes": 18
     },
     "timing": {
-      "documents": 758,
-      "pagesFetched": 27,
+      "documents": 760,
+      "pagesFetched": 28,
       "eventsWithResults": 56
     },
     "openf1": {
@@ -109852,7 +109929,6 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/10/driverstandings.json?limit=40",
     "Se conservaron fechas que las fuentes dejaron de traer: tc2000 1",
     "Se descartaron resultados de 1 sesiones que todavía no se corrieron (eran de otra fecha)"
   ]
