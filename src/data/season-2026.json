@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T17:45:25.755Z",
+  "generatedAt": "2026-09-27T18:34:42.453Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -93493,7 +93493,7 @@
               "number": "7",
               "driver": "Dino Beganovic",
               "team": "DAMS Lucas Oil",
-              "gap": "1:3:29.190",
+              "gap": "1:03:29.190",
               "points": 25
             },
             {
@@ -93501,7 +93501,7 @@
               "number": "15",
               "driver": "Alex Dunne",
               "team": "Rodin Motorsport",
-              "gap": "+7.32",
+              "gap": "+7.320",
               "points": 19
             },
             {
@@ -93523,9 +93523,9 @@
             {
               "pos": 5,
               "number": "20",
-              "driver": "Emerson Fittipaldi",
+              "driver": "E. Fittipaldi",
               "team": "AIX Racing",
-              "gap": "+19.63",
+              "gap": "+19.630",
               "points": 10
             },
             {
@@ -93664,8 +93664,8 @@
             }
           ],
           "resultsSource": {
-            "name": "FIA Formula 2 · clasificación oficial",
-            "url": "https://www.fiaformula2.com/en/racing/2026/madrid"
+            "name": "FIA · clasificación oficial",
+            "url": "https://www.fia.com/events/formula-2-championship/season-2026/madrid/feature-race-classification"
           }
         }
       ],
@@ -107018,100 +107018,100 @@
     "tc-mouras": [
       {
         "pos": 1,
-        "driver": "Francisco Luengo",
+        "driver": "Nicolás Jaime",
         "team": "",
-        "points": 332,
+        "points": 366,
         "wins": 3
       },
       {
         "pos": 2,
-        "driver": "Nicolás Jaime",
+        "driver": "Francisco Luengo",
         "team": "",
-        "points": 322,
-        "wins": 2
+        "points": 358.5,
+        "wins": 3
       },
       {
         "pos": 3,
         "driver": "Valentino Alaux",
         "team": "",
-        "points": 266.5,
+        "points": 296,
         "wins": 1
       },
       {
         "pos": 4,
         "driver": "Fabrizio Maggini",
         "team": "",
-        "points": 245,
+        "points": 282,
         "wins": 1
       },
       {
         "pos": 5,
         "driver": "Santiago Arrigoni",
         "team": "",
-        "points": 242.5,
+        "points": 269.5,
         "wins": 0
       },
       {
         "pos": 6,
         "driver": "Juan Tartaglino",
         "team": "",
-        "points": 212,
+        "points": 243,
         "wins": 0
       },
       {
         "pos": 7,
         "driver": "Esteban Luna",
         "team": "",
-        "points": 203.5,
+        "points": 235,
         "wins": 0
       },
       {
         "pos": 8,
         "driver": "Alejandro Martínez",
         "team": "",
-        "points": 194,
+        "points": 220,
         "wins": 0
       },
       {
         "pos": 9,
+        "driver": "Marcelo Beraldi",
+        "team": "",
+        "points": 215.5,
+        "wins": 0
+      },
+      {
+        "pos": 10,
+        "driver": "Esteban Mancuso",
+        "team": "",
+        "points": 212,
+        "wins": 0
+      },
+      {
+        "pos": 11,
         "driver": "Thiago Falivene",
         "team": "",
         "points": 188.5,
         "wins": 1
       },
       {
-        "pos": 10,
-        "driver": "Marcelo Beraldi",
-        "team": "",
-        "points": 188.5,
-        "wins": 0
-      },
-      {
-        "pos": 11,
+        "pos": 12,
         "driver": "Santino Ortiz",
         "team": "",
         "points": 180,
         "wins": 0
       },
       {
-        "pos": 12,
-        "driver": "Esteban Mancuso",
-        "team": "",
-        "points": 175,
-        "wins": 0
-      },
-      {
         "pos": 13,
-        "driver": "Alan Denis Cifre",
+        "driver": "Aldo Ortiz",
         "team": "",
-        "points": 59,
+        "points": 91.5,
         "wins": 0
       },
       {
         "pos": 14,
-        "driver": "Aldo Ortiz",
+        "driver": "Alan Denis Cifre",
         "team": "",
-        "points": 58,
+        "points": 59,
         "wins": 0
       },
       {
@@ -107134,49 +107134,70 @@
         "team": "",
         "points": 51,
         "wins": 0
+      },
+      {
+        "pos": 18,
+        "driver": "Arrias Iñaki",
+        "team": "—",
+        "points": 2,
+        "wins": 1
+      },
+      {
+        "pos": 19,
+        "driver": "Conde Juan José",
+        "team": "—",
+        "points": 0,
+        "wins": 0
+      },
+      {
+        "pos": 20,
+        "driver": "Etcheberry Mauricio",
+        "team": "—",
+        "points": 0,
+        "wins": 0
       }
     ],
     "tc-pista-mouras": [
       {
         "pos": 1,
-        "driver": "Ignacio Lovich",
+        "driver": "Iñaki Arrias",
         "team": "",
-        "points": 299,
-        "wins": 1
+        "points": 304.5,
+        "wins": 6
       },
       {
         "pos": 2,
-        "driver": "Iñaki Arrias",
+        "driver": "Ignacio Lovich",
         "team": "",
-        "points": 298,
-        "wins": 5
+        "points": 301.5,
+        "wins": 1
       },
       {
         "pos": 3,
         "driver": "Ignacio Vilas",
         "team": "",
-        "points": 268,
+        "points": 271.5,
         "wins": 1
       },
       {
         "pos": 4,
         "driver": "Damian Pérez",
         "team": "",
-        "points": 267,
+        "points": 271,
         "wins": 1
       },
       {
         "pos": 5,
         "driver": "Bautista Roqueta",
         "team": "",
-        "points": 253,
+        "points": 258,
         "wins": 0
       },
       {
         "pos": 6,
         "driver": "Ignacio Quintana",
         "team": "",
-        "points": 252.5,
+        "points": 253,
         "wins": 0
       },
       {
@@ -107190,7 +107211,7 @@
         "pos": 8,
         "driver": "Hainze Dante Rubiera",
         "team": "",
-        "points": 193.5,
+        "points": 195.5,
         "wins": 0
       },
       {
@@ -107204,7 +107225,7 @@
         "pos": 10,
         "driver": "Martín Taha",
         "team": "",
-        "points": 143,
+        "points": 144.5,
         "wins": 0
       },
       {
@@ -107262,6 +107283,20 @@
         "team": "",
         "points": 23,
         "wins": 0
+      },
+      {
+        "pos": 19,
+        "driver": "Conde Juan José",
+        "team": "—",
+        "points": 3,
+        "wins": 0
+      },
+      {
+        "pos": 20,
+        "driver": "Etcheberry Mauricio",
+        "team": "—",
+        "points": 1,
+        "wins": 0
       }
     ],
     "tc-pick-up": [
@@ -107269,8 +107304,8 @@
         "pos": 1,
         "driver": "Mariano Werner",
         "team": "",
-        "points": 268,
-        "wins": 2
+        "points": 270,
+        "wins": 3
       },
       {
         "pos": 2,
@@ -107411,7 +107446,7 @@
         "pos": 1,
         "driver": "Tomás Pellandino",
         "team": "",
-        "points": 298.5,
+        "points": 301.5,
         "wins": 2
       },
       {
@@ -107425,28 +107460,28 @@
         "pos": 3,
         "driver": "Faustino Cifre",
         "team": "",
-        "points": 247,
-        "wins": 1
+        "points": 254,
+        "wins": 2
       },
       {
         "pos": 4,
         "driver": "Antonino Sganga",
         "team": "",
-        "points": 222,
+        "points": 226.5,
         "wins": 0
       },
       {
         "pos": 5,
         "driver": "Luis Catelli",
         "team": "",
-        "points": 209.5,
+        "points": 213,
         "wins": 0
       },
       {
         "pos": 6,
         "driver": "Nicanor Santilli Pazos",
         "team": "",
-        "points": 206.5,
+        "points": 210.5,
         "wins": 0
       },
       {
@@ -107479,23 +107514,23 @@
       },
       {
         "pos": 11,
+        "driver": "José Alberto Goya",
+        "team": "",
+        "points": 151.5,
+        "wins": 0
+      },
+      {
+        "pos": 12,
         "driver": "Alvaro Oroza",
         "team": "",
         "points": 150,
         "wins": 0
       },
       {
-        "pos": 12,
-        "driver": "José Alberto Goya",
-        "team": "",
-        "points": 149,
-        "wins": 0
-      },
-      {
         "pos": 13,
         "driver": "Gonzalo Aramburu",
         "team": "",
-        "points": 139,
+        "points": 141,
         "wins": 0
       },
       {
@@ -109744,22 +109779,22 @@
     },
     "tc-mouras": {
       "standingsLabel": "Tabla oficial de la ACTC",
-      "standingsAsOfRound": 9,
+      "standingsAsOfRound": 10,
       "standingsSource": "https://actc.org.ar/tcm/campeonato"
     },
     "tc-pista-mouras": {
       "standingsLabel": "Tabla oficial de la ACTC",
-      "standingsAsOfRound": 8,
+      "standingsAsOfRound": 9,
       "standingsSource": "https://actc.org.ar/tcpm/campeonato"
     },
     "tc-pick-up": {
       "standingsLabel": "Tabla oficial de la ACTC",
-      "standingsAsOfRound": 7,
+      "standingsAsOfRound": 8,
       "standingsSource": "https://actc.org.ar/tcpk/campeonato"
     },
     "tc-pista-pick-up": {
       "standingsLabel": "Tabla oficial de la ACTC",
-      "standingsAsOfRound": 7,
+      "standingsAsOfRound": 8,
       "standingsSource": "https://actc.org.ar/tcppk/campeonato"
     },
     "schedules": {
@@ -109817,6 +109852,7 @@
     }
   },
   "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/10/driverstandings.json?limit=40",
     "Se conservaron fechas que las fuentes dejaron de traer: tc2000 1",
     "Se descartaron resultados de 1 sesiones que todavía no se corrieron (eran de otra fecha)"
   ]
