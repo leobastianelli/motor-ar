@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T21:18:47.808Z",
+  "generatedAt": "2026-09-27T14:19:16.053Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -92968,6 +92968,70 @@
       "source": "Jolpica-F1"
     },
     {
+      "id": "tc2000-2026-8",
+      "seriesId": "tc2000",
+      "round": 8,
+      "name": "Fecha 8 · San Juan",
+      "circuit": {
+        "name": "Autódromo El Zonda Eduardo Copello",
+        "city": "San Juan",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "San Juan"
+      },
+      "sessions": [
+        {
+          "id": "tc2000-2026-8-qualy",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-09-05T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Matías Rossi",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/gabriel-ponce-de-leon-otra-vez-profeta-en-su-tierra/"
+          }
+        },
+        {
+          "id": "tc2000-2026-8-race",
+          "kind": "carrera",
+          "name": "Carrera",
+          "start": "2026-09-06T13:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/gabriel-ponce-de-leon-otra-vez-profeta-en-su-tierra/",
+              "start": "13:00"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Gabriel Ponce de León",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/gabriel-ponce-de-leon-otra-vez-profeta-en-su-tierra/"
+          }
+        }
+      ],
+      "source": "Campeones"
+    },
+    {
       "id": "tc2000-2026-7",
       "seriesId": "tc2000",
       "round": 7,
@@ -104107,7 +104171,7 @@
             {
               "pos": 17,
               "number": "107",
-              "driver": "Tobías Martínez",
+              "driver": "Tobias Martinez Recargo",
               "team": "Chevrolet",
               "gap": "",
               "status": "Sin tiempo"
@@ -104115,7 +104179,7 @@
             {
               "pos": 18,
               "number": "66",
-              "driver": "Gustavo Tadei (h)",
+              "driver": "Gustavo Tadei (h) Recargo",
               "team": "Toyota",
               "gap": "",
               "status": "Sin tiempo"
@@ -104472,6 +104536,69 @@
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
             "url": "https://tiempos.actc.org.ar/resultados/943/ver"
+          }
+        },
+        {
+          "id": "tcppk-2026-8-serie-1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-09-27T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "1:43.544"
+            },
+            {
+              "pos": 2,
+              "number": "107",
+              "driver": "Sganga Antonino",
+              "team": "Ford",
+              "gap": "+0.357"
+            },
+            {
+              "pos": 3,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Foton",
+              "gap": "+0.118"
+            },
+            {
+              "pos": 4,
+              "number": "10",
+              "driver": "Luis Catelli",
+              "team": "Toyota",
+              "gap": "+1.911"
+            },
+            {
+              "pos": 5,
+              "number": "132",
+              "driver": "Tomas Pellandino",
+              "team": "Ford",
+              "gap": "+5.205"
+            },
+            {
+              "pos": 6,
+              "number": "15",
+              "driver": "Jose Alberto Goya",
+              "team": "Ford",
+              "gap": "+4.614"
+            },
+            {
+              "pos": 7,
+              "number": "66",
+              "driver": "Gonzalo Aramburu",
+              "team": "Toyota",
+              "gap": "+47.176"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/949/ver"
           }
         },
         {
@@ -109362,7 +109489,7 @@
         },
         {
           "raceDay": "2026-09-06",
-          "round": 7,
+          "round": 8,
           "city": "Junín",
           "circuit": "Autódromo Eusebio Marcilla",
           "province": "Buenos Aires",
@@ -109378,6 +109505,23 @@
             "https://campeones.com.ar/tc2000-en-junin-lucas-carabajal-al-frente-en-el-primer-ensayo/",
             "https://campeones.com.ar/cronograma-para-la-visita-del-tc2000-a-junin/",
             "https://campeones.com.ar/tc2000-francisco-monarca-comenzo-arriba-la-manana-de-sabado-en-junin/"
+          ]
+        },
+        {
+          "raceDay": "2026-09-27",
+          "round": 8,
+          "city": "San Juan",
+          "circuit": "Autódromo El Zonda Eduardo Copello",
+          "province": "San Juan",
+          "pole": "Emiliano Stang",
+          "sources": [
+            "https://campeones.com.ar/tc2000-rossi-hizo-la-pole-empatando-el-tiempo-con-stang-y-marcando-el-record-en-el-zonda/",
+            "https://campeones.com.ar/el-segundo-entrenamiento-de-tc2000-sanjuanino-lo-encabezo-vivian/",
+            "https://campeones.com.ar/ciarrocchi-se-impulso-con-el-fiat-y-en-el-zonda-encabezo-el-primer-entrenamiento-de-tc2000/",
+            "https://campeones.com.ar/vivian-fue-el-mejor-del-shakedown-de-tc2000-en-el-zonda/",
+            "https://campeones.com.ar/todo-listo-para-la-carrera-homenaje-a-henry-martin-de-tc2000-en-el-zonda-eduardo-copello/",
+            "https://campeones.com.ar/la-preparacion-de-henry-martin-para-su-carrera-homenaje-en-tc2000/",
+            "https://campeones.com.ar/rossi-lidero-la-tanda-de-tanques-llenos-de-tc2000-en-el-zonda/"
           ]
         }
       ],
@@ -109400,7 +109544,7 @@
     },
     "tc-mouras": {
       "standingsLabel": "Tabla oficial de la ACTC",
-      "standingsAsOfRound": 8,
+      "standingsAsOfRound": 9,
       "standingsSource": "https://actc.org.ar/tcm/campeonato"
     },
     "tc-pista-mouras": {
@@ -109427,13 +109571,13 @@
       "eventsWithTimes": 18
     },
     "timing": {
-      "documents": 746,
-      "pagesFetched": 23,
+      "documents": 747,
+      "pagesFetched": 24,
       "eventsWithResults": 56
     },
     "openf1": {
       "sessions": 131,
-      "requests": 18,
+      "requests": 12,
       "sessionsWithResults": 40
     },
     "f1Official": {
@@ -109447,12 +109591,10 @@
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
-      "requests": 7,
-      "officialRequests": 3,
+      "requests": 4,
+      "officialRequests": 2,
       "eventsWithResults": 12,
       "unread": [
-        "Monza · Práctica",
-        "Monza · Clasificación",
         "Madrid · Práctica",
         "Baku · Práctica",
         "Baku · Clasificación 1"
@@ -109475,6 +109617,7 @@
     }
   },
   "failures": [
+    "Se conservaron fechas que las fuentes dejaron de traer: tc2000 1",
     "Se descartaron resultados de 1 sesiones que todavía no se corrieron (eran de otra fecha)"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T08:51:58.624Z",
+  "generatedAt": "2026-09-27T14:19:17.011Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -1247,7 +1247,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "federico luques",
@@ -1685,7 +1685,7 @@
         "tc-pista-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "gustavo tadei",
@@ -1696,9 +1696,7 @@
       ],
       "slug": "gustavo-tadei",
       "name": "Gustavo Tadei",
-      "aliases": [
-        "Gustavo Tadei Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista",
         "tc-pick-up",
@@ -2158,7 +2156,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "carlos jose montanari",
@@ -3027,7 +3025,7 @@
         "tc-pista-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "di jose luis palma",
@@ -3784,7 +3782,7 @@
         "tc-pista-pick-up": "Foton"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "nico varrone",
@@ -4473,7 +4471,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "falivene thiago",
@@ -4610,9 +4608,7 @@
       ],
       "slug": "tobias-martinez",
       "name": "Tobías Martínez",
-      "aliases": [
-        "Tobias Martinez Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tc",
         "tc-pick-up",
@@ -4698,7 +4694,7 @@
         "tc-pista": "Dodge"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "tomas vitar",
