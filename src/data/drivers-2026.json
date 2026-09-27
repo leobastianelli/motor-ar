@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T21:18:49.315Z",
+  "generatedAt": "2026-09-27T08:51:58.624Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -919,6 +919,22 @@
       "lastSeen": "2026-09-20"
     },
     {
+      "key": "emiliano stang",
+      "keys": [
+        "emiliano stang"
+      ],
+      "slug": "emiliano-stang",
+      "name": "Emiliano Stang",
+      "aliases": [],
+      "series": [
+        "tc2000"
+      ],
+      "numbers": {},
+      "teams": {},
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-26"
+    },
+    {
       "key": "esteban luna",
       "keys": [
         "esteban luna"
@@ -1675,11 +1691,14 @@
       "key": "gustavo tadei",
       "keys": [
         "gustavo tadei",
-        "gustavo tadie"
+        "gustavo tadie",
+        "gustavo recargo tadei"
       ],
       "slug": "gustavo-tadei",
       "name": "Gustavo Tadei",
-      "aliases": [],
+      "aliases": [
+        "Gustavo Tadei Recargo"
+      ],
       "series": [
         "tc-pista",
         "tc-pick-up",
@@ -4586,11 +4605,14 @@
     {
       "key": "martinez tobias",
       "keys": [
-        "martinez tobias"
+        "martinez tobias",
+        "martinez recargo tobias"
       ],
       "slug": "tobias-martinez",
       "name": "Tobías Martínez",
-      "aliases": [],
+      "aliases": [
+        "Tobias Martinez Recargo"
+      ],
       "series": [
         "tc",
         "tc-pick-up",
