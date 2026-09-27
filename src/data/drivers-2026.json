@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T15:09:17.291Z",
+  "generatedAt": "2026-09-27T16:55:16.696Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -745,7 +745,7 @@
         "tc-pista-pick-up": "Fiat"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "casais diego",
@@ -785,7 +785,7 @@
         "tc-pick-up": "Ford"
       },
       "firstSeen": "2026-09-26",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "carlo de diego",
@@ -810,7 +810,7 @@
         "tc-pick-up": "Volkswagen"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "diego farina",
@@ -1234,9 +1234,7 @@
       ],
       "slug": "faustino-cifre",
       "name": "Faustino Cifre",
-      "aliases": [
-        "Cifre Faustino Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista",
         "tc-pista-pick-up"
@@ -2199,7 +2197,7 @@
         "tc-pick-up": "Toyota"
       },
       "firstSeen": "2026-09-26",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "arrate jose luis",
@@ -4018,7 +4016,7 @@
         "tc-pick-up": "Toyota"
       },
       "firstSeen": "2026-09-26",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "fritzler otto",
@@ -4044,7 +4042,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "collazo pablo",
@@ -4305,7 +4303,7 @@
         "tc-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "robledo santiago",
@@ -4601,7 +4599,7 @@
         "tc-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "martinez tobias",
@@ -4684,9 +4682,7 @@
       ],
       "slug": "tomas-pellandino",
       "name": "Tomas Pellandino",
-      "aliases": [
-        "Tomas Pellandino Vuelta"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-pick-up",
         "tc-pista"
