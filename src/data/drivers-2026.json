@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T20:18:51.683Z",
+  "generatedAt": "2026-09-27T21:44:41.757Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -166,9 +166,7 @@
       ],
       "slug": "alejandro-martinez",
       "name": "Alejandro Martínez",
-      "aliases": [
-        "Alejandro V Martinez"
-      ],
+      "aliases": [],
       "series": [
         "tc-mouras",
         "tc-pista"
@@ -212,9 +210,7 @@
       ],
       "slug": "alvaro-oroza",
       "name": "Alvaro Oroza",
-      "aliases": [
-        "Alvaro Oroza Vuelta"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-pick-up"
       ],
@@ -645,9 +641,7 @@
       ],
       "slug": "damian-perez",
       "name": "Damián Pérez",
-      "aliases": [
-        "Damian V Perez"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -1200,9 +1194,7 @@
       ],
       "slug": "facundo-luduena",
       "name": "Facundo Ludueña",
-      "aliases": [
-        "Facundo V Ludueña Vuelta"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -1350,9 +1342,7 @@
       ],
       "slug": "francisco-luengo",
       "name": "Francisco Luengo",
-      "aliases": [
-        "Francisco V Luengo"
-      ],
+      "aliases": [],
       "series": [
         "tc-mouras"
       ],
@@ -1625,9 +1615,7 @@
       ],
       "slug": "gaston-mazzacane-foton",
       "name": "Gaston Mazzacane Foton",
-      "aliases": [
-        "Gaston Mazzacane Vuelta"
-      ],
+      "aliases": [],
       "series": [
         "tc-pick-up",
         "tc-pista-pick-up"
@@ -1896,9 +1884,7 @@
       ],
       "slug": "ignacio-quintana",
       "name": "Ignacio Quintana",
-      "aliases": [
-        "Ignacio V Quintana"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -2208,9 +2194,7 @@
       ],
       "slug": "jose-ciantini",
       "name": "Jose Ciantini",
-      "aliases": [
-        "Jose Ciantini Vuelta"
-      ],
+      "aliases": [],
       "series": [
         "tc-pick-up"
       ],
@@ -3514,9 +3498,7 @@
       ],
       "slug": "matias-frano",
       "name": "Matias Frano",
-      "aliases": [
-        "Matias V Frano"
-      ],
+      "aliases": [],
       "series": [
         "tc-pick-up",
         "tc-pista-pick-up",
@@ -4270,9 +4252,7 @@
       ],
       "slug": "santiago-arrigoni",
       "name": "Santiago Arrigoni",
-      "aliases": [
-        "Santiago V Arrigoni"
-      ],
+      "aliases": [],
       "series": [
         "tc-mouras",
         "tc-pista"
@@ -4783,9 +4763,7 @@
       ],
       "slug": "valentino-alaux",
       "name": "Valentino Alaux",
-      "aliases": [
-        "Valentino V Alaux"
-      ],
+      "aliases": [],
       "series": [
         "tc-mouras"
       ],
