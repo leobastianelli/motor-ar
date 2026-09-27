@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T14:19:16.053Z",
+  "generatedAt": "2026-09-27T14:29:43.249Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -104602,6 +104602,55 @@
           }
         },
         {
+          "id": "tcppk-2026-8-serie-2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-09-27T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "127",
+              "driver": "Nahuel Cordone",
+              "team": "Ford",
+              "gap": "1:44.006"
+            },
+            {
+              "pos": 2,
+              "number": "133",
+              "driver": "Juan Pablo Alberti",
+              "team": "Volkswagen",
+              "gap": "+-0.178"
+            },
+            {
+              "pos": 3,
+              "number": "76",
+              "driver": "Juan José Suárez",
+              "team": "Ford",
+              "gap": "+1.380"
+            },
+            {
+              "pos": 4,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Toyota",
+              "gap": "+0.064"
+            },
+            {
+              "pos": 5,
+              "number": "88",
+              "driver": "Alvaro Oroza",
+              "team": "Ford",
+              "gap": "+3.690"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/950/ver"
+          }
+        },
+        {
           "id": "tcppk-2026-8-final",
           "kind": "final",
           "name": "Final",
@@ -109571,8 +109620,8 @@
       "eventsWithTimes": 18
     },
     "timing": {
-      "documents": 747,
-      "pagesFetched": 24,
+      "documents": 748,
+      "pagesFetched": 25,
       "eventsWithResults": 56
     },
     "openf1": {
@@ -109617,6 +109666,7 @@
     }
   },
   "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40",
     "Se conservaron fechas que las fuentes dejaron de traer: tc2000 1",
     "Se descartaron resultados de 1 sesiones que todavía no se corrieron (eran de otra fecha)"
   ]

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T14:19:17.011Z",
+  "generatedAt": "2026-09-27T14:29:43.879Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -219,7 +219,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "andres calderon",
@@ -2439,7 +2439,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "jose juan tomasello",
@@ -2520,7 +2520,7 @@
         "tc-pista-pick-up": "Volkswagen"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "gianini juan pablo",
@@ -3718,7 +3718,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "della nahuel santina",
@@ -4278,7 +4278,7 @@
         "tc-pista-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "mangoni santiago",
