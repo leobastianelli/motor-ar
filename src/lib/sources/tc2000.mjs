@@ -71,13 +71,17 @@ const shiftDay = (ymd, days) => new Date(Date.parse(`${ymd}T12:00:00Z`) + days *
 export function applyCampeones(events, weekends) {
   const out = events.map((e) => ({ ...e, sessions: [...e.sessions] }));
   for (const w of weekends) {
+    // Por número de fecha sólo se acepta un evento que caiga cerca en el calendario (una fecha reprogramada, no otra): el número que sale de las
+    // notas es un voto de ordinales y a veces se equivoca; pegarle a otra fecha los datos de este finde mezcla dos carreras en una.
     let event =
       out.find((e) => Math.abs(Date.parse(dayOf(e.sessions.at(-1).start)) - Date.parse(w.raceDay)) <= 3 * DAY) ??
-      (w.round ? out.find((e) => e.round === w.round) : undefined);
+      (w.round ? out.find((e) => e.round === w.round && Math.abs(Date.parse(dayOf(e.sessions.at(-1).start)) - Date.parse(w.raceDay)) <= 21 * DAY) : undefined);
     if (!event) {
-      // Sin número en las notas: la fecha siguiente a la última anterior, si ese número está libre.
       const before = out.filter((e) => dayOf(e.sessions.at(-1).start) < w.raceDay);
-      const round = w.round ?? (before.length ? Math.max(...before.map((e) => e.round)) + 1 : 1);
+      // Si todo lo anterior está numerado 1..n sin huecos, el número que sigue es n + 1 sea cual sea el que votaron las notas (la de Junín
+      // decía "séptima" y el texto anticipaba la "octava"). Sin esa certeza se usa el de las notas o, si no hay, el siguiente al último.
+      const consecutive = before.map((e) => e.round).sort((a, b) => a - b).every((r, i) => r === i + 1);
+      const round = consecutive ? before.length + 1 : (w.round ?? (before.length ? Math.max(...before.map((e) => e.round)) + 1 : 1));
       if (out.some((e) => e.round === round)) continue;
       event = {
         id: `tc2000-2026-${round}`,
@@ -142,7 +146,7 @@ export async function tc2000Season(io, previous) {
   } catch (error) {
     // Sin Wikipedia se reutilizan las fechas anteriores (sin lo sumado desde Campeones, que se vuelve a aplicar).
     const before = (previous?.events ?? []).filter((e) => e.seriesId === "tc2000");
-    if (!before.length && !weekends.length) throw error;
+    if (!before.length && !(previous?.meta?.tc2000?.campeones ?? []).length) throw error;
     wiki = { events: before, standings: previous?.standings?.tc2000 ?? [] };
   }
 

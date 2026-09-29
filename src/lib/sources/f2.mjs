@@ -90,12 +90,6 @@ export async function f2Season(io) {
   const rows = table.rows
     .filter((r) => intOf(r.cells[0]?.text) !== null && r.cells[1]?.text)
     .map((r) => ({ pos: intOf(r.cells[0].text), driver: r.cells[1].text, results: r.cells.slice(2, -1).map((c) => c.text), points: Number.parseFloat(r.cells.at(-1).text) || 0 }));
-  const perRace = resultsFromStandings(rows, calendar.length * 2, (d) => teamOf.get(d)?.team ?? "");
-  // Hasta qué fecha llega la tabla de campeonato: cuántas columnas (sprint + principal) tienen algún resultado
-  // cargado, cada dos una fecha. Sirve para no mostrarla como actual si el campeonato de Wikipedia quedó atrás
-  // de los resultados oficiales de cada sesión (ver createSeason en data.ts).
-  const standingsAsOfRound = Math.floor(perRace.filter((list) => list.length > 0).length / 2);
-
   let official = [];
   try {
     official = await officialSchedule(io);
@@ -106,14 +100,31 @@ export async function f2Season(io) {
     const d = new Date(iso);
     return d.getUTCDate() === dm.d && d.getUTCMonth() + 1 === dm.m;
   };
+  // Wikipedia fecha la ronda por la carrera principal; si hubo dos (Baku 2026), puede ser el día de cualquiera de ellas.
+  const matchOf = (c) =>
+    official.find((o) => ["Feature Race", "Feature Race 2"].some((key) => o.sessions.get(key) && c.feature && sameDay(o.sessions.get(key).start, c.feature)));
+
+  // La tabla de campeonato tiene una columna por carrera, en orden. Una fecha con dos carreras principales (Baku 2026) ocupa tres columnas, no dos:
+  // si se contaran dos por fecha, las columnas de todas las fechas siguientes quedarían corridas y los resultados de una carrera ya corrida
+  // aparecerían en una que todavía no se corrió.
+  const columns = new Map();
+  let nextColumn = 0;
+  for (const c of [...calendar].sort((a, b) => a.round - b.round)) {
+    const extra = matchOf(c)?.sessions.has("Feature Race 2") ? 1 : 0;
+    columns.set(c.round, { first: nextColumn });
+    nextColumn += 2 + extra;
+  }
+  const perRace = resultsFromStandings(rows, nextColumn, (d) => teamOf.get(d)?.team ?? "");
+  // Hasta qué fecha llega la tabla de campeonato: cuántas fechas (sprint + principal) tienen algún resultado
+  // cargado. Sirve para no mostrarla como actual si el campeonato de Wikipedia quedó atrás
+  // de los resultados oficiales de cada sesión (ver createSeason en data.ts).
+  const standingsAsOfRound = [...columns.values()].filter(({ first }) => perRace[first]?.length && perRace[first + 1]?.length).length;
 
   const events = calendar.map((c) => {
-    const i = (c.round - 1) * 2;
+    const i = columns.get(c.round).first;
+    // La tercera columna de una fecha con dos principales (carrera-2) no se asigna: sus resultados oficiales los trae fia-f2.mjs.
     const results = { sprint: perRace[i], carrera: perRace[i + 1] };
-    // Wikipedia fecha la ronda por la carrera principal; si hubo dos (Baku 2026), puede ser el día de cualquiera de ellas.
-    const match = official.find((o) =>
-      ["Feature Race", "Feature Race 2"].some((key) => o.sessions.get(key) && c.feature && sameDay(o.sessions.get(key).start, c.feature)),
-    );
+    const match = matchOf(c);
     const withResults = (kind) => (results[kind]?.length ? { results: results[kind] } : {});
 
     const sessions = match
