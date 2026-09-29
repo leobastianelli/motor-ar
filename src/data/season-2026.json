@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T17:18:42.496Z",
+  "generatedAt": "2026-09-29T15:22:19.295Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -106326,14 +106326,6 @@
       "venueSlug": "lusail",
       "sessions": [
         {
-          "id": "f2-2026-13-clasificacion",
-          "kind": "clasificacion",
-          "name": "Clasificación",
-          "start": "2026-11-26T21:00:00.000Z",
-          "timeKnown": true,
-          "durationMin": 60
-        },
-        {
           "id": "f2-2026-13-practica",
           "kind": "practica",
           "name": "Práctica",
@@ -106342,10 +106334,18 @@
           "durationMin": 60
         },
         {
+          "id": "f2-2026-13-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-11-27T13:00:00.000Z",
+          "timeKnown": true,
+          "durationMin": 60
+        },
+        {
           "id": "f2-2026-13-sprint",
           "kind": "sprint",
           "name": "Carrera sprint",
-          "start": "2026-11-27T21:00:00.000Z",
+          "start": "2026-11-28T10:00:00.000Z",
           "timeKnown": true,
           "durationMin": 60
         },
