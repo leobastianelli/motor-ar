@@ -73,7 +73,13 @@ export default async function Home() {
   // ——— Cabecera: una portada con el momento primero ———
   const when = (s: { start: string; timeKnown?: boolean }) => {
     const day = dayKey(s.start) === todayKey ? "hoy" : fmtDayShort(s.start).toLowerCase();
-    return s.timeKnown === false ? day : `${day} ${fmtTime(s.start)}`;
+    // Día y hora con pesos distintos: el día ubica, la hora es el dato.
+    return (
+      <>
+        <span className="home-when-day">{day}</span>
+        {s.timeKnown !== false && <> <span className="home-when-time">{fmtTime(s.start)}</span></>}
+      </>
+    );
   };
   const rangeOf = (list: { iso: string }[]) =>
     list.length === 0
