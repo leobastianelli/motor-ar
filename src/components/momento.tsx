@@ -53,6 +53,7 @@ function FilaPiloto({ s }: { s: Sesion }) {
       {s.ganador && f?.pos !== 1 && (
         <small className="momento-ganador">
           {s.kind === "practica" || s.kind === "clasificacion" ? "Mejor tiempo" : "Ganó"}: <Piloto name={s.ganador.name} slug={s.ganador.slug} />
+          {s.provisorio && " (provisorio)"}
         </small>
       )}
     </>
@@ -80,6 +81,7 @@ function Terminada({ s, piloto, fechaId }: { s: Sesion; piloto?: boolean; fechaI
           {s.ganador ? (
             <>
               {s.kind === "practica" || s.kind === "clasificacion" ? "Mejor tiempo" : "Ganó"}: <Piloto name={s.ganador.name} slug={s.ganador.slug} />
+              {s.provisorio && " (provisorio)"}
             </>
           ) : (
             "Resultados parciales"
@@ -217,6 +219,7 @@ export function ResultadoCarrera({ carrera }: { carrera?: Fecha["carrera"] }) {
   return (
     <p className="event-result">
       Ganó <Piloto name={carrera.ganador.name} slug={carrera.ganador.slug} />
+      {carrera.provisorio && " (provisorio)"}
       {carrera.argentinos.length > 0 && (
         <>
           {" · "}
@@ -280,6 +283,7 @@ function Ahora({ data, now, tiemposUrl }: { data: MomentoData; now: string; tiem
                   {last.s.ganador ? (
                     <>
                       {last.s.kind === "practica" || last.s.kind === "clasificacion" ? "Mejor tiempo" : "Ganó"}: <Piloto name={last.s.ganador.name} slug={last.s.ganador.slug} />
+                      {last.s.provisorio && " (provisorio)"}
                     </>
                   ) : (
                     "Resultados parciales"
@@ -377,6 +381,7 @@ export function Momento({ data, now: serverNow, simulated, broadcasts, tiemposUr
               {ultimaFecha.carrera?.ganador ? (
                 <>
                   ganó <Piloto name={ultimaFecha.carrera.ganador.name} slug={ultimaFecha.carrera.ganador.slug} />
+                  {ultimaFecha.carrera.provisorio && " (provisorio)"}
                   {ultimaFecha.carrera.argentinos.length > 0 && (
                     <>
                       {" · "}

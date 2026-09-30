@@ -6,6 +6,8 @@ import { Agenda } from "@/components/agenda";
 import { AutoRefresh, MinutesLeft } from "@/components/live-clock";
 import { noteDate } from "@/components/notas";
 import { HCode, HLabel, HState, HTitle } from "@/components/home-parts";
+import { ResultsStatus } from "@/components/results-status";
+import { provisionalSuffix } from "@/lib/provisorio.mjs";
 import { VideoLinkThumb } from "@/components/video-sesion";
 import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, isSimulatedNow, ms, seriesTier, weekendWindow, type HomeMode } from "@/lib/data";
 import { getAllNotes } from "@/lib/notas";
@@ -118,6 +120,7 @@ export default async function Home() {
               <>
                 <span className="home-moment-win">
                   · ganó <b>{latestWinner.driver}</b>
+                  {provisionalSuffix(latest.session)}
                 </span>
               </>
             )}
@@ -308,6 +311,7 @@ export default async function Home() {
                     {head}
                     <p className="home-recent-line">
                       {i.session.kind === "practica" || i.session.kind === "clasificacion" ? "Mejor tiempo" : "Ganó"}: <b>{top.driver}</b>
+                      {provisionalSuffix(i.session)}
                       {argRows.length > 0 && (
                         <>
                           {" · "}
@@ -337,6 +341,7 @@ export default async function Home() {
                     {i.session.results!.slice(0, 3).map((r) => podiumRow(r))}
                     {ours.map((r) => podiumRow(r, "is-arg"))}
                   </ol>
+                  <ResultsStatus session={i.session} now={now} tone="dark" />
                 </article>
               );
             })}
@@ -385,6 +390,7 @@ export default async function Home() {
                   </li>
                 ))}
               </ol>
+              <ResultsStatus session={podium.session} now={now} />
             </article>
           ) : (
             <p className="home-empty">Sin resultados nacionales recientes.</p>

@@ -120,6 +120,13 @@ button{color:inherit;font-family:inherit}
 .rank-row.argentine strong small{color:inherit;opacity:.75}
 .results-source{margin:14px 0 0;font-size:13px;color:#aeb3b4}
 .results-source a{color:#fff}
+/* Resultado provisorio u oficial de la ACTC (src/components/results-status.tsx): texto plano, sin chip. */
+.results-status{margin:10px 0 0;font-size:13px;line-height:1.4;max-width:62ch}
+.results-status b{font-weight:700}
+.results-status.on-dark{color:var(--on-ink-muted,#aeb3b4)}
+.results-status.on-dark b{color:#fff}
+.results-status.on-light{color:var(--muted)}
+.results-status.on-light b{color:var(--ink)}
 .earlier-sessions{margin-top:48px}
 .earlier-sessions h3{font-size:20px;margin:0 0 12px;color:#fff}
 .earlier-sessions .full-results+.full-results{margin-top:8px}

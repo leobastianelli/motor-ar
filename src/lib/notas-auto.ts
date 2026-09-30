@@ -1,5 +1,6 @@
 import type { Nota } from "@/data/notas";
 import { nombreVisibleSesion } from "./momento.mjs";
+import { provisionalSuffix } from "./provisorio.mjs";
 import type { RaceEvent, ResultRow, Session, SessionKind } from "./types";
 
 // Notas automáticas: una crónica por fecha que se arma sola con los resultados que van entrando (prácticas, clasificación, sprint, carrera).
@@ -37,7 +38,7 @@ function line(s: Session, siblings: Session[]): string {
   const rows = top(s, 3);
   if (!rows.length) return "";
   const parts = rows.map((r) => `${ordinal(r.pos)} ${r.driver}${r.gap ? ` (${r.gap})` : ""}`);
-  return `${nombreVisibleSesion(s, siblings)}: ${parts.join(", ")}.`;
+  return `${nombreVisibleSesion(s, siblings)}${provisionalSuffix(s)}: ${parts.join(", ")}.`;
 }
 
 /** Titular según la sesión más importante del último día con resultados. */
@@ -50,7 +51,7 @@ function headline(event: RaceEvent, s: Session): string {
     case "final":
     case "sprint":
     case "serie":
-      return `${event.name}: ${first.driver} ganó la ${name}`;
+      return `${event.name}: ${first.driver} ganó la ${name}${provisionalSuffix(s)}`;
     case "clasificacion":
       return `${event.name}: ${first.driver} hizo el mejor tiempo en la ${name}`;
     default:

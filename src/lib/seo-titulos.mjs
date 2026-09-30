@@ -140,7 +140,7 @@ const dondeVerlo = (broadcasts) => {
 function resultadoDe(s) {
   if (!s.ganador) return "";
   const arg = (s.argentinos ?? []).slice(0, 2).map((a) => `${apellido(a.name)} ${a.noTermino ?? `${a.pos}.º`}`);
-  return `${s.name}: ganó ${apellido(s.ganador.name)}${arg.length ? `, ${arg.join(", ")}` : ""}.`;
+  return `${s.name}: ganó ${apellido(s.ganador.name)}${s.provisorio ? " (provisorio)" : ""}${arg.length ? `, ${arg.join(", ")}` : ""}.`;
 }
 
 /** "P2: Colapinto 11.º" (lo que hizo el piloto en una sesión terminada). */

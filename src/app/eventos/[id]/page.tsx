@@ -6,11 +6,13 @@ import { breadcrumb, JsonLd, sportsEventJsonLd } from "@/components/json-ld";
 import { AutoRefresh } from "@/components/live-clock";
 import { LiveTimingEmbed } from "@/components/live-timing-embed";
 import { Argentinos, Momento, ResultadoCarrera } from "@/components/momento";
+import { ResultsStatus } from "@/components/results-status";
 import { VideoSesion } from "@/components/video-sesion";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { getNow, getSeason, getSeries, isSimulatedNow } from "@/lib/data";
 import { nombreVisibleSesion } from "@/lib/momento.mjs";
+import { provisionalSuffix } from "@/lib/provisorio.mjs";
 import { noResultsReason } from "@/lib/salud-core.mjs";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtRange, fmtWeekday, raceWinner, sessionState, sessionStatus, sessionTime } from "@/lib/format";
 import { descripcionMomento, tituloEvento } from "@/lib/seo-titulos.mjs";
@@ -30,8 +32,9 @@ export async function generateMetadata(props: PageProps<"/eventos/[id]">): Promi
   const season = await getSeason();
   const now = getNow();
   const momento = season.getMomentoEvento(event, now);
-  const winner = raceWinner(event.sessions.filter((s) => ["final", "carrera"].includes(s.kind) && s.results?.length).at(-1)?.results);
-  const fallback = `${series?.name ?? "Fecha"} en ${event.circuit.city}: horarios en hora argentina, dónde verlo y resultados de cada sesión${winner ? `. Ganó ${winner.driver}` : ""}.`;
+  const lastRace = event.sessions.filter((s) => ["final", "carrera"].includes(s.kind) && s.results?.length).at(-1);
+  const winner = raceWinner(lastRace?.results);
+  const fallback = `${series?.name ?? "Fecha"} en ${event.circuit.city}: horarios en hora argentina, dónde verlo y resultados de cada sesión${winner ? `. Ganó ${winner.driver}${provisionalSuffix(lastRace)}` : ""}.`;
   // Título y descripción salen del momento de la fecha (src/lib/seo-titulos.mjs) y se regeneran con la página.
   const title = series ? tituloEvento(series, { name: event.name, city: event.circuit.city }, event.sessions[0].start.slice(0, 4), momento) : event.name;
   const description = series ? descripcionMomento(series, momento, { broadcasts: event.broadcasts, fallback, fechaPropia: true }) : fallback;
@@ -129,7 +132,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
 
   // Datos estructurados para buscadores: evento deportivo con lugar, fechas, organizador y quién compitió.
   const jsonLdWinner = rowsComplete ? rows[0] : undefined;
-  const jsonLdDescription = `${series.name} en ${event.circuit.city}: horarios en hora argentina, dónde verlo y resultados de cada sesión${jsonLdWinner ? `. Ganó ${jsonLdWinner.driver}` : ""}.`;
+  const jsonLdDescription = `${series.name} en ${event.circuit.city}: horarios en hora argentina, dónde verlo y resultados de cada sesión${jsonLdWinner ? `. Ganó ${jsonLdWinner.driver}${provisionalSuffix(latest)}` : ""}.`;
   const jsonLd = sportsEventJsonLd(event, series, jsonLdDescription, now);
 
   const where = (
@@ -323,7 +326,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                 <div className="pole">
                   <span>{rows[0].positionText ?? rows[0].pos}</span>
                   <div>
-                    <p>{rowsComplete ? (isRace ? "Ganador" : "Mejor tiempo") : "Mejor resultado disponible"}</p>
+                    <p>{rowsComplete ? (isRace ? `Ganador${provisionalSuffix(latest)}` : "Mejor tiempo") : "Mejor resultado disponible"}</p>
                     <h3>{rows[0].driver}</h3>
                     <b>{rows[0].gap || rows[0].team}</b>
                   </div>
@@ -341,6 +344,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                   ))}
                 </ol>
               </div>
+              <ResultsStatus session={latest} now={now} tone="dark" />
             </div>
             {!rowsComplete && (
               <p className="empty-state">
@@ -388,6 +392,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                       <details key={s.id} id={s.id} className="full-results">
                         <summary>
                           <strong>{nombreVisibleSesion(s, event.sessions)}</strong> · {fmtDayShort(s.start)} · 1.º {s.results![0].driver}
+                          {provisionalSuffix(s)}
                           <span>{s.results!.length === 1 ? "Solo el 1.º" : `${s.results!.length} pilotos`}</span>
                           <ArgentinosLinea rows={argentinosDe(s)} small />
                         </summary>
@@ -400,6 +405,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                           />
                         )}
                         <Ranking rows={s.results!} />
+                        <ResultsStatus session={s} now={now} />
                         <SourceLink session={s} />
                       </details>
                     );
@@ -420,7 +426,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
               return (
                 <Link key={e.id} href={`/eventos/${e.id}`} className="next-card list-link" style={{ "--cat": s.color } as CSSProperties}>
                   <CategoryLabel series={s} />
-                  <strong>{winner ? `${nombreVisibleSesion(finished!, e.sessions)}: ganó ${winner.driver}` : finished ? `${nombreVisibleSesion(finished, e.sessions)}: terminó` : `Fecha ${e.round}`}</strong>
+                  <strong>{winner ? `${nombreVisibleSesion(finished!, e.sessions)}: ganó ${winner.driver}${provisionalSuffix(finished)}` : finished ? `${nombreVisibleSesion(finished, e.sessions)}: terminó` : `Fecha ${e.round}`}</strong>
                   <time dateTime={e.sessions.at(-1)!.start}>
                     {fmtDayShort(e.sessions.at(-1)!.start)} · {e.sessions.length} {e.sessions.length === 1 ? "sesión" : "sesiones"}
                   </time>

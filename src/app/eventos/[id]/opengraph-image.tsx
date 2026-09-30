@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getSeason, getSeries } from "@/lib/data";
 import { fmtRange, raceWinner } from "@/lib/format";
+import { provisionalSuffix } from "@/lib/provisorio.mjs";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -11,7 +12,8 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   const event = (await getSeason()).getEvent((await params).id);
   const series = event ? getSeries(event.seriesId) : undefined;
   const color = series?.color ?? "#101213";
-  const winner = raceWinner(event?.sessions.filter((s) => ["final", "carrera"].includes(s.kind) && s.results?.length).at(-1)?.results);
+  const lastRace = event?.sessions.filter((s) => ["final", "carrera"].includes(s.kind) && s.results?.length).at(-1);
+  const winner = raceWinner(lastRace?.results);
 
   return new ImageResponse(
     (
@@ -29,7 +31,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
                 {`${fmtRange(event.sessions[0].start, event.sessions.at(-1)!.start)} · ${event.circuit.city}`}
               </div>
             )}
-            {winner && <div style={{ display: "flex", fontSize: 38, fontWeight: 700 }}>{`Ganó ${winner.driver}`}</div>}
+            {winner && <div style={{ display: "flex", fontSize: 38, fontWeight: 700 }}>{`Ganó ${winner.driver}${provisionalSuffix(lastRace)}`}</div>}
           </div>
           <div style={{ display: "flex", justifyContent: "space-between", fontSize: 30 }}>
             <div style={{ display: "flex", fontWeight: 900, letterSpacing: 2 }}>FIERROS</div>

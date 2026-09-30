@@ -68,8 +68,18 @@ export interface Session {
   timeSources?: { name: string; url: string; start: string }[];
   durationMin: number;
   results?: ResultRow[];
-  /** Documento oficial del que salen los resultados de esta sesión. */
-  resultsSource?: { name: string; url: string };
+  /**
+   * Documento del que salen los resultados de esta sesión. Sin `status` es un resultado oficial. Con `status: "provisional"` es la planilla del
+   * cronometraje de la ACTC, publicada antes de que los comisarios revisen (src/lib/provisorio.mjs). Si el oficial reemplazó a un provisorio,
+   * `provisional` guarda el podio que se había mostrado y `note` qué cambió ("Oficial: ...").
+   */
+  resultsSource?: {
+    name: string;
+    url: string;
+    status?: "provisional";
+    provisional?: { url?: string; podium: { pos: number; number: string; driver: string }[] };
+    note?: string;
+  };
   /** La sesión terminó y el organizador ya publicó la clasificación, pero ninguna fuente automática la pudo leer (p. ej. sólo salió en PDF). */
   resultsUnread?: boolean;
   /** Videos oficiales de la sesión en YouTube: la transmisión y los resúmenes. La dirección es youtube.com/watch?v=<id>. */

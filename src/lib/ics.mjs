@@ -85,7 +85,7 @@ function descriptionFor(s) {
   else if (s.timeStatus === "tentative") lines.push("Horario tentativo: una sola fuente lo confirma por ahora, puede cambiar.");
   if (s.dondeVerlo?.length) lines.push(`Dónde verlo: ${s.dondeVerlo.join(", ")}.`);
   if (s.hasResults) {
-    if (s.ganador) lines.push(`Ganador: ${s.ganador.name}.`);
+    if (s.ganador) lines.push(`Ganador${s.provisorio ? " (provisorio)" : ""}: ${s.ganador.name}.`);
     if (s.argentinos?.length) {
       const nuestros = s.argentinos.map((a) => `${a.name} ${a.noTermino ?? `${a.pos}.º`}`).join(", ");
       lines.push(`Argentinos: ${nuestros}.`);
@@ -110,6 +110,7 @@ function descriptionFor(s) {
  * @property {string[]} [dondeVerlo] nombres de canales/plataformas, si se sabe
  * @property {boolean} [hasResults]
  * @property {{ name: string }} [ganador]
+ * @property {boolean} [provisorio] el resultado es la planilla de la ACTC, todavía sin la revisión de los comisarios
  * @property {{ name: string, pos: number, noTermino?: string }[]} [argentinos]
  * @property {string} [dtstamp] ISO; si falta, se usa el `dtstamp` de `buildCalendar`
  */

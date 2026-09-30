@@ -69,7 +69,7 @@ export function newDocuments(listing, events, weekend) {
       const t = Date.parse(`${d.day}T12:00:00-03:00`);
       return d.seriesId === event.seriesId && t <= end && t >= end - 3 * DAY;
     });
-    for (const { doc, session } of chooseDocs(docs).values()) {
+    for (const { doc, session } of chooseDocs(docs, { provisional: true }).values()) {
       if (!stored.has(doc.id)) out.push({ key: `${doc.seriesId}:${doc.id}`, id: doc.id, seriesId: doc.seriesId, title: doc.title, session: session.name });
     }
   }

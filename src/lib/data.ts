@@ -7,6 +7,7 @@ import manualOverrides from "@/data/manual-overrides.json";
 import { driverKey } from "./sources/driver-index.mjs";
 import { diaDeHoy } from "./hoy.mjs";
 import { momentoDeCategoria, momentoDeEvento, momentoDePiloto } from "./momento.mjs";
+import { isProvisional } from "./provisorio.mjs";
 import { mergeSessionPatches } from "./sources/overrides.mjs";
 import { series, seriesById } from "@/data/series";
 import { dayKey, fmtDayShort, fmtTime, sessionStatus, type SessionStatus, type StateKind } from "./format";
@@ -245,7 +246,8 @@ export function createSeason(raw: RawSeason) {
             d.results.push({ event, session, row });
             const s = (d.bySeries[event.seriesId] ??= { races: 0, wins: 0, podiums: 0, poles: 0, best: null });
             const classified = !row.positionText || /^\d+$/.test(row.positionText);
-            if (RACE_KINDS.includes(session.kind)) {
+            // Un resultado provisorio (planilla de la ACTC antes de la revisión de los comisarios) se lista pero no suma victorias, podios ni "mejor resultado".
+            if (RACE_KINDS.includes(session.kind) && !isProvisional(session)) {
               s.races++;
               if (classified && row.pos === 1) s.wins++;
               if (classified && row.pos <= 3) s.podiums++;

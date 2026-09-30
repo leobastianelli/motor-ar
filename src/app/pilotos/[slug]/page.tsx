@@ -13,6 +13,7 @@ import { fmtDayNum, fmtDayShort, fmtMonthShort } from "@/lib/format";
 import { NotesBlock } from "@/components/notas";
 import { notesForDriver } from "@/lib/notas";
 import { getPhoto } from "@/lib/photos";
+import { isProvisional } from "@/lib/provisorio.mjs";
 import { driverKey } from "@/lib/sources/driver-index.mjs";
 import { breadcrumb, isoDate, JsonLd } from "@/components/json-ld";
 import { descripcionPiloto, tituloPiloto } from "@/lib/seo-titulos.mjs";
@@ -210,7 +211,7 @@ function SeasonBlocks({ keys, season }: { keys: string[]; season: Season }) {
                         <li key={session.id} className={RACES.has(session.kind) ? "race" : undefined}>
                           <span>{session.name}</span>
                           <b>{row.positionText && !/^\d+$/.test(row.positionText) ? row.positionText : `${row.pos}.º`}</b>
-                          <small>{row.status ?? row.gap}</small>
+                          <small>{[row.status ?? row.gap, isProvisional(session) ? "provisorio" : ""].filter(Boolean).join(" · ")}</small>
                         </li>
                       ))}
                     </ul>

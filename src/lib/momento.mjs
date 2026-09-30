@@ -1,6 +1,7 @@
 // "El momento" de una categoría: en qué situación está (en pista, fin de semana, resultados recientes o entre semana) y
 // qué mostrar. JavaScript puro, sin Next ni alias `@/`, para que `npm test` la cubra. Los estados de las sesiones salen de
 // `session-status.mjs`, la misma fuente que usa `format.ts`.
+import { isProvisional } from "./provisorio.mjs";
 import { noResultsReason } from "./salud-core.mjs";
 import { sessionEnd, sessionStatus } from "./session-status.mjs";
 import { driverKey } from "./sources/driver-index.mjs";
@@ -55,6 +56,8 @@ function resumenSesion(s, now, seriesId, failures, argentineSlugs) {
     hasResults,
     estado: ESTADO[sessionStatus(s, now)],
     ganador: ganadorDe(s.results),
+    // Resultado provisorio de la ACTC (planilla antes de la revisión de los comisarios): se dice junto al ganador.
+    ...(isProvisional(s) ? { provisorio: true } : {}),
     argentinos: argentinosDe(s.results, argentineSlugs),
     // Sólo si tiene resumen en YouTube: alcanza para armar el enlace a la fecha (no viaja el id del video).
     hasResumen: (s.videos ?? []).some((v) => v.kind === "highlights"),
