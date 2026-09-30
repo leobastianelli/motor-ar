@@ -75,3 +75,7 @@ El mismo problema (GitHub Actions descarta corridas programadas) afectaba al vig
     - Frecuencia: cada 30 minutos (`*/30 * * * *`)
     - Días: todos
     - Timeout: al menos 60 s (coincide con `maxDuration` del endpoint)
+
+### Disparo por evidencia de la ACTC (tc/disparo-por-evidencia)
+
+Además del disparo por reloj (paso 3), en un fin de semana con fechas de la ACTC (viernes a lunes, de 8 a 23 h argentinas, entre el día anterior al primer día del evento y el posterior al último) `/api/pulso` baja el listado `tiempos.actc.org.ar/resultados` (caché de 120 s) y lo compara con los documentos que la temporada guardada ya tiene (`resultsSource.url`). Si hay un documento que `chooseDocs` elegiría y no está guardado, pide la sincronización con un candado de **10 min** (no 45), aunque las sesiones no tengan hora conocida. El documento que motivó el disparo queda en `pulso_estado` (`evidence_doc`, `evidence_at`, `evidence_tries`); un mismo documento no motiva más de 2 disparos seguidos. Si el listado falla o cambia de formato, el paso lo informa en `sincronizacion.evidencia` y sigue con el reloj. **Hay que correr `npm run db:season:init`** para crear las tres columnas (si faltan, el disparo funciona igual y avisa `registro: error`). Lógica en `src/lib/pulso-sync.mjs`.
