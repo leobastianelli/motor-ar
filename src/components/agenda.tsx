@@ -7,7 +7,8 @@ import { dayKey, fmtDayNum, fmtWeekday, sessionState, sessionTime } from "@/lib/
 import { nombreVisibleSesion } from "@/lib/momento.mjs";
 import type { Scope } from "@/lib/types";
 import { useNow } from "./live-clock";
-import { CategoryLabel, Code, SectionTitle, StateTag } from "./pista";
+import { Code, StateTag } from "./pista";
+import { HCode, HLabel, HState, HTitle } from "./home-parts";
 
 const FILTERS: { id: Scope | "all"; label: string }[] = [
   { id: "all", label: "Todo" },
@@ -57,62 +58,104 @@ export function Agenda({ items, days, today, now: serverNow, simulated }: { item
   const rows = matching.filter((i) => dayKey(i.session.start) === day);
 
   return (
-    <section id="agenda" className="section-block agenda" aria-labelledby="agenda-title">
-      <SectionTitle id="agenda-title" title="Agenda">
-        <div className="filters" role="group" aria-label="Filtrar agenda">
+    <section id="agenda" className="home-section home-agenda" aria-labelledby="agenda-title">
+      <HTitle id="agenda-title" title="Agenda">
+        {/* Cambiar de vista es secundario: un enlace de texto, no otra fila de botones antes de ver la primera sesión. */}
+        <button type="button" className="home-more" onClick={() => setView(view === "hora" ? "categoria" : "hora")}>
+          {view === "hora" ? "Ver por categoría" : "Ver por hora"}
+        </button>
+      </HTitle>
+
+      <div className="home-toolbar">
+        {visibleDays.length > 1 && (
+          <div className="home-days" role="group" aria-label="Día" style={{ gridTemplateColumns: `repeat(${visibleDays.length}, minmax(0, 1fr))` }}>
+            {visibleDays.map((d) => (
+              <button key={d.key} type="button" className={d.key === day ? "is-selected" : undefined} aria-pressed={d.key === day} onClick={() => setDay(d.key)}>
+                <span>{fmtWeekday(d.iso)}</span>
+                <b>{fmtDayNum(d.iso)}</b>
+              </button>
+            ))}
+          </div>
+        )}
+        <div className="home-filters" role="group" aria-label="Filtrar agenda">
           {FILTERS.map((f) => (
             <button key={f.id} type="button" className={f.id === filter ? "is-selected" : undefined} aria-pressed={f.id === filter} onClick={() => setFilter(f.id)}>
               {f.label}
             </button>
           ))}
         </div>
-      </SectionTitle>
+      </div>
 
-      {visibleDays.length > 1 && (
-        <div className="day-tabs" role="group" aria-label="Día" style={{ gridTemplateColumns: `repeat(${visibleDays.length}, 1fr)` }}>
-          {visibleDays.map((d) => (
-            <button key={d.key} type="button" className={d.key === day ? "active" : undefined} aria-pressed={d.key === day} onClick={() => setDay(d.key)}>
-              {fmtWeekday(d.iso)} <b>{fmtDayNum(d.iso)}</b>
-            </button>
-          ))}
-        </div>
-      )}
-
-      {/* Cambiar de vista es secundario: un enlace de texto, no otra fila de botones antes de ver la primera sesión. */}
-      <button type="button" className="agenda-view-toggle" onClick={() => setView(view === "hora" ? "categoria" : "hora")}>
-        {view === "hora" ? "Ver por categoría" : "Ver por hora"}
-      </button>
-
-      <div className="schedule">
-        {view === "hora" && <ByTime rows={rows} now={now} />}
-        {view === "categoria" && byEvent(rows).map((group) => {
-          const { event, series } = group[0];
-          return (
-            <div key={event.id} className="agenda-group" style={{ "--cat": series.color } as CSSProperties}>
-              <Link href={`/eventos/${event.id}`} className="agenda-group-head list-link">
-                <CategoryLabel series={series} detail={`${event.circuit.city} · Fecha ${event.round}`} />
-                <span className="channel">{event.broadcasts[0]?.name ?? "Sin datos de transmisión"}</span>
-              </Link>
-              {group.map(({ session }) => {
-                const state = sessionState(session, now);
-                return (
-                  <Link key={session.id} href={`/eventos/${event.id}`} className={`schedule-row list-link${state.kind === "live" ? " current" : ""}`}>
-                    <time dateTime={session.start} title={session.timeKnown === false ? "Horario a confirmar" : undefined}>
-                      {sessionTime(session)}
-                    </time>
-                    <strong>{nombreVisibleSesion(session, event.sessions)}</strong>
-                    <StateTag kind={state.kind}>{state.label}</StateTag>
-                  </Link>
-                );
-              })}
-            </div>
-          );
-        })}
-        {rows.length === 0 && (
-          <p className="empty-state">{days.length ? "No hay sesiones pendientes de este tipo ese día." : "No hay sesiones próximas cargadas."}</p>
-        )}
+      <div className="home-schedule">
+        {view === "hora" && <HomeByTime rows={rows} now={now} />}
+        {view === "categoria" &&
+          byEvent(rows).map((group) => {
+            const { event, series } = group[0];
+            return (
+              <div key={event.id} className="home-group" style={{ "--cat": series.color } as CSSProperties}>
+                <Link href={`/eventos/${event.id}`} className="home-group-head">
+                  <HLabel series={series} detail={`${event.circuit.city} · Fecha ${event.round}`} />
+                  <span className="home-channel">{event.broadcasts[0]?.name ?? "Sin datos de transmisión"}</span>
+                </Link>
+                {group.map(({ session }) => {
+                  const state = sessionState(session, now);
+                  return (
+                    <Link key={session.id} href={`/eventos/${event.id}`} className={`home-row${state.kind === "live" ? " is-live" : ""}`}>
+                      <time dateTime={session.start} title={session.timeKnown === false ? "Horario a confirmar" : undefined}>
+                        {sessionTime(session)}
+                      </time>
+                      <div className="home-row-main">
+                        <strong>{nombreVisibleSesion(session, event.sessions)}</strong>
+                      </div>
+                      <HState kind={state.kind}>{state.label}</HState>
+                    </Link>
+                  );
+                })}
+              </div>
+            );
+          })}
+        {rows.length === 0 && <p className="home-empty">{days.length ? "No hay sesiones pendientes de este tipo ese día." : "No hay sesiones próximas cargadas."}</p>}
       </div>
     </section>
+  );
+}
+
+/** Lo mismo que `ByTime`, con la fila de la home: hora tabular, nombre y categoría, estado sólo cuando dice algo. */
+function HomeByTime({ rows, now }: { rows: FeedItem[]; now: string }) {
+  const coincide = overlaps(rows);
+  const timed = rows.filter((r) => r.session.timeKnown !== false);
+  const pending = rows.filter((r) => r.session.timeKnown === false);
+  const row = ({ session, event, series }: FeedItem) => {
+    const state = sessionState(session, now);
+    const others = coincide.get(session.id) ?? [];
+    const showState = !(state.kind === "upcoming" && state.label === "Próxima");
+    return (
+      <Link key={session.id} href={`/eventos/${event.id}`} className={`home-row${state.kind === "live" ? " is-live" : ""}`}>
+        <time dateTime={session.start} title={session.timeKnown === false ? "Horario a confirmar" : undefined}>
+          {sessionTime(session)}
+        </time>
+        <div className="home-row-main">
+          <strong>{nombreVisibleSesion(session, event.sessions)}</strong>
+          <span className="home-row-meta">
+            <HCode series={series} size="s" />
+            {series.name} · {event.circuit.city}
+          </span>
+          {others.length > 0 && <span className="home-row-meta">Coincide con {others.join(", ")}</span>}
+        </div>
+        {showState && <HState kind={state.kind}>{state.label}</HState>}
+      </Link>
+    );
+  };
+  return (
+    <>
+      {timed.map(row)}
+      {pending.length > 0 && (
+        <>
+          <p className="home-pending">Horario a confirmar</p>
+          {pending.map(row)}
+        </>
+      )}
+    </>
   );
 }
 

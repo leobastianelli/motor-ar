@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import type { CSSProperties, ReactNode } from "react";
+import "./home.css";
 import { Agenda } from "@/components/agenda";
 import { AutoRefresh, MinutesLeft } from "@/components/live-clock";
-import { NoteCard } from "@/components/notas";
-import { CatMark, CategoryLabel, Code, SectionTitle, StateTag } from "@/components/pista";
+import { noteDate } from "@/components/notas";
+import { HCode, HLabel, HState, HTitle } from "@/components/home-parts";
 import { VideoLinkThumb } from "@/components/video-sesion";
 import { eventStart, getDriversAbroad, getNow, getSeason, getSeries, isSimulatedNow, ms, seriesTier, weekendWindow, type HomeMode } from "@/lib/data";
 import { getAllNotes } from "@/lib/notas";
@@ -14,6 +15,7 @@ export const metadata: Metadata = { alternates: { canonical: "/" } };
 // La home es lo que la gente mira mientras pasa la carrera: se regenera seguido, y el navegador además la vuelve a pedir solo (AutoRefresh).
 export const revalidate = 15;
 
+type MomentRow = { key: string; label: string; body: ReactNode; live?: boolean };
 type SectionId = "live" | "recien" | "nuestros" | "agenda" | "resultados" | "viene" | "notas";
 
 // El orden de la home depende del momento de la semana: primero lo que más probablemente se busca, pero siempre está todo.
@@ -68,7 +70,7 @@ export default async function Home() {
   const liveUrl = live?.event.broadcasts.find((b) => b.url && b.kind !== "timing")?.url;
   const timingUrl = live?.event.broadcasts.find((b) => b.kind === "timing")?.url;
 
-  // ——— Cabecera: una franja de datos que cambia con el momento ———
+  // ——— Cabecera: una portada con el momento primero ———
   const when = (s: { start: string; timeKnown?: boolean }) => {
     const day = dayKey(s.start) === todayKey ? "hoy" : fmtDayShort(s.start).toLowerCase();
     return s.timeKnown === false ? day : `${day} ${fmtTime(s.start)}`;
@@ -81,37 +83,64 @@ export default async function Home() {
         : `${fmtDayNum(list[0].iso)}–${fmtDayNum(list.at(-1)!.iso)} ${fmtMonthShort(list.at(-1)!.iso)}`;
 
   const first = items[0];
-  const upcomingLine = live ? (
-    <>
-      En vivo <Code series={live.series} href={`/categorias/${live.series.id}`} /> {live.session.name}
-    </>
-  ) : first ? (
-    <>
-      {mode === "results" ? "Próximo" : "Arranca"} {when(first.session)} <Code series={first.series} href={`/categorias/${first.series.id}`} /> {first.session.name}
-    </>
-  ) : (
-    "Sin carreras próximas cargadas"
-  );
+  const upcomingRow: MomentRow = live
+    ? {
+        key: "live",
+        label: "En vivo",
+        live: true,
+        body: (
+          <>
+            <HCode series={live.series} href={`/categorias/${live.series.id}`} /> <span className="home-moment-name">{live.session.name}</span>
+          </>
+        ),
+      }
+    : first
+      ? {
+          key: "next",
+          label: mode === "results" ? "Próximo" : "Arranca",
+          body: (
+            <>
+              <b className="home-when">{when(first.session)}</b> <HCode series={first.series} href={`/categorias/${first.series.id}`} />{" "}
+              <span className="home-moment-name">{first.session.name}</span>
+            </>
+          ),
+        }
+      : { key: "none", label: "Próximo", body: <span className="home-moment-name">Sin carreras próximas cargadas</span> };
   const latestWinner = latest && raceWinner(latest.session.results);
-  const latestLine = latest?.session.results?.[0] && (
-    <>
-      Último <Code series={latest.series} href={`/categorias/${latest.series.id}`} /> {latest.session.name}
-      {latestWinner && (
-        <>
-          {" "}· ganó <b>{latestWinner.driver}</b>
-        </>
-      )}
-    </>
-  );
-  const nextArgLabel = nextArg && nextArg !== first ? when(nextArg.session) : undefined;
+  const latestRow: MomentRow | undefined = latest?.session.results?.[0]
+    ? {
+        key: "last",
+        label: "Último",
+        body: (
+          <>
+            <HCode series={latest.series} href={`/categorias/${latest.series.id}`} /> <span className="home-moment-name">{latest.session.name}</span>
+            {latestWinner && (
+              <>
+                <span className="home-moment-win">
+                  · ganó <b>{latestWinner.driver}</b>
+                </span>
+              </>
+            )}
+          </>
+        ),
+      }
+    : undefined;
+  const nextArgRow: MomentRow | undefined =
+    nextArg && nextArg !== first
+      ? {
+          key: "arg",
+          label: "Próximo argentino",
+          body: <b className="home-when">{when(nextArg.session)}</b>,
+        }
+      : undefined;
 
   let title: string;
   let range: string;
-  let lede: ReactNode[];
+  let moment: (MomentRow | undefined)[];
   if (mode === "results" && latest) {
     title = "Resultados del finde";
     range = rangeOf(weekendWindow(latest.session.start).days);
-    lede = [latestLine, upcomingLine];
+    moment = [latestRow, upcomingRow];
   } else {
     // "Este finde" si lo que sigue cae en el fin de semana en curso (o el inminente), "Próximo finde" si cae en el siguiente.
     const inWindow = (win: { key: string }[]) => days.length > 0 && days.every((d) => win.some((w) => w.key === d.key));
@@ -119,140 +148,170 @@ export default async function Home() {
     const nextWeekend = weekendWindow(new Date(ms(thisWeekend[2].iso) + 2 * 86400000).toISOString()).days;
     title = inWindow(thisWeekend) ? "Este finde" : inWindow(nextWeekend) ? "Próximo finde" : "Lo que sigue";
     range = rangeOf(days);
-    lede = [
-      upcomingLine,
-      mode === "midweek" ? latestLine : undefined,
-      nextArgLabel && (
-        <>
-          Próximo argentino: <b>{nextArgLabel}</b>
-        </>
-      ),
-    ];
+    moment = [upcomingRow, mode === "midweek" ? latestRow : undefined, nextArgRow];
   }
+
+  // Un piloto con algo para mostrar pesa como tarjeta; uno sin actividad, como una fila de una línea (mismo orden que antes).
+  const active = runners.filter((r) => r.status.state !== "no-data");
+  const idle = runners.filter((r) => r.status.state === "no-data");
+  const idleNote = idle.length > 0 && idle.every((r) => r.status.headline === idle[0].status.headline) ? `${idle[0].status.stateLabel} · ${idle[0].status.headline}` : undefined;
+  const standingOf = (r: (typeof runners)[number]) => r.standing && `${r.standing.position}.º en el campeonato · ${r.standing.points} pts`;
 
   // ——— Secciones ———
   const sections: Record<Exclude<SectionId, "notas">, ReactNode> = {
     live: live && (
-      <div key="live">
-      <section className="live-board" aria-labelledby="live-title">
-        <div className="live-flag">
-          <span className="pulse" />
-          <span id="live-title">En vivo</span>
-          <b>
+      <div key="live" className="home-section home-live-wrap">
+        <HTitle
+          id="live-title"
+          title={
+            <>
+              <span className="home-dot" aria-hidden="true" />
+              En vivo
+            </>
+          }
+        >
+          <span className="home-live-min">
             <MinutesLeft endsAt={liveEnd(live.session)} serverNow={now} simulated={simulated} />′
-          </b>
-        </div>
-        <div className="live-main">
-          <CatMark series={live.series} />
-          <div>
-            <CategoryLabel series={live.series} detail={live.event.circuit.city} href={`/categorias/${live.series.id}`} />
-            <h3>{live.session.name}</h3>
-            <p className="lap">
+          </span>
+        </HTitle>
+        <div className="home-live" role="group" aria-labelledby="live-title">
+          <div className="home-live-main">
+            <HLabel series={live.series} detail={live.event.circuit.city} href={`/categorias/${live.series.id}`} />
+            <p className="home-live-name">{live.session.name}</p>
+            <p className="home-live-lap">
               Faltan <MinutesLeft endsAt={liveEnd(live.session)} serverNow={now} simulated={simulated} /> min <span>largó {fmtTime(live.session.start)}</span>
             </p>
           </div>
-        </div>
-        <ol className="timing-mini">
-          {live.session.results?.length ? (
-            live.session.results.slice(0, 3).map((r) => (
-              <li key={r.pos} className={r.driverSlug ? "argentine" : undefined}>
-                <b>{r.pos}</b>
-                <span className="driver-code">{driverCode(r)}</span>
-                <span>{r.gap}</span>
-              </li>
-            ))
-          ) : timingUrl ? (
-            <li>
-              <Link href={`/eventos/${live.event.id}#tiempos-en-vivo`}>
-                <StateTag kind="live">Ver los tiempos en vivo →</StateTag>
+          <div className="home-live-timing">
+            {live.session.results?.length ? (
+              <ol>
+                {live.session.results.slice(0, 3).map((r) => (
+                  <li key={r.pos} className={r.driverSlug ? "is-arg" : undefined}>
+                    <b>{r.pos}</b>
+                    <span className="home-code-3">{driverCode(r)}</span>
+                    <span className="home-gap">{r.gap}</span>
+                  </li>
+                ))}
+              </ol>
+            ) : timingUrl ? (
+              <Link href={`/eventos/${live.event.id}#tiempos-en-vivo`} className="home-link">
+                Ver los tiempos en vivo <span aria-hidden="true">→</span>
               </Link>
-            </li>
-          ) : null}
-        </ol>
-        <div className="watch">
-          <span>Se ve por</span>
-          <strong>{live.event.broadcasts.filter((b) => b.kind !== "timing").map((b) => b.name).join(" · ") || "Sin datos de transmisión"}</strong>
-          {liveUrl && (
-            <a href={liveUrl} target="_blank" rel="noreferrer">
-              Abrir transmisión <span aria-hidden="true">↗</span>
-            </a>
-          )}
-          {timingUrl && (
-            <Link href={`/eventos/${live.event.id}#tiempos-en-vivo`}>
-              Tiempos en vivo <span aria-hidden="true">→</span>
-            </Link>
-          )}
+            ) : null}
+          </div>
+          <div className="home-live-watch">
+            <span className="home-eyebrow">Se ve por</span>
+            <strong>{live.event.broadcasts.filter((b) => b.kind !== "timing").map((b) => b.name).join(" · ") || "Sin datos de transmisión"}</strong>
+            {liveUrl && (
+              <a href={liveUrl} target="_blank" rel="noreferrer" className="home-btn">
+                Abrir transmisión <span aria-hidden="true">↗</span>
+              </a>
+            )}
+            {timingUrl && (
+              <Link href={`/eventos/${live.event.id}#tiempos-en-vivo`} className="home-link">
+                Tiempos en vivo <span aria-hidden="true">→</span>
+              </Link>
+            )}
+          </div>
         </div>
-      </section>
-      {liveNow.length > 1 && (
-        <p className="also-live">
-          <b>También en vivo</b>
-          {liveNow.slice(1).map((l) => (
-            <Link key={l.session.id} href={`/eventos/${l.event.id}`} className="also-live-item">
-              <Code series={l.series} /> {l.session.name} <span>{l.event.circuit.city}</span>
-            </Link>
-          ))}
-        </p>
-      )}
+        {liveNow.length > 1 && (
+          <p className="home-also-live">
+            <b>También en vivo</b>
+            {liveNow.slice(1).map((l) => (
+              <Link key={l.session.id} href={`/eventos/${l.event.id}`}>
+                <HCode series={l.series} size="s" /> {l.session.name} <span>{l.event.circuit.city}</span>
+              </Link>
+            ))}
+          </p>
+        )}
       </div>
     ),
 
-    nuestros: runners.length > 0 && (
-      <section key="nuestros" id="nuestros" className="section-block nuestros" aria-labelledby="nuestros-title">
-        <SectionTitle id="nuestros-title" title="Los nuestros">
-          <Link href="/pilotos">Ver todos</Link>
-        </SectionTitle>
-        <div className="runner-cards">
-          {runners.map((r) => (
-            <Link key={r.driver.slug} href={`/pilotos/${r.driver.slug}`} className="runner-card list-link" style={{ "--cat": r.series.color } as CSSProperties}>
-              <CategoryLabel series={r.series} />
-              <strong className="runner-name">
-                {r.driver.name}
-                {r.driver.number && <span>#{r.driver.number}</span>}
-              </strong>
-              <p className="runner-status">
-                <StateTag kind={r.status.state}>{r.status.stateLabel}</StateTag>
-                <b>{r.status.headline}</b>
-              </p>
-              <p className="runner-meta">
-                {[r.status.detail, r.standing && `${r.standing.position}.º en el campeonato · ${r.standing.points} pts`].filter(Boolean).join(" · ")}
-              </p>
+    nuestros:
+      runners.length > 0 && (
+        <section key="nuestros" id="nuestros" className="home-section home-runners" aria-labelledby="nuestros-title">
+          <HTitle id="nuestros-title" title="Los nuestros">
+            <Link href="/pilotos" className="home-more">
+              Ver todos
             </Link>
-          ))}
-        </div>
-      </section>
-    ),
+          </HTitle>
+          {active.length > 0 && (
+            <div className="home-runner-grid">
+              {active.map((r) => (
+                <Link key={r.driver.slug} href={`/pilotos/${r.driver.slug}`} className="home-runner" style={{ "--cat": r.series.color } as CSSProperties}>
+                  <HLabel series={r.series} />
+                  <h3>
+                    {r.driver.name}
+                    {r.driver.number && <span>#{r.driver.number}</span>}
+                  </h3>
+                  <p className="home-runner-status">
+                    <HState kind={r.status.state}>{r.status.stateLabel}</HState>
+                    <b>{r.status.headline}</b>
+                  </p>
+                  <p className="home-runner-meta">{[r.status.detail, standingOf(r)].filter(Boolean).join(" · ")}</p>
+                </Link>
+              ))}
+            </div>
+          )}
+          {idle.length > 0 && (
+            <>
+              {idleNote && <p className="home-idle-note">{idleNote}</p>}
+              <ul className="home-idle">
+                {idle.map((r) => (
+                  <li key={r.driver.slug}>
+                    <Link href={`/pilotos/${r.driver.slug}`}>
+                      <HCode series={r.series} />
+                      <span className="home-idle-name">
+                        {r.driver.name}
+                        {r.driver.number && <span>#{r.driver.number}</span>}
+                      </span>
+                      <span className="home-idle-meta">
+                        {[idleNote ? "" : r.status.headline, r.standing && `${r.standing.position}.º · ${r.standing.points} pts`].filter(Boolean).join(" · ")}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+        </section>
+      ),
 
     recien: justFinished.length > 0 && (
-      <section key="recien" id="recien" className="results-band">
-        <div className="section-block">
-          <SectionTitle title="Recién terminó" inverse>
-            <Link href="/calendario">Calendario</Link>
-          </SectionTitle>
-          <div className="recent-grid">
+      <section key="recien" id="recien" className="home-band" aria-labelledby="recien-title">
+        <div className="home-wrap">
+          <HTitle id="recien-title" title="Recién terminó" inverse>
+            <Link href="/calendario" className="home-more">
+              Calendario
+            </Link>
+          </HTitle>
+          <div className="home-recent">
             {justFinished.map((i) => {
               const resumen = i.session.videos?.find((v) => v.kind === "highlights");
               const eventoHref = `/eventos/${i.event.id}`;
               const isRace = RACE_KINDS.has(i.session.kind);
+              const head = (
+                <div className="home-recent-head">
+                  <div>
+                    <HLabel series={i.series} detail={`${fmtDayNum(i.session.start)} ${fmtMonthShort(i.session.start)}`} href={`/categorias/${i.series.id}`} />
+                    <strong>
+                      <Link href={resumen ? `${eventoHref}#${i.session.id}` : eventoHref}>
+                        {i.session.name} · {i.event.circuit.city}
+                      </Link>
+                    </strong>
+                  </div>
+                  {resumen && <VideoLinkThumb videoId={resumen.id} href={`${eventoHref}#${i.session.id}`} ariaLabel={`Ver el resumen de ${i.session.name} en YouTube`} />}
+                </div>
+              );
 
-              // Entrenamientos y clasificaciones pesan menos: una línea con quién hizo el mejor tiempo y los argentinos, sin podio.
+              // Mismo orden (el tiempo manda); cambia el peso de cada fila. Entrenamientos y clasificaciones: una línea con el mejor tiempo y los argentinos.
               if (!isRace) {
                 const top = raceWinner(i.session.results) ?? i.session.results![0];
                 const argRows = (i.session.results ?? []).filter((r) => r.driverSlug && argentineSlugs.has(r.driverSlug));
                 return (
-                  <article key={i.session.id} className="podium podium-compact">
-                    <div className="podium-head">
-                      <div>
-                        <CategoryLabel series={i.series} detail={`${fmtDayNum(i.session.start)} ${fmtMonthShort(i.session.start)}`} href={`/categorias/${i.series.id}`} />
-                        <strong>
-                          <Link href={resumen ? `${eventoHref}#${i.session.id}` : eventoHref} className="list-link">
-                            {i.session.name} · {i.event.circuit.city}
-                          </Link>
-                        </strong>
-                      </div>
-                      {resumen && <VideoLinkThumb videoId={resumen.id} href={`${eventoHref}#${i.session.id}`} ariaLabel={`Ver el resumen de ${i.session.name} en YouTube`} />}
-                    </div>
-                    <p className="podium-compact-line">
+                  <article key={i.session.id} className="home-recent-item is-compact">
+                    {head}
+                    <p className="home-recent-line">
                       {i.session.kind === "practica" || i.session.kind === "clasificacion" ? "Mejor tiempo" : "Ganó"}: <b>{top.driver}</b>
                       {argRows.length > 0 && (
                         <>
@@ -266,47 +325,31 @@ export default async function Home() {
               }
 
               const ours = (i.session.results ?? []).filter((r) => r.driverSlug && argentineSlugs.has(r.driverSlug) && r.pos > 3);
-              return (
-                <article key={i.session.id} className="podium">
-                  <div className="podium-head">
-                    <div>
-                      <CategoryLabel series={i.series} detail={`${fmtDayNum(i.session.start)} ${fmtMonthShort(i.session.start)}`} href={`/categorias/${i.series.id}`} />
-                      <strong>
-                        <Link href={resumen ? `${eventoHref}#${i.session.id}` : eventoHref} className="list-link">
-                          {i.session.name} · {i.event.circuit.city}
-                        </Link>
-                      </strong>
-                    </div>
-                    {resumen && <VideoLinkThumb videoId={resumen.id} href={`${eventoHref}#${i.session.id}`} ariaLabel={`Ver el resumen de ${i.session.name} en YouTube`} />}
+              const podiumRow = (r: { pos: number; driver: string; team?: string; gap?: string }, cls?: string) => (
+                <li key={`${cls ?? "p"}-${r.pos}`} className={cls}>
+                  <b>{r.pos}</b>
+                  <div>
+                    <strong>{r.driver}</strong>
+                    <span>{r.team}</span>
                   </div>
-                  <ol>
-                    {i.session.results!.slice(0, 3).map((r) => (
-                      <li key={r.pos}>
-                        <b>{r.pos}</b>
-                        <div>
-                          <strong>{r.driver}</strong>
-                          <span>{r.team}</span>
-                        </div>
-                        <time>{r.gap}</time>
-                      </li>
-                    ))}
-                    {ours.map((r) => (
-                      <li key={`ours-${r.pos}`} className="podium-ours">
-                        <b>{r.pos}</b>
-                        <div>
-                          <strong>{r.driver}</strong>
-                          <span>{r.team}</span>
-                        </div>
-                        <time>{r.gap}</time>
-                      </li>
-                    ))}
+                  <time>{r.gap}</time>
+                </li>
+              );
+              return (
+                <article key={i.session.id} className="home-recent-item">
+                  {head}
+                  <ol className="home-podium">
+                    {i.session.results!.slice(0, 3).map((r) => podiumRow(r))}
+                    {ours.map((r) => podiumRow(r, "is-arg"))}
                   </ol>
                 </article>
               );
             })}
           </div>
-          <p className="results-band-cta">
-            <Link href="/calendario">Ver todos los resultados <span aria-hidden="true">→</span></Link>
+          <p className="home-band-cta">
+            <Link href="/calendario">
+              Ver todos los resultados <span aria-hidden="true">→</span>
+            </Link>
           </p>
         </div>
       </section>
@@ -315,116 +358,134 @@ export default async function Home() {
     agenda: <Agenda key="agenda" items={items} days={days} today={todayKey} now={now} simulated={simulated} />,
 
     resultados: (
-      // Sobre fondo claro: "Recién terminó" ya es la única banda oscura de la home (regla de una banda oscura por página).
-      <section key="resultados" id="resultados" className="resultados-light">
-        <div className="section-block">
-          {/* Con resultados primero, la cabecera ya dice "Resultados del finde": no se repite el título. */}
-          {mode !== "results" && (
-            <SectionTitle title="Resultados">
-              <Link href="/calendario">Calendario</Link>
-            </SectionTitle>
+      <section key="resultados" id="resultados" className="home-section home-results">
+        {/* Con resultados primero, la cabecera ya dice "Resultados del finde": no se repite el título. */}
+        {mode !== "results" && (
+          <HTitle title="Resultados">
+            <Link href="/calendario" className="home-more">
+              Calendario
+            </Link>
+          </HTitle>
+        )}
+        <div className="home-results-grid">
+          {podium ? (
+            <article className="home-result-card">
+              <div className="home-result-head">
+                <HLabel series={podium.series} detail={`${fmtDayNum(podium.session.start)} ${fmtMonthShort(podium.session.start)}`} href={`/categorias/${podium.series.id}`} />
+                <strong>
+                  <Link href={`/eventos/${podium.event.id}`}>
+                    {podium.session.name} · {podium.event.circuit.city}
+                  </Link>
+                </strong>
+              </div>
+              <ol className="home-podium is-light">
+                {podium.session.results!.slice(0, 3).map((r) => (
+                  <li key={r.pos}>
+                    <b>{r.pos}</b>
+                    <div>
+                      <strong>{r.driver}</strong>
+                      <span>{r.team}</span>
+                    </div>
+                    <time>{r.gap}</time>
+                  </li>
+                ))}
+              </ol>
+            </article>
+          ) : (
+            <p className="home-empty">Sin resultados nacionales recientes.</p>
           )}
-          <div className="result-layout">
-            {podium ? (
-              <article className="podium">
-                <div className="podium-head">
+
+          <div className="home-results-side">
+            {highlight ? (
+              <Link href={`/eventos/${highlight.event.id}`} className="home-highlight">
+                <span className="home-eyebrow">Argentino destacado afuera</span>
+                <HLabel series={highlight.series} detail={highlight.event.circuit.city} />
+                <div className="home-highlight-body">
+                  <b className="home-big-pos">{highlight.row.pos}.º</b>
                   <div>
-                    <CategoryLabel series={podium.series} detail={`${fmtDayNum(podium.session.start)} ${fmtMonthShort(podium.session.start)}`} href={`/categorias/${podium.series.id}`} />
-                    <strong>
-                      <Link href={`/eventos/${podium.event.id}`} className="list-link">
-                        {podium.session.name} · {podium.event.circuit.city}
-                      </Link>
-                    </strong>
+                    <h3>{highlight.row.driver}</h3>
+                    <p>
+                      {highlight.session.name} de {highlight.series.name} en {highlight.event.circuit.city}.
+                    </p>
+                    {highlight.row.points !== undefined && highlight.row.points > 0 && (
+                      <p className="home-highlight-pts">
+                        +{highlight.row.points} <small>puntos</small>
+                      </p>
+                    )}
                   </div>
                 </div>
-                <ol>
-                  {podium.session.results!.slice(0, 3).map((r) => (
-                    <li key={r.pos}>
-                      <b>{r.pos}</b>
-                      <div>
-                        <strong>{r.driver}</strong>
-                        <span>{r.team}</span>
-                      </div>
-                      <time>{r.gap}</time>
-                    </li>
-                  ))}
-                </ol>
-              </article>
-            ) : (
-              <p className="empty-state">Sin resultados nacionales recientes.</p>
-            )}
-
-            {highlight ? (
-              <Link href={`/eventos/${highlight.event.id}`} className="arg-highlight list-link">
-                <span>Argentino destacado afuera</span>
-                <CategoryLabel series={highlight.series} detail={highlight.event.circuit.city} />
-                <b className="big-pos">{highlight.row.pos}.º</b>
-                <h3>{highlight.row.driver}</h3>
-                <p>
-                  {highlight.session.name} de {highlight.series.name} en {highlight.event.circuit.city}.
-                </p>
-                {highlight.row.points !== undefined && highlight.row.points > 0 && (
-                  <div className="delta positive">
-                    +{highlight.row.points} <small>puntos</small>
-                  </div>
-                )}
               </Link>
             ) : (
-              <div className="arg-highlight">
-                <span>Argentino destacado afuera</span>
+              <div className="home-highlight">
+                <span className="home-eyebrow">Argentino destacado afuera</span>
                 <p>Sin resultados de argentinos afuera en la última semana.</p>
               </div>
             )}
-
-            <div className="result-notes">
-              {notes.slice(0, 2).map((n) => (
-                <Link key={`${n.session.id}-${n.row.driver}`} href={`/eventos/${n.event.id}`}>
-                  <CategoryLabel series={n.series} detail={n.event.circuit.city} />
-                  <strong>
-                    {surname(n.row.driver)} terminó {n.row.pos}.º
-                  </strong>
-                  <small>{n.row.points ? `Sumó ${n.row.points} ${n.row.points === 1 ? "punto" : "puntos"}` : n.session.name}</small>
-                </Link>
-              ))}
-            </div>
+            {notes.length > 0 && (
+              <div className="home-result-notes">
+                {notes.slice(0, 2).map((n) => (
+                  <Link key={`${n.session.id}-${n.row.driver}`} href={`/eventos/${n.event.id}`}>
+                    <HLabel series={n.series} detail={n.event.circuit.city} />
+                    <strong>
+                      {surname(n.row.driver)} terminó {n.row.pos}.º
+                    </strong>
+                    <small>{n.row.points ? `Sumó ${n.row.points} ${n.row.points === 1 ? "punto" : "puntos"}` : n.session.name}</small>
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </section>
     ),
 
     viene: (
-      <section key="viene" id="viene" className="section-block next-weeks">
-        <SectionTitle title="Lo que viene">
-          <Link href="/calendario">Ver calendario</Link>
-        </SectionTitle>
-        <div className="date-strip">
+      <section key="viene" id="viene" className="home-section home-next" aria-labelledby="viene-title">
+        <HTitle id="viene-title" title="Lo que viene">
+          <Link href="/calendario" className="home-more">
+            Ver calendario
+          </Link>
+        </HTitle>
+        <ul className="home-next-list">
           {nextEvents.map((e) => {
             const s = getSeries(e.seriesId)!;
             const date = e.sessions.at(-1)!.start;
             return (
-              <Link key={e.id} href={`/eventos/${e.id}`} className="next-card list-link" style={{ "--cat": s.color } as CSSProperties}>
-                <CategoryLabel series={s} />
-                <strong>{e.circuit.city}</strong>
-                <time dateTime={date}>
-                  {fmtDayShort(date)} · Fecha {e.round}
-                </time>
-              </Link>
+              <li key={e.id}>
+                <Link href={`/eventos/${e.id}`} className="home-next-row">
+                  <time dateTime={date}>{fmtDayShort(date)}</time>
+                  <div>
+                    <h3>{e.circuit.city}</h3>
+                    <HLabel series={s} detail={`Fecha ${e.round}`} />
+                  </div>
+                </Link>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </section>
     ),
   };
 
-
   const notas: ReactNode = latestNotes.length > 0 && (
-    <section key="notas" id="notas" className="section-block">
-      <SectionTitle title="Lo que se dice">
-        <Link href="/notas">Ver todas</Link>
-      </SectionTitle>
-      <div className="nota-list">
+    <section key="notas" id="notas" className="home-section home-notes" aria-labelledby="notas-title">
+      <HTitle id="notas-title" title="Lo que se dice">
+        <Link href="/notas" className="home-more">
+          Ver todas
+        </Link>
+      </HTitle>
+      <div className="home-note-list">
         {latestNotes.map((n) => (
-          <NoteCard key={n.slug} nota={n} />
+          <article key={n.slug} className="home-note">
+            <p className="home-note-meta">
+              <b>{n.source.medio}</b>
+              <time dateTime={n.publishedAt}>{noteDate(n)}</time>
+            </p>
+            <h3>
+              <Link href={`/notas/${n.slug}`}>{n.title}</Link>
+            </h3>
+            <p className="home-note-summary">{n.summary}</p>
+          </article>
         ))}
       </div>
     </section>
@@ -432,34 +493,42 @@ export default async function Home() {
   const all: Record<SectionId, ReactNode> = { ...sections, notas };
 
   return (
-    <>
+    <div className="home">
       <AutoRefresh />
-      <section className={`weekend-head mode-${mode}`}>
-        <h1>
-          {title} <span className="hero-date">{range}</span>
-        </h1>
-        <p className="lede">
-          {lede.filter(Boolean).map((line, i) => (
-            <span key={i}>{line}</span>
-          ))}
-        </p>
+      <section className={`home-head mode-${mode}`}>
+        <div className="home-wrap home-head-grid">
+          <h1>
+            {title}
+            <span className="home-range">{range}</span>
+          </h1>
+          <ul className="home-moment">
+            {moment
+              .filter((r): r is MomentRow => Boolean(r))
+              .map((r) => (
+                <li key={r.key} className={r.live ? "is-live" : undefined}>
+                  <span className="home-eyebrow">{r.label}</span>
+                  <span className="home-moment-body">{r.body}</span>
+                </li>
+              ))}
+          </ul>
+        </div>
+        <nav className="home-wrap home-jump" aria-label="Ir a una categoría">
+          {JUMP.map((id) => {
+            const s = getSeries(id)!;
+            return (
+              <Link key={id} href={`/categorias/${id}`}>
+                <HCode series={s} />
+                {/* Si el nombre corto repite el código (F1, TC, TN), va el nombre completo. */}
+                <span>{s.short === s.code ? s.name : s.short}</span>
+              </Link>
+            );
+          })}
+          <Link href="/categorias" className="home-jump-all">
+            Todas
+          </Link>
+        </nav>
       </section>
-      <nav className="cat-jump" aria-label="Ir a una categoría">
-        {JUMP.map((id) => {
-          const s = getSeries(id)!;
-          return (
-            <Link key={id} href={`/categorias/${id}`} className="cat-jump-item">
-              <Code series={s} />
-              {/* Si el nombre corto repite el código (F1, TC, TN), va el nombre completo. */}
-              <span>{s.short === s.code ? s.name : s.short}</span>
-            </Link>
-          );
-        })}
-        <Link href="/categorias" className="cat-jump-all">
-          Todas
-        </Link>
-      </nav>
       {ORDER[mode].map((id) => all[id])}
-    </>
+    </div>
   );
 }
