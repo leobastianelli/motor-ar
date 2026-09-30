@@ -9,8 +9,9 @@ const MONTHS = { enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, ju
 
 // Del más específico al más general: "TCP" no debe leerse como "TC".
 const SERIES_TOKENS = [
-  [/\bTC\s*Pista\s*Pick\s*Up\b|\bTCPPK\b/i, "tc-pista-pick-up"],
-  [/\bTC\s*Pick\s*Up\b|\bTCPK\b/i, "tc-pick-up"],
+  // SoloTC escribe TCPPU y TCPU; Carburando y la ACTC, TCPPK y TCPK. "Pick-Up" con guion también aparece.
+  [/\bTC\s*Pista\s*Pick[\s-]*Up\b|\bTCPPK\b|\bTCPPU\b/i, "tc-pista-pick-up"],
+  [/\bTC\s*Pick[\s-]*Up\b|\bTCPK\b|\bTCPU\b/i, "tc-pick-up"],
   [/\bTC\s*Pista\s*Mouras\b|\bTCPM\b/i, "tc-pista-mouras"],
   [/\bTC\s*Mouras\b|\bTCM\b/i, "tc-mouras"],
   [/\bTC\s*Pista\b|\bTCP\b/i, "tc-pista"],
@@ -44,7 +45,7 @@ export function htmlToText(html) {
 function sessionOf(label) {
   const ordinal = label.match(/(\d)\s*[°ºª]/)?.[1];
   if (/entrenamiento|práctica|practica|ensayo|libre/i.test(label)) return { kind: "practica", name: `${ordinal ?? 1}° Entrenamiento` };
-  if (/clasificaci/i.test(label)) return { kind: "clasificacion", name: "Clasificación" };
+  if (/clasificaci|clasificatori/i.test(label)) return { kind: "clasificacion", name: "Clasificación" };
   // "Serie única" (TC Mouras, Pista Mouras…) se llama así también en los resultados: el mismo nombre evita una sesión duplicada.
   if (/serie|batería|bateria/i.test(label)) return { kind: "serie", name: /[uú]nica/i.test(label) ? "Serie única" : `Serie ${ordinal ?? 1}` };
   if (/sprint/i.test(label)) return { kind: "sprint", name: "Carrera sprint" };
