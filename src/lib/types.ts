@@ -18,6 +18,22 @@ export interface Series {
   founded?: number;
   /** Si sólo cargamos parte de la temporada, qué falta. Con esto las estadísticas de los pilotos no se muestran como si fueran las del año. */
   partialResults?: string;
+  /**
+   * Clases de la categoría que corren juntas en cada fecha (p. ej. Córdoba Pista: TC 4000, Clase 3…). Cada clase tiene su propio sello,
+   * sus sesiones (`Session.classId`) y su campeonato. Los ids son propios de la categoría: la "Clase 3" de Córdoba Pista no tiene nada que ver
+   * con la del TN, aunque se llamen igual.
+   */
+  classes?: SeriesClass[];
+}
+
+export interface SeriesClass {
+  /** Único dentro de la categoría (no entre categorías): "tc4000", "clase3". */
+  id: string;
+  name: string;
+  short: string;
+  /** Sello de 2–5 caracteres. */
+  code: string;
+  color: string;
 }
 
 export interface Circuit {
@@ -51,6 +67,8 @@ export interface ResultRow {
   number?: string;
   /** Clase dentro de la carrera (GT: Pro, Gold, Silver o Bronze Cup), si la fuente la publica. */
   class?: string;
+  /** Vueltas completadas, si la fuente las publica (el puntaje de Córdoba Pista exige el 75 % de las del ganador). */
+  laps?: number;
   /** Posición tal como la publica la fuente ("R" = abandono, etc.). */
   positionText?: string;
   status?: string;
@@ -68,6 +86,8 @@ export interface Session {
   timeSources?: { name: string; url: string; start: string }[];
   durationMin: number;
   results?: ResultRow[];
+  /** Clase de la categoría a la que pertenece la sesión (ver `SeriesClass`). Sólo las categorías con clases la llevan. */
+  classId?: string;
   /**
    * Documento del que salen los resultados de esta sesión. Sin `status` es un resultado oficial. Con `status: "provisional"` es la planilla del
    * cronometraje de la ACTC, publicada antes de que los comisarios revisen (src/lib/provisorio.mjs). Si el oficial reemplazó a un provisorio,

@@ -1,0 +1,2303 @@
+{
+ "_fuente": "PDF 'CAMPEONATO CORDOBA PISTA' de la FRAD tras cada fecha (versión confirmada, sin las clases 'en suspenso'); fecha 2 = 'CAMPEONATO-CORDOBA-PISTA-Y-FORMULA-R.-PLUS-2026-1.pdf'. Transcripción de las columnas Pos, N°, Piloto y Puntos.",
+ "fechas": {
+  "1": {
+   "tc4000": [
+    {
+     "pos": 1,
+     "number": "3",
+     "name": "TERRIER Federico",
+     "points": 34
+    },
+    {
+     "pos": 2,
+     "number": "75",
+     "name": "VASCHETTI Gustavo",
+     "points": 29
+    },
+    {
+     "pos": 3,
+     "number": "5",
+     "name": "MARCONI Juan P.",
+     "points": 24
+    },
+    {
+     "pos": 4,
+     "number": "21",
+     "name": "CORRAL Federico",
+     "points": 21
+    },
+    {
+     "pos": 5,
+     "number": "7",
+     "name": "NECOCHEA Darío",
+     "points": 20
+    },
+    {
+     "pos": 6,
+     "number": "17",
+     "name": "VANINI Ricardo",
+     "points": 18
+    },
+    {
+     "pos": 7,
+     "number": "32",
+     "name": "MARGARA José",
+     "points": 17
+    },
+    {
+     "pos": 8,
+     "number": "46",
+     "name": "SANTONI Daniel",
+     "points": 15
+    },
+    {
+     "pos": 9,
+     "number": "1",
+     "name": "LONGO Mauricio",
+     "points": 11
+    },
+    {
+     "pos": 10,
+     "number": "66",
+     "name": "RASETTO Genaro",
+     "points": 10
+    },
+    {
+     "pos": 11,
+     "number": "87",
+     "name": "MARTINEZ Juan Martín",
+     "points": 8
+    },
+    {
+     "pos": 12,
+     "number": "9",
+     "name": "VIDAL Ricardo",
+     "points": 4
+    }
+   ],
+   "tcp4000": [
+    {
+     "pos": 1,
+     "number": "57",
+     "name": "SABY Guillermo",
+     "points": 34
+    },
+    {
+     "pos": 2,
+     "number": "3",
+     "name": "SOAVE Esteban",
+     "points": 27
+    },
+    {
+     "pos": 3,
+     "number": "10",
+     "name": "MINUDRI Diego",
+     "points": 26
+    },
+    {
+     "pos": 4,
+     "number": "48",
+     "name": "VENDRAME Pablo",
+     "points": 24
+    },
+    {
+     "pos": 5,
+     "number": "58",
+     "name": "PONCE Guillermo",
+     "points": 21
+    },
+    {
+     "pos": 6,
+     "number": "17",
+     "name": "VANINI Ricardo (P)",
+     "points": 20
+    },
+    {
+     "pos": 7,
+     "number": "4",
+     "name": "ESPINA Mario",
+     "points": 18
+    },
+    {
+     "pos": 8,
+     "number": "56",
+     "name": "GROSSO Sebastian",
+     "points": 16
+    },
+    {
+     "pos": 9,
+     "number": "64",
+     "name": "MASSIO Raúl",
+     "points": 15
+    },
+    {
+     "pos": 10,
+     "number": "31",
+     "name": "VIDAL Juan Ignacio",
+     "points": 14
+    },
+    {
+     "pos": 11,
+     "number": "46",
+     "name": "GOMEZ Roberto",
+     "points": 12
+    },
+    {
+     "pos": 12,
+     "number": "9",
+     "name": "MARTINEZ Diego",
+     "points": 8
+    }
+   ],
+   "fiat": [
+    {
+     "pos": 1,
+     "number": "21",
+     "name": "VIEL Gonzalo",
+     "points": 19
+    },
+    {
+     "pos": 2,
+     "number": "91",
+     "name": "STRAZZOLINI Thiago",
+     "points": 17
+    },
+    {
+     "pos": 3,
+     "number": "17",
+     "name": "IBAÑEZ Martín",
+     "points": 14
+    },
+    {
+     "pos": 4,
+     "number": "12",
+     "name": "VIEL Rodrigo",
+     "points": 13.5
+    },
+    {
+     "pos": 5,
+     "number": "2",
+     "name": "PAVON Ariel",
+     "points": 13.5
+    },
+    {
+     "pos": 6,
+     "number": "96",
+     "name": "FERNANDEZ Pedro",
+     "points": 12.5
+    }
+   ],
+   "fiat128": [
+    {
+     "pos": 1,
+     "number": "41",
+     "name": "RONGA Exequiel",
+     "points": 19.5
+    },
+    {
+     "pos": 2,
+     "number": "97",
+     "name": "VARELA Maximiliano",
+     "points": 16.5
+    },
+    {
+     "pos": 3,
+     "number": "34",
+     "name": "TRASCHEL Haziel",
+     "points": 7.5
+    },
+    {
+     "pos": 4,
+     "number": "19",
+     "name": "ROBLEDO Claudio",
+     "points": 6
+    },
+    {
+     "pos": 5,
+     "number": "39",
+     "name": "RUIZ Nicolás",
+     "points": 0
+    },
+    {
+     "pos": 6,
+     "number": "83",
+     "name": "SALIS Gonzalo",
+     "points": 0
+    }
+   ]
+  },
+  "2": {
+   "fiat": [
+    {
+     "pos": 1,
+     "number": "2",
+     "name": "PAVON Ariel",
+     "points": 42.5
+    },
+    {
+     "pos": 2,
+     "number": "12",
+     "name": "VIEL Rodrigo",
+     "points": 39.5
+    },
+    {
+     "pos": 3,
+     "number": "21",
+     "name": "VIEL Gonzalo",
+     "points": 39
+    },
+    {
+     "pos": 4,
+     "number": "87",
+     "name": "ESTANGUET Santino",
+     "points": 36
+    },
+    {
+     "pos": 5,
+     "number": "96",
+     "name": "FERNANDEZ Pedro",
+     "points": 34.5
+    },
+    {
+     "pos": 6,
+     "number": "17",
+     "name": "IBAÑEZ Martín",
+     "points": 33
+    },
+    {
+     "pos": 7,
+     "number": "91",
+     "name": "STRAZZOLINI Thiago",
+     "points": 25
+    },
+    {
+     "pos": 8,
+     "number": "19",
+     "name": "CAGNOLO Stefano",
+     "points": 20
+    }
+   ],
+   "fiat128": [
+    {
+     "pos": 1,
+     "number": "2",
+     "name": "CASTRO Matías",
+     "points": 35
+    },
+    {
+     "pos": 2,
+     "number": "34",
+     "name": "TRASCHEL Haziel",
+     "points": 31.5
+    },
+    {
+     "pos": 3,
+     "number": "99",
+     "name": "PAVON PAVON Ariel",
+     "points": 31
+    },
+    {
+     "pos": 4,
+     "number": "41",
+     "name": "RONGA Exequiel",
+     "points": 28.5
+    },
+    {
+     "pos": 5,
+     "number": "97",
+     "name": "VARELA Maximiliano",
+     "points": 24.5
+    },
+    {
+     "pos": 6,
+     "number": "45",
+     "name": "CERVIÑO Matías",
+     "points": 20
+    },
+    {
+     "pos": 7,
+     "number": "71",
+     "name": "CHESTA Juan I.",
+     "points": 20
+    },
+    {
+     "pos": 8,
+     "number": "68",
+     "name": "BAROVERO Santiago",
+     "points": 9
+    },
+    {
+     "pos": 9,
+     "number": "53",
+     "name": "RUJINSKY David",
+     "points": 7
+    },
+    {
+     "pos": 10,
+     "number": "19",
+     "name": "ROBLEDO Claudio",
+     "points": 6
+    },
+    {
+     "pos": 11,
+     "number": "39",
+     "name": "RUIZ Nicolás",
+     "points": 6
+    },
+    {
+     "pos": 12,
+     "number": "83",
+     "name": "SALIS Gonzalo",
+     "points": 0
+    }
+   ],
+   "tcp4000": [
+    {
+     "pos": 1,
+     "number": "57",
+     "name": "SABY Guillermo",
+     "points": 58
+    },
+    {
+     "pos": 2,
+     "number": "10",
+     "name": "MINUDRI Diego",
+     "points": 54
+    },
+    {
+     "pos": 3,
+     "number": "3",
+     "name": "SOAVE Esteban",
+     "points": 49
+    },
+    {
+     "pos": 4,
+     "number": "9",
+     "name": "MARTINEZ Diego",
+     "points": 44
+    },
+    {
+     "pos": 5,
+     "number": "48",
+     "name": "VENDRAME Pablo",
+     "points": 44
+    },
+    {
+     "pos": 6,
+     "number": "4",
+     "name": "ESPINA Mario",
+     "points": 41
+    },
+    {
+     "pos": 7,
+     "number": "17",
+     "name": "VANINI Ricardo (P)",
+     "points": 38
+    },
+    {
+     "pos": 8,
+     "number": "64",
+     "name": "MASSIO Raúl",
+     "points": 30
+    },
+    {
+     "pos": 9,
+     "number": "46",
+     "name": "GOMEZ Roberto",
+     "points": 27
+    },
+    {
+     "pos": 10,
+     "number": "58",
+     "name": "PONCE Guillermo",
+     "points": 21
+    },
+    {
+     "pos": 11,
+     "number": "45",
+     "name": "FORCHERI Gastón",
+     "points": 18
+    },
+    {
+     "pos": 12,
+     "number": "56",
+     "name": "GROSSO Sebastian",
+     "points": 16
+    },
+    {
+     "pos": 13,
+     "number": "31",
+     "name": "VIDAL Juan Ignacio",
+     "points": 14
+    },
+    {
+     "pos": 14,
+     "number": "44",
+     "name": "CARREÑO Fabián",
+     "points": 12
+    }
+   ],
+   "tc4000": [
+    {
+     "pos": 1,
+     "number": "3",
+     "name": "TERRIER Federico",
+     "points": 55
+    },
+    {
+     "pos": 2,
+     "number": "1",
+     "name": "LONGO Mauricio",
+     "points": 47
+    },
+    {
+     "pos": 3,
+     "number": "5",
+     "name": "MARCONI Juan P.",
+     "points": 43
+    },
+    {
+     "pos": 4,
+     "number": "75",
+     "name": "VASCHETTI Gustavo",
+     "points": 42
+    },
+    {
+     "pos": 5,
+     "number": "32",
+     "name": "MARGARA José",
+     "points": 35
+    },
+    {
+     "pos": 6,
+     "number": "17",
+     "name": "VANINI Ricardo",
+     "points": 31
+    },
+    {
+     "pos": 7,
+     "number": "66",
+     "name": "RASETTO Genaro",
+     "points": 30
+    },
+    {
+     "pos": 8,
+     "number": "4",
+     "name": "ZAFRA Germán",
+     "points": 30
+    },
+    {
+     "pos": 9,
+     "number": "9",
+     "name": "VIDAL Ricardo",
+     "points": 27
+    },
+    {
+     "pos": 10,
+     "number": "87",
+     "name": "MARTINEZ Juan Martín",
+     "points": 26
+    },
+    {
+     "pos": 11,
+     "number": "7",
+     "name": "NECOCHEA Darío",
+     "points": 24
+    },
+    {
+     "pos": 12,
+     "number": "46",
+     "name": "SANTONI Daniel",
+     "points": 22
+    },
+    {
+     "pos": 13,
+     "number": "21",
+     "name": "CORRAL Federico",
+     "points": 21
+    },
+    {
+     "pos": 14,
+     "number": "53",
+     "name": "ANGIORAMA Juan",
+     "points": 17
+    }
+   ]
+  },
+  "3": {
+   "tc4000": [
+    {
+     "pos": 1,
+     "number": "75",
+     "name": "VASCHETTI Gustavo",
+     "points": 70
+    },
+    {
+     "pos": 2,
+     "number": "1",
+     "name": "LONGO Mauricio",
+     "points": 69
+    },
+    {
+     "pos": 3,
+     "number": "5",
+     "name": "MARCONI Juan P.",
+     "points": 69
+    },
+    {
+     "pos": 4,
+     "number": "66",
+     "name": "RASETTO Genaro",
+     "points": 64
+    },
+    {
+     "pos": 5,
+     "number": "3",
+     "name": "TERRIER Federico",
+     "points": 55
+    },
+    {
+     "pos": 6,
+     "number": "17",
+     "name": "VANINI Ricardo",
+     "points": 53
+    },
+    {
+     "pos": 7,
+     "number": "32",
+     "name": "MARGARA José",
+     "points": 50
+    },
+    {
+     "pos": 8,
+     "number": "9",
+     "name": "VIDAL Ricardo",
+     "points": 49
+    },
+    {
+     "pos": 9,
+     "number": "4",
+     "name": "ZAFRA Germán",
+     "points": 48
+    },
+    {
+     "pos": 10,
+     "number": "21",
+     "name": "CORRAL Federico",
+     "points": 36
+    },
+    {
+     "pos": 11,
+     "number": "46",
+     "name": "SANTONI Daniel",
+     "points": 36
+    },
+    {
+     "pos": 12,
+     "number": "7",
+     "name": "NECOCHEA Darío",
+     "points": 32
+    },
+    {
+     "pos": 13,
+     "number": "87",
+     "name": "MARTINEZ Juan Martín",
+     "points": 26
+    },
+    {
+     "pos": 14,
+     "number": "53",
+     "name": "ANGIORAMA Juan",
+     "points": 17
+    }
+   ],
+   "tcp4000": [
+    {
+     "pos": 1,
+     "number": "48",
+     "name": "VENDRAME Pablo",
+     "points": 79
+    },
+    {
+     "pos": 2,
+     "number": "3",
+     "name": "SOAVE Esteban",
+     "points": 79
+    },
+    {
+     "pos": 3,
+     "number": "57",
+     "name": "SABY Guillermo",
+     "points": 74
+    },
+    {
+     "pos": 4,
+     "number": "10",
+     "name": "MINUDRI Diego",
+     "points": 72
+    },
+    {
+     "pos": 5,
+     "number": "9",
+     "name": "MARTINEZ Diego",
+     "points": 64
+    },
+    {
+     "pos": 6,
+     "number": "17",
+     "name": "VANINI Ricardo (P)",
+     "points": 61
+    },
+    {
+     "pos": 7,
+     "number": "4",
+     "name": "ESPINA Mario",
+     "points": 58
+    },
+    {
+     "pos": 8,
+     "number": "58",
+     "name": "PONCE Guillermo",
+     "points": 45
+    },
+    {
+     "pos": 9,
+     "number": "46",
+     "name": "GOMEZ Roberto",
+     "points": 44
+    },
+    {
+     "pos": 10,
+     "number": "64",
+     "name": "MASSIO Raúl",
+     "points": 30
+    },
+    {
+     "pos": 11,
+     "number": "45",
+     "name": "FORCHERI Gastón",
+     "points": 27
+    },
+    {
+     "pos": 12,
+     "number": "56",
+     "name": "GROSSO Sebastian",
+     "points": 16
+    },
+    {
+     "pos": 13,
+     "number": "31",
+     "name": "VIDAL Juan Ignacio",
+     "points": 14
+    },
+    {
+     "pos": 14,
+     "number": "44",
+     "name": "CARREÑO Fabián",
+     "points": 12
+    }
+   ],
+   "fiat": [
+    {
+     "pos": 1,
+     "number": "2",
+     "name": "PAVON Ariel",
+     "points": 77.5
+    },
+    {
+     "pos": 2,
+     "number": "21",
+     "name": "VIEL Gonzalo",
+     "points": 65
+    },
+    {
+     "pos": 3,
+     "number": "96",
+     "name": "FERNANDEZ Pedro",
+     "points": 56.5
+    },
+    {
+     "pos": 4,
+     "number": "17",
+     "name": "IBAÑEZ Martín",
+     "points": 52
+    },
+    {
+     "pos": 5,
+     "number": "19",
+     "name": "CAGNOLO Stefano",
+     "points": 50
+    },
+    {
+     "pos": 6,
+     "number": "87",
+     "name": "ESTANGUET Santino",
+     "points": 45
+    },
+    {
+     "pos": 7,
+     "number": "12",
+     "name": "VIEL Rodrigo",
+     "points": 43.5
+    },
+    {
+     "pos": 8,
+     "number": "91",
+     "name": "STRAZZOLINI Thiago",
+     "points": 33
+    },
+    {
+     "pos": 9,
+     "number": "60",
+     "name": "CAMARGO CAMARGO",
+     "points": 18
+    },
+    {
+     "pos": 10,
+     "number": "22",
+     "name": "COMPAGNUCCI Agustín",
+     "points": 7
+    },
+    {
+     "pos": 11,
+     "number": "13",
+     "name": "DEVINCHENTE Daniel",
+     "points": 6
+    },
+    {
+     "pos": 12,
+     "number": "26",
+     "name": "MASERA Nicolás",
+     "points": 6
+    },
+    {
+     "pos": 13,
+     "number": "10",
+     "name": "MARESCALCHI Iván",
+     "points": 4
+    }
+   ],
+   "fiat128": [
+    {
+     "pos": 1,
+     "number": "41",
+     "name": "RONGA Exequiel",
+     "points": 64.5
+    },
+    {
+     "pos": 2,
+     "number": "99",
+     "name": "PAVON PAVON Ariel",
+     "points": 56
+    },
+    {
+     "pos": 3,
+     "number": "97",
+     "name": "VARELA Maximiliano",
+     "points": 53.5
+    },
+    {
+     "pos": 4,
+     "number": "2",
+     "name": "CASTRO Matías",
+     "points": 53
+    },
+    {
+     "pos": 5,
+     "number": "34",
+     "name": "TRASCHEL Haziel",
+     "points": 39.5
+    },
+    {
+     "pos": 6,
+     "number": "6",
+     "name": "LINGUA Agustín",
+     "points": 24
+    },
+    {
+     "pos": 7,
+     "number": "45",
+     "name": "CERVIÑO Matías",
+     "points": 24
+    },
+    {
+     "pos": 8,
+     "number": "19",
+     "name": "ROBLEDO Claudio",
+     "points": 22
+    },
+    {
+     "pos": 9,
+     "number": "29",
+     "name": "MAHL Claudio",
+     "points": 20
+    },
+    {
+     "pos": 10,
+     "number": "71",
+     "name": "CHESTA Juan I.",
+     "points": 20
+    },
+    {
+     "pos": 11,
+     "number": "14",
+     "name": "RUFFINO Miguel",
+     "points": 19
+    },
+    {
+     "pos": 12,
+     "number": "67",
+     "name": "PAGLIERO German",
+     "points": 16
+    },
+    {
+     "pos": 13,
+     "number": "94",
+     "name": "PARDAL Lorenzo",
+     "points": 13
+    },
+    {
+     "pos": 14,
+     "number": "83",
+     "name": "SALIS Gonzalo",
+     "points": 12
+    },
+    {
+     "pos": 15,
+     "number": "30",
+     "name": "PANCELLO Gustavo",
+     "points": 10
+    },
+    {
+     "pos": 16,
+     "number": "68",
+     "name": "BAROVERO Santiago",
+     "points": 9
+    },
+    {
+     "pos": 17,
+     "number": "53",
+     "name": "RUJINSKY David",
+     "points": 7
+    },
+    {
+     "pos": 18,
+     "number": "39",
+     "name": "RUIZ Nicolás",
+     "points": 6
+    },
+    {
+     "pos": 19,
+     "number": "27",
+     "name": "GROSSO Miguel",
+     "points": 4
+    }
+   ]
+  },
+  "4": {
+   "tc4000": [
+    {
+     "pos": 1,
+     "number": "5",
+     "name": "MARCONI Juan P.",
+     "points": 99
+    },
+    {
+     "pos": 2,
+     "number": "1",
+     "name": "LONGO Mauricio",
+     "points": 93
+    },
+    {
+     "pos": 3,
+     "number": "3",
+     "name": "TERRIER Federico",
+     "points": 90
+    },
+    {
+     "pos": 4,
+     "number": "75",
+     "name": "VASCHETTI Gustavo",
+     "points": 90
+    },
+    {
+     "pos": 5,
+     "number": "66",
+     "name": "RASETTO Genaro",
+     "points": 68
+    },
+    {
+     "pos": 6,
+     "number": "9",
+     "name": "VIDAL Ricardo",
+     "points": 67
+    },
+    {
+     "pos": 7,
+     "number": "17",
+     "name": "VANINI Ricardo",
+     "points": 61
+    },
+    {
+     "pos": 8,
+     "number": "4",
+     "name": "ZAFRA Germán",
+     "points": 57
+    },
+    {
+     "pos": 9,
+     "number": "21",
+     "name": "CORRAL Federico",
+     "points": 53
+    },
+    {
+     "pos": 10,
+     "number": "32",
+     "name": "MARGARA José",
+     "points": 50
+    },
+    {
+     "pos": 11,
+     "number": "46",
+     "name": "SANTONI Daniel",
+     "points": 50
+    },
+    {
+     "pos": 12,
+     "number": "87",
+     "name": "MARTINEZ Juan Martín",
+     "points": 49
+    },
+    {
+     "pos": 13,
+     "number": "7",
+     "name": "NECOCHEA Darío",
+     "points": 46
+    },
+    {
+     "pos": 14,
+     "number": "53",
+     "name": "ANGIORAMA Juan",
+     "points": 17
+    },
+    {
+     "pos": 15,
+     "number": "29",
+     "name": "PEIRETTI Nicolás",
+     "points": 13
+    },
+    {
+     "pos": 16,
+     "number": "2",
+     "name": "BUCHHOLZ Claudio",
+     "points": 8
+    }
+   ],
+   "tcp4000": [
+    {
+     "pos": 1,
+     "number": "3",
+     "name": "SOAVE Esteban",
+     "points": 105
+    },
+    {
+     "pos": 2,
+     "number": "48",
+     "name": "VENDRAME Pablo",
+     "points": 100
+    },
+    {
+     "pos": 3,
+     "number": "9",
+     "name": "MARTINEZ Diego",
+     "points": 94
+    },
+    {
+     "pos": 4,
+     "number": "57",
+     "name": "SABY Guillermo",
+     "points": 93
+    },
+    {
+     "pos": 5,
+     "number": "10",
+     "name": "MINUDRI Diego",
+     "points": 88
+    },
+    {
+     "pos": 6,
+     "number": "58",
+     "name": "PONCE Guillermo",
+     "points": 80
+    },
+    {
+     "pos": 7,
+     "number": "17",
+     "name": "VANINI Ricardo (P)",
+     "points": 76
+    },
+    {
+     "pos": 8,
+     "number": "4",
+     "name": "ESPINA Mario",
+     "points": 58
+    },
+    {
+     "pos": 9,
+     "number": "46",
+     "name": "GOMEZ Roberto",
+     "points": 57
+    },
+    {
+     "pos": 10,
+     "number": "45",
+     "name": "FORCHERI Gastón",
+     "points": 46
+    },
+    {
+     "pos": 11,
+     "number": "64",
+     "name": "MASSIO Raúl",
+     "points": 30
+    },
+    {
+     "pos": 12,
+     "number": "22",
+     "name": "PERSIA Marcos",
+     "points": 20
+    },
+    {
+     "pos": 13,
+     "number": "56",
+     "name": "GROSSO Sebastian",
+     "points": 16
+    },
+    {
+     "pos": 14,
+     "number": "25",
+     "name": "SI NATALE DEL BO Pablo",
+     "points": 16
+    },
+    {
+     "pos": 15,
+     "number": "31",
+     "name": "VIDAL Juan Ignacio",
+     "points": 14
+    },
+    {
+     "pos": 16,
+     "number": "44",
+     "name": "CARREÑO Fabián",
+     "points": 12
+    }
+   ],
+   "fiat": [
+    {
+     "pos": 1,
+     "number": "2",
+     "name": "PAVON Ariel",
+     "points": 113.5
+    },
+    {
+     "pos": 2,
+     "number": "87",
+     "name": "ESTANGUET Santino",
+     "points": 75
+    },
+    {
+     "pos": 3,
+     "number": "21",
+     "name": "VIEL Gonzalo",
+     "points": 65
+    },
+    {
+     "pos": 4,
+     "number": "96",
+     "name": "FERNANDEZ Pedro",
+     "points": 63.5
+    },
+    {
+     "pos": 5,
+     "number": "19",
+     "name": "CAGNOLO Stefano",
+     "points": 58
+    },
+    {
+     "pos": 6,
+     "number": "91",
+     "name": "STRAZZOLINI Thiago",
+     "points": 58
+    },
+    {
+     "pos": 7,
+     "number": "17",
+     "name": "IBAÑEZ Martín",
+     "points": 52
+    },
+    {
+     "pos": 8,
+     "number": "12",
+     "name": "VIEL Rodrigo",
+     "points": 43.5
+    },
+    {
+     "pos": 9,
+     "number": "60",
+     "name": "CAMARGO CAMARGO",
+     "points": 38
+    },
+    {
+     "pos": 10,
+     "number": "13",
+     "name": "DEVINCHENTE Daniel",
+     "points": 26
+    },
+    {
+     "pos": 11,
+     "number": "99",
+     "name": "ROVIRA Christian",
+     "points": 20
+    },
+    {
+     "pos": 12,
+     "number": "36",
+     "name": "VAZQUEZ Martín",
+     "points": 18
+    },
+    {
+     "pos": 13,
+     "number": "22",
+     "name": "COMPAGNUCCI Agustín",
+     "points": 7
+    },
+    {
+     "pos": 14,
+     "number": "26",
+     "name": "MASERA Nicolás",
+     "points": 6
+    },
+    {
+     "pos": 15,
+     "number": "10",
+     "name": "MARESCALCHI Iván",
+     "points": 4
+    },
+    {
+     "pos": 16,
+     "number": "33",
+     "name": "CARRIZO Daniel",
+     "points": 4
+    },
+    {
+     "pos": 17,
+     "number": "43",
+     "name": "SANCHEZ Lautaro",
+     "points": 4
+    }
+   ],
+   "fiat128": [
+    {
+     "pos": 1,
+     "number": "41",
+     "name": "RONGA Exequiel",
+     "points": 89.5
+    },
+    {
+     "pos": 2,
+     "number": "2",
+     "name": "CASTRO Matías",
+     "points": 89
+    },
+    {
+     "pos": 3,
+     "number": "99",
+     "name": "PAVON PAVON Ariel",
+     "points": 86
+    },
+    {
+     "pos": 4,
+     "number": "97",
+     "name": "VARELA Maximiliano",
+     "points": 74.5
+    },
+    {
+     "pos": 5,
+     "number": "34",
+     "name": "TRASCHEL Haziel",
+     "points": 39.5
+    },
+    {
+     "pos": 6,
+     "number": "45",
+     "name": "CERVIÑO Matías",
+     "points": 39
+    },
+    {
+     "pos": 7,
+     "number": "14",
+     "name": "RUFFINO Miguel",
+     "points": 36
+    },
+    {
+     "pos": 8,
+     "number": "94",
+     "name": "PARDAL Lorenzo",
+     "points": 33
+    },
+    {
+     "pos": 9,
+     "number": "29",
+     "name": "MAHL Claudio",
+     "points": 29
+    },
+    {
+     "pos": 10,
+     "number": "6",
+     "name": "LINGUA Agustín",
+     "points": 24
+    },
+    {
+     "pos": 11,
+     "number": "19",
+     "name": "ROBLEDO Claudio",
+     "points": 22
+    },
+    {
+     "pos": 12,
+     "number": "79",
+     "name": "GIANRE Santiago",
+     "points": 21
+    },
+    {
+     "pos": 13,
+     "number": "71",
+     "name": "CHESTA Juan I.",
+     "points": 20
+    },
+    {
+     "pos": 14,
+     "number": "67",
+     "name": "PAGLIERO German",
+     "points": 16
+    },
+    {
+     "pos": 15,
+     "number": "83",
+     "name": "SALIS Gonzalo",
+     "points": 12
+    },
+    {
+     "pos": 16,
+     "number": "30",
+     "name": "PANCELLO Gustavo",
+     "points": 10
+    },
+    {
+     "pos": 17,
+     "number": "68",
+     "name": "BAROVERO Santiago",
+     "points": 9
+    },
+    {
+     "pos": 18,
+     "number": "53",
+     "name": "RUJINSKY David",
+     "points": 7
+    },
+    {
+     "pos": 19,
+     "number": "39",
+     "name": "RUIZ Nicolás",
+     "points": 6
+    },
+    {
+     "pos": 20,
+     "number": "27",
+     "name": "GROSSO Miguel",
+     "points": 4
+    },
+    {
+     "pos": 21,
+     "number": "88",
+     "name": "POSTAY Esteban",
+     "points": 4
+    }
+   ]
+  },
+  "5": {
+   "tc4000": [
+    {
+     "pos": 1,
+     "number": "5",
+     "name": "MARCONI Juan P.",
+     "points": 121
+    },
+    {
+     "pos": 2,
+     "number": "1",
+     "name": "LONGO Mauricio",
+     "points": 119
+    },
+    {
+     "pos": 3,
+     "number": "3",
+     "name": "TERRIER Federico",
+     "points": 111
+    },
+    {
+     "pos": 4,
+     "number": "75",
+     "name": "VASCHETTI Gustavo",
+     "points": 105
+    },
+    {
+     "pos": 5,
+     "number": "66",
+     "name": "RASETTO Genaro",
+     "points": 103
+    },
+    {
+     "pos": 6,
+     "number": "17",
+     "name": "VANINI Ricardo",
+     "points": 80
+    },
+    {
+     "pos": 7,
+     "number": "4",
+     "name": "ZAFRA Germán",
+     "points": 78
+    },
+    {
+     "pos": 8,
+     "number": "9",
+     "name": "VIDAL Ricardo",
+     "points": 67
+    },
+    {
+     "pos": 9,
+     "number": "7",
+     "name": "NECOCHEA Darío",
+     "points": 60
+    },
+    {
+     "pos": 10,
+     "number": "46",
+     "name": "SANTONI Daniel",
+     "points": 57
+    },
+    {
+     "pos": 11,
+     "number": "21",
+     "name": "CORRAL Federico",
+     "points": 53
+    },
+    {
+     "pos": 12,
+     "number": "87",
+     "name": "MARTINEZ Juan Martín",
+     "points": 53
+    },
+    {
+     "pos": 13,
+     "number": "32",
+     "name": "MARGARA José",
+     "points": 50
+    },
+    {
+     "pos": 14,
+     "number": "2",
+     "name": "BUCHHOLZ Claudio",
+     "points": 37
+    },
+    {
+     "pos": 15,
+     "number": "53",
+     "name": "ANGIORAMA Juan",
+     "points": 17
+    },
+    {
+     "pos": 16,
+     "number": "29",
+     "name": "PEIRETTI Nicolás",
+     "points": 13
+    }
+   ],
+   "tcp4000": [
+    {
+     "pos": 1,
+     "number": "3",
+     "name": "SOAVE Esteban",
+     "points": 127
+    },
+    {
+     "pos": 2,
+     "number": "48",
+     "name": "VENDRAME Pablo",
+     "points": 122
+    },
+    {
+     "pos": 3,
+     "number": "57",
+     "name": "SABY Guillermo",
+     "points": 117
+    },
+    {
+     "pos": 4,
+     "number": "9",
+     "name": "MARTINEZ Diego",
+     "points": 104
+    },
+    {
+     "pos": 5,
+     "number": "10",
+     "name": "MINUDRI Diego",
+     "points": 104
+    },
+    {
+     "pos": 6,
+     "number": "4",
+     "name": "ESPINA Mario",
+     "points": 93
+    },
+    {
+     "pos": 7,
+     "number": "17",
+     "name": "VANINI Ricardo (P)",
+     "points": 91
+    },
+    {
+     "pos": 8,
+     "number": "58",
+     "name": "PONCE Guillermo",
+     "points": 80
+    },
+    {
+     "pos": 9,
+     "number": "46",
+     "name": "GOMEZ Roberto",
+     "points": 71
+    },
+    {
+     "pos": 10,
+     "number": "45",
+     "name": "FORCHERI Gastón",
+     "points": 66
+    },
+    {
+     "pos": 11,
+     "number": "25",
+     "name": "SI NATALE DEL BO Pablo",
+     "points": 38
+    },
+    {
+     "pos": 12,
+     "number": "64",
+     "name": "MASSIO Raúl",
+     "points": 30
+    },
+    {
+     "pos": 13,
+     "number": "22",
+     "name": "PERSIA Marcos",
+     "points": 20
+    },
+    {
+     "pos": 14,
+     "number": "56",
+     "name": "GROSSO Sebastian",
+     "points": 16
+    },
+    {
+     "pos": 15,
+     "number": "11",
+     "name": "RAPARO Sergio",
+     "points": 16
+    },
+    {
+     "pos": 16,
+     "number": "59",
+     "name": "DEL PINO Joaquin",
+     "points": 16
+    },
+    {
+     "pos": 17,
+     "number": "31",
+     "name": "VIDAL Juan Ignacio",
+     "points": 14
+    },
+    {
+     "pos": 18,
+     "number": "44",
+     "name": "CARREÑO Fabián",
+     "points": 12
+    }
+   ],
+   "fiat": [
+    {
+     "pos": 1,
+     "number": "2",
+     "name": "PAVON Ariel",
+     "points": 149.5
+    },
+    {
+     "pos": 2,
+     "number": "21",
+     "name": "VIEL Gonzalo",
+     "points": 94
+    },
+    {
+     "pos": 3,
+     "number": "87",
+     "name": "ESTANGUET Santino",
+     "points": 88
+    },
+    {
+     "pos": 4,
+     "number": "96",
+     "name": "FERNANDEZ Pedro",
+     "points": 84.5
+    },
+    {
+     "pos": 5,
+     "number": "19",
+     "name": "CAGNOLO Stefano",
+     "points": 82
+    },
+    {
+     "pos": 6,
+     "number": "91",
+     "name": "STRAZZOLINI Thiago",
+     "points": 65
+    },
+    {
+     "pos": 7,
+     "number": "60",
+     "name": "CAMARGO CAMARGO",
+     "points": 54
+    },
+    {
+     "pos": 8,
+     "number": "17",
+     "name": "IBAÑEZ Martín",
+     "points": 52
+    },
+    {
+     "pos": 9,
+     "number": "12",
+     "name": "VIEL Rodrigo",
+     "points": 43.5
+    },
+    {
+     "pos": 10,
+     "number": "99",
+     "name": "ROVIRA Christian",
+     "points": 35
+    },
+    {
+     "pos": 11,
+     "number": "13",
+     "name": "DEVINCHENTE Daniel",
+     "points": 33
+    },
+    {
+     "pos": 12,
+     "number": "44",
+     "name": "VICENTINI Lautaro",
+     "points": 21
+    },
+    {
+     "pos": 13,
+     "number": "51",
+     "name": "PASINI Santiago",
+     "points": 20
+    },
+    {
+     "pos": 14,
+     "number": "36",
+     "name": "VAZQUEZ Martín",
+     "points": 18
+    },
+    {
+     "pos": 15,
+     "number": "93",
+     "name": "RE Ismael",
+     "points": 15
+    },
+    {
+     "pos": 16,
+     "number": "48",
+     "name": "GIORDANO Gastón",
+     "points": 9
+    },
+    {
+     "pos": 17,
+     "number": "22",
+     "name": "COMPAGNUCCI Agustín",
+     "points": 7
+    },
+    {
+     "pos": 18,
+     "number": "26",
+     "name": "MASERA Nicolás",
+     "points": 6
+    },
+    {
+     "pos": 19,
+     "number": "10",
+     "name": "MARESCALCHI Iván",
+     "points": 4
+    },
+    {
+     "pos": 20,
+     "number": "33",
+     "name": "CARRIZO Daniel",
+     "points": 4
+    },
+    {
+     "pos": 21,
+     "number": "43",
+     "name": "SANCHEZ Lautaro",
+     "points": 4
+    }
+   ],
+   "fiat128": [
+    {
+     "pos": 1,
+     "number": "41",
+     "name": "RONGA Exequiel",
+     "points": 119.5
+    },
+    {
+     "pos": 2,
+     "number": "2",
+     "name": "CASTRO Matías",
+     "points": 113
+    },
+    {
+     "pos": 3,
+     "number": "99",
+     "name": "PAVON PAVON Ariel",
+     "points": 112
+    },
+    {
+     "pos": 4,
+     "number": "97",
+     "name": "VARELA Maximiliano",
+     "points": 93.5
+    },
+    {
+     "pos": 5,
+     "number": "94",
+     "name": "PARDAL Lorenzo",
+     "points": 49
+    },
+    {
+     "pos": 6,
+     "number": "6",
+     "name": "LINGUA Agustín",
+     "points": 47
+    },
+    {
+     "pos": 7,
+     "number": "34",
+     "name": "TRASCHEL Haziel",
+     "points": 39.5
+    },
+    {
+     "pos": 8,
+     "number": "45",
+     "name": "CERVIÑO Matías",
+     "points": 39
+    },
+    {
+     "pos": 9,
+     "number": "14",
+     "name": "RUFFINO Miguel",
+     "points": 36
+    },
+    {
+     "pos": 10,
+     "number": "29",
+     "name": "MAHL Claudio",
+     "points": 35
+    },
+    {
+     "pos": 11,
+     "number": "79",
+     "name": "GIANRE Santiago",
+     "points": 32
+    },
+    {
+     "pos": 12,
+     "number": "67",
+     "name": "PAGLIERO German",
+     "points": 30
+    },
+    {
+     "pos": 13,
+     "number": "51",
+     "name": "VIEL Rodrigo",
+     "points": 29
+    },
+    {
+     "pos": 14,
+     "number": "30",
+     "name": "PANCELLO Gustavo",
+     "points": 28
+    },
+    {
+     "pos": 15,
+     "number": "19",
+     "name": "ROBLEDO Claudio",
+     "points": 22
+    },
+    {
+     "pos": 16,
+     "number": "71",
+     "name": "CHESTA Juan I.",
+     "points": 20
+    },
+    {
+     "pos": 17,
+     "number": "23",
+     "name": "BELTRAMO Giancarlo",
+     "points": 19
+    },
+    {
+     "pos": 18,
+     "number": "83",
+     "name": "SALIS Gonzalo",
+     "points": 12
+    },
+    {
+     "pos": 19,
+     "number": "68",
+     "name": "BAROVERO Santiago",
+     "points": 9
+    },
+    {
+     "pos": 20,
+     "number": "53",
+     "name": "RUJINSKY David",
+     "points": 7
+    },
+    {
+     "pos": 21,
+     "number": "39",
+     "name": "RUIZ Nicolás",
+     "points": 6
+    },
+    {
+     "pos": 22,
+     "number": "27",
+     "name": "GROSSO Miguel",
+     "points": 4
+    },
+    {
+     "pos": 23,
+     "number": "88",
+     "name": "POSTAY Esteban",
+     "points": 4
+    }
+   ]
+  },
+  "6": {
+   "tc4000": [
+    {
+     "pos": 1,
+     "number": "1",
+     "name": "LONGO Mauricio",
+     "points": 149
+    },
+    {
+     "pos": 2,
+     "number": "5",
+     "name": "MARCONI Juan P.",
+     "points": 139
+    },
+    {
+     "pos": 3,
+     "number": "66",
+     "name": "RASETTO Genaro",
+     "points": 139
+    },
+    {
+     "pos": 4,
+     "number": "3",
+     "name": "TERRIER Federico",
+     "points": 133
+    },
+    {
+     "pos": 5,
+     "number": "75",
+     "name": "VASCHETTI Gustavo",
+     "points": 122
+    },
+    {
+     "pos": 6,
+     "number": "17",
+     "name": "VANINI Ricardo",
+     "points": 97
+    },
+    {
+     "pos": 7,
+     "number": "4",
+     "name": "ZAFRA Germán",
+     "points": 93
+    },
+    {
+     "pos": 8,
+     "number": "9",
+     "name": "VIDAL Ricardo",
+     "points": 92
+    },
+    {
+     "pos": 9,
+     "number": "7",
+     "name": "NECOCHEA Darío",
+     "points": 76
+    },
+    {
+     "pos": 10,
+     "number": "2",
+     "name": "BUCHHOLZ Claudio",
+     "points": 57
+    },
+    {
+     "pos": 11,
+     "number": "46",
+     "name": "SANTONI Daniel",
+     "points": 57
+    },
+    {
+     "pos": 12,
+     "number": "21",
+     "name": "CORRAL Federico",
+     "points": 53
+    },
+    {
+     "pos": 13,
+     "number": "87",
+     "name": "MARTINEZ Juan Martín",
+     "points": 53
+    },
+    {
+     "pos": 14,
+     "number": "32",
+     "name": "MARGARA José",
+     "points": 50
+    },
+    {
+     "pos": 15,
+     "number": "53",
+     "name": "ANGIORAMA Juan",
+     "points": 32
+    },
+    {
+     "pos": 16,
+     "number": "29",
+     "name": "PEIRETTI Nicolás",
+     "points": 13
+    },
+    {
+     "pos": 17,
+     "number": "48",
+     "name": "STYL Hugo",
+     "points": 11
+    },
+    {
+     "pos": 18,
+     "number": "60",
+     "name": "BALLARIO Marcelo",
+     "points": 4
+    }
+   ],
+   "tcp4000": [
+    {
+     "pos": 1,
+     "number": "57",
+     "name": "SABY Guillermo",
+     "points": 145
+    },
+    {
+     "pos": 2,
+     "number": "48",
+     "name": "VENDRAME Pablo",
+     "points": 140
+    },
+    {
+     "pos": 3,
+     "number": "3",
+     "name": "SOAVE Esteban",
+     "points": 137
+    },
+    {
+     "pos": 4,
+     "number": "10",
+     "name": "MINUDRI Diego",
+     "points": 120
+    },
+    {
+     "pos": 5,
+     "number": "4",
+     "name": "ESPINA Mario",
+     "points": 116
+    },
+    {
+     "pos": 6,
+     "number": "9",
+     "name": "MARTINEZ Diego",
+     "points": 113
+    },
+    {
+     "pos": 7,
+     "number": "58",
+     "name": "PONCE Guillermo",
+     "points": 104
+    },
+    {
+     "pos": 8,
+     "number": "17",
+     "name": "VANINI Ricardo (P)",
+     "points": 99
+    },
+    {
+     "pos": 9,
+     "number": "46",
+     "name": "GOMEZ Roberto",
+     "points": 71
+    },
+    {
+     "pos": 10,
+     "number": "45",
+     "name": "FORCHERI Gastón",
+     "points": 70
+    },
+    {
+     "pos": 11,
+     "number": "25",
+     "name": "DI NATALE DEL BO Pablo",
+     "points": 38
+    },
+    {
+     "pos": 12,
+     "number": "11",
+     "name": "RAPARO Sergio",
+     "points": 35
+    },
+    {
+     "pos": 13,
+     "number": "96",
+     "name": "MARTINBIANCO Juan Pablo",
+     "points": 35
+    },
+    {
+     "pos": 14,
+     "number": "64",
+     "name": "MASSIO Raúl",
+     "points": 30
+    },
+    {
+     "pos": 15,
+     "number": "22",
+     "name": "PERSIA Marcos",
+     "points": 20
+    },
+    {
+     "pos": 16,
+     "number": "31",
+     "name": "VIDAL Juan Ignacio",
+     "points": 18
+    },
+    {
+     "pos": 17,
+     "number": "56",
+     "name": "GROSSO Sebastian",
+     "points": 16
+    },
+    {
+     "pos": 18,
+     "number": "59",
+     "name": "DEL PINO Joaquin",
+     "points": 16
+    },
+    {
+     "pos": 19,
+     "number": "44",
+     "name": "CARREÑO Fabián",
+     "points": 12
+    }
+   ],
+   "fiat": [
+    {
+     "pos": 1,
+     "number": "2",
+     "name": "PAVON Ariel",
+     "points": 168.5
+    },
+    {
+     "pos": 2,
+     "number": "21",
+     "name": "VIEL Gonzalo",
+     "points": 112
+    },
+    {
+     "pos": 3,
+     "number": "19",
+     "name": "CAGNOLO Stefano",
+     "points": 95
+    },
+    {
+     "pos": 4,
+     "number": "87",
+     "name": "ESTANGUET Santino",
+     "points": 88
+    },
+    {
+     "pos": 5,
+     "number": "96",
+     "name": "FERNANDEZ Pedro",
+     "points": 84.5
+    },
+    {
+     "pos": 6,
+     "number": "91",
+     "name": "STRAZZOLINI Thiago",
+     "points": 65
+    },
+    {
+     "pos": 7,
+     "number": "60",
+     "name": "CAMARGO CAMARGO",
+     "points": 54
+    },
+    {
+     "pos": 8,
+     "number": "17",
+     "name": "IBAÑEZ Martín",
+     "points": 52
+    },
+    {
+     "pos": 9,
+     "number": "99",
+     "name": "ROVIRA Christian",
+     "points": 50
+    },
+    {
+     "pos": 10,
+     "number": "12",
+     "name": "VIEL Rodrigo",
+     "points": 43.5
+    },
+    {
+     "pos": 11,
+     "number": "13",
+     "name": "DEVINCHENTE Daniel",
+     "points": 33
+    },
+    {
+     "pos": 12,
+     "number": "93",
+     "name": "RE Ismael",
+     "points": 26
+    },
+    {
+     "pos": 13,
+     "number": "44",
+     "name": "VICENTINI Lautaro",
+     "points": 21
+    },
+    {
+     "pos": 14,
+     "number": "51",
+     "name": "PASINI Santiago",
+     "points": 20
+    },
+    {
+     "pos": 15,
+     "number": "36",
+     "name": "VAZQUEZ Martín",
+     "points": 18
+    },
+    {
+     "pos": 16,
+     "number": "48",
+     "name": "GIORDANO Gastón",
+     "points": 13
+    },
+    {
+     "pos": 17,
+     "number": "22",
+     "name": "COMPAGNUCCI Agustín",
+     "points": 7
+    },
+    {
+     "pos": 18,
+     "number": "26",
+     "name": "MASERA Nicolás",
+     "points": 6
+    },
+    {
+     "pos": 19,
+     "number": "10",
+     "name": "MARESCALCHI Iván",
+     "points": 4
+    },
+    {
+     "pos": 20,
+     "number": "33",
+     "name": "CARRIZO Daniel",
+     "points": 4
+    },
+    {
+     "pos": 21,
+     "number": "43",
+     "name": "SANCHEZ Lautaro",
+     "points": 4
+    }
+   ],
+   "fiat128": [
+    {
+     "pos": 1,
+     "number": "41",
+     "name": "RONGA Exequiel",
+     "points": 138
+    },
+    {
+     "pos": 2,
+     "number": "99",
+     "name": "PAVON PAVON Ariel",
+     "points": 129
+    },
+    {
+     "pos": 3,
+     "number": "2",
+     "name": "CASTRO Matías",
+     "points": 120
+    },
+    {
+     "pos": 4,
+     "number": "97",
+     "name": "VARELA Maximiliano",
+     "points": 93.5
+    },
+    {
+     "pos": 5,
+     "number": "94",
+     "name": "PARDAL Lorenzo",
+     "points": 49
+    },
+    {
+     "pos": 6,
+     "number": "29",
+     "name": "MAHL Claudio",
+     "points": 49
+    },
+    {
+     "pos": 7,
+     "number": "6",
+     "name": "LINGUA Agustín",
+     "points": 47
+    },
+    {
+     "pos": 8,
+     "number": "51",
+     "name": "VIEL Rodrigo",
+     "points": 44
+    },
+    {
+     "pos": 9,
+     "number": "67",
+     "name": "PAGLIERO German",
+     "points": 43
+    },
+    {
+     "pos": 10,
+     "number": "34",
+     "name": "TRASCHEL Haziel",
+     "points": 39.5
+    },
+    {
+     "pos": 11,
+     "number": "45",
+     "name": "CERVIÑO Matías",
+     "points": 39
+    },
+    {
+     "pos": 12,
+     "number": "14",
+     "name": "RUFFINO Miguel",
+     "points": 36
+    },
+    {
+     "pos": 13,
+     "number": "79",
+     "name": "GIANRE Santiago",
+     "points": 32
+    },
+    {
+     "pos": 14,
+     "number": "30",
+     "name": "PANCELLO Gustavo",
+     "points": 28
+    },
+    {
+     "pos": 15,
+     "number": "19",
+     "name": "ROBLEDO Claudio",
+     "points": 22
+    },
+    {
+     "pos": 16,
+     "number": "71",
+     "name": "CHESTA Juan I.",
+     "points": 20
+    },
+    {
+     "pos": 17,
+     "number": "23",
+     "name": "BELTRAMO Giancarlo",
+     "points": 19
+    },
+    {
+     "pos": 18,
+     "number": "83",
+     "name": "SALIS Gonzalo",
+     "points": 12
+    },
+    {
+     "pos": 19,
+     "number": "68",
+     "name": "BAROVERO Santiago",
+     "points": 9
+    },
+    {
+     "pos": 20,
+     "number": "53",
+     "name": "RUJINSKY David",
+     "points": 7
+    },
+    {
+     "pos": 21,
+     "number": "39",
+     "name": "RUIZ Nicolás",
+     "points": 6
+    },
+    {
+     "pos": 22,
+     "number": "27",
+     "name": "GROSSO Miguel",
+     "points": 4
+    },
+    {
+     "pos": 23,
+     "number": "88",
+     "name": "POSTAY Esteban",
+     "points": 4
+    }
+   ]
+  }
+ }
+}
