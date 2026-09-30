@@ -49,7 +49,10 @@ jobs:
         with:
           node-version: 24
       # La compuerta y los borradores leen el almacén (el archivo del repo ya no se actualiza cada hora). Sólo necesitan el driver de Neon, no todo el árbol de dependencias.
+      # Sólo lo usa scripts/pending-sessions.mjs, que corre únicamente en el reintento horario: en los demás disparos (manuales incluidos) la compuerta
+      # devuelve run=true sin tocar el almacén, así que se ahorran unos 45 s de espera.
       - name: Instalar el driver de Neon
+        if: github.event.schedule == '20 6-23 * * 0,4,5,6'
         run: npm install --no-save --no-package-lock --ignore-scripts @neondatabase/serverless
       # Respaldo del refresco caliente por si nadie visita el sitio (el propio sitio lo dispara al renderizar, ver src/app/layout.tsx). Sólo en el
       # reintento horario, que ya corre; el endpoint decide solo si hay algo que traer. Si falla, no frena la compuerta.
