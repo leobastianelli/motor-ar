@@ -41,6 +41,10 @@ await sql`CREATE TABLE IF NOT EXISTS redes_enviados (clave TEXT PRIMARY KEY, env
 // Estado de /api/pulso (una fila): cuándo se disparó por última vez la sincronización completa por la API de GitHub. Ver src/lib/pulso-dispatch.mjs.
 await sql`CREATE TABLE IF NOT EXISTS pulso_estado (id INTEGER PRIMARY KEY, last_dispatch_at TIMESTAMPTZ)`;
 await sql`INSERT INTO pulso_estado (id, last_dispatch_at) VALUES (1, NULL) ON CONFLICT (id) DO NOTHING`;
+// Disparo por evidencia (src/lib/pulso-sync.mjs): qué documento de la ACTC motivó el último disparo, cuándo y cuántas veces seguidas.
+await sql`ALTER TABLE pulso_estado ADD COLUMN IF NOT EXISTS evidence_doc TEXT`;
+await sql`ALTER TABLE pulso_estado ADD COLUMN IF NOT EXISTS evidence_at TIMESTAMPTZ`;
+await sql`ALTER TABLE pulso_estado ADD COLUMN IF NOT EXISTS evidence_tries INTEGER`;
 
 // Estado de avisos de GET /api/vigilante (una fila): qué ya se avisó, para no repetirlo. Reemplaza la caché de GitHub Actions
 // (.watchdog-state.json) ahora que cron-job.org llama al endpoint cada 30 min. Ver src/lib/monitor/vigilante-estado.mjs.
