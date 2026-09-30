@@ -33,6 +33,31 @@ test("antes de que existan resultados, la sesión manual sí se agrega", () => {
   assert.equal(out[0].name, "2 Series Clase 2");
 });
 
+// Caso real (TC Pick Up, Balcarce, 27/09/2026): a las 12:10 la fuente ya traía resultados de la Serie 1 y la "Serie 2" cargada a mano
+// (12:00) se descartaba sin aviso, porque "ya había una serie con resultados ese día".
+test("'Serie 2' manual no se descarta porque la fuente ya trae resultados de la 'Serie 1'", () => {
+  const discarded = [];
+  const out = mergeSessionPatches("tcpk-8", [src("s1", "serie", "Serie 1", "2026-09-27T11:55:00-03:00")], [patch("serie", "Serie 2", "2026-09-27T12:00:00-03:00")], dayKey, discarded);
+  assert.equal(out.length, 2);
+  const s2 = out.find((s) => s.name === "Serie 2");
+  assert.equal(s2.timeKnown, true);
+  assert.equal(s2.start, "2026-09-27T12:00:00-03:00");
+  assert.equal(out.find((s) => s.id === "s1").timeKnown, false, "la Serie 1 de la fuente no se toca");
+  assert.equal(discarded.length, 0);
+});
+
+test("una carga que se descarta queda anotada, nunca en silencio", () => {
+  // La fuente trae "Serie única" (sin número) con resultados y hora ya conocida: la carga "Serie 2" no tiene dónde ir y no se muestra.
+  const source = { ...src("u", "serie", "Serie única", "2026-09-27T12:00:00-03:00"), timeKnown: true };
+  const discarded = [];
+  const out = mergeSessionPatches("e", [source], [patch("serie", "Serie 2", "2026-09-27T12:00:00-03:00")], dayKey, discarded);
+  assert.equal(out.length, 1);
+  assert.equal(discarded.length, 1);
+  assert.equal(discarded[0].eventId, "e");
+  assert.equal(discarded[0].name, "Serie 2");
+  assert.match(discarded[0].reason, /Serie única/);
+});
+
 test("dos cargas para la misma clasificación: la segunda se descarta, no se duplica", () => {
   const sessions = [src("c2", "clasificacion", "Clasificación Clase 2", "2026-09-19T12:00:00-03:00")];
   const out = mergeSessionPatches(
