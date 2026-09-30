@@ -104,3 +104,20 @@ export function repairMojibake(text) {
   const once = fix(String(text));
   return once === text ? text : fix(once);
 }
+
+/** Cómo empieza una respuesta que no era la esperada: título de la página si es HTML, si no los primeros caracteres. Sirve para diagnosticar bloqueos. */
+export function describeBody(body) {
+  const s = String(body ?? "");
+  const title = s.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1]?.replace(/\s+/g, " ").trim();
+  if (/^\s*<(!doctype|html)/i.test(s)) return `HTML${title ? ` «${title.slice(0, 80)}»` : ""}, ${s.length} caracteres`;
+  return s.trim() ? `«${s.trim().replace(/\s+/g, " ").slice(0, 80)}»` : "respuesta vacía";
+}
+
+/** JSON.parse con un error entendible: si la fuente devolvió HTML (bloqueo anti-bot, mantenimiento) lo dice en vez de "Unexpected token '<'". */
+export function parseJsonBody(body, label) {
+  try {
+    return JSON.parse(body);
+  } catch {
+    throw new Error(`${label} no devolvió JSON sino ${describeBody(body)}`);
+  }
+}

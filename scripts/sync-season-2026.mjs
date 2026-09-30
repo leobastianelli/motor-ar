@@ -14,16 +14,18 @@ const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function text(url, options = {}) {
+  let cause = "sin respuesta";
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
       const res = await fetch(url, { headers: { ...UA, ...options.headers } });
       if (res.ok) return repairMojibake(await res.text());
-    } catch {
-      // reintento
+      cause = `HTTP ${res.status} (${res.headers.get("content-type") ?? "sin content-type"})`;
+    } catch (error) {
+      cause = error.message;
     }
     await sleep(1500 * attempt);
   }
-  throw new Error(`No se pudo descargar ${url}`);
+  throw new Error(`No se pudo descargar ${url}: ${cause}`);
 }
 
 async function bytes(url) {

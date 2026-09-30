@@ -2,6 +2,8 @@
 // Diseño extensible: cada fuente es un adaptador que devuelve texto de notas; un lector común extrae las sesiones
 // y un consenso decide qué horarios mostrar como confirmados (fuente oficial o dos fuentes que coinciden).
 
+import { parseJsonBody } from "./common.mjs";
+
 const DAYS = "lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado|domingo";
 const MONTHS = { enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, agosto: 8, septiembre: 9, setiembre: 9, octubre: 10, noviembre: 11, diciembre: 12 };
 
@@ -120,7 +122,19 @@ export function scheduleSection(text) {
 export async function solotcNotes(io, { sinceDays = 200 } = {}) {
   const after = new Date(Date.now() - sinceDays * 86400000).toISOString().slice(0, 19);
   const url = `https://www.solotc.com.ar/wp-json/wp/v2/posts?categories=25,26,27,28,29,1180&search=cronograma&after=${after}&per_page=100&_fields=id,date,link,title,content`;
-  const posts = JSON.parse(await io.text(url, { revalidate: 3600, headers: { "Accept-Encoding": "identity" } }));
+  const headers = { Accept: "application/json", "Accept-Language": "es-AR,es;q=0.9", "Accept-Encoding": "identity" };
+  // Un reintento corto: un bloqueo anti-bot o un corte momentáneo suele ceder a los pocos segundos.
+  let posts;
+  let lastError;
+  for (let attempt = 1; attempt <= 2 && !posts; attempt++) {
+    try {
+      posts = parseJsonBody(await io.text(url, { revalidate: attempt === 1 ? 3600 : 0, headers }), "SoloTC");
+    } catch (error) {
+      lastError = error;
+      if (attempt < 2) await io.sleep?.(2500);
+    }
+  }
+  if (!posts) throw lastError;
   return posts
     .filter((p) => /cronograma/i.test(p.title.rendered))
     .map((p) => ({

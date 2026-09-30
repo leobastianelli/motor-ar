@@ -32,3 +32,10 @@ test("properName repara antes de pasar a 'Nombre Propio'", () => {
   assert.equal(properName("DONZINO MÃ\u0081XIMO"), "Donzino Máximo");
   assert.equal(properName("CALDERÃ“N, ANDRÃ‰S"), "Andrés Calderón");
 });
+
+test("parseJsonBody explica qué llegó cuando la fuente devuelve HTML en vez de JSON", async () => {
+  const { parseJsonBody } = await import("./common.mjs");
+  assert.deepEqual(parseJsonBody('[{"a":1}]', "SoloTC"), [{ a: 1 }]);
+  assert.throws(() => parseJsonBody("<!DOCTYPE html><html><head><title>Just a moment...</title></head></html>", "SoloTC"), /SoloTC no devolvió JSON sino HTML «Just a moment\.\.\.»/);
+  assert.throws(() => parseJsonBody("", "SoloTC"), /respuesta vacía/);
+});
