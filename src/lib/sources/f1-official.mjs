@@ -116,16 +116,53 @@ function canonicalName(name, known) {
 const sessionEnd = (s) => Date.parse(s.start) + (s.durationMin ?? 60) * 60000;
 
 /**
+ * Minutos desde el inicio a partir de los cuales ya puede estar la tabla oficial, aunque la sesión programada dure más: la carrera rara vez pasa
+ * de 1 h 40 pero se programa con 120 min (límite de 2 h más margen), y eso retrasaba los resultados media hora. Las prácticas no figuran: siguen
+ * esperando su duración programada, no hay nada que ganar antes.
+ */
+const EARLIEST_END_MIN = { Carrera: 75, Sprint: 30, Clasificación: 55, "Clasificación sprint": 40 };
+export const RESULTS_AFTER_END_MS = 5 * 60000;
+export const RESULTS_UNTIL_END_MS = 6 * HOUR;
+
+/** Ventana en la que se pide la tabla oficial de una sesión: desde, hasta (ms) y fin programado. `null` si no hay hora confirmada. */
+export function resultsWindow(s) {
+  if (s.timeKnown === false) return null;
+  const start = Date.parse(s.start);
+  if (!Number.isFinite(start)) return null;
+  const end = sessionEnd(s);
+  const early = EARLIEST_END_MIN[s.name];
+  // Si la sesión programada dura menos que el mínimo, vale la programada.
+  const from = early !== undefined ? start + Math.min(early * 60000, (s.durationMin ?? 60) * 60000) : end + RESULTS_AFTER_END_MS;
+  return { from, until: end + RESULTS_UNTIL_END_MS, end };
+}
+
+/** Clasificados que tiene que traer una tabla completa de carrera, sprint o clasificación (la parrilla de 2026 es de 22 autos). */
+export const MIN_COMPLETE_ROWS = 18;
+
+/**
+ * ¿La tabla parece la final? Como ahora se pide antes del fin programado, una tabla a medio publicar no puede pasar por resultado: se exige
+ * la parrilla casi entera y que cada fila tenga tiempo, diferencia o estado. Las prácticas se aceptan como vengan (se piden al terminar).
+ */
+export function looksFinal(rows, mode) {
+  if (mode === "practice") return rows.length > 0;
+  return rows.length >= MIN_COMPLETE_ROWS && rows.every((r) => r.gap || r.status);
+}
+
+/**
  * Completa las sesiones de F1 que ya terminaron y siguen sin resultados. No toca lo que ya tiene resultados (Jolpica y OpenF1 traen más
  * datos: puntos, parrilla, vueltas). Una sesión reciente se vuelve a pedir cada pocos minutos: la página oficial la publica al terminar.
  */
 export async function f1OfficialSessions(io, events, previous, { windowDays = 10, delayMs = 500, now = Date.now(), knownNames = [] } = {}) {
-  const pending = (e) => e.seriesId === "f1" && e.sessions.some((s) => BY_NAME.has(s.name) && !s.results?.length && sessionEnd(s) + 5 * 60000 < now && now - sessionEnd(s) < windowDays * DAY);
+  const due = (s) => {
+    const w = BY_NAME.has(s.name) && !s.results?.length ? resultsWindow(s) : null;
+    return w !== null && w.from <= now && now - w.end < windowDays * DAY;
+  };
+  const pending = (e) => e.seriesId === "f1" && e.sessions.some(due);
   if (!events.some(pending)) return { events, meta: { f1Official: { requests: 0, sessionsWithResults: 0, errors: [] } } };
 
   const f1Events = events.filter((e) => e.seriesId === "f1").sort((a, b) => (a.round ?? 0) - (b.round ?? 0));
   // Una sesión que termina recién aparece en el índice cuando se refresca: misma regla que las páginas de sesión.
-  const recent = events.some((e) => e.seriesId === "f1" && e.sessions.some((s) => BY_NAME.has(s.name) && sessionEnd(s) <= now && now - sessionEnd(s) < 6 * HOUR));
+  const recent = events.some((e) => e.seriesId === "f1" && e.sessions.some((s) => due(s) && now - sessionEnd(s) < RESULTS_UNTIL_END_MS));
   const index = parseIndex(await io.text(`${BASE}`, { revalidate: recent ? 120 : 6 * 3600 }));
   if (index.length !== f1Events.length) throw new Error(`el índice oficial lista ${index.length} fechas y el calendario ${f1Events.length}`);
   const pageOf = new Map(f1Events.map((e, i) => [e.id, index[i]]));
@@ -143,14 +180,14 @@ export async function f1OfficialSessions(io, events, previous, { windowDays = 10
     const sessions = [];
     for (const s of event.sessions) {
       const spec = BY_NAME.get(s.name);
-      if (!spec || s.results?.length || !(sessionEnd(s) + 5 * 60000 < now) || now - sessionEnd(s) >= windowDays * DAY) {
+      if (!spec || !due(s)) {
         sessions.push(s);
         continue;
       }
       const url = `${BASE}/${page.id}/${page.slug}/${spec.path}`;
       try {
         // Recién terminada: se vuelve a mirar seguido. Más vieja: la página ya no cambia salvo rectificaciones.
-        const revalidate = now - sessionEnd(s) < 6 * HOUR ? 120 : 6 * 3600;
+        const revalidate = now - sessionEnd(s) < RESULTS_UNTIL_END_MS ? 120 : 6 * 3600;
         const html = await io.text(url, { revalidate });
         requests++;
         await io.sleep(delayMs);
@@ -158,7 +195,9 @@ export async function f1OfficialSessions(io, events, previous, { windowDays = 10
         const title = norm(html.match(/<title>(.*?)<\/title>/s)?.[1] ?? "");
         const first = norm(event.officialName ?? "").split(" ")[0];
         if (first && !title.includes(first)) throw new Error(`la página de ${url} no es de ${event.officialName}`);
-        const results = parseResults(html, spec.mode).map((r) => ({ ...r, driver: canonicalName(r.driver, knownNames) }));
+        const parsed = parseResults(html, spec.mode);
+        // Tabla a medias (sesión en curso o publicándose): no se guarda; se vuelve a pedir en el próximo refresco.
+        const results = looksFinal(parsed, spec.mode) ? parsed.map((r) => ({ ...r, driver: canonicalName(r.driver, knownNames) })) : [];
         if (results.length) {
           sessions.push({ ...s, results, resultsSource: { name: F1_OFFICIAL_SOURCE, url } });
           filled++;

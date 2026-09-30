@@ -1,12 +1,11 @@
 // Decisión pura del refresco caliente: ¿hay algo de F1 que valga la pena ir a buscar? Sin red ni base, así el layout la evalúa en memoria y
 // `npm test` la cubre.
-import { F1_OFFICIAL_SESSION_NAMES } from "./sources/f1-official.mjs";
+import { F1_OFFICIAL_SESSION_NAMES, resultsWindow } from "./sources/f1-official.mjs";
 
 const MIN = 60_000;
 const HOUR = 60 * MIN;
-/** Una sesión recién terminada no está en la página oficial hasta pasados unos minutos; después de 6 h ya lo toma la sincronización. */
-export const RESULTS_AFTER_MS = 5 * MIN;
-export const RESULTS_UNTIL_MS = 6 * HOUR;
+// La ventana de resultados (desde cuándo y hasta cuándo se pide la página oficial) vive en f1-official.mjs (`resultsWindow`): arranca antes del
+// fin programado según el tipo de sesión y termina 6 h después de él, cuando ya lo toma la sincronización.
 /**
  * Los resúmenes de YouTube se buscan en caliente durante las 12 h siguientes a cada sesión (el canal oficial los publica en la primera hora o dos).
  * Más tarde los trae la sincronización completa (ventana de 21 días): así una sesión sin resumen no dispara el refresco cada 3 minutos por días.
@@ -15,7 +14,7 @@ export const VIDEOS_WINDOW_MS = 12 * HOUR;
 
 const endOf = (s) => Date.parse(s.start) + (s.durationMin ?? 60) * MIN;
 
-/** → { results: ids de sesiones de F1 terminadas hace 5 min a 6 h sin resultados, videos: ids de las terminadas en las últimas 12 h sin video }. */
+/** → { results: ids de sesiones de F1 sin resultados dentro de su ventana (del fin más temprano posible a 6 h después del programado), videos: ids de las terminadas en las últimas 12 h sin video }. */
 export function hotNeeds(events, nowMs) {
   const results = [];
   const videos = [];
@@ -24,7 +23,8 @@ export function hotNeeds(events, nowMs) {
     for (const s of e.sessions ?? []) {
       if (s.timeKnown === false) continue;
       const age = nowMs - endOf(s);
-      if (F1_OFFICIAL_SESSION_NAMES.has(s.name) && !s.results?.length && age >= RESULTS_AFTER_MS && age < RESULTS_UNTIL_MS) results.push(s.id);
+      const w = F1_OFFICIAL_SESSION_NAMES.has(s.name) && !s.results?.length ? resultsWindow(s) : null;
+      if (w && nowMs >= w.from && nowMs < w.until) results.push(s.id);
       if (!s.videos?.length && age >= 0 && age < VIDEOS_WINDOW_MS) videos.push(s.id);
     }
   }
