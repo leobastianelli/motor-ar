@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T21:44:41.757Z",
+  "generatedAt": "2026-09-30T15:31:51.112Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -2882,7 +2882,8 @@
       "name": "Lucas Carabajal",
       "aliases": [],
       "series": [
-        "tc"
+        "tc",
+        "tc2000"
       ],
       "numbers": {
         "tc": "81"
@@ -2891,7 +2892,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-04-19"
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "guerra lucas",
