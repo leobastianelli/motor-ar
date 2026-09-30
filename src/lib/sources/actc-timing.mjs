@@ -3,6 +3,7 @@
 // El listado agrupa por categoría y fecha; cada sesión tiene una página con la tabla de pilotos.
 
 import { belongsToEvent } from "./plausible.mjs";
+import { PROVISIONAL, describeOfficialChange, isProvisional, penaltiesFrom, reconcileSession } from "../provisorio.mjs";
 
 const BASE = "https://tiempos.actc.org.ar";
 const TAB_SERIES = { TC: "tc", TCP: "tc-pista", TCM: "tc-mouras", TCPM: "tc-pista-mouras", TCPK: "tc-pick-up", TCPPK: "tc-pista-pick-up" };
@@ -11,6 +12,8 @@ export const TIMING_SOURCE = "ACTC · tiempos oficiales";
 export const LISTING_URL = `${BASE}/resultados`;
 
 const DAY = 86400000;
+/** Cuántos documentos de una misma sesión se leen como máximo hasta dar con uno oficial. */
+const MAX_CANDIDATES = 4;
 const ORDER = { practica: 0, clasificacion: 1, serie: 2, sprint: 3, final: 4, carrera: 4 };
 
 const plain = (html) =>
@@ -49,7 +52,9 @@ export function parseListing(html) {
       if (!title || !date || !id) continue;
       // El portal a veces tipea mal el año ("20206"): todo lo publicado es de la temporada en curso.
       const year = /^20\d\d$/.test(date[3]) ? date[3] : "2026";
-      docs.push({ seriesId, title, day: `${year}-${date[2]}-${date[1]}`, id: Number(id), url: `${BASE}/resultados/${id}/ver` });
+      // El botón de descarga dice qué es: Excel (planilla del cronometraje), PDF (clasificación de los comisarios) o nada (Mouras, otro sistema).
+      const format = row.match(/dl-btn (xlsx|pdf)/)?.[1];
+      docs.push({ seriesId, title, day: `${year}-${date[2]}-${date[1]}`, id: Number(id), url: `${BASE}/resultados/${id}/ver`, ...(format ? { format } : {}) });
     }
   }
   return docs;
@@ -105,7 +110,7 @@ const MAKE_WORDS = {
 };
 const NOISE = new Set([
   "tc", "tcp", "tcm", "tcpm", "tcpk", "tcppk", "actc", "n", "no", "piloto", "nombre", "marca", "apellido",
-  "ex", "ab", "nc", "dsq", "desc", "exc", "laps", "lap", "vueltas", "vtas", "vta", "pts",
+  "ex", "ab", "nc", "dsq", "desc", "exc", "laps", "lap", "vuelta", "vueltas", "vtas", "vta", "pts",
   // Estado del auto (badge al lado del nombre + repetido en la columna de diferencia, p. ej. "MANGONI EXCLUIDO"
   // con diferencia "excluido"): sin esto, el nombre queda pegado a la palabra de estado, hasta duplicada.
   "excluido", "excluida", "descalificado", "descalificada", "abandono", "abandonado", "abandonada", "retirado", "retirada",
@@ -225,17 +230,104 @@ export function keepPreviousTiming(events, previous) {
   });
 }
 
-/** Una clasificación por sesión: si hay versión rectificada o repetida, vale la última publicada. (Lo usa también el pulso para detectar documentos nuevos.) */
-export function chooseDocs(docs) {
-  const chosen = new Map();
+// ─── Planillas del cronometraje: resultados provisorios (docs/plan-datos/tc-provisorios.md) ──────────────────────────
+// Antes del PDF de los comisarios el portal publica un Excel del cronometraje: el orden de llegada con la mejor vuelta, los sectores y todas las
+// vueltas de cada auto, sin tiempo total ni observaciones. Las finales lo rotulan "PARCIALES"; las series lo publican con el mismo título que el PDF.
+
+/** Sólo las carreras: en prácticas y clasificaciones las planillas son rondas intermedias y no hay cómo saber cuál es la última. */
+export const PROVISIONAL_KINDS = new Set(["serie", "final"]);
+const PARTIAL_TITLE = /PARCIAL/;
+const isPartialTitle = (title) => PARTIAL_TITLE.test(fold(title).toUpperCase());
+const MIN_PROVISIONAL_ROWS = 3;
+
+/** Formato de una página de resultado: "planilla" (Excel del cronometraje: mejor vuelta, sin tiempo total), "oficial" (con tiempo total: PDF o Mouras) u "otro". */
+export function pageFormat(html) {
+  if (/Tiempo total/i.test(html)) return "oficial";
+  if (/Mejor vuelta/i.test(html) && /<tr class="driver-row/.test(html)) return "planilla";
+  return "otro";
+}
+
+/** Líneas de "OBSERVACIONES" de una página oficial (recargos, exclusiones, pase y siga). */
+export function observationLines(html) {
+  const block = html.match(/OBSERVACIONES:([\s\S]*?)<\/span>/)?.[1] ?? "";
+  return block.split(/\r?\n/).map(plain).filter(Boolean);
+}
+
+const bestSeconds = (s) => {
+  const m = String(s).match(/^(?:(\d+):)?(\d{1,2})[.,](\d{1,3})$/);
+  return m ? Number(m[1] ?? 0) * 60 + Number(m[2]) + Number(`0.${m[3]}`) : null;
+};
+
+/** Filas de una planilla: posición, número, nombre, mejor vuelta, vueltas (la mayor "V<n>" de su tabla de vueltas) y si trae tiempos por sector. */
+export function parsePlanilla(html) {
+  const rows = [];
+  for (const chunk of html.split(/<tr class="driver-row/).slice(1)) {
+    const tr = chunk.split("</tr>")[0];
+    const cells = [...tr.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map((m) => plain(m[1]));
+    // pos, número, piloto, mejor vuelta, dif., S1 a S5 y el botón de las vueltas.
+    if (cells.length < 10 || !/^\d+$/.test(cells[1] ?? "")) continue;
+    const title = plain(chunk.match(/laps-title">([\s\S]*?)<\/div>/)?.[1] ?? "").replace(/^Todas las vueltas\s*[—–-]\s*/, "");
+    const name = (cells[2] || title).replace(/\s*-\s*\*?\w+\s*$/, "");
+    const laps = Math.max(0, ...[...chunk.matchAll(/<td>V(\d+)<\/td>/g)].map((m) => Number(m[1])));
+    const pos = Number.parseInt(cells[0], 10);
+    rows.push({ pos: Number.isFinite(pos) ? pos : rows.length + 1, number: cells[1], name, best: bestSeconds(cells[3]), laps, sectors: cells.slice(5, 10).some((c) => TIME.test(c)) });
+  }
+  return rows;
+}
+
+/**
+ * ¿Esta planilla es la clasificación completa al final de la tanda? Devuelve los motivos por los que NO (vacío = sí). Reglas medidas en
+ * docs/plan-datos/tc-provisorios.md: al menos 3 filas; las vueltas no crecen al bajar por la lista (un líder con menos vueltas que otros es un
+ * archivo mal armado o una foto intermedia); el líder trae tiempos por sector; y el orden no es por mejor vuelta (así vienen algunas planillas: sirve
+ * para prácticas, no para decir quién ganó).
+ */
+export function provisionalProblems(rows) {
+  const problems = [];
+  if (rows.length < MIN_PROVISIONAL_ROWS) problems.push("pocas filas");
+  if (!rows.every((r, i) => i === 0 || r.laps <= rows[i - 1].laps)) problems.push("las vueltas no decrecen");
+  if (rows.length && !rows[0].sectors) problems.push("el líder no trae sectores");
+  if (rows.length >= 4 && rows.every((r, i) => r.best !== null && (i === 0 || r.best >= rows[i - 1].best))) problems.push("ordenada por mejor vuelta");
+  return problems;
+}
+
+/** Filas de resultado de una planilla aceptada: sin tiempo total no hay diferencia de carrera; sólo las vueltas de atraso. */
+export function planillaResults(rows, known) {
+  const lead = rows[0]?.laps ?? 0;
+  return rows.map((r, i) => {
+    const behind = lead - r.laps;
+    return {
+      pos: r.pos,
+      number: r.number,
+      driver: displayName(r.name.split(/[\s,]+/).filter((w) => w && !NOISE.has(fold(w).replace(/[^a-z0-9]/g, ""))), known),
+      team: "",
+      gap: i > 0 && lead > 0 && behind > 0 ? `+${behind} ${behind === 1 ? "vuelta" : "vueltas"}` : "",
+    };
+  });
+}
+
+/**
+ * Los documentos de cada sesión, del que vale al que menos: una lista por sesión (`candidates`) y el primero (`doc`).
+ * Modo clásico (`provisional: false`): una clasificación por sesión, sin parciales ni grillas; si hay versión rectificada o repetida, vale la última.
+ * Con `provisional: true` también entran las planillas de las series y las finales (título "PARCIALES" o botón de Excel en el listado) como última opción:
+ * un documento oficial gana siempre, sea cual sea el orden de los ids. Lo usan la sincronización y el pulso (documentos nuevos).
+ */
+export function chooseDocs(docs, { provisional = false } = {}) {
+  const groups = new Map();
   for (const doc of docs) {
-    const session = classify(doc.title);
-    if (!session) continue;
-    const current = chosen.get(session.name);
-    const rectified = /RECTIFICAD/i.test(doc.title);
-    if (!current || (rectified && !current.rectified) || (rectified === current.rectified && doc.id > current.doc.id)) {
-      chosen.set(session.name, { doc, session, rectified });
-    }
+    const partial = isPartialTitle(doc.title);
+    if (partial && !provisional) continue;
+    const session = classify(partial ? doc.title.replace(/PARCIALES?/gi, " ") : doc.title);
+    if (!session || (partial && !PROVISIONAL_KINDS.has(session.kind))) continue;
+    const planilla = provisional && PROVISIONAL_KINDS.has(session.kind) && (partial || doc.format === "xlsx");
+    const entry = { doc, session, rectified: /RECTIFICAD/i.test(doc.title), planilla, partial };
+    if (!groups.has(session.name)) groups.set(session.name, []);
+    groups.get(session.name).push(entry);
+  }
+  const chosen = new Map();
+  for (const [name, list] of groups) {
+    list.sort((a, b) => Number(a.planilla) - Number(b.planilla) || Number(b.rectified) - Number(a.rectified) || b.doc.id - a.doc.id);
+    const [first] = list;
+    chosen.set(name, { doc: first.doc, session: first.session, rectified: first.rectified, planilla: first.planilla, candidates: list });
   }
   return chosen;
 }
@@ -272,36 +364,65 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
       continue;
     }
 
-    const chosen = chooseDocs(docs);
+    const chosen = chooseDocs(docs, { provisional: true });
 
     const timed = [];
-    for (const { doc, session } of chosen.values()) {
-      try {
-        const html = await page(io, doc.url, recent ? 1800 : 30 * 86400);
-        fetched++;
-        const results = parseResult(html, session.kind, known);
-        if (results.length) {
-          timed.push({
-            id: `${event.id}-${fold(session.name).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
-            kind: session.kind,
-            name: session.name,
-            start: `${doc.day}T12:00:00-03:00`,
-            timeKnown: false,
-            durationMin: 30,
-            results,
-            resultsSource: { name: TIMING_SOURCE, url: doc.url },
-          });
+    const penalties = new Map();
+    for (const { session, candidates } of chosen.values()) {
+      // Del documento que más vale al que menos: el primero oficial que se lee gana; si no hay, la primera planilla que pasa la regla queda como provisoria.
+      let official = null;
+      let planilla = null;
+      for (const { doc, partial } of candidates.slice(0, MAX_CANDIDATES)) {
+        try {
+          const html = await page(io, doc.url, recent ? 1800 : 30 * 86400);
+          fetched++;
+          const format = pageFormat(html);
+          if (format === "planilla" && PROVISIONAL_KINDS.has(session.kind)) {
+            if (!planilla) {
+              const rows = parsePlanilla(html);
+              if (!provisionalProblems(rows).length) planilla = { doc, results: planillaResults(rows, known) };
+            }
+          } else if (!partial) {
+            const results = parseResult(html, session.kind, known);
+            if (results.length) official = { doc, results, penalties: penaltiesFrom(observationLines(html)) };
+          }
+        } catch {
+          // Una página caída no frena al resto.
         }
-      } catch {
-        // Una página caída no frena al resto.
+        await io.sleep(delayMs);
+        if (official) break;
       }
-      await io.sleep(delayMs);
+      const pick = official ?? planilla;
+      if (!pick) continue;
+      const id = `${event.id}-${fold(session.name).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+      if (official) penalties.set(id, official.penalties);
+      timed.push({
+        id,
+        kind: session.kind,
+        name: session.name,
+        start: `${pick.doc.day}T12:00:00-03:00`,
+        timeKnown: false,
+        durationMin: 30,
+        results: pick.results,
+        resultsSource: { name: TIMING_SOURCE, url: pick.doc.url, ...(official ? {} : { status: PROVISIONAL }) },
+      });
     }
     // Algunas páginas no publican la marca: se toma la del mismo auto (número) en otra sesión de la fecha.
     const makeByNumber = new Map();
     for (const s of timed) for (const r of s.results) if (r.number && r.team && !makeByNumber.has(r.number)) makeByNumber.set(r.number, r.team);
     for (const s of timed) s.results = s.results.map((r) => (r.team || !makeByNumber.has(r.number) ? r : { ...r, team: makeByNumber.get(r.number) }));
-    const merged = timed.length ? mergeTiming(event, timed) : stored.length ? mergeTiming(event, stored) : event;
+    // Contra lo guardado: un provisorio nunca pisa un oficial ni se achica, y un oficial que reemplaza a un provisorio dice qué cambió.
+    const storedByKey = new Map(stored.map((s) => [sessionKey(s), s]));
+    const final = timed.map((t) => {
+      const kept = reconcileSession(t, storedByKey.get(sessionKey(t)));
+      // Sólo el oficial recién leído (no uno guardado, que ya trae su nota) que arrastra el podio de un provisorio.
+      const fresh = kept.resultsSource.url === t.resultsSource.url && !isProvisional(kept) && kept.resultsSource.provisional;
+      return fresh ? { ...kept, resultsSource: { ...kept.resultsSource, note: describeOfficialChange(kept, kept.resultsSource.provisional, penalties.get(kept.id)) } } : kept;
+    });
+    // Las sesiones guardadas que hoy no se leyeron (página caída, planilla rechazada) se conservan.
+    const read = new Set(final.map(sessionKey));
+    const all = [...final, ...stored.filter((s) => !read.has(sessionKey(s)))];
+    const merged = all.length ? mergeTiming(event, all) : event;
     if (merged.sessions.some(fromActc)) withResults++;
     out.push(merged);
   }

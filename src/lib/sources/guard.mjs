@@ -1,4 +1,5 @@
 import { belongsToEvent } from "./plausible.mjs";
+import { isProvisional, reconcileSession } from "../provisorio.mjs";
 
 // Protección contra pérdida de datos: una fuente que hoy responde vacía, a medias o con otro HTML no puede borrar lo que ya teníamos.
 // Se aplica a cada categoría, no sólo a una: lo que estaba en la versión anterior de la temporada nunca desaparece por un mal día de una fuente.
@@ -35,6 +36,12 @@ export function keepSessionData(event, old) {
       sessions.push(before);
       restored++;
     } else if (!now.results?.length) {
+      const target = sessions.find((s) => s.id === now.id);
+      target.results = before.results;
+      if (before.resultsSource) target.resultsSource = before.resultsSource;
+      restored++;
+    } else if (isProvisional(now) && reconcileSession(now, before) === before) {
+      // Un resultado provisorio nunca pisa uno oficial (ni a un provisorio más completo): vale lo que ya se tenía.
       const target = sessions.find((s) => s.id === now.id);
       target.results = before.results;
       if (before.resultsSource) target.resultsSource = before.resultsSource;
