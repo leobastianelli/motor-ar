@@ -160,21 +160,15 @@ export default async function Home() {
   // ——— Secciones ———
   const sections: Record<Exclude<SectionId, "notas">, ReactNode> = {
     live: live && (
-      <div key="live" className="home-section home-live-wrap">
-        <HTitle
-          id="live-title"
-          title={
-            <>
-              <span className="home-dot" aria-hidden="true" />
-              En vivo
-            </>
-          }
-        >
-          <span className="home-live-min">
-            <MinutesLeft endsAt={liveEnd(live.session)} serverNow={now} simulated={simulated} />′
-          </span>
-        </HTitle>
-        <div className="home-live" role="group" aria-labelledby="live-title">
+      <section key="live" className="home-section home-live-wrap" aria-labelledby="live-title">
+        <div className="home-live">
+          <div className="home-live-flag">
+            <h2 id="live-title">En vivo</h2>
+            <span className="home-live-min">
+              <MinutesLeft endsAt={liveEnd(live.session)} serverNow={now} simulated={simulated} />′
+            </span>
+          </div>
+          <div className="home-live-body">
           <div className="home-live-main">
             <HLabel series={live.series} detail={live.event.circuit.city} href={`/categorias/${live.series.id}`} />
             <p className="home-live-name">{live.session.name}</p>
@@ -213,6 +207,7 @@ export default async function Home() {
               </Link>
             )}
           </div>
+          </div>
         </div>
         {liveNow.length > 1 && (
           <p className="home-also-live">
@@ -224,7 +219,7 @@ export default async function Home() {
             ))}
           </p>
         )}
-      </div>
+      </section>
     ),
 
     nuestros:

@@ -75,3 +75,12 @@ Sellos (blanco sobre el fondo): F1 5.21, TN 4.96, F4I 4.84 (los demás, de 5.0 a
 - Reemplazar `series.color` por la tinta ajustada en el resto del sitio.
 - Vista móvil real en iOS (verificar `font-stretch` en Safari); capturas con banner de cookies visible; menú móvil abierto.
 - Estado de error/vacío de "Recién terminó" (hoy simplemente no se dibuja, como antes).
+
+## Segunda pasada
+
+- **En vivo:** cabecera sólida en `--red` de ancho completo del bloque, con "En vivo" y los minutos en blanco, 900, tabular (32px en celular, 44px en escritorio). Blanco sobre `--red` da 4.41:1; al ser texto grande (≥24px bold) exige 3:1 y pasa. En la portada, la fila "En vivo" es una fila más del momento, sin caja ni borde.
+- **Portada en 1280:** grilla de 12 columnas (título en 1–6, momento en 7–12, alineados por arriba). Los atajos de categoría van en una sola línea (sin partirse; con scroll horizontal si no entran).
+- **Los nuestros:** `repeat(auto-fit, minmax(300px, 1fr))`: la fila siempre se llena.
+- **Recién terminó en 1280:** 2 columnas de ítems, cada uno con su podio o línea debajo; orden cronológico por filas.
+- Capturas con `devIndicators` apagado sólo durante la captura (el indicador "N" de Next dev ya no tapa contenido); no se commiteó el cambio de configuración.
+- Alturas después, 375 / 1280: midweek 3788 / 2449, weekend 5091 / 3498, results 3686 / 2423, live 5729 / 3880. Contraste: 0 fallas en los 4 modos por 2 anchos.

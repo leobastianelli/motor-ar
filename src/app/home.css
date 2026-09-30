@@ -204,15 +204,22 @@ a.home-more::after {
 .home-head-grid {
   display: grid;
   gap: 24px;
-  align-items: end;
+  align-items: start;
 }
 @media (min-width: 801px) {
   .home-head {
     padding-top: 40px;
   }
   .home-head-grid {
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-    gap: 48px;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 24px;
+    align-items: start;
+  }
+  .home-head-grid > h1 {
+    grid-column: 1 / span 6;
+  }
+  .home-head-grid > .home-moment {
+    grid-column: 7 / span 6;
   }
 }
 .home h1 {
@@ -284,30 +291,28 @@ a.home-more::after {
   font-size: 20px;
   font-weight: 750;
 }
-.home-moment li.is-live {
-  border-left: 8px solid var(--red);
-  padding-left: 12px;
-  background: var(--white);
-}
-.home-moment li.is-live .home-eyebrow {
-  color: var(--ink);
-}
 
 /* Atajos a categorías */
 .home-jump {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-wrap: nowrap;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
   padding-top: 24px;
+}
+.home-jump::-webkit-scrollbar {
+  display: none;
 }
 .home-jump a {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  flex: none;
+  gap: 6px;
   min-height: 44px;
-  padding: 0 12px 0 8px;
+  padding: 0 8px 0 5px;
   background: var(--white);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   white-space: nowrap;
   transition:
@@ -346,37 +351,55 @@ a.home-more::after {
 }
 
 /* ——— En vivo ——— */
-.home-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+/* Cabecera sólida en rojo: "En vivo" y los minutos en blanco, texto grande (≥24px, 900), que exige 3:1 (blanco sobre --red: 4.41). */
+.home-live-flag {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
   background: var(--red);
-  flex: none;
+  color: #fff;
+}
+.home-live-flag h2 {
+  font-size: 32px;
+  font-weight: 900;
+  font-stretch: 85%;
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 .home-live-min {
-  font-size: 28px;
-  font-weight: 850;
+  font-size: 32px;
+  font-weight: 900;
   line-height: 1;
 }
-.home-live {
+@media (min-width: 801px) {
+  .home-live-flag {
+    padding: 16px 24px;
+  }
+  .home-live-flag h2,
+  .home-live-min {
+    font-size: 44px;
+  }
+}
+.home-live-body {
   display: grid;
   background: var(--white);
-  border-left: 8px solid var(--red);
 }
-.home-live > div {
+.home-live-body > div {
   padding: 16px;
 }
-.home-live > div + div {
+.home-live-body > div + div {
   border-top: 1px solid var(--rule-strong);
 }
 @media (min-width: 801px) {
-  .home-live {
+  .home-live-body {
     grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) minmax(0, 0.9fr);
   }
-  .home-live > div {
+  .home-live-body > div {
     padding: 24px;
   }
-  .home-live > div + div {
+  .home-live-body > div + div {
     border-top: 0;
     border-left: 1px solid var(--rule-strong);
   }
@@ -474,7 +497,6 @@ a.home-more::after {
   gap: 4px 20px;
   padding: 8px 16px;
   background: var(--white);
-  border-left: 8px solid var(--red);
   border-top: 1px solid var(--rule-strong);
   font-size: 14px;
 }
@@ -507,7 +529,7 @@ a.home-more::after {
 }
 @media (min-width: 801px) {
   .home-runner-grid {
-    grid-template-columns: repeat(auto-fit, minmax(268px, 400px));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 .home-runner {
@@ -651,17 +673,23 @@ a.home-more::after {
   padding-top: 0;
 }
 @media (min-width: 801px) {
-  .home-recent-item {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  .home-recent {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 48px;
     align-items: start;
-    padding-block: 24px;
+  }
+  .home-recent-item {
+    align-content: start;
+    gap: 12px;
+    padding-block: 24px 16px;
+  }
+  .home-recent-item:nth-child(2) {
+    border-top: 0;
+    padding-top: 0;
   }
   .home-recent-item:first-child {
-    padding-top: 8px;
-  }
-  .home-recent-item.is-compact {
-    align-items: center;
-    padding-block: 16px;
+    padding-top: 0;
   }
 }
 .home-recent-head {
