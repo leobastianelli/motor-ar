@@ -104,6 +104,49 @@ test("completa la práctica que terminó y no pide lo que ya tiene resultados ni
   assert.ok(!fake.requested.some((u) => u.includes("practice/3")), "no pide una sesión que no empezó");
 });
 
+// Carrera en la ventana temprana: largó a las 08:00 AR (11:00Z), programada en 120 min, pero el resultado puede estar desde los 75 min.
+const RACE_START = "2026-09-26T11:00:00Z";
+const grid = (n, withTimes = n) =>
+  Array.from({ length: n }, (_, i) => [cell(String(i + 1)), cell(String(i + 10)), driver("Nombre", `Apellido${i}`, "AAA"), cell("Equipo"), cell("51"), cell(i < withTimes ? (i === 0 ? "1:34:23.754" : `+${i}.000s`) : ""), cell("0")]);
+const RACE_HEADS = ["Pos.", "No.", "Driver", "Team", "Laps", "Time / Retired", "Pts."];
+const raceEvent = () => [event(14, "f1-2026-14", "Spanish Grand Prix", []), event(15, "f1-2026-15", "Azerbaijan Grand Prix", [{ id: "r", kind: "carrera", name: "Carrera", start: RACE_START, durationMin: 120 }])];
+const raceUrl = `${BASE}/1295/azerbaijan/race-result`;
+const at = (min) => Date.parse(RACE_START) + min * 60000;
+
+test("carrera terminada antes de lo programado: con la tabla completa se publica sin esperar al fin programado", async () => {
+  const fake = io({ [BASE]: INDEX, [raceUrl]: table(RACE_HEADS, grid(22)) });
+  const { events: out } = await f1OfficialSessions(fake, raceEvent(), {}, { now: at(100) });
+  assert.equal(out[1].sessions[0].results.length, 22);
+  assert.equal(out[1].sessions[0].resultsSource.url, raceUrl);
+});
+
+test("carrera en curso: una tabla incompleta no se publica como final", async () => {
+  // Pocas filas (publicándose) o filas sin tiempo ni estado (clasificación provisional a medias).
+  for (const rows of [grid(5), grid(22, 12)]) {
+    const fake = io({ [BASE]: INDEX, [raceUrl]: table(RACE_HEADS, rows) });
+    const { events: out, meta } = await f1OfficialSessions(fake, raceEvent(), {}, { now: at(80) });
+    assert.equal(out[1].sessions[0].results, undefined);
+    assert.equal(meta.f1Official.sessionsWithResults, 0);
+    assert.deepEqual(meta.f1Official.errors, []);
+  }
+});
+
+test("carrera en curso, antes de la ventana: no se pide nada", async () => {
+  const fake = io({ [BASE]: INDEX, [raceUrl]: table(RACE_HEADS, grid(22)) });
+  const { events: out } = await f1OfficialSessions(fake, raceEvent(), {}, { now: at(40) });
+  assert.equal(out[1].sessions[0].results, undefined);
+  assert.deepEqual(fake.requested, []);
+});
+
+test("sesión sin hora conocida: no se pide aunque la tabla exista", async () => {
+  const events = raceEvent();
+  events[1].sessions[0].timeKnown = false;
+  const fake = io({ [BASE]: INDEX, [raceUrl]: table(RACE_HEADS, grid(22)) });
+  const { events: out } = await f1OfficialSessions(fake, events, {}, { now: at(100) });
+  assert.equal(out[1].sessions[0].results, undefined);
+  assert.deepEqual(fake.requested, []);
+});
+
 test("si el índice oficial no coincide con el calendario, no se publica nada de otra carrera", async () => {
   const events = [event(15, "f1-2026-15", "Azerbaijan Grand Prix", [session("Práctica 1", "2026-09-24T08:30:00Z")])];
   await assert.rejects(f1OfficialSessions(io({ [BASE]: INDEX }), events, {}, { now: NOW }), /índice oficial/);
