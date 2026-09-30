@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T18:56:19.771Z",
+  "generatedAt": "2026-09-30T19:18:18.450Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -2042,21 +2042,21 @@
               "number": "11",
               "driver": "Pedro Grippo",
               "team": "YARIS",
-              "gap": "-"
+              "gap": "0.905"
             },
             {
               "pos": 31,
               "number": "121",
               "driver": "Nicolas Posco",
               "team": "FIESTA",
-              "gap": "-"
+              "gap": "0.435"
             },
             {
               "pos": 32,
               "number": "100",
               "driver": "Marcos Fernandez",
               "team": "208",
-              "gap": "-"
+              "gap": "1.817"
             }
           ],
           "resultsSource": {
@@ -2308,21 +2308,24 @@
               "number": "176",
               "driver": "Nicolás Jaime",
               "team": "COROLLA",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 35,
               "number": "118",
               "driver": "Antonino Garcia",
               "team": "FOCUS",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 36,
               "number": "19",
               "driver": "Lucas Vicino",
               "team": "COROLLA",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -3078,21 +3081,21 @@
               "number": "97",
               "driver": "Bruno Pace",
               "team": "ETIOS",
-              "gap": "-"
+              "gap": "16 VTAS"
             },
             {
               "pos": 28,
               "number": "98",
               "driver": "Braian Reinoso",
               "team": "YARIS",
-              "gap": "-"
+              "gap": "16 VTAS"
             },
             {
               "pos": 29,
               "number": "132",
               "driver": "Diego Casais",
               "team": "208",
-              "gap": "-"
+              "gap": "16 VTAS"
             }
           ],
           "resultsSource": {
@@ -3344,7 +3347,7 @@
               "number": "66",
               "driver": "Adrian Percaz",
               "team": "FOCUS",
-              "gap": "-"
+              "gap": "20 VTAS"
             }
           ],
           "resultsSource": {
@@ -14762,28 +14765,28 @@
               "number": "118",
               "driver": "Antonino Garcia",
               "team": "Ford Focus",
-              "gap": "-"
+              "gap": "1:38.021"
             },
             {
               "pos": 35,
               "number": "10",
               "driver": "Ricardo Risatti",
               "team": "Citroen C-Elyse",
-              "gap": "-"
+              "gap": "1:38.586"
             },
             {
               "pos": 36,
               "number": "4",
               "driver": "Jeronimo Teti",
               "team": "Chevrolet Cruze",
-              "gap": "-"
+              "gap": "1:38.556"
             },
             {
               "pos": 37,
               "number": "144",
               "driver": "Leonel Pernia",
               "team": "Honda Civic",
-              "gap": "-"
+              "gap": "1:37.868"
             }
           ],
           "resultsSource": {
@@ -15224,7 +15227,7 @@
               "number": "14",
               "driver": "Juan Eduardo Kreitz",
               "team": "Peugeot 208",
-              "gap": "-"
+              "gap": "1:42.785"
             }
           ],
           "resultsSource": {
@@ -15770,7 +15773,7 @@
               "number": "16",
               "driver": "Matias Munoz Marchesi",
               "team": "Volkswagen Vento",
-              "gap": "+EX"
+              "gap": "8:29.016"
             }
           ],
           "resultsSource": {
@@ -16274,7 +16277,7 @@
               "number": "16",
               "driver": "Matias Munoz Marchesi",
               "team": "VW Vento",
-              "gap": "+EX"
+              "gap": "34:33.504"
             }
           ],
           "resultsSource": {
@@ -22774,14 +22777,16 @@
               "number": "43",
               "driver": "Marcelo Guevara",
               "team": "Chevrolet Onix",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 33,
               "number": "117",
               "driver": "Pablo Collazo",
               "team": "Toyota Etios",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -23803,7 +23808,7 @@
               "number": "221",
               "driver": "Thiago Ferrari",
               "team": "VW Gol Trend",
-              "gap": "-"
+              "gap": "1:48.295"
             }
           ],
           "resultsSource": {
@@ -24048,14 +24053,14 @@
               "number": "89",
               "driver": "Jeremias Olmedo",
               "team": "Chevrolet Cruze",
-              "gap": "-"
+              "gap": "1:43.247"
             },
             {
               "pos": 35,
               "number": "27",
               "driver": "Leandro Carducci",
               "team": "Ford Focus",
-              "gap": "-"
+              "gap": "1:43.960"
             }
           ],
           "resultsSource": {
@@ -24153,7 +24158,8 @@
               "number": "97",
               "driver": "Bruno Pace",
               "team": "Toyota Etios",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -25112,14 +25118,16 @@
               "number": "66",
               "driver": "Adrian Percaz",
               "team": "Ford Focus",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 35,
               "number": "9",
               "driver": "Fabian Yannantuoni",
               "team": "Ford Focus",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -35422,7 +35430,8 @@
               "number": "72",
               "driver": "Lucas Tedeschi",
               "team": "Ford Focus",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -35898,14 +35907,15 @@
               "number": "94",
               "driver": "Gonzalo Antolin",
               "team": "Chevrolet Cruze",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 31,
               "number": "16",
               "driver": "Matias Munoz Marchesi",
               "team": "VW Vento",
-              "gap": "-"
+              "gap": "1:50.002"
             }
           ],
           "resultsSource": {
@@ -36003,7 +36013,7 @@
               "number": "131",
               "driver": "Franco Bodrato Mionetto",
               "team": "Peugeot 208",
-              "gap": "+EX"
+              "gap": "12:14.906"
             }
           ],
           "resultsSource": {
@@ -36269,7 +36279,7 @@
               "number": "99",
               "driver": "Bautista Damiani",
               "team": "VW Vento",
-              "gap": "+EX"
+              "gap": "9:20.524"
             }
           ],
           "resultsSource": {
@@ -36675,14 +36685,14 @@
               "number": "19",
               "driver": "Maximiliano Bestani",
               "team": "Chevrolet Onix",
-              "gap": "+EX"
+              "gap": "31:03.770"
             },
             {
               "pos": 34,
               "number": "78",
               "driver": "Ignacio Grippo",
               "team": "Toyota Etios",
-              "gap": "+EX"
+              "gap": "31:16.299"
             }
           ],
           "resultsSource": {
@@ -36913,7 +36923,8 @@
               "number": "94",
               "driver": "Gonzalo Antolin",
               "team": "Chevrolet Cruze",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -51015,7 +51026,7 @@
               "number": "72",
               "driver": "Lucas Tedeschi",
               "team": "Ford Focus",
-              "gap": "-"
+              "gap": "1:32.017"
             }
           ],
           "resultsSource": {
@@ -64683,28 +64694,32 @@
               "number": "56",
               "driver": "Agustin Bonomo",
               "team": "Peugeot 208",
-              "gap": "+-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 30,
               "number": "93",
               "driver": "Martin Mura",
               "team": "Chevrolet Onix",
-              "gap": "+-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 31,
               "number": "221",
               "driver": "Thiago Ferrari",
               "team": "VW Gol Trend",
-              "gap": "+-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 32,
               "number": "132",
               "driver": "Diego Casais",
               "team": "Peugeot 208",
-              "gap": "+-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -64907,35 +64922,38 @@
               "number": "96",
               "driver": "Juan Cruz Benvenuti",
               "team": "VW Vento",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 28,
               "number": "89",
               "driver": "Jeremias Olmedo",
               "team": "|Chevrolet Cruze",
-              "gap": "+-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 29,
               "number": "11",
               "driver": "Jonatan Castellano",
               "team": "Chevrolet Cruze",
-              "gap": "-"
+              "gap": "2:08.136"
             },
             {
               "pos": 30,
               "number": "16",
               "driver": "Matias Munoz Marchesi",
               "team": "VW Vento",
-              "gap": "-"
+              "gap": "2:10.126"
             },
             {
               "pos": 31,
               "number": "19",
               "driver": "Lucas Vicino",
               "team": "Toyota Corolla",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -65302,7 +65320,7 @@
               "number": "8",
               "driver": "Joel Gassmann",
               "team": "Chevrolet Cruze",
-              "gap": "+EX"
+              "gap": "9:43.481"
             }
           ],
           "resultsSource": {
@@ -65633,14 +65651,15 @@
               "number": "56",
               "driver": "Agustin Bonomo",
               "team": "Peugeot 208",
-              "gap": "+NE"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 32,
               "number": "117",
               "driver": "Pablo Collazo",
               "team": "Toyota Etios",
-              "gap": "+EX"
+              "gap": "33:38.965"
             }
           ],
           "resultsSource": {
@@ -65851,35 +65870,39 @@
               "number": "10",
               "driver": "Ricardo Risatti",
               "team": "Citroen C-Elyse",
-              "gap": "+-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 28,
               "number": "144",
               "driver": "Leonel Pernia",
               "team": "Honda Civic",
-              "gap": "+-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 29,
               "number": "7",
               "driver": "Alfonso Domenech",
               "team": "VW Virtus",
-              "gap": "+-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 30,
               "number": "88",
               "driver": "Facundo Marques",
               "team": "Ford Focus",
-              "gap": "+-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 31,
               "number": "96",
               "driver": "Juan Cruz Benvenuti",
               "team": "VW Vento",
-              "gap": "+EX"
+              "gap": "35:45.603"
             }
           ],
           "resultsSource": {
@@ -79048,14 +79071,14 @@
               "number": "131",
               "driver": "Franco Bodrato Mionetto",
               "team": "Peugeot 208",
-              "gap": "+EX"
+              "gap": "1:55.089"
             },
             {
               "pos": 32,
               "number": "97",
               "driver": "Bruno Pace",
               "team": "Toyota Etios",
-              "gap": "+EX"
+              "gap": "1:56.394"
             }
           ],
           "resultsSource": {
@@ -79301,7 +79324,8 @@
               "number": "123",
               "driver": "Mauricio Lambiris",
               "team": "Ford Focus",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -79400,7 +79424,7 @@
               "number": "11",
               "driver": "Jonatan Castellano",
               "team": "Chevrolet Cruze",
-              "gap": "+EX"
+              "gap": "10:17.275"
             }
           ],
           "resultsSource": {
@@ -79499,7 +79523,7 @@
               "number": "72",
               "driver": "Lucas Tedeschi",
               "team": "Ford Focus",
-              "gap": "+EX"
+              "gap": "9:39.410"
             }
           ],
           "resultsSource": {
@@ -79874,7 +79898,8 @@
               "number": "150",
               "driver": "Juan Martin Eluchans",
               "team": "Toyota Yaris",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -80113,14 +80138,15 @@
               "number": "56",
               "driver": "Agustin Bonomo",
               "team": "DS 3",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 32,
               "number": "3",
               "driver": "Renzo Blotta",
               "team": "Peugeot 208",
-              "gap": "+EX"
+              "gap": "21:20.826"
             }
           ],
           "resultsSource": {
@@ -89910,7 +89936,8 @@
               "number": "117",
               "driver": "Pablo Collazo",
               "team": "Toyota Yaris",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -90360,7 +90387,8 @@
               "number": "131",
               "driver": "Franco Bodrato Mionetto",
               "team": "Peugeot 208",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -90577,7 +90605,8 @@
               "number": "27",
               "driver": "Leandro Carducci",
               "team": "Ford Focus",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -91282,14 +91311,15 @@
               "number": "132",
               "driver": "Diego Casais",
               "team": "Peugeot 208",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 29,
               "number": "192",
               "driver": "Martin Blasig",
               "team": "Peugeot 208",
-              "gap": "+EX"
+              "gap": "37:57.500"
             }
           ],
           "resultsSource": {
@@ -91507,14 +91537,16 @@
               "number": "169",
               "driver": "Braian Quevedo",
               "team": "Ford Focus",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 29,
               "number": "7",
               "driver": "Alfonso Domenech",
               "team": "Honda Civic",
-              "gap": "+NE"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -98905,7 +98937,8 @@
               "number": "71",
               "driver": "Maximo Donzino",
               "team": "Ford F. Kinetic",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -99157,7 +99190,8 @@
               "number": "117",
               "driver": "Emiliano Spataro",
               "team": "Chevrolet Cruze",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -99843,21 +99877,23 @@
               "number": "150",
               "driver": "Juan Martin Eluchans",
               "team": "Toyota Yaris",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 29,
               "number": "131",
               "driver": "Franco Bodrato Mionetto",
               "team": "Peugeot 208",
-              "gap": "+EX"
+              "gap": "1:13.666"
             },
             {
               "pos": 30,
               "number": "97",
               "driver": "Bruno Pace",
               "team": "Toyota Etios",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -100095,21 +100131,23 @@
               "number": "96",
               "driver": "Juan Cruz Benvenuti",
               "team": "VW Vento GLI",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 33,
               "number": "27",
               "driver": "Leandro Carducci",
               "team": "Ford Focus",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 34,
               "number": "169",
               "driver": "Braian Quevedo",
               "team": "Chevrolet Cruze",
-              "gap": "+EX"
+              "gap": "1:11.992"
             }
           ],
           "resultsSource": {
@@ -100536,7 +100574,7 @@
               "number": "89",
               "driver": "Jeremias Olmedo",
               "team": "Chevrolet Cruze",
-              "gap": "+EX"
+              "gap": "6:41.892"
             }
           ],
           "resultsSource": {
@@ -100851,7 +100889,8 @@
               "number": "174",
               "driver": "Sergio Fernandez",
               "team": "Peugeot 208",
-              "gap": "-"
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
