@@ -23,6 +23,8 @@ export interface CalendarSessionInput {
   dondeVerlo?: string[];
   hasResults?: boolean;
   ganador?: { name: string };
+  /** Resultado provisorio (planilla de la ACTC antes de la revisión de los comisarios). */
+  provisorio?: boolean;
   argentinos?: { name: string; pos: number; noTermino?: string }[];
 }
 
@@ -50,6 +52,7 @@ export function calendarSessionsForEvent(season: Season, event: RaceEvent, serie
       dondeVerlo: dondeVerlo.length ? dondeVerlo : undefined,
       hasResults: s?.hasResults,
       ganador: s?.ganador,
+      ...(s?.provisorio ? { provisorio: true } : {}),
       argentinos: s?.argentinos,
     };
   });

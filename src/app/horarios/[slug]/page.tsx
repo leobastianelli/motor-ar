@@ -6,6 +6,7 @@ import { breadcrumb, JsonLd, sportsEventJsonLd } from "@/components/json-ld";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { getDriver, getNow, getSeason, getSeries, type Season } from "@/lib/data";
 import { dayKey, fmtDayShort, fmtRange, fmtTime, fmtWeekday, fmtDayNum, raceWinner, sessionState, sessionStatus, sessionTime } from "@/lib/format";
+import { provisionalSuffix } from "@/lib/provisorio.mjs";
 import { driverKey } from "@/lib/sources/driver-index.mjs";
 import { allHorarioSlugs, horarioSeriesSlug, resolveHorario } from "@/lib/horarios";
 import { OG_DEFAULTS } from "@/lib/site";
@@ -156,7 +157,7 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
           {last && lastRace?.results?.[0] && (
             <Link href={`/eventos/${last.id}`} className="next-card list-link" style={{ "--cat": series.color } as CSSProperties}>
               <CategoryLabel series={series} detail={last.circuit.city} />
-              <strong>{driverRow ? `${driver!.name} terminó ${driverRow.pos}.º` : lastWinner ? `Ganó ${lastWinner.driver}` : "Terminó"}</strong>
+              <strong>{driverRow ? `${driver!.name} terminó ${driverRow.pos}.º${provisionalSuffix(lastRace)}` : lastWinner ? `Ganó ${lastWinner.driver}${provisionalSuffix(lastRace)}` : "Terminó"}</strong>
               <time>
                 {lastRace.name} · {fmtDayShort(lastRace.start)}
               </time>

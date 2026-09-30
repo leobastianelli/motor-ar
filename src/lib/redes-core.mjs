@@ -4,6 +4,7 @@
 // Reglas de contenido: sólo datos que el sitio ya muestra, un enlace por borrador, sin "EN VIVO", y si falta un dato no se manda.
 import { dateStatus, dayKey } from "./monitor/checks.mjs";
 import { nombreVisibleSesion } from "./momento.mjs";
+import { isProvisional, provisionalSuffix } from "./provisorio.mjs";
 
 export const BASE_URL = "https://www.somosfierros.ar";
 export const X_LIMIT = 280;
@@ -112,7 +113,9 @@ export function sessionDraft({ event, session, series, leader, argentines }) {
   const sameKindCount = event.sessions.filter((s) => s.kind === session.kind).length;
   const genericLabel = isQuali ? "Clasificación" : session.kind === "sprint" ? "Sprint" : null;
   const label = sameKindCount > 1 ? nombreVisibleSesion(session, event.sessions) : genericLabel;
-  const head = (name) => (label ? `${label}: ${isQuali ? "pole de" : "ganó"} ${name(podium[0])}` : `Ganó ${name(podium[0])}`);
+  // Resultado provisorio de la ACTC (planilla antes de la revisión de los comisarios): el borrador lo dice al lado del ganador.
+  const prov = provisionalSuffix(session);
+  const head = (name) => (label ? `${label}: ${isQuali ? "pole de" : "ganó"} ${name(podium[0])}${prov}` : `Ganó ${name(podium[0])}${prov}`);
   for (const full of [true, false]) {
     const name = (r) => (full ? r.driver : surname(r.driver));
     for (const withLeader of [true, false]) {
@@ -144,8 +147,12 @@ function resultDrafts({ events, season, manual, now, catalog, enviados }) {
   for (const event of events) {
     if (tierOf(event.seriesId) > 2) continue;
     for (const session of event.sessions) {
-      const key = `sesion:${session.id}`;
+      // El provisorio y el oficial son dos borradores distintos: si el provisorio ya salió, el oficial no queda tapado por su clave.
+      // Si el oficial no cambió nada del podio provisorio, no se repite la noticia.
+      const provisional = isProvisional(session);
+      const key = provisional ? `sesion:${session.id}:provisorio` : `sesion:${session.id}`;
       if (enviados[key] || !COMPETITIVE.has(session.kind) || !session.results?.length) continue;
+      if (!provisional && enviados[`sesion:${session.id}:provisorio`] && session.resultsSource?.provisional && session.resultsSource.note === "Oficial") continue;
       const end = endOf(session);
       if (nowMs < end || nowMs - end > RESULT_WINDOW_MS) continue;
       const argentines = session.results
@@ -324,7 +331,7 @@ function summaryDraft({ events, now, catalog, enviados }) {
     const sameKindCount = e.sessions.filter((s) => s.kind === main.kind).length;
     const label = sameKindCount > 1 ? nombreVisibleSesion(main, e.sessions) : null;
     const argNote = argentines.map(({ driver, row }) => `${surname(driver.name)} ${outcome(row, main.kind)}`).join(" y ");
-    return `${byId[e.seriesId].short}${label ? ` (${label})` : ""}: ganó ${winner}${argNote ? `; ${argNote}` : ""}`;
+    return `${byId[e.seriesId].short}${label ? ` (${label})` : ""}: ganó ${winner}${provisionalSuffix(main)}${argNote ? `; ${argNote}` : ""}`;
   };
   const head = "🏁 Así quedó el finde (hora argentina):";
   const url = `${BASE_URL}/`;

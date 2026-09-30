@@ -143,3 +143,50 @@ Cinco planillas aceptadas no tienen PDF en el portal (final de TC del 31/05, fin
 ## Demora real
 
 Con la planilla como provisoria, lo que se ve en el sitio después de la bandera se adelanta: final de TC Pista Pick Up, de las 15:58 (oficial) a las 13:47 (planilla), 2 h 11 min antes; final de TC Pick Up, de las 16:45 a las 15:56, 49 min antes; series, de 39 a 63 minutos antes. Siempre sujeto a que la sincronización corra (ver el PR de disparo por evidencia).
+
+## Fase 2: lo que se implementó
+
+### Modelo
+
+- `resultsSource.status === "provisional"` marca una sesión cuyos resultados salen de la planilla. **Oficial es la ausencia del campo**: ninguna otra fuente (F1, F2, GT, TN) cambia. Tipos en `src/lib/types.ts`.
+- Cuando el oficial reemplaza a un provisorio, `resultsSource.provisional` guarda el podio que se había mostrado y `resultsSource.note` la línea "Oficial: ..." ya armada ("Oficial: Diego Ciantini pasó del 2.º al 5.º por un recargo de 5 s", "Oficial: Juan Pablo Alberti (3.º en el provisorio) fue excluido"; "Oficial" si el podio no cambió; "Oficial: cambió el podio" si cambió y las observaciones del PDF no lo explican). Se arma al sincronizar, con las observaciones del PDF (`penaltiesFrom`), y no se recalcula al mostrar. Helpers puros y testeados en `src/lib/provisorio.mjs`.
+- Lo guardado antes de este cambio no tiene `status`: se sigue mostrando como hasta ahora (sin rótulo). Las fechas de más de 10 días no se vuelven a leer, así que las planillas de series viejas que hoy figuran como oficiales quedan sin rótulo hasta que se las vuelva a bajar.
+
+### Sincronización (`src/lib/sources/actc-timing.mjs`)
+
+- `parseListing` lee el botón de descarga (`format`: `xlsx`, `pdf` o nada).
+- `chooseDocs(docs, { provisional })`: sin la opción, igual que antes (lo usa el pulso en el PR de disparo por evidencia). Con ella, las planillas de series y finales entran como última opción de cada sesión y un documento oficial gana siempre, sea cual sea el orden de los ids. Devuelve además la lista ordenada de candidatos.
+- `actcTiming` lee los candidatos de cada sesión en ese orden (hasta 4 páginas): el primero oficial que se lee gana; si no hay, la primera planilla que pasa la regla de `provisionalProblems` queda como provisoria. Una planilla que no pasa la regla no se muestra (antes se mostraba como oficial). Una página caída ahora deja probar el siguiente documento.
+- Contra lo guardado (`reconcileSession`, también dentro de `keepSessionData` de `guard.mjs`, que usan la sincronización y el refresco caliente): un provisorio nunca pisa un oficial; un provisorio con menos filas no achica al provisorio guardado; un oficial reemplaza al provisorio y arrastra su podio. Las sesiones guardadas que hoy no se leyeron se conservan.
+- Las filas de una planilla no traen marca de auto ni tiempo total: la marca se toma del mismo número en otra sesión de la fecha, y la diferencia sólo dice las vueltas de atraso. No se inventa una diferencia de carrera.
+- Arreglo al pasar: "Vuelta" (singular) quedaba pegado al nombre del piloto ("Alvaro Oroza Vuelta") en los PDF; ahora se descarta como "Vueltas".
+
+### Pulso (`src/lib/pulso-sync.mjs`)
+
+`newDocuments` llama a `chooseDocs(docs, { provisional: true })`: una planilla nueva (título "PARCIALES" o botón Excel) cuenta como documento nuevo y dispara por evidencia; el PDF que llega después también. Si una planilla se rechaza por la regla no queda guardada y volvería a contar como nueva, pero el tope de 2 intentos del pulso (`EVIDENCE_MAX_TRIES`) corta el bucle: como mucho 2 corridas de más por planilla rechazada. Tests en `src/lib/pulso-sync-provisorio.test.mjs`.
+
+### Dónde se ve
+
+Componente `src/components/results-status.tsx`: texto plano de 13 px, en tono secundario, con la primera palabra en negrita ("Provisorio · sujeto a revisión de los comisarios"; "Oficial: ..."). Sobre la banda oscura, `--on-ink-muted` (#aeb3b4, 8,86:1 contra tinta); sobre claro, `--muted` (4,81:1 sobre papel y 5,40:1 sobre blanco). Sin chip.
+
+- Página de la fecha: debajo del ganador de la banda oscura, y en cada sesión anterior; "Ganador (provisorio)"; "1.º X (provisorio)" en el resumen; "ganó X (provisorio)" en las fechas del mismo finde y en la descripción.
+- Portada: la tarjeta de resultados (claro) y los podios de "Recién terminó" (oscuro) llevan el rótulo; "ganó X (provisorio)" en el momento y en la línea del último resultado. También el momento de la categoría, la ficha del piloto (cada sesión dice "provisorio"), el horario del piloto, la imagen para compartir y los calendarios (.ics: "Ganador (provisorio)").
+- Crónicas automáticas: "Final (provisorio): ..." y el titular "ganó la final (provisorio)". Se regeneran solas cuando llega el oficial.
+- Capturas a 375 px en `docs/plan-datos/capturas/tc-provisorios/` (la planilla real del 27/09 leída con el lector de la sincronización, cargada en una copia local de la temporada).
+
+### Borradores para X (`src/lib/redes-core.mjs`)
+
+Un resultado provisorio sale con "(provisorio)" al lado del ganador, con una clave propia (`sesion:<id>:provisorio`). Así el borrador del oficial no queda tapado por el del provisorio: si el oficial cambia el podio hay un segundo borrador, sin la marca; si no cambió nada (`note === "Oficial"`) no se repite la noticia. El resumen del finde también lo marca.
+
+### Campeonato
+
+**No se suma ningún punto con provisorios, por construcción:** las tablas de campeonato son las que publica la ACTC (`actc.mjs`), no una suma de nuestros resultados. Lo que sí se calcula con resultados es el conteo de carreras, victorias, podios y mejor resultado de la ficha de cada piloto (`data.ts`): ahí las sesiones provisorias se listan pero no cuentan hasta que llega el oficial. Una consecuencia que ya existía con los resultados oficiales: apenas hay una final cargada, la tabla de campeonato de la categoría (que trae la ACTC con la fecha anterior) se oculta como atrasada hasta que la ACTC la actualice.
+
+### Riesgos que quedan
+
+1. **Foto intermedia en formato Excel con las vueltas parejas.** La regla no la detecta. No se vio ninguna en 41 pares, pero el formato es de mayo. Si aparece, el rótulo dice "Provisorio" y el oficial la reemplaza.
+2. **Planillas "provisorias para siempre".** Cinco sesiones del año nunca tuvieron PDF en el portal; después de 7 días el rótulo dice que la ACTC no publicó el oficial.
+3. **Páginas oficiales mal cargadas por el portal** (TC Pista 13/09 y 23/08 traen filas de Mouras): ya existía, no lo resuelve esto.
+4. **Falsos rechazos**: una serie corta de 4 autos con la mejor vuelta casualmente en orden no muestra provisorio.
+5. **La carga manual** (`manual-overrides.json`) que reemplaza los resultados de una sesión conserva el `resultsSource` de la fuente: si la fuente tenía una planilla y la carga trae el resultado oficial, hay que cargar también su `resultsSource`.
+6. Un oficial rectificado después del domingo (como la serie 1 de TC Pick Up) ya se toma (gana "RECTIFICAD"), pero su nota compara contra el podio provisorio original, no contra el primer oficial.
