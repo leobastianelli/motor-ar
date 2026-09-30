@@ -113,6 +113,63 @@ export function pendingHours(events, now, { tierOf = () => 3, name = (id) => id 
   return out;
 }
 
+const ACTC_SERIES = new Set(["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up"]);
+const weekdayFmt = new Intl.DateTimeFormat("en-US", { timeZone: TZ, weekday: "short" });
+const DAYS_AFTER_FRIDAY = { Fri: 0, Sat: 1, Sun: 2 };
+
+/**
+ * Fechas de la ACTC de este fin de semana que no tienen NINGÚN horario conocido (todas sus sesiones son de relleno a las 12:00). Avisa desde el
+ * viernes 00:00 (hora argentina) hasta que termina el último día, sin pedir que la fecha esté confirmada: si hay carrera el fin de semana y no
+ * hay ni un horario, hay que cargarlos a mano o buscar otra fuente (caso Rosario, TC Mouras, 27/09/2026: nadie avisó y el pulso no tuvo a qué
+ * engancharse). Es más fuerte que `pendingHours`, que sólo mira las sesiones de carrera y empieza el jueves.
+ */
+export function weekendWithoutAnyHour(events, now, { tierOf = () => 3, name = (id) => id } = {}) {
+  const nowMs = Date.parse(now);
+  const out = [];
+  for (const e of events) {
+    if (!ACTC_SERIES.has(e.seriesId) || !e.sessions.length) continue;
+    const first = e.sessions.reduce((a, s) => (Date.parse(s.start) < Date.parse(a.start) ? s : a), e.sessions[0]);
+    const offset = DAYS_AFTER_FRIDAY[weekdayFmt.format(new Date(first.start))];
+    if (offset === undefined) continue; // no es una fecha de fin de semana
+    const firstDay = startOfDay(first.start);
+    const fridayMs = firstDay - offset * DAY;
+    const lastDayEnd = startOfDay(e.sessions.reduce((a, s) => (Date.parse(s.start) > Date.parse(a.start) ? s : a), e.sessions[0]).start) + DAY;
+    if (nowMs < fridayMs || nowMs >= lastDayEnd) continue;
+    if (!e.sessions.every((s) => s.timeKnown === false)) continue;
+    const hours = (firstDay - nowMs) / HOUR;
+    const level = hours <= 0 ? 4 : 3;
+    out.push({
+      key: `sin-horarios:${e.id}`,
+      severity: "critical",
+      level,
+      tier: tierOf(e.seriesId),
+      title: `Sin ningún horario: ${name(e.seriesId)} · ${e.circuit?.city ?? e.name} (${hours <= 0 ? "HOY" : dayLabel(first.start)})`,
+      body: `La fecha es este fin de semana y ninguna de sus ${e.sessions.length} ${e.sessions.length === 1 ? "sesión tiene hora" : "sesiones tiene hora"}. Sin horarios el pulso no sabe cuándo pedir los resultados. Cargarlos a mano (manual-overrides.json, con fuente) o buscar el cronograma en SoloTC, Carburando o el autódromo.`,
+      hours,
+    });
+  }
+  return out;
+}
+
+/**
+ * Cargas manuales que se descartaron al fusionarlas con la fuente (ver mergeSessionPatches en overrides.mjs): no hay dónde ponerlas porque
+ * la fuente ya trae esa sesión con resultados. Es informativo: nunca se descarta una carga sin que quede dicho.
+ */
+export function manualDiscarded(sourceEvents, manual) {
+  const out = [];
+  const sourceById = new Map(sourceEvents.map((e) => [e.id, e]));
+  for (const [id, patch] of Object.entries(manual.events ?? {})) {
+    const src = sourceById.get(id);
+    if (!src || !patch?.sessions) continue;
+    const discarded = [];
+    mergeSessionPatches(id, src.sessions, patch.sessions, dayKey, discarded);
+    for (const d of discarded) {
+      out.push({ key: `manual-descartada:${id}:${sessionKey(d)}`, severity: "info", level: 1, tier: 3, title: `Carga manual descartada: ${id} · ${d.name}`, body: `No se muestra porque ${d.reason}. Revisar manual-overrides.json: o el nombre no coincide con el de la fuente o ya no hace falta.` });
+    }
+  }
+  return out;
+}
+
 /** Eventos ya corridos (hace más de `after` horas) de una categoría con fuente automática y sin resultado de carrera publicado. */
 export function resultsOverdue(events, now, { autoSeries, after = 36, tierOf = () => 3, name = (id) => id } = {}) {
   const nowMs = Date.parse(now);

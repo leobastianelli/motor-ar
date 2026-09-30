@@ -14,9 +14,11 @@ import {
   manualExpired,
   parseTc2000Home,
   pendingHours,
+  manualDiscarded,
   resultsOverdue,
   sessionResultsMissing,
   sourceFailures,
+  weekendWithoutAnyHour,
   staleStandings,
   tnDateConflicts,
   visibleEvents,
@@ -70,10 +72,12 @@ const findings = [
   ...sourceFailures(snapshot.failures),
   ...dateIssues(events, NOW, { tierOf, name }),
   ...pendingHours(events, NOW, { tierOf, name }),
+  ...weekendWithoutAnyHour(events, NOW, { tierOf, name }),
   ...resultsOverdue(events, NOW, { autoSeries: AUTO_RESULTS, tierOf, name }),
   ...sessionResultsMissing(events, NOW, { seriesIds: new Set(["f1"]), tierOf, name }),
   ...staleStandings(snapshot, manual, events, { tierOf, name }),
   ...manualExpired(events, snapshot.events, manual, NOW),
+  ...manualDiscarded(snapshot.events, manual),
 ];
 
 // La portada de TC2000 (la única página de su sitio que su robots.txt permite) vigila la tabla cargada a mano.

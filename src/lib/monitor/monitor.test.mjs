@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { emptyState, evaluate, summaryDue } from "./alerts.mjs";
-import { compareStandings, dateIssues, tnDateConflicts, withConflicts, dateStatus, manualExpired, parseTc2000Home, pendingHours, resultsOverdue, sessionResultsMissing, sourceFailures, staleStandings, visibleEvents } from "./checks.mjs";
+import { compareStandings, dateIssues, tnDateConflicts, withConflicts, dateStatus, manualDiscarded, manualExpired, parseTc2000Home, pendingHours, resultsOverdue, sessionResultsMissing, sourceFailures, weekendWithoutAnyHour, staleStandings, visibleEvents } from "./checks.mjs";
 import { chunk, renderAlerts, sendTelegram, sendTelegramPhoto } from "./telegram.mjs";
 
 // Domingo 27/09/2026 (Balcarce, TC Pick Up): la carrera no tiene hora.
@@ -373,4 +373,61 @@ test("resultados por sesión: se insiste a la media hora, sube a la hora y a las
   assert.equal(sessionResultsMissing([f1], "2026-09-24T13:00:00Z", { seriesIds: new Set(["tn"]) }).length, 0);
   const done = { ...f1, sessions: f1.sessions.map((s) => ({ ...s, results: [{ pos: 1, driver: "X", team: "", gap: "" }] })) };
   assert.equal(sessionResultsMissing([done], "2026-09-24T13:00:00Z", opts).length, 0);
+});
+
+// ——— Fin de semana de la ACTC sin ningún horario ———
+
+// Rosario, 26 y 27/09/2026: dos categorías sin un solo horario (todo en el relleno de las 12:00).
+const rosario = (over = {}) => ({
+  id: "tcm-2026-9",
+  seriesId: "tc-mouras",
+  round: 9,
+  name: "Fecha 9 · Rosario",
+  circuit: { name: "Juan Manuel Fangio", city: "Rosario" },
+  source: "ACTC (calendario)",
+  sessions: [
+    { id: "q", kind: "clasificacion", name: "Clasificación", start: "2026-09-26T12:00:00-03:00", timeKnown: false, durationMin: 30 },
+    { id: "f", kind: "final", name: "Final", start: "2026-09-27T12:00:00-03:00", timeKnown: false, durationMin: 35 },
+  ],
+  ...over,
+});
+
+test("el viernes avisa si una fecha ACTC del fin de semana no tiene ningún horario", () => {
+  assert.equal(weekendWithoutAnyHour([rosario()], at("24", "20")).length, 0, "el jueves todavía no");
+  const fri = weekendWithoutAnyHour([rosario()], at("25", "00"), { tierOf });
+  assert.equal(fri.length, 1);
+  assert.equal(fri[0].key, "sin-horarios:tcm-2026-9");
+  assert.equal(fri[0].severity, "critical");
+  assert.equal(fri[0].tier, 1);
+  assert.match(fri[0].title, /Rosario/);
+  assert.equal(weekendWithoutAnyHour([rosario()], at("25", "19")).length, 1);
+  const sat = weekendWithoutAnyHour([rosario()], at("26", "09"));
+  assert.equal(sat[0].level, 4, "el sábado ya es HOY");
+  assert.match(sat[0].title, /HOY/);
+  assert.equal(weekendWithoutAnyHour([rosario()], at("27", "23")).length, 1, "sigue hasta que termina el domingo");
+  assert.equal(weekendWithoutAnyHour([rosario()], "2026-09-28T00:30:00-03:00").length, 0, "el lunes ya no");
+});
+
+test("no avisa si hay al menos un horario conocido, ni para categorías que no son de la ACTC, ni si la fecha no es de fin de semana", () => {
+  const conUna = rosario({ sessions: rosario().sessions.map((s) => (s.id === "f" ? { ...s, start: "2026-09-27T14:10:00-03:00", timeKnown: true } : s)) });
+  assert.equal(weekendWithoutAnyHour([conUna], at("25", "12")).length, 0);
+  assert.equal(weekendWithoutAnyHour([rosario({ seriesId: "tn" })], at("25", "12")).length, 0);
+  const martes = rosario({ sessions: [{ id: "x", kind: "final", name: "Final", start: "2026-09-29T12:00:00-03:00", timeKnown: false, durationMin: 35 }] });
+  assert.equal(weekendWithoutAnyHour([martes], at("25", "12")).length, 0);
+});
+
+// ——— Cargas manuales descartadas ———
+
+test("una carga manual que no se puede mostrar queda como hallazgo, no en silencio", () => {
+  const rows = [{ pos: 1, driver: "A", team: "", gap: "" }];
+  const fuente = sunday({ sessions: [{ id: "u", kind: "serie", name: "Serie única", start: "2026-09-27T12:00:00-03:00", timeKnown: true, durationMin: 20, results: rows }] });
+  const manual = { events: { [fuente.id]: { sessions: [{ kind: "serie", name: "Serie 2", start: "2026-09-27T12:00:00-03:00", timeKnown: true, durationMin: 20 }] } } };
+  const out = manualDiscarded([fuente], manual);
+  assert.equal(out.length, 1);
+  assert.match(out[0].title, /Serie 2/);
+  assert.equal(out[0].severity, "info");
+  // El caso real: la Serie 2 manual no se descarta aunque la fuente ya tenga resultados de la Serie 1.
+  const conSerie1 = sunday({ sessions: [{ id: "s1", kind: "serie", name: "Serie 1", start: "2026-09-27T12:00:00-03:00", timeKnown: false, durationMin: 20, results: rows }] });
+  assert.equal(manualDiscarded([conSerie1], manual).length, 0);
+  assert.equal(visibleEvents([conSerie1], manual)[0].sessions.length, 2);
 });
