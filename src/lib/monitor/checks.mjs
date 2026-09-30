@@ -120,6 +120,12 @@ export function resultsOverdue(events, now, { autoSeries, after = 36, tierOf = (
   for (const e of events) {
     if (!autoSeries.has(e.seriesId) || endOfEvent(e) + after * HOUR > nowMs) continue;
     if (e.sessions.some((s) => RACE_KINDS.has(s.kind) && s.results?.length)) continue;
+    const days = (nowMs - endOfEvent(e)) / DAY;
+    // Un hueco de más de 30 días ya no se arregla con una resincronización: se sigue mostrando, pero como información (no cuenta como problema abierto).
+    if (days > 30) {
+      out.push({ key: `resultados:${e.id}`, severity: "info", level: 1, tier: tierOf(e.seriesId), title: `Hueco viejo sin resultados: ${name(e.seriesId)} · ${e.circuit?.city ?? e.name} (${dayLabel(e.sessions.at(-1).start)})`, body: `Pasaron ${Math.floor(days)} días y la fuente nunca publicó la carrera: es un hueco viejo de la fuente. Si se consiguen los resultados de otra fuente confiable, cargarlos en manual-overrides.json.` });
+      continue;
+    }
     out.push({ key: `resultados:${e.id}`, severity: "medium", level: 1, tier: tierOf(e.seriesId), title: `Sin resultados: ${name(e.seriesId)} · ${e.circuit?.city ?? e.name} (${dayLabel(e.sessions.at(-1).start)})`, body: `Pasaron más de ${after} h de la última sesión y la fuente no publicó la carrera.` });
   }
   return out;
