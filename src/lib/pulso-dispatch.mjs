@@ -17,3 +17,15 @@ export async function claimDispatch(sql, now, { lockMinutes = DISPATCH_LOCK_MINU
   `;
   return rows.length > 0;
 }
+
+/** Último documento de la ACTC que motivó un disparo y cuántas veces seguidas (columnas `evidence_*` de `pulso_estado`; ver scripts/init-season-db.mjs). */
+export async function readEvidence(sql) {
+  const rows = await sql`SELECT evidence_doc, evidence_tries FROM pulso_estado WHERE id = 1`;
+  const row = rows[0];
+  return row?.evidence_doc ? { doc: row.evidence_doc, tries: row.evidence_tries ?? 0 } : null;
+}
+
+/** Guarda qué documento motivó el disparo recién reservado, para medir después cuánto tardó cada uno. */
+export async function recordEvidence(sql, now, { doc, tries }) {
+  await sql`UPDATE pulso_estado SET evidence_doc = ${doc}, evidence_at = ${now}::timestamptz, evidence_tries = ${tries}::integer WHERE id = 1`;
+}

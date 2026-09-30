@@ -8,6 +8,7 @@ const BASE = "https://tiempos.actc.org.ar";
 const TAB_SERIES = { TC: "tc", TCP: "tc-pista", TCM: "tc-mouras", TCPM: "tc-pista-mouras", TCPK: "tc-pick-up", TCPPK: "tc-pista-pick-up" };
 export const TIMING_SERIES = new Set(Object.values(TAB_SERIES));
 export const TIMING_SOURCE = "ACTC · tiempos oficiales";
+export const LISTING_URL = `${BASE}/resultados`;
 
 const DAY = 86400000;
 const ORDER = { practica: 0, clasificacion: 1, serie: 2, sprint: 3, final: 4, carrera: 4 };
@@ -224,12 +225,27 @@ export function keepPreviousTiming(events, previous) {
   });
 }
 
+/** Una clasificación por sesión: si hay versión rectificada o repetida, vale la última publicada. (Lo usa también el pulso para detectar documentos nuevos.) */
+export function chooseDocs(docs) {
+  const chosen = new Map();
+  for (const doc of docs) {
+    const session = classify(doc.title);
+    if (!session) continue;
+    const current = chosen.get(session.name);
+    const rectified = /RECTIFICAD/i.test(doc.title);
+    if (!current || (rectified && !current.rectified) || (rectified === current.rectified && doc.id > current.doc.id)) {
+      chosen.set(session.name, { doc, session, rectified });
+    }
+  }
+  return chosen;
+}
+
 /**
  * Completa las fechas de la ACTC con los resultados del portal. Las fechas recientes (`windowDays`) se consultan;
  * las viejas reutilizan lo ya guardado, así cada actualización pide pocas páginas.
  */
 export async function actcTiming(io, events, previous, { windowDays = 10, knownNames = [], delayMs = 400 } = {}) {
-  const listing = parseListing(await io.text(`${BASE}/resultados`, { revalidate: 900 }));
+  const listing = parseListing(await io.text(LISTING_URL, { revalidate: 900 }));
   const known = knownIndex(knownNames);
   const before = new Map((previous?.events ?? []).map((e) => [e.id, e]));
   const now = Date.now();
@@ -256,17 +272,7 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
       continue;
     }
 
-    // Una clasificación por sesión: si hay versión rectificada o repetida, vale la última publicada.
-    const chosen = new Map();
-    for (const doc of docs) {
-      const session = classify(doc.title);
-      if (!session) continue;
-      const current = chosen.get(session.name);
-      const rectified = /RECTIFICAD/i.test(doc.title);
-      if (!current || (rectified && !current.rectified) || (rectified === current.rectified && doc.id > current.doc.id)) {
-        chosen.set(session.name, { doc, session, rectified });
-      }
-    }
+    const chosen = chooseDocs(docs);
 
     const timed = [];
     for (const { doc, session } of chosen.values()) {
