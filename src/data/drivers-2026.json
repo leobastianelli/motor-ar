@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T15:31:51.112Z",
+  "generatedAt": "2026-09-30T18:56:21.006Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -810,7 +810,8 @@
       },
       "teams": {
         "tc": "Chevrolet",
-        "tc-pick-up": "Volkswagen"
+        "tc-pick-up": "Volkswagen",
+        "tc-pista-pick-up": "Volkswagen"
       },
       "firstSeen": "2026-02-21",
       "lastSeen": "2026-09-27"
@@ -1625,7 +1626,8 @@
         "tc-pista-pick-up": "11"
       },
       "teams": {
-        "tc-pick-up": "Foton"
+        "tc-pick-up": "Foton",
+        "tc-pista-pick-up": "Foton"
       },
       "firstSeen": "2026-02-21",
       "lastSeen": "2026-09-27"
@@ -2783,7 +2785,7 @@
       },
       "teams": {
         "tc-pista-mouras": "Ford",
-        "tc-pista-pick-up": "Ford"
+        "tc-pista-pick-up": "Volkswagen"
       },
       "firstSeen": "2026-01-24",
       "lastSeen": "2026-09-27"
@@ -3291,7 +3293,8 @@
       },
       "teams": {
         "tc": "Ford",
-        "tc-pick-up": "Foton"
+        "tc-pick-up": "Foton",
+        "tc-pista-pick-up": "Foton"
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-09-27"
