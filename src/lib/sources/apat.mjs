@@ -80,9 +80,12 @@ async function sessionResults(io, klass, isoDay, knownNames, revalidate) {
       .map((row) => {
         const c = cells(row);
         const pos = Number(text(c[0] ?? ""));
-        const time = text(c[5] ?? "");
-        const diff = text(c[6] ?? "");
-        return { pos, number: text(c[1] ?? "") || undefined, driver: resolveName(driverCell(c), knownNames), team: text(c[3] ?? ""), gap: pos === 1 ? time : diff || time };
+        // APAT marca la falta de dato con "+-" o guiones: sin dígitos no es un tiempo ni una diferencia.
+        const figure = (s) => (/\d/.test(s) ? s : "");
+        const time = figure(text(c[5] ?? ""));
+        const diff = figure(text(c[6] ?? ""));
+        const gap = pos === 1 ? time : diff || time;
+        return { pos, number: text(c[1] ?? "") || undefined, driver: resolveName(driverCell(c), knownNames), team: text(c[3] ?? ""), gap, ...(gap ? {} : { status: "Sin tiempo" }) };
       })
       .filter((r) => r.pos && r.driver);
     // El documento de cada sesión trae su fecha de publicación: ubica entrenamientos y clasificación en su día.
