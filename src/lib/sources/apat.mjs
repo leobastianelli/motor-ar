@@ -1,6 +1,6 @@
 // TN APAT 2026 desde el sitio oficial (apat.org.ar): calendario, todas las sesiones de Clase 2 y 3 (entrenamientos,
 // clasificación, series y final) y campeonatos.
-import { dateOnly, properName } from "./common.mjs";
+import { dateOnly, describeBody, properName } from "./common.mjs";
 
 const BASE = "https://apat.org.ar";
 
@@ -153,6 +153,6 @@ export async function apatSeason(io) {
   }
 
   // Un calendario sin ninguna fecha es una página rota o distinta, no un TN sin temporada: que falle y se conserve lo anterior.
-  if (!events.length) throw new Error("el calendario de APAT no trajo ninguna fecha");
+  if (!events.length) throw new Error(`el calendario de APAT no trajo ninguna fecha (llegó ${describeBody(calendarHtml)})`);
   return { events, standings: { tn: c3 }, meta: { tn: { standingsLabel: "Clase 3", clase2: c2 } } };
 }
