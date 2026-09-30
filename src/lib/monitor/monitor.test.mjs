@@ -78,6 +78,17 @@ test("resultados: se avisa cuando pasaron 36 h y la fuente automática no public
   assert.equal(resultsOverdue([corrida], at("16", "10"), { autoSeries: new Set() }).length, 0);
 });
 
+test("resultados: un hueco de más de 30 días baja a información y lo dice", () => {
+  const corrida = sunday({ sessions: [{ id: "f", kind: "final", name: "Final", start: "2026-09-13T12:00:00-03:00", timeKnown: false, durationMin: 35 }] });
+  const auto = new Set(["tc-pick-up"]);
+  const [reciente] = resultsOverdue([corrida], at("20", "10"), { autoSeries: auto });
+  assert.equal(reciente.severity, "medium");
+  const [viejo] = resultsOverdue([corrida], "2026-10-20T12:00:00-03:00", { autoSeries: auto });
+  assert.equal(viejo.severity, "info");
+  assert.equal(viejo.key, reciente.key);
+  assert.match(viejo.body, /hueco viejo de la fuente/);
+});
+
 test("las fallas de fuente avisan desde la segunda vez; si hubo pérdida de datos, en el acto; las correcciones automáticas son sólo información", () => {
   const [suelta, perdida, corregido] = sourceFailures([
     "Speedhive TN: 500 al pedir la lista",

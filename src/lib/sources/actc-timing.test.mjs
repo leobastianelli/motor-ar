@@ -65,3 +65,27 @@ test("una marca ya reconocida (Toyota) sigue funcionando igual", () => {
   assert.equal(azar.driver, "Diego Azar");
   assert.equal(azar.team, "Toyota");
 });
+
+// Serie única TC Mouras (Concepción del Uruguay, 1/3/2026, resultados/212/ver): el portal trae como "tiempo total" de los dos últimos autos
+// un suelto de 5.850 y 6.118 con "+5" de diferencia (vueltas de atraso) y sin vueltas: antes salía "+-534.527".
+const fila = (pos, nro, nombre, marca, total, dif, vtas) =>
+  `<tr class="driver-row"><td>${pos}</td><td>${nro}</td><td>${nombre}</td><td>${marca}</td><td>${total}</td><td>${dif}</td><td>${vtas}</td></tr>`;
+const SERIE_UNICA_TCM = `<table><tbody>
+${fila(1, 176, "JAIME NICOLAS", "DODGE", "9:00.377", "—", 5)}
+${fila(2, 141, "LUENGO FRANCISCO", "CHEVROLET", "9:00.754", "+0.377", 5)}
+${fila(13, 78, "CIFRE ALAN DENIS", "FORD", "3:20.171", "+3", 2)}
+${fila(14, 139, "ARRIGONI SANTIAGO", "DODGE", "5.850", "+5", "")}
+${fila(15, 25, "TARTAGLINO JUAN", "FORD", "6.118", "+5", "")}
+</tbody></table>`;
+
+test("autos doblados con tiempo total inconsistente: vueltas de atraso, nunca una diferencia negativa", () => {
+  const rows = parseResult(SERIE_UNICA_TCM, "serie", new Map());
+  assert.deepEqual(rows.map((r) => r.gap), ["9:00.377", "+0.377", "+3 vueltas", "+5 vueltas", "+5 vueltas"]);
+  assert.ok(rows.every((r) => !r.gap.includes("-")));
+});
+
+test("si el total es menor al del líder y no hay vueltas de atraso, no se muestra un número", () => {
+  const rows = parseResult(`<table><tbody>${fila(1, 1, "AAA BBB", "FORD", "9:00.377", "—", 5)}${fila(2, 2, "CCC DDD", "FORD", "5.850", "—", "")}</tbody></table>`, "serie", new Map());
+  assert.equal(rows[1].gap, "");
+  assert.equal(rows[1].status, "Sin tiempo");
+});

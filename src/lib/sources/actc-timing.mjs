@@ -151,6 +151,8 @@ export function parseResult(html, kind, known) {
     const pieces = cells.slice(2);
     const time = pieces.find((c) => TIME.test(c));
     const ints = pieces.filter((c) => /^\d+$/.test(c)).map(Number);
+    // "+3" (entero con signo) en la columna de diferencia son vueltas de atraso, no segundos.
+    const behind = pieces.find((c) => /^\+\d+$/.test(c));
     const words = [];
     let make = "";
     for (const cell of pieces) {
@@ -180,16 +182,20 @@ export function parseResult(html, kind, known) {
       team: make,
       seconds: time ? seconds(time) : null,
       laps: ints.length ? Math.max(...ints) : null,
+      behind: behind ? Number(behind.slice(1)) : null,
     });
   }
   const race = kind === "serie" || kind === "final";
   const lead = rows[0];
-  return rows.map(({ seconds: sec, laps, ...r }, i) => {
+  const lapText = (n) => `+${n} ${n === 1 ? "vuelta" : "vueltas"}`;
+  return rows.map(({ seconds: sec, laps, behind, ...r }, i) => {
     let gap = "";
     if (i === 0) gap = sec !== null ? clock(sec) : "";
-    else if (race && lead.laps && laps !== null && laps < lead.laps) gap = `+${lead.laps - laps} ${lead.laps - laps === 1 ? "vuelta" : "vueltas"}`;
-    else if (sec !== null && lead.seconds !== null) gap = `+${(sec - lead.seconds).toFixed(3)}`;
-    return { ...r, gap, ...(sec === null && !gap ? { status: "Sin tiempo" } : {}) };
+    else if (race && lead.laps && laps !== null && laps < lead.laps) gap = lapText(lead.laps - laps);
+    else if (race && behind) gap = lapText(behind); // el portal a veces deja el total de un auto doblado como tiempo suelto, sin vueltas
+    else if (sec !== null && lead.seconds !== null && sec >= lead.seconds) gap = `+${(sec - lead.seconds).toFixed(3)}`;
+    // Con el total menor al del líder la diferencia daría negativa: el dato es inconsistente y no se muestra un número.
+    return { ...r, gap, ...(!gap && (sec === null || lead.seconds !== null) ? { status: "Sin tiempo" } : {}) };
   });
 }
 
