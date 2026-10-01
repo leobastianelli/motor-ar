@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-30T18:56:21.006Z",
+  "generatedAt": "2026-10-01T12:03:35.598Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -1191,11 +1191,14 @@
       "keys": [
         "facundo luduena",
         "facundo luduena mouras",
-        "facundo luduena v vuelta"
+        "facundo luduena v vuelta",
+        "facundo luduena v"
       ],
       "slug": "facundo-luduena",
       "name": "Facundo Ludueña",
-      "aliases": [],
+      "aliases": [
+        "Facundo V Ludueña"
+      ],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
