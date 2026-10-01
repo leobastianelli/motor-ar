@@ -54,12 +54,16 @@ export async function runWatchdog({ site, now, state, fetchImpl = fetch, githubT
 
   if (githubToken && githubRepo) {
     try {
-      const res = await fetchImpl(`https://api.github.com/repos/${githubRepo}/actions/workflows/sync-season.yml/runs?per_page=6&status=completed`, {
+      // Sin `status=completed`: con ese filtro, desde /api/vigilante GitHub devolvía una lista congelada (la última exitosa, del 23/09,
+      // seguía apareciendo el 1/10 con corridas exitosas todos los días). Se piden las últimas y se filtran acá.
+      const res = await fetchImpl(`https://api.github.com/repos/${githubRepo}/actions/workflows/sync-season.yml/runs?per_page=20`, {
         headers: { Authorization: `Bearer ${githubToken}`, Accept: "application/vnd.github+json", "User-Agent": "fierros-watchdog/0.1" },
         signal: AbortSignal.timeout(20_000),
+        cache: "no-store",
       });
       if (!res.ok) throw new Error(`GitHub respondió ${res.status}`);
-      findings.push(...syncFindings((await res.json()).workflow_runs ?? [], now));
+      const runs = ((await res.json()).workflow_runs ?? []).filter((r) => (r.status ?? "completed") === "completed");
+      findings.push(...syncFindings(runs, now));
     } catch (error) {
       notes.push(`No se pudo leer las corridas del sincronizador: ${error.message}`);
     }
