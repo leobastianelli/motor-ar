@@ -17,6 +17,7 @@ export const series: Series[] = [
   // Sin fuente automática todavía (ver docs/fuentes-de-datos.md): calendario, horarios y resultados quedan
   // "sin datos" hasta que exista un adaptador, igual que Procar4000.
   { id: "wec", name: "FIA WEC", short: "WEC", code: "WEC", org: "FIA/ACO", orgUrl: "https://www.fiawec.com", scope: "internacional", color: "#8a3f1f", founded: 2012 },
+  { id: "imsa", name: "IMSA WeatherTech SportsCar Championship", short: "IMSA", code: "IMSA", org: "IMSA", orgUrl: "https://www.imsa.com", scope: "internacional", color: "#a3202f", founded: 1969, partialResults: "Por ahora sólo cargamos el Petit Le Mans (10 Horas de Atlanta), donde corre Nico Varrone: el resto de la temporada no está en Fierros." },
   { id: "f3", name: "FIA Fórmula 3", short: "F3", code: "F3", org: "FIA", orgUrl: "https://www.fiaformula3.com", scope: "internacional", color: "#4a6fa5", founded: 2019 },
   { id: "f4-italia", name: "Fórmula 4 Italiana", short: "F4 Italia", code: "F4I", org: "ACI Sport", orgUrl: "https://www.acisport.it/en/f4/home", scope: "internacional", color: "#7a8f3c", founded: 2014 },
   { id: "ligier-jfc", name: "Ligier JFC Junior Formula Championship", short: "Ligier JFC", code: "JFC", org: "Parella Motorsports Holdings", orgUrl: "https://ligierjuniorformulachampionship.com", scope: "internacional", color: "#b3285a", founded: 2024, partialResults: "Por ahora sólo cargamos las carreras del fin de semana de VIR: el resto de la temporada todavía no tiene resultados en Fierros." },
