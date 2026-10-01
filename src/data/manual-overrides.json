@@ -250,6 +250,20 @@
         { "id": "ligier-jfc-2026-6-carreras", "kind": "carrera", "name": "Carreras", "start": "2026-10-18T12:00:00-04:00", "timeKnown": false, "durationMin": 30 }
       ],
       "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (octubre 16–18, final de temporada)"
-    }
-  ]
+    },
+    {
+      "id": "imsa-2026-petit-le-mans",
+      "seriesId": "imsa",
+      "round": 10,
+      "name": "Petit Le Mans · 10 Horas de Atlanta",
+      "circuit": { "name": "Michelin Raceway Road Atlanta", "city": "Braselton", "country": "Estados Unidos", "flag": "US", "province": "Georgia" },
+      "dateConfirmed": true,
+      "sessions": [
+        { "id": "imsa-2026-petit-le-mans-practica-1", "kind": "practica", "name": "Práctica 1", "start": "2026-10-01T11:40:00-03:00", "timeKnown": true, "timeStatus": "tentative", "timeSources": [{ "name": "Cronograma publicado por Nico Varrone (Instagram)", "url": "https://www.instagram.com/nicovarrone1/", "start": "2026-10-01T11:40:00-03:00" }], "durationMin": 60 },
+        { "id": "imsa-2026-petit-le-mans-practica-2", "kind": "practica", "name": "Práctica 2", "start": "2026-10-01T16:35:00-03:00", "timeKnown": true, "timeStatus": "tentative", "timeSources": [{ "name": "Cronograma publicado por Nico Varrone (Instagram)", "url": "https://www.instagram.com/nicovarrone1/", "start": "2026-10-01T16:35:00-03:00" }], "durationMin": 60 },
+        { "id": "imsa-2026-petit-le-mans-clasificacion", "kind": "clasificacion", "name": "Clasificación", "start": "2026-10-02T15:40:00-03:00", "timeKnown": true, "timeStatus": "tentative", "timeSources": [{ "name": "Cronograma publicado por Nico Varrone (Instagram)", "url": "https://www.instagram.com/nicovarrone1/", "start": "2026-10-02T15:40:00-03:00" }], "durationMin": 60 },
+        { "id": "imsa-2026-petit-le-mans-carrera", "kind": "carrera", "name": "Carrera", "start": "2026-10-03T13:00:00-03:00", "timeKnown": true, "timeStatus": "tentative", "timeSources": [{ "name": "Cronograma publicado por Nico Varrone (Instagram)", "url": "https://www.instagram.com/nicovarrone1/", "start": "2026-10-03T13:00:00-03:00" }], "durationMin": 600 }
+      ],
+      "source": "Carga manual · cronograma publicado por Nico Varrone (Corvette #4 de Pratt Miller, GTD Pro): práctica 1 y 2 el jueves 1/10, clasificación el viernes 2/10, carrera el sábado 3/10, horarios en Argentina. Duraciones de prácticas y clasificación estimadas; el número de fecha es el esperado, no verificado"
+    }  ]
 }
