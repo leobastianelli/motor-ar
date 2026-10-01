@@ -63,5 +63,12 @@ export const broadcastsBySeries: Record<string, { items: Broadcast[]; source?: s
     items: [{ name: "YouTube (desde la web de la serie)", kind: "youtube", url: "https://ligierjuniorformulachampionship.com/news/" }],
     source: "https://ligierjuniorformulachampionship.com/news/stream-race-2-from-vir/",
   },
+  imsa: {
+    items: [
+      { name: "IMSA.tv", kind: "streaming", url: "https://www.imsa.com/watch/" },
+      { name: "IMSA (YouTube, internacional)", kind: "youtube", url: "https://www.youtube.com/@IMSA" },
+    ],
+    source: "https://www.ellitoral.com/deportes/nicolasvarrone-petitlemans-imsa-corvette-roadatlanta-prattmillermotorsports_0_0RZxAFM9M9.html",
+  },
   "zonal-bsas": { items: [] },
 };
