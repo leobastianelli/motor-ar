@@ -130,7 +130,17 @@ export default async function Home() {
     : undefined;
   // Quién es: los nuestros que corren en esa categoría internacional (por apellido); en una categoría argentina corren muchos, así que va el nombre de la categoría.
   const nextArgDrivers = nextArg ? getDriversAbroad().filter((d) => d.seriesId === nextArg.series.id) : [];
-  const nextArgWho = nextArg && (nextArgDrivers.length > 0 ? nextArgDrivers.map((d) => surname(d.name)).join(" y ") : nextArg.series.name);
+  const nextArgWho: ReactNode =
+    nextArgDrivers.length > 0
+      ? nextArgDrivers.map((d, i) => (
+          <span key={d.slug}>
+            {i > 0 && " y "}
+            <Link href={`/pilotos/${d.slug}`}>
+              {d.name[0]}. {surname(d.name)}
+            </Link>
+          </span>
+        ))
+      : nextArg?.series.name;
   const nextArgRow: MomentRow | undefined =
     nextArg && nextArg !== first
       ? {
