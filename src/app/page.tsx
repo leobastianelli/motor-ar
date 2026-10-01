@@ -128,12 +128,20 @@ export default async function Home() {
         ),
       }
     : undefined;
+  // Quién es: los nuestros que corren en esa categoría internacional (por apellido); en una categoría argentina corren muchos, así que va el nombre de la categoría.
+  const nextArgDrivers = nextArg ? getDriversAbroad().filter((d) => d.seriesId === nextArg.series.id) : [];
+  const nextArgWho = nextArg && (nextArgDrivers.length > 0 ? nextArgDrivers.map((d) => surname(d.name)).join(" y ") : nextArg.series.name);
   const nextArgRow: MomentRow | undefined =
     nextArg && nextArg !== first
       ? {
           key: "arg",
           label: "Próximo argentino",
-          body: <b className="home-when">{when(nextArg.session)}</b>,
+          body: (
+            <>
+              <b className="home-when">{when(nextArg.session)}</b> <HCode series={nextArg.series} href={`/categorias/${nextArg.series.id}`} />{" "}
+              <span className="home-moment-name">{nextArgWho}</span>
+            </>
+          ),
         }
       : undefined;
 
