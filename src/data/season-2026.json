@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-01T15:57:33.033Z",
+  "generatedAt": "2026-10-02T05:43:55.196Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -105998,7 +105998,7 @@
           "start": "2026-10-02T09:00:00+02:00",
           "durationMin": 60,
           "timeKnown": true,
-          "timeStatus": "tentative",
+          "timeStatus": "confirmed",
           "timeSources": [
             {
               "name": "GT World Challenge Europe (oficial)",
@@ -106014,7 +106014,7 @@
           "start": "2026-10-02T13:55:00+02:00",
           "durationMin": 60,
           "timeKnown": true,
-          "timeStatus": "tentative",
+          "timeStatus": "confirmed",
           "timeSources": [
             {
               "name": "GT World Challenge Europe (oficial)",
@@ -106030,7 +106030,7 @@
           "start": "2026-10-03T09:45:00+02:00",
           "durationMin": 20,
           "timeKnown": true,
-          "timeStatus": "tentative",
+          "timeStatus": "confirmed",
           "timeSources": [
             {
               "name": "GT World Challenge Europe (oficial)",
@@ -106046,7 +106046,7 @@
           "start": "2026-10-03T14:00:00+02:00",
           "durationMin": 60,
           "timeKnown": true,
-          "timeStatus": "tentative",
+          "timeStatus": "confirmed",
           "timeSources": [
             {
               "name": "GT World Challenge Europe (oficial)",
@@ -106062,7 +106062,7 @@
           "start": "2026-10-04T11:10:00+02:00",
           "durationMin": 20,
           "timeKnown": true,
-          "timeStatus": "tentative",
+          "timeStatus": "confirmed",
           "timeSources": [
             {
               "name": "GT World Challenge Europe (oficial)",
@@ -106078,7 +106078,7 @@
           "start": "2026-10-04T16:00:00+02:00",
           "durationMin": 60,
           "timeKnown": true,
-          "timeStatus": "tentative",
+          "timeStatus": "confirmed",
           "timeSources": [
             {
               "name": "GT World Challenge Europe (oficial)",
@@ -108447,23 +108447,23 @@
       },
       {
         "pos": 16,
+        "driver": "Matías Frano",
+        "team": "",
+        "points": 54,
+        "wins": 0
+      },
+      {
+        "pos": 17,
         "driver": "Nicolás Villamayor",
         "team": "",
         "points": 52.5,
         "wins": 0
       },
       {
-        "pos": 17,
+        "pos": 18,
         "driver": "Simon Volpi",
         "team": "",
         "points": 51,
-        "wins": 0
-      },
-      {
-        "pos": 18,
-        "driver": "Matías Frano",
-        "team": "",
-        "points": 26.5,
         "wins": 0
       }
     ],
@@ -111119,9 +111119,11 @@
       "sessionsWithResults": 40
     },
     "f1Official": {
-      "requests": 0,
+      "requests": 1,
       "sessionsWithResults": 0,
-      "errors": []
+      "errors": [
+        "GP de Baréin (en Malasia) · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -111154,5 +111156,8 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de Baréin (en Malasia) · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+  ]
 }
