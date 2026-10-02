@@ -17,6 +17,8 @@ export const RESULT_WINDOW_MS = 24 * HOUR;
 /** Tope de borradores "terminó la sesión" por corrida; el resto sale en la corrida siguiente. */
 export const MAX_RESULTS_PER_RUN = 8;
 const COMPETITIVE = new Set(["clasificacion", "sprint", "carrera", "final"]);
+// Los resultados también salen de las series: en el TC son casi tan importantes como la final.
+const RESULT_KINDS = new Set([...COMPETITIVE, "serie"]);
 const RACE_KINDS = new Set(["carrera", "final", "sprint"]);
 
 const timeFmt = new Intl.DateTimeFormat("es-AR", { timeZone: TZ, hour: "2-digit", minute: "2-digit", hour12: false });
@@ -151,7 +153,7 @@ function resultDrafts({ events, season, manual, now, catalog, enviados }) {
       // Si el oficial no cambió nada del podio provisorio, no se repite la noticia.
       const provisional = isProvisional(session);
       const key = provisional ? `sesion:${session.id}:provisorio` : `sesion:${session.id}`;
-      if (enviados[key] || !COMPETITIVE.has(session.kind) || !session.results?.length) continue;
+      if (enviados[key] || !RESULT_KINDS.has(session.kind) || !session.results?.length) continue;
       if (!provisional && enviados[`sesion:${session.id}:provisorio`] && session.resultsSource?.provisional && session.resultsSource.note === "Oficial") continue;
       const end = endOf(session);
       if (nowMs < end || nowMs - end > RESULT_WINDOW_MS) continue;
