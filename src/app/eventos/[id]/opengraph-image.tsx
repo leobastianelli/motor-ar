@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { ogFonts } from "@/lib/og-fonts";
 import { getSeason, getSeries } from "@/lib/data";
 import { fmtRange, raceWinner } from "@/lib/format";
 import { provisionalSuffix } from "@/lib/provisorio.mjs";
@@ -17,7 +18,7 @@ export default async function Image({ params }: { params: Promise<{ id: string }
 
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", background: "#f1f2f0", color: "#101213", fontFamily: "sans-serif" }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", background: "#f1f2f0", color: "#101213", fontFamily: "Archivo" }}>
         <div style={{ width: 28, height: "100%", background: color }} />
         <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "64px 72px" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
@@ -40,6 +41,6 @@ export default async function Image({ params }: { params: Promise<{ id: string }
         </div>
       </div>
     ),
-    size,
+    { ...size, fonts: await ogFonts() },
   );
 }

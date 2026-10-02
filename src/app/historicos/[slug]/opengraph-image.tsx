@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { ogFonts } from "@/lib/og-fonts";
 import { legendBySlug } from "@/data/legends";
 
 export const size = { width: 1200, height: 630 };
@@ -12,7 +13,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
 
   return new ImageResponse(
     (
-      <div style={{ width: "100%", height: "100%", display: "flex", background: "#101213", color: "#f1f2f0", fontFamily: "sans-serif" }}>
+      <div style={{ width: "100%", height: "100%", display: "flex", background: "#101213", color: "#f1f2f0", fontFamily: "Archivo" }}>
         <div style={{ width: 28, height: "100%", background: "#75bee9" }} />
         <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "64px 72px" }}>
           <div style={{ display: "flex", fontSize: 32, color: "#75bee9", letterSpacing: 2 }}>HISTORIAS DEL AUTOMOVILISMO ARGENTINO</div>
@@ -33,6 +34,6 @@ export default async function Image({ params }: { params: Promise<{ slug: string
         </div>
       </div>
     ),
-    size,
+    { ...size, fonts: await ogFonts() },
   );
 }
