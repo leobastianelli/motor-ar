@@ -9,8 +9,8 @@ export const revalidate = 1800;
 const KEY_KINDS = new Set(["clasificacion", "sprint", "carrera", "final"]);
 /** Alto útil para las filas (1350 menos márgenes, encabezado y pie). Si no entran todas, se cortan y se avisa cuántas faltan. */
 const ROWS_HEIGHT = 1000;
-const DAY_HEAD = 58;
-const ROW = 70;
+const DAY_HEAD = 52;
+const ROW = 64;
 
 // Archivo, la letra del sitio (subconjunto latino de Google Fonts, en woff: ImageResponse no lee woff2). Sin esto la placa sale con la
 // letra por defecto, sin negrita.
@@ -60,7 +60,7 @@ export async function GET() {
   const weekend = weekendWindow(now).days;
   const inWeekend = days.length > 0 && days.every((d) => weekend.some((w) => w.key === d.key));
   const heading = inWeekend ? "Este finde" : "Lo que sigue";
-  const range = days.length ? `${fmtDayNum(days[0].iso)}${days.length > 1 ? `–${fmtDayNum(days.at(-1)!.iso)}` : ""} ${fmtMonthShort(days.at(-1)!.iso)}` : "";
+  const range = days.length ? [`${fmtDayNum(days[0].iso)}${days.length > 1 ? `–${fmtDayNum(days.at(-1)!.iso)}` : ""}`, fmtMonthShort(days.at(-1)!.iso)] : [];
   const [regular, bold, condensed] = await fonts;
 
   return new ImageResponse(
@@ -71,7 +71,11 @@ export async function GET() {
             <div style={{ display: "flex", fontSize: 30, fontWeight: 800, color: C.blueDeep }}>Horarios · hora argentina</div>
             <div style={{ display: "flex", fontFamily: "Archivo Condensed", fontSize: 120, lineHeight: 0.9, letterSpacing: -4 }}>{heading}</div>
           </div>
-          <div style={{ display: "flex", fontFamily: "Archivo Condensed", fontSize: 56, color: C.muted, letterSpacing: -1 }}>{range}</div>
+          <div style={{ display: "flex", gap: 14, fontFamily: "Archivo Condensed", fontSize: 56, color: C.muted, letterSpacing: -1 }}>
+            {range.map((part) => (
+              <div key={part} style={{ display: "flex" }}>{part}</div>
+            ))}
+          </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
@@ -82,7 +86,7 @@ export async function GET() {
                 <div style={{ display: "flex", height: DAY_HEAD, alignItems: "flex-end", paddingBottom: 6, borderBottom: `3px solid ${C.ink}`, fontSize: 28, fontWeight: 800 }}>{r.dayLabel}</div>
               )}
               <div style={{ display: "flex", alignItems: "center", height: ROW, gap: 22, borderBottom: `2px solid ${C.line}` }}>
-                <div style={{ display: "flex", width: 132, fontFamily: "Archivo Condensed", fontSize: 50, letterSpacing: -1 }}>{r.time}</div>
+                <div style={{ display: "flex", width: 132, fontFamily: "Archivo Condensed", fontSize: 46, letterSpacing: -1 }}>{r.time}</div>
                 <div style={{ display: "flex", justifyContent: "center", width: 96, background: r.color, color: "#fff", fontSize: 24, fontWeight: 800, padding: "5px 0" }}>{r.code}</div>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 14, flex: 1, overflow: "hidden" }}>
                   <div style={{ display: "flex", fontSize: 32, fontWeight: 800, whiteSpace: "nowrap" }}>{r.who}</div>
