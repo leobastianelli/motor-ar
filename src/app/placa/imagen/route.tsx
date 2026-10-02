@@ -6,11 +6,15 @@ import { dayKey, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/fo
 
 export const revalidate = 1800;
 
-const KEY_KINDS = new Set(["clasificacion", "sprint", "carrera", "final"]);
-/** Alto útil para las filas (1350 menos márgenes, encabezado y pie). Si no entran todas, se cortan y se avisa cuántas faltan. */
-const ROWS_HEIGHT = 1000;
-const DAY_HEAD = 52;
-const ROW = 64;
+// Todo menos las series: los entrenamientos también se planifican. Las series del TC (tres en una hora) llenarían la placa.
+const KINDS = new Set(["practica", "clasificacion", "sprint", "carrera", "final"]);
+/** Alto útil para las filas (1350 menos márgenes, encabezado y pie). */
+const ROWS_HEIGHT = 1010;
+const DAY_HEAD = 46;
+/** Alto de fila: el máximo si sobra lugar; se achica hasta el mínimo para que entre el finde entero; si ni así entra, se corta y se avisa. */
+const ROW_MAX = 64;
+const ROW_MIN = 46;
+const MORE = 44;
 
 // Archivo, la letra del sitio (subconjunto latino de Google Fonts, en woff: ImageResponse no lee woff2). Sin esto la placa sale con la
 // letra por defecto, sin negrita.
@@ -24,7 +28,7 @@ const fonts = Promise.all([
 const C = { ink: "#101213", paper: "#f1f2f0", blueDeep: "#16658f", muted: "#555a5c", line: "#d9dbda" };
 
 /**
- * Placa del finde para redes (1080 × 1350): las sesiones clave de lo que viene, en hora argentina, agrupadas por día. En las
+ * Placa del finde para redes (1080 × 1350): entrenamientos, clasificaciones y carreras de lo que viene, en hora argentina, agrupadas por día. En las
  * categorías internacionales se nombra al argentino que corre; en las nacionales, la categoría.
  */
 export async function GET() {
@@ -35,7 +39,7 @@ export async function GET() {
   for (const d of getDriversAbroad()) abroad.set(d.seriesId, [...(abroad.get(d.seriesId) ?? []), d.name.split(" ").at(-1)!]);
 
   const rows = items
-    .filter((i) => KEY_KINDS.has(i.session.kind))
+    .filter((i) => KINDS.has(i.session.kind))
     .map((i) => ({
       day: dayKey(i.session.start),
       dayLabel: `${fmtDayShort(i.session.start)}`,
@@ -46,12 +50,15 @@ export async function GET() {
       time: i.session.timeKnown === false ? "a conf." : fmtTime(i.session.start),
     }));
 
-  // Cortar por alto: cada día nuevo suma su encabezado.
+  const heads = new Set(rows.map((r) => r.day)).size;
+  const ROW = Math.max(ROW_MIN, Math.min(ROW_MAX, Math.floor((ROWS_HEIGHT - heads * DAY_HEAD) / Math.max(1, rows.length))));
+  const k = ROW / ROW_MAX;
+  // Cortar por alto si ni con la fila mínima entra todo: cada día nuevo suma su encabezado, y el aviso de lo que falta, su renglón.
   const shown: typeof rows = [];
   let used = 0;
-  for (const r of rows) {
+  for (const [n, r] of rows.entries()) {
     const cost = ROW + (shown.at(-1)?.day === r.day ? 0 : DAY_HEAD);
-    if (used + cost > ROWS_HEIGHT - (rows.length > shown.length + 1 ? 50 : 0)) break;
+    if (used + cost > ROWS_HEIGHT - (n < rows.length - 1 ? MORE : 0)) break;
     shown.push(r);
     used += cost;
   }
@@ -69,7 +76,7 @@ export async function GET() {
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", borderBottom: `8px solid ${C.ink}`, paddingBottom: 18 }}>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ display: "flex", fontSize: 30, fontWeight: 800, color: C.blueDeep }}>Horarios · hora argentina</div>
-            <div style={{ display: "flex", fontFamily: "Archivo Condensed", fontSize: 120, lineHeight: 0.9, letterSpacing: -4 }}>{heading}</div>
+            <div style={{ display: "flex", fontFamily: "Archivo Condensed", fontSize: 108, lineHeight: 0.9, letterSpacing: -4 }}>{heading}</div>
           </div>
           <div style={{ display: "flex", gap: 14, fontFamily: "Archivo Condensed", fontSize: 56, color: C.muted, letterSpacing: -1 }}>
             {range.map((part) => (
@@ -83,14 +90,14 @@ export async function GET() {
           {shown.map((r, i) => (
             <div key={i} style={{ display: "flex", flexDirection: "column" }}>
               {shown[i - 1]?.day !== r.day && (
-                <div style={{ display: "flex", height: DAY_HEAD, alignItems: "flex-end", paddingBottom: 6, borderBottom: `3px solid ${C.ink}`, fontSize: 28, fontWeight: 800 }}>{r.dayLabel}</div>
+                <div style={{ display: "flex", height: DAY_HEAD, alignItems: "flex-end", paddingBottom: 5, borderBottom: `3px solid ${C.ink}`, fontSize: 26, fontWeight: 800 }}>{r.dayLabel}</div>
               )}
-              <div style={{ display: "flex", alignItems: "center", height: ROW, gap: 22, borderBottom: `2px solid ${C.line}` }}>
-                <div style={{ display: "flex", width: 132, fontFamily: "Archivo Condensed", fontSize: 46, letterSpacing: -1 }}>{r.time}</div>
-                <div style={{ display: "flex", justifyContent: "center", width: 96, background: r.color, color: "#fff", fontSize: 24, fontWeight: 800, padding: "5px 0" }}>{r.code}</div>
-                <div style={{ display: "flex", alignItems: "baseline", gap: 14, flex: 1, overflow: "hidden" }}>
-                  <div style={{ display: "flex", fontSize: 32, fontWeight: 800, whiteSpace: "nowrap" }}>{r.who}</div>
-                  <div style={{ display: "flex", fontSize: 24, color: C.muted, whiteSpace: "nowrap" }}>{r.detail}</div>
+              <div style={{ display: "flex", alignItems: "center", height: ROW, gap: 22 * k, borderBottom: `2px solid ${C.line}` }}>
+                <div style={{ display: "flex", width: 132 * k, fontFamily: "Archivo Condensed", fontSize: 46 * k, letterSpacing: -1 }}>{r.time}</div>
+                <div style={{ display: "flex", justifyContent: "center", width: 96 * k, background: r.color, color: "#fff", fontSize: 24 * k, fontWeight: 800, padding: `${5 * k}px 0` }}>{r.code}</div>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 14 * k, flex: 1, overflow: "hidden" }}>
+                  <div style={{ display: "flex", fontSize: 32 * k, fontWeight: 800, whiteSpace: "nowrap" }}>{r.who}</div>
+                  <div style={{ display: "flex", fontSize: 24 * Math.max(k, 0.85), color: C.muted, whiteSpace: "nowrap" }}>{r.detail}</div>
                 </div>
               </div>
             </div>
