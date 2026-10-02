@@ -29,7 +29,7 @@ const baseMetadata: Metadata = {
   title: { default: `${SITE_NAME} — ${SITE_TAGLINE}`, template: `%s — ${SITE_NAME}` },
   description,
   openGraph: { siteName: SITE_NAME, locale: "es_AR", type: "website", description },
-  twitter: { card: "summary_large_image" },
+  twitter: { card: "summary_large_image", site: "@SomosFierros" },
 };
 
 // La versión de los datos que sirve esta página, para depurar y para la prueba de humo. No se muestra. El layout y las páginas comparten la
@@ -64,7 +64,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
             "@context": "https://schema.org",
             "@graph": [
               { "@type": "WebSite", name: SITE_NAME, url: SITE_URL, inLanguage: "es-AR", description },
-              { "@type": "Organization", name: SITE_NAME, url: SITE_URL, founder: { "@type": "Person", name: "Leo Bastianelli", url: "https://leobastianelli.dev" } },
+              { "@type": "Organization", name: SITE_NAME, url: SITE_URL, sameAs: ["https://x.com/SomosFierros", "https://www.instagram.com/somosfierros.ar/"], founder: { "@type": "Person", name: "Leo Bastianelli", url: "https://leobastianelli.dev" } },
             ],
           }}
         />

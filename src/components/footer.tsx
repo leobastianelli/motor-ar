@@ -26,6 +26,12 @@ export function Footer({ updatedAt }: { updatedAt?: string | null }) {
         <Link href="/acerca">Acerca de</Link>
         <Link href="/terminos">Términos</Link>
         <Link href="/privacidad">Privacidad</Link>
+        <a href="https://x.com/SomosFierros" target="_blank" rel="me noreferrer">
+          X
+        </a>
+        <a href="https://www.instagram.com/somosfierros.ar/" target="_blank" rel="me noreferrer">
+          Instagram
+        </a>
       </nav>
     </footer>
   );
