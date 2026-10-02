@@ -115,6 +115,23 @@ test("carrera de una categoría argentina: lidera el campeonato sólo si la tabl
   assert.equal(freshLeader({ standings: fresh.standings, meta: { tc: { standingsAsOfRound: 0 } } }, { standings: { tc: { asOfRound: 1, rows: [{ pos: 1, driver: "Otto Fritzler", points: 50.5 }] } } }, [tc], "tc").driver, "Otto Fritzler");
 });
 
+test("series del TC: un borrador por serie, con su nombre, sin el campeonato", () => {
+  const heat = (n, start, winner) => ({
+    id: `tc-12-s${n}`, kind: "serie", name: `Serie ${n}`, start, timeKnown: true, durationMin: 15,
+    results: [row(1, winner), row(2, `Segundo ${n}`), row(3, `Tercero ${n}`)],
+  });
+  const tc = {
+    id: "tc-2026-12", seriesId: "tc", round: 12, name: "Fecha 12 · San Nicolás", circuit: { city: "San Nicolás" }, source: "ACTC (calendario)",
+    sessions: [heat(1, "2026-10-04T10:55:00-03:00", "Mariano Werner"), heat(2, "2026-10-04T11:20:00-03:00", "Julián Santero"), heat(3, "2026-10-04T11:45:00-03:00", "Agustín Canapino")],
+  };
+  const fresh = { standings: { tc: [row(1, "Mariano Werner", { points: 53 })] }, meta: { tc: { standingsAsOfRound: 11 } } };
+  const drafts = run([tc], "2026-10-04T15:20:00Z", { season: fresh });
+  assert.deepEqual(drafts.map((d) => d.key), ["sesion:tc-12-s1", "sesion:tc-12-s2", "sesion:tc-12-s3"]);
+  assert.match(drafts[0].text, /^🏁 TC · Fecha 12 · San Nicolás\. Serie 1: ganó Mariano Werner; 2\.º Segundo 1, 3\.º Tercero 1\./);
+  assert.match(drafts[2].text, /Serie 3: ganó Agustín Canapino/);
+  assert.ok(drafts.every((d) => !/campeonato/i.test(d.text)), "una serie no cambia el campeonato");
+});
+
 test("sin podio completo no hay borrador", () => {
   const sinTercero = session({ results: podium.slice(0, 2) });
   assert.equal(run([event({ sessions: [sinTercero] })], AFTER_QUALI).length, 0);
