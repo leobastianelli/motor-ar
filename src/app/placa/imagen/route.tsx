@@ -6,14 +6,14 @@ import { dayKey, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/fo
 
 export const revalidate = 1800;
 
-// Todo menos las series: los entrenamientos también se planifican. Las series del TC (tres en una hora) llenarían la placa.
-const KINDS = new Set(["practica", "clasificacion", "sprint", "carrera", "final"]);
+// Todas las sesiones. Las series de una misma fecha (en el TC, tres en una hora) van juntas en un renglón, con sus horarios.
+const KINDS = new Set(["practica", "clasificacion", "sprint", "serie", "carrera", "final"]);
 /** Alto útil para las filas (1350 menos márgenes, encabezado y pie). */
-const ROWS_HEIGHT = 1010;
-const DAY_HEAD = 46;
+const ROWS_HEIGHT = 1016;
+const DAY_HEAD = 42;
 /** Alto de fila: el máximo si sobra lugar; se achica hasta el mínimo para que entre el finde entero; si ni así entra, se corta y se avisa. */
 const ROW_MAX = 64;
-const ROW_MIN = 46;
+const ROW_MIN = 42;
 const MORE = 44;
 
 // Archivo, la letra del sitio (subconjunto latino de Google Fonts, en woff: ImageResponse no lee woff2). Sin esto la placa sale con la
@@ -28,7 +28,7 @@ const fonts = Promise.all([
 const C = { ink: "#101213", paper: "#f1f2f0", blueDeep: "#16658f", muted: "#555a5c", line: "#d9dbda" };
 
 /**
- * Placa del finde para redes (1080 × 1350): entrenamientos, clasificaciones y carreras de lo que viene, en hora argentina, agrupadas por día. En las
+ * Placa del finde para redes (1080 × 1350): todas las sesiones de lo que viene (las series de una fecha, juntas), en hora argentina, agrupadas por día. En las
  * categorías internacionales se nombra al argentino que corre; en las nacionales, la categoría.
  */
 export async function GET() {
@@ -38,17 +38,27 @@ export async function GET() {
   const abroad = new Map<string, string[]>();
   for (const d of getDriversAbroad()) abroad.set(d.seriesId, [...(abroad.get(d.seriesId) ?? []), d.name.split(" ").at(-1)!]);
 
-  const rows = items
-    .filter((i) => KINDS.has(i.session.kind))
-    .map((i) => ({
-      day: dayKey(i.session.start),
-      dayLabel: `${fmtDayShort(i.session.start)}`,
-      code: i.series.code,
-      color: i.series.color,
-      who: abroad.get(i.series.id)?.join(" y ") ?? i.series.short,
-      detail: `${i.session.name} · ${i.event.circuit.city}`,
-      time: i.session.timeKnown === false ? "a conf." : fmtTime(i.session.start),
-    }));
+  const list = items.filter((i) => KINDS.has(i.session.kind));
+  const rows = list.flatMap((i) => {
+    const time = (iso: string, known?: boolean) => (known === false ? "a conf." : fmtTime(iso));
+    let detail = `${i.session.name} · ${i.event.circuit.city}`;
+    if (i.session.kind === "serie") {
+      const heats = list.filter((o) => o.event.id === i.event.id && o.session.kind === "serie" && dayKey(o.session.start) === dayKey(i.session.start));
+      if (heats[0] !== i) return [];
+      if (heats.length > 1) detail = `Series · ${heats.map((h) => time(h.session.start, h.session.timeKnown)).join(", ").replace(/, ([^,]*)$/, " y $1")} · ${i.event.circuit.city}`;
+    }
+    return [
+      {
+        day: dayKey(i.session.start),
+        dayLabel: `${fmtDayShort(i.session.start)}`,
+        code: i.series.code,
+        color: i.series.color,
+        who: abroad.get(i.series.id)?.join(" y ") ?? i.series.short,
+        detail,
+        time: time(i.session.start, i.session.timeKnown),
+      },
+    ];
+  });
 
   const heads = new Set(rows.map((r) => r.day)).size;
   const ROW = Math.max(ROW_MIN, Math.min(ROW_MAX, Math.floor((ROWS_HEIGHT - heads * DAY_HEAD) / Math.max(1, rows.length))));
@@ -76,7 +86,7 @@ export async function GET() {
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", borderBottom: `8px solid ${C.ink}`, paddingBottom: 18 }}>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ display: "flex", fontSize: 30, fontWeight: 800, color: C.blueDeep }}>Horarios · hora argentina</div>
-            <div style={{ display: "flex", fontFamily: "Archivo Condensed", fontSize: 108, lineHeight: 0.9, letterSpacing: -4 }}>{heading}</div>
+            <div style={{ display: "flex", fontFamily: "Archivo Condensed", fontSize: 100, lineHeight: 0.9, letterSpacing: -4 }}>{heading}</div>
           </div>
           <div style={{ display: "flex", gap: 14, fontFamily: "Archivo Condensed", fontSize: 56, color: C.muted, letterSpacing: -1 }}>
             {range.map((part) => (
