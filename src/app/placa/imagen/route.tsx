@@ -1,6 +1,5 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
 import { ImageResponse } from "next/og";
+import { ogFonts } from "@/lib/og-fonts";
 import { getDriversAbroad, getNow, getSeason, weekendWindow } from "@/lib/data";
 import { dayKey, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime } from "@/lib/format";
 
@@ -15,15 +14,6 @@ const DAY_HEAD = 42;
 const ROW_MAX = 64;
 const ROW_MIN = 42;
 const MORE = 44;
-
-// Archivo, la letra del sitio (subconjunto latino de Google Fonts, en woff: ImageResponse no lee woff2). Sin esto la placa sale con la
-// letra por defecto, sin negrita.
-const FONT_DIR = join(process.cwd(), "src/app/placa/imagen/fuentes");
-const fonts = Promise.all([
-  readFile(join(FONT_DIR, "archivo-500.woff")),
-  readFile(join(FONT_DIR, "archivo-800.woff")),
-  readFile(join(FONT_DIR, "archivo-condensed-900.woff")),
-]);
 
 const C = { ink: "#101213", paper: "#f1f2f0", blueDeep: "#16658f", muted: "#555a5c", line: "#d9dbda" };
 
@@ -78,7 +68,6 @@ export async function GET() {
   const inWeekend = days.length > 0 && days.every((d) => weekend.some((w) => w.key === d.key));
   const heading = inWeekend ? "Este finde" : "Lo que sigue";
   const range = days.length ? [`${fmtDayNum(days[0].iso)}${days.length > 1 ? `–${fmtDayNum(days.at(-1)!.iso)}` : ""}`, fmtMonthShort(days.at(-1)!.iso)] : [];
-  const [regular, bold, condensed] = await fonts;
 
   return new ImageResponse(
     (
@@ -86,9 +75,9 @@ export async function GET() {
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", borderBottom: `8px solid ${C.ink}`, paddingBottom: 18 }}>
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ display: "flex", fontSize: 30, fontWeight: 800, color: C.blueDeep }}>Horarios · hora argentina</div>
-            <div style={{ display: "flex", fontFamily: "Archivo Condensed", fontSize: 100, lineHeight: 0.9, letterSpacing: -4 }}>{heading}</div>
+            <div style={{ display: "flex", fontWeight: 900, fontSize: 100, lineHeight: 0.9, letterSpacing: -4 }}>{heading}</div>
           </div>
-          <div style={{ display: "flex", gap: 14, fontFamily: "Archivo Condensed", fontSize: 56, color: C.muted, letterSpacing: -1 }}>
+          <div style={{ display: "flex", gap: 14, fontWeight: 900, fontSize: 56, color: C.muted, letterSpacing: -1 }}>
             {range.map((part) => (
               <div key={part} style={{ display: "flex" }}>{part}</div>
             ))}
@@ -103,7 +92,7 @@ export async function GET() {
                 <div style={{ display: "flex", height: DAY_HEAD, alignItems: "flex-end", paddingBottom: 5, borderBottom: `3px solid ${C.ink}`, fontSize: 26, fontWeight: 800 }}>{r.dayLabel}</div>
               )}
               <div style={{ display: "flex", alignItems: "center", height: ROW, gap: 22 * k, borderBottom: `2px solid ${C.line}` }}>
-                <div style={{ display: "flex", width: 132 * k, fontFamily: "Archivo Condensed", fontSize: 46 * k, letterSpacing: -1 }}>{r.time}</div>
+                <div style={{ display: "flex", width: 132 * k, fontWeight: 900, fontSize: 46 * k, letterSpacing: -1 }}>{r.time}</div>
                 <div style={{ display: "flex", justifyContent: "center", width: 96 * k, background: r.color, color: "#fff", fontSize: 24 * k, fontWeight: 800, padding: `${5 * k}px 0` }}>{r.code}</div>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 14 * k, flex: 1, overflow: "hidden" }}>
                   <div style={{ display: "flex", fontSize: 32 * k, fontWeight: 800, whiteSpace: "nowrap" }}>{r.who}</div>
@@ -116,7 +105,7 @@ export async function GET() {
         </div>
 
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderTop: `3px solid ${C.ink}`, paddingTop: 18 }}>
-          <div style={{ display: "flex", fontFamily: "Archivo Condensed", fontSize: 48, letterSpacing: 1 }}>FIERROS</div>
+          <div style={{ display: "flex", fontWeight: 900, fontSize: 48, letterSpacing: 1 }}>FIERROS</div>
           <div style={{ display: "flex", fontSize: 30, fontWeight: 800, color: C.blueDeep }}>somosfierros.ar/horarios</div>
         </div>
       </div>
@@ -124,11 +113,7 @@ export async function GET() {
     {
       width: 1080,
       height: 1350,
-      fonts: [
-        { name: "Archivo", data: regular, weight: 500, style: "normal" },
-        { name: "Archivo", data: bold, weight: 800, style: "normal" },
-        { name: "Archivo Condensed", data: condensed, weight: 900, style: "normal" },
-      ],
+      fonts: await ogFonts(),
     },
   );
 }
