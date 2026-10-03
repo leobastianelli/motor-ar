@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T20:49:27.795Z",
+  "generatedAt": "2026-10-03T21:03:58.423Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -93374,7 +93374,7 @@
               "number": "7",
               "driver": "Dino Beganovic",
               "team": "DAMS Lucas Oil",
-              "gap": "1:03:29.190",
+              "gap": "1:3:29.190",
               "points": 25
             },
             {
@@ -93382,7 +93382,7 @@
               "number": "15",
               "driver": "Alex Dunne",
               "team": "Rodin Motorsport",
-              "gap": "+7.320",
+              "gap": "+7.32",
               "points": 19
             },
             {
@@ -93404,9 +93404,9 @@
             {
               "pos": 5,
               "number": "20",
-              "driver": "E. Fittipaldi",
+              "driver": "Emerson Fittipaldi",
               "team": "AIX Racing",
-              "gap": "+19.630",
+              "gap": "+19.63",
               "points": 10
             },
             {
@@ -93545,8 +93545,8 @@
             }
           ],
           "resultsSource": {
-            "name": "FIA · clasificación oficial",
-            "url": "https://www.fia.com/events/formula-2-championship/season-2026/madrid/feature-race-classification"
+            "name": "FIA Formula 2 · clasificación oficial",
+            "url": "https://www.fiaformula2.com/en/racing/2026/madrid"
           }
         }
       ],
@@ -108497,7 +108497,387 @@
               "url": "https://www.solotc.com.ar/tc-san-nicolas-horarios-tv-cronograma-fecha-12-2026/",
               "start": "16:03"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Torino",
+              "gap": "1:26.047"
+            },
+            {
+              "pos": 2,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Mercedes-Benz",
+              "gap": "+0.216"
+            },
+            {
+              "pos": 3,
+              "number": "68",
+              "driver": "Julián Santero",
+              "team": "BMW",
+              "gap": "+0.232"
+            },
+            {
+              "pos": 4,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Mercedes-Benz",
+              "gap": "+0.409"
+            },
+            {
+              "pos": 5,
+              "number": "117",
+              "driver": "Matías Rossi",
+              "team": "Toyota",
+              "gap": "+0.454"
+            },
+            {
+              "pos": 6,
+              "number": "79",
+              "driver": "Facundo Chapur",
+              "team": "Torino",
+              "gap": "+0.528"
+            },
+            {
+              "pos": 7,
+              "number": "11",
+              "driver": "Mariano Werner",
+              "team": "Ford",
+              "gap": "+0.609"
+            },
+            {
+              "pos": 8,
+              "number": "14",
+              "driver": "Christian Ledesma",
+              "team": "Chevrolet",
+              "gap": "+0.622"
+            },
+            {
+              "pos": 9,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": "+0.745"
+            },
+            {
+              "pos": 10,
+              "number": "231",
+              "driver": "José Manuel Urcera",
+              "team": "Mercedes-Benz",
+              "gap": "+0.803"
+            },
+            {
+              "pos": 11,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Dodge",
+              "gap": "+0.826"
+            },
+            {
+              "pos": 12,
+              "number": "157",
+              "driver": "Juan B De Benedictis",
+              "team": "Ford",
+              "gap": "+0.844"
+            },
+            {
+              "pos": 13,
+              "number": "57",
+              "driver": "Juan Pablo Gianini",
+              "team": "Ford",
+              "gap": "+0.845"
+            },
+            {
+              "pos": 14,
+              "number": "6",
+              "driver": "Juan Martín Trucco",
+              "team": "Dodge",
+              "gap": "+0.851"
+            },
+            {
+              "pos": 15,
+              "number": "24",
+              "driver": "Luis José Di Palma",
+              "team": "Toyota",
+              "gap": "+0.972"
+            },
+            {
+              "pos": 16,
+              "number": "85",
+              "driver": "Ricardo Risatti",
+              "team": "Ford",
+              "gap": "+1.000"
+            },
+            {
+              "pos": 17,
+              "number": "101",
+              "driver": "Jonatan Castellano",
+              "team": "Dodge",
+              "gap": "+1.002"
+            },
+            {
+              "pos": 18,
+              "number": "3",
+              "driver": "Mauricio Lambiris",
+              "team": "Ford",
+              "gap": "+1.040"
+            },
+            {
+              "pos": 19,
+              "number": "27",
+              "driver": "Emiliano Spataro",
+              "team": "Ford",
+              "gap": "+1.076"
+            },
+            {
+              "pos": 20,
+              "number": "197",
+              "driver": "Marcos Quijada",
+              "team": "Chevrolet",
+              "gap": "+1.097"
+            },
+            {
+              "pos": 21,
+              "number": "95",
+              "driver": "Marcos Landa",
+              "team": "Chevrolet",
+              "gap": "+1.158"
+            },
+            {
+              "pos": 22,
+              "number": "133",
+              "driver": "Valentín Aguirre",
+              "team": "Chevrolet",
+              "gap": "+1.183"
+            },
+            {
+              "pos": 23,
+              "number": "83",
+              "driver": "Facundo Ardusso",
+              "team": "Ford",
+              "gap": "+1.214"
+            },
+            {
+              "pos": 24,
+              "number": "63",
+              "driver": "Nicolás Bonelli",
+              "team": "Ford",
+              "gap": "+1.244"
+            },
+            {
+              "pos": 25,
+              "number": "15",
+              "driver": "Juan José Ebarlín",
+              "team": "Chevrolet",
+              "gap": "+1.278"
+            },
+            {
+              "pos": 26,
+              "number": "122",
+              "driver": "Andrés Jakos",
+              "team": "Toyota",
+              "gap": "+1.286"
+            },
+            {
+              "pos": 27,
+              "number": "113",
+              "driver": "Rodrigo Lugón",
+              "team": "Ford",
+              "gap": "+1.336"
+            },
+            {
+              "pos": 28,
+              "number": "107",
+              "driver": "Tobías Martínez",
+              "team": "Chevrolet",
+              "gap": "+1.336"
+            },
+            {
+              "pos": 29,
+              "number": "29",
+              "driver": "Elio Craparo",
+              "team": "Ford",
+              "gap": "+1.377"
+            },
+            {
+              "pos": 30,
+              "number": "5",
+              "driver": "Marcelo Agrelo",
+              "team": "Torino",
+              "gap": "+1.417"
+            },
+            {
+              "pos": 31,
+              "number": "7",
+              "driver": "Santiago Mangoni",
+              "team": "Chevrolet",
+              "gap": "+1.422"
+            },
+            {
+              "pos": 32,
+              "number": "109",
+              "driver": "Nicolás Moscardini",
+              "team": "Dodge",
+              "gap": "+1.472"
+            },
+            {
+              "pos": 33,
+              "number": "140",
+              "driver": "Gaspar Chansard",
+              "team": "Toyota",
+              "gap": "+1.498"
+            },
+            {
+              "pos": 34,
+              "number": "53",
+              "driver": "Juan Tomás Catalán Magni",
+              "team": "Chevrolet",
+              "gap": "+1.507"
+            },
+            {
+              "pos": 35,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": "+1.508"
+            },
+            {
+              "pos": 36,
+              "number": "112",
+              "driver": "Lucas Valle",
+              "team": "Chevrolet",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 37,
+              "number": "114",
+              "driver": "Gastón Ferrante",
+              "team": "Ford",
+              "gap": "+1.640"
+            },
+            {
+              "pos": 38,
+              "number": "116",
+              "driver": "Kevin Candela",
+              "team": "BMW",
+              "gap": "+1.667"
+            },
+            {
+              "pos": 39,
+              "number": "32",
+              "driver": "Matías Canapino",
+              "team": "Torino",
+              "gap": "+1.736"
+            },
+            {
+              "pos": 40,
+              "number": "141",
+              "driver": "Jorge Barrio",
+              "team": "Chevrolet",
+              "gap": "+1.744"
+            },
+            {
+              "pos": 41,
+              "number": "4",
+              "driver": "Germán Todino",
+              "team": "Ford",
+              "gap": "+1.754"
+            },
+            {
+              "pos": 42,
+              "number": "154",
+              "driver": "Joaquín Ochoa",
+              "team": "Toyota",
+              "gap": "+1.799"
+            },
+            {
+              "pos": 43,
+              "number": "88",
+              "driver": "Nicolás Trosset",
+              "team": "Ford",
+              "gap": "+1.815"
+            },
+            {
+              "pos": 44,
+              "number": "193",
+              "driver": "Marcos Castro",
+              "team": "Torino",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 45,
+              "number": "137",
+              "driver": "Jeremías Scialchi",
+              "team": "Ford",
+              "gap": "+1.999"
+            },
+            {
+              "pos": 46,
+              "number": "37",
+              "driver": "Norberto Fontana",
+              "team": "Chevrolet",
+              "gap": "+2.078"
+            },
+            {
+              "pos": 47,
+              "number": "77",
+              "driver": "Augusto Carinelli",
+              "team": "Ford",
+              "gap": "+2.141"
+            },
+            {
+              "pos": 48,
+              "number": "172",
+              "driver": "Santiago Alvarez",
+              "team": "Chevrolet",
+              "gap": "+2.161"
+            },
+            {
+              "pos": 49,
+              "number": "134",
+              "driver": "Matias Jalaf",
+              "team": "Ford",
+              "gap": "+2.258"
+            },
+            {
+              "pos": 50,
+              "number": "115",
+              "driver": "Diego De Carlo",
+              "team": "Chevrolet",
+              "gap": "+2.469"
+            },
+            {
+              "pos": 51,
+              "number": "123",
+              "driver": "Martín Vázquez",
+              "team": "Dodge",
+              "gap": "+2.479"
+            },
+            {
+              "pos": 52,
+              "number": "87",
+              "driver": "Nicolas Impiombato",
+              "team": "Torino",
+              "gap": "+2.806"
+            },
+            {
+              "pos": 53,
+              "number": "71",
+              "driver": "Sebastian Abella",
+              "team": "Toyota",
+              "gap": "+3.103"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/979/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tc-2026-12-serie-serie1",
@@ -113730,7 +114110,7 @@
     },
     "timing": {
       "documents": 779,
-      "pagesFetched": 57,
+      "pagesFetched": 45,
       "eventsWithResults": 58
     },
     "openf1": {
@@ -113775,7 +114155,6 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/13/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior"
   ]
 }
