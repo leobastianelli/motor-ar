@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T15:14:56.535Z",
+  "generatedAt": "2026-10-03T05:45:33.079Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -93850,7 +93850,7 @@
               "number": "7",
               "driver": "Dino Beganovic",
               "team": "DAMS Lucas Oil",
-              "gap": "1:3:29.190",
+              "gap": "1:03:29.190",
               "points": 25
             },
             {
@@ -93858,7 +93858,7 @@
               "number": "15",
               "driver": "Alex Dunne",
               "team": "Rodin Motorsport",
-              "gap": "+7.32",
+              "gap": "+7.320",
               "points": 19
             },
             {
@@ -93880,9 +93880,9 @@
             {
               "pos": 5,
               "number": "20",
-              "driver": "Emerson Fittipaldi",
+              "driver": "E. Fittipaldi",
               "team": "AIX Racing",
-              "gap": "+19.63",
+              "gap": "+19.630",
               "points": 10
             },
             {
@@ -94021,8 +94021,8 @@
             }
           ],
           "resultsSource": {
-            "name": "FIA Formula 2 · clasificación oficial",
-            "url": "https://www.fiaformula2.com/en/racing/2026/madrid"
+            "name": "FIA · clasificación oficial",
+            "url": "https://www.fia.com/events/formula-2-championship/season-2026/madrid/feature-race-classification"
           }
         }
       ],
@@ -105873,7 +105873,7 @@
       "round": 8,
       "name": "Fecha 8 · San Juan",
       "circuit": {
-        "name": "Circuito San Juan Villicum",
+        "name": "Autódromo El Zonda Eduardo Copello",
         "city": "San Juan",
         "country": "Argentina",
         "flag": "AR",
@@ -109847,7 +109847,7 @@
         "pos": 3,
         "driver": "Faustino Cifre",
         "team": "",
-        "points": 279.5,
+        "points": 289.5,
         "wins": 1
       },
       {
@@ -112129,7 +112129,7 @@
           "raceDay": "2026-09-27",
           "round": 8,
           "city": "San Juan",
-          "circuit": "Circuito San Juan Villicum",
+          "circuit": "Autódromo El Zonda Eduardo Copello",
           "province": "San Juan",
           "pole": "Emiliano Stang",
           "sources": [
@@ -112203,9 +112203,11 @@
       "sessionsWithResults": 42
     },
     "f1Official": {
-      "requests": 0,
+      "requests": 1,
       "sessionsWithResults": 0,
-      "errors": []
+      "errors": [
+        "GP de Baréin (en Malasia) · Práctica 3: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -112238,5 +112240,9 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de Baréin (en Malasia) · Práctica 3: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
+    "YouTube F1: No se pudo descargar https://www.youtube.com/feeds/videos.xml?channel_id=UCB_qr75-ydFVKSF9Dmo6izg: HTTP 404 (text/html; charset=UTF-8) (se conservan los videos anteriores)"
+  ]
 }
