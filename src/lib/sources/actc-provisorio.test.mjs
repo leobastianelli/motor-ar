@@ -315,3 +315,20 @@ test("actcTiming: si la página oficial trae sólo algunas filas, no se muestra 
   assert.ok(!final.results?.length || hasPodium(final.results), "nunca queda una tabla sin podio");
   assert.ok(!final.results?.some((r) => r.driver === "Piloto 8"), "no se conserva la tabla rota guardada");
 });
+
+test("clasificación del TC (03/10/2026): dos vueltas incompletas con tiempo imposible no tiran abajo toda la planilla", () => {
+  const f = (pos, number, name, best, complete = true) => ({ pos, number, name, best, laps: 5, sectors: true, complete });
+  const rows = [
+    f(1, "86", "FAIN IGNACIO", 86.047), f(2, "256", "FRITZLER OTTO", 86.263), f(3, "68", "SANTERO JULIAN", 86.279),
+    f(35, "119", "PALAZZO HERNAN", 87.555), f(36, "112", "VALLE LUCAS", 67.863, false), f(37, "114", "FERRANTE GASTON", 87.687),
+    f(44, "193", "CASTRO MARCOS", 70.974, false), f(45, "137", "SCIALCHI JEREMIAS", 88.046),
+  ];
+  assert.deepEqual(provisionalProblems(rows, "clasificacion"), []);
+  const res = planillaResults(rows, new Map(), "clasificacion");
+  assert.deepEqual(res.slice(0, 3).map((r) => r.gap), ["1:26.047", "+0.216", "+0.232"]);
+  assert.equal(res.find((r) => r.number === "112").gap, "");
+  assert.equal(res.find((r) => r.number === "112").status, "Sin tiempo");
+  assert.equal(res.find((r) => r.number === "114").gap, "+1.640");
+  // Si la vuelta incompleta está en el podio, se rechaza: el ganador no sería confiable.
+  assert.deepEqual(provisionalProblems([f(1, "1", "A", 60, false), ...rows.slice(1)], "clasificacion").includes("el podio trae una vuelta incompleta"), true);
+});
