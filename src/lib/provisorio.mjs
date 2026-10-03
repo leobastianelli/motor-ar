@@ -34,6 +34,18 @@ export function resultsStatus(session, now) {
 
 const classified = (r) => !r.positionText || /^\d+$/.test(r.positionText);
 
+/**
+ * ¿La tabla trae el podio? A veces la página del portal carga sólo algunas filas (TC Pista, clasificación del 03/10/2026: puestos 8, 16, 18 y 19).
+ * Sin el 1.º (y, con 3 filas o más, el 2.º y el 3.º) no es un resultado: ni se muestra como oficial ni alcanza para un borrador.
+ */
+export const hasPodium = (results) => {
+  const pos = new Set((results ?? []).filter(classified).map((r) => r.pos));
+  return pos.has(1) && ((results ?? []).length < 3 || (pos.has(2) && pos.has(3)));
+};
+
+/** Resultados de la ACTC guardados sin podio: no valen, y no deben impedir que entre otro documento (el provisorio, o el oficial bien cargado). */
+export const brokenActcResults = (session) => Boolean(session?.results?.length) && String(session.resultsSource?.name ?? "").startsWith("ACTC") && !hasPodium(session.results);
+
 /** Podio (hasta 3) de una sesión con resultados, tal como se mostró: lo que hace falta para decir después qué cambió. */
 export function podiumSnapshot(session) {
   const podium = (session.results ?? [])
@@ -50,7 +62,7 @@ export function podiumSnapshot(session) {
  * Sin `previous` (o sin resultados), vale `next`.
  */
 export function reconcileSession(next, previous) {
-  if (!previous?.results?.length) return next;
+  if (!previous?.results?.length || brokenActcResults(previous)) return next;
   if (!next?.results?.length) return previous;
   const prevProvisional = isProvisional(previous);
   if (isProvisional(next)) {

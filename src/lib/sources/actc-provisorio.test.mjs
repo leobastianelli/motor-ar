@@ -270,3 +270,48 @@ test("planillaResults de clasificación: mejor vuelta del líder y diferencia de
   assert.deepEqual(res.map((r) => r.gap), ["1:01.234", "+0.266", ""]);
   assert.equal(res[2].status, "Sin tiempo");
 });
+
+// ─── Página oficial que carga sólo algunas filas (TC Pista, clasificación del 03/10/2026: puestos 8, 16, 18 y 19) ──────
+
+import { brokenActcResults, hasPodium, reconcileSession } from "../provisorio.mjs";
+
+const filas = (...pos) => pos.map((p) => ({ pos: p, number: String(p), driver: `Piloto ${p}`, team: "", gap: "" }));
+
+test("hasPodium: sin el 1.º, 2.º y 3.º no es un resultado", () => {
+  assert.equal(hasPodium(filas(8, 16, 18, 19)), false);
+  assert.equal(hasPodium(filas(1, 2, 3, 4)), true);
+  assert.equal(hasPodium(filas(1, 2)), true, "una sesión de 2 autos sólo necesita el 1.º");
+  assert.equal(hasPodium(filas(1, 3, 4)), false);
+  assert.equal(hasPodium([]), false);
+});
+
+test("un oficial de la ACTC sin podio guardado no bloquea ni al provisorio ni al oficial bien cargado", () => {
+  const roto = { results: filas(8, 16, 18, 19), resultsSource: { name: TIMING_SOURCE, url: "u980" } };
+  const prov = { results: filas(1, 2, 3, 4, 5), resultsSource: { name: TIMING_SOURCE, url: "u981", status: "provisional" } };
+  assert.equal(brokenActcResults(roto), true);
+  assert.equal(reconcileSession(prov, roto), prov);
+  // Un oficial completo guardado sigue ganándole a un provisorio.
+  const bueno = { results: filas(1, 2, 3, 4, 5), resultsSource: { name: TIMING_SOURCE, url: "u980" } };
+  assert.equal(reconcileSession(prov, bueno), bueno);
+});
+
+test("actcTiming: si la página oficial trae sólo algunas filas, no se muestra como oficial y se pisa lo guardado", async () => {
+  const docs = parseListing(LISTING).filter((d) => d.seriesId === "tc-pick-up" && d.day === "2026-09-27");
+  const rotas = { 963: "oficial-final-tcpk-2026-09-27.html" };
+  // La página oficial se recorta a las filas 8 en adelante: sin podio.
+  const html = fx(rotas[963]);
+  const [head, ...rows] = html.split('<tr class="driver-row"');
+  const recortada = head + rows.slice(7).map((r) => '<tr class="driver-row"' + r).join("");
+  const pages = { ...PAGES, 963: "recortada.html" };
+  const io2 = { ...io(LISTING, pages), bytes: async (url) => {
+    const id = url.match(/\/resultados\/(\d+)\/ver/)?.[1];
+    return Buffer.from(id === "963" ? recortada : fx(PAGES[id]));
+  } };
+  void docs;
+  const event = evento("tc-pick-up", [["Final", "final"]]);
+  const prev = { ...event, sessions: [{ ...event.sessions[0], results: filas(8, 16, 18, 19), resultsSource: { name: TIMING_SOURCE, url: "u963" } }] };
+  const result = await actcTiming(io2, [event], { events: [prev] }, OPTS);
+  const final = result.events[0].sessions.find((s) => s.name === "Final");
+  assert.ok(!final.results?.length || hasPodium(final.results), "nunca queda una tabla sin podio");
+  assert.ok(!final.results?.some((r) => r.driver === "Piloto 8"), "no se conserva la tabla rota guardada");
+});

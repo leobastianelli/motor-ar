@@ -3,7 +3,7 @@
 // El listado agrupa por categoría y fecha; cada sesión tiene una página con la tabla de pilotos.
 
 import { belongsToEvent } from "./plausible.mjs";
-import { PROVISIONAL, describeOfficialChange, isProvisional, penaltiesFrom, reconcileSession } from "../provisorio.mjs";
+import { PROVISIONAL, brokenActcResults, describeOfficialChange, hasPodium, isProvisional, penaltiesFrom, reconcileSession } from "../provisorio.mjs";
 
 const BASE = "https://tiempos.actc.org.ar";
 const TAB_SERIES = { TC: "tc", TCP: "tc-pista", TCM: "tc-mouras", TCPM: "tc-pista-mouras", TCPK: "tc-pick-up", TCPPK: "tc-pista-pick-up" };
@@ -371,7 +371,7 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
       const t = Date.parse(`${d.day}T12:00:00-03:00`);
       return d.seriesId === event.seriesId && t <= end && t >= end - 3 * DAY;
     });
-    const stored = before.get(event.id)?.sessions.filter((s) => fromActc(s) && belongsToEvent(event, s)) ?? [];
+    const stored = before.get(event.id)?.sessions.filter((s) => fromActc(s) && !brokenActcResults(s) && belongsToEvent(event, s)) ?? [];
     const recent = now - end < windowDays * DAY;
     if (!docs.length || (!recent && stored.length)) {
       out.push(stored.length ? mergeTiming(event, stored) : event);
@@ -399,7 +399,8 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
             }
           } else if (!partial) {
             const results = parseResult(html, session.kind, known);
-            if (results.length) official = { doc, results, penalties: penaltiesFrom(observationLines(html)) };
+            // Una página que carga sólo algunas filas (sin podio) no es el oficial: se sigue con el siguiente documento (la planilla, si hay).
+            if (results.length && hasPodium(results)) official = { doc, results, penalties: penaltiesFrom(observationLines(html)) };
           }
         } catch {
           // Una página caída no frena al resto.
