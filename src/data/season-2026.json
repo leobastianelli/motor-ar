@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T15:58:50.775Z",
+  "generatedAt": "2026-10-03T17:23:59.601Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -108005,14 +108005,6 @@
             },
             {
               "pos": 23,
-              "number": "51",
-              "class": "Gold Cup",
-              "driver": "Tommaso Mosca / Matias Zagazeta",
-              "team": "AF Corse",
-              "gap": "+36.486"
-            },
-            {
-              "pos": 24,
               "number": "52",
               "class": "Silver Cup",
               "driver": "Jef Machiels / Gilles Stadsbader",
@@ -108020,7 +108012,7 @@
               "gap": "+37.508"
             },
             {
-              "pos": 25,
+              "pos": 24,
               "number": "58",
               "class": "Gold Cup",
               "driver": "Thomas Fleming / Louis Prette",
@@ -108028,7 +108020,7 @@
               "gap": "+37.839"
             },
             {
-              "pos": 26,
+              "pos": 25,
               "number": "89",
               "class": "Silver Cup",
               "driver": "Nicolas Baert / Gustav Bergström",
@@ -108036,7 +108028,7 @@
               "gap": "+38.235"
             },
             {
-              "pos": 27,
+              "pos": 26,
               "number": "34",
               "class": "Silver Cup",
               "driver": "Jamie Day / Mateo Villagomez",
@@ -108044,7 +108036,7 @@
               "gap": "+38.928"
             },
             {
-              "pos": 28,
+              "pos": 27,
               "number": "54",
               "class": "Silver Cup",
               "driver": "Mark Kastelic / Tanart Sathienthirakul",
@@ -108052,7 +108044,7 @@
               "gap": "+39.493"
             },
             {
-              "pos": 29,
+              "pos": 28,
               "number": "71",
               "class": "Silver Cup",
               "driver": "Felix Hirsiger / Carl Bennett",
@@ -108060,7 +108052,23 @@
               "gap": "+43.321"
             },
             {
+              "pos": 29,
+              "number": "21",
+              "class": "Silver Cup",
+              "driver": "Oliver Söderström / Arthur Dorison",
+              "team": "Comtoyou Racing",
+              "gap": "+44.705"
+            },
+            {
               "pos": 30,
+              "number": "51",
+              "class": "Gold Cup",
+              "driver": "Tommaso Mosca / Matias Zagazeta",
+              "team": "AF Corse",
+              "gap": "+46.486"
+            },
+            {
+              "pos": 31,
               "number": "55",
               "class": "Bronze Cup",
               "driver": "Loris Cabirou / Dmitry Gvazava",
@@ -108068,7 +108076,7 @@
               "gap": "+50.893"
             },
             {
-              "pos": 31,
+              "pos": 32,
               "number": "12",
               "class": "Bronze Cup",
               "driver": "Fabian Schiller / Gabriel Rindone",
@@ -108076,15 +108084,15 @@
               "gap": "+57.322"
             },
             {
-              "pos": 32,
+              "pos": 33,
               "number": "30",
               "class": "Silver Cup",
               "driver": "Ignacio Montenegro / Matisse Lismont",
               "team": "Team WRT",
-              "gap": "+58.724"
+              "gap": "+1:03.724"
             },
             {
-              "pos": 33,
+              "pos": 34,
               "number": "6",
               "class": "Silver Cup",
               "driver": "Aurelien Panis / Anthony Bartone",
@@ -108092,7 +108100,7 @@
               "gap": "+1:04.004"
             },
             {
-              "pos": 34,
+              "pos": 35,
               "number": "222",
               "class": "Bronze Cup",
               "driver": "Kiern Jewiss / Charles Dawson",
@@ -108100,15 +108108,15 @@
               "gap": "+1:09.119"
             },
             {
-              "pos": 35,
-              "number": "88",
+              "pos": 36,
+              "number": "11",
               "class": "Bronze Cup",
-              "driver": "Sebastian Øgaard / Carrie Schreiner",
-              "team": "Tresor Attempto Racing",
-              "gap": "+1:18.395"
+              "driver": "Felice Jelmini / Marcelo Tomasoni",
+              "team": "Comtoyou Racing",
+              "gap": "+1:20.640"
             },
             {
-              "pos": 36,
+              "pos": 37,
               "number": "27",
               "class": "Bronze Cup",
               "driver": "David Fumanelli / Marco Pulcini",
@@ -108116,39 +108124,35 @@
               "gap": "+1:24.450"
             },
             {
-              "pos": 37,
-              "number": "11",
-              "class": "Bronze Cup",
-              "driver": "Felice Jelmini / Marcelo Tomasoni",
-              "team": "Comtoyou Racing",
-              "gap": "+1 vuelta"
-            },
-            {
               "pos": 38,
-              "number": "21",
-              "class": "Silver Cup",
-              "driver": "Oliver Söderström / Arthur Dorison",
-              "team": "Comtoyou Racing",
-              "gap": "+2 vueltas"
+              "number": "88",
+              "class": "Bronze Cup",
+              "driver": "Sebastian Øgaard / Carrie Schreiner",
+              "team": "Tresor Attempto Racing",
+              "gap": "+1:28.395"
             },
             {
-              "pos": 39,
+              "pos": 77,
+              "positionText": "NC",
+              "status": "No clasificado",
               "number": "35",
               "class": "Silver Cup",
               "driver": "Gaspard Simon / Maxime Robin",
               "team": "Walkenhorst Motorsport",
-              "gap": "+8 vueltas"
+              "gap": ""
             },
             {
-              "pos": 40,
+              "pos": 78,
+              "positionText": "NC",
+              "status": "No clasificado",
               "number": "69",
               "class": "Pro Cup",
               "driver": "Thierry Vermeulen / Ben Green",
               "team": "Emil Frey Racing",
-              "gap": "+9 vueltas"
+              "gap": ""
             },
             {
-              "pos": 81,
+              "pos": 79,
               "positionText": "NC",
               "status": "No clasificado",
               "number": "9",
@@ -108158,7 +108162,7 @@
               "gap": ""
             },
             {
-              "pos": 82,
+              "pos": 80,
               "positionText": "NC",
               "status": "No clasificado",
               "number": "14",
@@ -108168,7 +108172,7 @@
               "gap": ""
             },
             {
-              "pos": 83,
+              "pos": 81,
               "positionText": "NC",
               "status": "No clasificado",
               "number": "50",
@@ -108178,7 +108182,7 @@
               "gap": ""
             },
             {
-              "pos": 84,
+              "pos": 82,
               "positionText": "NC",
               "status": "No clasificado",
               "number": "66",
@@ -108949,7 +108953,146 @@
               "url": "https://www.solotc.com.ar/tc-san-nicolas-horarios-tv-cronograma-fecha-12-2026/",
               "start": "13:05"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira",
+              "team": "Ford",
+              "gap": "1:27.469"
+            },
+            {
+              "pos": 2,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": "+0.084"
+            },
+            {
+              "pos": 3,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": "+0.148"
+            },
+            {
+              "pos": 4,
+              "number": "53",
+              "driver": "Eugenio Provens",
+              "team": "Dodge",
+              "gap": "+0.201"
+            },
+            {
+              "pos": 5,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+0.213"
+            },
+            {
+              "pos": 6,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Ford",
+              "gap": "+0.390"
+            },
+            {
+              "pos": 7,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+0.512"
+            },
+            {
+              "pos": 8,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": "+0.607"
+            },
+            {
+              "pos": 9,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "+0.889"
+            },
+            {
+              "pos": 10,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+1.057"
+            },
+            {
+              "pos": 11,
+              "number": "168",
+              "driver": "Juan Sebastian Gallo",
+              "team": "Ford",
+              "gap": "+1.069"
+            },
+            {
+              "pos": 12,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": "+1.287"
+            },
+            {
+              "pos": 13,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": "+1.368"
+            },
+            {
+              "pos": 14,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Chevrolet",
+              "gap": "+2.273"
+            },
+            {
+              "pos": 15,
+              "number": "69",
+              "driver": "Mion Eddy",
+              "team": "Toyota",
+              "gap": "+2.460"
+            },
+            {
+              "pos": 16,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Ford",
+              "gap": "+2.705"
+            },
+            {
+              "pos": 17,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "+3.470"
+            },
+            {
+              "pos": 18,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Toyota",
+              "gap": "+3.591"
+            },
+            {
+              "pos": 19,
+              "number": "32",
+              "driver": "Juan Antonio Sandin",
+              "team": "Toyota",
+              "gap": "+4.505"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/977/ver"
+          }
         },
         {
           "id": "tcp-2026-12-clasificacion-clasificacin",
@@ -113797,8 +113940,8 @@
       "eventsWithTimes": 32
     },
     "timing": {
-      "documents": 773,
-      "pagesFetched": 36,
+      "documents": 775,
+      "pagesFetched": 37,
       "eventsWithResults": 58
     },
     "openf1": {
@@ -113842,5 +113985,7 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior"
+  ]
 }

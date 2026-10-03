@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T15:58:51.609Z",
+  "generatedAt": "2026-10-03T17:24:00.369Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -335,7 +335,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "bautista roqueta",
@@ -382,7 +382,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "benjamin ochoa",
@@ -402,7 +402,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "bernardo llaver",
@@ -996,7 +996,7 @@
         "tc-pista": "Dodge"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "ever franetovich",
@@ -1254,7 +1254,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "federico luques",
@@ -1294,7 +1294,7 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "felipe martini",
@@ -1485,7 +1485,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "de gabriel leon ponce",
@@ -1723,7 +1723,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "hernan palazzo",
@@ -2274,7 +2274,7 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "b benedictis de juan",
@@ -2378,7 +2378,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "conde jose juan",
@@ -2612,7 +2612,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-04-18",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "juan tartaglino",
@@ -3081,7 +3081,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "agrelo marcelo",
@@ -3797,7 +3797,7 @@
         "tc-pista-pick-up": "Foton"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "nico varrone",
@@ -3904,7 +3904,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "moscardini nicolas",
@@ -4294,7 +4294,7 @@
         "tc-pista-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "mangoni santiago",
@@ -4591,7 +4591,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "ricciardi thomas",
