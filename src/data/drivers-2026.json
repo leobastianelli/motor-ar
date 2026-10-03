@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T21:19:32.428Z",
+  "generatedAt": "2026-10-03T21:34:31.640Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -255,9 +255,7 @@
       ],
       "slug": "andres-jakos",
       "name": "Andrés Jakos",
-      "aliases": [
-        "Andres Jakos Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tc",
         "tc-pick-up"
