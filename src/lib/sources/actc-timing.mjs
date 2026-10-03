@@ -273,7 +273,7 @@ export function parsePlanilla(html) {
     const name = (cells[2] || title).replace(/\s*-\s*\*?\w+\s*$/, "");
     const laps = Math.max(0, ...[...chunk.matchAll(/<td>V(\d+)<\/td>/g)].map((m) => Number(m[1])));
     const pos = Number.parseInt(cells[0], 10);
-    rows.push({ pos: Number.isFinite(pos) ? pos : rows.length + 1, number: cells[1], name, best: bestSeconds(cells[3]), laps, sectors: cells.slice(5, 10).some((c) => TIME.test(c)) });
+    rows.push({ pos: Number.isFinite(pos) ? pos : rows.length + 1, number: cells[1], name, best: bestSeconds(cells[3]), laps, sectors: cells.slice(5, 10).some((c) => TIME.test(c)), complete: cells.slice(5, 10).every((c) => TIME.test(c)) });
   }
   return rows;
 }
@@ -289,8 +289,11 @@ export function provisionalProblems(rows, kind = "final") {
   if (rows.length < MIN_PROVISIONAL_ROWS) problems.push("pocas filas");
   if (kind === "clasificacion") {
     // En la clasificación se ordena por mejor vuelta: es lo esperado. Lo que no vale es un líder sin tiempo o una lista desordenada.
+    // Una vuelta incompleta (faltan sectores) trae un tiempo imposible, más rápido que la pole (TC, 03/10/2026: 1:07.863 en la fila 36): esas filas
+    // no cuentan para el orden, pero el podio sí tiene que ser de vueltas completas.
     if (rows.length && rows[0].best === null) problems.push("el líder no trae mejor vuelta");
-    const times = rows.map((r) => r.best).filter((b) => b !== null);
+    if (rows.slice(0, 3).some((r) => r.complete === false)) problems.push("el podio trae una vuelta incompleta");
+    const times = rows.filter((r) => r.best !== null && r.complete !== false).map((r) => r.best);
     if (!times.every((b, i) => i === 0 || b >= times[i - 1])) problems.push("no está ordenada por mejor vuelta");
     return problems;
   }
@@ -308,14 +311,15 @@ export function planillaResults(rows, known, kind = "final") {
     const behind = lead - r.laps;
     let gap = i > 0 && lead > 0 && behind > 0 ? `+${behind} ${behind === 1 ? "vuelta" : "vueltas"}` : "";
     // Clasificación: como en el PDF, el líder lleva su mejor vuelta y el resto la diferencia contra ella.
-    if (quali) gap = r.best === null ? "" : i === 0 ? clock(r.best) : `+${(r.best - rows[0].best).toFixed(3)}`;
+    const sinTiempo = quali && (r.best === null || r.complete === false);
+    if (quali) gap = sinTiempo ? "" : i === 0 ? clock(r.best) : `+${(r.best - rows[0].best).toFixed(3)}`;
     return {
       pos: r.pos,
       number: r.number,
       driver: displayName(r.name.split(/[\s,]+/).filter((w) => w && !NOISE.has(fold(w).replace(/[^a-z0-9]/g, ""))), known),
       team: "",
       gap,
-      ...(quali && r.best === null ? { status: "Sin tiempo" } : {}),
+      ...(sinTiempo ? { status: "Sin tiempo" } : {}),
     };
   });
 }
