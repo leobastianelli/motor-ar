@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T19:14:21.801Z",
+  "generatedAt": "2026-10-03T20:05:24.354Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -109108,7 +109108,42 @@
               "url": "https://www.solotc.com.ar/tc-san-nicolas-horarios-tv-cronograma-fecha-12-2026/",
               "start": "15:24"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 8,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Ford",
+              "gap": "1:28.404"
+            },
+            {
+              "pos": 16,
+              "number": "69",
+              "driver": "Mion Eddy",
+              "team": "Toyota",
+              "gap": "+1.411"
+            },
+            {
+              "pos": 18,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Chevrolet",
+              "gap": "+1.587"
+            },
+            {
+              "pos": 19,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Toyota",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/980/ver"
+          }
         },
         {
           "id": "tcp-2026-12-serie-serie1",
@@ -113940,8 +113975,8 @@
       "eventsWithTimes": 32
     },
     "timing": {
-      "documents": 776,
-      "pagesFetched": 37,
+      "documents": 779,
+      "pagesFetched": 38,
       "eventsWithResults": 58
     },
     "openf1": {
