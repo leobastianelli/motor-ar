@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T17:24:00.369Z",
+  "generatedAt": "2026-10-03T20:49:28.222Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -1184,7 +1184,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-05-30",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "facundo luduena",
@@ -3018,7 +3018,7 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-09-13"
     },
     {
       "key": "catelli luis",
@@ -4182,7 +4182,7 @@
         "tc-pista": "Dodge"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-08-02"
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "ricardo risatti",
