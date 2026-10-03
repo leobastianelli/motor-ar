@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T14:07:32.470Z",
+  "generatedAt": "2026-10-03T15:08:46.471Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -180,7 +180,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "alfonso domenech",
@@ -3713,7 +3713,7 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-04-18",
-      "lastSeen": "2026-04-19"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "cordone nahuel",
@@ -4271,7 +4271,7 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-03"
     },
     {
       "key": "biagi santiago",
