@@ -1,5 +1,5 @@
 import { belongsToEvent } from "./plausible.mjs";
-import { isProvisional, reconcileSession } from "../provisorio.mjs";
+import { brokenActcResults, isProvisional, reconcileSession } from "../provisorio.mjs";
 
 // Protección contra pérdida de datos: una fuente que hoy responde vacía, a medias o con otro HTML no puede borrar lo que ya teníamos.
 // Se aplica a cada categoría, no sólo a una: lo que estaba en la versión anterior de la temporada nunca desaparece por un mal día de una fuente.
@@ -28,7 +28,7 @@ export function keepSessionData(event, old) {
   const byKey = new Map(event.sessions.map((s) => [sessionKey(s), s]));
   const sessions = event.sessions.map((s) => ({ ...s }));
   for (const before of old.sessions ?? []) {
-    if (!before.results?.length) continue;
+    if (!before.results?.length || brokenActcResults(before)) continue;
     // Si el id del evento cambió de significado, los resultados de otra fecha no se le pegan.
     if (!belongsToEvent(event, before)) continue;
     const now = byId.get(before.id) ?? byKey.get(sessionKey(before));
