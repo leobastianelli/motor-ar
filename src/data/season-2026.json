@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T20:35:20.866Z",
+  "generatedAt": "2026-10-03T20:40:08.683Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -114021,6 +114021,7 @@
     }
   },
   "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior"
   ]
 }
