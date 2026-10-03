@@ -236,3 +236,37 @@ test("guard: un oficial nuevo sí reemplaza al provisorio guardado (y uno oficia
   assert.equal(restored, 0);
   assert.equal(event.sessions[0].resultsSource.url, "u963");
 });
+
+// ─── Clasificación: la planilla "CLASIFICACION PARCIALES" se muestra primero y el PDF la reemplaza ──────────────────────
+
+const qrow = (pos, number, name, best, laps = 5) => ({ pos, number, name, best, laps, sectors: true });
+
+test("chooseDocs con provisional: la planilla 'CLASIFICACION PARCIALES' entra como última opción; el PDF oficial gana", () => {
+  const planilla = { id: 20, seriesId: "tc", title: "CLASIFICACION PARCIALES", day: "2026-10-03", url: "u20", format: "xlsx" };
+  const pdf = { id: 19, seriesId: "tc", title: "CLASIFICACION", day: "2026-10-03", url: "u19", format: "pdf" };
+  assert.equal(chooseDocs([planilla]).size, 0, "modo clásico: sin cambios");
+  const solo = chooseDocs([planilla], { provisional: true }).get("Clasificación");
+  assert.equal(solo.doc.id, 20);
+  assert.equal(solo.planilla, true);
+  assert.equal(chooseDocs([planilla, pdf], { provisional: true }).get("Clasificación").doc.id, 19);
+  // Las prácticas siguen sin planilla provisoria.
+  const practica = { id: 21, seriesId: "tc", title: "2DO ENTRENAMIENTO PARCIALES", day: "2026-10-03", url: "u21", format: "xlsx" };
+  assert.equal(chooseDocs([practica], { provisional: true }).size, 0);
+});
+
+test("clasificación provisoria: ordenada por mejor vuelta es lo normal; sin líder con tiempo o desordenada se rechaza", () => {
+  const ok = [qrow(1, "1", "CANAPINO AGUSTIN", 61.234), qrow(2, "3", "WERNER MATIAS", 61.5), qrow(3, "7", "MANGONI FACUNDO", 61.9)];
+  assert.deepEqual(provisionalProblems(ok, "clasificacion"), []);
+  assert.deepEqual(provisionalProblems([ok[0], ok[2], ok[1]], "clasificacion"), ["no está ordenada por mejor vuelta"]);
+  assert.deepEqual(provisionalProblems([{ ...ok[0], best: null }, ok[1], ok[2]], "clasificacion"), ["el líder no trae mejor vuelta"]);
+  assert.deepEqual(provisionalProblems(ok.slice(0, 2), "clasificacion"), ["pocas filas"]);
+  // Las carreras siguen rechazando lo ordenado por mejor vuelta.
+  assert.deepEqual(provisionalProblems([...ok, qrow(4, "9", "X", 62)], "final"), ["ordenada por mejor vuelta"]);
+});
+
+test("planillaResults de clasificación: mejor vuelta del líder y diferencia de los demás, como el PDF", () => {
+  const rows = [qrow(1, "1", "CANAPINO AGUSTIN", 61.234), qrow(2, "3", "WERNER MATIAS", 61.5), { ...qrow(3, "7", "MANGONI FACUNDO", null), laps: 0 }];
+  const res = planillaResults(rows, new Map(), "clasificacion");
+  assert.deepEqual(res.map((r) => r.gap), ["1:01.234", "+0.266", ""]);
+  assert.equal(res[2].status, "Sin tiempo");
+});
