@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T13:35:38.385Z",
+  "generatedAt": "2026-10-03T14:07:32.470Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -2651,7 +2651,7 @@
         "tc": "53"
       },
       "teams": {
-        "tc": "Chevrolet"
+        "tc": "Toyota"
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-03"

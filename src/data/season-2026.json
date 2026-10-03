@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T13:35:36.967Z",
+  "generatedAt": "2026-10-03T14:07:30.801Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -93850,7 +93850,7 @@
               "number": "7",
               "driver": "Dino Beganovic",
               "team": "DAMS Lucas Oil",
-              "gap": "1:3:29.190",
+              "gap": "1:03:29.190",
               "points": 25
             },
             {
@@ -93858,7 +93858,7 @@
               "number": "15",
               "driver": "Alex Dunne",
               "team": "Rodin Motorsport",
-              "gap": "+7.32",
+              "gap": "+7.320",
               "points": 19
             },
             {
@@ -93880,9 +93880,9 @@
             {
               "pos": 5,
               "number": "20",
-              "driver": "Emerson Fittipaldi",
+              "driver": "E. Fittipaldi",
               "team": "AIX Racing",
-              "gap": "+19.63",
+              "gap": "+19.630",
               "points": 10
             },
             {
@@ -94021,8 +94021,8 @@
             }
           ],
           "resultsSource": {
-            "name": "FIA Formula 2 · clasificación oficial",
-            "url": "https://www.fiaformula2.com/en/racing/2026/madrid"
+            "name": "FIA · clasificación oficial",
+            "url": "https://www.fia.com/events/formula-2-championship/season-2026/madrid/feature-race-classification"
           }
         }
       ],
@@ -107825,7 +107825,373 @@
               "url": "https://www.gt-world-challenge-europe.com/event/254/barcelona",
               "start": "2026-10-03T14:00:00+02:00"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "99",
+              "class": "Gold Cup",
+              "driver": "Dylan Pereira / Alex Aka",
+              "team": "Tresor Attempto Racing",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "80",
+              "class": "Pro Cup",
+              "driver": "Bastian Buus / Ricardo Feller",
+              "team": "Lionspeed GP",
+              "gap": "+0.789"
+            },
+            {
+              "pos": 3,
+              "number": "96",
+              "class": "Pro Cup",
+              "driver": "Patric Niederhauser / Luca Engstler",
+              "team": "Rutronik Racing",
+              "gap": "+4.309"
+            },
+            {
+              "pos": 4,
+              "number": "59",
+              "class": "Pro Cup",
+              "driver": "Joseph Loake / Dean Macdonald",
+              "team": "Garage 59",
+              "gap": "+13.536"
+            },
+            {
+              "pos": 5,
+              "number": "93",
+              "class": "Bronze Cup",
+              "driver": "Eddie Cheever / Peter Dempsey",
+              "team": "Ziggo Sport Tempesta Racing",
+              "gap": "+14.999"
+            },
+            {
+              "pos": 6,
+              "number": "2",
+              "class": "Pro Cup",
+              "driver": "Sven Müller / Dorian Boccolacci",
+              "team": "Boutsen VDS",
+              "gap": "+16.238"
+            },
+            {
+              "pos": 7,
+              "number": "48",
+              "class": "Pro Cup",
+              "driver": "Lucas Auer / Maro Engel",
+              "team": "Winward Racing",
+              "gap": "+20.565"
+            },
+            {
+              "pos": 8,
+              "number": "77",
+              "class": "Gold Cup",
+              "driver": "Jop Rappange / David Pittard",
+              "team": "KPX Motorsport",
+              "gap": "+22.047"
+            },
+            {
+              "pos": 9,
+              "number": "74",
+              "class": "Bronze Cup",
+              "driver": "Dennis Marschall / Constantin Dressler",
+              "team": "Kessel Racing",
+              "gap": "+22.681"
+            },
+            {
+              "pos": 10,
+              "number": "32",
+              "class": "Pro Cup",
+              "driver": "Charles Weerts / Kelvin van der Linde",
+              "team": "Team WRT",
+              "gap": "+24.910"
+            },
+            {
+              "pos": 11,
+              "number": "31",
+              "class": "Pro Cup",
+              "driver": "Amaury Cordeel / Jordan Pepper",
+              "team": "Team WRT",
+              "gap": "+26.205"
+            },
+            {
+              "pos": 12,
+              "number": "3",
+              "class": "Pro Cup",
+              "driver": "Daniel Juncadella / Chris Lulham",
+              "team": "Mercedes-AMG Team Verstappen Racing",
+              "gap": "+26.887"
+            },
+            {
+              "pos": 13,
+              "number": "555",
+              "class": "Gold Cup",
+              "driver": "Simon Gachet / Romain Andriolo",
+              "team": "CSA Racing",
+              "gap": "+27.508"
+            },
+            {
+              "pos": 14,
+              "number": "84",
+              "class": "Pro Cup",
+              "driver": "Simon Reicher / Christopher Haase",
+              "team": "Eastalent Racing",
+              "gap": "+28.919"
+            },
+            {
+              "pos": 15,
+              "number": "163",
+              "class": "Gold Cup",
+              "driver": "Loris Spinelli / Mattia Michelotto",
+              "team": "VSR",
+              "gap": "+29.755"
+            },
+            {
+              "pos": 16,
+              "number": "46",
+              "class": "Pro Cup",
+              "driver": "Valentino Rossi / Max Hesse",
+              "team": "Team WRT",
+              "gap": "+29.825"
+            },
+            {
+              "pos": 17,
+              "number": "87",
+              "class": "Bronze Cup",
+              "driver": "Marvin Dienst / Rinat Salikhov",
+              "team": "Winward Racing",
+              "gap": "+31.082"
+            },
+            {
+              "pos": 18,
+              "number": "7",
+              "class": "Pro Cup",
+              "driver": "Kobe Pauwels / Nicki Thiim",
+              "team": "Comtoyou Racing",
+              "gap": "+32.110"
+            },
+            {
+              "pos": 19,
+              "number": "10",
+              "class": "Gold Cup",
+              "driver": "Gilles Magnus / Robin Knutsson",
+              "team": "Boutsen VDS",
+              "gap": "+32.785"
+            },
+            {
+              "pos": 20,
+              "number": "991",
+              "class": "Bronze Cup",
+              "driver": "Augusto Farfus / Darren Leung",
+              "team": "Paradine Competition",
+              "gap": "+33.727"
+            },
+            {
+              "pos": 21,
+              "number": "5",
+              "class": "Silver Cup",
+              "driver": "Mikey Porter / Guilherme Oliveira",
+              "team": "Optimum Motorsport",
+              "gap": "+34.169"
+            },
+            {
+              "pos": 22,
+              "number": "111",
+              "class": "Gold Cup",
+              "driver": "James Kell / Arthur Rougier",
+              "team": "CSA Racing",
+              "gap": "+34.610"
+            },
+            {
+              "pos": 23,
+              "number": "51",
+              "class": "Gold Cup",
+              "driver": "Tommaso Mosca / Matias Zagazeta",
+              "team": "AF Corse",
+              "gap": "+36.486"
+            },
+            {
+              "pos": 24,
+              "number": "52",
+              "class": "Silver Cup",
+              "driver": "Jef Machiels / Gilles Stadsbader",
+              "team": "AF Corse",
+              "gap": "+37.508"
+            },
+            {
+              "pos": 25,
+              "number": "58",
+              "class": "Gold Cup",
+              "driver": "Thomas Fleming / Louis Prette",
+              "team": "Garage 59",
+              "gap": "+37.839"
+            },
+            {
+              "pos": 26,
+              "number": "89",
+              "class": "Silver Cup",
+              "driver": "Nicolas Baert / Gustav Bergström",
+              "team": "Lionspeed GP",
+              "gap": "+38.235"
+            },
+            {
+              "pos": 27,
+              "number": "34",
+              "class": "Silver Cup",
+              "driver": "Jamie Day / Mateo Villagomez",
+              "team": "Walkenhorst Motorsport",
+              "gap": "+38.928"
+            },
+            {
+              "pos": 28,
+              "number": "54",
+              "class": "Silver Cup",
+              "driver": "Mark Kastelic / Tanart Sathienthirakul",
+              "team": "Dinamic GT",
+              "gap": "+39.493"
+            },
+            {
+              "pos": 29,
+              "number": "71",
+              "class": "Silver Cup",
+              "driver": "Felix Hirsiger / Carl Bennett",
+              "team": "AF Corse",
+              "gap": "+43.321"
+            },
+            {
+              "pos": 30,
+              "number": "55",
+              "class": "Bronze Cup",
+              "driver": "Loris Cabirou / Dmitry Gvazava",
+              "team": "Dinamic GT",
+              "gap": "+50.893"
+            },
+            {
+              "pos": 31,
+              "number": "12",
+              "class": "Bronze Cup",
+              "driver": "Fabian Schiller / Gabriel Rindone",
+              "team": "GetSpeed Team Dubai",
+              "gap": "+57.322"
+            },
+            {
+              "pos": 32,
+              "number": "30",
+              "class": "Silver Cup",
+              "driver": "Ignacio Montenegro / Matisse Lismont",
+              "team": "Team WRT",
+              "gap": "+58.724"
+            },
+            {
+              "pos": 33,
+              "number": "6",
+              "class": "Silver Cup",
+              "driver": "Aurelien Panis / Anthony Bartone",
+              "team": "GetSpeed Team Bartone Bros",
+              "gap": "+1:04.004"
+            },
+            {
+              "pos": 34,
+              "number": "222",
+              "class": "Bronze Cup",
+              "driver": "Kiern Jewiss / Charles Dawson",
+              "team": "2Seas Motorsport",
+              "gap": "+1:09.119"
+            },
+            {
+              "pos": 35,
+              "number": "88",
+              "class": "Bronze Cup",
+              "driver": "Sebastian Øgaard / Carrie Schreiner",
+              "team": "Tresor Attempto Racing",
+              "gap": "+1:18.395"
+            },
+            {
+              "pos": 36,
+              "number": "27",
+              "class": "Bronze Cup",
+              "driver": "David Fumanelli / Marco Pulcini",
+              "team": "Kessel Racing",
+              "gap": "+1:24.450"
+            },
+            {
+              "pos": 37,
+              "number": "11",
+              "class": "Bronze Cup",
+              "driver": "Felice Jelmini / Marcelo Tomasoni",
+              "team": "Comtoyou Racing",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 38,
+              "number": "21",
+              "class": "Silver Cup",
+              "driver": "Oliver Söderström / Arthur Dorison",
+              "team": "Comtoyou Racing",
+              "gap": "+2 vueltas"
+            },
+            {
+              "pos": 39,
+              "number": "35",
+              "class": "Silver Cup",
+              "driver": "Gaspard Simon / Maxime Robin",
+              "team": "Walkenhorst Motorsport",
+              "gap": "+8 vueltas"
+            },
+            {
+              "pos": 40,
+              "number": "69",
+              "class": "Pro Cup",
+              "driver": "Thierry Vermeulen / Ben Green",
+              "team": "Emil Frey Racing",
+              "gap": "+9 vueltas"
+            },
+            {
+              "pos": 81,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "9",
+              "class": "Silver Cup",
+              "driver": "Mikkel Pedersen / Aliaksandr Malykhin",
+              "team": "Pure Rxcing",
+              "gap": ""
+            },
+            {
+              "pos": 82,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "14",
+              "class": "Pro Cup",
+              "driver": "Konsta Lappalainen / Matteo Cairoli",
+              "team": "Emil Frey Racing",
+              "gap": ""
+            },
+            {
+              "pos": 83,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "50",
+              "class": "Pro Cup",
+              "driver": "Thomas Neubauer / Arthur Leclerc",
+              "team": "AF Corse",
+              "gap": ""
+            },
+            {
+              "pos": 84,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "66",
+              "class": "Silver Cup",
+              "driver": "Ariel Levi / Andrea Frassineti",
+              "team": "Tresor Attempto Racing",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "GT World Challenge Europe (oficial)",
+            "url": "https://www.gt-world-challenge-europe.com/results/2026/barcelona/race-1"
+          }
         },
         {
           "id": "gt3-2026-s5-q2",
@@ -113059,7 +113425,7 @@
     "gtwcOfficial": {
       "meetings": 10,
       "sessions": 15,
-      "withResults": 9,
+      "withResults": 10,
       "errors": []
     },
     "gtwcYoutube": {
