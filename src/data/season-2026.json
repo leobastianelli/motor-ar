@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T20:05:24.354Z",
+  "generatedAt": "2026-10-03T20:35:20.866Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -93850,7 +93850,7 @@
               "number": "7",
               "driver": "Dino Beganovic",
               "team": "DAMS Lucas Oil",
-              "gap": "1:03:29.190",
+              "gap": "1:3:29.190",
               "points": 25
             },
             {
@@ -93858,7 +93858,7 @@
               "number": "15",
               "driver": "Alex Dunne",
               "team": "Rodin Motorsport",
-              "gap": "+7.320",
+              "gap": "+7.32",
               "points": 19
             },
             {
@@ -93880,9 +93880,9 @@
             {
               "pos": 5,
               "number": "20",
-              "driver": "E. Fittipaldi",
+              "driver": "Emerson Fittipaldi",
               "team": "AIX Racing",
-              "gap": "+19.630",
+              "gap": "+19.63",
               "points": 10
             },
             {
@@ -94021,8 +94021,8 @@
             }
           ],
           "resultsSource": {
-            "name": "FIA · clasificación oficial",
-            "url": "https://www.fia.com/events/formula-2-championship/season-2026/madrid/feature-race-classification"
+            "name": "FIA Formula 2 · clasificación oficial",
+            "url": "https://www.fiaformula2.com/en/racing/2026/madrid"
           }
         }
       ],
@@ -113976,7 +113976,7 @@
     },
     "timing": {
       "documents": 779,
-      "pagesFetched": 38,
+      "pagesFetched": 39,
       "eventsWithResults": 58
     },
     "openf1": {
