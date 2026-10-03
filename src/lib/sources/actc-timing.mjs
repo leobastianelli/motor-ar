@@ -234,8 +234,11 @@ export function keepPreviousTiming(events, previous) {
 // Antes del PDF de los comisarios el portal publica un Excel del cronometraje: el orden de llegada con la mejor vuelta, los sectores y todas las
 // vueltas de cada auto, sin tiempo total ni observaciones. Las finales lo rotulan "PARCIALES"; las series lo publican con el mismo título que el PDF.
 
-/** Sólo las carreras: en prácticas y clasificaciones las planillas son rondas intermedias y no hay cómo saber cuál es la última. */
-export const PROVISIONAL_KINDS = new Set(["serie", "final"]);
+/**
+ * Series, finales y clasificaciones: la planilla es lo primero que se muestra y el PDF de los comisarios la reemplaza. Las prácticas quedan afuera
+ * (sus planillas son rondas intermedias). En la clasificación se toma la planilla de id más alto, que es la última ronda publicada.
+ */
+export const PROVISIONAL_KINDS = new Set(["clasificacion", "serie", "final"]);
 const PARTIAL_TITLE = /PARCIAL/;
 const isPartialTitle = (title) => PARTIAL_TITLE.test(fold(title).toUpperCase());
 const MIN_PROVISIONAL_ROWS = 3;
@@ -281,9 +284,16 @@ export function parsePlanilla(html) {
  * archivo mal armado o una foto intermedia); el líder trae tiempos por sector; y el orden no es por mejor vuelta (así vienen algunas planillas: sirve
  * para prácticas, no para decir quién ganó).
  */
-export function provisionalProblems(rows) {
+export function provisionalProblems(rows, kind = "final") {
   const problems = [];
   if (rows.length < MIN_PROVISIONAL_ROWS) problems.push("pocas filas");
+  if (kind === "clasificacion") {
+    // En la clasificación se ordena por mejor vuelta: es lo esperado. Lo que no vale es un líder sin tiempo o una lista desordenada.
+    if (rows.length && rows[0].best === null) problems.push("el líder no trae mejor vuelta");
+    const times = rows.map((r) => r.best).filter((b) => b !== null);
+    if (!times.every((b, i) => i === 0 || b >= times[i - 1])) problems.push("no está ordenada por mejor vuelta");
+    return problems;
+  }
   if (!rows.every((r, i) => i === 0 || r.laps <= rows[i - 1].laps)) problems.push("las vueltas no decrecen");
   if (rows.length && !rows[0].sectors) problems.push("el líder no trae sectores");
   if (rows.length >= 4 && rows.every((r, i) => r.best !== null && (i === 0 || r.best >= rows[i - 1].best))) problems.push("ordenada por mejor vuelta");
@@ -291,16 +301,21 @@ export function provisionalProblems(rows) {
 }
 
 /** Filas de resultado de una planilla aceptada: sin tiempo total no hay diferencia de carrera; sólo las vueltas de atraso. */
-export function planillaResults(rows, known) {
+export function planillaResults(rows, known, kind = "final") {
   const lead = rows[0]?.laps ?? 0;
+  const quali = kind === "clasificacion";
   return rows.map((r, i) => {
     const behind = lead - r.laps;
+    let gap = i > 0 && lead > 0 && behind > 0 ? `+${behind} ${behind === 1 ? "vuelta" : "vueltas"}` : "";
+    // Clasificación: como en el PDF, el líder lleva su mejor vuelta y el resto la diferencia contra ella.
+    if (quali) gap = r.best === null ? "" : i === 0 ? clock(r.best) : `+${(r.best - rows[0].best).toFixed(3)}`;
     return {
       pos: r.pos,
       number: r.number,
       driver: displayName(r.name.split(/[\s,]+/).filter((w) => w && !NOISE.has(fold(w).replace(/[^a-z0-9]/g, ""))), known),
       team: "",
-      gap: i > 0 && lead > 0 && behind > 0 ? `+${behind} ${behind === 1 ? "vuelta" : "vueltas"}` : "",
+      gap,
+      ...(quali && r.best === null ? { status: "Sin tiempo" } : {}),
     };
   });
 }
@@ -380,7 +395,7 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
           if (format === "planilla" && PROVISIONAL_KINDS.has(session.kind)) {
             if (!planilla) {
               const rows = parsePlanilla(html);
-              if (!provisionalProblems(rows).length) planilla = { doc, results: planillaResults(rows, known) };
+              if (!provisionalProblems(rows, session.kind).length) planilla = { doc, results: planillaResults(rows, known, session.kind) };
             }
           } else if (!partial) {
             const results = parseResult(html, session.kind, known);

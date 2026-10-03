@@ -38,7 +38,7 @@ Señales que se miraron, en las planillas de formato Excel:
 
 Una página de resultado de la ACTC vale como **provisoria** si cumple todo:
 
-1. La sesión es **serie o final**. Las prácticas y las clasificaciones quedan afuera: las planillas "CL1, CL2, CL3" son rondas de la clasificación (la última recién coincide con el oficial) y no hay manera de saber cuál es la última.
+1. La sesión es **serie, final o clasificación** (la clasificación se agregó el 03/10/2026, a pedido: la ACTC tarda en subir el PDF y la planilla "CLASIFICACION PARCIALES" ya está). Las prácticas quedan afuera. Entre varias planillas de clasificación vale la de id más alto (la última ronda publicada); si fuera una ronda intermedia, el rótulo dice "Provisorio" y el PDF la reemplaza. Para la clasificación las reglas 4 y 5 cambian: no se miran vueltas ni sectores, el orden por mejor vuelta es lo normal (se rechaza si está desordenada), el líder tiene que traer mejor vuelta, y la fila lleva la mejor vuelta del líder y la diferencia de los demás, como el PDF.
 2. El formato es **planilla Excel**: encabezado "Mejor vuelta", sin columna "Tiempo total".
 3. Al menos **3 filas**.
 4. **Las vueltas no crecen al bajar por la lista** (el líder tiene el máximo) y el líder tiene tiempos por sector (filas bien formadas).
