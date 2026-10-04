@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T17:57:36.609Z",
+  "generatedAt": "2026-10-04T18:07:29.728Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -115804,7 +115804,7 @@
           "winnerUrl": "https://campeones.com.ar/lucas-carabajal-festejo-en-el-zonda-su-primera-victoria-en-tc2000/"
         }
       ],
-      "campeonesFeed": false,
+      "campeonesFeed": true,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -115900,8 +115900,8 @@
     "Campeonato ACTC tcpm: No se pudo descargar https://actc.org.ar/tcpm/campeonato: HTTP 502 (text/html; charset=UTF-8)",
     "Campeonato ACTC tcpk: No se pudo descargar https://actc.org.ar/tcpk/campeonato: HTTP 502 (text/html; charset=UTF-8)",
     "Campeonato ACTC tcppk: No se pudo descargar https://actc.org.ar/tcppk/campeonato: HTTP 502 (text/html; charset=UTF-8)",
-    "Cronogramas (ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: HTTP 502 (text/html; charset=UTF-8))",
-    "Cronograma oficial ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: HTTP 502 (text/html; charset=UTF-8)",
+    "Cronogramas (ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: sin respuesta en 30 s)",
+    "Cronograma oficial ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: actc.org.ar no respondió antes en esta corrida",
     "Se conservaron fechas que las fuentes dejaron de traer: tc-mouras 12, tc-pista-mouras 12, tc-pista 15, tc-pista-pick-up 11, tc-pick-up 11, tc 3",
     "Se conservaron resultados de 10 sesiones que las fuentes dejaron de traer",
     "Campeonato tc-pista: la fuente no trajo la tabla, se conservó la anterior",
