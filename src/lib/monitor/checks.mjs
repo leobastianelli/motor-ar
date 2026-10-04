@@ -6,6 +6,7 @@
 // Reglas del proyecto que rigen acá: los avisos de horarios sólo salen para eventos con fecha CONFIRMADA (si la fecha no es sólida no
 // sabemos qué está pendiente), y lo argentino va primero.
 import { mergeSessionPatches, sessionKey } from "../sources/overrides.mjs";
+import { dedupeFindings } from "./alerts.mjs";
 
 const HOUR = 3600_000;
 const DAY = 24 * HOUR;
@@ -224,26 +225,110 @@ export function sessionResultsMissing(events, now, { seriesIds, after = 0.5, bef
  * segunda vez seguida (`consecutive`). Lo que ya perdió datos (la protección tuvo que conservarlos) avisa en el acto.
  */
 export function sourceFailures(failures = []) {
-  return failures.map((text) => {
+  const out = [];
+  const lost = [];
+  const groups = new Map(); // origen → fallas
+  const tables = [];
+  const loose = [];
+  for (const text of failures) {
     const t = String(text);
     // La protección del armado deja avisos que no son fallas de una fuente.
     if (/^Se descartaron/i.test(t)) {
-      return { key: "correccion:automatica", severity: "info", level: 1, tier: 3, title: "Datos corregidos automáticamente", body: `${t.slice(0, 400)}. No hace falta hacer nada; se avisa por si se repite.` };
+      out.push({ key: "correccion:automatica", severity: "info", level: 1, tier: 3, title: "Datos corregidos automáticamente", body: `${t.slice(0, 400)}. No hace falta hacer nada; se avisa por si se repite.` });
+    } else if (/^Se conservaron/i.test(t)) {
+      lost.push(t);
+    } else if (/^Campeonato\s+\S+:\s*la fuente no trajo la tabla/i.test(t)) {
+      tables.push(t);
+    } else {
+      const host = failureHost(t);
+      if (host) groups.set(host, [...(groups.get(host) ?? []), t]);
+      else loose.push(t);
     }
-    if (/^Se conservaron/i.test(t)) {
-      return { key: "fuente:perdio-datos", severity: "high", level: 1, tier: 3, title: "Una fuente dejó de traer datos (se conservaron los anteriores)", body: t.slice(0, 500) };
+  }
+  // Varias pérdidas de datos son un solo problema: un aviso con todas las líneas.
+  if (lost.length) {
+    out.push({ key: "fuente:perdio-datos", severity: "high", level: 1, tier: 3, title: "Una fuente dejó de traer datos (se conservaron los anteriores)", body: lost.map((l) => l.slice(0, 500)).join("\n").slice(0, 900) });
+  }
+  // Un origen caído tira varias cosas a la vez (el 4/10/2026 la ACTC dio 502 y salieron ~15 avisos): un solo aviso por origen.
+  for (const [host, list] of groups) {
+    if (list.length < 2) {
+      loose.push(...list);
+      continue;
     }
-    const label = t.split(":")[0].trim().slice(0, 60);
-    return { key: `fuente:${label}`, severity: "medium", level: 1, tier: 3, consecutive: 2, title: `Falla de una fuente: ${label}`, body: t.slice(0, 500) };
-  });
+    out.push({
+      key: `fuente:${host}`,
+      severity: "medium",
+      level: 1,
+      tier: 3,
+      consecutive: 2,
+      title: `${hostName(host)} no responde (${list.length} cosas no se pudieron actualizar)`,
+      body: list.map((l) => `· ${l.slice(0, 200)}`).join("\n").slice(0, 900),
+    });
+  }
+  if (tables.length >= 2) {
+    out.push({
+      key: "fuente:tablas-sin-datos",
+      severity: "medium",
+      level: 1,
+      tier: 3,
+      consecutive: 2,
+      title: `${tables.length} tablas de campeonato no llegaron, se conservaron las anteriores`,
+      body: tables.map((l) => `· ${l.replace(/:\s*la fuente no trajo la tabla, se conservó la anterior/i, "")}`).join("\n").slice(0, 900),
+    });
+  } else loose.push(...tables);
+  for (const t of loose) {
+    const label = failureLabel(t);
+    out.push({ key: `fuente:${label}`, severity: "medium", level: 1, tier: 3, consecutive: 2, title: `Falla de una fuente: ${label}`, body: t.slice(0, 500) });
+  }
+  return dedupeFindings(out);
+}
+
+const TLD_PARTS = new Set(["ar", "com", "org", "net", "gov", "edu", "co", "info"]);
+const hostName = (host) => (host === "actc" ? "La ACTC" : `La fuente ${host}`);
+
+/** Origen de una falla: el dominio de la URL que menciona ("https://www.actc.org.ar/x" → "actc"), o "actc" si sólo nombra a la ACTC. */
+function failureHost(text) {
+  const m = text.match(/https?:\/\/([^\s/)"'<>]+)/i);
+  if (m) {
+    const parts = m[1].toLowerCase().replace(/:\d+$/, "").replace(/^www\./, "").split(".");
+    while (parts.length > 1 && TLD_PARTS.has(parts.at(-1))) parts.pop();
+    return parts.at(-1) || null;
+  }
+  return /\bACTC\b/.test(text) ? "actc" : null;
+}
+
+/** Nombre de la fuente: lo anterior al primer ":" fuera de paréntesis. Si el paréntesis queda abierto ("Cronogramas (ACTC: ..."), se saca lo colgado. */
+export function failureLabel(text) {
+  const t = String(text);
+  let depth = 0;
+  let cut = -1;
+  for (let i = 0; i < t.length && cut < 0; i++) {
+    if (t[i] === "(") depth++;
+    else if (t[i] === ")") depth = Math.max(0, depth - 1);
+    else if (t[i] === ":" && depth === 0) cut = i;
+  }
+  if (cut < 0) cut = t.indexOf(":");
+  let label = (cut >= 0 ? t.slice(0, cut) : t).trim();
+  if (label.lastIndexOf("(") > label.lastIndexOf(")")) label = label.slice(0, label.lastIndexOf("(")).trim() || label;
+  return label.slice(0, 60);
 }
 
 // ——— Datos manuales que se quedaron viejos ———
 
 const racedRounds = (events, seriesId) => events.filter((e) => e.seriesId === seriesId && e.sessions.some((s) => RACE_KINDS.has(s.kind) && s.results?.length)).length;
 
+/** Inicio de la última sesión de carrera con resultados de la fecha más nueva de la categoría (0 si no hay). */
+function lastRaceStart(events, seriesId) {
+  let last = 0;
+  for (const e of events) {
+    if (e.seriesId !== seriesId) continue;
+    for (const s of e.sessions) if (RACE_KINDS.has(s.kind) && s.results?.length) last = Math.max(last, Date.parse(s.start) || 0);
+  }
+  return last;
+}
+
 /** Tablas de campeonato que cubren menos fechas que las ya corridas (la web las oculta sola, acá se avisa para conseguir la nueva). */
-export function staleStandings(snapshot, manual, events, { tierOf = () => 3, name = (id) => id } = {}) {
+export function staleStandings(snapshot, manual, events, { tierOf = () => 3, name = (id) => id, now = new Date().toISOString() } = {}) {
   const out = [];
   const ids = new Set([...Object.keys(snapshot.standings ?? {}), ...Object.keys(manual.standings ?? {})]);
   for (const id of ids) {
@@ -253,6 +338,8 @@ export function staleStandings(snapshot, manual, events, { tierOf = () => 3, nam
     const raced = racedRounds(events, id);
     if (asOf === 0 || raced <= asOf) continue;
     const isManual = (hand ?? 0) >= (auto ?? 0);
+    // La fuente automática suele actualizar la tabla horas después de la final: no se avisa hasta 24 h desde que arrancó la última carrera.
+    if (!isManual && Date.parse(now) - lastRaceStart(events, id) < 24 * HOUR) continue;
     out.push({
       key: `tabla:${id}`,
       severity: tierOf(id) === 1 ? "high" : "medium",

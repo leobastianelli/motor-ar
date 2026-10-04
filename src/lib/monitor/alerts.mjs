@@ -12,6 +12,35 @@ const KEEP_RESOLVED_DAYS = 14;
 export const emptyState = () => ({ alerts: {}, fails: {}, lastSummary: null });
 
 /**
+ * Nunca dos hallazgos con la misma clave (rompería el estado de avisos y mandaría mensajes repetidos): se fusionan en uno.
+ * Queda la gravedad y el nivel más altos, el menor `consecutive` (el más urgente) y los cuerpos juntos, sin repetir líneas.
+ */
+export function dedupeFindings(findings) {
+  const byKey = new Map();
+  for (const f of findings) {
+    const prev = byKey.get(f.key);
+    if (!prev) {
+      byKey.set(f.key, f);
+      continue;
+    }
+    const worse = (SEVERITY_ORDER[f.severity] ?? 9) < (SEVERITY_ORDER[prev.severity] ?? 9);
+    const lines = [...new Set([...String(prev.body ?? "").split("\n"), ...String(f.body ?? "").split("\n")].filter(Boolean))];
+    const merged = {
+      ...prev,
+      severity: worse ? f.severity : prev.severity,
+      level: Math.max(prev.level ?? 1, f.level ?? 1),
+      tier: Math.min(prev.tier ?? 3, f.tier ?? 3),
+      body: lines.join("\n"),
+    };
+    const consecutive = Math.min(prev.consecutive ?? 1, f.consecutive ?? 1);
+    if (consecutive > 1) merged.consecutive = consecutive;
+    else delete merged.consecutive;
+    byKey.set(f.key, merged);
+  }
+  return [...byKey.values()];
+}
+
+/**
  * @param findings  hallazgos de esta corrida ({ key, severity, level, title, body, tier?, consecutive? })
  * @param state     estado guardado de la corrida anterior
  * @param now       hora actual (ISO)
@@ -24,7 +53,7 @@ export function evaluate(findings, state, now) {
   const resolved = [];
   const present = new Set();
 
-  for (const f of findings) {
+  for (const f of dedupeFindings(findings)) {
     present.add(f.key);
     const prev = next.alerts[f.key];
     const count = (next.fails[f.key] ?? 0) + 1;
