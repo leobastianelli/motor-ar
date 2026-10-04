@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T13:49:10.372Z",
+  "generatedAt": "2026-10-04T14:19:12.505Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -749,7 +749,7 @@
         "tc-pista-pick-up": "Fiat"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "casais diego",
@@ -878,7 +878,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "emiliano simonetti",
@@ -921,7 +921,7 @@
         "tn": "Chevrolet Cruze"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "emiliano stang",
@@ -1564,7 +1564,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "gaston iansa",
@@ -1751,7 +1751,7 @@
         "tc-pista-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "hernan sala",
@@ -1817,7 +1817,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "grippo ignacio",
@@ -2148,7 +2148,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "alberto goya jose",
@@ -2252,7 +2252,7 @@
         "tc": "Mercedes-Benz"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "antonio juan sandin",
@@ -2429,7 +2429,7 @@
         "tc-pista-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "jose juan suarez",
@@ -2553,7 +2553,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "guiffrey juan pablo",
@@ -3299,7 +3299,7 @@
         "tc-pista-pick-up": "Foton"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "baldo mario",
@@ -3541,7 +3541,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-08-01",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "marchesi matias munoz",
@@ -3878,17 +3878,20 @@
         "tc": "Torino"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "jaime nicolas",
       "keys": [
         "jaime nicolas",
-        "jaime nicola s"
+        "jaime nicola s",
+        "jaime nicolas recargo"
       ],
       "slug": "nicolas-jaime",
       "name": "Nicolás Jaime",
-      "aliases": [],
+      "aliases": [
+        "Nicolas Jaime Recargo"
+      ],
       "series": [
         "tc-mouras",
         "tn",
@@ -3928,7 +3931,7 @@
         "tc": "Dodge"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "nicolas posco",
@@ -3971,7 +3974,7 @@
         "tn": "Toyota Corolla"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "nicolas villamayor",
@@ -4011,7 +4014,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "martinez omar",
@@ -4206,7 +4209,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "lugon rodrigo",
@@ -4759,7 +4762,7 @@
         "tn": "Toyota Corolla"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "alaux valentino",

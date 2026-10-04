@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T13:49:09.028Z",
+  "generatedAt": "2026-10-04T14:19:10.784Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -109140,7 +109140,140 @@
               "url": "https://www.solotc.com.ar/tc-san-nicolas-horarios-tv-cronograma-fecha-12-2026/",
               "start": "10:55"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Torino",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Mercedes-Benz",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "11",
+              "driver": "Mariano Werner",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "231",
+              "driver": "José Manuel Urcera",
+              "team": "Mercedes-Benz",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "85",
+              "driver": "Ricardo Risatti",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "133",
+              "driver": "Valentín Aguirre",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "57",
+              "driver": "Juan Pablo Gianini",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "29",
+              "driver": "Elio Craparo",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "109",
+              "driver": "Nicolás Moscardini",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "number": "88",
+              "driver": "Nicolás Trosset",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 12,
+              "number": "15",
+              "driver": "Juan José Ebarlín",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 13,
+              "number": "114",
+              "driver": "Gastón Ferrante",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 14,
+              "number": "27",
+              "driver": "Emiliano Spataro",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 15,
+              "number": "37",
+              "driver": "Norberto Fontana",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 16,
+              "number": "134",
+              "driver": "Matias Jalaf",
+              "team": "Ford",
+              "gap": "+3 vueltas"
+            },
+            {
+              "pos": 17,
+              "number": "87",
+              "driver": "Nicolas Impiombato",
+              "team": "Torino",
+              "gap": "+5 vueltas"
+            },
+            {
+              "pos": 18,
+              "number": "141",
+              "driver": "Jorge Barrio",
+              "team": "Chevrolet",
+              "gap": "+5 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/989/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tc-2026-12-serie-serie2",
@@ -109633,69 +109766,89 @@
               "number": "10",
               "driver": "Gabriel Gandulia",
               "team": "Ford",
-              "gap": ""
+              "gap": "7:29.612"
             },
             {
               "pos": 2,
-              "number": "176",
-              "driver": "Nicolás Jaime",
-              "team": "Ford",
-              "gap": ""
-            },
-            {
-              "pos": 3,
               "number": "105",
               "driver": "Manuel Borgert",
               "team": "Ford",
-              "gap": ""
+              "gap": "+4.353"
             },
             {
-              "pos": 4,
+              "pos": 3,
               "number": "67",
               "driver": "Santiago Biagi",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+5.652"
             },
             {
-              "pos": 5,
+              "pos": 4,
               "number": "168",
               "driver": "Juan Sebastian Gallo",
               "team": "Ford",
-              "gap": ""
+              "gap": "+6.137"
             },
             {
-              "pos": 6,
+              "pos": 5,
               "number": "69",
               "driver": "Mion Eddy",
               "team": "Toyota",
-              "gap": ""
+              "gap": "+10.334"
             },
             {
-              "pos": 7,
+              "pos": 6,
               "number": "123",
               "driver": "Nicanor Santilli Pazos",
               "team": "Ford",
-              "gap": ""
+              "gap": "+12.616"
+            },
+            {
+              "pos": 7,
+              "number": "176",
+              "driver": "Nicolas Jaime Recargo",
+              "team": "Ford",
+              "gap": "+12.617"
             },
             {
               "pos": 8,
               "number": "99",
               "driver": "Bautista Damiani",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "+12.875"
             },
             {
               "pos": 9,
               "number": "23",
               "driver": "Alejandro Martínez",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "+28.287"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/985/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/987/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/985/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "10",
+                  "driver": "Gabriel Gandulia"
+                },
+                {
+                  "pos": 2,
+                  "number": "176",
+                  "driver": "Nicolás Jaime"
+                },
+                {
+                  "pos": 3,
+                  "number": "105",
+                  "driver": "Manuel Borgert"
+                }
+              ]
+            },
+            "note": "Oficial: Nicolás Jaime pasó del 2.º al 7.º por un recargo"
           }
         },
         {
@@ -114496,8 +114649,8 @@
       "eventsWithTimes": 32
     },
     "timing": {
-      "documents": 783,
-      "pagesFetched": 47,
+      "documents": 787,
+      "pagesFetched": 49,
       "eventsWithResults": 58
     },
     "openf1": {
