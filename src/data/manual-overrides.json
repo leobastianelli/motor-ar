@@ -251,7 +251,7 @@
       "id": "cordoba-pista-2026-7",
       "seriesId": "cordoba-pista",
       "round": 7,
-      "name": "Fecha 7 · Alta Gracia",
+      "name": "Fecha 7 · Alta Gracia (a confirmar)",
       "circuit": { "name": "Autódromo Oscar Cabalén", "city": "Alta Gracia", "country": "Argentina", "flag": "AR", "province": "Córdoba" },
       "sessions": [
         { "id": "cordoba-pista-2026-7-sabado", "kind": "practica", "name": "Entrenamientos y clasificación (sábado)", "start": "2026-10-24T12:00:00-03:00", "timeKnown": false, "durationMin": 60, "timeSources": [{ "name": "FRAD · comunicado del calendario (28/8/2026)", "url": "https://fradcba.com.ar/se-modifico-el-calendario-del-cordoba-pista-y-la-ultima-del-provincial-de-karting-en-asfalto/", "start": "2026-10-24T12:00:00-03:00" }] },
@@ -263,7 +263,7 @@
       "id": "cordoba-pista-2026-8",
       "seriesId": "cordoba-pista",
       "round": 8,
-      "name": "Fecha 8 · Alta Gracia",
+      "name": "Fecha 8 · Alta Gracia (a confirmar)",
       "circuit": { "name": "Autódromo Oscar Cabalén", "city": "Alta Gracia", "country": "Argentina", "flag": "AR", "province": "Córdoba" },
       "sessions": [
         { "id": "cordoba-pista-2026-8-sabado", "kind": "practica", "name": "Entrenamientos y clasificación (sábado)", "start": "2026-11-21T12:00:00-03:00", "timeKnown": false, "durationMin": 60, "timeSources": [{ "name": "FRAD · comunicado del calendario (28/8/2026)", "url": "https://fradcba.com.ar/se-modifico-el-calendario-del-cordoba-pista-y-la-ultima-del-provincial-de-karting-en-asfalto/", "start": "2026-11-21T12:00:00-03:00" }] },
@@ -275,7 +275,7 @@
       "id": "cordoba-pista-2026-9",
       "seriesId": "cordoba-pista",
       "round": 9,
-      "name": "Fecha 9 · Río Cuarto",
+      "name": "Fecha 9 · Río Cuarto (a confirmar)",
       "circuit": { "name": "Autódromo Parque Ciudad de Río Cuarto", "city": "Río Cuarto", "country": "Argentina", "flag": "AR", "province": "Córdoba" },
       "sessions": [
         { "id": "cordoba-pista-2026-9-sabado", "kind": "practica", "name": "Entrenamientos y clasificación (sábado)", "start": "2026-12-19T12:00:00-03:00", "timeKnown": false, "durationMin": 60, "timeSources": [{ "name": "FRAD · comunicado del calendario (28/8/2026)", "url": "https://fradcba.com.ar/se-modifico-el-calendario-del-cordoba-pista-y-la-ultima-del-provincial-de-karting-en-asfalto/", "start": "2026-12-19T12:00:00-03:00" }] },

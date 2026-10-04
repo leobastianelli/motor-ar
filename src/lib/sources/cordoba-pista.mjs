@@ -154,6 +154,7 @@ const fechasPrevias = (previous) =>
 export async function cordobaPistaSeason(io, previous = { events: [], standings: {}, meta: {} }, { windowDays = 21, delayMs = 250, now = new Date() } = {}) {
   const nowMs = now.getTime();
   const errors = [];
+  const ignored = [];
   const list = await io.json(`${API}/organizations/${ORG}/events?count=${windowDays > 60 ? 500 : 100}&sort=date&sortDirection=desc`, { revalidate: 300 });
   if (!Array.isArray(list)) throw new Error("Speedhive no devolvió la lista de eventos de la FRAD");
   const previas = fechasPrevias(previous);
@@ -171,8 +172,8 @@ export async function cordobaPistaSeason(io, previous = { events: [], standings:
       const detail = await io.json(`${API}/events/${e.id}?sessions=true`, { revalidate: 120 });
       if (!esCordobaPista(detail)) continue;
       // Sin sede conocida no es una fecha nuestra (p. ej. el Campeonato Regional Bulnense, que también corre TC 4000 y TC Pista en Pedro Devalle):
-      // se avisa, pero no entra a la lista, para que no consuma un número de fecha.
-      if (!sedeDe(detail.location)) errors.push(`evento ${e.id}: sede desconocida «${detail.location?.name}»`);
+      // queda anotado aparte (no es una falla: se repetiría en cada sync y dispararía la alerta de salud) y no consume un número de fecha.
+      if (!sedeDe(detail.location)) ignored.push(`evento ${e.id}: sede desconocida «${detail.location?.name}»`);
       else detalles.set(e.id, { ...e, detail });
     } catch (error) {
       errors.push(`evento ${e.id}: ${error.message}`);
@@ -287,7 +288,7 @@ export async function cordobaPistaSeason(io, previous = { events: [], standings:
   return {
     events,
     standings: {},
-    meta: { [SERIES_ID]: { clases: campeonatos }, cordobaPista: { events: events.length, filledResults: filled, errors } },
+    meta: { [SERIES_ID]: { clases: campeonatos }, cordobaPista: { events: events.length, filledResults: filled, errors, ignored } },
   };
 }
 
