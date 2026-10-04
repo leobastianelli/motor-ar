@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { dedupeFindings, emptyState, evaluate, summaryDue } from "./alerts.mjs";
 import { compareStandings, dateIssues, tnDateConflicts, withConflicts, dateStatus, manualDiscarded, manualExpired, parseTc2000Home, pendingHours, failureLabel, resultsOverdue, sessionResultsMissing, sourceFailures, weekendWithoutAnyHour, staleStandings, visibleEvents } from "./checks.mjs";
-import { chunk, renderAlerts, sendTelegram, sendTelegramPhoto } from "./telegram.mjs";
+import { chunk, renderAlerts, sendTelegram, sendTelegramMediaGroup, sendTelegramPhoto } from "./telegram.mjs";
 
 // Domingo 27/09/2026 (Balcarce, TC Pick Up): la carrera no tiene hora.
 const sunday = (over = {}) => ({
@@ -420,6 +420,45 @@ test("sendTelegramPhoto: si sendPhoto falla, cae a sendMessage con el mismo text
   assert.equal(out.sent, 1);
   assert.equal(llamadas.length, 2);
   assert.match(llamadas[1], /\/sendMessage$/);
+});
+
+test("sendTelegramMediaGroup: manda el álbum con sendMediaGroup (fotos por URL); una sola va como foto; sin token, simula", async () => {
+  const urls = ["https://www.somosfierros.ar/placa/resumen/1", "https://www.somosfierros.ar/placa/resumen/2", "https://www.somosfierros.ar/placa/resumen/3"];
+  const log = console.log;
+  console.log = () => {};
+  try {
+    assert.equal((await sendTelegramMediaGroup(urls, {})).simulated, true);
+  } finally {
+    console.log = log;
+  }
+  assert.deepEqual(await sendTelegramMediaGroup([], { token: "t", chatId: "1" }), { sent: 0 });
+  const llamadas = [];
+  const fetchImpl = async (url, fetchInit) => (llamadas.push([url, JSON.parse(fetchInit.body)]), { ok: true });
+  const ok = await sendTelegramMediaGroup(urls, { token: "SECRETO", chatId: "42", fetchImpl });
+  assert.equal(ok.sent, 3);
+  assert.match(llamadas[0][0], /\/sendMediaGroup$/);
+  assert.deepEqual(llamadas[0][1].media, urls.map((media) => ({ type: "photo", media })));
+  assert.equal(llamadas[0][1].chat_id, "42");
+  await sendTelegramMediaGroup(urls.slice(0, 1), { token: "SECRETO", chatId: "42", fetchImpl });
+  assert.match(llamadas[1][0], /\/sendPhoto$/);
+  assert.equal(llamadas[1][1].photo, urls[0]);
+});
+
+test("sendTelegramMediaGroup: si falla el álbum, manda los enlaces como texto (sin filtrar el token)", async () => {
+  const urls = ["https://www.somosfierros.ar/placa/resumen/1", "https://www.somosfierros.ar/placa/resumen/2"];
+  const llamadas = [];
+  const out = await sendTelegramMediaGroup(urls, {
+    token: "SECRETO",
+    chatId: "42",
+    fetchImpl: async (url, fetchInit) => {
+      llamadas.push([url, JSON.parse(fetchInit.body)]);
+      return url.endsWith("/sendMediaGroup") ? { ok: false, status: 400 } : { ok: true };
+    },
+  });
+  assert.equal(out.fallback, true);
+  assert.equal(llamadas.length, 2);
+  assert.match(llamadas[1][0], /\/sendMessage$/);
+  assert.ok(urls.every((u) => llamadas[1][1].text.includes(u)));
 });
 
 test("las fechas del TN se cruzan con Speedhive: coinciden dentro de un día o se marcan en conflicto", () => {

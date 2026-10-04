@@ -40,6 +40,15 @@ Por qué así y no con la API de X (decidido el 24/09/2026): desde febrero de 20
 
 El viernes 2/10 a la mañana llega la agenda del fin de semana por Telegram, y el sábado y el domingo llega un borrador por cada clasificación y carrera con resultados.
 
+## Carrusel «Lo que dejó el finde» (Instagram y X)
+
+El borrador del domingo («Así quedó el finde») lleva además un carrusel de hasta 4 placas de 1080 × 1350, generadas con los datos de la temporada (`src/lib/resumen-core.mjs`, lógica pura y con pruebas; las imágenes salen de `src/app/placa/resumen/[n]/route.tsx`).
+
+- **Qué cuenta:** 1) portada con el titular («Faín ganó en San Nicolás») y un índice de las demás; 2) detalle del evento principal: la categoría argentina de mayor jerarquía (orden de `series.ts`: TC antes que TC Pista; si no hay, una internacional con argentinos y después el resto), con podio, «pole y victoria» si el poleman ganó, el líder del campeonato sólo si la tabla está al día, y la etiqueta «Provisorio» si el resultado es de la planilla de la ACTC; 3) el mejor argentino que corrió afuera (largada → llegada, o por qué no terminó); 4) «Y además»: hasta 4 categorías más con su ganador y segundo. Si no hay argentinos o no hay más categorías, la placa correspondiente no existe: el carrusel es de 2 o 3 y el borrador sólo lista las que hay. Nada se inventa: sin dato, no se muestra.
+- **URLs:** `/placa/resumen/1` a `/4` muestran el último domingo con resultados. `?domingo=YYYY-MM-DD` pide un fin de semana puntual: el borrador usa esa forma para que las placas queden fijas a su domingo. La página `/placa` muestra el carrusel para bajarlo a mano.
+- **Telegram:** el borrador (`images` en `redes-core.mjs`) se manda primero como álbum (`sendMediaGroup`, fotos por URL pública; `sendTelegramMediaGroup` en `monitor/telegram.mjs`) y después como el mensaje de siempre con el botón «Publicar en X». Si el álbum falla (Telegram no pudo bajar una imagen), se mandan los enlaces como texto y el mensaje sale igual. Las imágenes se bajan del sitio publicado: antes del merge/deploy no existen.
+- **Vista previa local:** `FIERROS_NOW=2026-10-04T23:30:00Z npm run dev` y abrir `/placa/resumen/1` (o `/placa`); `node scripts/borradores-redes.mjs --dry` muestra el borrador con la línea «Carrusel: N placas».
+
 ## Disparo con cron-job.org (24/09/2026)
 
 GitHub Actions descarta la mayoría de sus corridas programadas: el 24/09 la sincronización (cron horario de jueves a domingo) corrió 4 veces de las que tenía que correr, y el vigilante (también horario) otras 4. Todo lo que depende de la hora sufre: los borradores para redes (que dependían del job `gate` de `sync-season.yml`, disparado por esos mismos crons), el respaldo del refresco caliente y la sincronización de un fin de semana. El repo es privado (2.000 minutos de Actions por mes), así que no se puede pasar la sync completa (~7 min) a cada 30 min a ciegas.

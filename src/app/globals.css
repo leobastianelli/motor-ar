@@ -202,6 +202,8 @@ button{color:inherit;font-family:inherit}
 /* Placa del finde */
 .placa img{display:block;width:100%;max-width:540px;height:auto;box-shadow:0 12px 32px rgba(16,18,19,.15)}
 .placa p{margin-top:14px}
+.placa-carrusel{display:flex;flex-wrap:wrap;gap:8px 24px}
+.placa-carrusel p{margin:0 0 16px;width:100%;max-width:540px}
 /* Páginas legales y de fuentes */
 .legal{max-width:760px}
 .legal h2{font-size:22px;margin:32px 0 8px}

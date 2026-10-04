@@ -110,3 +110,30 @@ export async function sendTelegramPhoto(photoUrl, caption, { token, chatId, fetc
     return sendTelegram(caption, { token, chatId, fetchImpl, replyMarkup });
   }
 }
+
+/**
+ * Manda varias fotos juntas como álbum (el carrusel del resumen del finde): `urls` son públicas, Telegram las descarga sola (hasta 10 por álbum;
+ * con una sola, `sendMediaGroup` no sirve y va como foto suelta). Si falla (Telegram no pudo bajar alguna, error de red), cae a mandar los
+ * enlaces como texto para no perder las placas. Nunca escribe el token en ningún mensaje de error.
+ */
+export async function sendTelegramMediaGroup(urls, { token, chatId, fetchImpl = fetch } = {}) {
+  const photos = (urls ?? []).slice(0, 10);
+  if (!photos.length) return { sent: 0 };
+  if (!token || !chatId) {
+    console.log(`\n[telegram simulado: falta TELEGRAM_BOT_TOKEN o TELEGRAM_CHAT_ID]\n[álbum] ${photos.join("\n")}\n`);
+    return { sent: 0, simulated: true };
+  }
+  try {
+    const single = photos.length === 1;
+    const res = await fetchImpl(`https://api.telegram.org/bot${token}/${single ? "sendPhoto" : "sendMediaGroup"}`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(single ? { chat_id: chatId, photo: photos[0] } : { chat_id: chatId, media: photos.map((media) => ({ type: "photo", media })) }),
+    });
+    if (!res.ok) throw new Error(`Telegram respondió ${res.status}`);
+    return { sent: photos.length };
+  } catch {
+    await sendTelegram(`Placas para adjuntar:\n${photos.join("\n")}`, { token, chatId, fetchImpl });
+    return { sent: 0, fallback: true };
+  }
+}

@@ -123,6 +123,33 @@ test("agenda del viernes (con placa): se manda como foto adjunta, no como enlace
   assert.equal(llamadas.some((u) => u.endsWith("/sendMessage")), false, "no hace falta el mensaje de texto: la foto salió bien");
 });
 
+test("resumen del domingo (con carrusel): primero el álbum de placas y después el mensaje con el botón", async () => {
+  const { sql } = fakeSql();
+  const tc = { id: "tc-12", seriesId: "tc", round: 12, name: "Fecha 12", circuit: { city: "San Nicolás" }, source: "ACTC (calendario)", sessions: [{ id: "f", kind: "final", name: "Final", start: "2026-10-04T14:00:00-03:00", timeKnown: true, durationMin: 40, results: [row(1, "Ignacio Faín"), row(2, "Facundo Chapur"), row(3, "Julián Santero")] }] };
+  const cat = { drivers, series: [...series, { id: "tc", name: "Turismo Carretera", short: "TC", code: "TC", scope: "nacional", color: "#16658f" }], broadcasts: {} };
+  const llamadas = [];
+  const fetchImpl = async (url, init) => { llamadas.push([url, JSON.parse(init.body)]); return { ok: true }; };
+  const out = await enviarBorradores({ raw: { events: [tc], standings: {}, meta: {} }, now: "2026-10-04T23:30:00Z", catalog: cat, events: [tc], sql, creds: { token: "t", chatId: "c", fetchImpl } });
+  assert.ok(out.enviados.some((d) => d.key === "resumen:2026-10-04"));
+  // El resumen va primero (el borrador de la final también sale, pero después): álbum y mensaje del resumen, juntos.
+  assert.deepEqual(llamadas.slice(0, 2).map(([u]) => u.split("/").pop()), ["sendMediaGroup", "sendMessage"]);
+  assert.equal(llamadas[0][1].media.length, 2);
+  assert.equal(llamadas[0][1].media[0].media, "https://www.somosfierros.ar/placa/resumen/1?domingo=2026-10-04");
+  assert.ok(llamadas[1][1].reply_markup.inline_keyboard[0][0].url.startsWith("https://x.com/intent/post"));
+  assert.match(llamadas[1][1].text, /Carrusel: 2 placas/);
+});
+
+test("resumen del domingo: si el álbum falla, igual sale el mensaje (con los enlaces antes) y no es un error", async () => {
+  const tc = { id: "tc-12", seriesId: "tc", round: 12, name: "Fecha 12", circuit: { city: "San Nicolás" }, source: "ACTC (calendario)", sessions: [{ id: "f", kind: "final", name: "Final", start: "2026-10-04T14:00:00-03:00", timeKnown: true, durationMin: 40, results: [row(1, "Ignacio Faín")] }] };
+  const cat = { drivers, series: [{ id: "tc", name: "Turismo Carretera", short: "TC", code: "TC", scope: "nacional", color: "#16658f" }], broadcasts: {} };
+  const llamadas = [];
+  const fetchImpl = async (url) => { llamadas.push(url.split("/").pop()); return url.endsWith("/sendMediaGroup") ? { ok: false, status: 400 } : { ok: true }; };
+  const out = await enviarBorradores({ raw: { events: [tc], standings: {}, meta: {} }, now: "2026-10-04T23:30:00Z", catalog: cat, events: [tc], sql: null, creds: { token: "t", chatId: "c", fetchImpl } });
+  assert.deepEqual(llamadas.slice(0, 3), ["sendMediaGroup", "sendMessage", "sendMessage"], "álbum fallido, enlaces como texto y el mensaje del resumen");
+  assert.equal(out.errores.length, 0);
+  assert.ok(out.enviados.some((d) => d.kind === "resumen"));
+});
+
 test("una clave ya enviada no se vuelve a consultar en la base en la llamada siguiente (Neon puede dormir)", async () => {
   const { sql } = fakeSql();
   let queries = 0;
