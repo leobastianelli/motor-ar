@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T13:28:25.213Z",
+  "generatedAt": "2026-10-04T13:38:18.688Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -114471,7 +114471,6 @@
     }
   },
   "failures": [
-    "Speedhive TN: No se pudo descargar https://eventresults-api.speedhive.com/api/v0.2.3/eventresults/organizations/381036/events?count=80: HTTP 502 (text/html) (se conservan los datos anteriores)",
     "Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior"
   ]
 }
