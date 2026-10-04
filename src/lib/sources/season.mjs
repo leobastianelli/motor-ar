@@ -18,6 +18,7 @@ import { f1Videos, keepPreviousF1Videos } from "./f1-youtube.mjs";
 import { applySchedules, buildConsensus, solotcNotes } from "./schedule-notes.mjs";
 import { protectSeason, protectStandings } from "./guard.mjs";
 import { tc2000Season } from "./tc2000.mjs";
+import { tcrSaSeason } from "./tcr-sa.mjs";
 
 const SOURCES = [
   ["F1", ["f1"], f1Season],
@@ -29,6 +30,7 @@ const SOURCES = [
   // Córdoba Pista: calendario, horarios y resultados de las siete clases desde el cronometraje de la FRAD (Speedhive); el campeonato de cada
   // clase lo calcula Fierros con esos resultados (cordoba-pista-campeonato.mjs). Las fechas viejas no se vuelven a pedir (ventana).
   ["Córdoba Pista", ["cordoba-pista"], (io, previous) => cordobaPistaSeason(io, previous, { windowDays: io.timingWindowDays ?? 21, delayMs: io.cordobaDelayMs ?? 250 })],
+  ["TCR South America", ["tcr-sa"], tcrSaSeason],
 ];
 
 /** Categorías cuyos horarios salen de notas de cronograma (ver schedule-notes.mjs). */
