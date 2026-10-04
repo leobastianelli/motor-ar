@@ -1,6 +1,44 @@
 {
-  "generatedAt": "2026-10-04T17:40:18.493Z",
+  "generatedAt": "2026-10-04T22:25:09.476Z",
   "drivers": [
+    {
+      "key": "adrian cassina",
+      "keys": [
+        "adrian cassina"
+      ],
+      "slug": "adrian-cassina",
+      "name": "Adrian Cassina",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "4"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "adrian chiriano",
+      "keys": [
+        "adrian chiriano"
+      ],
+      "slug": "adrian-chiriano",
+      "name": "Adrián Chiriano",
+      "aliases": [],
+      "series": [
+        "tcr-sa"
+      ],
+      "numbers": {
+        "tcr-sa": "88"
+      },
+      "teams": {
+        "tcr-sa": "Honda Racing"
+      },
+      "firstSeen": "2026-03-08",
+      "lastSeen": "2026-10-04"
+    },
     {
       "key": "adrian percaz",
       "keys": [
@@ -80,6 +118,60 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "agustin carbo",
+      "keys": [
+        "agustin carbo"
+      ],
+      "slug": "agustin-carbo",
+      "name": "Agustin Carbo",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "18"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "agustin compagnucci",
+      "keys": [
+        "agustin compagnucci"
+      ],
+      "slug": "agustin-compagnucci",
+      "name": "Agustin Compagnucci",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "22"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "agustin lingua",
+      "keys": [
+        "agustin lingua"
+      ],
+      "slug": "agustin-lingua",
+      "name": "Agustin Lingua",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "6"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
+    },
+    {
       "key": "agustin martinez",
       "keys": [
         "agustin martinez"
@@ -98,6 +190,24 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-02-15"
+    },
+    {
+      "key": "agustin rinaudo",
+      "keys": [
+        "agustin rinaudo"
+      ],
+      "slug": "agustin-rinaudo",
+      "name": "Agustin Rinaudo",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "36"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "alan cifre",
@@ -272,6 +382,24 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "angel b marino",
+      "keys": [
+        "angel b marino"
+      ],
+      "slug": "angel-b-marino",
+      "name": "Angel B. Marino",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "44"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "antonino garcia",
       "keys": [
         "antonino garcia",
@@ -296,6 +424,60 @@
       ]
     },
     {
+      "key": "andrada ariel",
+      "keys": [
+        "andrada ariel"
+      ],
+      "slug": "ariel-andrada",
+      "name": "Ariel Andrada",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "4"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "ariel bockelmann",
+      "keys": [
+        "ariel bockelmann"
+      ],
+      "slug": "ariel-bockelmann",
+      "name": "Ariel Bockelmann",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "8"
+      },
+      "teams": {},
+      "firstSeen": "2026-08-22",
+      "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "ariel e pavon",
+      "keys": [
+        "ariel e pavon"
+      ],
+      "slug": "ariel-e-pavon",
+      "name": "Ariel E Pavon",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "2"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "augusto carinelli",
       "keys": [
         "augusto carinelli"
@@ -314,6 +496,24 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "ayrton martinez",
+      "keys": [
+        "ayrton martinez"
+      ],
+      "slug": "ayrton-martinez",
+      "name": "Ayrton Martinez",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "94"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-07-05"
     },
     {
       "key": "bautista damiani",
@@ -337,6 +537,24 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "bautista della santina",
+      "keys": [
+        "bautista della santina"
+      ],
+      "slug": "bautista-della-santina",
+      "name": "Bautista Della Santina",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "4"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "bautista roqueta",
@@ -529,6 +747,44 @@
       "lastSeen": "2026-09-20"
     },
     {
+      "key": "camilo trappa",
+      "keys": [
+        "camilo trappa"
+      ],
+      "slug": "camilo-trappa",
+      "name": "Camilo Trappa",
+      "aliases": [],
+      "series": [
+        "tcr-sa"
+      ],
+      "numbers": {
+        "tcr-sa": "27"
+      },
+      "teams": {
+        "tcr-sa": "Hyundai MSA"
+      },
+      "firstSeen": "2026-03-08",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "carlos falvo",
+      "keys": [
+        "carlos falvo"
+      ],
+      "slug": "carlos-falvo",
+      "name": "Carlos Falvo",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "6"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
+    },
+    {
       "key": "carlos okulovich",
       "keys": [
         "carlos okulovich"
@@ -537,16 +793,19 @@
       "name": "Carlos Okulovich",
       "aliases": [],
       "series": [
-        "tn"
+        "tn",
+        "tcr-sa"
       ],
       "numbers": {
-        "tn": "13"
+        "tn": "13",
+        "tcr-sa": "83"
       },
       "teams": {
-        "tn": "Chevrolet Cruze"
+        "tn": "Chevrolet Cruze",
+        "tcr-sa": "Honda Racing"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "christian ledesma",
@@ -569,6 +828,60 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "christian rovira",
+      "keys": [
+        "christian rovira"
+      ],
+      "slug": "christian-rovira",
+      "name": "Christian Rovira",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "99"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "buchholz claudio",
+      "keys": [
+        "buchholz claudio"
+      ],
+      "slug": "claudio-buchholz",
+      "name": "Claudio Buchholz",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "2"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "claudio mahl",
+      "keys": [
+        "claudio mahl"
+      ],
+      "slug": "claudio-mahl",
+      "name": "Claudio Mahl",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "29"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "costanzo maximo",
       "keys": [
         "costanzo maiximo",
@@ -589,6 +902,24 @@
       },
       "firstSeen": "2026-01-24",
       "lastSeen": "2026-03-01"
+    },
+    {
+      "key": "albuixech cristian",
+      "keys": [
+        "albuixech cristian"
+      ],
+      "slug": "cristian-albuixech",
+      "name": "Cristian Albuixech",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "28"
+      },
+      "teams": {},
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "cristian vaira",
@@ -659,6 +990,42 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "beltramino daniel",
+      "keys": [
+        "beltramino daniel"
+      ],
+      "slug": "daniel-beltramino",
+      "name": "Daniel Beltramino",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "11"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "carrizo daniel",
+      "keys": [
+        "carrizo daniel"
+      ],
+      "slug": "daniel-carrizo",
+      "name": "Daniel Carrizo",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "33"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-07-05"
+    },
+    {
       "key": "costa daniel sanchez",
       "keys": [
         "costa daniel sanchez"
@@ -677,6 +1044,24 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-07-05"
+    },
+    {
+      "key": "daniel devinchente",
+      "keys": [
+        "daniel devinchente"
+      ],
+      "slug": "daniel-devinchente",
+      "name": "Daniel Devinchente",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "13"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "daniel faggiano",
@@ -702,6 +1087,42 @@
       "lastSeen": "2026-03-22"
     },
     {
+      "key": "daniel santoni",
+      "keys": [
+        "daniel santoni"
+      ],
+      "slug": "daniel-santoni",
+      "name": "Daniel Santoni",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "46"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "cravero dante",
+      "keys": [
+        "cravero dante"
+      ],
+      "slug": "dante-cravero",
+      "name": "Dante Cravero",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "12"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "dante hainze rubiera",
       "keys": [
         "dante hanze rubiera",
@@ -723,6 +1144,42 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-01-24",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "dario necochea",
+      "keys": [
+        "dario necochea"
+      ],
+      "slug": "dario-necochea",
+      "name": "Dario Necochea",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "7"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "a diego martinez",
+      "keys": [
+        "a diego martinez"
+      ],
+      "slug": "diego-a-martinez",
+      "name": "Diego A. Martinez",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "9"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
       "lastSeen": "2026-09-27"
     },
     {
@@ -780,15 +1237,18 @@
       "name": "Diego Ciantini",
       "aliases": [],
       "series": [
-        "tc-pick-up"
+        "tc-pick-up",
+        "tcr-sa"
       ],
       "numbers": {
-        "tc-pick-up": "115"
+        "tc-pick-up": "115",
+        "tcr-sa": "115"
       },
       "teams": {
-        "tc-pick-up": "Ford"
+        "tc-pick-up": "Ford",
+        "tcr-sa": "Hyundai MSA"
       },
-      "firstSeen": "2026-09-26",
+      "firstSeen": "2026-03-08",
       "lastSeen": "2026-09-27"
     },
     {
@@ -838,6 +1298,24 @@
       "lastSeen": "2026-09-20"
     },
     {
+      "key": "diego minudri",
+      "keys": [
+        "diego minudri"
+      ],
+      "slug": "diego-minudri",
+      "name": "Diego Minudri",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "10"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-04",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "di dino palma",
       "keys": [
         "di dino palma"
@@ -859,6 +1337,60 @@
       },
       "firstSeen": "2026-03-21",
       "lastSeen": "2026-03-22"
+    },
+    {
+      "key": "edgar pilotto",
+      "keys": [
+        "edgar pilotto"
+      ],
+      "slug": "edgar-pilotto",
+      "name": "Edgar Pilotto",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "2"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "bianchini eduardo",
+      "keys": [
+        "bianchini eduardo"
+      ],
+      "slug": "eduardo-bianchini",
+      "name": "Eduardo Bianchini",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "42"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "eduardo panelli",
+      "keys": [
+        "eduardo panelli"
+      ],
+      "slug": "eduardo-panelli",
+      "name": "Eduardo Panelli",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "20"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "craparo elio",
@@ -940,6 +1472,42 @@
       "lastSeen": "2026-09-26"
     },
     {
+      "key": "esteban garcia",
+      "keys": [
+        "esteban garcia"
+      ],
+      "slug": "esteban-garcia",
+      "name": "Esteban Garcia",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "24"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "esteban guerrieri",
+      "keys": [
+        "esteban guerrieri"
+      ],
+      "slug": "esteban-guerrieri",
+      "name": "Esteban Guerrieri",
+      "aliases": [],
+      "series": [
+        "tcr-sa"
+      ],
+      "numbers": {},
+      "teams": {
+        "tcr-sa": "Honda Racing"
+      },
+      "firstSeen": "2026-04-26",
+      "lastSeen": "2026-04-26"
+    },
+    {
       "key": "esteban luna",
       "keys": [
         "esteban luna"
@@ -977,6 +1545,42 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-01-23",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "esteban postay",
+      "keys": [
+        "esteban postay"
+      ],
+      "slug": "esteban-postay",
+      "name": "Esteban Postay",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "88"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-07-05"
+    },
+    {
+      "key": "esteban soave",
+      "keys": [
+        "esteban soave"
+      ],
+      "slug": "esteban-soave",
+      "name": "Esteban Soave",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "3"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
       "lastSeen": "2026-09-27"
     },
     {
@@ -1058,6 +1662,24 @@
       "lastSeen": "2026-08-30"
     },
     {
+      "key": "carreno fabian",
+      "keys": [
+        "carreno fabian"
+      ],
+      "slug": "fabian-carreno",
+      "name": "Fabian Carreño",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "44"
+      },
+      "teams": {},
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-05-10"
+    },
+    {
       "key": "fabian yannantuoni",
       "keys": [
         "fabian yannantuoni",
@@ -1067,19 +1689,42 @@
       "name": "Fabián Yannantuoni",
       "aliases": [],
       "series": [
-        "tn"
+        "tn",
+        "tcr-sa"
       ],
       "numbers": {
-        "tn": "9"
+        "tn": "9",
+        "tcr-sa": "5"
       },
       "teams": {
-        "tn": "Ford Focus"
+        "tn": "Ford Focus",
+        "tcr-sa": "Paladini Racing"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20",
+      "lastSeen": "2026-10-04",
       "formerSlugs": [
         "fabia-n-yannantuoni"
       ]
+    },
+    {
+      "key": "fabricio pezzini",
+      "keys": [
+        "fabricio pezzini"
+      ],
+      "slug": "fabricio-pezzini",
+      "name": "Fabricio Pezzini",
+      "aliases": [],
+      "series": [
+        "tcr-sa"
+      ],
+      "numbers": {
+        "tcr-sa": "9"
+      },
+      "teams": {
+        "tcr-sa": "Paladini Racing"
+      },
+      "firstSeen": "2026-03-08",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "fabrizio maggini",
@@ -1258,6 +1903,24 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "corral federico",
+      "keys": [
+        "corral federico"
+      ],
+      "slug": "federico-corral",
+      "name": "Federico Corral",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "21"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-07-05"
+    },
+    {
       "key": "federico luques",
       "keys": [
         "federico luques"
@@ -1276,6 +1939,24 @@
       },
       "firstSeen": "2026-05-02",
       "lastSeen": "2026-05-03"
+    },
+    {
+      "key": "federico terrier",
+      "keys": [
+        "federico terrier"
+      ],
+      "slug": "federico-terrier",
+      "name": "Federico Terrier",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "3"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "bernasconi felipe",
@@ -1316,6 +1997,24 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-04-05"
+    },
+    {
+      "key": "fernandez pedro",
+      "keys": [
+        "fernandez pedro"
+      ],
+      "slug": "fernandez-pedro",
+      "name": "FERNANDEZ PEDRO",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "96"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "coltrinari francisco",
@@ -1377,6 +2076,42 @@
       },
       "firstSeen": "2026-09-26",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "francisco olmos",
+      "keys": [
+        "francisco olmos"
+      ],
+      "slug": "francisco-olmos",
+      "name": "Francisco Olmos",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "7"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "bugliotti francisco viel",
+      "keys": [
+        "bugliotti francisco viel"
+      ],
+      "slug": "francisco-viel-bugliotti",
+      "name": "Francisco Viel Bugliotti",
+      "aliases": [],
+      "series": [
+        "tcr-sa"
+      ],
+      "numbers": {},
+      "teams": {
+        "tcr-sa": "Paladini Racing"
+      },
+      "firstSeen": "2026-04-26",
+      "lastSeen": "2026-04-26"
     },
     {
       "key": "bodrato franco mionetto",
@@ -1567,6 +2302,42 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "forcheri gaston",
+      "keys": [
+        "forcheri gaston"
+      ],
+      "slug": "gaston-forcheri",
+      "name": "Gaston Forcheri",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "45"
+      },
+      "teams": {},
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "gaston giordano",
+      "keys": [
+        "gaston giordano"
+      ],
+      "slug": "gaston-giordano",
+      "name": "Gaston Giordano",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "48"
+      },
+      "teams": {},
+      "firstSeen": "2026-08-22",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "gaston iansa",
       "keys": [
         "gaston iansa"
@@ -1635,6 +2406,42 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "genaro rasetto",
+      "keys": [
+        "genaro rasetto"
+      ],
+      "slug": "genaro-rasetto",
+      "name": "Genaro Rasetto",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "66"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "german pagliero",
+      "keys": [
+        "german pagliero"
+      ],
+      "slug": "german-pagliero",
+      "name": "German Pagliero",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "67"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "german todino",
       "keys": [
         "german todino"
@@ -1653,6 +2460,60 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "german zafra",
+      "keys": [
+        "german zafra"
+      ],
+      "slug": "german-zafra",
+      "name": "German Zafra",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "4"
+      },
+      "teams": {},
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "casale geronimo",
+      "keys": [
+        "casale geronimo"
+      ],
+      "slug": "geronimo-casale",
+      "name": "Geronimo Casale",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "72"
+      },
+      "teams": {},
+      "firstSeen": "2026-08-21",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "beltramo giancarlo",
+      "keys": [
+        "beltramo giancarlo"
+      ],
+      "slug": "giancarlo-beltramo",
+      "name": "Giancarlo Beltramo",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "23"
+      },
+      "teams": {},
+      "firstSeen": "2026-08-22",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "antolin gonzalo",
@@ -1699,6 +2560,132 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "gonzalo viel",
+      "keys": [
+        "gonzalo viel"
+      ],
+      "slug": "gonzalo-viel",
+      "name": "Gonzalo Viel",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "21"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "galfrascoli guillermo",
+      "keys": [
+        "galfrascoli guillermo"
+      ],
+      "slug": "guillermo-galfrascoli",
+      "name": "Guillermo Galfrascoli",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "24"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-07-05"
+    },
+    {
+      "key": "guillermo ponce",
+      "keys": [
+        "guillermo ponce"
+      ],
+      "slug": "guillermo-ponce",
+      "name": "Guillermo Ponce",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "58"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "guillermo saby",
+      "keys": [
+        "guillermo saby"
+      ],
+      "slug": "guillermo-saby",
+      "name": "Guillermo Saby",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "57"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "fernigrini gustavo",
+      "keys": [
+        "fernigrini gustavo"
+      ],
+      "slug": "gustavo-fernigrini",
+      "name": "Gustavo Fernigrini",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "22"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "gatti gustavo",
+      "keys": [
+        "gatti gustavo"
+      ],
+      "slug": "gustavo-gatti",
+      "name": "Gustavo Gatti",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "9"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "gustavo pancello",
+      "keys": [
+        "gustavo pancello"
+      ],
+      "slug": "gustavo-pancello",
+      "name": "Gustavo Pancello",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "30"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
+    },
+    {
       "key": "gustavo tadei",
       "keys": [
         "gustavo tadei",
@@ -1725,6 +2712,24 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "gustavo vaschetti",
+      "keys": [
+        "gustavo vaschetti"
+      ],
+      "slug": "gustavo-vaschetti",
+      "name": "Gustavo Vaschetti",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "75"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-04",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "hernan palazzo",
@@ -1792,6 +2797,42 @@
       },
       "firstSeen": "2026-06-05",
       "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "hugo styl",
+      "keys": [
+        "hugo styl"
+      ],
+      "slug": "hugo-styl",
+      "name": "Hugo Styl",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "48"
+      },
+      "teams": {},
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "a herlein ignacio",
+      "keys": [
+        "a herlein ignacio"
+      ],
+      "slug": "ignacio-a-herlein",
+      "name": "Ignacio A. Herlein",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "77"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "fain ignacio",
@@ -1951,6 +2992,42 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "ismael re",
+      "keys": [
+        "ismael re"
+      ],
+      "slug": "ismael-re",
+      "name": "Ismael Re",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "93"
+      },
+      "teams": {},
+      "firstSeen": "2026-08-22",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "ivan marescalchi",
+      "keys": [
+        "ivan marescalchi"
+      ],
+      "slug": "ivan-marescalchi",
+      "name": "Ivan Marescalchi",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "10"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-06"
+    },
+    {
       "key": "javier merlo",
       "keys": [
         "javier merlo"
@@ -1959,13 +3036,15 @@
       "name": "Javier Merlo",
       "aliases": [],
       "series": [
-        "tn"
+        "tn",
+        "tcr-sa"
       ],
       "numbers": {
         "tn": "111"
       },
       "teams": {
-        "tn": "VW Virtus"
+        "tn": "VW Virtus",
+        "tcr-sa": "Paladini Racing"
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-09-20"
@@ -2039,6 +3118,42 @@
       "lastSeen": "2026-06-20"
     },
     {
+      "key": "alzamendi joaquin",
+      "keys": [
+        "alzamendi joaquin"
+      ],
+      "slug": "joaquin-alzamendi",
+      "name": "Joaquin Alzamendi",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "37"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "del joaquin pino",
+      "keys": [
+        "del joaquin pino"
+      ],
+      "slug": "joaquin-del-pino",
+      "name": "Joaquin Del Pino",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "159"
+      },
+      "teams": {},
+      "firstSeen": "2026-08-22",
+      "lastSeen": "2026-08-23"
+    },
+    {
       "key": "joaquin ochoa",
       "keys": [
         "joaquin ochoa",
@@ -2081,6 +3196,24 @@
       },
       "firstSeen": "2026-03-21",
       "lastSeen": "2026-07-26"
+    },
+    {
+      "key": "joaquin rubino",
+      "keys": [
+        "joaquin rubino"
+      ],
+      "slug": "joaquin-rubino",
+      "name": "Joaquin Rubino",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "1"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-04-05"
     },
     {
       "key": "gassmann joel",
@@ -2151,6 +3284,24 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "jorge mase",
+      "keys": [
+        "jorge mase"
+      ],
+      "slug": "jorge-mase",
+      "name": "Jorge Mase",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "25"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-22"
+    },
+    {
       "key": "alberto goya jose",
       "keys": [
         "alberto goya jose"
@@ -2212,6 +3363,24 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "gago jose",
+      "keys": [
+        "gago jose"
+      ],
+      "slug": "jose-gago",
+      "name": "Jose Gago",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "16"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-26"
+    },
+    {
       "key": "arrate jose luis",
       "keys": [
         "arrate jose luis"
@@ -2230,6 +3399,24 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-03-15"
+    },
+    {
+      "key": "domessi jose luis",
+      "keys": [
+        "domessi jose luis"
+      ],
+      "slug": "jose-luis-domessi",
+      "name": "Jose Luis Domessi",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "7"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "jose manuel urcera",
@@ -2253,6 +3440,62 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "jose margara",
+      "keys": [
+        "jose margara"
+      ],
+      "slug": "jose-margara",
+      "name": "Jose Margara",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "32"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "angel juan rosso",
+      "keys": [
+        "angel juan rosso"
+      ],
+      "slug": "juan-angel-rosso",
+      "name": "Juan Ángel Rosso",
+      "aliases": [],
+      "series": [
+        "tcr-sa"
+      ],
+      "numbers": {
+        "tcr-sa": "16"
+      },
+      "teams": {
+        "tcr-sa": "Paladini Racing"
+      },
+      "firstSeen": "2026-03-08",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "angiorama juan",
+      "keys": [
+        "angiorama juan"
+      ],
+      "slug": "juan-angiorama",
+      "name": "Juan Angiorama",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "53"
+      },
+      "teams": {},
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "antonio juan sandin",
@@ -2342,6 +3585,24 @@
       "lastSeen": "2026-09-20"
     },
     {
+      "key": "gianre juan",
+      "keys": [
+        "gianre juan"
+      ],
+      "slug": "juan-gianre",
+      "name": "Juan Gianre",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "1"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "canela ignacio juan",
       "keys": [
         "canela ignacio juan"
@@ -2362,6 +3623,24 @@
       "lastSeen": "2026-09-20"
     },
     {
+      "key": "chesta ignacio juan",
+      "keys": [
+        "chesta ignacio juan"
+      ],
+      "slug": "juan-ignacio-chesta",
+      "name": "Juan Ignacio Chesta",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "71"
+      },
+      "teams": {},
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-05-10"
+    },
+    {
       "key": "ignacio juan maceira",
       "keys": [
         "ignacio juan maceira"
@@ -2380,6 +3659,24 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "ignacio juan vidal",
+      "keys": [
+        "ignacio juan vidal"
+      ],
+      "slug": "juan-ignacio-vidal",
+      "name": "Juan Ignacio Vidal",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "31"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-26"
     },
     {
       "key": "conde jose juan",
@@ -2476,6 +3773,60 @@
       "lastSeen": "2026-03-08"
     },
     {
+      "key": "juan lucas olmos",
+      "keys": [
+        "juan lucas olmos"
+      ],
+      "slug": "juan-lucas-olmos",
+      "name": "Juan Lucas Olmos",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "11"
+      },
+      "teams": {},
+      "firstSeen": "2026-08-22",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "juan m martinez",
+      "keys": [
+        "juan m martinez"
+      ],
+      "slug": "juan-m-martinez",
+      "name": "Juan M Martinez",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "87"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "camargo juan manuel",
+      "keys": [
+        "camargo juan manuel"
+      ],
+      "slug": "juan-manuel-camargo",
+      "name": "Juan Manuel Camargo",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "60"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
+    },
+    {
       "key": "eluchans juan martin",
       "keys": [
         "eluchans juan martin"
@@ -2516,6 +3867,24 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "juan marconi p",
+      "keys": [
+        "juan marconi p"
+      ],
+      "slug": "juan-p-marconi",
+      "name": "Juan P. Marconi",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "5"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "alberti juan pablo",
       "keys": [
         "alberti juan pablo"
@@ -2534,6 +3903,24 @@
       },
       "firstSeen": "2026-02-21",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "cortina juan pablo",
+      "keys": [
+        "cortina juan pablo"
+      ],
+      "slug": "juan-pablo-cortina",
+      "name": "Juan Pablo Cortina",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "38"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-07-05"
     },
     {
       "key": "gianini juan pablo",
@@ -2576,6 +3963,24 @@
       "lastSeen": "2026-05-17"
     },
     {
+      "key": "juan martinbianco pablo",
+      "keys": [
+        "juan martinbianco pablo"
+      ],
+      "slug": "juan-pablo-martinbianco",
+      "name": "Juan Pablo Martinbianco",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "96"
+      },
+      "teams": {},
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "juan pablo pastori",
       "keys": [
         "juan pablo pastori"
@@ -2594,6 +3999,24 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "juan prado r",
+      "keys": [
+        "juan prado r"
+      ],
+      "slug": "juan-r-prado",
+      "name": "Juan R Prado",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "7"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "gallo juan sebastian",
@@ -2669,7 +4092,8 @@
       "series": [
         "tn",
         "tc",
-        "tc-pick-up"
+        "tc-pick-up",
+        "tcr-sa"
       ],
       "numbers": {
         "tn": "1",
@@ -2679,10 +4103,29 @@
       "teams": {
         "tn": "VW Virtus",
         "tc": "BMW",
-        "tc-pick-up": "Toyota"
+        "tc-pick-up": "Toyota",
+        "tcr-sa": "Honda Racing"
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "julio olmedo",
+      "keys": [
+        "julio olmedo"
+      ],
+      "slug": "julio-olmedo",
+      "name": "Julio Olmedo",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "21"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "candela kevin",
@@ -2724,6 +4167,42 @@
       },
       "firstSeen": "2026-05-16",
       "lastSeen": "2026-05-17"
+    },
+    {
+      "key": "lautaro sanchez",
+      "keys": [
+        "lautaro sanchez"
+      ],
+      "slug": "lautaro-sanchez",
+      "name": "Lautaro Sanchez",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "43"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-07-05"
+    },
+    {
+      "key": "lautaro vicentini",
+      "keys": [
+        "lautaro vicentini"
+      ],
+      "slug": "lautaro-vicentini",
+      "name": "Lautaro Vicentini",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "44"
+      },
+      "teams": {},
+      "firstSeen": "2026-08-22",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "carducci leandro",
@@ -2822,19 +4301,40 @@
       "name": "Leonel Pernía",
       "aliases": [],
       "series": [
-        "tn"
+        "tn",
+        "tcr-sa"
       ],
       "numbers": {
-        "tn": "144"
+        "tn": "144",
+        "tcr-sa": "1"
       },
       "teams": {
-        "tn": "Ford Focus"
+        "tn": "Ford Focus",
+        "tcr-sa": "Honda Racing"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20",
+      "lastSeen": "2026-10-04",
       "formerSlugs": [
         "leonel-perna-a"
       ]
+    },
+    {
+      "key": "lorenzo pardal",
+      "keys": [
+        "lorenzo pardal"
+      ],
+      "slug": "lorenzo-pardal",
+      "name": "Lorenzo Pardal",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "94"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "carlo de luca",
@@ -2896,6 +4396,24 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-03-07",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "fornero lucas",
+      "keys": [
+        "fornero lucas"
+      ],
+      "slug": "lucas-fornero",
+      "name": "Lucas Fornero",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "32"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
       "lastSeen": "2026-09-27"
     },
     {
@@ -3002,6 +4520,24 @@
       "lastSeen": "2026-09-20"
     },
     {
+      "key": "bosio luciano",
+      "keys": [
+        "bosio luciano"
+      ],
+      "slug": "luciano-bosio",
+      "name": "Luciano Bosio",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "6"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "cotignola luciano",
       "keys": [
         "cotignola luciano"
@@ -3020,6 +4556,42 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "dalmasso luciano",
+      "keys": [
+        "dalmasso luciano"
+      ],
+      "slug": "luciano-dalmasso",
+      "name": "Luciano Dalmasso",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "44"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "luciano pacciaroni",
+      "keys": [
+        "luciano pacciaroni"
+      ],
+      "slug": "luciano-pacciaroni",
+      "name": "Luciano Pacciaroni",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "3"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "catelli luis",
@@ -3060,6 +4632,42 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "luis pavon",
+      "keys": [
+        "luis pavon"
+      ],
+      "slug": "luis-pavon",
+      "name": "Luis Pavon",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "99"
+      },
+      "teams": {},
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "luis rinaldini",
+      "keys": [
+        "luis rinaldini"
+      ],
+      "slug": "luis-rinaldini",
+      "name": "Luis Rinaldini",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "5"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "borgert manuel",
@@ -3105,6 +4713,24 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "ballario marcelo",
+      "keys": [
+        "ballario marcelo"
+      ],
+      "slug": "marcelo-ballario",
+      "name": "Marcelo Ballario",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "60"
+      },
+      "teams": {},
+      "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "beraldi marcelo",
       "keys": [
         "beraldi marcelo"
@@ -3143,6 +4769,24 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-09-20"
+    },
+    {
+      "key": "marcelo stefanini",
+      "keys": [
+        "marcelo stefanini"
+      ],
+      "slug": "marcelo-stefanini",
+      "name": "Marcelo Stefanini",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "28"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-07-05"
     },
     {
       "key": "marcelo vergagni",
@@ -3255,6 +4899,24 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "marcos persia",
+      "keys": [
+        "marcos persia"
+      ],
+      "slug": "marcos-persia",
+      "name": "Marcos Persia",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "22"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-07-05"
+    },
+    {
       "key": "marcos quijada",
       "keys": [
         "marcos quijada"
@@ -3273,6 +4935,42 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "mariano pernia",
+      "keys": [
+        "mariano pernia"
+      ],
+      "slug": "mariano-pernia",
+      "name": "Mariano Pernía",
+      "aliases": [],
+      "series": [
+        "tcr-sa"
+      ],
+      "numbers": {},
+      "teams": {
+        "tcr-sa": "Cobra Racing Team"
+      },
+      "firstSeen": "2026-04-26",
+      "lastSeen": "2026-04-26"
+    },
+    {
+      "key": "mariano squaglia",
+      "keys": [
+        "mariano squaglia"
+      ],
+      "slug": "mariano-squaglia",
+      "name": "Mariano Squaglia",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "86"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-05-10"
     },
     {
       "key": "mariano werner",
@@ -3302,6 +5000,24 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "avincetta mario",
+      "keys": [
+        "avincetta mario"
+      ],
+      "slug": "mario-avincetta",
+      "name": "Mario Avincetta",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "59"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
+    },
+    {
       "key": "baldo mario",
       "keys": [
         "baldo mario"
@@ -3320,6 +5036,24 @@
       },
       "firstSeen": "2026-02-21",
       "lastSeen": "2026-04-26"
+    },
+    {
+      "key": "espina mario",
+      "keys": [
+        "espina mario"
+      ],
+      "slug": "mario-espina",
+      "name": "Mario Espina",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "4"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-04",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "blasig martin",
@@ -3344,6 +5078,24 @@
       "formerSlugs": [
         "blasig-marta-n"
       ]
+    },
+    {
+      "key": "ibanez martin",
+      "keys": [
+        "ibanez martin"
+      ],
+      "slug": "martin-ibanez",
+      "name": "Martin Ibañez",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "17"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-06-07"
     },
     {
       "key": "leston martin",
@@ -3441,10 +5193,12 @@
       "name": "Martín Vázquez",
       "aliases": [],
       "series": [
-        "tc"
+        "tc",
+        "cordoba-pista"
       ],
       "numbers": {
-        "tc": "123"
+        "tc": "123",
+        "cordoba-pista": "36"
       },
       "teams": {
         "tc": "Dodge"
@@ -3471,6 +5225,42 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "castro matias",
+      "keys": [
+        "castro matias"
+      ],
+      "slug": "matias-castro",
+      "name": "Matias Castro",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "2"
+      },
+      "teams": {},
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "cervino matias",
+      "keys": [
+        "cervino matias"
+      ],
+      "slug": "matias-cervino",
+      "name": "Matias Cerviño",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "45"
+      },
+      "teams": {},
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-07-05"
     },
     {
       "key": "cohen matias",
@@ -3633,6 +5423,24 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "longo mauricio",
+      "keys": [
+        "longo mauricio"
+      ],
+      "slug": "mauricio-longo",
+      "name": "Mauricio Longo",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "1"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "bestani maximiliano",
       "keys": [
         "bestani maximiliano"
@@ -3651,6 +5459,24 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "maximiliano pinto",
+      "keys": [
+        "maximiliano pinto"
+      ],
+      "slug": "maximiliano-pinto",
+      "name": "Maximiliano Pinto",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "10"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "donzino maximo",
@@ -3677,6 +5503,60 @@
       ]
     },
     {
+      "key": "a garnero miguel",
+      "keys": [
+        "a garnero miguel"
+      ],
+      "slug": "miguel-a-garnero",
+      "name": "Miguel A Garnero",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "1"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "angel grosso miguel",
+      "keys": [
+        "angel grosso miguel"
+      ],
+      "slug": "miguel-angel-grosso",
+      "name": "Miguel Angel Grosso",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "27"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "candela miguel",
+      "keys": [
+        "candela miguel"
+      ],
+      "slug": "miguel-candela",
+      "name": "Miguel Candela",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "8"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "ciaurro miguel",
       "keys": [
         "ciaurro miguel"
@@ -3695,6 +5575,24 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-09-20"
+    },
+    {
+      "key": "miguel ruffino",
+      "keys": [
+        "miguel ruffino"
+      ],
+      "slug": "miguel-ruffino",
+      "name": "Miguel Ruffino",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "14"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-07-05"
     },
     {
       "key": "eddy mion",
@@ -3755,6 +5653,44 @@
       },
       "firstSeen": "2026-07-31",
       "lastSeen": "2026-09-20"
+    },
+    {
+      "key": "girolami nestor",
+      "keys": [
+        "girolami nestor"
+      ],
+      "slug": "nestor-girolami",
+      "name": "Néstor Girolami",
+      "aliases": [],
+      "series": [
+        "tcr-sa"
+      ],
+      "numbers": {
+        "tcr-sa": "29"
+      },
+      "teams": {
+        "tcr-sa": "Hyundai MSA"
+      },
+      "firstSeen": "2026-03-08",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "nestor ochetti",
+      "keys": [
+        "nestor ochetti"
+      ],
+      "slug": "nestor-ochetti",
+      "name": "Nestor Ochetti",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "53"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "goya nestor omar",
@@ -3861,6 +5797,44 @@
       "lastSeen": "2026-05-10"
     },
     {
+      "key": "bianco del nicolas",
+      "keys": [
+        "bianco del nicolas"
+      ],
+      "slug": "nicolas-del-bianco",
+      "name": "Nicolas Del Bianco",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "2"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "fuca nicolas",
+      "keys": [
+        "fuca nicolas"
+      ],
+      "slug": "nicolas-fuca",
+      "name": "Nicolás Fuca",
+      "aliases": [],
+      "series": [
+        "tcr-sa"
+      ],
+      "numbers": {
+        "tcr-sa": "3"
+      },
+      "teams": {
+        "tcr-sa": "Paladini Racing"
+      },
+      "firstSeen": "2026-03-08",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "impiombato nicolas",
       "keys": [
         "impiombato nicolas"
@@ -3909,6 +5883,42 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "lombardi nicolas",
+      "keys": [
+        "lombardi nicolas"
+      ],
+      "slug": "nicolas-lombardi",
+      "name": "Nicolas Lombardi",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "6"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "masera nicolas",
+      "keys": [
+        "masera nicolas"
+      ],
+      "slug": "nicolas-masera",
+      "name": "Nicolas Masera",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "26"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-07"
+    },
+    {
       "key": "moscardini nicolas",
       "keys": [
         "moscardini nicolas"
@@ -3930,6 +5940,24 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "nicolas peiretti",
+      "keys": [
+        "nicolas peiretti"
+      ],
+      "slug": "nicolas-peiretti",
+      "name": "Nicolas Peiretti",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "29"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-07-05"
     },
     {
       "key": "nicolas posco",
@@ -3995,6 +6023,24 @@
       "lastSeen": "2026-03-01"
     },
     {
+      "key": "antonini norberto",
+      "keys": [
+        "antonini norberto"
+      ],
+      "slug": "norberto-antonini",
+      "name": "Norberto Antonini",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "21"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-07"
+    },
+    {
       "key": "fontana norberto",
       "keys": [
         "fontana norberto"
@@ -4032,6 +6078,24 @@
         "tc-pick-up": "Toyota"
       },
       "firstSeen": "2026-09-26",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "gutierrez oscar",
+      "keys": [
+        "gutierrez oscar"
+      ],
+      "slug": "oscar-gutierrez",
+      "name": "Oscar Gutierrez",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "3"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
       "lastSeen": "2026-09-27"
     },
     {
@@ -4081,6 +6145,60 @@
       "lastSeen": "2026-09-20"
     },
     {
+      "key": "bo del di natale pablo",
+      "keys": [
+        "bo del di natale pablo"
+      ],
+      "slug": "pablo-di-natale-del-bo",
+      "name": "Pablo Di Natale Del Bo",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "125"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "olmos pablo",
+      "keys": [
+        "olmos pablo"
+      ],
+      "slug": "pablo-olmos",
+      "name": "Pablo Olmos",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "32"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "pablo vendrame",
+      "keys": [
+        "pablo vendrame"
+      ],
+      "slug": "pablo-vendrame",
+      "name": "Pablo Vendrame",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "48"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "grippo pedro",
       "keys": [
         "grippo pedro"
@@ -4099,6 +6217,24 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "montironi rafael",
+      "keys": [
+        "montironi rafael"
+      ],
+      "slug": "rafael-montironi",
+      "name": "Rafael Montironi",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "33"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
     },
     {
       "key": "cano ramiro",
@@ -4139,6 +6275,24 @@
       },
       "firstSeen": "2026-02-28",
       "lastSeen": "2026-03-22"
+    },
+    {
+      "key": "massio raul",
+      "keys": [
+        "massio raul"
+      ],
+      "slug": "raul-massio",
+      "name": "Raul Massio",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "64"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-04",
+      "lastSeen": "2026-05-10"
     },
     {
       "key": "blotta renzo",
@@ -4210,6 +6364,78 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "ricardo vanini",
+      "keys": [
+        "ricardo vanini"
+      ],
+      "slug": "ricardo-vanini",
+      "name": "Ricardo Vanini",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "17"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "ricardo vidal",
+      "keys": [
+        "ricardo vidal"
+      ],
+      "slug": "ricardo-vidal",
+      "name": "Ricardo Vidal",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "9"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-04",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "gomez roberto",
+      "keys": [
+        "gomez roberto"
+      ],
+      "slug": "roberto-gomez",
+      "name": "Roberto Gomez",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "146"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "claudio m robledo",
+      "keys": [
+        "claudio m robledo"
+      ],
+      "slug": "robledo-claudio-m",
+      "name": "ROBLEDO CLAUDIO M",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "19"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-06-07"
+    },
+    {
       "key": "lugon rodrigo",
       "keys": [
         "lugon rodrigo"
@@ -4228,6 +6454,96 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "rodrigo viel",
+      "keys": [
+        "rodrigo viel"
+      ],
+      "slug": "rodrigo-viel",
+      "name": "Rodrigo Viel",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "51"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "exequiel ronga",
+      "keys": [
+        "exequiel ronga"
+      ],
+      "slug": "ronga-exequiel",
+      "name": "RONGA EXEQUIEL",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "41"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "nicolas ruiz",
+      "keys": [
+        "nicolas ruiz"
+      ],
+      "slug": "ruiz-nicolas",
+      "name": "RUIZ NICOLAS",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "39"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-05-10"
+    },
+    {
+      "key": "david rujinsky",
+      "keys": [
+        "david rujinsky"
+      ],
+      "slug": "rujinsky-david",
+      "name": "RUJINSKY DAVID",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "53"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-05-10"
+    },
+    {
+      "key": "gonzalo salis",
+      "keys": [
+        "gonzalo salis"
+      ],
+      "slug": "salis-gonzalo",
+      "name": "SALIS GONZALO",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "83"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-06-07"
     },
     {
       "key": "alvarez santiago",
@@ -4276,6 +6592,24 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "barovero santiago",
+      "keys": [
+        "barovero santiago"
+      ],
+      "slug": "santiago-barovero",
+      "name": "Santiago Barovero",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "68"
+      },
+      "teams": {},
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-05-10"
+    },
+    {
       "key": "biagi santiago",
       "keys": [
         "biagi santiago"
@@ -4297,6 +6631,24 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "gianre santiago",
+      "keys": [
+        "gianre santiago"
+      ],
+      "slug": "santiago-gianre",
+      "name": "Santiago Gianre",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "79"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-04",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "mangoni santiago",
@@ -4323,6 +6675,24 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "pasini santiago",
+      "keys": [
+        "pasini santiago"
+      ],
+      "slug": "santiago-pasini",
+      "name": "Santiago Pasini",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "51"
+      },
+      "teams": {},
+      "firstSeen": "2026-08-22",
+      "lastSeen": "2026-08-23"
+    },
+    {
       "key": "robledo santiago",
       "keys": [
         "robledo santiago"
@@ -4343,6 +6713,24 @@
       "lastSeen": "2026-09-20"
     },
     {
+      "key": "rubiolo santiago",
+      "keys": [
+        "rubiolo santiago"
+      ],
+      "slug": "santiago-rubiolo",
+      "name": "Santiago Rubiolo",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "30"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
+    },
+    {
       "key": "balerini santino",
       "keys": [
         "balerini santino"
@@ -4361,6 +6749,24 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-09-20"
+    },
+    {
+      "key": "estanguet santino",
+      "keys": [
+        "estanguet santino"
+      ],
+      "slug": "santino-estanguet",
+      "name": "Santino Estanguet",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "87"
+      },
+      "teams": {},
+      "firstSeen": "2026-05-09",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "ortiz santino",
@@ -4428,6 +6834,62 @@
       ]
     },
     {
+      "key": "grosso sebastian",
+      "keys": [
+        "grosso sebastian"
+      ],
+      "slug": "sebastian-grosso",
+      "name": "Sebastian Grosso",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "56"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-04-05"
+    },
+    {
+      "key": "pidoni sebastian",
+      "keys": [
+        "pidoni sebastian"
+      ],
+      "slug": "sebastian-pidoni",
+      "name": "Sebastian Pidoni",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "41"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "quirno sebastian",
+      "keys": [
+        "quirno sebastian"
+      ],
+      "slug": "sebastian-quirno",
+      "name": "Sebastián Quirno",
+      "aliases": [],
+      "series": [
+        "tcr-sa"
+      ],
+      "numbers": {
+        "tcr-sa": "11"
+      },
+      "teams": {
+        "tcr-sa": "Scuderia URT"
+      },
+      "firstSeen": "2026-09-13",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "salse sebastian",
       "keys": [
         "salse sebastian"
@@ -4472,6 +6934,42 @@
       ]
     },
     {
+      "key": "griguol sergio",
+      "keys": [
+        "griguol sergio"
+      ],
+      "slug": "sergio-griguol",
+      "name": "Sergio Griguol",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "31"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "raparo sergio",
+      "keys": [
+        "raparo sergio"
+      ],
+      "slug": "sergio-raparo",
+      "name": "Sergio Raparo",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "11"
+      },
+      "teams": {},
+      "firstSeen": "2026-08-22",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "antonino sganga",
       "keys": [
         "antonino sganga"
@@ -4489,6 +6987,24 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-21",
+      "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "cagnolo stefano",
+      "keys": [
+        "cagnolo stefano"
+      ],
+      "slug": "stefano-cagnolo",
+      "name": "Stefano Cagnolo",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "19"
+      },
+      "teams": {},
+      "firstSeen": "2026-05-09",
       "lastSeen": "2026-09-27"
     },
     {
@@ -4556,6 +7072,24 @@
       ]
     },
     {
+      "key": "strazolini thiago",
+      "keys": [
+        "strazolini thiago"
+      ],
+      "slug": "thiago-strazolini",
+      "name": "Thiago Strazolini",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "91"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-08-23"
+    },
+    {
       "key": "marchesin thomas",
       "keys": [
         "marchesin thomas"
@@ -4617,6 +7151,26 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "pernia tiago",
+      "keys": [
+        "pernia tiago"
+      ],
+      "slug": "tiago-pernia",
+      "name": "Tiago Pernía",
+      "aliases": [],
+      "series": [
+        "tcr-sa"
+      ],
+      "numbers": {
+        "tcr-sa": "85"
+      },
+      "teams": {
+        "tcr-sa": "Honda Racing"
+      },
+      "firstSeen": "2026-03-08",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "martinez tobias",
@@ -4716,6 +7270,24 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "tasca tomas",
+      "keys": [
+        "tasca tomas"
+      ],
+      "slug": "tomas-tasca",
+      "name": "Tomas Tasca",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "53"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "tomas vitar",
       "keys": [
         "tomas vitar",
@@ -4740,6 +7312,42 @@
       ]
     },
     {
+      "key": "haziel l traschel",
+      "keys": [
+        "haziel l traschel"
+      ],
+      "slug": "traschel-haziel-l",
+      "name": "TRASCHEL HAZIEL L.",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "34"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-07-04"
+    },
+    {
+      "key": "martinez ulises",
+      "keys": [
+        "martinez ulises"
+      ],
+      "slug": "ulises-martinez",
+      "name": "Ulises Martinez",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "23"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-09-27"
+    },
+    {
       "key": "aguirre valentin",
       "keys": [
         "aguirre valentin"
@@ -4761,6 +7369,24 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "tomasini valentin",
+      "keys": [
+        "tomasini valentin"
+      ],
+      "slug": "valentin-tomasini",
+      "name": "Valentin Tomasini",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "27"
+      },
+      "teams": {},
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "alaux valentino",
@@ -4802,6 +7428,24 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-09-20"
+    },
+    {
+      "key": "maximiliano varela",
+      "keys": [
+        "maximiliano varela"
+      ],
+      "slug": "varela-maximiliano",
+      "name": "VARELA MAXIMILIANO",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "97"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "simon volpi",
