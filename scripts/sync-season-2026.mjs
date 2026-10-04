@@ -15,16 +15,29 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // Tope por pedido (incluye leer el cuerpo). Sin esto, un servidor que acepta la conexión y no contesta colgaba la sincronización
 // entera: el 4/10/2026, con la ACTC dando 502, una corrida quedó 40 min trabada y frenó a las siguientes.
 const REQUEST_TIMEOUT_MS = 30_000;
+// Sitios que ya no respondieron (dos esperas seguidas agotadas) en esta corrida: el resto de sus pedidos falla en el acto. Con actc.org.ar
+// caído (4/10/2026) cada página esperaba 30 s × 4 intentos y la corrida tardaba ~20 min; los resultados salen de otro sitio
+// (tiempos.actc.org.ar) y llegaban tarde por esperar a éste. Cada fuente que falla conserva sus datos anteriores, como con cualquier error.
+const silentHosts = new Set();
+const hostOf = (url) => new URL(url).host;
+const isTimeout = (error) => error?.name === "TimeoutError" || error?.name === "AbortError";
+const silentError = (url) => new Error(`No se pudo descargar ${url}: ${hostOf(url)} no respondió antes en esta corrida`);
 
 async function text(url, options = {}) {
+  if (silentHosts.has(hostOf(url))) throw silentError(url);
   let cause = "sin respuesta";
+  let timeouts = 0;
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
       const res = await fetch(url, { headers: { ...UA, ...options.headers }, signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS) });
       if (res.ok) return repairMojibake(await res.text());
       cause = `HTTP ${res.status} (${res.headers.get("content-type") ?? "sin content-type"})`;
     } catch (error) {
-      cause = error.message;
+      cause = isTimeout(error) ? `sin respuesta en ${REQUEST_TIMEOUT_MS / 1000} s` : error.message;
+      if (isTimeout(error) && ++timeouts >= 2) {
+        silentHosts.add(hostOf(url));
+        break;
+      }
     }
     await sleep(1500 * attempt);
   }
@@ -32,6 +45,7 @@ async function text(url, options = {}) {
 }
 
 async function bytes(url) {
+  if (silentHosts.has(hostOf(url))) throw silentError(url);
   const res = await fetch(url, { headers: UA, signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS) });
   if (!res.ok) throw new Error(`${res.status} al pedir ${url}`);
   return res.arrayBuffer();
