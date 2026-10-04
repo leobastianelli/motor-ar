@@ -1,5 +1,6 @@
 import { CLASES } from "../lib/sources/cordoba-pista-clases.mjs";
 import { CLASES as CLASES_RALLY } from "../lib/sources/rally-argentino-clases.mjs";
+import { CLASES as CLASES_NCS } from "../lib/sources/nuevo-car-show-clases.mjs";
 import type { Series } from "@/lib/types";
 
 // Identidad propia por categoría: código corto + color. Nunca logos oficiales.
@@ -28,6 +29,8 @@ export const series: Series[] = [
   { id: "cordoba-pista", name: "Córdoba Pista", short: "Córdoba Pista", code: "CP", org: "APICER", orgUrl: "https://cordobapista.com", scope: "zonal", color: "#287e58", classes: CLASES },
   // Rally Argentino: campeonato de la CDA del ACA que dirige la Asociación Civil Rally Argentino (ACRA, según rallyargentino.com/acerca-de.php); siete clases.
   { id: "rally-argentino", name: "Rally Argentino", short: "Rally Arg", code: "RA", org: "ACRA (CDA del ACA)", orgUrl: "https://www.rallyargentino.com", scope: "nacional", color: "#b0510e", classes: CLASES_RALLY },
+  // Nuevo Car Show: una categoría con cinco clases (src/lib/sources/nuevo-car-show-clases.mjs). Lo organiza el Club de Automóviles de Pista Santa Fe (ACAPSFE).
+  { id: "nuevo-car-show", name: "Nuevo Car Show", short: "Car Show", code: "NCS", org: "ACAPSFE", orgUrl: "https://nuevocarshow.com.ar", scope: "nacional", color: "#a21caf", classes: CLASES_NCS },
   // Sin sitio oficial propio verificado: se deja sin orgUrl en vez de inventar uno.
   { id: "zonal-bsas", name: "Procar4000", short: "Procar", code: "ZL", org: "Zonal", scope: "zonal", color: "#287e58" },
 ];

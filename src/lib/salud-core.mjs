@@ -3,7 +3,7 @@
 const MIN = 60_000;
 
 /** Categorías con fuente automática (ver SOURCES en src/lib/sources/season.mjs). TC2000 y GT3 se cargan a mano y no cuentan. */
-export const AUTOMATIC_SERIES = new Set(["f1", "f2", "tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "cordoba-pista", "tcr-sa", "rally-argentino"]);
+export const AUTOMATIC_SERIES = new Set(["f1", "f2", "tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "cordoba-pista", "tcr-sa", "rally-argentino", "nuevo-car-show"]);
 
 // Cómo empieza el texto de una falla (`failures[]`) de cada fuente de resultados, por categoría. Los videos y cronogramas no son resultados.
 const ACTC = /^(ACTC|Tiempos ACTC|Campeonato ACTC)\b/;
