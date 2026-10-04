@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T14:19:12.505Z",
+  "generatedAt": "2026-10-04T14:33:44.305Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -3889,9 +3889,7 @@
       ],
       "slug": "nicolas-jaime",
       "name": "Nicolás Jaime",
-      "aliases": [
-        "Nicolas Jaime Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tc-mouras",
         "tn",
