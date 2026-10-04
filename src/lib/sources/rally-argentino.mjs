@@ -241,12 +241,34 @@ async function api(io, path) {
   return body.datos;
 }
 
+/**
+ * Calendario 2026 tal como lo publicaba rallyargentino.com el 4/10/2026. El sitio bloquea (403) a los servidores de GitHub Actions, donde corre
+ * la sincronización: si la página no se puede leer, se usa este respaldo (y queda anotado) en vez de perder la categoría entera.
+ */
+export const CALENDARIO_RESPALDO = [
+  {id: 208, title: "Rally Pagos del Tuyú - Madariaga", name: "Rally Pagos del Tuyú", start: {y: 2026, d: 27, m: 2}, end: {y: 2026, d: 1, m: 3}, raceNo: 1, round: 1, published: true},
+  {id: 209, title: "Rally Sudamericano - Mina Clavero", name: "Rally Sudamericano", start: {y: 2026, d: 17, m: 4}, end: {y: 2026, d: 19, m: 4}, raceNo: 2, round: 2, published: true},
+  {id: 210, title: "Rally del Petróleo y los Dinosaurios - Cutral Có y Plaza Huincul - Neuquén", name: "Rally del Petróleo y los Dinosaurios", start: {y: 2026, d: 22, m: 5}, end: {y: 2026, d: 24, m: 5}, raceNo: 3, round: 3, published: true},
+  {id: 211, title: "Rally del Poncho - Catamarca", name: "Rally del Poncho", start: {y: 2026, d: 26, m: 6}, end: {y: 2026, d: 28, m: 6}, raceNo: 4, round: 4, published: true},
+  {id: 212, title: "Rally del Jaaukanigás - Reconquista Santa Fe", name: "Rally del Jaaukanigás", start: {y: 2026, d: 31, m: 7}, end: {y: 2026, d: 2, m: 8}, raceNo: 5, round: 5, published: true},
+  {id: 213, title: "Rally de San Francisco - Córdoba", name: "Rally de San Francisco", start: {y: 2026, d: 4, m: 9}, end: {y: 2026, d: 6, m: 9}, raceNo: 6, round: 6, published: true},
+  {id: 214, title: "Rally de Entre Ríos - Diamante y Valle María", name: "Rally de Entre Ríos", start: {y: 2026, d: 2, m: 10}, end: {y: 2026, d: 4, m: 10}, raceNo: null, round: 7, published: false},
+  {id: 215, title: "Rally de Traslasierra - Villa Dolores y Mina Clavero", name: "Rally de Traslasierra", start: {y: 2026, d: 6, m: 11}, end: {y: 2026, d: 8, m: 11}, raceNo: null, round: 8, published: false},
+  {id: 216, title: "Gran Premio Rally de San Luis", name: "Gran Premio Rally de San Luis", start: {y: 2026, d: 11, m: 12}, end: {y: 2026, d: 13, m: 12}, raceNo: null, round: 9, published: false},
+];
+
 /** Rally Argentino: calendario y resultados. `windowDays`: las fechas ya cerradas hace más que eso y con resultados no se vuelven a pedir. */
 export async function rallyArgentinoSeason(io, previous = { events: [], standings: {}, meta: {} }, { now = new Date(), windowDays = 21, delayMs = 200 } = {}) {
   const errors = [];
   const ignored = [];
-  const rounds = parseCalendario(await io.text(CALENDARIO_URL, { revalidate: 600 }));
-  if (!rounds.length) throw new Error("el calendario de rallyargentino.com no trae ninguna fecha");
+  let rounds = [];
+  try {
+    rounds = parseCalendario(await io.text(CALENDARIO_URL, { revalidate: 600 }));
+    if (!rounds.length) throw new Error("la página no trae ninguna fecha");
+  } catch (error) {
+    errors.push(`calendario: ${error.message} (se usa el calendario guardado el 4/10)`);
+    rounds = CALENDARIO_RESPALDO;
+  }
   const hoy = hoyArgentino(now);
   const viejo = hoyArgentino(new Date(now.getTime() - windowDays * DAY));
 

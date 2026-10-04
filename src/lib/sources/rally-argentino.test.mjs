@@ -326,8 +326,10 @@ test("temporada: si la tabla del campeonato falla se conserva la anterior y qued
   assert.ok(out.meta.rallyArgentino.errors.some((e) => /campeonato/.test(e)));
 });
 
-test("temporada: sin calendario no hay fuente (se conserva todo lo anterior)", async () => {
-  await assert.rejects(rallyArgentinoSeason(fakeIo(respuestas({ "calendario.php": "<html></html>" })), undefined, { now: NOW }), /no trae ninguna fecha/);
+test("temporada: si el calendario no se puede leer (403 desde GitHub Actions) se usa el respaldo y queda anotado", async () => {
+  const out = await rallyArgentinoSeason(fakeIo(respuestas({ "calendario.php": new Error("HTTP 403") })), undefined, { now: NOW });
+  assert.equal(out.events.length, 9);
+  assert.ok(out.meta.rallyArgentino.errors.some((e) => /calendario: HTTP 403/.test(e)));
 });
 
 test("firma: dos clasificaciones distintas no comparten firma", () => {
