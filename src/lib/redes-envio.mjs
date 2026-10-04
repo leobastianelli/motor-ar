@@ -39,8 +39,17 @@ export const draftKeyboard = (d) => ({ inline_keyboard: [[{ text: "Publicar en X
  * → { candidatos, enviados: [{ key, kind }], simulado, motivo?, errores: [string] }
  */
 export async function enviarBorradores({ raw, now, catalog, manual = {}, events, sql, dry = false, creds = {} }) {
-  // borradores() decide con lo que pasa ahora, no con lo ya mandado (eso lo resuelve la reserva en la base): enviados siempre vacío acá.
-  const todos = borradores(raw, now, { enviados: {}, catalog, manual, events });
+  // Primero todos los posibles, sin tope; se pregunta a la base cuáles ya salieron (una consulta, sólo por las claves que esta instancia no
+  // conoce) y recién con eso se aplica el tope por corrida. Si el tope se aplicara antes, los ya mandados ocupaban los lugares y lo nuevo
+  // no salía nunca (la final del TC Pista, 4/10/2026). La reserva de abajo sigue resolviendo las llamadas que se pisan.
+  const posibles = borradores(raw, now, { enviados: {}, catalog, manual, events, limit: Infinity });
+  const claves = (d) => [d.key, ...(d.legacyKey ? [d.legacyKey] : [])];
+  const preguntar = posibles.filter((d) => !claves(d).some((k) => conocidos.has(k))).flatMap(claves);
+  if (sql && !dry && preguntar.length) {
+    const rows = await sql`SELECT clave FROM redes_enviados WHERE clave = ANY(${preguntar})`;
+    for (const { clave } of rows) conocidos.add(clave);
+  }
+  const todos = borradores(raw, now, { enviados: Object.fromEntries([...conocidos].map((k) => [k, true])), catalog, manual, events });
   const candidatos = dry ? todos : todos.filter((d) => !conocidos.has(d.key));
   if (!candidatos.length) return { candidatos: [], enviados: [], simulado: false, errores: [] };
 

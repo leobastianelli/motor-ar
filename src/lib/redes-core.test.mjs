@@ -45,8 +45,8 @@ test("el largo se cuenta como X: enlaces por 23 y emojis por 2", () => {
 test("terminó la clasificación: pole, 2.º y 3.º, argentino con su posición y enlace al evento", () => {
   const q = session({ results: [...podium, ...Array.from({ length: 8 }, (_, i) => row(4 + i, `Piloto ${i}`)), row(12, "Franco Colapinto")].filter((r, i, a) => a.findIndex((x) => x.pos === r.pos) === i) });
   const [d] = run([event({ sessions: [q] })], AFTER_QUALI);
-  assert.equal(d.key, "sesion:f1-16-q");
-  assert.match(d.text, /^🏁 F1 · GP de Malasia\. Clasificación: pole de George Russell; 2\.º Andrea Kimi Antonelli, 3\.º Isack Hadjar\. Colapinto largará 12\.º\./);
+  assert.equal(d.key, "sesion:f1-2026-16:clasificacion:clasificacion");
+  assert.match(d.text, /^🏁 F1 · GP de Malasia · Clasificación\n\n1\. 🥇 George Russell\n2\. 🥈 Andrea Kimi Antonelli\n3\. 🥉 Isack Hadjar\n\n🇦🇷 Colapinto largará 12\.º\n\nhttps:/);
   assert.ok(d.text.endsWith("\nhttps://www.somosfierros.ar/eventos/f1-2026-16"));
   assert.ok(xLength(d.text) <= X_LIMIT);
   assert.ok(!/EN VIVO/i.test(d.text));
@@ -56,22 +56,22 @@ test("más de una sesión del mismo tipo (F2 Baku): el borrador usa el nombre de
   const q1 = session({ id: "f2-16-q1", name: "Clasificación 1", results: podium });
   const q2 = session({ id: "f2-16-q2", name: "Clasificación 2", results: podium });
   const [d1, d2] = run([event({ seriesId: "f2", sessions: [q1, q2] })], AFTER_QUALI);
-  assert.match(d1.text, /^🏁 F2 · GP de Malasia\. Clasificación 1: pole de George Russell;/);
-  assert.match(d2.text, /^🏁 F2 · GP de Malasia\. Clasificación 2: pole de George Russell;/);
+  assert.match(d1.text, /^🏁 F2 · GP de Malasia · Clasificación 1\n\n1\. 🥇 George Russell\n/);
+  assert.match(d2.text, /^🏁 F2 · GP de Malasia · Clasificación 2\n\n1\. 🥇 George Russell\n/);
 });
 
 test("una sola sesión de ese tipo: el borrador sigue usando el rótulo genérico", () => {
   const q = session({ results: podium });
   const [d] = run([event({ sessions: [q] })], AFTER_QUALI);
-  assert.match(d.text, /^🏁 F1 · GP de Malasia\. Clasificación: pole de George Russell;/);
+  assert.match(d.text, /^🏁 F1 · GP de Malasia · Clasificación\n\n1\. 🥇 George Russell\n/);
 });
 
 test("carrera repetida en la misma fecha (Carrera principal y Carrera principal 2): la primera se distingue como 'Carrera principal 1', sin tocar el name guardado", () => {
   const r1 = session({ id: "f2-16-r1", kind: "carrera", name: "Carrera principal", results: podium });
   const r2 = session({ id: "f2-16-r2", kind: "carrera", name: "Carrera principal 2", results: podium });
   const [d1, d2] = run([event({ seriesId: "f2", sessions: [r1, r2] })], AFTER_QUALI);
-  assert.match(d1.text, /^🏁 F2 · GP de Malasia\. Carrera principal 1: ganó George Russell;/);
-  assert.match(d2.text, /^🏁 F2 · GP de Malasia\. Carrera principal 2: ganó George Russell;/);
+  assert.match(d1.text, /^🏁 F2 · GP de Malasia · Carrera principal 1\n\n1\. 🥇 George Russell\n/);
+  assert.match(d2.text, /^🏁 F2 · GP de Malasia · Carrera principal 2\n\n1\. 🥇 George Russell\n/);
   assert.equal(r1.name, "Carrera principal");
 });
 
@@ -85,7 +85,7 @@ test("un argentino que no terminó la carrera se cuenta como abandono, no como p
     results: [...podium, row(19, "Franco Colapinto", { positionText: "R", status: "Abandonó" })],
   });
   const [d] = run([event({ sessions: [race] })], "2026-10-04T10:00:00Z");
-  assert.match(d.text, /Ganó George Russell; 2\.º Andrea Kimi Antonelli, 3\.º Isack Hadjar\. Colapinto abandonó\./);
+  assert.match(d.text, /1\. 🥇 George Russell\n2\. 🥈 Andrea Kimi Antonelli\n3\. 🥉 Isack Hadjar\n\n🇦🇷 Colapinto abandonó\n/);
   assert.doesNotMatch(d.text, /19/);
 });
 
@@ -106,8 +106,8 @@ test("carrera de una categoría argentina: lidera el campeonato sólo si la tabl
   const now = "2026-10-04T19:00:00Z";
   const fresh = { standings: { tc: [row(1, "Mariano Werner", { points: 53 })] }, meta: { tc: { standingsAsOfRound: 1 } } };
   const [ok] = run([tc], now, { season: fresh });
-  assert.match(ok.text, /Ganó Mariano Werner/);
-  assert.match(ok.text, /Campeonato: lidera Mariano Werner \(53 pts\)\./);
+  assert.match(ok.text, /1\. 🥇 Mariano Werner/);
+  assert.match(ok.text, /🏆 Campeonato: lidera Mariano Werner \(53 pts\)\n/);
   const stale = { standings: fresh.standings, meta: { tc: { standingsAsOfRound: 0 } } };
   const [no] = run([tc], now, { season: stale });
   assert.doesNotMatch(no.text, /campeonato/i, "tabla atrasada: no se menciona");
@@ -126,9 +126,9 @@ test("series del TC: un borrador por serie, con su nombre, sin el campeonato", (
   };
   const fresh = { standings: { tc: [row(1, "Mariano Werner", { points: 53 })] }, meta: { tc: { standingsAsOfRound: 11 } } };
   const drafts = run([tc], "2026-10-04T15:20:00Z", { season: fresh });
-  assert.deepEqual(drafts.map((d) => d.key), ["sesion:tc-12-s1", "sesion:tc-12-s2", "sesion:tc-12-s3"]);
-  assert.match(drafts[0].text, /^🏁 TC · Fecha 12 · San Nicolás\. Serie 1: ganó Mariano Werner; 2\.º Segundo 1, 3\.º Tercero 1\./);
-  assert.match(drafts[2].text, /Serie 3: ganó Agustín Canapino/);
+  assert.deepEqual(drafts.map((d) => d.key), ["sesion:tc-2026-12:serie:serie-1", "sesion:tc-2026-12:serie:serie-2", "sesion:tc-2026-12:serie:serie-3"]);
+  assert.match(drafts[0].text, /^🏁 TC · Fecha 12 · San Nicolás · Serie 1\n\n1\. 🥇 Mariano Werner\n2\. 🥈 Segundo 1\n3\. 🥉 Tercero 1\n/);
+  assert.match(drafts[2].text, /Serie 3\n\n1\. 🥇 Agustín Canapino/);
   assert.ok(drafts.every((d) => !/campeonato/i.test(d.text)), "una serie no cambia el campeonato");
 });
 
