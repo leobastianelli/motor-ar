@@ -199,7 +199,7 @@ export function sessionResultsMissing(events, now, { seriesIds, after = 0.5, bef
   for (const e of events) {
     if (!seriesIds.has(e.seriesId)) continue;
     const late = e.sessions
-      .filter((s) => s.timeKnown !== false && !s.results?.length)
+      .filter((s) => s.timeKnown !== false && !s.results?.length && !s.resultsGap)
       .map((s) => ({ s, hours: (nowMs - (Date.parse(s.start) + (s.durationMin ?? 60) * 60_000)) / HOUR }))
       .filter(({ hours }) => hours >= after && hours < before);
     if (!late.length) continue;

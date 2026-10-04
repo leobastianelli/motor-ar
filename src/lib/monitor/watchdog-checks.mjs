@@ -99,6 +99,19 @@ export function saludFindings(salud, now, { staleMin = 10, pendingMin = 60, home
   }
   for (const p of salud.pendientes ?? []) {
     if (p.terminoHaceMin <= pendingMin) continue;
+    if (p.tablaIncompleta) {
+      // La fuente está rota, no nosotros: se recuerda cada 72 h, sin alarma.
+      const { url, filas } = p.tablaIncompleta;
+      out.push({
+        key: `salud:pendiente:${p.categoria}:${p.sesion}`,
+        severity: "info",
+        level: 1,
+        tier: 3,
+        title: `Tabla incompleta: ${p.sesion}`,
+        body: `La ACTC publicó la tabla incompleta${filas ? ` (${filas} filas)` : ""}: se muestra cuando la corrijan. ${url}`,
+      });
+      continue;
+    }
     out.push({
       key: `salud:pendiente:${p.categoria}:${p.sesion}`,
       severity: "medium",

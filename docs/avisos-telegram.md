@@ -30,6 +30,7 @@ Salen de `https://www.somosfierros.ar/api/salud` (qué versión sirve el sitio, 
 - **"El sitio no toma la versión nueva":** el almacén tiene una versión más nueva (de hace más de 10 min) que la que sirve el sitio: falló la invalidación de las páginas. Una versión vieja **no** avisa mientras sea la última del almacén.
 - **"La home muestra una versión vieja":** el `<meta name="fierros-datos">` de la home tiene una versión anterior a la última del almacén (de hace más de 10 min), en dos corridas seguidas. `/api/salud` puede estar al día y las páginas no: esto mira lo que ve la gente.
 - **"Sin resultados: <sesión>":** una sesión de una categoría con fuente automática terminó hace más de 60 min y sigue sin resultados.
+- **"Tabla incompleta: <sesión>":** la fuente publicó el documento oficial pero con filas sueltas (sin podio, p. ej. 3 filas). No es un error nuestro: no se muestra nada hasta que la ACTC lo corrija. Es de nivel info (se recuerda cada 72 h) y esa sesión no pide sincronizaciones al pulso.
 - **"El sitio está lento: /":** la home tardó más de 3 s (desde la segunda corrida seguida). Tiene que salir del caché.
 
 ## Puesta en marcha (una sola vez)
