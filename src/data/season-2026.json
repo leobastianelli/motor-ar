@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T16:45:33.437Z",
+  "generatedAt": "2026-10-04T16:51:08.193Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -104527,6 +104527,62 @@
       "source": "ACTC (calendario)"
     },
     {
+      "id": "tc2000-2026-8",
+      "seriesId": "tc2000",
+      "round": 8,
+      "name": "Fecha 8 · San Juan",
+      "circuit": {
+        "name": "Autódromo El Zonda Eduardo Copello",
+        "city": "San Juan",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "San Juan"
+      },
+      "sessions": [
+        {
+          "id": "tc2000-2026-8-qualy",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-09-26T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Emiliano Stang",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/tc2000-rossi-hizo-la-pole-empatando-el-tiempo-con-stang-y-marcando-el-record-en-el-zonda/"
+          }
+        },
+        {
+          "id": "tc2000-2026-8-race",
+          "kind": "carrera",
+          "name": "Carrera",
+          "start": "2026-09-27T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 50,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Lucas Carabajal",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/lucas-carabajal-festejo-en-el-zonda-su-primera-victoria-en-tc2000/"
+          }
+        }
+      ],
+      "source": "Campeones"
+    },
+    {
       "id": "tcm-2026-9",
       "seriesId": "tc-mouras",
       "round": 9,
@@ -115046,23 +115102,18 @@
         "Ezequiel Pérez Companc"
       ]
     },
-    "tc-pista": {
-      "standingsLabel": "Tabla oficial de la ACTC",
-      "standingsAsOfRound": 11,
-      "standingsSource": "https://actc.org.ar/tcp/campeonato"
-    },
     "schedules": {
       "notes": 16,
       "officialPdfs": 0,
       "sessions": 198,
       "confirmed": 0,
       "conflicts": 0,
-      "eventsWithTimes": 25
+      "eventsWithTimes": 9
     },
     "timing": {
       "documents": 797,
-      "pagesFetched": 34,
-      "eventsWithResults": 40
+      "pagesFetched": 6,
+      "eventsWithResults": 11
     },
     "openf1": {
       "sessions": 131,
@@ -115103,6 +115154,11 @@
       "addedSessions": 0,
       "errors": []
     },
+    "tc-pista": {
+      "standingsLabel": "Tabla oficial de la ACTC",
+      "standingsAsOfRound": 11,
+      "standingsSource": "https://actc.org.ar/tcp/campeonato"
+    },
     "tc-mouras": {
       "standingsLabel": "Tabla oficial de la ACTC",
       "standingsAsOfRound": 9,
@@ -115125,14 +115181,17 @@
     }
   },
   "failures": [
-    "Campeonato ACTC tcm: No se pudo descargar https://actc.org.ar/tcm/campeonato: HTTP 504 (text/html; charset=UTF-8)",
-    "Campeonato ACTC tcpm: No se pudo descargar https://actc.org.ar/tcpm/campeonato: HTTP 504 (text/html; charset=UTF-8)",
-    "Campeonato ACTC tcpk: No se pudo descargar https://actc.org.ar/tcpk/campeonato: HTTP 504 (text/html; charset=UTF-8)",
-    "Campeonato ACTC tcppk: No se pudo descargar https://actc.org.ar/tcppk/campeonato: HTTP 504 (text/html; charset=UTF-8)",
-    "Cronogramas (ACTC: No se pudo descargar https://actc.org.ar/tcm/noticias: HTTP 502 (text/html; charset=UTF-8))",
+    "Campeonato ACTC tcp: No se pudo descargar https://actc.org.ar/tcp/campeonato: HTTP 502 (text/html; charset=UTF-8)",
+    "Campeonato ACTC tcm: No se pudo descargar https://actc.org.ar/tcm/campeonato: HTTP 502 (text/html; charset=UTF-8)",
+    "Campeonato ACTC tcpm: No se pudo descargar https://actc.org.ar/tcpm/campeonato: HTTP 502 (text/html; charset=UTF-8)",
+    "Campeonato ACTC tcpk: No se pudo descargar https://actc.org.ar/tcpk/campeonato: HTTP 502 (text/html; charset=UTF-8)",
+    "Campeonato ACTC tcppk: No se pudo descargar https://actc.org.ar/tcppk/campeonato: HTTP 502 (text/html; charset=UTF-8)",
+    "Cronogramas (ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: HTTP 502 (text/html; charset=UTF-8))",
     "Cronograma oficial ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: HTTP 502 (text/html; charset=UTF-8)",
-    "Se conservaron fechas que las fuentes dejaron de traer: tc-pista-mouras 12, tc-pick-up 11, tc 4",
+    "Se conservaron fechas que las fuentes dejaron de traer: tc-mouras 12, tc-pista-mouras 12, tc-pista 15, tc-pista-pick-up 11, tc-pick-up 11, tc 4",
+    "Se conservaron resultados de 10 sesiones que las fuentes dejaron de traer",
     "Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior",
+    "Campeonato tc-pista: la fuente no trajo la tabla, se conservó la anterior",
     "Campeonato tc-mouras: la fuente no trajo la tabla, se conservó la anterior",
     "Campeonato tc-pista-mouras: la fuente no trajo la tabla, se conservó la anterior",
     "Campeonato tc-pick-up: la fuente no trajo la tabla, se conservó la anterior",
