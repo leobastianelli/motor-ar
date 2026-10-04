@@ -135,6 +135,8 @@ export interface StandingRow {
   points: number;
   wins?: number;
   driverSlug?: string;
+  /** En una categoría con clases, la clase de esta tabla. */
+  classId?: string;
 }
 
 export interface CareerStint {

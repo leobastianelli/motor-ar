@@ -71,7 +71,7 @@ function indexedSummary(entry: IndexedDriver, season: Season) {
   return [
     `${entry.name} corre en ${main.name}${number ? ` con el número ${number}` : ""}${team ? `, con ${team}` : ""}.`,
     s && !main.partialResults ? `En 2026 lleva ${count(s.races, "carrera", "carreras")}, ${count(s.wins, "victoria", "victorias")} y ${count(s.podiums, "podio", "podios")}${s.best ? `; su mejor resultado es un ${s.best}.º puesto` : ""}.` : "",
-    standing ? `Está ${standing.pos}.º en el campeonato con ${standing.points} puntos.` : "",
+    standing ? `Está ${standing.pos}.º en el campeonato${standing.classId ? ` de ${main.classes?.find((c) => c.id === standing.classId)?.name ?? "su clase"}` : ""} con ${standing.points} puntos.` : "",
     others.length ? `También corrió en ${others.join(" y ")}.` : "",
   ]
     .filter(Boolean)
@@ -163,6 +163,13 @@ function SeasonBlocks({ keys, season }: { keys: string[]; season: Season }) {
         const s = stats.bySeries[id];
         if (!series || !s) return null;
         const standing = season.getDriverStanding(id, keys);
+        // En una categoría con clases, el campeonato es el de su clase; si la clase no tiene tabla publicada, lo dice.
+        const claseName = standing?.classId ? series.classes?.find((c) => c.id === standing.classId)?.name : undefined;
+        const campeonato = [
+          "Campeonato",
+          standing ? `${standing.pos}.º` : "—",
+          standing ? `${standing.points} pts${claseName ? ` · ${claseName}` : ""}` : series.classes?.length ? "Sin campeonato publicado" : "",
+        ];
         const byEvent = Map.groupBy(
           stats.results.filter((r) => r.event.seriesId === id),
           (r) => r.event.id,
@@ -173,7 +180,7 @@ function SeasonBlocks({ keys, season }: { keys: string[]; season: Season }) {
             <div className="driver-auto-stats">
               {(series.partialResults
                 ? [
-                    ["Campeonato", standing ? `${standing.pos}.º` : "—", standing ? `${standing.points} pts` : ""],
+                    campeonato,
                     ["Carreras", "—", ""],
                     ["Victorias", "—", ""],
                     ["Podios", "—", ""],
@@ -181,7 +188,7 @@ function SeasonBlocks({ keys, season }: { keys: string[]; season: Season }) {
                     ["Mejor resultado", "—", ""],
                   ]
                 : [
-                    ["Campeonato", standing ? `${standing.pos}.º` : "—", standing ? `${standing.points} pts` : ""],
+                    campeonato,
                     ["Carreras", String(s.races), ""],
                     ["Victorias", String(s.wins), ""],
                     ["Podios", String(s.podiums), ""],

@@ -8,7 +8,7 @@ import { CalendarioPlegable } from "@/components/calendario-plegable";
 import { AutoRefresh } from "@/components/live-clock";
 import { Momento } from "@/components/momento";
 import { NotesBlock } from "@/components/notas";
-import { PhotoCredit, SectionTitle } from "@/components/pista";
+import { ClassSeal, PhotoCredit, SectionTitle } from "@/components/pista";
 import { notesForSeries } from "@/lib/notas";
 import { getAllSeries, getHistory, getNow, getSeason, getSeries, isSimulatedNow } from "@/lib/data";
 import { drivers } from "@/data/drivers";
@@ -17,6 +17,7 @@ import { fmtDayNum, fmtMonthShort, fmtRange, surname } from "@/lib/format";
 import { descripcionMomento, tituloCategoria } from "@/lib/seo-titulos.mjs";
 import { OG_DEFAULTS } from "@/lib/site";
 import type { CategoryHistory, RaceEvent, StandingRow } from "@/lib/types";
+import type { CSSProperties } from "react";
 
 export const revalidate = 60;
 
@@ -185,6 +186,8 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
   const momento = season.getMomentoCategoria(series.id, now);
   const momentoEvent = momento.fecha ? season.getEvent(momento.fecha.id) : undefined;
   const nuestros = drivers.filter((d) => d.seriesId === series.id);
+  // Categoría con clases (Córdoba Pista): el campeonato es uno por clase y vive en la página de cada clase.
+  const clases = series.classes ?? [];
 
   return (
     <>
@@ -246,16 +249,26 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
           </strong>
           {meta.incomplete && <small>calendario incompleto</small>}
         </div>
-        <div>
-          <span>Líder</span>
-          <strong>{leader ? surname(leader.driver) : "—"}</strong>
-          {meta.standingsLabel && <small>{meta.standingsLabel}</small>}
-        </div>
-        <div>
-          <span>Diferencia</span>
-          <strong>{leader && second ? Math.round((leader.points - second.points) * 10) / 10 : "—"}</strong>
-          <small>puntos</small>
-        </div>
+        {clases.length > 0 ? (
+          <div>
+            <span>Clases</span>
+            <strong>{clases.length}</strong>
+            <small>en cada fecha</small>
+          </div>
+        ) : (
+          <>
+            <div>
+              <span>Líder</span>
+              <strong>{leader ? surname(leader.driver) : "—"}</strong>
+              {meta.standingsLabel && <small>{meta.standingsLabel}</small>}
+            </div>
+            <div>
+              <span>Diferencia</span>
+              <strong>{leader && second ? Math.round((leader.points - second.points) * 10) / 10 : "—"}</strong>
+              <small>puntos</small>
+            </div>
+          </>
+        )}
         <div>
           <span>Próxima</span>
           <strong>{next ? raceDay(next).value : "—"}</strong>
@@ -264,6 +277,39 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
       </section>
 
       <section className="section-block category-current">
+        {clases.length > 0 ? (
+          <div>
+            <SectionTitle title="Clases y campeonatos" />
+            <div className="clase-grid">
+              {clases.map((c) => {
+                const standing = season.getClassStanding(series.id, c.id);
+                const top = standing?.status === "calculado" ? standing.rows[0] : undefined;
+                const lastFinal = events
+                  .flatMap((e) => e.sessions.filter((x) => x.classId === c.id && x.kind === "final" && x.results?.length).map((x) => ({ e, x })))
+                  .at(-1);
+                return (
+                  <Link key={c.id} href={`/categorias/${series.id}/${c.id}`} className="clase-card list-link" style={{ "--cat": c.color } as CSSProperties}>
+                    <span className="clase-card-head">
+                      <ClassSeal clase={c} />
+                      <strong>{c.name}</strong>
+                    </span>
+                    {top ? (
+                      <b>
+                        Lidera {top.driver} · {top.points} pts
+                      </b>
+                    ) : (
+                      <b>Sin campeonato publicado</b>
+                    )}
+                    <small>
+                      {top ? `Calculado por Fierros, tras la fecha ${standing!.asOfRound}` : "Ver resultados de cada fecha"}
+                      {lastFinal ? ` · última final: ${lastFinal.x.results![0].driver} (fecha ${lastFinal.e.round})` : ""}
+                    </small>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        ) : (
         <div>
           <SectionTitle title={meta.standingsLabel ? `Campeonato · ${meta.standingsLabel}` : "Campeonato"} />
           {table.length > 0 ? (
@@ -289,6 +335,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
             </p>
           )}
         </div>
+        )}
         <aside>
           {events.length > 0 ? (
             <CalendarioPlegable total={events.length} color={series.color}>

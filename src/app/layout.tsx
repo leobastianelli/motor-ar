@@ -16,6 +16,7 @@ import { loadRawSeason } from "@/lib/season-data";
 import { dataMetaContent, isFallback } from "@/lib/salud-core.mjs";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import "./globals.css";
+import "./clases.css";
 
 // Una sola familia: Archivo variable, con eje de ancho para titulares condensados.
 const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], axes: ["wdth"], display: "swap" });

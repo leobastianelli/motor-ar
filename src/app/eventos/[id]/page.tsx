@@ -8,7 +8,7 @@ import { LiveTimingEmbed } from "@/components/live-timing-embed";
 import { Argentinos, Momento, ResultadoCarrera } from "@/components/momento";
 import { ResultsStatus } from "@/components/results-status";
 import { VideoSesion } from "@/components/video-sesion";
-import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
+import { CategoryLabel, ClassSeal, SectionTitle, StateTag } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { getNow, getSeason, getSeries, isSimulatedNow } from "@/lib/data";
 import { nombreVisibleSesion } from "@/lib/momento.mjs";
@@ -105,6 +105,12 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
   const now = getNow();
   const series = getSeries(event.seriesId)!;
   const siblings = season.getSiblingEvents(event);
+  // Categoría con clases (Córdoba Pista): cada sesión lleva el sello de su clase y arriba van las finales de todas las clases.
+  const clases = series.classes ?? [];
+  const claseDe = (s: Session) => clases.find((c) => c.id === s.classId);
+  const finalesPorClase = clases
+    .map((c) => ({ c, finales: event.sessions.filter((s) => s.classId === c.id && s.kind === "final" && s.results?.length) }))
+    .filter((x) => x.finales.length > 0);
   const momento = season.getMomentoEvento(event, now);
   // Los argentinos de cada sesión (posición o "abandonó"), ya calculados con la lista de pilotos de la categoría.
   const argentinosPorSesion = new Map(momento.sesiones.map((m) => [m.id, m.argentinos]));
@@ -210,7 +216,10 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                         <div key={s.id} className={`session${status === "live" ? " live-session" : ""}${status === "done" ? " done" : ""}`}>
                           <time dateTime={s.start}>{sessionTime(s)}</time>
                           <div>
-                            <strong>{nombreVisibleSesion(s, event.sessions)}</strong>
+                            <strong>
+                              {claseDe(s) && <ClassSeal clase={claseDe(s)!} />}
+                              {nombreVisibleSesion(s, event.sessions)}
+                            </strong>
                             <span>
                               {status === "live" && "En curso"}
                               {status === "upcoming" &&
@@ -305,6 +314,29 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
       <Momento evento data={momento} now={now} simulated={isSimulatedNow()} broadcasts={[]} tiemposUrl={timingUrl} />
       {(momento.modo === "en-pista" || momento.modo === "finde") && <AutoRefresh everyMs={60_000} />}
 
+      {finalesPorClase.length > 0 && (
+        <section className="section-block">
+          <SectionTitle title="Finales por clase" />
+          <ul className="clase-ganadores">
+            {finalesPorClase.map(({ c, finales }) => (
+              <li key={c.id} style={{ "--cat": c.color } as CSSProperties}>
+                <Link href={`/categorias/${series.id}/${c.id}`} className="list-link">
+                  <span>
+                    <ClassSeal clase={c} />
+                    <strong>{c.name}</strong>
+                  </span>
+                  {finales.map((f) => (
+                    <small key={f.id}>
+                      {finales.length > 1 ? `${f.name.replace(` ${c.short}`, "")}: ` : ""}1.º {f.results![0].driver}
+                    </small>
+                  ))}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {/* Con resultados, el último resultado y dónde verlo van antes que el cronograma; sin ellos, el cronograma manda. */}
       {latest && rows.length > 0 && (
         <section className="classification-wrap" id="resultados">
@@ -391,7 +423,11 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
                     return (
                       <details key={s.id} id={s.id} className="full-results">
                         <summary>
-                          <strong>{nombreVisibleSesion(s, event.sessions)}</strong> · {fmtDayShort(s.start)} · 1.º {s.results![0].driver}
+                          <strong>
+                            {claseDe(s) && <ClassSeal clase={claseDe(s)!} />}
+                            {nombreVisibleSesion(s, event.sessions)}
+                          </strong>{" "}
+                          · {fmtDayShort(s.start)} · 1.º {s.results![0].driver}
                           {provisionalSuffix(s)}
                           <span>{s.results!.length === 1 ? "Solo el 1.º" : `${s.results!.length} pilotos`}</span>
                           <ArgentinosLinea rows={argentinosDe(s)} small />

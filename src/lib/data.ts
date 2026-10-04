@@ -54,6 +54,7 @@ export interface IndexedDriver {
 const CURATED_KEYS = new Set(drivers.flatMap((d) => [d.name, ...(d.aliases ?? [])].map((n) => driverKey(n))));
 const INDEXED = (driverIndex as unknown as { drivers: IndexedDriver[] }).drivers.filter((d) => !(d.keys ?? [d.key]).some((k) => CURATED_KEYS.has(k)));
 export const getIndexedDrivers = () => INDEXED;
+const INDEXED_SLUG_BY_KEY = new Map(INDEXED.flatMap((d) => (d.keys ?? [d.key]).map((k) => [k, d.slug] as const)));
 export const getIndexedDriver = (slug: string) => INDEXED.find((d) => d.slug === slug);
 
 export interface DriverSeriesStats {
@@ -230,7 +231,8 @@ export function createSeason(raw: RawSeason) {
         const cls = raw[c.id];
         const played = Math.max(0, ...events.filter((e) => e.seriesId === s.id && e.sessions.some((x) => x.classId === c.id && x.kind === "final" && x.results?.length)).map((e) => e.round));
         if (cls?.status === "calculado" && cls.rows?.length && (cls.asOfRound ?? 0) >= played) {
-          const rows = cls.rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) }));
+          // Quienes no tienen ficha propia (casi todos en una categoría zonal) enlazan a su ficha automática del índice de pilotos.
+          const rows = cls.rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) ?? INDEXED_SLUG_BY_KEY.get(driverKey(r.driver)) }));
           return [c.id, { classId: c.id, status: "calculado" as const, rows, asOfRound: cls.asOfRound, validatedThrough: cls.validatedThrough }];
         }
         const reason = cls?.status === "calculado" ? `La tabla llega hasta la fecha ${cls.asOfRound} y ya se corrieron más: no la mostramos para no confundir.` : (cls?.reason ?? "Todavía no publicamos el campeonato de esta clase.");

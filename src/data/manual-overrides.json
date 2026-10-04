@@ -246,6 +246,42 @@
         { "id": "imsa-2026-petit-le-mans-carrera", "kind": "carrera", "name": "Carrera", "start": "2026-10-03T13:10:00-03:00", "timeKnown": true, "timeStatus": "confirmed", "timeSources": [{ "name": "IMSA, cronograma oficial", "url": "https://www.imsa.com/wp-content/uploads/sites/32/2026/09/23/2026-IMSA-Official-Schedule-and-SR-MPLM-092326.pdf", "start": "2026-10-03T13:10:00-03:00" }, { "name": "Motorsport-Total (horarios del fin de semana)", "url": "https://www.motorsport-total.com/imsa/news/infos-imsa-petit-le-mans-2026-zeitplan-livestream-starterliste-co-26093002", "start": "2026-10-03T13:10:00-03:00" }], "durationMin": 600 }
       ],
       "source": "Carga manual · cronograma oficial de IMSA (horario local del este de EE.UU. pasado a Argentina): finale de la temporada, Corvette #4 de Pratt Miller en GTD Pro con Varrone, Milner y Catsburg. El cronograma que publicó Varrone trae P2 16:35, clasificación 15:40 (probablemente el turno de su clase) y carrera 13:00; se sigue el oficial"
+    },
+    {
+      "id": "cordoba-pista-2026-7",
+      "seriesId": "cordoba-pista",
+      "round": 7,
+      "name": "Fecha 7 · Alta Gracia",
+      "circuit": { "name": "Autódromo Oscar Cabalén", "city": "Alta Gracia", "country": "Argentina", "flag": "AR", "province": "Córdoba" },
+      "sessions": [
+        { "id": "cordoba-pista-2026-7-sabado", "kind": "practica", "name": "Entrenamientos y clasificación (sábado)", "start": "2026-10-24T12:00:00-03:00", "timeKnown": false, "durationMin": 60, "timeSources": [{ "name": "FRAD · comunicado del calendario (28/8/2026)", "url": "https://fradcba.com.ar/se-modifico-el-calendario-del-cordoba-pista-y-la-ultima-del-provincial-de-karting-en-asfalto/", "start": "2026-10-24T12:00:00-03:00" }] },
+        { "id": "cordoba-pista-2026-7-domingo", "kind": "final", "name": "Series y finales (domingo)", "start": "2026-10-25T12:00:00-03:00", "timeKnown": false, "durationMin": 60, "timeSources": [{ "name": "FRAD · comunicado del calendario (28/8/2026)", "url": "https://fradcba.com.ar/se-modifico-el-calendario-del-cordoba-pista-y-la-ultima-del-provincial-de-karting-en-asfalto/", "start": "2026-10-25T12:00:00-03:00" }] }
+      ],
+      "source": "Carga manual · comunicado de la FRAD del 28/8/2026: fecha TENTATIVA hasta que aparezca en Speedhive (sólo día y sede, sin horarios)"
+    },
+    {
+      "id": "cordoba-pista-2026-8",
+      "seriesId": "cordoba-pista",
+      "round": 8,
+      "name": "Fecha 8 · Alta Gracia",
+      "circuit": { "name": "Autódromo Oscar Cabalén", "city": "Alta Gracia", "country": "Argentina", "flag": "AR", "province": "Córdoba" },
+      "sessions": [
+        { "id": "cordoba-pista-2026-8-sabado", "kind": "practica", "name": "Entrenamientos y clasificación (sábado)", "start": "2026-11-21T12:00:00-03:00", "timeKnown": false, "durationMin": 60, "timeSources": [{ "name": "FRAD · comunicado del calendario (28/8/2026)", "url": "https://fradcba.com.ar/se-modifico-el-calendario-del-cordoba-pista-y-la-ultima-del-provincial-de-karting-en-asfalto/", "start": "2026-11-21T12:00:00-03:00" }] },
+        { "id": "cordoba-pista-2026-8-domingo", "kind": "final", "name": "Series y finales (domingo)", "start": "2026-11-22T12:00:00-03:00", "timeKnown": false, "durationMin": 60, "timeSources": [{ "name": "FRAD · comunicado del calendario (28/8/2026)", "url": "https://fradcba.com.ar/se-modifico-el-calendario-del-cordoba-pista-y-la-ultima-del-provincial-de-karting-en-asfalto/", "start": "2026-11-22T12:00:00-03:00" }] }
+      ],
+      "source": "Carga manual · comunicado de la FRAD del 28/8/2026: fecha TENTATIVA hasta que aparezca en Speedhive (sólo día y sede, sin horarios)"
+    },
+    {
+      "id": "cordoba-pista-2026-9",
+      "seriesId": "cordoba-pista",
+      "round": 9,
+      "name": "Fecha 9 · Río Cuarto",
+      "circuit": { "name": "Autódromo Parque Ciudad de Río Cuarto", "city": "Río Cuarto", "country": "Argentina", "flag": "AR", "province": "Córdoba" },
+      "sessions": [
+        { "id": "cordoba-pista-2026-9-sabado", "kind": "practica", "name": "Entrenamientos y clasificación (sábado)", "start": "2026-12-19T12:00:00-03:00", "timeKnown": false, "durationMin": 60, "timeSources": [{ "name": "FRAD · comunicado del calendario (28/8/2026)", "url": "https://fradcba.com.ar/se-modifico-el-calendario-del-cordoba-pista-y-la-ultima-del-provincial-de-karting-en-asfalto/", "start": "2026-12-19T12:00:00-03:00" }] },
+        { "id": "cordoba-pista-2026-9-domingo", "kind": "final", "name": "Series y finales (domingo)", "start": "2026-12-20T12:00:00-03:00", "timeKnown": false, "durationMin": 60, "timeSources": [{ "name": "FRAD · comunicado del calendario (28/8/2026)", "url": "https://fradcba.com.ar/se-modifico-el-calendario-del-cordoba-pista-y-la-ultima-del-provincial-de-karting-en-asfalto/", "start": "2026-12-20T12:00:00-03:00" }] }
+      ],
+      "source": "Carga manual · comunicado de la FRAD del 28/8/2026: fecha TENTATIVA hasta que aparezca en Speedhive (sólo día y sede, sin horarios)"
     }
   ]
 }

@@ -30,8 +30,9 @@ function diferencias(classId, fecha) {
     const nombre = nombreOficial(o.name);
     const k = [...pool.keys()].find((x) => mismoNombre(x, nombre)) ?? [...pool.keys()].find((x) => x.includes(nombre));
     // Quien perdió todos los puntos de un fin de semana (descalificado) figura en la tabla oficial con 0; el cálculo no lo lista.
-    if (k === undefined) o.points > 0 && out.push({ piloto: o.name, oficial: o.points, calculado: undefined });
-    else {
+    if (k === undefined) {
+      if (o.points > 0) out.push({ piloto: o.name, oficial: o.points, calculado: undefined });
+    } else {
       if (pool.get(k) !== o.points) out.push({ piloto: o.name, oficial: o.points, calculado: pool.get(k) });
       pool.delete(k);
     }

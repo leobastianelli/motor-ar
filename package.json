@@ -14,6 +14,7 @@
     "sync:season": "node scripts/sync-season-2026.mjs",
     "sync:gtworld": "node scripts/sync-gtworld.mjs",
     "sync:tn": "node scripts/sync-tn.mjs",
+    "sync:cordoba": "node scripts/sync-cordoba-pista.mjs",
     "sync": "npm run sync:history && npm run sync:season",
     "sync:photos": "node scripts/fetch-photos.mjs",
     "db:season:init": "dotenv -e .env.local -- node scripts/init-season-db.mjs",

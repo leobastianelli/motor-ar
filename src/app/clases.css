@@ -1,0 +1,187 @@
+/*
+ * Categorías con clases (Córdoba Pista): sello de clase, tarjetas de clases, tabla del campeonato calculado y su nota.
+ * Todo vive bajo `.clase-*`: ninguna otra página cambia.
+ */
+.clase-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 34px;
+  padding: 2px 7px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 850;
+  letter-spacing: 0.03em;
+  line-height: 1.45;
+  white-space: nowrap;
+  vertical-align: middle;
+  margin-right: 8px;
+  flex: none;
+}
+
+.clase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+.clase-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  padding: 16px 18px 16px 24px;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: inset 5px 0 0 var(--cat, var(--ink));
+  color: inherit;
+  text-decoration: none;
+}
+.clase-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.clase-card strong {
+  font-size: 19px;
+  font-weight: 850;
+  font-stretch: 90%;
+  line-height: 1.15;
+}
+.clase-card span,
+.clase-card small {
+  font-size: 14px;
+  color: var(--muted);
+}
+.clase-card b {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.clase-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.clase-head .clase-seal {
+  font-size: 15px;
+  padding: 4px 10px;
+  margin: 0;
+}
+
+/* Nota de cómo se calcula el campeonato: corta, en texto atenuado. */
+.clase-note {
+  margin-top: 14px;
+  max-width: 68ch;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.clase-note a {
+  color: inherit;
+  text-decoration: underline;
+}
+.clase-note details summary {
+  cursor: pointer;
+  list-style: none;
+}
+.clase-note details summary::-webkit-details-marker {
+  display: none;
+}
+.clase-note details summary::after {
+  content: " · cómo se calcula";
+  text-decoration: underline;
+}
+.clase-note details[open] summary::after {
+  content: " · ocultar";
+}
+.clase-sin {
+  border-top: 1px solid var(--ink);
+  padding: 22px 0 6px;
+}
+.clase-sin h3 {
+  font-size: 24px;
+  font-weight: 850;
+  font-stretch: 90%;
+}
+
+/* Resultados de la clase, fecha por fecha. */
+.clase-fechas {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--ink);
+}
+.clase-fechas li {
+  border-bottom: 1px solid var(--line);
+}
+.clase-fechas a {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  padding: 14px 4px;
+  color: inherit;
+  text-decoration: none;
+}
+.clase-fechas strong {
+  font-size: 18px;
+  font-weight: 850;
+}
+.clase-fechas span {
+  font-size: 14px;
+  color: var(--muted);
+}
+.clase-fechas em {
+  font-style: normal;
+  font-size: 15px;
+}
+.clase-fechas em > span {
+  display: block;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* Finales de la fecha, una por clase (página del evento). */
+.clase-ganadores {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+  gap: 10px;
+}
+.clase-ganadores li {
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: inset 5px 0 0 var(--cat, var(--ink));
+}
+.clase-ganadores a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 14px 16px 14px 22px;
+  color: inherit;
+  text-decoration: none;
+}
+.clase-ganadores a > span:first-child {
+  display: flex;
+  align-items: center;
+}
+.clase-ganadores strong {
+  font-size: 17px;
+  font-weight: 850;
+}
+.clase-ganadores small {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+@media (min-width: 720px) {
+  .clase-fechas a {
+    grid-template-columns: 220px 1fr;
+    align-items: baseline;
+    gap: 16px;
+  }
+}
