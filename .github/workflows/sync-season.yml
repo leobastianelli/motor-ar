@@ -90,6 +90,8 @@ jobs:
       - run: npm ci
 
       - name: Sincronizar
+        # Normalmente tarda ~5 min. Si se traba, que falle y deje pasar a la siguiente corrida en vez de ocupar la cola hasta 90 min.
+        timeout-minutes: 30
         env:
           TIMING_DAYS: ${{ github.event.inputs.timing_days || '21' }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}

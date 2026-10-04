@@ -12,12 +12,15 @@ import { wikiRawUrl } from "../src/lib/sources/wiki-pages.mjs";
 
 const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+// Tope por pedido (incluye leer el cuerpo). Sin esto, un servidor que acepta la conexión y no contesta colgaba la sincronización
+// entera: el 4/10/2026, con la ACTC dando 502, una corrida quedó 40 min trabada y frenó a las siguientes.
+const REQUEST_TIMEOUT_MS = 30_000;
 
 async function text(url, options = {}) {
   let cause = "sin respuesta";
   for (let attempt = 1; attempt <= 4; attempt++) {
     try {
-      const res = await fetch(url, { headers: { ...UA, ...options.headers } });
+      const res = await fetch(url, { headers: { ...UA, ...options.headers }, signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS) });
       if (res.ok) return repairMojibake(await res.text());
       cause = `HTTP ${res.status} (${res.headers.get("content-type") ?? "sin content-type"})`;
     } catch (error) {
@@ -29,7 +32,7 @@ async function text(url, options = {}) {
 }
 
 async function bytes(url) {
-  const res = await fetch(url, { headers: UA });
+  const res = await fetch(url, { headers: UA, signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS) });
   if (!res.ok) throw new Error(`${res.status} al pedir ${url}`);
   return res.arrayBuffer();
 }
