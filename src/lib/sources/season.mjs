@@ -19,6 +19,7 @@ import { applySchedules, buildConsensus, solotcNotes } from "./schedule-notes.mj
 import { protectSeason, protectStandings } from "./guard.mjs";
 import { tc2000Season } from "./tc2000.mjs";
 import { tcrSaSeason } from "./tcr-sa.mjs";
+import { rallyArgentinoSeason } from "./rally-argentino.mjs";
 
 const SOURCES = [
   ["F1", ["f1"], f1Season],
@@ -31,6 +32,7 @@ const SOURCES = [
   // clase lo calcula Fierros con esos resultados (cordoba-pista-campeonato.mjs). Las fechas viejas no se vuelven a pedir (ventana).
   ["Córdoba Pista", ["cordoba-pista"], (io, previous) => cordobaPistaSeason(io, previous, { windowDays: io.timingWindowDays ?? 21, delayMs: io.cordobaDelayMs ?? 250 })],
   ["TCR South America", ["tcr-sa"], tcrSaSeason],
+  ["Rally Argentino", ["rally-argentino"], rallyArgentinoSeason],
 ];
 
 /** Categorías cuyos horarios salen de notas de cronograma (ver schedule-notes.mjs). */
@@ -119,6 +121,7 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
 
   // Errores parciales de Córdoba Pista (una sesión o un evento que no se pudo leer; lo ya guardado se conserva).
   for (const error of meta.cordobaPista?.errors ?? []) failures.push(`Córdoba Pista: ${error}`);
+  for (const error of meta.rallyArgentino?.errors ?? []) failures.push(`Rally Argentino: ${error}`);
 
   // Campeonato oficial de la ACTC para las categorías que no tienen otra tabla (el del TC sale de Wikipedia y la carga manual).
   const missingTables = ACTC_CATEGORIES.filter((c) => c.path !== "tc" && !standings[c.seriesId]?.length);

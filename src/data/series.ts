@@ -1,4 +1,5 @@
 import { CLASES } from "../lib/sources/cordoba-pista-clases.mjs";
+import { CLASES as CLASES_RALLY } from "../lib/sources/rally-argentino-clases.mjs";
 import type { Series } from "@/lib/types";
 
 // Identidad propia por categoría: código corto + color. Nunca logos oficiales.
@@ -25,6 +26,8 @@ export const series: Series[] = [
   { id: "ligier-jfc", name: "Ligier JFC Junior Formula Championship", short: "Ligier JFC", code: "JFC", org: "Parella Motorsports Holdings", orgUrl: "https://ligierjuniorformulachampionship.com", scope: "internacional", color: "#b3285a", founded: 2024, partialResults: "Por ahora sólo cargamos las carreras del fin de semana de VIR: el resto de la temporada todavía no tiene resultados en Fierros." },
   // Córdoba Pista: una categoría con siete clases (src/lib/sources/cordoba-pista-clases.mjs). La organiza APICER y la fiscaliza la FRAD.
   { id: "cordoba-pista", name: "Córdoba Pista", short: "Córdoba Pista", code: "CP", org: "APICER", orgUrl: "https://cordobapista.com", scope: "zonal", color: "#287e58", classes: CLASES },
+  // Rally Argentino: campeonato de la CDA del ACA que dirige la Asociación Civil Rally Argentino (ACRA, según rallyargentino.com/acerca-de.php); siete clases.
+  { id: "rally-argentino", name: "Rally Argentino", short: "Rally Arg", code: "RA", org: "ACRA (CDA del ACA)", orgUrl: "https://www.rallyargentino.com", scope: "nacional", color: "#b0510e", classes: CLASES_RALLY },
   // Sin sitio oficial propio verificado: se deja sin orgUrl en vez de inventar uno.
   { id: "zonal-bsas", name: "Procar4000", short: "Procar", code: "ZL", org: "Zonal", scope: "zonal", color: "#287e58" },
 ];

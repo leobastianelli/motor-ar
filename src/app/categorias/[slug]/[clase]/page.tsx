@@ -28,9 +28,9 @@ export async function generateMetadata(props: PageProps<"/categorias/[slug]/[cla
   if (!found) return { title: "Clase" };
   const { series, cls } = found;
   const standing = (await getSeason()).getClassStanding(series.id, cls.id);
-  const leader = standing?.status === "calculado" ? standing.rows[0] : undefined;
+  const leader = standing && standing.status !== "sin-campeonato" ? standing.rows[0] : undefined;
   const title = `${cls.name} en ${series.name} 2026: campeonato y resultados`;
-  const description = `${cls.name} de ${series.name}: resultados de cada fecha, horarios en hora argentina y ${leader ? `campeonato calculado (lidera ${leader.driver}, tras la fecha ${standing!.asOfRound})` : "campeonato (todavía sin tabla publicada)"}.`;
+  const description = `${cls.name} de ${series.name}: resultados de cada fecha, horarios en hora argentina y ${leader ? `campeonato ${standing!.status === "oficial" ? "oficial" : "calculado"} (lidera ${leader.driver}, tras la fecha ${standing!.asOfRound})` : "campeonato (todavía sin tabla publicada)"}.`;
   return { title, description, openGraph: { title, description, ...OG_DEFAULTS }, alternates: { canonical: `/categorias/${series.id}/${cls.id}` } };
 }
 
@@ -81,7 +81,7 @@ export default async function ClassPage(props: PageProps<"/categorias/[slug]/[cl
       </section>
 
       <section className="section-block">
-        <CampeonatoClase standing={standing} className={cls.name} playOff={cls.id === "tc4000" || cls.id === "tcp4000"} />
+        <CampeonatoClase standing={standing} className={cls.name} seriesId={series.id} playOff={series.id === "cordoba-pista" && (cls.id === "tc4000" || cls.id === "tcp4000")} />
       </section>
 
       <section className="section-block">
@@ -117,7 +117,9 @@ export default async function ClassPage(props: PageProps<"/categorias/[slug]/[cl
           <p className="empty-state">Todavía no hay resultados de finales de esta clase.</p>
         )}
         <p className="source-note">
-          Fuente de los resultados: cronometraje de la FRAD en MyLaps Speedhive (provisorios: no incluyen las penalizaciones de tiempo de los comisarios).
+          {series.id === "rally-argentino"
+            ? "Fuente de los resultados: tiempos oficiales del Rally Argentino (la carrera en curso se publica como provisoria hasta el último día de la fecha). Figuran los pilotos clasificados."
+            : "Fuente de los resultados: cronometraje de la FRAD en MyLaps Speedhive (provisorios: no incluyen las penalizaciones de tiempo de los comisarios)."}
         </p>
       </section>
 
