@@ -9,6 +9,7 @@ export const WIKI_PAGES = {
   "en-f2-2026": ["en", "2026_Formula_2_Championship"],
   "en-gtwc-sprint-2026": ["en", "2026_GT_World_Challenge_Europe_Sprint_Cup"],
   "en-gtwc-endurance-2026": ["en", "2026_GT_World_Challenge_Europe_Endurance_Cup"],
+  "en-tcr-sa-2026": ["en", "2026_TCR_South_America_Touring_Car_Championship"],
 };
 
 export function wikiRawUrl(key) {

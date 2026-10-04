@@ -63,6 +63,7 @@ export function buildDriverIndex(season, previous) {
   const abroad = new Map([
     ["f2", new Set((season.meta?.f2?.argentines ?? []).map(driverKey))],
     ["gt3", new Set((season.meta?.gt3?.argentines ?? []).map(driverKey))],
+    ["tcr-sa", new Set((season.meta?.["tcr-sa"]?.argentines ?? []).map(driverKey))],
   ]);
 
   const seen = (rawName, seriesId, row, day) => {

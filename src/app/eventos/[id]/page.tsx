@@ -94,6 +94,8 @@ function SourceLink({ session }: { session: Session }) {
       <a href={session.resultsSource.url} target="_blank" rel="noreferrer">
         {session.resultsSource.name}
       </a>
+      {/* Aviso de la fuente sobre lo que falta (p. ej. TCR: sólo los que sumaron puntos). */}
+      {session.resultsSource.note && <> · {session.resultsSource.note}</>}
     </p>
   );
 }

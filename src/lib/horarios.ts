@@ -13,6 +13,7 @@ const SERIES_SLUGS: Record<string, string> = {
   tn: "turismo-nacional",
   tc2000: "tc2000",
   gt3: "gt-world-challenge",
+  "tcr-sa": "tcr-south-america",
   wec: "wec",
   imsa: "imsa",
   f3: "formula-3",
