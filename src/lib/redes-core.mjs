@@ -4,7 +4,7 @@
 // Reglas de contenido: sólo datos que el sitio ya muestra, un enlace por borrador, sin "EN VIVO", y si falta un dato no se manda.
 import { dateStatus, dayKey } from "./monitor/checks.mjs";
 import { nombreVisibleSesion } from "./momento.mjs";
-import { isProvisional, provisionalSuffix } from "./provisorio.mjs";
+import { PROVISIONAL, isProvisional } from "./provisorio.mjs";
 
 export const BASE_URL = "https://www.somosfierros.ar";
 export const X_LIMIT = 280;
@@ -103,21 +103,16 @@ function outcome(row, kind) {
  * Borrador de una sesión con resultados. Devuelve null si faltan datos (sin podio completo) o si no entra en 280 caracteres ni resumido.
  * `abroad`: piloto argentino (de la lista de pilotos afuera) que corrió esa sesión, con su fila.
  */
-export function sessionDraft({ event, session, series, leader, argentines }) {
+export function sessionDraft({ event, session, series, leader, argentines, change = null }) {
   const rows = session.results ?? [];
   const podium = [1, 2, 3].map((p) => rows.find((r) => r.pos === p));
   if (podium.some((r) => !r?.driver) || !series) return null;
   const url = `${BASE_URL}/eventos/${event.id}`;
-  const isQuali = session.kind === "clasificacion";
-  // Cuando una fecha tiene más de una sesión del mismo tipo (F2 Baku: "Clasificación 1" y "Clasificación 2"; una fecha
-  // con "Carrera principal" y "Carrera principal 2"), "Clasificación" o "Ganó" a secas no distingue cuál fue: se usa
-  // el nombre propio de la sesión.
-  const sameKindCount = event.sessions.filter((s) => s.kind === session.kind).length;
-  const genericLabel = isQuali ? "Clasificación" : session.kind === "sprint" ? "Sprint" : null;
-  const label = sameKindCount > 1 ? nombreVisibleSesion(session, event.sessions) : genericLabel;
-  // Resultado provisorio de la ACTC (planilla antes de la revisión de los comisarios): el borrador lo dice al lado del ganador.
-  const prov = provisionalSuffix(session);
-  const head = (name) => (label ? `${label}: ${isQuali ? "pole de" : "ganó"} ${name(podium[0])}${prov}` : `Ganó ${name(podium[0])}${prov}`);
+  // La sesión siempre con su nombre visible ("Serie 2", "Clasificación 1" si hay otra "Clasificación 2", "Final").
+  const label = nombreVisibleSesion(session, event.sessions);
+  // Formato (pedido de Leonel, 4/10/2026): el podio uno debajo del otro, cada renglón arranca con la posición y lleva medalla.
+  // Nunca dice "provisorio": si el oficial cambia el podio, sale otro borrador que lo aclara (`change`).
+  const MEDALS = ["🥇", "🥈", "🥉"];
   for (const full of [true, false]) {
     const name = (r) => (full ? r.driver : surname(r.driver));
     for (const withLeader of [true, false]) {
@@ -125,15 +120,21 @@ export function sessionDraft({ event, session, series, leader, argentines }) {
         const inPodium = new Set(podium.map((r) => r.pos));
         const argLines = argentines
           .filter(({ row }) => !inPodium.has(row.pos) || /^(R|D|W|DNS)$/.test(String(row.positionText ?? "")))
-          .map(({ driver, row }) => `${surname(driver.name)} ${outcome(row, session.kind)}`);
-        const parts = [
-          `🏁 ${series.short}${withEvent ? ` · ${event.name}` : ""}. ${head(name)}; 2.º ${name(podium[1])}, 3.º ${name(podium[2])}.`,
-          argLines.length ? `${argLines.join(" y ")}.` : "",
-          withLeader && leader && RACE_KINDS.has(session.kind) && series.scope === "nacional"
-            ? `Campeonato: lidera ${leader.driver}${leader.points != null ? ` (${fmtPoints(leader.points)} pts)` : ""}.`
-            : "",
+          .map(({ driver, row }) => `🇦🇷 ${surname(driver.name)} ${outcome(row, session.kind)}`);
+        const blocks = [
+          `🏁 ${series.short}${withEvent ? ` · ${event.name}` : ""} · ${label}`,
+          podium.map((r, i) => `${i + 1}. ${MEDALS[i]} ${name(r)}`).join("\n"),
+          [
+            change ? `📋 ${change.replace(/\.?$/, ".")}` : "",
+            ...argLines,
+            withLeader && leader && RACE_KINDS.has(session.kind) && series.scope === "nacional"
+              ? `🏆 Campeonato: lidera ${leader.driver}${leader.points != null ? ` (${fmtPoints(leader.points)} pts)` : ""}`
+              : "",
+          ]
+            .filter(Boolean)
+            .join("\n"),
         ].filter(Boolean);
-        const text = `${parts.join(" ")}\n${url}`;
+        const text = `${blocks.join("\n\n")}\n\n${url}`;
         if (fits(text)) return { text, link: url };
       }
     }
@@ -141,7 +142,19 @@ export function sessionDraft({ event, session, series, leader, argentines }) {
   return null;
 }
 
-function resultDrafts({ events, season, manual, now, catalog, enviados }) {
+const slug = (s) => normalize(s).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+/**
+ * Clave de un borrador de resultado: fecha + tipo + nombre de la sesión, no el id de la sesión. El id cambia según qué fuente la armó
+ * ("serie-serie1" o "serie-1"), y con una clave por id la misma serie salía dos veces (4/10/2026). `legacy` es la clave vieja (por id), que
+ * también cuenta como enviada para no repetir lo mandado antes de este cambio.
+ */
+export function resultKeys(event, session) {
+  const suffix = isProvisional(session) ? ":provisorio" : "";
+  return { key: `sesion:${event.id}:${session.kind}:${slug(session.name)}${suffix}`, legacy: `sesion:${session.id}${suffix}` };
+}
+
+function resultDrafts({ events, season, manual, now, catalog, enviados, limit = MAX_RESULTS_PER_RUN }) {
   const nowMs = Date.parse(now);
   const { byId, tierOf } = tiers(catalog.series, catalog.drivers);
   const find = driverIndex(catalog.drivers);
@@ -152,9 +165,11 @@ function resultDrafts({ events, season, manual, now, catalog, enviados }) {
       // El provisorio y el oficial son dos borradores distintos: si el provisorio ya salió, el oficial no queda tapado por su clave.
       // Si el oficial no cambió nada del podio provisorio, no se repite la noticia.
       const provisional = isProvisional(session);
-      const key = provisional ? `sesion:${session.id}:provisorio` : `sesion:${session.id}`;
-      if (enviados[key] || !RESULT_KINDS.has(session.kind) || !session.results?.length) continue;
-      if (!provisional && enviados[`sesion:${session.id}:provisorio`] && session.resultsSource?.provisional && session.resultsSource.note === "Oficial") continue;
+      const { key, legacy } = resultKeys(event, session);
+      if (enviados[key] || enviados[legacy] || !RESULT_KINDS.has(session.kind) || !session.results?.length) continue;
+      const prov = resultKeys(event, { ...session, resultsSource: { ...session.resultsSource, status: PROVISIONAL } });
+      const provSent = enviados[prov.key] || enviados[prov.legacy];
+      if (!provisional && provSent && session.resultsSource?.provisional && session.resultsSource.note === "Oficial") continue;
       const end = endOf(session);
       if (nowMs < end || nowMs - end > RESULT_WINDOW_MS) continue;
       const argentines = session.results
@@ -166,11 +181,15 @@ function resultDrafts({ events, season, manual, now, catalog, enviados }) {
         series: byId[event.seriesId],
         leader: freshLeader(season, manual, events, event.seriesId),
         argentines,
+        // Ya salió el resultado de la planilla y el oficial lo cambió: el borrador dice qué cambió ("Oficial: X pasó del 2.º al 5.º…").
+        change: !provisional && provSent && session.resultsSource?.note && session.resultsSource.note !== "Oficial" ? session.resultsSource.note : null,
       });
-      if (draft) out.push({ key, kind: "resultado", eventId: event.id, at: end, ...draft });
+      if (draft) out.push({ key, legacyKey: legacy, kind: "resultado", eventId: event.id, at: end, ...draft });
     }
   }
-  return out.sort((a, b) => a.at - b.at).slice(0, MAX_RESULTS_PER_RUN);
+  // El tope se aplica sobre lo que falta mandar (por eso hay que pasar `enviados`): si se cortara antes, los ya enviados ocupaban los lugares
+  // y la final del TC Pista del 4/10/2026 quedó novena y nunca salió.
+  return out.sort((a, b) => a.at - b.at).slice(0, limit);
 }
 
 // ——— A qué hora corre ———
@@ -333,7 +352,7 @@ function summaryDraft({ events, now, catalog, enviados }) {
     const sameKindCount = e.sessions.filter((s) => s.kind === main.kind).length;
     const label = sameKindCount > 1 ? nombreVisibleSesion(main, e.sessions) : null;
     const argNote = argentines.map(({ driver, row }) => `${surname(driver.name)} ${outcome(row, main.kind)}`).join(" y ");
-    return `${byId[e.seriesId].short}${label ? ` (${label})` : ""}: ganó ${winner}${provisionalSuffix(main)}${argNote ? `; ${argNote}` : ""}`;
+    return `${byId[e.seriesId].short}${label ? ` (${label})` : ""}: ganó ${winner}${argNote ? `; ${argNote}` : ""}`;
   };
   const head = "🏁 Así quedó el finde (hora argentina):";
   const url = `${BASE_URL}/`;
@@ -356,9 +375,9 @@ function summaryDraft({ events, now, catalog, enviados }) {
  * `season`: la temporada cruda (events, standings, meta). `enviados`: { clave: fecha } de lo que ya se mandó.
  * `catalog`: { drivers, series, broadcasts } (los datos estáticos del sitio). `manual`: manual-overrides.json (fechas y tablas cargadas a mano).
  */
-export function borradores(season, now, { enviados = {}, catalog, manual = {}, events } = {}) {
+export function borradores(season, now, { enviados = {}, catalog, manual = {}, events, limit } = {}) {
   const evs = events ?? season.events;
-  const ctx = { events: evs, season, manual, now, catalog, enviados };
+  const ctx = { events: evs, season, manual, now, catalog, enviados, limit };
   const agenda = agendaDraft(ctx);
   const resumen = summaryDraft(ctx);
   return [...(agenda ? [agenda] : []), ...(resumen ? [resumen] : []), ...timeDrafts(ctx), ...resultDrafts(ctx)];

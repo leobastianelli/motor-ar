@@ -28,6 +28,9 @@ function fakeSql(claimed = new Set()) {
       claimed.add(clave);
       return [{ clave }];
     }
+    if (q.includes("SELECT clave FROM redes_enviados")) {
+      return values[0].filter((k) => claimed.has(k)).map((clave) => ({ clave }));
+    }
     if (q.includes("DELETE FROM redes_enviados")) {
       deletes.push(values[0]);
       claimed.delete(values[0]);
@@ -52,10 +55,10 @@ test("con credenciales: reserva antes de mandar y devuelve lo enviado", async ()
   const fetchImpl = async (url, opts) => { sent.push(JSON.parse(opts.body)); return { ok: true }; };
   const out = await enviarBorradores({ raw: raw(), now: NOW, catalog, events: raw().events, sql, creds: { token: "t", chatId: "c", fetchImpl } });
   assert.equal(out.candidatos.length, 1);
-  assert.deepEqual(out.enviados, [{ key: "sesion:f1-16-q", kind: "resultado" }]);
+  assert.deepEqual(out.enviados, [{ key: "sesion:f1-2026-16:clasificacion:clasificacion", kind: "resultado" }]);
   assert.equal(out.simulado, false);
   assert.equal(sent.length, 1);
-  assert.ok(claimed.has("sesion:f1-16-q"));
+  assert.ok(claimed.has("sesion:f1-2026-16:clasificacion:clasificacion"));
 });
 
 test("ya reservado (otra llamada lo mandó primero): no manda de nuevo", async () => {
@@ -93,7 +96,7 @@ test("Telegram falla: libera la reserva para reintentar y lo cuenta como error",
   const out = await enviarBorradores({ raw: raw(), now: NOW, catalog, events: raw().events, sql, creds: { token: "t", chatId: "c", fetchImpl } });
   assert.equal(out.enviados.length, 0);
   assert.equal(out.errores.length, 1);
-  assert.match(out.errores[0], /sesion:f1-16-q/);
+  assert.match(out.errores[0], /sesion:f1-2026-16:clasificacion:clasificacion/);
   assert.equal(claimed.size, 0);
 });
 
@@ -128,9 +131,22 @@ test("una clave ya enviada no se vuelve a consultar en la base en la llamada sig
   const args = { raw: raw(), now: NOW, catalog, events: raw().events, sql: counting, creds: { token: "t", chatId: "c", fetchImpl } };
   const first = await enviarBorradores(args);
   assert.equal(first.enviados.length, 1);
-  assert.equal(queries, 1);
+  assert.equal(queries, 2); // una consulta de lo ya enviado + la reserva
   const second = await enviarBorradores(args);
   assert.deepEqual(second, { candidatos: [], enviados: [], simulado: false, errores: [] });
-  assert.equal(queries, 1);
+  assert.equal(queries, 2);
+});
+
+// TC Pista, San Nicolás, 4/10/2026: clasificaciones, series y la carrera de F1 ya enviadas ocupaban los 8 lugares por corrida y la final,
+// novena, no salía nunca.
+test("los ya enviados no ocupan el tope por corrida: lo nuevo sale aunque haya más de 8 enviados en la ventana", async () => {
+  const sesiones = Array.from({ length: 10 }, (_, i) => ({ ...session(), id: `q${i}`, name: `Clasificación ${i}`, start: `2026-10-03T0${i % 10}:00:00Z`, durationMin: 10 }));
+  const ev = { ...event(), sessions: sesiones };
+  const r = { events: [ev], standings: {}, meta: {} };
+  const ya = new Set(sesiones.slice(0, 9).map((s) => `sesion:${s.id}`)); // claves viejas (por id): también cuentan como enviadas
+  const { sql } = fakeSql(ya);
+  const fetchImpl = async () => ({ ok: true });
+  const out = await enviarBorradores({ raw: r, now: "2026-10-03T12:00:00Z", catalog, events: r.events, sql, creds: { token: "t", chatId: "c", fetchImpl } });
+  assert.deepEqual(out.enviados, [{ key: "sesion:f1-2026-16:clasificacion:clasificacion-9", kind: "resultado" }]);
 });
 

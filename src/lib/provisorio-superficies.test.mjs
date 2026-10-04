@@ -17,24 +17,26 @@ const event = (s) => ({ id: "tc-pick-up-2026-f8", seriesId: "tc-pick-up", round:
 const NOW = "2026-09-27T20:30:00Z";
 const season = (events) => ({ events, standings: {}, meta: {} });
 
-test("borrador de la final con resultado provisorio: dice '(provisorio)' al lado del ganador", () => {
+test("borrador de la final con resultado provisorio: no dice 'provisorio' (si el oficial cambia, sale otro que lo aclara)", () => {
   const [d] = borradores(season([event(final({ ...SRC, status: "provisional" }))]), NOW, { catalog });
-  assert.equal(d.key, "sesion:tcpk-f8-final:provisorio");
-  assert.match(d.text, /Ganó Hernan Palazzo \(provisorio\); 2\.º Diego Ciantini, 3\.º Otto Fritzler\./);
+  assert.equal(d.key, "sesion:tc-pick-up-2026-f8:final:final:provisorio");
+  assert.match(d.text, /1\. 🥇 Hernan Palazzo\n2\. 🥈 Diego Ciantini\n3\. 🥉 Otto Fritzler/);
+  assert.doesNotMatch(d.text, /provisorio/);
   assert.ok(xLength(d.text) <= X_LIMIT);
 });
 
 test("borrador de la final oficial: sin marca y con la clave de siempre", () => {
   const [d] = borradores(season([event(final(SRC))]), NOW, { catalog });
-  assert.equal(d.key, "sesion:tcpk-f8-final");
+  assert.equal(d.key, "sesion:tc-pick-up-2026-f8:final:final");
   assert.doesNotMatch(d.text, /provisorio/);
 });
 
-test("ya salió el provisorio y el oficial cambió el podio: hay borrador oficial (clave distinta, no queda tapado)", () => {
+test("ya salió el provisorio y el oficial cambió el podio: hay borrador oficial que dice qué cambió", () => {
   const cambio = { ...SRC, provisional: { podium: [] }, note: "Oficial: Diego Ciantini pasó del 2.º al 5.º por un recargo de 5 s" };
   const enviados = { "sesion:tcpk-f8-final:provisorio": true };
   const [d] = borradores(season([event(final(cambio))]), NOW, { catalog, enviados });
-  assert.equal(d.key, "sesion:tcpk-f8-final");
+  assert.equal(d.key, "sesion:tc-pick-up-2026-f8:final:final");
+  assert.match(d.text, /📋 Oficial: Diego Ciantini pasó del 2\.º al 5\.º por un recargo de 5 s\./);
   assert.doesNotMatch(d.text, /provisorio/);
 });
 
@@ -49,7 +51,7 @@ test("sessionDraft provisorio: entra en 280 caracteres aunque el nombre sea larg
   const s = { ...final({ ...SRC, status: "provisional" }), results: long };
   const d = sessionDraft({ event: event(s), session: s, series: series[0], leader: null, argentines: [] });
   assert.ok(d && xLength(d.text) <= X_LIMIT);
-  assert.match(d.text, /\(provisorio\)/);
+  assert.doesNotMatch(d.text, /provisorio/);
 });
 
 test("el momento marca al ganador como provisorio (página, home y calendarios lo dicen)", () => {
