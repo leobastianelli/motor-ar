@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SectionTitle } from "@/components/pista";
 import type { ClassStanding } from "@/lib/data";
 import { REGLAMENTO, TABLAS_OFICIALES } from "@/lib/sources/cordoba-pista-campeonato.mjs";
+import { REGLAMENTO as REGLAMENTO_NCS, tablaOficialUrl } from "@/lib/sources/nuevo-car-show-campeonato.mjs";
 import { TABLA_OFICIAL as TABLA_RALLY } from "@/lib/sources/rally-argentino-campeonato.mjs";
 import type { StandingRow } from "@/lib/types";
 
@@ -24,7 +25,8 @@ function Filas({ rows, leader }: { rows: StandingRow[]; leader?: boolean }) {
 }
 
 /** Dónde publica su tabla oficial el organizador de cada categoría con clases (para decirlo cuando no mostramos ninguna). */
-const ORGANIZADOR: Record<string, { quien: string; url: string; texto: string }> = {
+const ORGANIZADOR: Record<string, { quien: string; url: string | ((classId: string) => string); texto: string }> = {
+  "nuevo-car-show": { quien: "El Nuevo Car Show", url: tablaOficialUrl, texto: "tabla oficial (suele ir atrasada)" },
   "cordoba-pista": { quien: "La FRAD", url: TABLAS_OFICIALES.url, texto: "tablas oficiales" },
   "rally-argentino": { quien: "El Rally Argentino", url: TABLA_RALLY.url, texto: "tabla oficial" },
 };
@@ -48,7 +50,7 @@ export function CampeonatoClase({ standing, className, seriesId, playOff }: { st
               <>
                 {" "}
                 {org.quien} publica su{" "}
-                <a href={org.url} target="_blank" rel="noreferrer">
+                <a href={typeof org.url === "function" ? org.url(standing.classId) : org.url} target="_blank" rel="noreferrer">
                   {org.texto}
                 </a>{" "}
                 después de cada fecha.
@@ -88,6 +90,18 @@ export function CampeonatoClase({ standing, className, seriesId, playOff }: { st
             {fuente.name}
           </a>
           : no la calculamos nosotros. Llega hasta la fecha {standing.asOfRound}; cuando el organizador la actualiza, la actualizamos acá.
+        </p>
+      ) : seriesId === "nuevo-car-show" ? (
+        <p className="clase-note">
+          Calculado por Fierros con las planillas oficiales de cronometraje y el puntaje del{" "}
+          <a href={REGLAMENTO_NCS.url} target="_blank" rel="noreferrer">
+            reglamento de campeonato
+          </a>
+          : suman la asistencia, la pole, las series y la final. Coincide con la{" "}
+          <a href={tablaOficialUrl(standing.classId)} target="_blank" rel="noreferrer">
+            tabla oficial
+          </a>{" "}
+          hasta la fecha {standing.validatedThrough}; después la seguimos nosotros.
         </p>
       ) : (
         <p className="clase-note">

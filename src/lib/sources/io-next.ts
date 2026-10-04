@@ -20,8 +20,8 @@ async function text(url: string, options: { revalidate?: number; headers?: Recor
   throw lastError;
 }
 
-async function bytes(url: string, options: { revalidate?: number } = {}) {
-  const res = await fetch(url, { headers: UA, next: { revalidate: options.revalidate ?? 3600 } });
+async function bytes(url: string, options: { revalidate?: number; headers?: Record<string, string> } = {}) {
+  const res = await fetch(url, { headers: { ...UA, ...options.headers }, next: { revalidate: options.revalidate ?? 3600 } });
   if (!res.ok) throw new Error(`${res.status} al pedir ${url}`);
   return res.arrayBuffer();
 }

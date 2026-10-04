@@ -3,7 +3,7 @@
 import { repairMojibake } from "./common.mjs";
 
 /** Categorías nacionales: todos sus pilotos entran al índice. En las internacionales, sólo los marcados como argentinos. */
-export const NATIONAL_SERIES = new Set(["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "tc2000", "cordoba-pista", "rally-argentino"]);
+export const NATIONAL_SERIES = new Set(["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "tc2000", "cordoba-pista", "rally-argentino", "nuevo-car-show"]);
 
 const MAKES = ["chevrolet", "chev", "ford", "mustang", "toyota", "torino", "dodge", "camaro", "challenger", "mercedes", "benz", "bmw", "fiat", "ram", "volkswagen", "vw", "peugeot", "honda", "renault"];
 const fold = (s) => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();

@@ -4,6 +4,7 @@ import { actcOfficialSchedules } from "./actc-official.mjs";
 import { ACTC_CATEGORIES, actcNotes, actcStandings } from "./actc-site.mjs";
 import { apatSeason } from "./apat.mjs";
 import { cordobaPistaSeason } from "./cordoba-pista.mjs";
+import { nuevoCarShowSeason } from "./nuevo-car-show.mjs";
 import { f1Season } from "./f1.mjs";
 import { f2Season } from "./f2.mjs";
 import { gtwcSeason } from "./gtwc.mjs";
@@ -33,6 +34,7 @@ const SOURCES = [
   ["Córdoba Pista", ["cordoba-pista"], (io, previous) => cordobaPistaSeason(io, previous, { windowDays: io.timingWindowDays ?? 21, delayMs: io.cordobaDelayMs ?? 250 })],
   ["TCR South America", ["tcr-sa"], tcrSaSeason],
   ["Rally Argentino", ["rally-argentino"], rallyArgentinoSeason],
+  ["Nuevo Car Show", ["nuevo-car-show"], (io, previous) => nuevoCarShowSeason(io, previous, { windowDays: io.timingWindowDays ?? 21, delayMs: io.cordobaDelayMs ?? 250 })],
 ];
 
 /** Categorías cuyos horarios salen de notas de cronograma (ver schedule-notes.mjs). */
@@ -122,6 +124,7 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
   // Errores parciales de Córdoba Pista (una sesión o un evento que no se pudo leer; lo ya guardado se conserva).
   for (const error of meta.cordobaPista?.errors ?? []) failures.push(`Córdoba Pista: ${error}`);
   for (const error of meta.rallyArgentino?.errors ?? []) failures.push(`Rally Argentino: ${error}`);
+  for (const error of meta.nuevoCarShow?.errors ?? []) failures.push(`Nuevo Car Show: ${error}`);
 
   // Campeonato oficial de la ACTC para las categorías que no tienen otra tabla (el del TC sale de Wikipedia y la carga manual).
   const missingTables = ACTC_CATEGORIES.filter((c) => c.path !== "tc" && !standings[c.seriesId]?.length);

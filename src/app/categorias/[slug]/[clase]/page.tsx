@@ -117,7 +117,9 @@ export default async function ClassPage(props: PageProps<"/categorias/[slug]/[cl
           <p className="empty-state">Todavía no hay resultados de finales de esta clase.</p>
         )}
         <p className="source-note">
-          {series.id === "rally-argentino"
+          {series.id === "nuevo-car-show"
+            ? "Fuente de los resultados: planillas de cronometraje que publica el Nuevo Car Show en nuevocarshow.com.ar (con la hora real de cada sesión)."
+            : series.id === "rally-argentino"
             ? "Fuente de los resultados: tiempos oficiales del Rally Argentino (la carrera en curso se publica como provisoria hasta que la organización la pasa a su histórico de tiempos). Figuran los pilotos clasificados."
             : "Fuente de los resultados: cronometraje de la FRAD en MyLaps Speedhive (provisorios: no incluyen las penalizaciones de tiempo de los comisarios)."}
         </p>

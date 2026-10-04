@@ -42,6 +42,12 @@ test("una falla de otra categoría no cuenta, y una de video tampoco", () => {
   assert.equal(noResultsReason(session(), "tc", ["Tiempos ACTC: caída"], NOW), "No pudimos consultar la fuente");
 });
 
+test("Córdoba Pista y Nuevo Car Show: una falla de su propia fuente se reconoce, y la de la otra no", () => {
+  assert.equal(noResultsReason(session(), "nuevo-car-show", ["Nuevo Car Show: Clase 1 fecha 7 Final: 404"], NOW), "No pudimos consultar la fuente");
+  assert.equal(noResultsReason(session(), "nuevo-car-show", ["Córdoba Pista: evento 1: 503"], NOW), "La fuente todavía no los publicó");
+  assert.equal(noResultsReason(session(), "cordoba-pista", ["Córdoba Pista: evento 1: 503"], NOW), "No pudimos consultar la fuente");
+});
+
 test("publicada pero sin leer: no se le echa la culpa a la fuente (Baku 2026: práctica y clasificación 1 de F2)", () => {
   assert.equal(noResultsReason(session({ resultsUnread: true }), "f2", [], NOW), "La fuente los publicó, pero no pudimos leerlos");
   assert.equal(noResultsReason(session({ resultsUnread: true }), "f2", ["FIA F2: caída"], NOW), "No pudimos consultar la fuente");

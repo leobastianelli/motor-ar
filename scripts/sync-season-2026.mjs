@@ -44,9 +44,9 @@ async function text(url, options = {}) {
   throw new Error(`No se pudo descargar ${url}: ${cause}`);
 }
 
-async function bytes(url) {
+async function bytes(url, options = {}) {
   if (silentHosts.has(hostOf(url))) throw silentError(url);
-  const res = await fetch(url, { headers: UA, signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS) });
+  const res = await fetch(url, { headers: { ...UA, ...options.headers }, signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS) });
   if (!res.ok) throw new Error(`${res.status} al pedir ${url}`);
   return res.arrayBuffer();
 }
