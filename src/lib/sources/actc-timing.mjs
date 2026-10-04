@@ -3,6 +3,7 @@
 // El listado agrupa por categoría y fecha; cada sesión tiene una página con la tabla de pilotos.
 
 import { belongsToEvent } from "./plausible.mjs";
+import { sessionId } from "../session-id.mjs";
 import { PROVISIONAL, brokenActcResults, describeOfficialChange, hasPodium, isProvisional, penaltiesFrom, reconcileSession } from "../provisorio.mjs";
 
 const BASE = "https://tiempos.actc.org.ar";
@@ -421,7 +422,7 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
         if (incomplete) gaps.set(sessionKey(session), incomplete);
         continue;
       }
-      const id = `${event.id}-${fold(session.name).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+      const id = sessionId(event.id, session.kind, session.name);
       if (official) penalties.set(id, official.penalties);
       timed.push({
         id,

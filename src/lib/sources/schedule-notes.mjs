@@ -3,6 +3,7 @@
 // y un consenso decide qué horarios mostrar como confirmados (fuente oficial o dos fuentes que coinciden).
 
 import { parseJsonBody } from "./common.mjs";
+import { sessionId } from "../session-id.mjs";
 
 const DAYS = "lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado|domingo";
 const MONTHS = { enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, agosto: 8, septiembre: 9, setiembre: 9, octubre: 10, noviembre: 11, diciembre: 12 };
@@ -211,7 +212,7 @@ export function applySchedules(events, sessions) {
         const minutes = s.end ? Math.max(5, (new Date(`${s.date}T${s.end}:00-03:00`) - new Date(start)) / 60000) : DEFAULT_MINUTES[s.kind];
         const isFinal = s.kind === "final" || s.kind === "carrera";
         return {
-          id: `${event.id}-${s.kind}-${s.name.replace(/\W+/g, "").toLowerCase()}`,
+          id: sessionId(event.id, s.kind, s.name),
           kind: s.kind,
           name: s.name,
           start,
