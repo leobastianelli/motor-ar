@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T13:28:25.647Z",
+  "generatedAt": "2026-10-04T13:49:10.372Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -180,7 +180,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "alfonso domenech",
@@ -336,7 +336,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "bautista roqueta",
@@ -1486,7 +1486,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "de gabriel leon ponce",
@@ -2613,7 +2613,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-04-18",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "juan tartaglino",
@@ -3082,7 +3082,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "agrelo marcelo",
@@ -3714,7 +3714,7 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-04-18",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "cordone nahuel",
@@ -3798,7 +3798,7 @@
         "tc-pista-pick-up": "Foton"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "nico varrone",
@@ -3905,7 +3905,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "moscardini nicolas",
@@ -4295,7 +4295,7 @@
         "tc-pista-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "mangoni santiago",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T13:38:18.688Z",
+  "generatedAt": "2026-10-04T13:49:09.028Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -109626,7 +109626,77 @@
               "url": "https://www.solotc.com.ar/tc-san-nicolas-horarios-tv-cronograma-fecha-12-2026/",
               "start": "10:30"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "168",
+              "driver": "Juan Sebastian Gallo",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "69",
+              "driver": "Mion Eddy",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Chevrolet",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/985/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tcp-2026-12-final-final",
@@ -114426,8 +114496,8 @@
       "eventsWithTimes": 32
     },
     "timing": {
-      "documents": 782,
-      "pagesFetched": 46,
+      "documents": 783,
+      "pagesFetched": 47,
       "eventsWithResults": 58
     },
     "openf1": {
