@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T23:01:05.111Z",
+  "generatedAt": "2026-10-04T23:11:47.090Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -7779,6 +7779,49 @@
         }
       ],
       "source": "ACTC (calendario)"
+    },
+    {
+      "id": "rally-argentino-2026-1",
+      "seriesId": "rally-argentino",
+      "round": 1,
+      "name": "Rally Pagos del Tuyú",
+      "officialName": "Rally Pagos del Tuyú - Madariaga",
+      "circuit": {
+        "name": "Madariaga",
+        "city": "Madariaga",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "source": "rallyargentino.com (calendario y tiempos oficiales)",
+      "rallyId": 208,
+      "sessions": [
+        {
+          "id": "rally-argentino-2026-1-etapa1",
+          "kind": "carrera",
+          "name": "Etapa 1",
+          "start": "2026-02-28T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 600
+        },
+        {
+          "id": "rally-argentino-2026-1-etapa2",
+          "kind": "carrera",
+          "name": "Etapa 2",
+          "start": "2026-03-01T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 480
+        },
+        {
+          "id": "rally-argentino-2026-1-general",
+          "kind": "carrera",
+          "name": "Clasificación general",
+          "start": "2026-03-01T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "resultsUnread": true
+        }
+      ]
     },
     {
       "id": "tcm-2026-2",
@@ -32552,6 +32595,49 @@
       "source": "ACTC (calendario) · Wikipedia (podios)"
     },
     {
+      "id": "rally-argentino-2026-2",
+      "seriesId": "rally-argentino",
+      "round": 2,
+      "name": "Rally Sudamericano",
+      "officialName": "Rally Sudamericano - Mina Clavero",
+      "circuit": {
+        "name": "Mina Clavero",
+        "city": "Mina Clavero",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Córdoba"
+      },
+      "source": "rallyargentino.com (calendario y tiempos oficiales)",
+      "rallyId": 209,
+      "sessions": [
+        {
+          "id": "rally-argentino-2026-2-etapa1",
+          "kind": "carrera",
+          "name": "Etapa 1",
+          "start": "2026-04-18T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 600
+        },
+        {
+          "id": "rally-argentino-2026-2-etapa2",
+          "kind": "carrera",
+          "name": "Etapa 2",
+          "start": "2026-04-19T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 480
+        },
+        {
+          "id": "rally-argentino-2026-2-general",
+          "kind": "carrera",
+          "name": "Clasificación general",
+          "start": "2026-04-19T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "resultsUnread": true
+        }
+      ]
+    },
+    {
       "id": "tcpk-2026-3",
       "seriesId": "tc-pick-up",
       "round": 3,
@@ -50419,6 +50505,49 @@
         }
       ],
       "source": "Wikipedia · Temporada 2026 de TC2000 · Campeones"
+    },
+    {
+      "id": "rally-argentino-2026-3",
+      "seriesId": "rally-argentino",
+      "round": 3,
+      "name": "Rally del Petróleo y los Dinosaurios",
+      "officialName": "Rally del Petróleo y los Dinosaurios - Cutral Có y Plaza Huincul - Neuquén",
+      "circuit": {
+        "name": "Cutral Có y Plaza Huincul",
+        "city": "Cutral Có y Plaza Huincul",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Neuquén"
+      },
+      "source": "rallyargentino.com (calendario y tiempos oficiales)",
+      "rallyId": 210,
+      "sessions": [
+        {
+          "id": "rally-argentino-2026-3-etapa1",
+          "kind": "carrera",
+          "name": "Etapa 1",
+          "start": "2026-05-23T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 600
+        },
+        {
+          "id": "rally-argentino-2026-3-etapa2",
+          "kind": "carrera",
+          "name": "Etapa 2",
+          "start": "2026-05-24T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 480
+        },
+        {
+          "id": "rally-argentino-2026-3-general",
+          "kind": "carrera",
+          "name": "Clasificación general",
+          "start": "2026-05-24T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "resultsUnread": true
+        }
+      ]
     },
     {
       "id": "gt3-2026-e2",
@@ -73731,6 +73860,49 @@
         }
       ],
       "source": "Wikipedia · Temporada 2026 de TC2000 · Campeones"
+    },
+    {
+      "id": "rally-argentino-2026-4",
+      "seriesId": "rally-argentino",
+      "round": 4,
+      "name": "Rally del Poncho",
+      "officialName": "Rally del Poncho - Catamarca",
+      "circuit": {
+        "name": "Catamarca",
+        "city": "Catamarca",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Catamarca"
+      },
+      "source": "rallyargentino.com (calendario y tiempos oficiales)",
+      "rallyId": 211,
+      "sessions": [
+        {
+          "id": "rally-argentino-2026-4-etapa1",
+          "kind": "carrera",
+          "name": "Etapa 1",
+          "start": "2026-06-27T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 600
+        },
+        {
+          "id": "rally-argentino-2026-4-etapa2",
+          "kind": "carrera",
+          "name": "Etapa 2",
+          "start": "2026-06-28T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 480
+        },
+        {
+          "id": "rally-argentino-2026-4-general",
+          "kind": "carrera",
+          "name": "Clasificación general",
+          "start": "2026-06-28T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "resultsUnread": true
+        }
+      ]
     },
     {
       "id": "f2-2026-7",
@@ -98653,6 +98825,49 @@
       "source": "ACTC (calendario) · Wikipedia (podios)"
     },
     {
+      "id": "rally-argentino-2026-5",
+      "seriesId": "rally-argentino",
+      "round": 5,
+      "name": "Rally del Jaaukanigás",
+      "officialName": "Rally del Jaaukanigás - Reconquista Santa Fe",
+      "circuit": {
+        "name": "Reconquista",
+        "city": "Reconquista",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Santa Fe"
+      },
+      "source": "rallyargentino.com (calendario y tiempos oficiales)",
+      "rallyId": 212,
+      "sessions": [
+        {
+          "id": "rally-argentino-2026-5-etapa1",
+          "kind": "carrera",
+          "name": "Etapa 1",
+          "start": "2026-08-01T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 600
+        },
+        {
+          "id": "rally-argentino-2026-5-etapa2",
+          "kind": "carrera",
+          "name": "Etapa 2",
+          "start": "2026-08-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 480
+        },
+        {
+          "id": "rally-argentino-2026-5-general",
+          "kind": "carrera",
+          "name": "Clasificación general",
+          "start": "2026-08-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "resultsUnread": true
+        }
+      ]
+    },
+    {
       "id": "tc2000-2026-6",
       "seriesId": "tc2000",
       "round": 6,
@@ -114651,6 +114866,49 @@
         }
       ],
       "source": "Campeones"
+    },
+    {
+      "id": "rally-argentino-2026-6",
+      "seriesId": "rally-argentino",
+      "round": 6,
+      "name": "Rally de San Francisco",
+      "officialName": "Rally de San Francisco - Córdoba",
+      "circuit": {
+        "name": "San Francisco",
+        "city": "San Francisco",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Córdoba"
+      },
+      "source": "rallyargentino.com (calendario y tiempos oficiales)",
+      "rallyId": 213,
+      "sessions": [
+        {
+          "id": "rally-argentino-2026-6-etapa1",
+          "kind": "carrera",
+          "name": "Etapa 1",
+          "start": "2026-09-05T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 600
+        },
+        {
+          "id": "rally-argentino-2026-6-etapa2",
+          "kind": "carrera",
+          "name": "Etapa 2",
+          "start": "2026-09-06T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 480
+        },
+        {
+          "id": "rally-argentino-2026-6-general",
+          "kind": "carrera",
+          "name": "Clasificación general",
+          "start": "2026-09-06T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "resultsUnread": true
+        }
+      ]
     },
     {
       "id": "f2-2026-11",
@@ -136905,6 +137163,48 @@
       "source": "TCR South America (API oficial) · Wikipedia (circuito)"
     },
     {
+      "id": "rally-argentino-2026-7",
+      "seriesId": "rally-argentino",
+      "round": 7,
+      "name": "Rally de Entre Ríos",
+      "officialName": "Rally de Entre Ríos - Diamante y Valle María",
+      "circuit": {
+        "name": "Diamante y Valle María",
+        "city": "Diamante y Valle María",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Entre Ríos"
+      },
+      "source": "rallyargentino.com (calendario y tiempos oficiales)",
+      "rallyId": 214,
+      "sessions": [
+        {
+          "id": "rally-argentino-2026-7-etapa1",
+          "kind": "carrera",
+          "name": "Etapa 1",
+          "start": "2026-10-03T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 600
+        },
+        {
+          "id": "rally-argentino-2026-7-etapa2",
+          "kind": "carrera",
+          "name": "Etapa 2",
+          "start": "2026-10-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 480
+        },
+        {
+          "id": "rally-argentino-2026-7-general",
+          "kind": "carrera",
+          "name": "Clasificación general",
+          "start": "2026-10-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        }
+      ]
+    },
+    {
       "id": "f1-2026-17",
       "seriesId": "f1",
       "round": 17,
@@ -137439,6 +137739,48 @@
       "source": "TCR South America (API oficial) · Wikipedia (circuito)"
     },
     {
+      "id": "rally-argentino-2026-8",
+      "seriesId": "rally-argentino",
+      "round": 8,
+      "name": "Rally de Traslasierra",
+      "officialName": "Rally de Traslasierra - Villa Dolores y Mina Clavero",
+      "circuit": {
+        "name": "Villa Dolores y Mina Clavero",
+        "city": "Villa Dolores y Mina Clavero",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Córdoba"
+      },
+      "source": "rallyargentino.com (calendario y tiempos oficiales)",
+      "rallyId": 215,
+      "sessions": [
+        {
+          "id": "rally-argentino-2026-8-etapa1",
+          "kind": "carrera",
+          "name": "Etapa 1",
+          "start": "2026-11-07T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 600
+        },
+        {
+          "id": "rally-argentino-2026-8-etapa2",
+          "kind": "carrera",
+          "name": "Etapa 2",
+          "start": "2026-11-08T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 480
+        },
+        {
+          "id": "rally-argentino-2026-8-general",
+          "kind": "carrera",
+          "name": "Clasificación general",
+          "start": "2026-11-08T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        }
+      ]
+    },
+    {
       "id": "tcm-2026-11",
       "seriesId": "tc-mouras",
       "round": 11,
@@ -137947,6 +138289,48 @@
         }
       ],
       "source": "ACTC (calendario)"
+    },
+    {
+      "id": "rally-argentino-2026-9",
+      "seriesId": "rally-argentino",
+      "round": 9,
+      "name": "Gran Premio Rally de San Luis",
+      "officialName": "Gran Premio Rally de San Luis",
+      "circuit": {
+        "name": "San Luis",
+        "city": "San Luis",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "San Luis"
+      },
+      "source": "rallyargentino.com (calendario y tiempos oficiales)",
+      "rallyId": 216,
+      "sessions": [
+        {
+          "id": "rally-argentino-2026-9-etapa1",
+          "kind": "carrera",
+          "name": "Etapa 1",
+          "start": "2026-12-12T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 600
+        },
+        {
+          "id": "rally-argentino-2026-9-etapa2",
+          "kind": "carrera",
+          "name": "Etapa 2",
+          "start": "2026-12-13T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 480
+        },
+        {
+          "id": "rally-argentino-2026-9-general",
+          "kind": "carrera",
+          "name": "Clasificación general",
+          "start": "2026-12-13T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        }
+      ]
     },
     {
       "id": "tcm-2026-12",
@@ -142461,6 +142845,54 @@
         "Puntos hasta la fecha 5 distintos: Carlos Javier Merlo 22 (Wikipedia) y 0 (API); Alberto Cattucci 6 (Wikipedia) y 0 (API)"
       ]
     },
+    "rally-argentino": {
+      "clases": {
+        "rc2": {
+          "status": "sin-campeonato",
+          "reason": "La página del campeonato no trae la tabla de esta clase."
+        },
+        "copa-rc2": {
+          "status": "sin-campeonato",
+          "reason": "La página del campeonato no trae la tabla de esta clase."
+        },
+        "copa-toyota": {
+          "status": "sin-campeonato",
+          "reason": "La página del campeonato no trae la tabla de esta clase."
+        },
+        "maxi-rally": {
+          "status": "sin-campeonato",
+          "reason": "La página del campeonato no trae la tabla de esta clase."
+        },
+        "rc3": {
+          "status": "sin-campeonato",
+          "reason": "La página del campeonato no trae la tabla de esta clase."
+        },
+        "rc4": {
+          "status": "sin-campeonato",
+          "reason": "La página del campeonato no trae la tabla de esta clase."
+        },
+        "rc5": {
+          "status": "sin-campeonato",
+          "reason": "La página del campeonato no trae la tabla de esta clase."
+        }
+      }
+    },
+    "rallyArgentino": {
+      "events": 9,
+      "filledResults": 0,
+      "errors": [
+        "calendario: No se pudo descargar https://www.rallyargentino.com/calendario.php?anio=2026: HTTP 403 (text/html; charset=UTF-8) (se usa el calendario guardado el 4/10)",
+        "carrera en curso: No se pudo descargar https://api.rallyargentino.com/api/v2/cabecera-dashboard: HTTP 403 (text/html; charset=UTF-8)",
+        "fecha 1: No se pudo descargar https://api.rallyargentino.com/api/historico/2026-carrera-01/v2/clasificacion-final/general: HTTP 403 (text/html; charset=UTF-8)",
+        "fecha 2: No se pudo descargar https://api.rallyargentino.com/api/historico/2026-carrera-02/v2/clasificacion-final/general: HTTP 403 (text/html; charset=UTF-8)",
+        "fecha 3: No se pudo descargar https://api.rallyargentino.com/api/historico/2026-carrera-03/v2/clasificacion-final/general: HTTP 403 (text/html; charset=UTF-8)",
+        "fecha 4: No se pudo descargar https://api.rallyargentino.com/api/historico/2026-carrera-04/v2/clasificacion-final/general: HTTP 403 (text/html; charset=UTF-8)",
+        "fecha 5: No se pudo descargar https://api.rallyargentino.com/api/historico/2026-carrera-05/v2/clasificacion-final/general: HTTP 403 (text/html; charset=UTF-8)",
+        "fecha 6: No se pudo descargar https://api.rallyargentino.com/api/historico/2026-carrera-06/v2/clasificacion-final/general: HTTP 403 (text/html; charset=UTF-8)",
+        "campeonato: No se pudo descargar https://www.rallyargentino.com/campeonato-pilotos.php: HTTP 403 (text/html; charset=UTF-8)"
+      ],
+      "ignored": []
+    },
     "tc-pista": {
       "standingsLabel": "Tabla oficial de la ACTC",
       "standingsAsOfRound": 12,
@@ -142540,6 +142972,14 @@
     }
   },
   "failures": [
-    "Rally Argentino: No se pudo descargar https://www.rallyargentino.com/calendario.php?anio=2026: HTTP 403 (text/html; charset=UTF-8)"
+    "Rally Argentino: calendario: No se pudo descargar https://www.rallyargentino.com/calendario.php?anio=2026: HTTP 403 (text/html; charset=UTF-8) (se usa el calendario guardado el 4/10)",
+    "Rally Argentino: carrera en curso: No se pudo descargar https://api.rallyargentino.com/api/v2/cabecera-dashboard: HTTP 403 (text/html; charset=UTF-8)",
+    "Rally Argentino: fecha 1: No se pudo descargar https://api.rallyargentino.com/api/historico/2026-carrera-01/v2/clasificacion-final/general: HTTP 403 (text/html; charset=UTF-8)",
+    "Rally Argentino: fecha 2: No se pudo descargar https://api.rallyargentino.com/api/historico/2026-carrera-02/v2/clasificacion-final/general: HTTP 403 (text/html; charset=UTF-8)",
+    "Rally Argentino: fecha 3: No se pudo descargar https://api.rallyargentino.com/api/historico/2026-carrera-03/v2/clasificacion-final/general: HTTP 403 (text/html; charset=UTF-8)",
+    "Rally Argentino: fecha 4: No se pudo descargar https://api.rallyargentino.com/api/historico/2026-carrera-04/v2/clasificacion-final/general: HTTP 403 (text/html; charset=UTF-8)",
+    "Rally Argentino: fecha 5: No se pudo descargar https://api.rallyargentino.com/api/historico/2026-carrera-05/v2/clasificacion-final/general: HTTP 403 (text/html; charset=UTF-8)",
+    "Rally Argentino: fecha 6: No se pudo descargar https://api.rallyargentino.com/api/historico/2026-carrera-06/v2/clasificacion-final/general: HTTP 403 (text/html; charset=UTF-8)",
+    "Rally Argentino: campeonato: No se pudo descargar https://www.rallyargentino.com/campeonato-pilotos.php: HTTP 403 (text/html; charset=UTF-8)"
   ]
 }
