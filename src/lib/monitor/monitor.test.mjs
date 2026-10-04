@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { emptyState, evaluate, summaryDue } from "./alerts.mjs";
-import { compareStandings, dateIssues, tnDateConflicts, withConflicts, dateStatus, manualDiscarded, manualExpired, parseTc2000Home, pendingHours, resultsOverdue, sessionResultsMissing, sourceFailures, weekendWithoutAnyHour, staleStandings, visibleEvents } from "./checks.mjs";
+import { dedupeFindings, emptyState, evaluate, summaryDue } from "./alerts.mjs";
+import { compareStandings, dateIssues, tnDateConflicts, withConflicts, dateStatus, manualDiscarded, manualExpired, parseTc2000Home, pendingHours, failureLabel, resultsOverdue, sessionResultsMissing, sourceFailures, weekendWithoutAnyHour, staleStandings, visibleEvents } from "./checks.mjs";
 import { chunk, renderAlerts, sendTelegram, sendTelegramPhoto } from "./telegram.mjs";
 
 // Domingo 27/09/2026 (Balcarce, TC Pick Up): la carrera no tiene hora.
@@ -90,11 +90,14 @@ test("resultados: un hueco de más de 30 días baja a información y lo dice", (
 });
 
 test("las fallas de fuente avisan desde la segunda vez; si hubo pérdida de datos, en el acto; las correcciones automáticas son sólo información", () => {
-  const [suelta, perdida, corregido] = sourceFailures([
+  const out = sourceFailures([
     "Speedhive TN: 500 al pedir la lista",
     "Se conservaron fechas que las fuentes dejaron de traer: tn 12",
     "Se descartaron resultados de 1 sesiones que todavía no se corrieron (eran de otra fecha)",
   ]);
+  const suelta = out.find((f) => f.key === "fuente:Speedhive TN");
+  const perdida = out.find((f) => f.key === "fuente:perdio-datos");
+  const corregido = out.find((f) => f.key === "correccion:automatica");
   assert.equal(suelta.consecutive, 2);
   assert.equal(suelta.key, "fuente:Speedhive TN");
   assert.equal(perdida.consecutive, undefined);
@@ -104,12 +107,94 @@ test("las fallas de fuente avisan desde la segunda vez; si hubo pérdida de dato
   assert.match(corregido.title, /corregidos automáticamente/);
 });
 
+const caidaActc = [
+  "Campeonato ACTC tcp: No se pudo descargar https://actc.org.ar/tcp/campeonato: HTTP 502",
+  "Campeonato ACTC tcm: No se pudo descargar https://actc.org.ar/tcm/campeonato: HTTP 502",
+  "Cronogramas (ACTC: No se pudo descargar https://actc.org.ar/cronograma: HTTP 502)",
+  "Cronograma oficial ACTC",
+];
+
+test("varias fallas del mismo origen (la ACTC dio 502) salen en un solo aviso con clave estable", () => {
+  const out = sourceFailures([...caidaActc, "Speedhive TN: 500 al pedir la lista"]);
+  const actc = out.filter((f) => f.key === "fuente:actc");
+  assert.equal(actc.length, 1);
+  assert.equal(actc[0].consecutive, 2);
+  assert.match(actc[0].title, /La ACTC no responde \(4 cosas/);
+  for (const l of caidaActc) assert.ok(actc[0].body.includes(l.slice(0, 40)));
+  assert.equal(out.length, 2); // el de la ACTC + la falla suelta de Speedhive, que queda como antes
+  assert.equal(out.find((f) => f.key !== "fuente:actc").key, "fuente:Speedhive TN");
+  // Una sola falla de ese origen mantiene la clave del origen (cambia sólo el título).
+  assert.equal(sourceFailures([caidaActc[0]])[0].key, "fuente:actc");
+  // Se generaliza por host de la URL.
+  const apat = sourceFailures(["TN fechas: HTTP 500 https://www.apat.com.ar/a", "TN pilotos: HTTP 500 https://apat.com.ar/b"]);
+  assert.equal(apat.length, 1);
+  assert.equal(apat[0].key, "fuente:apat");
+});
+
+test("las tablas de campeonato que no llegaron se agrupan; las pérdidas de datos van juntas en un hallazgo high", () => {
+  const out = sourceFailures([
+    "Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior",
+    "Campeonato tc-pista: la fuente no trajo la tabla, se conservó la anterior",
+    "Se conservaron fechas que las fuentes dejaron de traer: tn 12",
+    "Se conservaron resultados de 10 sesiones que la fuente no trajo",
+  ]);
+  assert.deepEqual(out.map((f) => f.key).sort(), ["fuente:perdio-datos", "fuente:tablas-sin-datos"]);
+  const tablas = out.find((f) => f.key === "fuente:tablas-sin-datos");
+  assert.match(tablas.title, /^2 tablas de campeonato/);
+  assert.equal(tablas.consecutive, 2);
+  const perdida = out.find((f) => f.key === "fuente:perdio-datos");
+  assert.equal(perdida.severity, "high");
+  assert.equal(perdida.consecutive, undefined);
+  assert.match(perdida.body, /fechas que las fuentes[\s\S]*resultados de 10 sesiones/);
+});
+
+test("el nombre de la fuente no se corta en un paréntesis abierto", () => {
+  assert.equal(failureLabel("Cronogramas (ACTC: No se pudo descargar https://x.y: HTTP 502)"), "Cronogramas");
+  assert.equal(failureLabel("Cronogramas (ACTC): No se pudo"), "Cronogramas (ACTC)");
+  assert.equal(failureLabel("Speedhive TN: 500"), "Speedhive TN");
+  assert.equal(sourceFailures(["Cronogramas (ACTC: HTTP 500)"])[0].title, "Falla de una fuente: Cronogramas");
+});
+
+test("dos hallazgos con la misma clave se fusionan; el aviso de una falla agrupada sale desde la segunda corrida seguida", () => {
+  const merged = dedupeFindings([
+    finding({ key: "k", severity: "medium", level: 1, body: "a", consecutive: 2 }),
+    finding({ key: "k", severity: "high", level: 2, body: "b" }),
+    finding({ key: "otra" }),
+  ]);
+  assert.equal(merged.length, 2);
+  assert.equal(merged[0].severity, "high");
+  assert.equal(merged[0].level, 2);
+  assert.equal(merged[0].body, "a\nb");
+  assert.equal(merged[0].consecutive, undefined);
+  // evaluate nunca repite una clave aunque le lleguen dos hallazgos iguales.
+  const dup = [finding({ key: "x", body: "a" }), finding({ key: "x", body: "b" })];
+  assert.equal(evaluate(dup, emptyState(), "2026-10-04T12:00:00Z").send.length, 1);
+  // Con las claves nuevas: primera corrida calla, segunda avisa.
+  const fs = sourceFailures(caidaActc);
+  const r1 = evaluate(fs, emptyState(), "2026-10-04T12:00:00Z");
+  assert.equal(r1.send.length, 0);
+  const r2 = evaluate(sourceFailures(caidaActc), r1.state, "2026-10-04T12:30:00Z");
+  assert.equal(r2.send.length, 1);
+  assert.equal(r2.send[0].key, "fuente:actc");
+});
+
 test("campeonato atrasado: la tabla llega a la fecha 11 y ya se corrieron 12", () => {
   const races = Array.from({ length: 12 }, (_, i) => ({ id: `tc-${i}`, seriesId: "tc", sessions: [{ kind: "final", results: [{ pos: 1 }] }] }));
   const out = staleStandings({ standings: {}, meta: {} }, { standings: { tc: { asOfRound: 11 } } }, races, { tierOf });
   assert.equal(out.length, 1);
   assert.match(out[0].body, /carga manual/);
   assert.equal(staleStandings({ standings: {}, meta: {} }, { standings: { tc: { asOfRound: 12 } } }, races).length, 0);
+});
+
+test("tabla atrasada de la fuente automática: no avisa hasta 24 h después de la última carrera; la manual avisa en el acto", () => {
+  const races = Array.from({ length: 12 }, (_, i) => ({ id: `tc-${i}`, seriesId: "tc", sessions: [{ kind: "final", start: `2026-09-${String(i + 1).padStart(2, "0")}T15:00:00-03:00`, results: [{ pos: 1 }] }] }));
+  const auto = { standings: { tc: [{}] }, meta: { tc: { standingsAsOfRound: 11 } } };
+  const lastStart = "2026-09-12T15:00:00-03:00";
+  assert.equal(staleStandings(auto, {}, races, { now: "2026-09-12T20:00:00-03:00" }).length, 0);
+  assert.equal(staleStandings(auto, {}, races, { now: "2026-09-13T14:00:00-03:00" }).length, 0);
+  assert.equal(staleStandings(auto, {}, races, { now: "2026-09-13T16:00:00-03:00" }).length, 1);
+  const manual = { standings: { tc: { asOfRound: 11 } } };
+  assert.equal(staleStandings({ standings: {}, meta: {} }, manual, races, { now: lastStart }).length, 1);
 });
 
 test("una carga manual de un evento terminado hace más de 2 días, sin sesiones propias, se marca para limpiar", () => {
@@ -430,6 +515,20 @@ test("una carga manual que no se puede mostrar queda como hallazgo, no en silenc
   const conSerie1 = sunday({ sessions: [{ id: "s1", kind: "serie", name: "Serie 1", start: "2026-09-27T12:00:00-03:00", timeKnown: false, durationMin: 20, results: rows }] });
   assert.equal(manualDiscarded([conSerie1], manual).length, 0);
   assert.equal(visibleEvents([conSerie1], manual)[0].sessions.length, 2);
+});
+
+test("la clave de un origen caído no cambia si falla una cosa o varias (si no, avisaría 'resuelto' y uno nuevo)", () => {
+  const una = sourceFailures(["Campeonato ACTC tcp: No se pudo descargar https://actc.org.ar/tcp/campeonato: HTTP 502"]);
+  const varias = sourceFailures([
+    "Campeonato ACTC tcp: No se pudo descargar https://actc.org.ar/tcp/campeonato: HTTP 502",
+    "Campeonato ACTC tcm: No se pudo descargar https://actc.org.ar/tcm/campeonato: HTTP 502",
+  ]);
+  assert.deepEqual(una.map((f) => f.key), ["fuente:actc"]);
+  assert.deepEqual(varias.map((f) => f.key), ["fuente:actc"]);
+  assert.match(una[0].title, /Falla de una fuente: Campeonato ACTC tcp/);
+  assert.match(varias[0].title, /La ACTC no responde \(2 cosas/);
+  const tabla = sourceFailures(["Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior"]);
+  assert.deepEqual(tabla.map((f) => f.key), ["fuente:tablas-sin-datos"]);
 });
 
 test("sessionResultsMissing: una sesión con la tabla incompleta de la fuente no se vuelve a pedir", () => {

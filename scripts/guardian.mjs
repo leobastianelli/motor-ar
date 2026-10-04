@@ -5,7 +5,7 @@
 import fs from "node:fs";
 import { drivers } from "../src/data/drivers.ts";
 import { series } from "../src/data/series.ts";
-import { emptyState, evaluate, summaryDue } from "../src/lib/monitor/alerts.mjs";
+import { dedupeFindings, emptyState, evaluate, summaryDue } from "../src/lib/monitor/alerts.mjs";
 import {
   compareStandings,
   dateIssues,
@@ -75,7 +75,7 @@ const findings = [
   ...weekendWithoutAnyHour(events, NOW, { tierOf, name }),
   ...resultsOverdue(events, NOW, { autoSeries: AUTO_RESULTS, tierOf, name }),
   ...sessionResultsMissing(events, NOW, { seriesIds: new Set(["f1"]), tierOf, name }),
-  ...staleStandings(snapshot, manual, events, { tierOf, name }),
+  ...staleStandings(snapshot, manual, events, { tierOf, name, now: NOW }),
   ...manualExpired(events, snapshot.events, manual, NOW),
   ...manualDiscarded(snapshot.events, manual),
 ];
@@ -125,7 +125,7 @@ const alertText = renderAlerts({ send, resolved });
 const daily = summaryDue(state, NOW);
 
 console.log(`Hallazgos: ${findings.length} · a avisar: ${send.length} · resueltos: ${resolved.length} · resumen diario: ${daily ? "sí" : "no"}`);
-for (const f of findings) console.log(`  [${f.severity}] ${f.key} — ${f.title}`);
+for (const f of dedupeFindings(findings)) console.log(`  [${f.severity}] ${f.key} — ${f.title}`);
 for (const n of notes) console.log(`  (nota) ${n}`);
 
 if (DRY) {

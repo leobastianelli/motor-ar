@@ -13,6 +13,8 @@ Dos procesos avisan cuando algo falta o falla. **Sólo envían mensajes**: no le
 - **Empeora** (por ejemplo, un evento sin horario se acerca): se avisa en el acto, sin esperar.
 - **Se resuelve:** se avisa una sola vez ("✅ Resuelto").
 - **Una falla suelta de una fuente** puede ser un mal momento: se avisa desde la segunda corrida seguida. Si además se perdieron datos, se avisa enseguida.
+- **Un origen caído es un solo aviso:** si varias fallas apuntan al mismo sitio (por el dominio de la URL, o "ACTC"), salen juntas en un hallazgo ("La ACTC no responde (N cosas no se pudieron actualizar)", clave `fuente:actc`) con la lista en el cuerpo. Las "Campeonato X: la fuente no trajo la tabla" se agrupan en otro (`fuente:tablas-sin-datos`) y las pérdidas de datos en `fuente:perdio-datos`. La clave es la del origen aunque falle una sola cosa (sólo cambia el título), para que una caída que crece o se achica no mande "resuelto" y un aviso nuevo. Los agrupados esperan a la segunda corrida seguida, salvo la pérdida de datos. Nunca hay dos hallazgos con la misma clave: si coinciden, se fusionan.
+- **Campeonato atrasado:** si la tabla viene de la fuente automática, no se avisa hasta 24 h después del inicio de la última carrera (la fuente suele actualizarla horas más tarde). Si es una carga manual, se avisa en el acto.
 - **Resumen diario** a las 06:00: qué está abierto y cómo están los próximos 5 días.
 
 ### Horarios pendientes
