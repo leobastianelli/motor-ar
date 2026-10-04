@@ -23,8 +23,6 @@ export function buildPdf(lines, mode = "gs9") {
     .map((c, i) => `<${(i + 1).toString(16).padStart(2, "0")}> <${c.codePointAt(0).toString(16).padStart(4, "0")}>`)
     .join("\n")}\nendbfchar\nendcmap\nend end`;
 
-  const objs = []; // [num, dictText, stream?]
-  const add = (num, dict, stream) => objs.push({ num, dict, stream });
   const fontDict = winAnsi ? "<< /Type /Font /Subtype /TrueType /BaseFont /Tahoma /Encoding /WinAnsiEncoding >>" : "<< /Type /Font /Subtype /TrueType /BaseFont /ABCDEF+Tahoma /ToUnicode 6 0 R >>";
   const dicts = {
     1: "<< /Type /Catalog /Pages 2 0 R >>",

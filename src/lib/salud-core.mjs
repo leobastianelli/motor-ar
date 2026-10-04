@@ -7,7 +7,7 @@ export const AUTOMATIC_SERIES = new Set(["f1", "f2", "tc", "tc-pista", "tc-moura
 
 // Cómo empieza el texto de una falla (`failures[]`) de cada fuente de resultados, por categoría. Los videos y cronogramas no son resultados.
 const ACTC = /^(ACTC|Tiempos ACTC|Campeonato ACTC)\b/;
-const FAILURE_OF = { f1: /^(F1|OpenF1|F1 oficial)\b/, f2: /^(F2|FIA F2)\b/, tn: /^(TN APAT|Speedhive TN)/, "rally-argentino": /^Rally Argentino/,"cordoba-pista": /^Córdoba Pista/ };
+const FAILURE_OF = { f1: /^(F1|OpenF1|F1 oficial)\b/, f2: /^(F2|FIA F2)\b/, tn: /^(TN APAT|Speedhive TN)/, "rally-argentino": /^Rally Argentino/, "cordoba-pista": /^Córdoba Pista\b/, "nuevo-car-show": /^Nuevo Car Show\b/ };
 for (const id of ["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up"]) FAILURE_OF[id] = ACTC;
 
 /** Contenido de `<meta name="fierros-datos">`: `v=<id>;origen=<origen>;generado=<ISO>;servido=<de dónde>`. */
