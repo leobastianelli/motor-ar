@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T10:07:38.865Z",
+  "generatedAt": "2026-10-04T10:53:27.414Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -106359,7 +106359,236 @@
           "name": "Carrera",
           "start": "2026-10-04T07:00:00Z",
           "timeKnown": true,
-          "durationMin": 120
+          "durationMin": 120,
+          "results": [
+            {
+              "pos": 1,
+              "positionText": "1",
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "1:47:14.808",
+              "points": 25
+            },
+            {
+              "pos": 2,
+              "positionText": "2",
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+2.307",
+              "points": 18
+            },
+            {
+              "pos": 3,
+              "positionText": "3",
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+4.919",
+              "points": 15
+            },
+            {
+              "pos": 4,
+              "positionText": "4",
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "+7.258",
+              "points": 12
+            },
+            {
+              "pos": 5,
+              "positionText": "5",
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "+8.571",
+              "points": 10
+            },
+            {
+              "pos": 6,
+              "positionText": "6",
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+9.454",
+              "points": 8
+            },
+            {
+              "pos": 7,
+              "positionText": "7",
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "+12.753",
+              "points": 6
+            },
+            {
+              "pos": 8,
+              "positionText": "8",
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+13.372",
+              "points": 4
+            },
+            {
+              "pos": 9,
+              "positionText": "9",
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "+13.993",
+              "points": 2
+            },
+            {
+              "pos": 10,
+              "positionText": "10",
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+15.928",
+              "points": 1
+            },
+            {
+              "pos": 11,
+              "positionText": "11",
+              "number": "27",
+              "driver": "Nico Hülkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+17.404",
+              "points": 0
+            },
+            {
+              "pos": 12,
+              "positionText": "12",
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "+18.052",
+              "points": 0
+            },
+            {
+              "pos": 13,
+              "positionText": "13",
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "+18.997",
+              "points": 0
+            },
+            {
+              "pos": 14,
+              "positionText": "14",
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+22.305",
+              "points": 0
+            },
+            {
+              "pos": 15,
+              "positionText": "15",
+              "number": "31",
+              "driver": "Esteban Ocon",
+              "code": "OCO",
+              "team": "Haas F1 Team",
+              "gap": "+22.532",
+              "points": 0
+            },
+            {
+              "pos": 16,
+              "positionText": "16",
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "+23.315",
+              "points": 0
+            },
+            {
+              "pos": 17,
+              "positionText": "17",
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+25.431",
+              "points": 0
+            },
+            {
+              "pos": 18,
+              "positionText": "18",
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "+28.233",
+              "points": 0
+            },
+            {
+              "pos": 19,
+              "positionText": "19",
+              "number": "11",
+              "driver": "Sergio Pérez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "+29.310",
+              "points": 0
+            },
+            {
+              "pos": 20,
+              "positionText": "20",
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 21,
+              "positionText": "NC",
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 22,
+              "positionText": "NC",
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 1 (oficial)",
+            "url": "https://www.formula1.com/en/results/2026/races/1308/bahrain/race-result"
+          }
         }
       ],
       "source": "Jolpica-F1"
@@ -114138,10 +114367,8 @@
     },
     "f1Official": {
       "requests": 1,
-      "sessionsWithResults": 0,
-      "errors": [
-        "GP de Baréin (en Malasia) · Carrera: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
-      ]
+      "sessionsWithResults": 1,
+      "errors": []
     },
     "f1Youtube": {
       "scanned": 15,
@@ -114174,8 +114401,6 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
-    "F1 oficial: GP de Baréin (en Malasia) · Carrera: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
     "Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior"
   ]
 }
