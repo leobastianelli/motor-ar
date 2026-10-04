@@ -5,7 +5,7 @@
 // Sin credenciales de Telegram no se manda nada real, así que tampoco se reserva: si se reservara sin mandar, quedaría marcado como enviado
 // para siempre aunque nadie lo haya visto.
 import { borradores, X_LIMIT, xIntentUrl, xLength } from "./redes-core.mjs";
-import { sendTelegram, sendTelegramPhoto } from "./monitor/telegram.mjs";
+import { sendTelegram, sendTelegramMediaGroup, sendTelegramPhoto } from "./monitor/telegram.mjs";
 
 const KIND_LABEL = { agenda: "agenda del finde", resultado: "resultado", horario: "horario", resumen: "así quedó el finde" };
 
@@ -25,6 +25,7 @@ export function draftMessage(d) {
     "",
     `${xLength(d.text)}/${X_LIMIT} caracteres`,
     ...(d.image ? [`Placa para adjuntar: ${d.image}`] : []),
+    ...(d.images?.length ? [`Carrusel: ${d.images.length} placas (van arriba, en el álbum)`] : []),
   ].join("\n");
 }
 
@@ -73,7 +74,11 @@ export async function enviarBorradores({ raw, now, catalog, manual = {}, events,
     }
     try {
       // La agenda del viernes lleva la placa (image) adjunta como foto; el resto son mensajes de texto simples.
-      if (d.image) await sendTelegramPhoto(d.image, draftMessage(d), { ...creds, replyMarkup: draftKeyboard(d) });
+      // El resumen del domingo lleva un carrusel (images): primero el álbum de placas y después el mensaje con el texto y el botón.
+      if (d.images?.length) {
+        await sendTelegramMediaGroup(d.images, creds);
+        await sendTelegram(draftMessage(d), { ...creds, replyMarkup: draftKeyboard(d) });
+      } else if (d.image) await sendTelegramPhoto(d.image, draftMessage(d), { ...creds, replyMarkup: draftKeyboard(d) });
       else await sendTelegram(draftMessage(d), { ...creds, replyMarkup: draftKeyboard(d) });
       enviados.push({ key: d.key, kind: d.kind });
       conocidos.add(d.key);
