@@ -277,7 +277,8 @@ export async function rallyArgentinoSeason(io, previous = { events: [], standing
     // ¿De dónde salen los resultados? La carrera en curso (la que nombra la cabecera de los tiempos) sale de `/v2/...`; las que ya terminaron,
     // del histórico. Las fechas viejas con resultados oficiales guardados no se vuelven a pedir, ni las que la fuente nunca dejó leer (la fecha 1
     // devuelve 404 desde siempre y cada intento cuesta varios reintentos).
-    const fuentes = !empezo ? [] : r === actual ? ["actual", ...(terminó ? ["historico"] : [])] : terminó ? ["historico"] : [];
+    // La carrera actual ya terminada se busca primero en el histórico (oficial); si todavía no pasó ahí, sale de `/v2/...` como provisoria.
+    const fuentes = !empezo ? [] : r === actual ? [...(terminó ? ["historico"] : []), "actual"] : terminó ? ["historico"] : [];
     const guardada = Boolean(anterior?.results?.length) && anterior.resultsSource?.status !== "provisional";
     const vieja = ymd(r.end) < viejo;
     if (prev && vieja && (guardada || anterior?.resultsUnread)) {
@@ -294,7 +295,7 @@ export async function rallyArgentinoSeason(io, previous = { events: [], standing
         const datos = await api(io, path);
         const pilotos = datos?.pilotosClasificados ?? [];
         if (!pilotos.length) continue;
-        // La carrera en curso sólo cuenta cuando terminó; hasta el último día es provisoria (los comisarios pueden aplicar penalizaciones).
+        // La carrera en curso sólo cuenta cuando terminó; es provisoria hasta que pasa al histórico (los comisarios pueden aplicar penalizaciones).
         if (fuente === "actual" && !carreraCerrada(datos.tramos)) continue;
         const rows = filasDe(pilotos);
         const firma = firmaDe(rows);
@@ -305,7 +306,8 @@ export async function rallyArgentinoSeason(io, previous = { events: [], standing
         res = {
           rows,
           clases: Object.fromEntries(Object.entries(porClase(pilotos)).map(([cid, list]) => [cid, filasDe(list, { claseId: cid })])),
-          provisional: fuente === "actual" && ymd(r.end) >= hoy,
+          // Oficial sólo cuando la API la archivó en el histórico: la fecha del calendario no alcanza para darla por revisada.
+          provisional: fuente === "actual",
           source: { url: urlDe(fuente) },
         };
         firmas.set(r.round, firma);

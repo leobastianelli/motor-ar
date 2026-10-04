@@ -277,8 +277,12 @@ test("temporada: fecha en curso ya cerrada = provisoria el último día; la hist
   assert.equal(out.meta["rally-argentino"].clases.rc2.status, "oficial");
 });
 
-test("temporada: al día siguiente de la última etapa el resultado de la carrera en curso deja de ser provisorio", async () => {
-  const out = await rallyArgentinoSeason(fakeIo(respuestas()), undefined, { now: new Date("2026-10-05T10:00:00-03:00") });
+test("temporada: la carrera terminada sigue provisoria hasta que la API la archiva en el histórico", async () => {
+  const despues = new Date("2026-10-05T10:00:00-03:00");
+  const sinArchivar = await rallyArgentinoSeason(fakeIo(respuestas()), undefined, { now: despues });
+  assert.equal(general_(sinArchivar.events[2]).resultsSource.status, "provisional");
+  const archivada = respuestas({ "historico/2026-carrera-03/v2/clasificacion-final/general": general(["Finalizado", "Finalizado"], PILOTOS_7) });
+  const out = await rallyArgentinoSeason(fakeIo(archivada), undefined, { now: despues });
   assert.equal(general_(out.events[2]).resultsSource.status, undefined);
   assert.equal(general_(out.events[2]).results.length, 2);
 });

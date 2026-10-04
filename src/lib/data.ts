@@ -233,7 +233,7 @@ export function createSeason(raw: RawSeason) {
     classStandings[s.id] = Object.fromEntries(
       s.classes.map((c) => {
         const cls = raw[c.id];
-        // Un resultado provisorio (el Rally Argentino, hasta el último día de la fecha) todavía no obliga a la tabla a estar al día.
+        // Un resultado provisorio (el Rally Argentino, hasta que pasa al histórico) todavía no obliga a la tabla a estar al día.
         const played = Math.max(0, ...events.filter((e) => e.seriesId === s.id && e.sessions.some((x) => x.classId === c.id && x.kind === "final" && x.results?.length && !isProvisional(x))).map((e) => e.round));
         if ((cls?.status === "calculado" || cls?.status === "oficial") && cls.rows?.length && (cls.asOfRound ?? 0) >= played) {
           // Quienes no tienen ficha propia (casi todos en una categoría zonal) enlazan a su ficha automática del índice de pilotos.

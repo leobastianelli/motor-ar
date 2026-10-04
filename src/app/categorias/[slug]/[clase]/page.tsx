@@ -118,7 +118,7 @@ export default async function ClassPage(props: PageProps<"/categorias/[slug]/[cl
         )}
         <p className="source-note">
           {series.id === "rally-argentino"
-            ? "Fuente de los resultados: tiempos oficiales del Rally Argentino (la carrera en curso se publica como provisoria hasta el último día de la fecha). Figuran los pilotos clasificados."
+            ? "Fuente de los resultados: tiempos oficiales del Rally Argentino (la carrera en curso se publica como provisoria hasta que la organización la pasa a su histórico de tiempos). Figuran los pilotos clasificados."
             : "Fuente de los resultados: cronometraje de la FRAD en MyLaps Speedhive (provisorios: no incluyen las penalizaciones de tiempo de los comisarios)."}
         </p>
       </section>
