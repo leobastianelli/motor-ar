@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T10:53:27.414Z",
+  "generatedAt": "2026-10-04T13:28:25.213Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -109540,7 +109540,77 @@
               "url": "https://www.solotc.com.ar/tc-san-nicolas-horarios-tv-cronograma-fecha-12-2026/",
               "start": "10:05"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "53",
+              "driver": "Eugenio Provens",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Toyota",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/984/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tcp-2026-12-serie-serie2",
@@ -114356,13 +114426,13 @@
       "eventsWithTimes": 32
     },
     "timing": {
-      "documents": 781,
-      "pagesFetched": 45,
+      "documents": 782,
+      "pagesFetched": 46,
       "eventsWithResults": 58
     },
     "openf1": {
       "sessions": 131,
-      "requests": 18,
+      "requests": 12,
       "sessionsWithResults": 43
     },
     "f1Official": {
@@ -114401,6 +114471,7 @@
     }
   },
   "failures": [
+    "Speedhive TN: No se pudo descargar https://eventresults-api.speedhive.com/api/v0.2.3/eventresults/organizations/381036/events?count=80: HTTP 502 (text/html) (se conservan los datos anteriores)",
     "Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior"
   ]
 }
