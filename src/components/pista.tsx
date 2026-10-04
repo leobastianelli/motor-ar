@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import type { StateKind } from "@/lib/format";
 import type { Photo } from "@/lib/photos";
-import type { Series } from "@/lib/types";
+import type { Series, SeriesClass } from "@/lib/types";
 
 /** Crédito obligatorio de las fotos con licencia Creative Commons. */
 export function PhotoCredit({ photo }: { photo: Photo }) {
@@ -60,6 +60,15 @@ export function CategoryLabel({ series, detail, href }: { series: Pick<Series, "
         </>
       )}
       {detail && <span>{detail}</span>}
+    </span>
+  );
+}
+
+/** Sello de una clase de una categoría con clases (Córdoba Pista): código corto + color propio, más chico que el de la categoría. */
+export function ClassSeal({ clase }: { clase: Pick<SeriesClass, "code" | "color" | "name"> }) {
+  return (
+    <span className="clase-seal" style={{ background: clase.color }} title={clase.name}>
+      {clase.code}
     </span>
   );
 }

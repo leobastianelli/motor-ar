@@ -3,6 +3,7 @@ import { actcSeason } from "./actc.mjs";
 import { actcOfficialSchedules } from "./actc-official.mjs";
 import { ACTC_CATEGORIES, actcNotes, actcStandings } from "./actc-site.mjs";
 import { apatSeason } from "./apat.mjs";
+import { cordobaPistaSeason } from "./cordoba-pista.mjs";
 import { f1Season } from "./f1.mjs";
 import { f2Season } from "./f2.mjs";
 import { gtwcSeason } from "./gtwc.mjs";
@@ -25,6 +26,9 @@ const SOURCES = [
   ["TN APAT", ["tn"], apatSeason],
   ["TC2000", ["tc2000"], tc2000Season],
   ["GT World Challenge", ["gt3"], gtwcSeason],
+  // Córdoba Pista: calendario, horarios y resultados de las siete clases desde el cronometraje de la FRAD (Speedhive); el campeonato de cada
+  // clase lo calcula Fierros con esos resultados (cordoba-pista-campeonato.mjs). Las fechas viejas no se vuelven a pedir (ventana).
+  ["Córdoba Pista", ["cordoba-pista"], (io, previous) => cordobaPistaSeason(io, previous, { windowDays: io.timingWindowDays ?? 21, delayMs: io.cordobaDelayMs ?? 250 })],
 ];
 
 /** Categorías cuyos horarios salen de notas de cronograma (ver schedule-notes.mjs). */
@@ -110,6 +114,9 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
       }
     }
   }
+
+  // Errores parciales de Córdoba Pista (una sesión o un evento que no se pudo leer; lo ya guardado se conserva).
+  for (const error of meta.cordobaPista?.errors ?? []) failures.push(`Córdoba Pista: ${error}`);
 
   // Campeonato oficial de la ACTC para las categorías que no tienen otra tabla (el del TC sale de Wikipedia y la carga manual).
   const missingTables = ACTC_CATEGORIES.filter((c) => c.path !== "tc" && !standings[c.seriesId]?.length);

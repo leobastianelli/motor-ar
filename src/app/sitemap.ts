@@ -47,6 +47,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     page("/terminos", "monthly", 0.1),
     page("/privacidad", "monthly", 0.1),
     ...getAllSeries().map((s) => page(`/categorias/${s.id}`, "weekly", 0.7, seasonDate)),
+    // Las clases de las categorías que las tienen (Córdoba Pista).
+    ...getAllSeries().flatMap((s) => (s.classes ?? []).map((c) => page(`/categorias/${s.id}/${c.id}`, "weekly", 0.6, seasonDate))),
     ...season.getAllEvents().map((e) => page(`/eventos/${e.id}`, "daily", 0.8, eventModified(e, seasonDate, now))),
     ...[...drivers].map((slug) => page(`/pilotos/${slug}`, "weekly", 0.6, seasonDate)),
     ...legends.map((l) => page(`/historicos/${l.slug}`, "monthly", 0.5)),

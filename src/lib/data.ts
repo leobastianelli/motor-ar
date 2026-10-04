@@ -54,6 +54,7 @@ export interface IndexedDriver {
 const CURATED_KEYS = new Set(drivers.flatMap((d) => [d.name, ...(d.aliases ?? [])].map((n) => driverKey(n))));
 const INDEXED = (driverIndex as unknown as { drivers: IndexedDriver[] }).drivers.filter((d) => !(d.keys ?? [d.key]).some((k) => CURATED_KEYS.has(k)));
 export const getIndexedDrivers = () => INDEXED;
+const INDEXED_SLUG_BY_KEY = new Map(INDEXED.flatMap((d) => (d.keys ?? [d.key]).map((k) => [k, d.slug] as const)));
 export const getIndexedDriver = (slug: string) => INDEXED.find((d) => d.slug === slug);
 
 export interface DriverSeriesStats {
@@ -142,6 +143,31 @@ export interface SeasonMeta {
   /** Un segundo campeonato de la misma categoría (p. ej. Clase 2 del TN, que corre junto a la Clase 3). */
   secondaryStandings?: { label: string; rows: StandingRow[] };
   progression?: { round: number; standings: { driver: string; pos: number; points: number }[] }[];
+  /** Campeonato de cada clase de una categoría con clases (Córdoba Pista), tal como lo guarda la sincronización. */
+  clases?: Record<string, RawClassStanding>;
+}
+
+/** Lo que guarda la sincronización por clase: ver `campeonatosDeCordobaPista` (src/lib/sources/cordoba-pista-campeonato.mjs). */
+interface RawClassStanding {
+  status: "calculado" | "sin-campeonato";
+  asOfRound?: number;
+  validatedThrough?: number;
+  reason?: string;
+  rows?: Omit<StandingRow, "driverSlug">[];
+}
+
+/**
+ * El campeonato de una clase. `calculado`: lo calculó Fierros con los resultados y el reglamento (y coincide con la tabla oficial hasta
+ * `validatedThrough`); `sin-campeonato`: no se publica, con el motivo en `reason`. Una tabla que quedó atrás de las fechas ya corridas pasa a
+ * `sin-campeonato`, igual que las demás: no se muestra un dato viejo como actual.
+ */
+export interface ClassStanding {
+  classId: string;
+  status: "calculado" | "sin-campeonato";
+  rows: StandingRow[];
+  asOfRound?: number;
+  validatedThrough?: number;
+  reason?: string;
 }
 
 type RawEvent = Omit<RaceEvent, "broadcasts" | "sessions"> & {
@@ -192,6 +218,27 @@ export function createSeason(raw: RawSeason) {
   for (const [id, m] of Object.entries(meta)) {
     const rows = (m as unknown as { clase2?: Omit<StandingRow, "driverSlug">[] })?.clase2;
     if (rows?.length) meta[id] = { ...meta[id], secondaryStandings: { label: "Clase 2", rows: rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) })) } };
+  }
+
+  // Categorías con clases (Córdoba Pista): el campeonato de cada clase vive en meta[categoría].clases[clase]. Una clase sin tabla publicada, o con
+  // una tabla que quedó atrás de las fechas ya corridas, figura "sin campeonato" (nunca un dato viejo como si fuera actual).
+  const classStandings: Record<string, Record<string, ClassStanding>> = {};
+  for (const s of series) {
+    if (!s.classes?.length) continue;
+    const raw = meta[s.id]?.clases ?? {};
+    classStandings[s.id] = Object.fromEntries(
+      s.classes.map((c) => {
+        const cls = raw[c.id];
+        const played = Math.max(0, ...events.filter((e) => e.seriesId === s.id && e.sessions.some((x) => x.classId === c.id && x.kind === "final" && x.results?.length)).map((e) => e.round));
+        if (cls?.status === "calculado" && cls.rows?.length && (cls.asOfRound ?? 0) >= played) {
+          // Quienes no tienen ficha propia (casi todos en una categoría zonal) enlazan a su ficha automática del índice de pilotos.
+          const rows = cls.rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) ?? INDEXED_SLUG_BY_KEY.get(driverKey(r.driver)) }));
+          return [c.id, { classId: c.id, status: "calculado" as const, rows, asOfRound: cls.asOfRound, validatedThrough: cls.validatedThrough }];
+        }
+        const reason = cls?.status === "calculado" ? `La tabla llega hasta la fecha ${cls.asOfRound} y ya se corrieron más: no la mostramos para no confundir.` : (cls?.reason ?? "Todavía no publicamos el campeonato de esta clase.");
+        return [c.id, { classId: c.id, status: "sin-campeonato" as const, rows: [], reason }];
+      }),
+    );
   }
 
   // Fechas de una categoría con resultado de carrera cargado: mide hasta dónde llegó la temporada de verdad,
@@ -253,7 +300,8 @@ export function createSeason(raw: RawSeason) {
               if (classified && row.pos <= 3) s.podiums++;
               if (classified && (s.best === null || row.pos < s.best)) s.best = row.pos;
             }
-            if (session.kind === "clasificacion" && classified && row.pos === 1) s.poles++;
+            // La "Súper clasificación" de Fórmula Renault Plus no es la pole de la fecha.
+            if (session.kind === "clasificacion" && !/s[uú]per/i.test(session.name) && classified && row.pos === 1) s.poles++;
           }
         }
       }
@@ -265,7 +313,14 @@ export function createSeason(raw: RawSeason) {
     const wanted = new Set(Array.isArray(keys) ? keys : [keys]);
     const match = (rows: StandingRow[]) => rows.find((r) => r.driver.split(" / ").some((p) => wanted.has(driverKey(p))));
     // Un piloto puede estar sólo en un campeonato secundario de la categoría (p. ej. Clase 2 del TN).
-    return match(getStandings(seriesId)) ?? (meta[seriesId]?.secondaryStandings && match(meta[seriesId].secondaryStandings.rows));
+    const found = match(getStandings(seriesId)) ?? (meta[seriesId]?.secondaryStandings && match(meta[seriesId].secondaryStandings.rows));
+    if (found) return found;
+    // En una categoría con clases, en la tabla de la clase en que corre (sólo las clases con campeonato calculado).
+    for (const c of Object.values(classStandings[seriesId] ?? {})) {
+      const row = match(c.rows);
+      if (row) return { ...row, classId: c.classId };
+    }
+    return undefined;
   };
 
   /** Temporada de un piloto sumando todas las formas en que lo escribieron las fuentes. */
@@ -375,6 +430,9 @@ export function createSeason(raw: RawSeason) {
         .sort((a, b) => series.findIndex((s) => s.id === a.seriesId) - series.findIndex((s) => s.id === b.seriesId));
     },
     getStandings,
+    /** Campeonato de una clase de una categoría con clases (p. ej. `getClassStanding("cordoba-pista", "tc4000")`). */
+    getClassStanding: (seriesId: string, classId: string): ClassStanding | undefined => classStandings[seriesId]?.[classId],
+    getClassStandings: (seriesId: string): ClassStanding[] => Object.values(classStandings[seriesId] ?? {}),
     getSeasonMeta: (seriesId: string): SeasonMeta => meta[seriesId] ?? {},
 
     /**
