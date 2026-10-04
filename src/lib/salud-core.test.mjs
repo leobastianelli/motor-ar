@@ -49,6 +49,13 @@ test("publicada pero sin leer: no se le echa la culpa a la fuente (Baku 2026: pr
   assert.deepEqual(row, { categoria: "f2", sesion: "Baku · Práctica", terminoHaceMin: 120, publicadosSinLeer: true });
 });
 
+test("pendientes: una sesión con la tabla incompleta de la fuente lo dice, con la dirección", () => {
+  const url = "https://tiempos.actc.org.ar/resultados/973/ver";
+  const ev = { id: "tc-pista-1", seriesId: "tc-pista", circuit: { city: "San Nicolás" }, sessions: [session({ name: "1° Entrenamiento", resultsGap: { reason: "incompleto", url, rows: 3 } })] };
+  const [row] = pendingSessions([ev], NOW);
+  assert.deepEqual(row.tablaIncompleta, { url, filas: 3 });
+});
+
 test("pendientes: sólo categorías automáticas, entre 15 min y 48 h", () => {
   const ev = (seriesId, s) => ({ id: seriesId, seriesId, name: "GP", circuit: { city: "Monza" }, sessions: [s] });
   const out = pendingSessions(

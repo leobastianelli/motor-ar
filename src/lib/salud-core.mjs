@@ -71,7 +71,7 @@ export function pendingSessions(events, now, { after = 15, before = 48 } = {}) {
       if (s.timeKnown === false || s.results?.length) continue;
       const min = Math.round((nowMs - (Date.parse(s.start) + (s.durationMin ?? 60) * MIN)) / MIN);
       if (min >= after && min < before * 60) {
-        out.push({ categoria: e.seriesId, sesion: `${e.circuit?.city ?? e.name} · ${s.name}`, terminoHaceMin: min, ...(s.resultsUnread ? { publicadosSinLeer: true } : {}) });
+        out.push({ categoria: e.seriesId, sesion: `${e.circuit?.city ?? e.name} · ${s.name}`, terminoHaceMin: min, ...(s.resultsUnread ? { publicadosSinLeer: true } : {}), ...(s.resultsGap ? { tablaIncompleta: { url: s.resultsGap.url, filas: s.resultsGap.rows } } : {}) });
       }
     }
   }

@@ -530,3 +530,10 @@ test("la clave de un origen caído no cambia si falla una cosa o varias (si no, 
   const tabla = sourceFailures(["Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior"]);
   assert.deepEqual(tabla.map((f) => f.key), ["fuente:tablas-sin-datos"]);
 });
+
+test("sessionResultsMissing: una sesión con la tabla incompleta de la fuente no se vuelve a pedir", () => {
+  const ev = { id: "tc-pista-1", seriesId: "tc-pista", name: "San Nicolás", sessions: [{ id: "s1", kind: "practica", name: "1° Entrenamiento", start: "2026-10-03T12:00:00Z", durationMin: 30, resultsGap: { reason: "incompleto", url: "u", rows: 3 } }] };
+  assert.equal(sessionResultsMissing([ev], "2026-10-04T14:00:00Z", { seriesIds: new Set(["tc-pista"]) }).length, 0);
+  const sinMarca = { ...ev, sessions: [{ ...ev.sessions[0], resultsGap: undefined }] };
+  assert.equal(sessionResultsMissing([sinMarca], "2026-10-04T05:00:00Z", { seriesIds: new Set(["tc-pista"]) }).length, 1);
+});

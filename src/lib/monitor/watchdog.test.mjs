@@ -96,3 +96,12 @@ test("la home con una versión vieja avisa (pasados 10 min, dos corridas seguida
   assert.deepEqual(saludFindings(nueva, NOW, { homeVersion: "13" }).map((f) => f.key), []);
   assert.deepEqual(saludFindings(nueva, NOW).map((f) => f.key), []);
 });
+
+test("tabla incompleta de la fuente: aviso info (cada 72 h) con la dirección, no el aviso de siempre", () => {
+  const url = "https://tiempos.actc.org.ar/resultados/973/ver";
+  const out = saludFindings(salud({ pendientes: [{ categoria: "tc-pista", sesion: "San Nicolás · 1° Entrenamiento", terminoHaceMin: 1560, tablaIncompleta: { url, filas: 3 } }] }), NOW);
+  assert.equal(out.length, 1);
+  assert.equal(out[0].severity, "info");
+  assert.match(out[0].body, /tabla incompleta \(3 filas\)/);
+  assert.ok(out[0].body.includes(url));
+});

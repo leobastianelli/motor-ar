@@ -89,3 +89,22 @@ test("si el total es menor al del líder y no hay vueltas de atraso, no se muest
   assert.equal(rows[1].gap, "");
   assert.equal(rows[1].status, "Sin tiempo");
 });
+
+// San Nicolás, 1er entrenamiento TC Pista (resultados/973/ver): el portal publicó el oficial con 3 filas sueltas (posiciones 3, 5 y 10).
+test("actcTiming: oficial con filas sueltas (sin podio) deja constancia en la sesión del cronograma, sin inventar resultados", async () => {
+  const { actcTiming } = await import("./actc-timing.mjs");
+  const listing = `<div class="acc-item" data-tab="TCP"><div class="result-row"><div class="result-title">1ER ENTRENAMIENTO</div><div class="result-date">03/10/2026</div><a href="/resultados/973/ver">ver</a></div></div>`;
+  const doc = `<table><tbody>${fila(3, 1, "AAA BBB", "FORD", "1:30.100", "+0.100", 5)}${fila(5, 2, "CCC DDD", "FORD", "1:30.300", "+0.300", 5)}${fila(10, 3, "EEE FFF", "FORD", "1:30.900", "+0.900", 5)}</tbody></table>`;
+  const io = { text: async () => listing, bytes: async () => new TextEncoder().encode(doc), sleep: async () => {} };
+  const event = { id: "tc-pista-2026-12", seriesId: "tc-pista", name: "San Nicolás", sessions: [{ id: "s1", kind: "practica", name: "1° Entrenamiento", start: "2026-10-03T12:00:00-03:00", durationMin: 30 }] };
+  const realNow = Date.now;
+  Date.now = () => Date.parse("2026-10-04T15:00:00-03:00");
+  try {
+    const [out] = (await actcTiming(io, [event], null, { delayMs: 0 })).events;
+    assert.equal(out.sessions.length, 1);
+    assert.equal(out.sessions[0].results, undefined);
+    assert.deepEqual(out.sessions[0].resultsGap, { reason: "incompleto", url: "https://tiempos.actc.org.ar/resultados/973/ver", rows: 3 });
+  } finally {
+    Date.now = realNow;
+  }
+});

@@ -387,10 +387,12 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
 
     const timed = [];
     const penalties = new Map();
+    const gaps = new Map();
     for (const { session, candidates } of chosen.values()) {
       // Del documento que más vale al que menos: el primero oficial que se lee gana; si no hay, la primera planilla que pasa la regla queda como provisoria.
       let official = null;
       let planilla = null;
+      let incomplete = null;
       for (const { doc, partial } of candidates.slice(0, MAX_CANDIDATES)) {
         try {
           const html = await page(io, doc.url, recent ? 1800 : 30 * 86400);
@@ -405,6 +407,7 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
             const results = parseResult(html, session.kind, known);
             // Una página que carga sólo algunas filas (sin podio) no es el oficial: se sigue con el siguiente documento (la planilla, si hay).
             if (results.length && hasPodium(results)) official = { doc, results, penalties: penaltiesFrom(observationLines(html)) };
+            else if (results.length && !incomplete) incomplete = { reason: "incompleto", url: doc.url, rows: results.length };
           }
         } catch {
           // Una página caída no frena al resto.
@@ -413,7 +416,11 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
         if (official) break;
       }
       const pick = official ?? planilla;
-      if (!pick) continue;
+      // El documento oficial existe pero la ACTC lo publicó con filas sueltas: no se inventa nada, sólo se deja constancia (no es un bug nuestro).
+      if (!pick) {
+        if (incomplete) gaps.set(sessionKey(session), incomplete);
+        continue;
+      }
       const id = `${event.id}-${fold(session.name).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
       if (official) penalties.set(id, official.penalties);
       timed.push({
@@ -442,7 +449,8 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
     // Las sesiones guardadas que hoy no se leyeron (página caída, planilla rechazada) se conservan.
     const read = new Set(final.map(sessionKey));
     const all = [...final, ...stored.filter((s) => !read.has(sessionKey(s)))];
-    const merged = all.length ? mergeTiming(event, all) : event;
+    const base = all.length ? mergeTiming(event, all) : event;
+    const merged = gaps.size ? { ...base, sessions: base.sessions.map((s) => (!s.results?.length && gaps.has(sessionKey(s)) ? { ...s, resultsGap: gaps.get(sessionKey(s)) } : s)) } : base;
     if (merged.sessions.some(fromActc)) withResults++;
     out.push(merged);
   }
