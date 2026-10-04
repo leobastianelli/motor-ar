@@ -1,0 +1,10 @@
+name: sonda
+on: pull_request
+jobs:
+  sonda:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in https://api.rallyargentino.com/api/v2/cabecera-dashboard "https://www.rallyargentino.com/calendario.php?anio=2026" https://nuevocarshow.com.ar/calendario/; do
+            curl -s -o /dev/null -w "%{http_code} $u\n" -A "fierros-motor-ar/0.1" -H "Accept: text/html" -H "Accept-Language: es-AR" "$u"
+          done
