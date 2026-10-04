@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T14:37:20.407Z",
+  "generatedAt": "2026-10-04T15:09:08.477Z",
   "drivers": [
     {
       "key": "adrian percaz",
@@ -77,7 +77,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "agustin martinez",
@@ -1165,7 +1165,7 @@
         "tc": "Torino"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "facundo ledesma",
@@ -2012,7 +2012,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "jeronimo teti",
@@ -2060,7 +2060,7 @@
         "tc-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "joaquin rossotti",
@@ -2295,7 +2295,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "benvenutti cruz juan",
@@ -2652,10 +2652,10 @@
         "tc": "53"
       },
       "teams": {
-        "tc": "Toyota"
+        "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "julian santero",
@@ -2682,7 +2682,7 @@
         "tc-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "candela kevin",
@@ -2979,7 +2979,7 @@
         "tc-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "lucas vicino",
@@ -3059,7 +3059,7 @@
         "tc": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "borgert manuel",
@@ -3252,7 +3252,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "marcos quijada",
@@ -3450,7 +3450,7 @@
         "tc": "Dodge"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "canapino matias",
@@ -3470,7 +3470,7 @@
         "tc": "Torino"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "cohen matias",
@@ -3630,7 +3630,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "bestani maximiliano",
@@ -3838,7 +3838,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "cotignola nicolas",
@@ -4248,7 +4248,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "arrigoni santiago",
@@ -4320,7 +4320,7 @@
         "tc-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "robledo santiago",
@@ -4643,7 +4643,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-03"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "abdala tomas",
