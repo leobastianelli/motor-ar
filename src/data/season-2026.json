@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T19:26:06.541Z",
+  "generatedAt": "2026-10-04T19:34:36.254Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -3362,13 +3362,13 @@
       "id": "tc-2026-1",
       "seriesId": "tc",
       "round": 1,
-      "name": "Fecha 1 · Autódromo Enrique Freile",
+      "name": "Fecha 1 · Calafate",
       "circuit": {
-        "name": "Autódromo Enrique Freile",
-        "city": "Autódromo Enrique Freile",
+        "name": "Calafate",
+        "city": "Calafate",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Santa Cruz"
       },
       "sessions": [
         {
@@ -9699,13 +9699,13 @@
       "id": "tc-2026-2",
       "seriesId": "tc",
       "round": 2,
-      "name": "Fecha 2 · Autódromo Ciudad de Viedma",
+      "name": "Fecha 2 · Viedma",
       "circuit": {
-        "name": "Autódromo Ciudad de Viedma",
-        "city": "Autódromo Ciudad de Viedma",
+        "name": "Ciudad de Viedma",
+        "city": "Viedma",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Rio Negro"
       },
       "sessions": [
         {
@@ -19938,13 +19938,13 @@
       "id": "tc-2026-3",
       "seriesId": "tc",
       "round": 3,
-      "name": "Fecha 3 · Autódromo Parque Provincia del Neuquén",
+      "name": "Fecha 3 · Centenario",
       "circuit": {
-        "name": "Autódromo Parque Provincia del Neuquén",
-        "city": "Autódromo Parque Provincia del Neuquén",
+        "name": "Parque Provincia del Neuquén",
+        "city": "Centenario",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Neuquén"
       },
       "sessions": [
         {
@@ -26509,13 +26509,13 @@
       "id": "tc-2026-4",
       "seriesId": "tc",
       "round": 4,
-      "name": "Fecha 4 · Autódromo de Concepción del Uruguay",
+      "name": "Fecha 4 · Concepción Del Uruguay",
       "circuit": {
-        "name": "Autódromo de Concepción del Uruguay",
-        "city": "Autódromo de Concepción del Uruguay",
+        "name": "Ciudad de Concepción del Uruguay",
+        "city": "Concepción del Uruguay",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Entre Rios"
       },
       "sessions": [
         {
@@ -36987,13 +36987,13 @@
       "id": "tc-2026-5",
       "seriesId": "tc",
       "round": 5,
-      "name": "Fecha 5 · Autódromo Internacional de Termas de Río Hondo",
+      "name": "Fecha 5 · Termas De Río Hondo",
       "circuit": {
         "name": "Autódromo Internacional de Termas de Río Hondo",
-        "city": "Autódromo Internacional de Termas de Río Hondo",
+        "city": "Termas de Río Hondo",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Santiago del Estero"
       },
       "sessions": [
         {
@@ -45691,13 +45691,13 @@
       "id": "tc-2026-6",
       "seriesId": "tc",
       "round": 6,
-      "name": "Fecha 6 · Autódromo Oscar Cabalén",
+      "name": "Fecha 6 · Alta Gracia",
       "circuit": {
-        "name": "Autódromo Oscar Cabalén",
-        "city": "Autódromo Oscar Cabalén",
+        "name": "Oscar Cabalén",
+        "city": "Alta Gracia",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Córdoba"
       },
       "sessions": [
         {
@@ -54149,13 +54149,13 @@
       "id": "tc-2026-7",
       "seriesId": "tc",
       "round": 7,
-      "name": "Fecha 7 · Autódromo Ciudad de Rafaela",
+      "name": "Fecha 7 · Rafaela",
       "circuit": {
-        "name": "Autódromo Ciudad de Rafaela",
-        "city": "Autódromo Ciudad de Rafaela",
+        "name": "Ciudad de Rafaela",
+        "city": "Rafaela",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Santa Fe"
       },
       "sessions": [
         {
@@ -66093,13 +66093,13 @@
       "id": "tc-2026-8",
       "seriesId": "tc",
       "round": 8,
-      "name": "Fecha 8 · Autódromo Rosamonte",
+      "name": "Fecha 8 · Posadas",
       "circuit": {
-        "name": "Autódromo Rosamonte",
-        "city": "Autódromo Rosamonte",
+        "name": "Rosamonte",
+        "city": "Posadas",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Misiones"
       },
       "sessions": [
         {
@@ -80829,13 +80829,13 @@
       "id": "tc-2026-9",
       "seriesId": "tc",
       "round": 9,
-      "name": "Fecha 9 · Circuito San Juan Villicum",
+      "name": "Fecha 9 · Albardón",
       "circuit": {
-        "name": "Circuito San Juan Villicum",
-        "city": "Circuito San Juan Villicum",
+        "name": "San Juan Villicum",
+        "city": "Albardón",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "San Juan"
       },
       "sessions": [
         {
@@ -85617,13 +85617,13 @@
       "id": "tc-2026-10",
       "seriesId": "tc",
       "round": 10,
-      "name": "Fecha 10 · Autódromo Ciudad de Paraná",
+      "name": "Fecha 10 · Paraná",
       "circuit": {
-        "name": "Autódromo Ciudad de Paraná",
-        "city": "Autódromo Ciudad de Paraná",
+        "name": "Ciudad de Paraná",
+        "city": "Paraná",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Entre Rios"
       },
       "sessions": [
         {
@@ -94927,13 +94927,13 @@
       "id": "tc-2026-11",
       "seriesId": "tc",
       "round": 11,
-      "name": "Fecha 11 · Autódromo Rosendo Hernández",
+      "name": "Fecha 11 · San Luis",
       "circuit": {
-        "name": "Autódromo Rosendo Hernández",
-        "city": "Autódromo Rosendo Hernández",
+        "name": "Rosendo Hernández",
+        "city": "San Luis",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "San Luis"
       },
       "sessions": [
         {
@@ -108490,13 +108490,13 @@
       "id": "tc-2026-12",
       "seriesId": "tc",
       "round": 12,
-      "name": "Fecha 12 · Autódromo Juan María Traverso",
+      "name": "Fecha 12 · San Nicolás",
       "circuit": {
-        "name": "Autódromo Juan María Traverso",
-        "city": "Autódromo Juan María Traverso",
+        "name": "Ciudad San Nicolás",
+        "city": "San Nicolás",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -111367,30 +111367,6 @@
       "source": "Jolpica-F1"
     },
     {
-      "id": "tcp-2026-13",
-      "seriesId": "tc-pista",
-      "round": 13,
-      "name": "Fecha 13 · Rosario",
-      "circuit": {
-        "name": "Juan Manuel Fangio-ROSARIO",
-        "city": "Rosario",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Santa Fe"
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-13-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-10-25T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
       "id": "tc-2026-13",
       "seriesId": "tc",
       "round": 13,
@@ -111413,6 +111389,30 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
+    },
+    {
+      "id": "tcp-2026-13",
+      "seriesId": "tc-pista",
+      "round": 13,
+      "name": "Fecha 13 · Rosario",
+      "circuit": {
+        "name": "Juan Manuel Fangio-ROSARIO",
+        "city": "Rosario",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Santa Fe"
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-13-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-10-25T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 40
+        }
+      ],
+      "source": "ACTC (calendario)"
     },
     {
       "id": "f1-2026-19",
@@ -111655,30 +111655,6 @@
       "source": "ACTC (calendario)"
     },
     {
-      "id": "tcp-2026-14",
-      "seriesId": "tc-pista",
-      "round": 14,
-      "name": "Fecha 14 · Río Cuarto",
-      "circuit": {
-        "name": "Parque Ciudad de Río Cuarto",
-        "city": "Río Cuarto",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Cordoba"
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-14-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-11-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
       "id": "tc-2026-14",
       "seriesId": "tc",
       "round": 14,
@@ -111701,6 +111677,30 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
+    },
+    {
+      "id": "tcp-2026-14",
+      "seriesId": "tc-pista",
+      "round": 14,
+      "name": "Fecha 14 · Río Cuarto",
+      "circuit": {
+        "name": "Parque Ciudad de Río Cuarto",
+        "city": "Río Cuarto",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Cordoba"
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-14-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-11-15T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 40
+        }
+      ],
+      "source": "ACTC (calendario)"
     },
     {
       "id": "f1-2026-21",
@@ -111982,30 +111982,6 @@
       "source": "Wikipedia · 2026 Formula 2 Championship"
     },
     {
-      "id": "tcp-2026-15",
-      "seriesId": "tc-pista",
-      "round": 15,
-      "name": "Fecha 15 · La Plata",
-      "circuit": {
-        "name": "Roberto José Mouras",
-        "city": "La Plata",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-15-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-12-06T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
       "id": "tc-2026-15",
       "seriesId": "tc",
       "round": 15,
@@ -112028,6 +112004,30 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
+    },
+    {
+      "id": "tcp-2026-15",
+      "seriesId": "tc-pista",
+      "round": 15,
+      "name": "Fecha 15 · La Plata",
+      "circuit": {
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-15-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-12-06T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 40
+        }
+      ],
+      "source": "ACTC (calendario)"
     },
     {
       "id": "tcm-2026-12",
@@ -116031,15 +116031,14 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
-    "Campeonato ACTC tcp: No se pudo descargar https://actc.org.ar/tcp/campeonato: HTTP 502 (text/html; charset=UTF-8)",
-    "Campeonato ACTC tcm: No se pudo descargar https://actc.org.ar/tcm/campeonato: HTTP 502 (text/html; charset=UTF-8)",
-    "Campeonato ACTC tcpm: No se pudo descargar https://actc.org.ar/tcpm/campeonato: HTTP 502 (text/html; charset=UTF-8)",
-    "Campeonato ACTC tcpk: No se pudo descargar https://actc.org.ar/tcpk/campeonato: HTTP 502 (text/html; charset=UTF-8)",
-    "Campeonato ACTC tcppk: No se pudo descargar https://actc.org.ar/tcppk/campeonato: HTTP 502 (text/html; charset=UTF-8)",
-    "Cronogramas (ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: HTTP 502 (text/html; charset=UTF-8))",
-    "Cronograma oficial ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: HTTP 502 (text/html; charset=UTF-8)",
-    "Se conservaron fechas que las fuentes dejaron de traer: tc-mouras 12, tc-pista-mouras 12, tc-pista 15, tc-pista-pick-up 11, tc-pick-up 11, tc 3",
+    "Campeonato ACTC tcp: No se pudo descargar https://actc.org.ar/tcp/campeonato: actc.org.ar no respondió antes en esta corrida",
+    "Campeonato ACTC tcm: No se pudo descargar https://actc.org.ar/tcm/campeonato: actc.org.ar no respondió antes en esta corrida",
+    "Campeonato ACTC tcpm: No se pudo descargar https://actc.org.ar/tcpm/campeonato: actc.org.ar no respondió antes en esta corrida",
+    "Campeonato ACTC tcpk: No se pudo descargar https://actc.org.ar/tcpk/campeonato: actc.org.ar no respondió antes en esta corrida",
+    "Campeonato ACTC tcppk: No se pudo descargar https://actc.org.ar/tcppk/campeonato: actc.org.ar no respondió antes en esta corrida",
+    "Cronogramas (ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: actc.org.ar no respondió antes en esta corrida)",
+    "Cronograma oficial ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: actc.org.ar no respondió antes en esta corrida",
+    "Se conservaron fechas que las fuentes dejaron de traer: tc-mouras 12, tc-pista-mouras 12, tc-pista 15, tc-pista-pick-up 11, tc-pick-up 11",
     "Se conservaron resultados de 10 sesiones que las fuentes dejaron de traer",
     "Campeonato tc-pista: la fuente no trajo la tabla, se conservó la anterior",
     "Campeonato tc-mouras: la fuente no trajo la tabla, se conservó la anterior",
