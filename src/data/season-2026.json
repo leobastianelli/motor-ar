@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T21:19:30.860Z",
+  "generatedAt": "2026-10-04T09:17:04.350Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -114137,9 +114137,11 @@
       "sessionsWithResults": 43
     },
     "f1Official": {
-      "requests": 0,
+      "requests": 1,
       "sessionsWithResults": 0,
-      "errors": []
+      "errors": [
+        "GP de Baréin (en Malasia) · Carrera: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -114173,6 +114175,9 @@
     }
   },
   "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/12/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de Baréin (en Malasia) · Carrera: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
     "Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior"
   ]
 }
