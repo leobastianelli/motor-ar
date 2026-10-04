@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T22:25:08.909Z",
+  "generatedAt": "2026-10-04T23:01:05.111Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -142424,7 +142424,7 @@
     },
     "cordobaPista": {
       "events": 6,
-      "filledResults": 223,
+      "filledResults": 36,
       "errors": [],
       "ignored": [
         "evento 3611013: sede desconocida «PEDRO DEVALLE»",
@@ -142539,5 +142539,7 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "Rally Argentino: No se pudo descargar https://www.rallyargentino.com/calendario.php?anio=2026: HTTP 403 (text/html; charset=UTF-8)"
+  ]
 }
