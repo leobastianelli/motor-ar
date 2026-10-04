@@ -169,7 +169,11 @@ export async function cordobaPistaSeason(io, previous = { events: [], standings:
     await io.sleep(delayMs);
     try {
       const detail = await io.json(`${API}/events/${e.id}?sessions=true`, { revalidate: 120 });
-      if (esCordobaPista(detail)) detalles.set(e.id, { ...e, detail });
+      if (!esCordobaPista(detail)) continue;
+      // Sin sede conocida no es una fecha nuestra (p. ej. el Campeonato Regional Bulnense, que también corre TC 4000 y TC Pista en Pedro Devalle):
+      // se avisa, pero no entra a la lista, para que no consuma un número de fecha.
+      if (!sedeDe(detail.location)) errors.push(`evento ${e.id}: sede desconocida «${detail.location?.name}»`);
+      else detalles.set(e.id, { ...e, detail });
     } catch (error) {
       errors.push(`evento ${e.id}: ${error.message}`);
     }
@@ -223,10 +227,6 @@ export async function cordobaPistaSeason(io, previous = { events: [], standings:
     const n = round.get(p.id);
     const id = `${SERIES_ID}-${YEAR}-${n}`;
     const sede = sedeDe(p.detail.location);
-    if (!sede) {
-      errors.push(`evento ${p.id}: sede desconocida «${p.detail.location?.name}»`);
-      continue;
-    }
     const url = `https://speedhive.mylaps.com/events/${p.id}`;
     const sessions = [];
     for (const s of p.sesiones) {
