@@ -5,6 +5,7 @@
 import { dateStatus, dayKey } from "./monitor/checks.mjs";
 import { nombreVisibleSesion } from "./momento.mjs";
 import { PROVISIONAL, isProvisional } from "./provisorio.mjs";
+import { resumenFinde } from "./resumen-core.mjs";
 
 export const BASE_URL = "https://www.somosfierros.ar";
 export const X_LIMIT = 280;
@@ -47,20 +48,20 @@ export const xIntentUrl = (text) => `https://x.com/intent/post?text=${encodeURIC
 
 // ——— Datos ———
 
-const normalize = (s) => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
-const surname = (name) => String(name).trim().split(/\s+/).at(-1);
+export const normalize = (s) => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
+export const surname = (name) => String(name).trim().split(/\s+/).at(-1);
 const ordinal = (pos) => `${pos}.º`;
 const endOf = (s) => (s.timeKnown === false ? Date.parse(`${dayKey(s.start)}T00:00:00-03:00`) + DAY : Date.parse(s.start) + (s.durationMin ?? 60) * MIN);
 
 /** Índice nombre → piloto argentino (con alias); en las tripulaciones ("A / B") alcanza con que alguno sea de los nuestros. */
-function driverIndex(drivers) {
+export function driverIndex(drivers) {
   const byName = new Map();
   for (const d of drivers) for (const n of [d.name, ...(d.aliases ?? [])]) byName.set(normalize(n), d);
   return (name) => byName.get(normalize(name)) ?? String(name).split(" / ").map((n) => byName.get(normalize(n))).find(Boolean);
 }
 
 /** Categoría argentina (1), internacional con argentinos (2) o el resto (3): la misma prioridad de la home. */
-function tiers(series, drivers) {
+export function tiers(series, drivers) {
   const withArgentines = new Set(drivers.map((d) => d.seriesId));
   const byId = Object.fromEntries(series.map((s) => [s.id, s]));
   return { byId, tierOf: (id) => (byId[id]?.scope !== "internacional" ? 1 : withArgentines.has(id) ? 2 : 3) };
@@ -89,7 +90,7 @@ const HOW = {
   DNS: "no largó",
 };
 /** Qué le pasó a un argentino en una sesión: su posición, o por qué no terminó. */
-function outcome(row, kind) {
+export function outcome(row, kind) {
   const code = String(row.positionText ?? "");
   if (HOW[code]) return HOW[code];
   if (/abandon/i.test(row.status ?? "")) return "abandonó";
@@ -297,16 +298,16 @@ function agendaDraft({ events, now, catalog, enviados }) {
 // ——— Así quedó el finde ———
 
 /** Una carga manual no es una fuente automática: el resumen del finde sólo cuenta con lo que sincroniza solo. */
-const isAutoSource = (event) => !/^carga manual/i.test(event.source ?? "");
-const classified = (r) => !r.positionText || /^\d+$/.test(r.positionText);
+export const isAutoSource = (event) => !/^carga manual/i.test(event.source ?? "");
+export const classified = (r) => !r.positionText || /^\d+$/.test(r.positionText);
 /** La carrera o final principal, si ya se corrió; a diferencia de `mainSession` (agenda), no cae a una sesión clasificatoria. */
-const mainRace = (event) => event.sessions.filter((s) => RACE_KINDS.has(s.kind)).at(-1);
+export const mainRace = (event) => event.sessions.filter((s) => RACE_KINDS.has(s.kind)).at(-1);
 
 /**
  * Domingo del fin de semana que se resume: hoy si ya es domingo desde las 20:00, o ayer si es lunes antes del
  * mediodía (para no perderse la última carrera si terminó pasada la medianoche). Fuera de esa ventana, null.
  */
-function summarySunday(now) {
+export function summarySunday(now) {
   const wd = weekday(now);
   const hour = hourOf(now);
   if (wd === "domingo" && hour >= 20) return dayKey(now);
@@ -315,9 +316,9 @@ function summarySunday(now) {
 }
 
 /** Viernes, sábado y domingo del fin de semana que terminó ese domingo, en formato dayKey. */
-const summaryDays = (sunday) => [2, 1, 0].map((k) => dayKey(new Date(Date.parse(`${sunday}T00:00:00-03:00`) - k * DAY).toISOString()));
+export const summaryDays = (sunday) => [2, 1, 0].map((k) => dayKey(new Date(Date.parse(`${sunday}T00:00:00-03:00`) - k * DAY).toISOString()));
 
-function summaryDraft({ events, now, catalog, enviados }) {
+function summaryDraft({ events, season, manual, now, catalog, enviados }) {
   const sunday = summarySunday(now);
   if (!sunday) return null;
   const key = `resumen:${sunday}`;
@@ -365,7 +366,10 @@ function summaryDraft({ events, now, catalog, enviados }) {
   let n = items.length;
   while (n > 0 && !fits(compose(n))) n--;
   if (n === 0) return null;
-  return { key, kind: "resumen", at: Date.parse(now), text: compose(n), link: url };
+  // Carrusel del finde (4 placas como máximo, ver resumen-core.mjs): sólo si hay con qué armarlo; si no, el borrador sale como texto solo.
+  const resumen = resumenFinde(season, { sunday }, { catalog, manual, events });
+  const images = resumen ? Array.from({ length: resumen.slides.length }, (_, i) => `${BASE_URL}/placa/resumen/${i + 1}?domingo=${sunday}`) : [];
+  return { key, kind: "resumen", at: Date.parse(now), text: compose(n), link: url, ...(images.length ? { images } : {}) };
 }
 
 // ——— Punto de entrada ———
