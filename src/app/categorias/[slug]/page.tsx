@@ -283,7 +283,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
             <div className="clase-grid">
               {clases.map((c) => {
                 const standing = season.getClassStanding(series.id, c.id);
-                const top = standing?.status === "calculado" ? standing.rows[0] : undefined;
+                const top = standing && standing.status !== "sin-campeonato" ? standing.rows[0] : undefined;
                 const lastFinal = events
                   .flatMap((e) => e.sessions.filter((x) => x.classId === c.id && x.kind === "final" && x.results?.length).map((x) => ({ e, x })))
                   .at(-1);
@@ -301,7 +301,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
                       <b>Sin campeonato publicado</b>
                     )}
                     <small>
-                      {top ? `Calculado por Fierros, tras la fecha ${standing!.asOfRound}` : "Ver resultados de cada fecha"}
+                      {top ? `${standing!.status === "oficial" ? "Tabla oficial" : "Calculado por Fierros"}, tras la fecha ${standing!.asOfRound}` : "Ver resultados de cada fecha"}
                       {lastFinal ? ` · última final: ${lastFinal.x.results![0].driver} (fecha ${lastFinal.e.round})` : ""}
                     </small>
                   </Link>

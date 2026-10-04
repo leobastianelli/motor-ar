@@ -149,24 +149,28 @@ export interface SeasonMeta {
 
 /** Lo que guarda la sincronización por clase: ver `campeonatosDeCordobaPista` (src/lib/sources/cordoba-pista-campeonato.mjs). */
 interface RawClassStanding {
-  status: "calculado" | "sin-campeonato";
+  status: "calculado" | "oficial" | "sin-campeonato";
   asOfRound?: number;
   validatedThrough?: number;
+  /** De dónde sale una tabla "oficial". */
+  source?: { name: string; url: string };
   reason?: string;
   rows?: Omit<StandingRow, "driverSlug">[];
 }
 
 /**
  * El campeonato de una clase. `calculado`: lo calculó Fierros con los resultados y el reglamento (y coincide con la tabla oficial hasta
- * `validatedThrough`); `sin-campeonato`: no se publica, con el motivo en `reason`. Una tabla que quedó atrás de las fechas ya corridas pasa a
- * `sin-campeonato`, igual que las demás: no se muestra un dato viejo como actual.
+ * `validatedThrough`); `oficial`: la tabla tal cual la publica el organizador (`source`), sin cálculo nuestro; `sin-campeonato`: no se publica,
+ * con el motivo en `reason`. Una tabla que quedó atrás de las fechas ya corridas pasa a `sin-campeonato`, igual que las demás: no se muestra un
+ * dato viejo como actual.
  */
 export interface ClassStanding {
   classId: string;
-  status: "calculado" | "sin-campeonato";
+  status: "calculado" | "oficial" | "sin-campeonato";
   rows: StandingRow[];
   asOfRound?: number;
   validatedThrough?: number;
+  source?: { name: string; url: string };
   reason?: string;
 }
 
@@ -229,13 +233,14 @@ export function createSeason(raw: RawSeason) {
     classStandings[s.id] = Object.fromEntries(
       s.classes.map((c) => {
         const cls = raw[c.id];
-        const played = Math.max(0, ...events.filter((e) => e.seriesId === s.id && e.sessions.some((x) => x.classId === c.id && x.kind === "final" && x.results?.length)).map((e) => e.round));
-        if (cls?.status === "calculado" && cls.rows?.length && (cls.asOfRound ?? 0) >= played) {
+        // Un resultado provisorio (el Rally Argentino, hasta que pasa al histórico) todavía no obliga a la tabla a estar al día.
+        const played = Math.max(0, ...events.filter((e) => e.seriesId === s.id && e.sessions.some((x) => x.classId === c.id && x.kind === "final" && x.results?.length && !isProvisional(x))).map((e) => e.round));
+        if ((cls?.status === "calculado" || cls?.status === "oficial") && cls.rows?.length && (cls.asOfRound ?? 0) >= played) {
           // Quienes no tienen ficha propia (casi todos en una categoría zonal) enlazan a su ficha automática del índice de pilotos.
           const rows = cls.rows.map((r) => ({ ...r, driverSlug: slugFor(r.driver) ?? INDEXED_SLUG_BY_KEY.get(driverKey(r.driver)) }));
-          return [c.id, { classId: c.id, status: "calculado" as const, rows, asOfRound: cls.asOfRound, validatedThrough: cls.validatedThrough }];
+          return [c.id, { classId: c.id, status: cls.status, rows, asOfRound: cls.asOfRound, validatedThrough: cls.validatedThrough, source: cls.source }];
         }
-        const reason = cls?.status === "calculado" ? `La tabla llega hasta la fecha ${cls.asOfRound} y ya se corrieron más: no la mostramos para no confundir.` : (cls?.reason ?? "Todavía no publicamos el campeonato de esta clase.");
+        const reason = cls?.status === "calculado" || cls?.status === "oficial" ? `La tabla llega hasta la fecha ${cls.asOfRound} y ya se corrieron más: no la mostramos para no confundir.` : (cls?.reason ?? "Todavía no publicamos el campeonato de esta clase.");
         return [c.id, { classId: c.id, status: "sin-campeonato" as const, rows: [], reason }];
       }),
     );
@@ -284,6 +289,8 @@ export function createSeason(raw: RawSeason) {
     const map = new Map<string, DriverSeason>();
     const ordered = [...events].sort((a, b) => ms(eventStart(a)) - ms(eventStart(b)));
     for (const event of ordered) {
+      // Una fecha con clasificación general (Rally Argentino) cuenta una sola vez por piloto: las clasificaciones por clase son otra mirada de la misma carrera.
+      const hayGeneral = event.sessions.some((x) => !x.classId && RACE_KINDS.includes(x.kind) && x.results?.length);
       for (const session of event.sessions) {
         for (const row of session.results ?? []) {
           for (const part of row.driver.split(" / ")) {
@@ -294,7 +301,7 @@ export function createSeason(raw: RawSeason) {
             const s = (d.bySeries[event.seriesId] ??= { races: 0, wins: 0, podiums: 0, poles: 0, best: null });
             const classified = !row.positionText || /^\d+$/.test(row.positionText);
             // Un resultado provisorio (planilla de la ACTC antes de la revisión de los comisarios) se lista pero no suma victorias, podios ni "mejor resultado".
-            if (RACE_KINDS.includes(session.kind) && !isProvisional(session)) {
+            if (RACE_KINDS.includes(session.kind) && !isProvisional(session) && !(hayGeneral && session.classId)) {
               s.races++;
               if (classified && row.pos === 1) s.wins++;
               if (classified && row.pos <= 3) s.podiums++;

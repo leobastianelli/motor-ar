@@ -9,6 +9,18 @@ const season = (...drivers) => ({
 });
 const bySlug = (index) => new Map(index.drivers.map((d) => [d.slug, d]));
 
+test("Rally Argentino: de cada tripulación 'Piloto / Navegante' se indexa el piloto, con su auto como equipo", () => {
+  const rally = {
+    events: [{ seriesId: "rally-argentino", sessions: [{ start: "2026-09-06T12:00:00-03:00", results: [{ pos: 1, driver: "Federico Villagra / Diego Curletto", number: "3", team: "Skoda Fabia RS Rally2" }] }] }],
+    meta: {},
+  };
+  const index = buildDriverIndex(rally, undefined);
+  assert.deepEqual(index.drivers.map((d) => d.name), ["Federico Villagra"]);
+  assert.deepEqual(index.drivers[0].series, ["rally-argentino"]);
+  assert.equal(index.drivers[0].numbers["rally-argentino"], "3");
+  assert.equal(index.drivers[0].teams["rally-argentino"], "Skoda Fabia RS Rally2");
+});
+
 test("un nombre guardado con acentos rotos se repara y se une con el piloto que ya estaba bien", () => {
   const previous = {
     drivers: [
