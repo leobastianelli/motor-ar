@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T19:13:47.538Z",
+  "generatedAt": "2026-10-04T19:26:06.541Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -116031,13 +116031,14 @@
     }
   },
   "failures": [
-    "Campeonato ACTC tcp: No se pudo descargar https://actc.org.ar/tcp/campeonato: actc.org.ar no respondió antes en esta corrida",
-    "Campeonato ACTC tcm: No se pudo descargar https://actc.org.ar/tcm/campeonato: actc.org.ar no respondió antes en esta corrida",
-    "Campeonato ACTC tcpm: No se pudo descargar https://actc.org.ar/tcpm/campeonato: actc.org.ar no respondió antes en esta corrida",
-    "Campeonato ACTC tcpk: No se pudo descargar https://actc.org.ar/tcpk/campeonato: actc.org.ar no respondió antes en esta corrida",
-    "Campeonato ACTC tcppk: No se pudo descargar https://actc.org.ar/tcppk/campeonato: actc.org.ar no respondió antes en esta corrida",
-    "Cronogramas (ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: actc.org.ar no respondió antes en esta corrida)",
-    "Cronograma oficial ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: actc.org.ar no respondió antes en esta corrida",
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
+    "Campeonato ACTC tcp: No se pudo descargar https://actc.org.ar/tcp/campeonato: HTTP 502 (text/html; charset=UTF-8)",
+    "Campeonato ACTC tcm: No se pudo descargar https://actc.org.ar/tcm/campeonato: HTTP 502 (text/html; charset=UTF-8)",
+    "Campeonato ACTC tcpm: No se pudo descargar https://actc.org.ar/tcpm/campeonato: HTTP 502 (text/html; charset=UTF-8)",
+    "Campeonato ACTC tcpk: No se pudo descargar https://actc.org.ar/tcpk/campeonato: HTTP 502 (text/html; charset=UTF-8)",
+    "Campeonato ACTC tcppk: No se pudo descargar https://actc.org.ar/tcppk/campeonato: HTTP 502 (text/html; charset=UTF-8)",
+    "Cronogramas (ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: HTTP 502 (text/html; charset=UTF-8))",
+    "Cronograma oficial ACTC: No se pudo descargar https://actc.org.ar/tc/noticias: HTTP 502 (text/html; charset=UTF-8)",
     "Se conservaron fechas que las fuentes dejaron de traer: tc-mouras 12, tc-pista-mouras 12, tc-pista 15, tc-pista-pick-up 11, tc-pick-up 11, tc 3",
     "Se conservaron resultados de 10 sesiones que las fuentes dejaron de traer",
     "Campeonato tc-pista: la fuente no trajo la tabla, se conservó la anterior",
