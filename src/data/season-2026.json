@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T14:19:10.784Z",
+  "generatedAt": "2026-10-04T14:37:18.922Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -109289,7 +109289,140 @@
               "url": "https://www.solotc.com.ar/tc-san-nicolas-horarios-tv-cronograma-fecha-12-2026/",
               "start": "11:20"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "117",
+              "driver": "Matías Rossi",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Mercedes-Benz",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "14",
+              "driver": "Christian Ledesma",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "101",
+              "driver": "Jonatan Castellano",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "197",
+              "driver": "Marcos Quijada",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "5",
+              "driver": "Marcelo Agrelo",
+              "team": "Torino",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "83",
+              "driver": "Facundo Ardusso",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "4",
+              "driver": "Germán Todino",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "113",
+              "driver": "Rodrigo Lugón",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "number": "140",
+              "driver": "Gaspar Chansard",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 12,
+              "number": "193",
+              "driver": "Marcos Castro",
+              "team": "Torino",
+              "gap": ""
+            },
+            {
+              "pos": 13,
+              "number": "122",
+              "driver": "Andrés Jakos",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 14,
+              "number": "116",
+              "driver": "Kevin Candela",
+              "team": "BMW",
+              "gap": ""
+            },
+            {
+              "pos": 15,
+              "number": "115",
+              "driver": "Diego De Carlo",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 16,
+              "number": "77",
+              "driver": "Augusto Carinelli",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 17,
+              "number": "6",
+              "driver": "Juan Martín Trucco",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 18,
+              "number": "71",
+              "driver": "Sebastian Abella",
+              "team": "Toyota",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/991/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tc-2026-12-serie-serie3",
@@ -114649,8 +114782,8 @@
       "eventsWithTimes": 32
     },
     "timing": {
-      "documents": 787,
-      "pagesFetched": 49,
+      "documents": 789,
+      "pagesFetched": 51,
       "eventsWithResults": 58
     },
     "openf1": {
@@ -114659,8 +114792,8 @@
       "sessionsWithResults": 43
     },
     "f1Official": {
-      "requests": 1,
-      "sessionsWithResults": 1,
+      "requests": 0,
+      "sessionsWithResults": 0,
       "errors": []
     },
     "f1Youtube": {
@@ -114694,6 +114827,7 @@
     }
   },
   "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior"
   ]
 }
