@@ -250,32 +250,29 @@ export function sourceFailures(failures = []) {
     out.push({ key: "fuente:perdio-datos", severity: "high", level: 1, tier: 3, title: "Una fuente dejó de traer datos (se conservaron los anteriores)", body: lost.map((l) => l.slice(0, 500)).join("\n").slice(0, 900) });
   }
   // Un origen caído tira varias cosas a la vez (el 4/10/2026 la ACTC dio 502 y salieron ~15 avisos): un solo aviso por origen.
+  // La clave es del origen, falle una cosa o varias: si no, una caída que crece o se achica avisaría "resuelto" y un aviso nuevo.
   for (const [host, list] of groups) {
-    if (list.length < 2) {
-      loose.push(...list);
-      continue;
-    }
     out.push({
       key: `fuente:${host}`,
       severity: "medium",
       level: 1,
       tier: 3,
       consecutive: 2,
-      title: `${hostName(host)} no responde (${list.length} cosas no se pudieron actualizar)`,
+      title: list.length > 1 ? `${hostName(host)} no responde (${list.length} cosas no se pudieron actualizar)` : `Falla de una fuente: ${failureLabel(list[0])}`,
       body: list.map((l) => `· ${l.slice(0, 200)}`).join("\n").slice(0, 900),
     });
   }
-  if (tables.length >= 2) {
+  if (tables.length) {
     out.push({
       key: "fuente:tablas-sin-datos",
       severity: "medium",
       level: 1,
       tier: 3,
       consecutive: 2,
-      title: `${tables.length} tablas de campeonato no llegaron, se conservaron las anteriores`,
+      title: tables.length > 1 ? `${tables.length} tablas de campeonato no llegaron, se conservaron las anteriores` : "Una tabla de campeonato no llegó, se conservó la anterior",
       body: tables.map((l) => `· ${l.replace(/:\s*la fuente no trajo la tabla, se conservó la anterior/i, "")}`).join("\n").slice(0, 900),
     });
-  } else loose.push(...tables);
+  }
   for (const t of loose) {
     const label = failureLabel(t);
     out.push({ key: `fuente:${label}`, severity: "medium", level: 1, tier: 3, consecutive: 2, title: `Falla de una fuente: ${label}`, body: t.slice(0, 500) });

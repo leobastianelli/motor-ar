@@ -123,8 +123,8 @@ test("varias fallas del mismo origen (la ACTC dio 502) salen en un solo aviso co
   for (const l of caidaActc) assert.ok(actc[0].body.includes(l.slice(0, 40)));
   assert.equal(out.length, 2); // el de la ACTC + la falla suelta de Speedhive, que queda como antes
   assert.equal(out.find((f) => f.key !== "fuente:actc").key, "fuente:Speedhive TN");
-  // Una sola falla de ese origen queda suelta, con su clave de siempre.
-  assert.equal(sourceFailures([caidaActc[0]])[0].key, "fuente:Campeonato ACTC tcp");
+  // Una sola falla de ese origen mantiene la clave del origen (cambia sólo el título).
+  assert.equal(sourceFailures([caidaActc[0]])[0].key, "fuente:actc");
   // Se generaliza por host de la URL.
   const apat = sourceFailures(["TN fechas: HTTP 500 https://www.apat.com.ar/a", "TN pilotos: HTTP 500 https://apat.com.ar/b"]);
   assert.equal(apat.length, 1);
@@ -152,7 +152,7 @@ test("el nombre de la fuente no se corta en un paréntesis abierto", () => {
   assert.equal(failureLabel("Cronogramas (ACTC: No se pudo descargar https://x.y: HTTP 502)"), "Cronogramas");
   assert.equal(failureLabel("Cronogramas (ACTC): No se pudo"), "Cronogramas (ACTC)");
   assert.equal(failureLabel("Speedhive TN: 500"), "Speedhive TN");
-  assert.equal(sourceFailures(["Cronogramas (ACTC: HTTP 500)"])[0].key, "fuente:Cronogramas");
+  assert.equal(sourceFailures(["Cronogramas (ACTC: HTTP 500)"])[0].title, "Falla de una fuente: Cronogramas");
 });
 
 test("dos hallazgos con la misma clave se fusionan; el aviso de una falla agrupada sale desde la segunda corrida seguida", () => {
@@ -515,4 +515,18 @@ test("una carga manual que no se puede mostrar queda como hallazgo, no en silenc
   const conSerie1 = sunday({ sessions: [{ id: "s1", kind: "serie", name: "Serie 1", start: "2026-09-27T12:00:00-03:00", timeKnown: false, durationMin: 20, results: rows }] });
   assert.equal(manualDiscarded([conSerie1], manual).length, 0);
   assert.equal(visibleEvents([conSerie1], manual)[0].sessions.length, 2);
+});
+
+test("la clave de un origen caído no cambia si falla una cosa o varias (si no, avisaría 'resuelto' y uno nuevo)", () => {
+  const una = sourceFailures(["Campeonato ACTC tcp: No se pudo descargar https://actc.org.ar/tcp/campeonato: HTTP 502"]);
+  const varias = sourceFailures([
+    "Campeonato ACTC tcp: No se pudo descargar https://actc.org.ar/tcp/campeonato: HTTP 502",
+    "Campeonato ACTC tcm: No se pudo descargar https://actc.org.ar/tcm/campeonato: HTTP 502",
+  ]);
+  assert.deepEqual(una.map((f) => f.key), ["fuente:actc"]);
+  assert.deepEqual(varias.map((f) => f.key), ["fuente:actc"]);
+  assert.match(una[0].title, /Falla de una fuente: Campeonato ACTC tcp/);
+  assert.match(varias[0].title, /La ACTC no responde \(2 cosas/);
+  const tabla = sourceFailures(["Campeonato gt3: la fuente no trajo la tabla, se conservó la anterior"]);
+  assert.deepEqual(tabla.map((f) => f.key), ["fuente:tablas-sin-datos"]);
 });
