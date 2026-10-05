@@ -4,6 +4,7 @@
 // Uso: npm run sync:season
 import fs from "node:fs";
 import { carryRally, inActions, RALLY_LABEL } from "../src/lib/rally-refresh-core.mjs";
+import { parseDataMeta } from "../src/lib/salud-core.mjs";
 import { writeVersion } from "../src/lib/season-store-write.mjs";
 import { loadSeason } from "./season-source.mjs";
 import { repairMojibake } from "../src/lib/sources/common.mjs";
@@ -82,12 +83,14 @@ for (const failure of season.failures) console.error(`ERROR ${failure} (se conse
 // y es lo que va al archivo de respaldo y al índice de pilotos.
 let saved = season;
 let published = false;
+let vigente = null;
 if (start.sql) {
   // Si Vercel escribió una versión mientras esta corrida trabajaba, el Rally que quede es el de esa versión, no el que esta corrida leyó al empezar.
   const reconcile = skipRally ? (candidate, latest) => carryRally(mergeOnto(candidate, latest), latest) : mergeOnto;
   const written = await writeVersion(start.sql, { raw: season, parentId: start.versionId, origin: "sync", reconcile });
   saved = written.raw;
   published = !written.unchanged;
+  vigente = written.id;
   console.log(written.unchanged ? `Sin cambios: sigue vigente la versión ${written.id} del almacén.` : `Versión ${written.id} escrita en el almacén.`);
 }
 
@@ -106,17 +109,27 @@ if (previousIndex && JSON.stringify(index.drivers) === JSON.stringify(previousIn
   console.log(`${index.drivers.length} pilotos → ${INDEX}`);
 }
 
-// Avisa al sitio que hay datos nuevos (revalida las páginas) sólo si esta corrida publicó una versión: cada invalidación global regenera de a poco
-// las ~1000 páginas a medida que las visitan (y cada regeneración es una escritura de ISR), así que sin cambios no se invalida. Si falla, la corrida
-// falla: el guardián avisa y no queda una versión escrita que el sitio no muestra sin que nadie se entere. (Si falla acá, el reintento ve "sin
-// cambios" y no invalida; el cron diario de Vercel sobre /api/refresh cierra ese hueco como mucho a las 10:00 UTC.)
-if (published) {
-  const site = (process.env.SITE_URL ?? "https://www.somosfierros.ar").replace(/\/$/, "");
+// Avisa al sitio que hay datos nuevos (revalida las páginas) sólo si hace falta: cada invalidación global regenera de a poco las ~1000 páginas a
+// medida que las visitan (y cada regeneración es una escritura de ISR), así que sin cambios no se invalida. Hace falta si esta corrida publicó una
+// versión, o si la home todavía sirve otra que la vigente (una corrida anterior escribió y su /api/refresh falló: el reintento lo arregla acá).
+// Si falla, la corrida falla: el guardián avisa y no queda una versión escrita que el sitio no muestra sin que nadie se entere.
+const site = (process.env.SITE_URL ?? "https://www.somosfierros.ar").replace(/\/$/, "");
+async function servedVersion() {
+  try {
+    const res = await fetch(`${site}/`, { headers: UA, signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS) });
+    const meta = (await res.text()).match(/<meta name="fierros-datos" content="([^"]*)"/);
+    return meta ? parseDataMeta(meta[1])?.v ?? null : null;
+  } catch {
+    return null;
+  }
+}
+const behind = start.sql && !published ? await servedVersion().then((v) => v !== String(vigente)) : false;
+if (published || behind) {
   const secret = process.env.CRON_SECRET;
   if (!secret) throw new Error("Falta CRON_SECRET: sin él no se puede invalidar el sitio (/api/refresh)");
   const res = await fetch(`${site}/api/refresh`, { headers: { authorization: `Bearer ${secret}` }, signal: AbortSignal.timeout(60_000) });
   if (!res.ok) throw new Error(`/api/refresh respondió ${res.status}: el sitio no se invalidó`);
-  console.log(`Sitio invalidado (${site}/api/refresh → ${res.status}).`);
+  console.log(`Sitio invalidado${behind ? " (servía otra versión que la vigente)" : ""} (${site}/api/refresh → ${res.status}).`);
 } else if (start.sql) {
-  console.log("Sin versión nueva: el sitio no se invalida.");
+  console.log("Sin versión nueva y el sitio ya sirve la vigente: no se invalida.");
 }
