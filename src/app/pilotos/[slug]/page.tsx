@@ -8,7 +8,7 @@ import { AutoRefresh } from "@/components/live-clock";
 import { Momento, ProximaSesion } from "@/components/momento";
 import { CategoryLabel, PhotoCredit, SectionTitle } from "@/components/pista";
 import { colapintoData, finishLabel, quotes, raceCode, raceName, recentMilestones, statusLabel, type ColapintoData } from "@/lib/colapinto";
-import { getAllDrivers, getDriver, getIndexedDriver, getIndexedDrivers, getNow, getSeason, getSeries, isSimulatedNow, type Season } from "@/lib/data";
+import { getAllDrivers, getDriver, getIndexedDriver, getNow, getSeason, getSeries, isSimulatedNow, type Season } from "@/lib/data";
 import { fmtDayNum, fmtDayShort, fmtMonthShort } from "@/lib/format";
 import { NotesBlock } from "@/components/notas";
 import { notesForDriver } from "@/lib/notas";
@@ -23,9 +23,10 @@ import type { Driver } from "@/lib/types";
 
 export const revalidate = 60;
 
+// Sólo se prerenderizan las fichas curadas: las ~630 del índice se generan en la primera visita y quedan en la caché de ISR (dynamicParams sigue en true;
+// un slug que no está en el índice da 404 igual). Prerenderizarlas todas multiplicaba el tamaño de cada deploy, y son muchos por mes.
 export function generateStaticParams() {
-  const slugs = new Set([...getAllDrivers().map((d) => d.slug), ...getIndexedDrivers().map((d) => d.slug)]);
-  return [...slugs].map((slug) => ({ slug }));
+  return getAllDrivers().map((d) => ({ slug: d.slug }));
 }
 
 export async function generateMetadata(props: PageProps<"/pilotos/[slug]">): Promise<Metadata> {

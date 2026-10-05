@@ -1,14 +1,14 @@
 import { calendarSessionsForSeries } from "@/lib/calendar-feed";
-import { getAllDrivers, getDriver, getIndexedDriver, getIndexedDrivers, getNow, getSeason, getSeries } from "@/lib/data";
+import { getAllDrivers, getDriver, getIndexedDriver, getNow, getSeason, getSeries } from "@/lib/data";
 import { buildCalendar } from "@/lib/ics.mjs";
 
 export const dynamic = "force-static";
 export const revalidate = 3600;
 
 // El segmento dinámico incluye la extensión (p. ej. "franco-colapinto.ics"), igual que en /calendario/categoria.
+// Sólo los curados se prerenderizan; los del índice se generan en la primera descarga y quedan en caché (ver /pilotos/[slug]).
 export function generateStaticParams() {
-  const slugs = new Set([...getAllDrivers().map((d) => d.slug), ...getIndexedDrivers().map((d) => d.slug)]);
-  return [...slugs].map((slug) => ({ slug: `${slug}.ics` }));
+  return getAllDrivers().map((d) => ({ slug: `${d.slug}.ics` }));
 }
 
 function notFound() {

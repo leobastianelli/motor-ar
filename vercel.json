@@ -1,5 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "crons": [{ "path": "/api/refresh", "schedule": "0 10 * * *" }],
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)src/data/season-2026.json'"
+  "ignoreCommand": "node scripts/vercel-ignore.mjs"
 }
