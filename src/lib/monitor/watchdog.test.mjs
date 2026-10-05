@@ -105,3 +105,11 @@ test("tabla incompleta de la fuente: aviso info (cada 72 h) con la dirección, n
   assert.match(out[0].body, /tabla incompleta \(3 filas\)/);
   assert.ok(out[0].body.includes(url));
 });
+
+test("salud: el Rally pendiente se avisa con la instrucción para correrlo desde la PC", () => {
+  const base = { sirviendo: { versionId: 1, servedFrom: "store" }, almacen: { ultimaVersion: 1, createdAt: "2026-10-08T14:00:00Z", origin: "sync" } };
+  const [sin, prov] = saludFindings({ ...base, rallyPendiente: [{ evento: "rally-argentino-2026-7", fecha: 7, nombre: "Rally de Entre Ríos", motivo: "sin-resultados" }, { evento: "rally-argentino-2026-6", fecha: 6, nombre: "Rally de San Francisco", motivo: "provisoria" }] }, "2026-10-08T15:00:00Z");
+  assert.equal(sin.severity, "medium");
+  assert.match(sin.body, /npm run sync:rally/);
+  assert.equal(prov.severity, "info");
+});

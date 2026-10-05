@@ -114,6 +114,28 @@ export function latestEventWithResults(events) {
 export const MENU_NOTES = 4;
 
 /**
+ * Fechas del Rally Argentino que esperan `npm run sync:rally` desde una PC: Cloudflare de rallyargentino.com bloquea a GitHub Actions y a Vercel,
+ * así que nadie en la nube puede traerlas. Una fecha terminada hace más de `after` horas sin resultados ("sin-resultados"), o con la clasificación
+ * todavía provisoria después de `provisionalDays` días ("provisoria": la organización ya debería haberla pasado a su histórico). Hasta `withinDays`.
+ */
+export function rallyLocalSyncDue(events, now, { after = 12, provisionalDays = 3, withinDays = 21 } = {}) {
+  const nowMs = Date.parse(now);
+  const out = [];
+  for (const e of events) {
+    if (e.seriesId !== "rally-argentino" || !e.sessions?.length) continue;
+    const end = Math.max(...e.sessions.map((s) => Date.parse(s.start))) + 12 * 3600_000; // las sesiones van sin hora (mediodía): fin del día
+    const hours = (nowMs - end) / 3600_000;
+    if (hours < after || hours > withinDays * 24) continue;
+    const races = e.sessions.filter((s) => s.kind === "final" || s.kind === "carrera");
+    if (races.some((s) => s.resultsUnread)) continue; // la fuente no la publica (fecha 1): correr el script no la arregla
+    const conResultados = races.filter((s) => s.results?.length);
+    const motivo = !conResultados.length ? "sin-resultados" : conResultados.some((s) => s.resultsSource?.status === "provisional") && hours >= provisionalDays * 24 ? "provisoria" : null;
+    if (motivo) out.push({ evento: e.id, fecha: e.round, nombre: e.name, motivo, terminoHaceHoras: Math.round(hours) });
+  }
+  return out;
+}
+
+/**
  * Cuerpo de /api/salud. `stored` es la última fila del almacén leída sin caché ({ id, origin, createdAt }) o null si no se pudo.
  * `notes` son todas las notas en el orden del menú y de /notas ([{ slug, title, auto }]).
  * @param {{ source: any, stored: any, storeError?: string, failures?: string[], events?: any[], notes?: { slug: string, title: string, auto?: unknown }[], now: string }} args
@@ -127,6 +149,7 @@ export function healthReport({ source, stored, storeError, failures = [], events
     pendientes: pendingSessions(events, now),
     ganadoresRecientes: recentWinners(events, now),
     eventoReciente: latestEventWithResults(events),
+    rallyPendiente: rallyLocalSyncDue(events, now),
     cronicas: notes.flatMap((n, i) => (n.auto ? [{ slug: n.slug, title: n.title, enMenu: i < MENU_NOTES }] : [])),
   };
 }

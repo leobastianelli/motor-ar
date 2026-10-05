@@ -97,6 +97,17 @@ export function saludFindings(salud, now, { staleMin = 10, pendingMin = 60, home
       body: `El almacén tiene la versión ${almacen.ultimaVersion} (hace ${Math.round(storedAge)} min) y la home muestra la ${homeVersion}. Las páginas no se regeneraron.`,
     });
   }
+  // Rally Argentino: sólo se actualiza desde una PC (Cloudflare bloquea a la nube). Sin resultados: aviso diario; provisoria: cada 72 h.
+  for (const r of salud.rallyPendiente ?? []) {
+    out.push({
+      key: `rally-sync:${r.evento}:${r.motivo}`,
+      severity: r.motivo === "sin-resultados" ? "medium" : "info",
+      level: 1,
+      tier: 1,
+      title: r.motivo === "sin-resultados" ? `Rally Argentino: falta cargar la fecha ${r.fecha} (${r.nombre})` : `Rally Argentino: la fecha ${r.fecha} sigue provisoria`,
+      body: `Correr en la PC, desde la carpeta del repo: npm run sync:rally (rallyargentino.com bloquea a GitHub y a Vercel). Después, para que el sitio lo muestre: gh workflow run "Sincronizar temporada".${r.motivo === "provisoria" ? " Si sigue provisoria, la organización todavía no la pasó a su histórico." : ""}`,
+    });
+  }
   for (const p of salud.pendientes ?? []) {
     if (p.terminoHaceMin <= pendingMin) continue;
     if (p.tablaIncompleta) {
