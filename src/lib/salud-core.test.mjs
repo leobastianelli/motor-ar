@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { ageMin, dataMetaContent, healthReport, isFallback, noResultsReason, parseDataMeta, pendingSessions, recentWinners, latestEventWithResults } from "./salud-core.mjs";
+import { ageMin, dataMetaContent, healthReport, isFallback, noResultsReason, parseDataMeta, pendingSessions, rallyLocalSyncDue, recentWinners, latestEventWithResults } from "./salud-core.mjs";
 
 const NOW = "2026-09-24T15:00:00Z";
 const source = { versionId: 12, origin: "hot", generatedAt: "2026-09-24T14:30:00Z", createdAt: "2026-09-24T14:31:00Z", servedFrom: "store" };
@@ -104,4 +104,19 @@ test("el informe lista las crónicas automáticas y marca cuáles entran en el m
   const notes = [{ slug: "a", title: "A", auto: {} }, { slug: "m", title: "M" }, { slug: "b", title: "B", auto: {} }, { slug: "c", title: "C" }, { slug: "d", title: "D", auto: {} }];
   const r = healthReport({ source, stored: null, notes, now: "2026-09-24T18:00:00Z" });
   assert.deepEqual(r.cronicas, [{ slug: "a", title: "A", enMenu: true }, { slug: "b", title: "B", enMenu: true }, { slug: "d", title: "D", enMenu: false }]);
+});
+
+test("Rally Argentino: avisa la fecha terminada sin resultados y la que sigue provisoria; no la que la fuente nunca publica", () => {
+  const ses = (kind, start, extra = {}) => ({ id: `${kind}-${start}`, kind, name: kind, start, timeKnown: false, durationMin: 60, ...extra });
+  const rally = (round, end, sessionExtra = {}) => ({ id: `rally-argentino-2026-${round}`, seriesId: "rally-argentino", round, name: `Rally ${round}`, sessions: [ses("carrera", `${end}T12:00:00-03:00`, sessionExtra)] });
+  const now = "2026-10-08T12:00:00-03:00";
+  const sin = rally(7, "2026-10-04");
+  const provisoria = rally(6, "2026-10-01", { results: [{ pos: 1 }], resultsSource: { name: "x", url: "x", status: "provisional" } });
+  const oficial = rally(5, "2026-10-01", { results: [{ pos: 1 }], resultsSource: { name: "x", url: "x" } });
+  const ilegible = rally(4, "2026-10-01", { resultsUnread: true });
+  const recien = rally(8, "2026-10-08");
+  const out = rallyLocalSyncDue([sin, provisoria, oficial, ilegible, recien, { ...sin, id: "tc-1", seriesId: "tc" }], now);
+  assert.deepEqual(out.map((r) => [r.fecha, r.motivo]), [[7, "sin-resultados"], [6, "provisoria"]]);
+  // Pasadas las 3 semanas ya no se insiste.
+  assert.equal(rallyLocalSyncDue([sin], "2026-11-01T12:00:00-03:00").length, 0);
 });
