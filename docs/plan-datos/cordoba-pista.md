@@ -148,7 +148,7 @@ Lo que ya hay (leído en `src/lib/sources/season.mjs`, `speedhive-tn.mjs`, `apat
 2. **Campeonato:** ¿preferís mostrar "sin campeonato" para TCH, Clase 3 y FR Plus hasta tener puntaje verificado, o cargarlo a mano tras cada fecha? Y para las cuatro con tabla, ¿aceptás mostrar la oficial con un rótulo "actualizada hasta la fecha N" o sólo la calculada?
 3. **Córdoba Pista y TN:** ¿"Clase 3" va como categoría separada del TN Clase 3? Propongo sí, con el nombre completo en pantalla.
 4. **Acceso:** ¿querés escribirle a APICER/FRAD para pedir (a) que actualicen el archivo de resultados y los campeonatos, (b) una lista de inscriptos, (c) el reglamento de puntaje? No lo hicimos: sería un mensaje en tu nombre.
-5. **Fecha de la carga manual:** las fechas 7-9 están confirmadas sólo por un comunicado de la FRAD del 28/8. ¿Las cargamos como "confirmada" o "tentativa" hasta el primer evento de Speedhive?
+5. **Fecha de la carga manual:** las fechas 7-9 tienen día y sede confirmados por la FRAD (comunicado del 28/8) y por el posteo oficial de Córdoba Pista del 29/8; se cargaron con `dateConfirmed` y los horarios a confirmar hasta que aparezcan en Speedhive.
 6. **Organización:** la situación de 2025 (FRAD vs APICER) se cerró en noviembre. ¿Conocés algo más reciente? No encontré notas posteriores al 12/11/2025 que la reabran.
 7. **Correr algún día:** el Turismo Fiat 128 y el Turismo Fiat son los escalones de entrada. Si sirve, se puede hacer una ficha de "cómo ingresar" con reglamento y costos, pero no hay costo ni inscripción publicados que yo haya podido leer.
 

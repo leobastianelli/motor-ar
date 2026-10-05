@@ -220,9 +220,9 @@ test("claseDeTexto reconoce los nombres que usó el cronometraje (con errores de
   for (const no of ["KARTING", "CLASE 1", "REGIONAL A", ""]) assert.equal(claseDeTexto(no), null, no);
 });
 
-// ——— Fechas 7 a 9: tentativas, citando el comunicado de la FRAD, hasta que aparezcan en Speedhive ———
+// ——— Fechas 7 a 9: día y sede confirmados (FRAD y posteo oficial de Córdoba Pista), horarios a confirmar hasta que aparezcan en Speedhive ———
 
-test("las fechas 7, 8 y 9 se cargan como tentativas (sólo día y sede) y citan el comunicado de la FRAD", async () => {
+test("las fechas 7, 8 y 9 se cargan con fecha confirmada y horarios a confirmar, citando el comunicado de la FRAD", async () => {
   const { dateStatus } = await import("../monitor/checks.mjs");
   const manual = JSON.parse(fs.readFileSync(new URL("../../data/manual-overrides.json", import.meta.url), "utf8"));
   const tentativas = manual.newEvents.filter((e) => e.seriesId === "cordoba-pista");
@@ -230,15 +230,16 @@ test("las fechas 7, 8 y 9 se cargan como tentativas (sólo día y sede) y citan 
   const esperado = [["2026-10-24", "2026-10-25", "Alta Gracia"], ["2026-11-21", "2026-11-22", "Alta Gracia"], ["2026-12-19", "2026-12-20", "Río Cuarto"]];
   tentativas.forEach((e, i) => {
     assert.equal(e.round, 7 + i);
-    assert.equal(dateStatus(e).status, "tentative", e.id);
-    assert.ok(!e.dateConfirmed);
+    assert.equal(dateStatus(e).status, "confirmed", e.id);
+    assert.ok(e.dateConfirmed);
+    assert.doesNotMatch(e.name, /confirmar/i);
     assert.deepEqual([e.sessions[0].start.slice(0, 10), e.sessions.at(-1).start.slice(0, 10), e.circuit.city], esperado[i]);
     for (const s of e.sessions) {
       assert.equal(s.timeKnown, false, `${s.id}: sin horario`);
       assert.match(s.timeSources[0].url, /^https:\/\/fradcba\.com\.ar\/se-modifico-el-calendario-del-cordoba-pista/);
       assert.equal(s.classId, undefined);
     }
-    assert.match(e.source, /TENTATIVA/);
+    assert.match(e.source, /confirmados por la FRAD.*posteo oficial de Córdoba Pista.*Speedhive/);
   });
   // Cuando Speedhive trae la fecha, gana la fuente: mismo id que la carga manual (createSeason en data.ts: "si una fuente trae el mismo id, gana la fuente").
   const { events } = await run();
