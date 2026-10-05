@@ -5,6 +5,7 @@ import { series } from "@/data/series";
 import { getNow } from "@/lib/data";
 import { sql } from "@/lib/db";
 import { hotPending, runHotRefresh } from "@/lib/hot-refresh";
+import { runRallyRefresh } from "@/lib/rally-refresh";
 import { visibleEvents } from "@/lib/monitor/checks.mjs";
 import { claimDispatch, readEvidence, recordEvidence } from "@/lib/pulso-dispatch.mjs";
 import { LISTING_REVALIDATE, syncStep } from "@/lib/pulso-sync.mjs";
@@ -29,7 +30,7 @@ const enviarBorradores = enviarBorradoresRaw as unknown as (args: EnviarBorrador
 
 // Pulso: lo llama un cron externo (cron-job.org) cada 5 min, jueves a lunes, porque GitHub Actions descarta la mayoría de sus corridas
 // programadas (ver docs/plan-lanzamiento/01-borradores-para-redes.md, "Disparo con cron-job.org"). Hace, en orden y cada uno con su propio
-// try/catch (si uno falla, los otros igual corren): 1) el refresco caliente, si hace falta; 2) los borradores para redes; 3) disparar la
+// try/catch (si uno falla, los otros igual corren): 1) el refresco caliente, si hace falta; 1b) el Rally Argentino (cada 30 min como mucho); 2) los borradores para redes; 3) disparar la
 // sincronización completa por la API de GitHub, si hay sesiones sin resultados y no se disparó hace poco (candado de 45 min), o si en un fin de
 // semana con fechas de la ACTC el listado de su portal trae un documento que la temporada no tiene (candado de 10 min; src/lib/pulso-sync.mjs). No toca páginas ni su `revalidate`
 // (eso lo hace runHotRefresh cuando corresponde); no consulta Neon en un paso sin nada que hacer.
@@ -40,6 +41,15 @@ async function pasoRefresco(events: unknown[]) {
   try {
     if (!hotPending(events)) return { status: "skipped", reason: "nada pendiente (según la temporada en memoria)" };
     return await runHotRefresh();
+  } catch (error) {
+    return { status: "error", error: error instanceof Error ? error.message : String(error) };
+  }
+}
+
+// Rally Argentino: su sitio bloquea (403) a GitHub Actions, así que lo trae Vercel (src/lib/rally-refresh.ts: candado propio de 30 min).
+async function pasoRally() {
+  try {
+    return await runRallyRefresh();
   } catch (error) {
     return { status: "error", error: error instanceof Error ? error.message : String(error) };
   }
@@ -98,6 +108,7 @@ export async function GET(request: Request) {
   const events = visibleEvents(raw.events as never, manual);
 
   const refresco = await pasoRefresco(events);
+  const rally = await pasoRally();
   const borradores = await pasoBorradores({
     raw,
     now,
@@ -109,5 +120,5 @@ export async function GET(request: Request) {
   });
   const sincronizacion = await pasoSincronizacion(events, raw.events, now);
 
-  return Response.json({ at: now, refresco, borradores, sincronizacion });
+  return Response.json({ at: now, refresco, rally, borradores, sincronizacion });
 }

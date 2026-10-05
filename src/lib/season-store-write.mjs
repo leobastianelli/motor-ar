@@ -24,15 +24,16 @@ const content = (raw) => JSON.stringify([raw.events, raw.standings, raw.meta, ra
 /**
  * Publica `raw` como versión nueva, hija de `parentId`. Sólo se inserta si `parentId` sigue siendo la última versión: si otro escritor entró
  * en el medio, se fusiona con lo que escribió (`mergeOnto`) y se reintenta. Si el resultado es idéntico a la última versión no se escribe nada.
+ * `reconcile(candidate, latest)` reemplaza a `mergeOnto` como forma de fusionar (el Rally lo usa para tocar sólo lo suyo sobre lo más nuevo).
  * Devuelve { id, unchanged, raw }: `raw` es lo que quedó vigente (ya fusionado).
  */
-export async function writeVersion(sql, { raw, parentId = null, origin }) {
+export async function writeVersion(sql, { raw, parentId = null, origin, reconcile = mergeOnto }) {
   let candidate = raw;
   let parent = parentId;
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
     const latest = await readLatest(sql);
     if (latest && latest.id !== parent) {
-      candidate = mergeOnto(candidate, latest.raw);
+      candidate = reconcile(candidate, latest.raw);
       parent = latest.id;
     }
     if (latest && content(candidate) === content(latest.raw)) return { id: latest.id, unchanged: true, raw: latest.raw };

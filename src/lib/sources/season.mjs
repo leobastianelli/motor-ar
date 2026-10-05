@@ -21,6 +21,7 @@ import { protectSeason, protectStandings } from "./guard.mjs";
 import { tc2000Season } from "./tc2000.mjs";
 import { tcrSaSeason } from "./tcr-sa.mjs";
 import { rallyArgentinoSeason } from "./rally-argentino.mjs";
+import { carryRally } from "../rally-refresh-core.mjs";
 
 const SOURCES = [
   ["F1", ["f1"], f1Season],
@@ -98,13 +99,25 @@ async function withSchedules(io, events, previous, failures) {
   }
 }
 
-export async function buildSeason(io, previous = { events: [], standings: {}, meta: {} }, log = () => {}) {
+/**
+ * `skip`: rótulos de SOURCES que no se consultan en esta corrida. Su categoría pasa tal cual de la versión anterior, sin anotar una falla:
+ * hoy sólo el Rally en GitHub Actions, donde rallyargentino.com contesta 403 y lo trae el refresco desde Vercel (src/lib/rally-refresh.ts).
+ */
+export async function buildSeason(io, previous = { events: [], standings: {}, meta: {} }, log = () => {}, { skip = [] } = {}) {
   let events = [];
   const standings = {};
   const meta = {};
   const failures = [];
 
   for (const [label, seriesIds, run] of SOURCES) {
+    if (skip.includes(label)) {
+      events.push(...previous.events.filter((e) => seriesIds.includes(e.seriesId)));
+      for (const id of seriesIds) {
+        if (previous.standings?.[id]) standings[id] = previous.standings[id];
+        if (previous.meta?.[id]) meta[id] = previous.meta[id];
+      }
+      continue;
+    }
     try {
       const part = await run(io, previous);
       events.push(...part.events);
@@ -123,7 +136,14 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
 
   // Errores parciales de Córdoba Pista (una sesión o un evento que no se pudo leer; lo ya guardado se conserva).
   for (const error of meta.cordobaPista?.errors ?? []) failures.push(`Córdoba Pista: ${error}`);
-  for (const error of meta.rallyArgentino?.errors ?? []) failures.push(`Rally Argentino: ${error}`);
+  if (skip.includes("Rally Argentino")) {
+    // Salteado: el Rally (incluidos `meta.rallyArgentino` y sus fallas, con el estado de Vercel) queda como estaba en la versión anterior.
+    const kept = carryRally({ events, standings, meta, failures }, previous);
+    meta.rallyArgentino = kept.meta.rallyArgentino;
+    failures.splice(0, failures.length, ...kept.failures);
+  } else {
+    for (const error of meta.rallyArgentino?.errors ?? []) failures.push(`Rally Argentino: ${error}`);
+  }
   for (const error of meta.nuevoCarShow?.errors ?? []) failures.push(`Nuevo Car Show: ${error}`);
 
   // Campeonato oficial de la ACTC para las categorías que no tienen otra tabla (el del TC sale de Wikipedia y la carga manual).

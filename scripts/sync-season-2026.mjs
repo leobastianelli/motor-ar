@@ -3,10 +3,12 @@
 // parte del archivo. En ambos casos regenera src/data/season-2026.json (respaldo y datos de compilación) y drivers-2026.json.
 // Uso: npm run sync:season
 import fs from "node:fs";
+import { carryRally, inActions, RALLY_LABEL } from "../src/lib/rally-refresh-core.mjs";
 import { writeVersion } from "../src/lib/season-store-write.mjs";
 import { loadSeason } from "./season-source.mjs";
 import { repairMojibake } from "../src/lib/sources/common.mjs";
 import { buildDriverIndex } from "../src/lib/sources/driver-index.mjs";
+import { mergeOnto } from "../src/lib/sources/season-merge.mjs";
 import { buildSeason } from "../src/lib/sources/season.mjs";
 import { wikiRawUrl } from "../src/lib/sources/wiki-pages.mjs";
 
@@ -59,19 +61,30 @@ const start = await loadSeason(OUTPUT, { requireStore: true });
 const previous = start.raw;
 console.log(`Se parte de: ${start.label}`);
 
-const season = await buildSeason(io, previous, (label, part) => {
-  const sessions = part.events.flatMap((e) => e.sessions);
-  console.log(
-    `${label.padEnd(14)} ${String(part.events.length).padStart(3)} eventos · ${sessions.filter((s) => s.results?.length).length} con resultados · ${sessions.filter((s) => s.timeKnown).length} con horario`,
-  );
-});
+// rallyargentino.com y su API (Cloudflare) contestan 403 a las IPs de GitHub Actions: ahí el Rally se saltea y se conserva lo que haya escrito el
+// refresco desde Vercel (src/lib/rally-refresh.ts), sin anotar una falla que no es nuestra. Corriendo en otro lado (local) se consulta normal.
+const skipRally = inActions();
+if (skipRally) console.log("Rally Argentino: se saltea en GitHub Actions (lo trae el refresco desde Vercel).");
+const season = await buildSeason(
+  io,
+  previous,
+  (label, part) => {
+    const sessions = part.events.flatMap((e) => e.sessions);
+    console.log(
+      `${label.padEnd(14)} ${String(part.events.length).padStart(3)} eventos · ${sessions.filter((s) => s.results?.length).length} con resultados · ${sessions.filter((s) => s.timeKnown).length} con horario`,
+    );
+  },
+  { skip: skipRally ? [RALLY_LABEL] : [] },
+);
 for (const failure of season.failures) console.error(`ERROR ${failure} (se conservan los datos anteriores)`);
 
 // Con almacén: se publica como versión nueva (fusionada con lo que otro escritor haya guardado mientras tanto). `saved` es lo que quedó vigente,
 // y es lo que va al archivo de respaldo y al índice de pilotos.
 let saved = season;
 if (start.sql) {
-  const written = await writeVersion(start.sql, { raw: season, parentId: start.versionId, origin: "sync" });
+  // Si Vercel escribió una versión mientras esta corrida trabajaba, el Rally que quede es el de esa versión, no el que esta corrida leyó al empezar.
+  const reconcile = skipRally ? (candidate, latest) => carryRally(mergeOnto(candidate, latest), latest) : mergeOnto;
+  const written = await writeVersion(start.sql, { raw: season, parentId: start.versionId, origin: "sync", reconcile });
   saved = written.raw;
   console.log(written.unchanged ? `Sin cambios: sigue vigente la versión ${written.id} del almacén.` : `Versión ${written.id} escrita en el almacén.`);
 }
