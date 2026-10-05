@@ -39,3 +39,13 @@ test("pasado: hace N días", () => {
 test("ayer", () => {
   assert.deepEqual(relativeDayInfo("2026-09-23T13:00:00Z", NOW), { kind: "yesterday" });
 });
+
+test("una sesión sin horario se da por terminada a las 20 h de su día (o antes, con resultados)", async () => {
+  const { sessionStatus, sessionEnd } = await import("./session-status.mjs");
+  const s = { start: "2026-10-04T12:00:00-03:00", durationMin: 60, timeKnown: false };
+  assert.equal(sessionStatus(s, "2026-10-03T23:00:00-03:00"), "upcoming");
+  assert.equal(sessionStatus(s, "2026-10-04T15:00:00-03:00"), "upcoming");
+  assert.equal(sessionStatus({ ...s, results: [{ pos: 1 }] }, "2026-10-04T15:00:00-03:00"), "done");
+  assert.equal(sessionStatus(s, "2026-10-04T21:40:00-03:00"), "done");
+  assert.equal(new Date(sessionEnd(s)).toISOString(), "2026-10-04T23:00:00.000Z");
+});

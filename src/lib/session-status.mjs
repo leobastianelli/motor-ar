@@ -13,6 +13,15 @@ export const dayKey = (/** @type {string} */ iso) => keyFmt.format(new Date(iso)
 export const dayStart = (/** @type {string} */ iso) => new Date(`${dayKey(iso)}T00:00:00-03:00`).getTime();
 
 /**
+ * Una sesión sin horario se da por terminada a esta hora argentina de su día (antes, si ya tiene resultados). Son actividades diurnas: a las
+ * 21 h no puede seguir figurando como "hoy, por empezar" algo que ya se corrió (4/10/2026: el Rally y el Nuevo Car Show en la portada).
+ */
+export const DAY_ONLY_END_HOURS = 20;
+
+/** Cuándo se da por terminada una sesión sin horario (ms): las 20 h argentinas de su día. */
+export const dayOnlyEnd = (/** @type {string} */ iso) => dayStart(iso) + DAY_ONLY_END_HOURS * 3600000;
+
+/**
  * @typedef {{ start: string, durationMin: number, timeKnown?: boolean, results?: unknown[], hasResults?: boolean }} SessionLike
  * `hasResults` permite pasar sólo el dato de si hay resultados (sin la tabla) cuando la sesión viaja al navegador.
  */
@@ -26,10 +35,9 @@ export function sessionStatus(session, nowIso) {
   const now = new Date(nowIso).getTime();
   const hasResults = session.hasResults ?? Boolean(session.results?.length);
   if (session.timeKnown === false) {
-    // Sin horario: nunca "en vivo". Se da por terminada con resultados o al terminar el día.
-    const start = dayStart(session.start);
-    if (now < start) return "upcoming";
-    return hasResults || now >= start + 86400000 ? "done" : "upcoming";
+    // Sin horario: nunca "en vivo". Se da por terminada con resultados o a las 20 h de su día.
+    if (now < dayStart(session.start)) return "upcoming";
+    return hasResults || now >= dayOnlyEnd(session.start) ? "done" : "upcoming";
   }
   const start = new Date(session.start).getTime();
   const end = start + session.durationMin * 60000;
@@ -38,8 +46,8 @@ export function sessionStatus(session, nowIso) {
   return "done";
 }
 
-/** Cuándo termina la sesión (ms). Sin horario confirmado, al terminar el día. */
-export const sessionEnd = (/** @type {SessionLike} */ s) => (s.timeKnown === false ? dayStart(s.start) + 86400000 : new Date(s.start).getTime() + s.durationMin * 60000);
+/** Cuándo termina la sesión (ms). Sin horario confirmado, a las 20 h de su día. */
+export const sessionEnd = (/** @type {SessionLike} */ s) => (s.timeKnown === false ? dayOnlyEnd(s.start) : new Date(s.start).getTime() + s.durationMin * 60000);
 
 /**
  * @typedef {

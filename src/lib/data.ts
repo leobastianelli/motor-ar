@@ -11,6 +11,7 @@ import { isProvisional } from "./provisorio.mjs";
 import { mergeSessionPatches } from "./sources/overrides.mjs";
 import { series, seriesById } from "@/data/series";
 import { dayKey, fmtDayShort, fmtTime, sessionStatus, type SessionStatus, type StateKind } from "./format";
+import { sessionEnd as sessionEndOf } from "./session-status.mjs";
 import { loadRawSeason, type RawSeason } from "./season-data";
 import type { Broadcast, CategoryHistory, Driver, RaceEvent, ResultRow, Series, Session, StandingRow } from "./types";
 
@@ -80,8 +81,7 @@ export const ms = (iso: string) => new Date(iso).getTime();
 const WITH_ARGENTINES = new Set(drivers.map((d) => d.seriesId));
 export const seriesTier = (s: Series): 1 | 2 | 3 => (s.scope !== "internacional" ? 1 : WITH_ARGENTINES.has(s.id) ? 2 : 3);
 export const eventStart = (e: RaceEvent) => e.sessions[0].start;
-const sessionEnd = (s: Session) =>
-  s.timeKnown === false ? ms(`${dayKey(s.start)}T00:00:00-03:00`) + 86400000 : ms(s.start) + s.durationMin * 60000;
+const sessionEnd = (s: Session) => sessionEndOf(s);
 const eventEnd = (e: RaceEvent) => Math.max(...e.sessions.map(sessionEnd));
 
 /** Fin de semana de carreras: el actual (viernes a domingo) o, de lunes a jueves, el próximo. */
