@@ -6,6 +6,7 @@ import { dateStatus, dayKey } from "./monitor/checks.mjs";
 import { nombreVisibleSesion } from "./momento.mjs";
 import { PROVISIONAL, isProvisional } from "./provisorio.mjs";
 import { resumenFinde } from "./resumen-core.mjs";
+import { dayOnlyEnd } from "./session-status.mjs";
 
 export const BASE_URL = "https://www.somosfierros.ar";
 export const X_LIMIT = 280;
@@ -51,7 +52,7 @@ export const xIntentUrl = (text) => `https://x.com/intent/post?text=${encodeURIC
 export const normalize = (s) => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
 export const surname = (name) => String(name).trim().split(/\s+/).at(-1);
 const ordinal = (pos) => `${pos}.º`;
-const endOf = (s) => (s.timeKnown === false ? Date.parse(`${dayKey(s.start)}T00:00:00-03:00`) + DAY : Date.parse(s.start) + (s.durationMin ?? 60) * MIN);
+const endOf = (s) => (s.timeKnown === false ? dayOnlyEnd(s.start) : Date.parse(s.start) + (s.durationMin ?? 60) * MIN);
 
 /** Índice nombre → piloto argentino (con alias); en las tripulaciones ("A / B") alcanza con que alguno sea de los nuestros. */
 export function driverIndex(drivers) {
