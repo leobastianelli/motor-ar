@@ -1,5 +1,5 @@
 // Sincronización completa de la temporada. Con DATABASE_URL: parte de la última versión del almacén (Neon), escribe una versión nueva
-// (fusionando con lo que otro escritor haya guardado mientras corría) y le avisa al sitio con /api/refresh. Sin DATABASE_URL (uso local):
+// (fusionando con lo que otro escritor haya guardado mientras corría) y, si publicó algo, le avisa al sitio con /api/refresh. Sin DATABASE_URL (uso local):
 // parte del archivo. En ambos casos regenera src/data/season-2026.json (respaldo y datos de compilación) y drivers-2026.json.
 // Uso: npm run sync:season
 import fs from "node:fs";
@@ -81,11 +81,13 @@ for (const failure of season.failures) console.error(`ERROR ${failure} (se conse
 // Con almacén: se publica como versión nueva (fusionada con lo que otro escritor haya guardado mientras tanto). `saved` es lo que quedó vigente,
 // y es lo que va al archivo de respaldo y al índice de pilotos.
 let saved = season;
+let published = false;
 if (start.sql) {
   // Si Vercel escribió una versión mientras esta corrida trabajaba, el Rally que quede es el de esa versión, no el que esta corrida leyó al empezar.
   const reconcile = skipRally ? (candidate, latest) => carryRally(mergeOnto(candidate, latest), latest) : mergeOnto;
   const written = await writeVersion(start.sql, { raw: season, parentId: start.versionId, origin: "sync", reconcile });
   saved = written.raw;
+  published = !written.unchanged;
   console.log(written.unchanged ? `Sin cambios: sigue vigente la versión ${written.id} del almacén.` : `Versión ${written.id} escrita en el almacén.`);
 }
 
@@ -104,13 +106,17 @@ if (previousIndex && JSON.stringify(index.drivers) === JSON.stringify(previousIn
   console.log(`${index.drivers.length} pilotos → ${INDEX}`);
 }
 
-// Avisa al sitio que hay datos vigentes (revalida las páginas). Si falla, la corrida falla: el guardián avisa y no queda una versión escrita
-// que el sitio no muestra sin que nadie se entere.
-if (start.sql) {
+// Avisa al sitio que hay datos nuevos (revalida las páginas) sólo si esta corrida publicó una versión: cada invalidación global regenera de a poco
+// las ~1000 páginas a medida que las visitan (y cada regeneración es una escritura de ISR), así que sin cambios no se invalida. Si falla, la corrida
+// falla: el guardián avisa y no queda una versión escrita que el sitio no muestra sin que nadie se entere. (Si falla acá, el reintento ve "sin
+// cambios" y no invalida; el cron diario de Vercel sobre /api/refresh cierra ese hueco como mucho a las 10:00 UTC.)
+if (published) {
   const site = (process.env.SITE_URL ?? "https://www.somosfierros.ar").replace(/\/$/, "");
   const secret = process.env.CRON_SECRET;
   if (!secret) throw new Error("Falta CRON_SECRET: sin él no se puede invalidar el sitio (/api/refresh)");
   const res = await fetch(`${site}/api/refresh`, { headers: { authorization: `Bearer ${secret}` }, signal: AbortSignal.timeout(60_000) });
   if (!res.ok) throw new Error(`/api/refresh respondió ${res.status}: el sitio no se invalidó`);
   console.log(`Sitio invalidado (${site}/api/refresh → ${res.status}).`);
+} else if (start.sql) {
+  console.log("Sin versión nueva: el sitio no se invalida.");
 }

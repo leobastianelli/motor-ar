@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/notas" },
 };
 
-export const revalidate = 60;
+// Los datos nuevos la invalidan por evento; por tiempo sólo vencen las crónicas automáticas (ventana de días), así que 15 min sobra.
+export const revalidate = 900;
 
 export default async function NotasPage() {
   const norm = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();

@@ -46,7 +46,8 @@ const MANUAL_SOURCES: { name: string; url: string; what: string }[] = [
 
 type Photo = { alt: string; author: string; license: string; licenseUrl: string | null; sourceUrl: string };
 
-export const revalidate = 60;
+// No depende de la hora: sólo de los datos, que la invalidan por evento (revalidateTag("season")). El día es una red de seguridad.
+export const revalidate = 86400;
 
 export default async function SourcesPage() {
   const credits = Object.values(photos as Record<string, Photo>);

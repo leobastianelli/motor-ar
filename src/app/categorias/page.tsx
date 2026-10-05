@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   description: "Categorías nacionales, internacionales y zonales: próximas fechas, campeonatos e historia.",
   alternates: { canonical: "/categorias" },
 };
-export const revalidate = 60;
+// Los datos nuevos la invalidan por evento; por tiempo sólo cambia cuál es la "próxima" fecha de cada categoría (una recién terminada tarda a lo sumo 15 min en cambiar).
+export const revalidate = 900;
 
 const GROUPS: { scope: Scope; title: string }[] = [
   { scope: "nacional", title: "Nacionales" },

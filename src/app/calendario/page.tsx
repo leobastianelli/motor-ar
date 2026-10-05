@@ -9,7 +9,8 @@ export const metadata: Metadata = {
   description: "Todas las fechas que vienen de F1, F2, Turismo Carretera, TC Pista, TN, TC Mouras, Pick Up y GT, en hora argentina.",
   alternates: { canonical: "/calendario" },
 };
-export const revalidate = 60;
+// Los datos nuevos la invalidan por evento; por tiempo sólo cambia qué fechas siguen "por venir" (una recién terminada tarda a lo sumo 15 min en salir).
+export const revalidate = 900;
 
 export default async function CalendarPage() {
   const events = (await getSeason()).getUpcomingEvents(getNow());

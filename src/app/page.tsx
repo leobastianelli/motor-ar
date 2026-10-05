@@ -14,8 +14,8 @@ import { getAllNotes } from "@/lib/notas";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime, raceWinner, surname } from "@/lib/format";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
-// La home es lo que la gente mira mientras pasa la carrera: se regenera seguido, y el navegador además la vuelve a pedir solo (AutoRefresh).
-export const revalidate = 15;
+// La home es lo que la gente mira mientras pasa la carrera: el navegador la vuelve a pedir solo (AutoRefresh) y los estados se recalculan en el cliente (useNow). Los datos nuevos la invalidan por evento (revalidateTag("season")); el tiempo por sí solo, cada minuto.
+export const revalidate = 60;
 
 type MomentRow = { key: string; label: string; body: ReactNode; live?: boolean };
 type SectionId = "live" | "recien" | "nuestros" | "agenda" | "resultados" | "viene" | "notas";
