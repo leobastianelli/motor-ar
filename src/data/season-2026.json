@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T23:24:03.870Z",
+  "generatedAt": "2026-10-05T00:23:02.059Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -47143,13 +47143,760 @@
           "durationMin": 480
         },
         {
+          "id": "rally-argentino-2026-2-rc2",
+          "classId": "rc2",
+          "kind": "final",
+          "name": "Clasificación final RC2",
+          "start": "2026-04-19T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Federico Villagra / Diego Curletto",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "1:29:51.6"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Miguel Baldoni / Gustavo Franchello",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+10.6"
+            },
+            {
+              "pos": 3,
+              "number": "2",
+              "driver": "Gastón Pasten / Matías Ramos",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+1:26.0"
+            },
+            {
+              "pos": 4,
+              "number": "11",
+              "driver": "Augusto Bestard / José Díaz",
+              "team": "Toyota Yaris GR Rally2",
+              "gap": "+2:22.4"
+            },
+            {
+              "pos": 5,
+              "number": "24",
+              "driver": "Augusto D'Agostini / Juan Pablo Carrera",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+2:29.5"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-02",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-2-copa-rc2",
+          "classId": "copa-rc2",
+          "kind": "final",
+          "name": "Clasificación final Copa RC2",
+          "start": "2026-04-19T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Diego Miceli / Sergio Daparte",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "1:33:22.6"
+            },
+            {
+              "pos": 2,
+              "number": "21",
+              "driver": "Hernán Echeverría / Francisco Falistocco",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+0.3"
+            },
+            {
+              "pos": 3,
+              "number": "23",
+              "driver": "Valentín Folledo / Pedro De La Vega",
+              "team": "Citroen C3 Rally2",
+              "gap": "+0.8"
+            },
+            {
+              "pos": 4,
+              "number": "10",
+              "driver": "Rodrigo Disalvo / Andrés Pissaco",
+              "team": "Skoda Fabia R5",
+              "gap": "+1:53.0"
+            },
+            {
+              "pos": 5,
+              "number": "26",
+              "driver": "Genaro González / Zacarías García",
+              "team": "Skoda Fabia R5",
+              "gap": "+4:56.9"
+            },
+            {
+              "pos": 6,
+              "number": "22",
+              "driver": "Walter D'Agostini / Mauricio Obrador",
+              "team": "Skoda Fabia R5",
+              "gap": "+6:29.9"
+            },
+            {
+              "pos": 7,
+              "number": "18",
+              "driver": "Meliza Prevedello / Marcelo Brizio",
+              "team": "Skoda Fabia R5",
+              "gap": "+7:22.2"
+            },
+            {
+              "pos": 8,
+              "number": "25",
+              "driver": "Federico Villagra (h) / Javier Villagra",
+              "team": "Hyundai i20 R5",
+              "gap": "+13:03.3"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-02",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-2-maxi-rally",
+          "classId": "maxi-rally",
+          "kind": "final",
+          "name": "Clasificación final Maxi Rally",
+          "start": "2026-04-19T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "42",
+              "driver": "Santino Rossi / Martín Baucero",
+              "team": "VW Polo MRT",
+              "gap": "1:37:35.5"
+            },
+            {
+              "pos": 2,
+              "number": "50",
+              "driver": "Nicolás González / Gerónimo Bordignon",
+              "team": "VW Polo MRT",
+              "gap": "+0.6"
+            },
+            {
+              "pos": 3,
+              "number": "45",
+              "driver": "Nadia Cutro / Miguel Recalt",
+              "team": "Toyota Yaris MRT",
+              "gap": "+2:32.2"
+            },
+            {
+              "pos": 4,
+              "number": "41",
+              "driver": "Rubén Montoro / Ignacio Uez",
+              "team": "VW Gol Trend MRT",
+              "gap": "+2:36.6"
+            },
+            {
+              "pos": 5,
+              "number": "47",
+              "driver": "Ramiro Kaufmann / Juan Pablo Del Riego",
+              "team": "Citroen DS3 MRT",
+              "gap": "+3:54.7"
+            },
+            {
+              "pos": 6,
+              "number": "44",
+              "driver": "Victorio Ballay / Claudio Moreno",
+              "team": "Citroen DS3 MRT",
+              "gap": "+26:36.6"
+            },
+            {
+              "pos": 7,
+              "number": "51",
+              "driver": "Gaston González / Rubén García",
+              "team": "VW Polo MRT",
+              "gap": "+47:47.0"
+            },
+            {
+              "pos": 8,
+              "number": "52",
+              "driver": "José Iribarren / José Brusco",
+              "team": "VW Gol Trend MRT",
+              "gap": "+1:00:32.8"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-02",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-2-rc3",
+          "classId": "rc3",
+          "kind": "final",
+          "name": "Clasificación final RC3",
+          "start": "2026-04-19T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "83",
+              "driver": "Ignacio Villa / Gonzalo Díaz",
+              "team": "Peugeot 208 G2",
+              "gap": "1:44:02.9"
+            },
+            {
+              "pos": 2,
+              "number": "91",
+              "driver": "Germán Galfrascoli / Nicolás Sloog",
+              "team": "VW Gol Trend",
+              "gap": "+1:16.6"
+            },
+            {
+              "pos": 3,
+              "number": "90",
+              "driver": "Diego Semper / Pedro Semper",
+              "team": "VW Gol Trend",
+              "gap": "+2:14.3"
+            },
+            {
+              "pos": 4,
+              "number": "82",
+              "driver": "Mario Rasso / Rodolfo Guevara",
+              "team": "Peugeot 208 G1",
+              "gap": "+40:11.7"
+            },
+            {
+              "pos": 5,
+              "number": "87",
+              "driver": "Fernando Daparte / Emanuel Rozados",
+              "team": "Ford Fiesta",
+              "gap": "+40:44.0"
+            },
+            {
+              "pos": 6,
+              "number": "92",
+              "driver": "Valentino Cardoso / Sebastián Mugni",
+              "team": "Ford Fiesta",
+              "gap": "+1:00:43.8"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-02",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-2-rc4",
+          "classId": "rc4",
+          "kind": "final",
+          "name": "Clasificación final RC4",
+          "start": "2026-04-19T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "71",
+              "driver": "Julián Larrosa / Gustavo Beccaría",
+              "team": "Peugeot 208 Rally4",
+              "gap": "1:43:14.1"
+            },
+            {
+              "pos": 2,
+              "number": "74",
+              "driver": "Carlos Cataldo / Damián Cabral",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+2:02.1"
+            },
+            {
+              "pos": 3,
+              "number": "73",
+              "driver": "Juan Saraleguy / Luis Gatica",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+4:52.0"
+            },
+            {
+              "pos": 4,
+              "number": "80",
+              "driver": "Andrés Paredes / Matias Cardano",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+41:25.0"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-02",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-2-rc5",
+          "classId": "rc5",
+          "kind": "final",
+          "name": "Clasificación final RC5",
+          "start": "2026-04-19T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "116",
+              "driver": "Pablo Alessandrini / Martín Agüero",
+              "team": "Ford Fiesta",
+              "gap": "1:48:40.0"
+            },
+            {
+              "pos": 2,
+              "number": "123",
+              "driver": "Pablo Curletto / Valentina Curletto",
+              "team": "Peugeot 208",
+              "gap": "+41.7"
+            },
+            {
+              "pos": 3,
+              "number": "105",
+              "driver": "Gerardo Ontivero / Federico Molina",
+              "team": "Peugeot 208",
+              "gap": "+1:52.1"
+            },
+            {
+              "pos": 4,
+              "number": "121",
+              "driver": "Rodolfo Ramos / Gustavo Soto",
+              "team": "Ford Fiesta",
+              "gap": "+2:57.9"
+            },
+            {
+              "pos": 5,
+              "number": "104",
+              "driver": "Fernando Muller / Gonzalo Martínez",
+              "team": "Peugeot 208",
+              "gap": "+3:07.7"
+            },
+            {
+              "pos": 6,
+              "number": "120",
+              "driver": "Walter Guardia / Luis Rodi",
+              "team": "Chevrolet Sonic",
+              "gap": "+6:31.3"
+            },
+            {
+              "pos": 7,
+              "number": "118",
+              "driver": "Emilio Bustos / Federico Bustos",
+              "team": "Ford Fiesta",
+              "gap": "+7:35.6"
+            },
+            {
+              "pos": 8,
+              "number": "124",
+              "driver": "Rodrigo Ferreyra / Tomás Perosino",
+              "team": "Ford Fiesta",
+              "gap": "+8:15.5"
+            },
+            {
+              "pos": 9,
+              "number": "119",
+              "driver": "César Fisogni / Tatiana Civalero",
+              "team": "Nissan March",
+              "gap": "+11:35.7"
+            },
+            {
+              "pos": 10,
+              "number": "110",
+              "driver": "Roberto Forzani / Francisco Moldes",
+              "team": "Peugeot 208",
+              "gap": "+39:46.8"
+            },
+            {
+              "pos": 11,
+              "number": "114",
+              "driver": "Horacio Marino / Julián Fernández Igartúa",
+              "team": "Peugeot 208",
+              "gap": "+40:16.4"
+            },
+            {
+              "pos": 12,
+              "number": "112",
+              "driver": "José Gómez / Ignacio Casamiquella",
+              "team": "Ford Fiesta",
+              "gap": "+59:05.0"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-02",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
           "id": "rally-argentino-2026-2-general",
           "kind": "carrera",
           "name": "Clasificación general",
           "start": "2026-04-19T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 30,
-          "resultsUnread": true
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Federico Villagra / Diego Curletto",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "1:29:51.6",
+              "class": "RC2"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Miguel Baldoni / Gustavo Franchello",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+10.6",
+              "class": "RC2"
+            },
+            {
+              "pos": 3,
+              "number": "2",
+              "driver": "Gastón Pasten / Matías Ramos",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+1:26.0",
+              "class": "RC2"
+            },
+            {
+              "pos": 4,
+              "number": "11",
+              "driver": "Augusto Bestard / José Díaz",
+              "team": "Toyota Yaris GR Rally2",
+              "gap": "+2:22.4",
+              "class": "RC2"
+            },
+            {
+              "pos": 5,
+              "number": "24",
+              "driver": "Augusto D'Agostini / Juan Pablo Carrera",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+2:29.5",
+              "class": "RC2"
+            },
+            {
+              "pos": 6,
+              "number": "7",
+              "driver": "Diego Miceli / Sergio Daparte",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+3:31.0",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 7,
+              "number": "21",
+              "driver": "Hernán Echeverría / Francisco Falistocco",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+3:31.3",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 8,
+              "number": "23",
+              "driver": "Valentín Folledo / Pedro De La Vega",
+              "team": "Citroen C3 Rally2",
+              "gap": "+3:31.8",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 9,
+              "number": "10",
+              "driver": "Rodrigo Disalvo / Andrés Pissaco",
+              "team": "Skoda Fabia R5",
+              "gap": "+5:24.0",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 10,
+              "number": "42",
+              "driver": "Santino Rossi / Martín Baucero",
+              "team": "VW Polo MRT",
+              "gap": "+7:43.9",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 11,
+              "number": "50",
+              "driver": "Nicolás González / Gerónimo Bordignon",
+              "team": "VW Polo MRT",
+              "gap": "+7:44.5",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 12,
+              "number": "26",
+              "driver": "Genaro González / Zacarías García",
+              "team": "Skoda Fabia R5",
+              "gap": "+8:27.9",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 13,
+              "number": "22",
+              "driver": "Walter D'Agostini / Mauricio Obrador",
+              "team": "Skoda Fabia R5",
+              "gap": "+10:00.9",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 14,
+              "number": "45",
+              "driver": "Nadia Cutro / Miguel Recalt",
+              "team": "Toyota Yaris MRT",
+              "gap": "+10:16.1",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 15,
+              "number": "41",
+              "driver": "Rubén Montoro / Ignacio Uez",
+              "team": "VW Gol Trend MRT",
+              "gap": "+10:20.5",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 16,
+              "number": "18",
+              "driver": "Meliza Prevedello / Marcelo Brizio",
+              "team": "Skoda Fabia R5",
+              "gap": "+10:53.2",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 17,
+              "number": "47",
+              "driver": "Ramiro Kaufmann / Juan Pablo Del Riego",
+              "team": "Citroen DS3 MRT",
+              "gap": "+11:38.6",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 18,
+              "number": "71",
+              "driver": "Julián Larrosa / Gustavo Beccaría",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+13:22.5",
+              "class": "RC4"
+            },
+            {
+              "pos": 19,
+              "number": "83",
+              "driver": "Ignacio Villa / Gonzalo Díaz",
+              "team": "Peugeot 208 G2",
+              "gap": "+14:11.3",
+              "class": "RC3"
+            },
+            {
+              "pos": 20,
+              "number": "74",
+              "driver": "Carlos Cataldo / Damián Cabral",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+15:24.6",
+              "class": "RC4"
+            },
+            {
+              "pos": 21,
+              "number": "91",
+              "driver": "Germán Galfrascoli / Nicolás Sloog",
+              "team": "VW Gol Trend",
+              "gap": "+15:27.9",
+              "class": "RC3"
+            },
+            {
+              "pos": 22,
+              "number": "90",
+              "driver": "Diego Semper / Pedro Semper",
+              "team": "VW Gol Trend",
+              "gap": "+16:25.6",
+              "class": "RC3"
+            },
+            {
+              "pos": 23,
+              "number": "25",
+              "driver": "Federico Villagra (h) / Javier Villagra",
+              "team": "Hyundai i20 R5",
+              "gap": "+16:34.3",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 24,
+              "number": "73",
+              "driver": "Juan Saraleguy / Luis Gatica",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+18:14.5",
+              "class": "RC4"
+            },
+            {
+              "pos": 25,
+              "number": "116",
+              "driver": "Pablo Alessandrini / Martín Agüero",
+              "team": "Ford Fiesta",
+              "gap": "+18:48.4",
+              "class": "RC5"
+            },
+            {
+              "pos": 26,
+              "number": "123",
+              "driver": "Pablo Curletto / Valentina Curletto",
+              "team": "Peugeot 208",
+              "gap": "+19:30.1",
+              "class": "RC5"
+            },
+            {
+              "pos": 27,
+              "number": "105",
+              "driver": "Gerardo Ontivero / Federico Molina",
+              "team": "Peugeot 208",
+              "gap": "+20:40.5",
+              "class": "RC5"
+            },
+            {
+              "pos": 28,
+              "number": "121",
+              "driver": "Rodolfo Ramos / Gustavo Soto",
+              "team": "Ford Fiesta",
+              "gap": "+21:46.3",
+              "class": "RC5"
+            },
+            {
+              "pos": 29,
+              "number": "104",
+              "driver": "Fernando Muller / Gonzalo Martínez",
+              "team": "Peugeot 208",
+              "gap": "+21:56.1",
+              "class": "RC5"
+            },
+            {
+              "pos": 30,
+              "number": "120",
+              "driver": "Walter Guardia / Luis Rodi",
+              "team": "Chevrolet Sonic",
+              "gap": "+25:19.7",
+              "class": "RC5"
+            },
+            {
+              "pos": 31,
+              "number": "118",
+              "driver": "Emilio Bustos / Federico Bustos",
+              "team": "Ford Fiesta",
+              "gap": "+26:24.0",
+              "class": "RC5"
+            },
+            {
+              "pos": 32,
+              "number": "124",
+              "driver": "Rodrigo Ferreyra / Tomás Perosino",
+              "team": "Ford Fiesta",
+              "gap": "+27:03.9",
+              "class": "RC5"
+            },
+            {
+              "pos": 33,
+              "number": "119",
+              "driver": "César Fisogni / Tatiana Civalero",
+              "team": "Nissan March",
+              "gap": "+30:24.1",
+              "class": "RC5"
+            },
+            {
+              "pos": 34,
+              "number": "44",
+              "driver": "Victorio Ballay / Claudio Moreno",
+              "team": "Citroen DS3 MRT",
+              "gap": "+34:20.5",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 35,
+              "number": "82",
+              "driver": "Mario Rasso / Rodolfo Guevara",
+              "team": "Peugeot 208 G1",
+              "gap": "+54:23.0",
+              "class": "RC3"
+            },
+            {
+              "pos": 36,
+              "number": "80",
+              "driver": "Andrés Paredes / Matias Cardano",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+54:47.5",
+              "class": "RC4"
+            },
+            {
+              "pos": 37,
+              "number": "87",
+              "driver": "Fernando Daparte / Emanuel Rozados",
+              "team": "Ford Fiesta",
+              "gap": "+54:55.3",
+              "class": "RC3"
+            },
+            {
+              "pos": 38,
+              "number": "51",
+              "driver": "Gaston González / Rubén García",
+              "team": "VW Polo MRT",
+              "gap": "+55:30.9",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 39,
+              "number": "110",
+              "driver": "Roberto Forzani / Francisco Moldes",
+              "team": "Peugeot 208",
+              "gap": "+58:35.2",
+              "class": "RC5"
+            },
+            {
+              "pos": 40,
+              "number": "114",
+              "driver": "Horacio Marino / Julián Fernández Igartúa",
+              "team": "Peugeot 208",
+              "gap": "+59:04.8",
+              "class": "RC5"
+            },
+            {
+              "pos": 41,
+              "number": "52",
+              "driver": "José Iribarren / José Brusco",
+              "team": "VW Gol Trend MRT",
+              "gap": "+1:08:16.7",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 42,
+              "number": "92",
+              "driver": "Valentino Cardoso / Sebastián Mugni",
+              "team": "Ford Fiesta",
+              "gap": "+1:14:55.1",
+              "class": "RC3"
+            },
+            {
+              "pos": 43,
+              "number": "112",
+              "driver": "José Gómez / Ignacio Casamiquella",
+              "team": "Ford Fiesta",
+              "gap": "+1:17:53.4",
+              "class": "RC5"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-02",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
         }
       ]
     },
@@ -70460,13 +71207,745 @@
           "durationMin": 480
         },
         {
+          "id": "rally-argentino-2026-3-rc2",
+          "classId": "rc2",
+          "kind": "final",
+          "name": "Clasificación final RC2",
+          "start": "2026-05-24T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Federico Villagra / Diego Curletto",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "1:14:29.0"
+            },
+            {
+              "pos": 2,
+              "number": "27",
+              "driver": "Alejandro Cancio / Diego Cagnotti",
+              "team": "Skoda Fabia R5",
+              "gap": "+15.7"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Miguel Baldoni / Gustavo Franchello",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+22.7"
+            },
+            {
+              "pos": 4,
+              "number": "24",
+              "driver": "Augusto D'Agostini / Juan Pablo Carrera",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+1:07.3"
+            },
+            {
+              "pos": 5,
+              "number": "28",
+              "driver": "Leandro Bonnin / Javier Taboada",
+              "team": "Citroen C3 Rally2",
+              "gap": "+3:37.3"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-03",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-3-copa-rc2",
+          "classId": "copa-rc2",
+          "kind": "final",
+          "name": "Clasificación final Copa RC2",
+          "start": "2026-05-24T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Diego Miceli / Sergio Daparte",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "1:17:06.3"
+            },
+            {
+              "pos": 2,
+              "number": "10",
+              "driver": "Rodrigo Disalvo / Andrés Pissaco",
+              "team": "Skoda Fabia R5",
+              "gap": "+1:03.1"
+            },
+            {
+              "pos": 3,
+              "number": "26",
+              "driver": "Genaro González / Zacarías García",
+              "team": "Skoda Fabia R5",
+              "gap": "+2:11.8"
+            },
+            {
+              "pos": 4,
+              "number": "16",
+              "driver": "Carlos Bello / Gustavo Breglia",
+              "team": "Skoda Fabia R5",
+              "gap": "+4:02.4"
+            },
+            {
+              "pos": 5,
+              "number": "22",
+              "driver": "Walter D'Agostini / Mauricio Obrador",
+              "team": "Skoda Fabia R5",
+              "gap": "+4:55.2"
+            },
+            {
+              "pos": 6,
+              "number": "18",
+              "driver": "Meliza Prevedello / Marcelo Brizio",
+              "team": "Skoda Fabia R5",
+              "gap": "+6:02.3"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-03",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-3-maxi-rally",
+          "classId": "maxi-rally",
+          "kind": "final",
+          "name": "Clasificación final Maxi Rally",
+          "start": "2026-05-24T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "50",
+              "driver": "Nicolás González / Gerónimo Bordignon",
+              "team": "VW Polo MRT",
+              "gap": "1:19:45.3"
+            },
+            {
+              "pos": 2,
+              "number": "44",
+              "driver": "Victorio Ballay / Claudio Moreno",
+              "team": "Citroen DS3 MRT",
+              "gap": "+1:55.5"
+            },
+            {
+              "pos": 3,
+              "number": "45",
+              "driver": "Nadia Cutro / Miguel Recalt",
+              "team": "Toyota Yaris MRT",
+              "gap": "+3:59.0"
+            },
+            {
+              "pos": 4,
+              "number": "41",
+              "driver": "Rubén Montoro / Ignacio Uez",
+              "team": "VW Gol Trend MRT",
+              "gap": "+4:23.3"
+            },
+            {
+              "pos": 5,
+              "number": "52",
+              "driver": "José Iribarren / José Brusco",
+              "team": "VW Gol Trend MRT",
+              "gap": "+4:38.4"
+            },
+            {
+              "pos": 6,
+              "number": "53",
+              "driver": "Gastón Salazar / Marcos Bazán",
+              "team": "VW Polo MRT",
+              "gap": "+11:29.7"
+            },
+            {
+              "pos": 7,
+              "number": "51",
+              "driver": "Gastón González / Rubén García",
+              "team": "VW Polo MRT",
+              "gap": "+44:15.1"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-03",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-3-rc3",
+          "classId": "rc3",
+          "kind": "final",
+          "name": "Clasificación final RC3",
+          "start": "2026-05-24T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "87",
+              "driver": "Fernando Daparte / Emanuel Rozados",
+              "team": "Ford Fiesta",
+              "gap": "1:29:17.5"
+            },
+            {
+              "pos": 2,
+              "number": "82",
+              "driver": "Mario Rasso / Rodolfo Guevara",
+              "team": "Peugeot 208 G1",
+              "gap": "+32.3"
+            },
+            {
+              "pos": 3,
+              "number": "83",
+              "driver": "Ignacio Villa / Gonzalo Díaz",
+              "team": "Peugeot 208 G2",
+              "gap": "+32.5"
+            },
+            {
+              "pos": 4,
+              "number": "92",
+              "driver": "Valentino Cardoso / Sebastián Mugni",
+              "team": "Ford Fiesta",
+              "gap": "+2:10.5"
+            },
+            {
+              "pos": 5,
+              "number": "93",
+              "driver": "Pedro Skruta / Ulises Agesta",
+              "team": "VW Gol Trend",
+              "gap": "+2:16.5"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-03",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-3-rc4",
+          "classId": "rc4",
+          "kind": "final",
+          "name": "Clasificación final RC4",
+          "start": "2026-05-24T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "78",
+              "driver": "Roberto Raimondi / José Raimondi",
+              "team": "Peugeot 208 Rally4",
+              "gap": "1:34:34.2"
+            },
+            {
+              "pos": 2,
+              "number": "77",
+              "driver": "Sabrina Scicolone / Gerardo Scicolone",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+17:06.4"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-03",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-3-rc5",
+          "classId": "rc5",
+          "kind": "final",
+          "name": "Clasificación final RC5",
+          "start": "2026-05-24T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "101",
+              "driver": "Santiago Sabbatini / Alejo Balestre",
+              "team": "Ford Fiesta",
+              "gap": "1:33:53.7"
+            },
+            {
+              "pos": 2,
+              "number": "104",
+              "driver": "Fernando Muller / Gonzalo Martínez",
+              "team": "Peugeot 208",
+              "gap": "+1:41.1"
+            },
+            {
+              "pos": 3,
+              "number": "111",
+              "driver": "Sebastián Landa / Rodrigo Vergara",
+              "team": "Ford Fiesta",
+              "gap": "+2:54.0"
+            },
+            {
+              "pos": 4,
+              "number": "127",
+              "driver": "Franco Fossatti / Nicolás Torres",
+              "team": "Ford Fiesta",
+              "gap": "+2:59.9"
+            },
+            {
+              "pos": 5,
+              "number": "112",
+              "driver": "José Gómez / Ignacio Casamiquella",
+              "team": "Ford Fiesta",
+              "gap": "+3:30.4"
+            },
+            {
+              "pos": 6,
+              "number": "131",
+              "driver": "Matías Avila / Ezequiel Rebolledo",
+              "team": "Ford Fiesta",
+              "gap": "+3:37.2"
+            },
+            {
+              "pos": 7,
+              "number": "116",
+              "driver": "Pablo Alessandrini / Ignacio Gomez",
+              "team": "Ford Fiesta",
+              "gap": "+3:42.7"
+            },
+            {
+              "pos": 8,
+              "number": "110",
+              "driver": "Roberto Forzani / Francisco Moldes",
+              "team": "Peugeot 208",
+              "gap": "+4:48.0"
+            },
+            {
+              "pos": 9,
+              "number": "133",
+              "driver": "Leandro Martínez / Agustín Kunz",
+              "team": "Ford Fiesta",
+              "gap": "+5:16.8"
+            },
+            {
+              "pos": 10,
+              "number": "129",
+              "driver": "Miguel Radomich / Tomás Radomich",
+              "team": "Peugeot 208",
+              "gap": "+5:26.8"
+            },
+            {
+              "pos": 11,
+              "number": "105",
+              "driver": "Gerardo Ontivero / Federico Molina",
+              "team": "Peugeot 208",
+              "gap": "+5:33.0"
+            },
+            {
+              "pos": 12,
+              "number": "136",
+              "driver": "Luis Cairone / Gabriel Aburto",
+              "team": "Nissan March",
+              "gap": "+12:52.0"
+            },
+            {
+              "pos": 13,
+              "number": "130",
+              "driver": "Jeremías Tieri / Carlos Almeira",
+              "team": "Ford Fiesta",
+              "gap": "+42:23.9"
+            },
+            {
+              "pos": 14,
+              "number": "135",
+              "driver": "Julio Quilodran / Pablo Quilodran",
+              "team": "Chevrolet Onix",
+              "gap": "+52:09.8"
+            },
+            {
+              "pos": 15,
+              "number": "132",
+              "driver": "Lautaro Angeloni / Marcos Núñez",
+              "team": "Ford Fiesta",
+              "gap": "+52:22.1"
+            },
+            {
+              "pos": 16,
+              "number": "128",
+              "driver": "Claudio Bustos / Débora Vazquez",
+              "team": "Ford Ka",
+              "gap": "+53:24.8"
+            },
+            {
+              "pos": 17,
+              "number": "114",
+              "driver": "Horacio Marino / Julián Fernández Igartúa",
+              "team": "Peugeot 208",
+              "gap": "+1:00:34.8"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-03",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
           "id": "rally-argentino-2026-3-general",
           "kind": "carrera",
           "name": "Clasificación general",
           "start": "2026-05-24T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 30,
-          "resultsUnread": true
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Federico Villagra / Diego Curletto",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "1:14:29.0",
+              "class": "RC2"
+            },
+            {
+              "pos": 2,
+              "number": "27",
+              "driver": "Alejandro Cancio / Diego Cagnotti",
+              "team": "Skoda Fabia R5",
+              "gap": "+15.7",
+              "class": "RC2"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Miguel Baldoni / Gustavo Franchello",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+22.7",
+              "class": "RC2"
+            },
+            {
+              "pos": 4,
+              "number": "24",
+              "driver": "Augusto D'Agostini / Juan Pablo Carrera",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+1:07.3",
+              "class": "RC2"
+            },
+            {
+              "pos": 5,
+              "number": "6",
+              "driver": "Diego Miceli / Sergio Daparte",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+2:37.3",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 6,
+              "number": "28",
+              "driver": "Leandro Bonnin / Javier Taboada",
+              "team": "Citroen C3 Rally2",
+              "gap": "+3:37.3",
+              "class": "RC2"
+            },
+            {
+              "pos": 7,
+              "number": "10",
+              "driver": "Rodrigo Disalvo / Andrés Pissaco",
+              "team": "Skoda Fabia R5",
+              "gap": "+3:40.4",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 8,
+              "number": "26",
+              "driver": "Genaro González / Zacarías García",
+              "team": "Skoda Fabia R5",
+              "gap": "+4:49.1",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 9,
+              "number": "50",
+              "driver": "Nicolás González / Gerónimo Bordignon",
+              "team": "VW Polo MRT",
+              "gap": "+5:16.3",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 10,
+              "number": "16",
+              "driver": "Carlos Bello / Gustavo Breglia",
+              "team": "Skoda Fabia R5",
+              "gap": "+6:39.7",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 11,
+              "number": "44",
+              "driver": "Victorio Ballay / Claudio Moreno",
+              "team": "Citroen DS3 MRT",
+              "gap": "+7:11.8",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 12,
+              "number": "22",
+              "driver": "Walter D'Agostini / Mauricio Obrador",
+              "team": "Skoda Fabia R5",
+              "gap": "+7:32.5",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 13,
+              "number": "18",
+              "driver": "Meliza Prevedello / Marcelo Brizio",
+              "team": "Skoda Fabia R5",
+              "gap": "+8:39.6",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 14,
+              "number": "45",
+              "driver": "Nadia Cutro / Miguel Recalt",
+              "team": "Toyota Yaris MRT",
+              "gap": "+9:15.3",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 15,
+              "number": "41",
+              "driver": "Rubén Montoro / Ignacio Uez",
+              "team": "VW Gol Trend MRT",
+              "gap": "+9:39.6",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 16,
+              "number": "52",
+              "driver": "José Iribarren / José Brusco",
+              "team": "VW Gol Trend MRT",
+              "gap": "+9:54.7",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 17,
+              "number": "87",
+              "driver": "Fernando Daparte / Emanuel Rozados",
+              "team": "Ford Fiesta",
+              "gap": "+14:48.5",
+              "class": "RC3"
+            },
+            {
+              "pos": 18,
+              "number": "82",
+              "driver": "Mario Rasso / Rodolfo Guevara",
+              "team": "Peugeot 208 G1",
+              "gap": "+15:20.8",
+              "class": "RC3"
+            },
+            {
+              "pos": 19,
+              "number": "83",
+              "driver": "Ignacio Villa / Gonzalo Díaz",
+              "team": "Peugeot 208 G2",
+              "gap": "+15:21.0",
+              "class": "RC3"
+            },
+            {
+              "pos": 20,
+              "number": "53",
+              "driver": "Gastón Salazar / Marcos Bazán",
+              "team": "VW Polo MRT",
+              "gap": "+16:46.0",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 21,
+              "number": "92",
+              "driver": "Valentino Cardoso / Sebastián Mugni",
+              "team": "Ford Fiesta",
+              "gap": "+16:59.0",
+              "class": "RC3"
+            },
+            {
+              "pos": 22,
+              "number": "93",
+              "driver": "Pedro Skruta / Ulises Agesta",
+              "team": "VW Gol Trend",
+              "gap": "+17:05.0",
+              "class": "RC3"
+            },
+            {
+              "pos": 23,
+              "number": "101",
+              "driver": "Santiago Sabbatini / Alejo Balestre",
+              "team": "Ford Fiesta",
+              "gap": "+19:24.7",
+              "class": "RC5"
+            },
+            {
+              "pos": 24,
+              "number": "78",
+              "driver": "Roberto Raimondi / José Raimondi",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+20:05.2",
+              "class": "RC4"
+            },
+            {
+              "pos": 25,
+              "number": "104",
+              "driver": "Fernando Muller / Gonzalo Martínez",
+              "team": "Peugeot 208",
+              "gap": "+21:05.8",
+              "class": "RC5"
+            },
+            {
+              "pos": 26,
+              "number": "111",
+              "driver": "Sebastián Landa / Rodrigo Vergara",
+              "team": "Ford Fiesta",
+              "gap": "+22:18.7",
+              "class": "RC5"
+            },
+            {
+              "pos": 27,
+              "number": "127",
+              "driver": "Franco Fossatti / Nicolás Torres",
+              "team": "Ford Fiesta",
+              "gap": "+22:24.6",
+              "class": "RC5"
+            },
+            {
+              "pos": 28,
+              "number": "112",
+              "driver": "José Gómez / Ignacio Casamiquella",
+              "team": "Ford Fiesta",
+              "gap": "+22:55.1",
+              "class": "RC5"
+            },
+            {
+              "pos": 29,
+              "number": "131",
+              "driver": "Matías Avila / Ezequiel Rebolledo",
+              "team": "Ford Fiesta",
+              "gap": "+23:01.9",
+              "class": "RC5"
+            },
+            {
+              "pos": 30,
+              "number": "116",
+              "driver": "Pablo Alessandrini / Ignacio Gomez",
+              "team": "Ford Fiesta",
+              "gap": "+23:07.4",
+              "class": "RC5"
+            },
+            {
+              "pos": 31,
+              "number": "110",
+              "driver": "Roberto Forzani / Francisco Moldes",
+              "team": "Peugeot 208",
+              "gap": "+24:12.7",
+              "class": "RC5"
+            },
+            {
+              "pos": 32,
+              "number": "133",
+              "driver": "Leandro Martínez / Agustín Kunz",
+              "team": "Ford Fiesta",
+              "gap": "+24:41.5",
+              "class": "RC5"
+            },
+            {
+              "pos": 33,
+              "number": "129",
+              "driver": "Miguel Radomich / Tomás Radomich",
+              "team": "Peugeot 208",
+              "gap": "+24:51.5",
+              "class": "RC5"
+            },
+            {
+              "pos": 34,
+              "number": "105",
+              "driver": "Gerardo Ontivero / Federico Molina",
+              "team": "Peugeot 208",
+              "gap": "+24:57.7",
+              "class": "RC5"
+            },
+            {
+              "pos": 35,
+              "number": "136",
+              "driver": "Luis Cairone / Gabriel Aburto",
+              "team": "Nissan March",
+              "gap": "+32:16.7",
+              "class": "RC5"
+            },
+            {
+              "pos": 36,
+              "number": "77",
+              "driver": "Sabrina Scicolone / Gerardo Scicolone",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+37:11.6",
+              "class": "RC4"
+            },
+            {
+              "pos": 37,
+              "number": "51",
+              "driver": "Gastón González / Rubén García",
+              "team": "VW Polo MRT",
+              "gap": "+49:31.4",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 38,
+              "number": "130",
+              "driver": "Jeremías Tieri / Carlos Almeira",
+              "team": "Ford Fiesta",
+              "gap": "+1:01:48.6",
+              "class": "RC5"
+            },
+            {
+              "pos": 39,
+              "number": "135",
+              "driver": "Julio Quilodran / Pablo Quilodran",
+              "team": "Chevrolet Onix",
+              "gap": "+1:11:34.5",
+              "class": "RC5"
+            },
+            {
+              "pos": 40,
+              "number": "132",
+              "driver": "Lautaro Angeloni / Marcos Núñez",
+              "team": "Ford Fiesta",
+              "gap": "+1:11:46.8",
+              "class": "RC5"
+            },
+            {
+              "pos": 41,
+              "number": "128",
+              "driver": "Claudio Bustos / Débora Vazquez",
+              "team": "Ford Ka",
+              "gap": "+1:12:49.5",
+              "class": "RC5"
+            },
+            {
+              "pos": 42,
+              "number": "114",
+              "driver": "Horacio Marino / Julián Fernández Igartúa",
+              "team": "Peugeot 208",
+              "gap": "+1:19:59.5",
+              "class": "RC5"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-03",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
         }
       ]
     },
@@ -100878,13 +102357,640 @@
           "durationMin": 480
         },
         {
+          "id": "rally-argentino-2026-4-rc2",
+          "classId": "rc2",
+          "kind": "final",
+          "name": "Clasificación final RC2",
+          "start": "2026-06-28T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Federico Villagra / Diego Curletto",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "1:05:56.5"
+            },
+            {
+              "pos": 2,
+              "number": "2",
+              "driver": "Gastón Pasten / Matías Ramos",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+4.8"
+            },
+            {
+              "pos": 3,
+              "number": "24",
+              "driver": "Augusto D'Agostini / Juan Pablo Carrera",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+53.2"
+            },
+            {
+              "pos": 4,
+              "number": "1",
+              "driver": "Miguel Baldoni / Gustavo Franchello",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+1:11.7"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-04",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-4-copa-rc2",
+          "classId": "copa-rc2",
+          "kind": "final",
+          "name": "Clasificación final Copa RC2",
+          "start": "2026-06-28T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Diego Miceli / Sergio Daparte",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "1:08:07.1"
+            },
+            {
+              "pos": 2,
+              "number": "23",
+              "driver": "Valentín Folledo / Pedro De La Vega",
+              "team": "Citroen C3 Rally2",
+              "gap": "+43.9"
+            },
+            {
+              "pos": 3,
+              "number": "16",
+              "driver": "Carlos Bello / Gustavo Breglia",
+              "team": "Skoda Fabia R5",
+              "gap": "+4:28.0"
+            },
+            {
+              "pos": 4,
+              "number": "18",
+              "driver": "Meliza Prevedello / Marcelo Brizio",
+              "team": "Skoda Fabia R5",
+              "gap": "+4:54.4"
+            },
+            {
+              "pos": 5,
+              "number": "26",
+              "driver": "Genaro González / Zacarías García",
+              "team": "Skoda Fabia R5",
+              "gap": "+9:58.7"
+            },
+            {
+              "pos": 6,
+              "number": "9",
+              "driver": "Antonio Prevedello / Leonardo Londero",
+              "team": "Skoda Fabia R5",
+              "gap": "+12:21.8"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-04",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-4-maxi-rally",
+          "classId": "maxi-rally",
+          "kind": "final",
+          "name": "Clasificación final Maxi Rally",
+          "start": "2026-06-28T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "42",
+              "driver": "Santino Rossi / Martín Baucero",
+              "team": "VW Polo MRT",
+              "gap": "1:11:12.2"
+            },
+            {
+              "pos": 2,
+              "number": "41",
+              "driver": "Rubén Montoro / Ignacio Uez",
+              "team": "VW Gol Trend MRT",
+              "gap": "+1:29.3"
+            },
+            {
+              "pos": 3,
+              "number": "45",
+              "driver": "Nadia Cutro / Miguel Recalt",
+              "team": "Toyota Yaris MRT",
+              "gap": "+1:50.8"
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Victorio Ballay / Claudio Moreno",
+              "team": "Citroen DS3 MRT",
+              "gap": "+1:50.9"
+            },
+            {
+              "pos": 5,
+              "number": "51",
+              "driver": "Gastón González / Rubén García",
+              "team": "VW Polo MRT",
+              "gap": "+3:41.1"
+            },
+            {
+              "pos": 6,
+              "number": "50",
+              "driver": "Nicolás González / Gerónimo Bordignon",
+              "team": "VW Polo MRT",
+              "gap": "+49:20.7"
+            },
+            {
+              "pos": 7,
+              "number": "47",
+              "driver": "Ramiro Kaufmann / Juan Pablo Del Riego",
+              "team": "Citroen DS3 MRT",
+              "gap": "+51:21.9"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-04",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-4-rc3",
+          "classId": "rc3",
+          "kind": "final",
+          "name": "Clasificación final RC3",
+          "start": "2026-06-28T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "83",
+              "driver": "Ignacio Villa / Gonzalo Díaz",
+              "team": "Peugeot 208 G2",
+              "gap": "1:17:01.7"
+            },
+            {
+              "pos": 2,
+              "number": "92",
+              "driver": "Valentino Cardoso / Sebastián Mugni",
+              "team": "Ford Fiesta",
+              "gap": "+1:57.8"
+            },
+            {
+              "pos": 3,
+              "number": "91",
+              "driver": "Germán Galfrascoli / Nicolás Sloog",
+              "team": "VW Gol Trend",
+              "gap": "+2:39.2"
+            },
+            {
+              "pos": 4,
+              "number": "94",
+              "driver": "Tomás Vega / Maximiliano Karamatich",
+              "team": "Toyota Etios",
+              "gap": "+5:36.6"
+            },
+            {
+              "pos": 5,
+              "number": "95",
+              "driver": "Jorge Quiroga / Luis Catalfamo",
+              "team": "VW Gol Trend",
+              "gap": "+39:37.3"
+            },
+            {
+              "pos": 6,
+              "number": "87",
+              "driver": "Fernando Daparte / Emanuel Rozados",
+              "team": "Ford Fiesta",
+              "gap": "+49:39.3"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-04",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-4-rc4",
+          "classId": "rc4",
+          "kind": "final",
+          "name": "Clasificación final RC4",
+          "start": "2026-06-28T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "76",
+              "driver": "Guillermo Ambrosio / Franco Amaya",
+              "team": "Peugeot 208 Rally4",
+              "gap": "1:16:21.3"
+            },
+            {
+              "pos": 2,
+              "number": "79",
+              "driver": "Arturo Ortíz / Víctor Aguilera",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+1:44.1"
+            },
+            {
+              "pos": 3,
+              "number": "74",
+              "driver": "Carlos Cataldo / Damián Cabral",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+2:20.5"
+            },
+            {
+              "pos": 4,
+              "number": "73",
+              "driver": "Juan Saraleguy / Luis Gatica",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+5:58.5"
+            },
+            {
+              "pos": 5,
+              "number": "77",
+              "driver": "Sabrina Scicolone / Gerardo Scicolone",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+51:28.5"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-04",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-4-rc5",
+          "classId": "rc5",
+          "kind": "final",
+          "name": "Clasificación final RC5",
+          "start": "2026-06-28T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "101",
+              "driver": "Santiago Sabbatini / Alejo Balestre",
+              "team": "Ford Fiesta",
+              "gap": "1:20:35.8"
+            },
+            {
+              "pos": 2,
+              "number": "116",
+              "driver": "Pablo Alessandrini / Ignacio Gomez",
+              "team": "Ford Fiesta",
+              "gap": "+2:41.7"
+            },
+            {
+              "pos": 3,
+              "number": "110",
+              "driver": "Roberto Forzani / Francisco Moldes",
+              "team": "Peugeot 208",
+              "gap": "+6:04.9"
+            },
+            {
+              "pos": 4,
+              "number": "124",
+              "driver": "Rodrigo Ferreyra / Tomás Perosino",
+              "team": "Ford Fiesta",
+              "gap": "+9:27.3"
+            },
+            {
+              "pos": 5,
+              "number": "112",
+              "driver": "José Gómez / Ignacio Casamiquella",
+              "team": "Ford Fiesta",
+              "gap": "+10:58.7"
+            },
+            {
+              "pos": 6,
+              "number": "118",
+              "driver": "Emilio Bustos / Juan Salgado Nash",
+              "team": "Ford Fiesta",
+              "gap": "+12:01.9"
+            },
+            {
+              "pos": 7,
+              "number": "139",
+              "driver": "Maximiliano Figueroa / Martín Agüero",
+              "team": "Ford Fiesta",
+              "gap": "+43:35.6"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-04",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
           "id": "rally-argentino-2026-4-general",
           "kind": "carrera",
           "name": "Clasificación general",
           "start": "2026-06-28T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 30,
-          "resultsUnread": true
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Federico Villagra / Diego Curletto",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "1:05:56.5",
+              "class": "RC2"
+            },
+            {
+              "pos": 2,
+              "number": "2",
+              "driver": "Gastón Pasten / Matías Ramos",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+4.8",
+              "class": "RC2"
+            },
+            {
+              "pos": 3,
+              "number": "24",
+              "driver": "Augusto D'Agostini / Juan Pablo Carrera",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+53.2",
+              "class": "RC2"
+            },
+            {
+              "pos": 4,
+              "number": "1",
+              "driver": "Miguel Baldoni / Gustavo Franchello",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+1:11.7",
+              "class": "RC2"
+            },
+            {
+              "pos": 5,
+              "number": "6",
+              "driver": "Diego Miceli / Sergio Daparte",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+2:10.6",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 6,
+              "number": "23",
+              "driver": "Valentín Folledo / Pedro De La Vega",
+              "team": "Citroen C3 Rally2",
+              "gap": "+2:54.5",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 7,
+              "number": "42",
+              "driver": "Santino Rossi / Martín Baucero",
+              "team": "VW Polo MRT",
+              "gap": "+5:15.7",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 8,
+              "number": "16",
+              "driver": "Carlos Bello / Gustavo Breglia",
+              "team": "Skoda Fabia R5",
+              "gap": "+6:38.6",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 9,
+              "number": "41",
+              "driver": "Rubén Montoro / Ignacio Uez",
+              "team": "VW Gol Trend MRT",
+              "gap": "+6:45.0",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 10,
+              "number": "18",
+              "driver": "Meliza Prevedello / Marcelo Brizio",
+              "team": "Skoda Fabia R5",
+              "gap": "+7:05.0",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 11,
+              "number": "45",
+              "driver": "Nadia Cutro / Miguel Recalt",
+              "team": "Toyota Yaris MRT",
+              "gap": "+7:06.5",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 12,
+              "number": "44",
+              "driver": "Victorio Ballay / Claudio Moreno",
+              "team": "Citroen DS3 MRT",
+              "gap": "+7:06.6",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 13,
+              "number": "51",
+              "driver": "Gastón González / Rubén García",
+              "team": "VW Polo MRT",
+              "gap": "+8:56.8",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 14,
+              "number": "76",
+              "driver": "Guillermo Ambrosio / Franco Amaya",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+10:24.8",
+              "class": "RC4"
+            },
+            {
+              "pos": 15,
+              "number": "83",
+              "driver": "Ignacio Villa / Gonzalo Díaz",
+              "team": "Peugeot 208 G2",
+              "gap": "+11:05.3",
+              "class": "RC3"
+            },
+            {
+              "pos": 16,
+              "number": "79",
+              "driver": "Arturo Ortíz / Víctor Aguilera",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+12:08.9",
+              "class": "RC4"
+            },
+            {
+              "pos": 17,
+              "number": "26",
+              "driver": "Genaro González / Zacarías García",
+              "team": "Skoda Fabia R5",
+              "gap": "+12:09.3",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 18,
+              "number": "74",
+              "driver": "Carlos Cataldo / Damián Cabral",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+12:45.3",
+              "class": "RC4"
+            },
+            {
+              "pos": 19,
+              "number": "92",
+              "driver": "Valentino Cardoso / Sebastián Mugni",
+              "team": "Ford Fiesta",
+              "gap": "+13:03.1",
+              "class": "RC3"
+            },
+            {
+              "pos": 20,
+              "number": "91",
+              "driver": "Germán Galfrascoli / Nicolás Sloog",
+              "team": "VW Gol Trend",
+              "gap": "+13:44.5",
+              "class": "RC3"
+            },
+            {
+              "pos": 21,
+              "number": "9",
+              "driver": "Antonio Prevedello / Leonardo Londero",
+              "team": "Skoda Fabia R5",
+              "gap": "+14:32.4",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 22,
+              "number": "101",
+              "driver": "Santiago Sabbatini / Alejo Balestre",
+              "team": "Ford Fiesta",
+              "gap": "+14:39.3",
+              "class": "RC5"
+            },
+            {
+              "pos": 23,
+              "number": "73",
+              "driver": "Juan Saraleguy / Luis Gatica",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+16:23.3",
+              "class": "RC4"
+            },
+            {
+              "pos": 24,
+              "number": "94",
+              "driver": "Tomás Vega / Maximiliano Karamatich",
+              "team": "Toyota Etios",
+              "gap": "+16:41.9",
+              "class": "RC3"
+            },
+            {
+              "pos": 25,
+              "number": "116",
+              "driver": "Pablo Alessandrini / Ignacio Gomez",
+              "team": "Ford Fiesta",
+              "gap": "+17:21.0",
+              "class": "RC5"
+            },
+            {
+              "pos": 26,
+              "number": "110",
+              "driver": "Roberto Forzani / Francisco Moldes",
+              "team": "Peugeot 208",
+              "gap": "+20:44.1",
+              "class": "RC5"
+            },
+            {
+              "pos": 27,
+              "number": "124",
+              "driver": "Rodrigo Ferreyra / Tomás Perosino",
+              "team": "Ford Fiesta",
+              "gap": "+24:06.6",
+              "class": "RC5"
+            },
+            {
+              "pos": 28,
+              "number": "112",
+              "driver": "José Gómez / Ignacio Casamiquella",
+              "team": "Ford Fiesta",
+              "gap": "+25:38.0",
+              "class": "RC5"
+            },
+            {
+              "pos": 29,
+              "number": "118",
+              "driver": "Emilio Bustos / Juan Salgado Nash",
+              "team": "Ford Fiesta",
+              "gap": "+26:41.2",
+              "class": "RC5"
+            },
+            {
+              "pos": 30,
+              "number": "95",
+              "driver": "Jorge Quiroga / Luis Catalfamo",
+              "team": "VW Gol Trend",
+              "gap": "+50:42.5",
+              "class": "RC3"
+            },
+            {
+              "pos": 31,
+              "number": "50",
+              "driver": "Nicolás González / Gerónimo Bordignon",
+              "team": "VW Polo MRT",
+              "gap": "+54:36.4",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 32,
+              "number": "47",
+              "driver": "Ramiro Kaufmann / Juan Pablo Del Riego",
+              "team": "Citroen DS3 MRT",
+              "gap": "+56:37.6",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 33,
+              "number": "139",
+              "driver": "Maximiliano Figueroa / Martín Agüero",
+              "team": "Ford Fiesta",
+              "gap": "+58:14.9",
+              "class": "RC5"
+            },
+            {
+              "pos": 34,
+              "number": "87",
+              "driver": "Fernando Daparte / Emanuel Rozados",
+              "team": "Ford Fiesta",
+              "gap": "+1:00:44.5",
+              "class": "RC3"
+            },
+            {
+              "pos": 35,
+              "number": "77",
+              "driver": "Sabrina Scicolone / Gerardo Scicolone",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+1:01:53.3",
+              "class": "RC4"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-04",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
         }
       ]
     },
@@ -131577,13 +133683,535 @@
           "durationMin": 480
         },
         {
+          "id": "rally-argentino-2026-5-rc2",
+          "classId": "rc2",
+          "kind": "final",
+          "name": "Clasificación final RC2",
+          "start": "2026-08-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "1",
+              "driver": "Miguel Baldoni / Gustavo Franchello",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "53:24.7"
+            },
+            {
+              "pos": 2,
+              "number": "3",
+              "driver": "Federico Villagra / Diego Curletto",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+5:05.4"
+            },
+            {
+              "pos": 3,
+              "number": "24",
+              "driver": "Augusto D'Agostini / Juan Pablo Carrera",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+1:10:00.3"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-05",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-5-copa-rc2",
+          "classId": "copa-rc2",
+          "kind": "final",
+          "name": "Clasificación final Copa RC2",
+          "start": "2026-08-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Diego Miceli / Sergio Daparte",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "54:12.4"
+            },
+            {
+              "pos": 2,
+              "number": "10",
+              "driver": "Rodrigo Disalvo / Andrés Pissaco",
+              "team": "Skoda Fabia R5",
+              "gap": "+40.7"
+            },
+            {
+              "pos": 3,
+              "number": "16",
+              "driver": "Carlos Bello / Gustavo Breglia",
+              "team": "Skoda Fabia R5",
+              "gap": "+2:34.6"
+            },
+            {
+              "pos": 4,
+              "number": "26",
+              "driver": "Genaro González / Zacarías García",
+              "team": "Skoda Fabia R5",
+              "gap": "+3:08.2"
+            },
+            {
+              "pos": 5,
+              "number": "22",
+              "driver": "Walter D'Agostini / Mauricio Obrador",
+              "team": "Skoda Fabia R5",
+              "gap": "+4:03.2"
+            },
+            {
+              "pos": 6,
+              "number": "18",
+              "driver": "Meliza Prevedello / Marcelo Brizio",
+              "team": "Skoda Fabia R5",
+              "gap": "+4:31.1"
+            },
+            {
+              "pos": 7,
+              "number": "9",
+              "driver": "Antonio Prevedello / Leonardo Londero",
+              "team": "Skoda Fabia R5",
+              "gap": "+52:59.0"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-05",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-5-maxi-rally",
+          "classId": "maxi-rally",
+          "kind": "final",
+          "name": "Clasificación final Maxi Rally",
+          "start": "2026-08-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "41",
+              "driver": "Rubén Montoro / Ignacio Uez",
+              "team": "VW Gol Trend MRT",
+              "gap": "56:54.8"
+            },
+            {
+              "pos": 2,
+              "number": "50",
+              "driver": "Nicolás González / Gerónimo Bordignon",
+              "team": "VW Polo MRT",
+              "gap": "+9.7"
+            },
+            {
+              "pos": 3,
+              "number": "45",
+              "driver": "Nadia Cutro / Miguel Recalt",
+              "team": "Toyota Yaris MRT",
+              "gap": "+20.9"
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Victorio Ballay / Claudio Moreno",
+              "team": "Citroen DS3 MRT",
+              "gap": "+5:28.3"
+            },
+            {
+              "pos": 5,
+              "number": "52",
+              "driver": "José Iribarren / Francisco Falistocco",
+              "team": "VW Gol Trend MRT",
+              "gap": "+52:42.9"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-05",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-5-rc3",
+          "classId": "rc3",
+          "kind": "final",
+          "name": "Clasificación final RC3",
+          "start": "2026-08-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "82",
+              "driver": "Mario Rasso / Rodolfo Guevara",
+              "team": "Peugeot 208 G1",
+              "gap": "1:02:21.5"
+            },
+            {
+              "pos": 2,
+              "number": "83",
+              "driver": "Ignacio Villa / Gonzalo Díaz",
+              "team": "Peugeot 208 G2",
+              "gap": "+15.4"
+            },
+            {
+              "pos": 3,
+              "number": "87",
+              "driver": "Fernando Daparte / Emanuel Rozados",
+              "team": "Ford Fiesta",
+              "gap": "+5:21.8"
+            },
+            {
+              "pos": 4,
+              "number": "92",
+              "driver": "Valentino Cardoso / Sebastián Mugni",
+              "team": "Ford Fiesta",
+              "gap": "+1:19:52.4"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-05",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-5-rc4",
+          "classId": "rc4",
+          "kind": "final",
+          "name": "Clasificación final RC4",
+          "start": "2026-08-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "76",
+              "driver": "Guillermo Ambrosio / Franco Amaya",
+              "team": "Peugeot 208 Rally4",
+              "gap": "1:03:35.0"
+            },
+            {
+              "pos": 2,
+              "number": "74",
+              "driver": "Carlos Cataldo / Marcos Bazán",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+56.0"
+            },
+            {
+              "pos": 3,
+              "number": "77",
+              "driver": "Sabrina Scicolone / Eugenio Arrieta",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+1:18:40.0"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-05",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-5-rc5",
+          "classId": "rc5",
+          "kind": "final",
+          "name": "Clasificación final RC5",
+          "start": "2026-08-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "110",
+              "driver": "Roberto Forzani / Francisco Moldes",
+              "team": "Peugeot 208",
+              "gap": "1:07:11.9"
+            },
+            {
+              "pos": 2,
+              "number": "112",
+              "driver": "José Gómez / Ignacio Casamiquella",
+              "team": "Ford Fiesta",
+              "gap": "+32.1"
+            },
+            {
+              "pos": 3,
+              "number": "141",
+              "driver": "Maximiliano Arnaiz / Pablo Kern",
+              "team": "Ford Fiesta",
+              "gap": "+1:01.4"
+            },
+            {
+              "pos": 4,
+              "number": "105",
+              "driver": "Gerardo Ontivero / Agustín Catalfamo",
+              "team": "Peugeot 208",
+              "gap": "+32:14.6"
+            },
+            {
+              "pos": 5,
+              "number": "124",
+              "driver": "Rodrigo Ferreyra / Tomás Perosino",
+              "team": "Ford Fiesta",
+              "gap": "+1:19:02.1"
+            },
+            {
+              "pos": 6,
+              "number": "104",
+              "driver": "Fernando Muller / Gonzalo Martínez",
+              "team": "Peugeot 208",
+              "gap": "+1:19:02.1"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-05",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
           "id": "rally-argentino-2026-5-general",
           "kind": "carrera",
           "name": "Clasificación general",
           "start": "2026-08-02T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 30,
-          "resultsUnread": true
+          "results": [
+            {
+              "pos": 1,
+              "number": "1",
+              "driver": "Miguel Baldoni / Gustavo Franchello",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "53:24.7",
+              "class": "RC2"
+            },
+            {
+              "pos": 2,
+              "number": "6",
+              "driver": "Diego Miceli / Sergio Daparte",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+47.7",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 3,
+              "number": "10",
+              "driver": "Rodrigo Disalvo / Andrés Pissaco",
+              "team": "Skoda Fabia R5",
+              "gap": "+1:28.4",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 4,
+              "number": "16",
+              "driver": "Carlos Bello / Gustavo Breglia",
+              "team": "Skoda Fabia R5",
+              "gap": "+3:22.3",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 5,
+              "number": "41",
+              "driver": "Rubén Montoro / Ignacio Uez",
+              "team": "VW Gol Trend MRT",
+              "gap": "+3:30.1",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 6,
+              "number": "50",
+              "driver": "Nicolás González / Gerónimo Bordignon",
+              "team": "VW Polo MRT",
+              "gap": "+3:39.8",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 7,
+              "number": "45",
+              "driver": "Nadia Cutro / Miguel Recalt",
+              "team": "Toyota Yaris MRT",
+              "gap": "+3:51.0",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 8,
+              "number": "26",
+              "driver": "Genaro González / Zacarías García",
+              "team": "Skoda Fabia R5",
+              "gap": "+3:55.9",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 9,
+              "number": "22",
+              "driver": "Walter D'Agostini / Mauricio Obrador",
+              "team": "Skoda Fabia R5",
+              "gap": "+4:50.9",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 10,
+              "number": "3",
+              "driver": "Federico Villagra / Diego Curletto",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+5:05.4",
+              "class": "RC2"
+            },
+            {
+              "pos": 11,
+              "number": "18",
+              "driver": "Meliza Prevedello / Marcelo Brizio",
+              "team": "Skoda Fabia R5",
+              "gap": "+5:18.8",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 12,
+              "number": "82",
+              "driver": "Mario Rasso / Rodolfo Guevara",
+              "team": "Peugeot 208 G1",
+              "gap": "+8:56.8",
+              "class": "RC3"
+            },
+            {
+              "pos": 13,
+              "number": "44",
+              "driver": "Victorio Ballay / Claudio Moreno",
+              "team": "Citroen DS3 MRT",
+              "gap": "+8:58.4",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 14,
+              "number": "83",
+              "driver": "Ignacio Villa / Gonzalo Díaz",
+              "team": "Peugeot 208 G2",
+              "gap": "+9:12.2",
+              "class": "RC3"
+            },
+            {
+              "pos": 15,
+              "number": "76",
+              "driver": "Guillermo Ambrosio / Franco Amaya",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+10:10.3",
+              "class": "RC4"
+            },
+            {
+              "pos": 16,
+              "number": "74",
+              "driver": "Carlos Cataldo / Marcos Bazán",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+11:06.3",
+              "class": "RC4"
+            },
+            {
+              "pos": 17,
+              "number": "110",
+              "driver": "Roberto Forzani / Francisco Moldes",
+              "team": "Peugeot 208",
+              "gap": "+13:47.2",
+              "class": "RC5"
+            },
+            {
+              "pos": 18,
+              "number": "87",
+              "driver": "Fernando Daparte / Emanuel Rozados",
+              "team": "Ford Fiesta",
+              "gap": "+14:18.6",
+              "class": "RC3"
+            },
+            {
+              "pos": 19,
+              "number": "112",
+              "driver": "José Gómez / Ignacio Casamiquella",
+              "team": "Ford Fiesta",
+              "gap": "+14:19.3",
+              "class": "RC5"
+            },
+            {
+              "pos": 20,
+              "number": "141",
+              "driver": "Maximiliano Arnaiz / Pablo Kern",
+              "team": "Ford Fiesta",
+              "gap": "+14:48.6",
+              "class": "RC5"
+            },
+            {
+              "pos": 21,
+              "number": "105",
+              "driver": "Gerardo Ontivero / Agustín Catalfamo",
+              "team": "Peugeot 208",
+              "gap": "+46:01.8",
+              "class": "RC5"
+            },
+            {
+              "pos": 22,
+              "number": "9",
+              "driver": "Antonio Prevedello / Leonardo Londero",
+              "team": "Skoda Fabia R5",
+              "gap": "+53:46.7",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 23,
+              "number": "52",
+              "driver": "José Iribarren / Francisco Falistocco",
+              "team": "VW Gol Trend MRT",
+              "gap": "+56:13.0",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 24,
+              "number": "24",
+              "driver": "Augusto D'Agostini / Juan Pablo Carrera",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+1:10:00.3",
+              "class": "RC2"
+            },
+            {
+              "pos": 25,
+              "number": "92",
+              "driver": "Valentino Cardoso / Sebastián Mugni",
+              "team": "Ford Fiesta",
+              "gap": "+1:28:49.2",
+              "class": "RC3"
+            },
+            {
+              "pos": 26,
+              "number": "77",
+              "driver": "Sabrina Scicolone / Eugenio Arrieta",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+1:28:50.3",
+              "class": "RC4"
+            },
+            {
+              "pos": 27,
+              "number": "124",
+              "driver": "Rodrigo Ferreyra / Tomás Perosino",
+              "team": "Ford Fiesta",
+              "gap": "+1:32:49.3",
+              "class": "RC5"
+            },
+            {
+              "pos": 28,
+              "number": "104",
+              "driver": "Fernando Muller / Gonzalo Martínez",
+              "team": "Peugeot 208",
+              "gap": "+1:32:49.3",
+              "class": "RC5"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-05",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
         }
       ]
     },
@@ -156891,13 +159519,715 @@
           "durationMin": 480
         },
         {
+          "id": "rally-argentino-2026-6-rc2",
+          "classId": "rc2",
+          "kind": "final",
+          "name": "Clasificación final RC2",
+          "start": "2026-09-06T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Federico Villagra / Diego Curletto",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "1:22:14.6"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Miguel Baldoni / Gustavo Franchello",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+27.6"
+            },
+            {
+              "pos": 3,
+              "number": "24",
+              "driver": "Augusto D'Agostini / Juan Pablo Carrera",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+1:04.5"
+            },
+            {
+              "pos": 4,
+              "number": "8",
+              "driver": "Rodrigo Zeballos / Matías Cardano",
+              "team": "Citroen C3 Rally2",
+              "gap": "+1:26.7"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-06",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-6-copa-rc2",
+          "classId": "copa-rc2",
+          "kind": "final",
+          "name": "Clasificación final Copa RC2",
+          "start": "2026-09-06T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Diego Miceli / Sergio Daparte",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "1:23:25.6"
+            },
+            {
+              "pos": 2,
+              "number": "10",
+              "driver": "Rodrigo Disalvo / Andrés Pissaco",
+              "team": "Skoda Fabia R5",
+              "gap": "+46.0"
+            },
+            {
+              "pos": 3,
+              "number": "32",
+              "driver": "Tomás Perotti / Francisco Barrera",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+53.0"
+            },
+            {
+              "pos": 4,
+              "number": "26",
+              "driver": "Genaro González / Zacarías García",
+              "team": "Skoda Fabia R5",
+              "gap": "+1:57.3"
+            },
+            {
+              "pos": 5,
+              "number": "30",
+              "driver": "Diego Martínez / Rubén García",
+              "team": "Skoda Fabia R5",
+              "gap": "+4:21.4"
+            },
+            {
+              "pos": 6,
+              "number": "18",
+              "driver": "Meliza Prevedello / Marcelo Brizio",
+              "team": "Skoda Fabia R5",
+              "gap": "+6:47.6"
+            },
+            {
+              "pos": 7,
+              "number": "31",
+              "driver": "Sergio Ribodino / Mateo Ribodino",
+              "team": "Ford Fiesta R5",
+              "gap": "+9:35.0"
+            },
+            {
+              "pos": 8,
+              "number": "33",
+              "driver": "Marcos Martelotto / Julio Herrero",
+              "team": "Ford Fiesta R5",
+              "gap": "+12:33.5"
+            },
+            {
+              "pos": 9,
+              "number": "29",
+              "driver": "Santino Rossi / Martín Baucero",
+              "team": "Citroen C3 Rally2",
+              "gap": "+12:59.2"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-06",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-6-maxi-rally",
+          "classId": "maxi-rally",
+          "kind": "final",
+          "name": "Clasificación final Maxi Rally",
+          "start": "2026-09-06T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "50",
+              "driver": "Nicolás González / Gerónimo Bordignon",
+              "team": "VW Polo MRT",
+              "gap": "1:26:07.8"
+            },
+            {
+              "pos": 2,
+              "number": "41",
+              "driver": "Rubén Montoro / Ignacio Uez",
+              "team": "VW Gol Trend MRT",
+              "gap": "+28.4"
+            },
+            {
+              "pos": 3,
+              "number": "45",
+              "driver": "Nadia Cutro / Miguel Recalt",
+              "team": "Toyota Yaris MRT",
+              "gap": "+31:35.1"
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Victorio Ballay / Claudio Moreno",
+              "team": "Citroen DS3 MRT",
+              "gap": "+40:39.4"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-06",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-6-rc3",
+          "classId": "rc3",
+          "kind": "final",
+          "name": "Clasificación final RC3",
+          "start": "2026-09-06T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "82",
+              "driver": "Mario Rasso / Rodolfo Guevara",
+              "team": "Peugeot 208 G1",
+              "gap": "1:38:19.3"
+            },
+            {
+              "pos": 2,
+              "number": "83",
+              "driver": "Ignacio Villa / Gonzalo Díaz",
+              "team": "Peugeot 208 G2",
+              "gap": "+5:02.5"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-06",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-6-rc4",
+          "classId": "rc4",
+          "kind": "final",
+          "name": "Clasificación final RC4",
+          "start": "2026-09-06T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "73",
+              "driver": "Juan Saraleguy / Luis Gatica",
+              "team": "Peugeot 208 Rally4",
+              "gap": "1:37:15.0"
+            },
+            {
+              "pos": 2,
+              "number": "79",
+              "driver": "Franco Forzani / Leandro Forzani",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+2:11.0"
+            },
+            {
+              "pos": 3,
+              "number": "77",
+              "driver": "Sabrina Scicolone / Sofía Sabbatini",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+2:39.6"
+            },
+            {
+              "pos": 4,
+              "number": "76",
+              "driver": "Guillermo Ambrosio / Franco Amaya",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+3:49.2"
+            },
+            {
+              "pos": 5,
+              "number": "80",
+              "driver": "Pablo Lonati / Sebastián Urriza",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+20:37.1"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-06",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-6-rc5",
+          "classId": "rc5",
+          "kind": "final",
+          "name": "Clasificación final RC5",
+          "start": "2026-09-06T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "123",
+              "driver": "Pablo Curletto / Valentina Curletto",
+              "team": "Peugeot 208",
+              "gap": "1:38:57.2"
+            },
+            {
+              "pos": 2,
+              "number": "117",
+              "driver": "Juan Borgonovo / Leonardo Londero",
+              "team": "Peugeot 208",
+              "gap": "+50.6"
+            },
+            {
+              "pos": 3,
+              "number": "104",
+              "driver": "Fernando Muller / Gonzalo Martínez",
+              "team": "Peugeot 208",
+              "gap": "+1:29.6"
+            },
+            {
+              "pos": 4,
+              "number": "145",
+              "driver": "Salvador Arceluz / Ezequiel Queralt",
+              "team": "Peugeot 208",
+              "gap": "+1:40.2"
+            },
+            {
+              "pos": 5,
+              "number": "140",
+              "driver": "Gino Bacci / Paloma García",
+              "team": "Nissan March",
+              "gap": "+1:42.1"
+            },
+            {
+              "pos": 6,
+              "number": "151",
+              "driver": "Carlos Borgonovo / Marcos Gurevich",
+              "team": "Peugeot 208",
+              "gap": "+2:00.9"
+            },
+            {
+              "pos": 7,
+              "number": "146",
+              "driver": "Emilio Mere / Gregorio Céspedes",
+              "team": "Ford Fiesta",
+              "gap": "+2:19.7"
+            },
+            {
+              "pos": 8,
+              "number": "142",
+              "driver": "Luis Vega / Armando Mauricio",
+              "team": "Peugeot 208",
+              "gap": "+2:34.2"
+            },
+            {
+              "pos": 9,
+              "number": "124",
+              "driver": "Rodrigo Ferreyra / Tomás Perosino",
+              "team": "Ford Fiesta",
+              "gap": "+6:37.1"
+            },
+            {
+              "pos": 10,
+              "number": "157",
+              "driver": "Ariel Canalis / Danilo Lazzuri",
+              "team": "Ford Fiesta",
+              "gap": "+7:24.8"
+            },
+            {
+              "pos": 11,
+              "number": "149",
+              "driver": "Santino Guareschi / Pablo Falistocco",
+              "team": "Ford Fiesta",
+              "gap": "+7:34.4"
+            },
+            {
+              "pos": 12,
+              "number": "158",
+              "driver": "Leandro Vietto / Andres Gerez",
+              "team": "Chevrolet Sonic",
+              "gap": "+9:16.1"
+            },
+            {
+              "pos": 13,
+              "number": "148",
+              "driver": "Julián Rébola / Danilo Ghione",
+              "team": "Ford Fiesta",
+              "gap": "+10:55.1"
+            },
+            {
+              "pos": 14,
+              "number": "156",
+              "driver": "Sergio Albano / Gustavo Franucci",
+              "team": "Peugeot 208",
+              "gap": "+11:55.8"
+            },
+            {
+              "pos": 15,
+              "number": "150",
+              "driver": "Gastón De Rossi / Jorge Genesio",
+              "team": "Peugeot 208",
+              "gap": "+41:52.2"
+            },
+            {
+              "pos": 16,
+              "number": "143",
+              "driver": "Ignacio Anselmi / Thomás Anselmi",
+              "team": "Ford Fiesta",
+              "gap": "+1:00:52.5"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-06",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
           "id": "rally-argentino-2026-6-general",
           "kind": "carrera",
           "name": "Clasificación general",
           "start": "2026-09-06T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 30,
-          "resultsUnread": true
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Federico Villagra / Diego Curletto",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "1:22:14.6",
+              "class": "RC2"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Miguel Baldoni / Gustavo Franchello",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+27.6",
+              "class": "RC2"
+            },
+            {
+              "pos": 3,
+              "number": "24",
+              "driver": "Augusto D'Agostini / Juan Pablo Carrera",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+1:04.5",
+              "class": "RC2"
+            },
+            {
+              "pos": 4,
+              "number": "6",
+              "driver": "Diego Miceli / Sergio Daparte",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+1:11.0",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 5,
+              "number": "8",
+              "driver": "Rodrigo Zeballos / Matías Cardano",
+              "team": "Citroen C3 Rally2",
+              "gap": "+1:26.7",
+              "class": "RC2"
+            },
+            {
+              "pos": 6,
+              "number": "10",
+              "driver": "Rodrigo Disalvo / Andrés Pissaco",
+              "team": "Skoda Fabia R5",
+              "gap": "+1:56.9",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 7,
+              "number": "32",
+              "driver": "Tomás Perotti / Francisco Barrera",
+              "team": "Skoda Fabia Rally2 evo",
+              "gap": "+2:03.9",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 8,
+              "number": "26",
+              "driver": "Genaro González / Zacarías García",
+              "team": "Skoda Fabia R5",
+              "gap": "+3:08.2",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 9,
+              "number": "50",
+              "driver": "Nicolás González / Gerónimo Bordignon",
+              "team": "VW Polo MRT",
+              "gap": "+3:53.1",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 10,
+              "number": "41",
+              "driver": "Rubén Montoro / Ignacio Uez",
+              "team": "VW Gol Trend MRT",
+              "gap": "+4:21.5",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 11,
+              "number": "30",
+              "driver": "Diego Martínez / Rubén García",
+              "team": "Skoda Fabia R5",
+              "gap": "+5:32.3",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 12,
+              "number": "18",
+              "driver": "Meliza Prevedello / Marcelo Brizio",
+              "team": "Skoda Fabia R5",
+              "gap": "+7:58.5",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 13,
+              "number": "31",
+              "driver": "Sergio Ribodino / Mateo Ribodino",
+              "team": "Ford Fiesta R5",
+              "gap": "+10:45.9",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 14,
+              "number": "33",
+              "driver": "Marcos Martelotto / Julio Herrero",
+              "team": "Ford Fiesta R5",
+              "gap": "+13:44.5",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 15,
+              "number": "29",
+              "driver": "Santino Rossi / Martín Baucero",
+              "team": "Citroen C3 Rally2",
+              "gap": "+14:10.2",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 16,
+              "number": "73",
+              "driver": "Juan Saraleguy / Luis Gatica",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+15:00.4",
+              "class": "RC4"
+            },
+            {
+              "pos": 17,
+              "number": "82",
+              "driver": "Mario Rasso / Rodolfo Guevara",
+              "team": "Peugeot 208 G1",
+              "gap": "+16:04.7",
+              "class": "RC3"
+            },
+            {
+              "pos": 18,
+              "number": "123",
+              "driver": "Pablo Curletto / Valentina Curletto",
+              "team": "Peugeot 208",
+              "gap": "+16:42.6",
+              "class": "RC5"
+            },
+            {
+              "pos": 19,
+              "number": "79",
+              "driver": "Franco Forzani / Leandro Forzani",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+17:11.4",
+              "class": "RC4"
+            },
+            {
+              "pos": 20,
+              "number": "117",
+              "driver": "Juan Borgonovo / Leonardo Londero",
+              "team": "Peugeot 208",
+              "gap": "+17:33.2",
+              "class": "RC5"
+            },
+            {
+              "pos": 21,
+              "number": "77",
+              "driver": "Sabrina Scicolone / Sofía Sabbatini",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+17:39.9",
+              "class": "RC4"
+            },
+            {
+              "pos": 22,
+              "number": "104",
+              "driver": "Fernando Muller / Gonzalo Martínez",
+              "team": "Peugeot 208",
+              "gap": "+18:12.2",
+              "class": "RC5"
+            },
+            {
+              "pos": 23,
+              "number": "145",
+              "driver": "Salvador Arceluz / Ezequiel Queralt",
+              "team": "Peugeot 208",
+              "gap": "+18:22.8",
+              "class": "RC5"
+            },
+            {
+              "pos": 24,
+              "number": "140",
+              "driver": "Gino Bacci / Paloma García",
+              "team": "Nissan March",
+              "gap": "+18:24.6",
+              "class": "RC5"
+            },
+            {
+              "pos": 25,
+              "number": "151",
+              "driver": "Carlos Borgonovo / Marcos Gurevich",
+              "team": "Peugeot 208",
+              "gap": "+18:43.5",
+              "class": "RC5"
+            },
+            {
+              "pos": 26,
+              "number": "76",
+              "driver": "Guillermo Ambrosio / Franco Amaya",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+18:49.6",
+              "class": "RC4"
+            },
+            {
+              "pos": 27,
+              "number": "146",
+              "driver": "Emilio Mere / Gregorio Céspedes",
+              "team": "Ford Fiesta",
+              "gap": "+19:02.3",
+              "class": "RC5"
+            },
+            {
+              "pos": 28,
+              "number": "142",
+              "driver": "Luis Vega / Armando Mauricio",
+              "team": "Peugeot 208",
+              "gap": "+19:16.8",
+              "class": "RC5"
+            },
+            {
+              "pos": 29,
+              "number": "83",
+              "driver": "Ignacio Villa / Gonzalo Díaz",
+              "team": "Peugeot 208 G2",
+              "gap": "+21:07.2",
+              "class": "RC3"
+            },
+            {
+              "pos": 30,
+              "number": "124",
+              "driver": "Rodrigo Ferreyra / Tomás Perosino",
+              "team": "Ford Fiesta",
+              "gap": "+23:19.6",
+              "class": "RC5"
+            },
+            {
+              "pos": 31,
+              "number": "157",
+              "driver": "Ariel Canalis / Danilo Lazzuri",
+              "team": "Ford Fiesta",
+              "gap": "+24:07.4",
+              "class": "RC5"
+            },
+            {
+              "pos": 32,
+              "number": "149",
+              "driver": "Santino Guareschi / Pablo Falistocco",
+              "team": "Ford Fiesta",
+              "gap": "+24:17.0",
+              "class": "RC5"
+            },
+            {
+              "pos": 33,
+              "number": "158",
+              "driver": "Leandro Vietto / Andres Gerez",
+              "team": "Chevrolet Sonic",
+              "gap": "+25:58.7",
+              "class": "RC5"
+            },
+            {
+              "pos": 34,
+              "number": "148",
+              "driver": "Julián Rébola / Danilo Ghione",
+              "team": "Ford Fiesta",
+              "gap": "+27:37.7",
+              "class": "RC5"
+            },
+            {
+              "pos": 35,
+              "number": "156",
+              "driver": "Sergio Albano / Gustavo Franucci",
+              "team": "Peugeot 208",
+              "gap": "+28:38.4",
+              "class": "RC5"
+            },
+            {
+              "pos": 36,
+              "number": "45",
+              "driver": "Nadia Cutro / Miguel Recalt",
+              "team": "Toyota Yaris MRT",
+              "gap": "+35:28.2",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 37,
+              "number": "80",
+              "driver": "Pablo Lonati / Sebastián Urriza",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+35:37.5",
+              "class": "RC4"
+            },
+            {
+              "pos": 38,
+              "number": "44",
+              "driver": "Victorio Ballay / Claudio Moreno",
+              "team": "Citroen DS3 MRT",
+              "gap": "+44:32.5",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 39,
+              "number": "150",
+              "driver": "Gastón De Rossi / Jorge Genesio",
+              "team": "Peugeot 208",
+              "gap": "+58:34.8",
+              "class": "RC5"
+            },
+            {
+              "pos": 40,
+              "number": "143",
+              "driver": "Ignacio Anselmi / Thomás Anselmi",
+              "team": "Ford Fiesta",
+              "gap": "+1:17:35.1",
+              "class": "RC5"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/tiempos/2026-carrera-06",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
         }
       ]
     },
@@ -182628,12 +185958,542 @@
           "durationMin": 480
         },
         {
+          "id": "rally-argentino-2026-7-rc2",
+          "classId": "rc2",
+          "kind": "final",
+          "name": "Clasificación final RC2",
+          "start": "2026-10-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Federico Villagra / Diego Curletto",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "1:32:32.6"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Miguel Baldoni / Gustavo Franchello",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+48.3"
+            },
+            {
+              "pos": 3,
+              "number": "28",
+              "driver": "Leandro Bonnin / Javier Taboada",
+              "team": "Citroen C3 Rally2",
+              "gap": "+3:51.8"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/",
+            "status": "provisional",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-7-copa-rc2",
+          "classId": "copa-rc2",
+          "kind": "final",
+          "name": "Clasificación final Copa RC2",
+          "start": "2026-10-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "10",
+              "driver": "Rodrigo Disalvo / Andrés Pissaco",
+              "team": "Skoda Fabia R5",
+              "gap": "1:35:22.2"
+            },
+            {
+              "pos": 2,
+              "number": "26",
+              "driver": "Genaro González / Zacarías García",
+              "team": "Skoda Fabia R5",
+              "gap": "+17.0"
+            },
+            {
+              "pos": 3,
+              "number": "16",
+              "driver": "Carlos Bello / Pablo Bohl",
+              "team": "Skoda Fabia R5",
+              "gap": "+2:01.3"
+            },
+            {
+              "pos": 4,
+              "number": "6",
+              "driver": "Diego Miceli / Sergio Daparte",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+5:01.6"
+            },
+            {
+              "pos": 5,
+              "number": "18",
+              "driver": "Meliza Prevedello / Leonardo Londero",
+              "team": "Skoda Fabia R5",
+              "gap": "+11:37.2"
+            },
+            {
+              "pos": 6,
+              "number": "34",
+              "driver": "Martín Maisonnave / Federico Maisonnave",
+              "team": "Citroen C3 Rally2",
+              "gap": "+39:44.8"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/",
+            "status": "provisional",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-7-maxi-rally",
+          "classId": "maxi-rally",
+          "kind": "final",
+          "name": "Clasificación final Maxi Rally",
+          "start": "2026-10-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "41",
+              "driver": "Rubén Montoro / Ignacio Uez",
+              "team": "VW Gol Trend MRT",
+              "gap": "1:38:14.8"
+            },
+            {
+              "pos": 2,
+              "number": "45",
+              "driver": "Nadia Cutro / Miguel Recalt",
+              "team": "Toyota Yaris MRT",
+              "gap": "+1:35.5"
+            },
+            {
+              "pos": 3,
+              "number": "50",
+              "driver": "Nicolás González / Gerónimo Bordignon",
+              "team": "VW Polo MRT",
+              "gap": "+58:59.4"
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Victorio Ballay / Claudio Moreno",
+              "team": "Citroen DS3 MRT",
+              "gap": "+1:01:11.9"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/",
+            "status": "provisional",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-7-rc3",
+          "classId": "rc3",
+          "kind": "final",
+          "name": "Clasificación final RC3",
+          "start": "2026-10-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "87",
+              "driver": "Fernando Daparte / Emanuel Rozados",
+              "team": "Ford Fiesta",
+              "gap": "1:44:51.3"
+            },
+            {
+              "pos": 2,
+              "number": "82",
+              "driver": "Mario Rasso / Rodolfo Guevara",
+              "team": "Peugeot 208 G1",
+              "gap": "+5.3"
+            },
+            {
+              "pos": 3,
+              "number": "92",
+              "driver": "Valentino Cardoso / Sebastián Mugni",
+              "team": "Ford Fiesta",
+              "gap": "+1:51.2"
+            },
+            {
+              "pos": 4,
+              "number": "83",
+              "driver": "Ignacio Villa / Gonzalo Díaz",
+              "team": "Peugeot 208 G2",
+              "gap": "+1:19:34.9"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/",
+            "status": "provisional",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-7-rc4",
+          "classId": "rc4",
+          "kind": "final",
+          "name": "Clasificación final RC4",
+          "start": "2026-10-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "76",
+              "driver": "Guillermo Ambrosio / Franco Amaya",
+              "team": "Peugeot 208 Rally4",
+              "gap": "1:45:37.2"
+            },
+            {
+              "pos": 2,
+              "number": "77",
+              "driver": "Sabrina Scicolone / Sofía Sabbatini",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+4:16.3"
+            },
+            {
+              "pos": 3,
+              "number": "73",
+              "driver": "Juan Saraleguy / Luis Gatica",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+1:11:15.3"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/",
+            "status": "provisional",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
+          "id": "rally-argentino-2026-7-rc5",
+          "classId": "rc5",
+          "kind": "final",
+          "name": "Clasificación final RC5",
+          "start": "2026-10-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "104",
+              "driver": "Fernando Muller / Gonzalo Martínez",
+              "team": "Peugeot 208",
+              "gap": "1:55:25.1"
+            },
+            {
+              "pos": 2,
+              "number": "112",
+              "driver": "José Gómez / Ignacio Casamiquella",
+              "team": "Ford Fiesta",
+              "gap": "+37.3"
+            },
+            {
+              "pos": 3,
+              "number": "159",
+              "driver": "Federico Antúnez / Enzo Abanoni",
+              "team": "Ford Fiesta",
+              "gap": "+56.6"
+            },
+            {
+              "pos": 4,
+              "number": "124",
+              "driver": "Rodrigo Ferreyra / Tomás Perosino",
+              "team": "Ford Fiesta",
+              "gap": "+1:21.0"
+            },
+            {
+              "pos": 5,
+              "number": "114",
+              "driver": "Horacio Marino / Luis Sanhueza",
+              "team": "Peugeot 208",
+              "gap": "+2:54.1"
+            },
+            {
+              "pos": 6,
+              "number": "141",
+              "driver": "Maximiliano Arnaiz / Pablo Kern",
+              "team": "Ford Fiesta",
+              "gap": "+58:00.1"
+            },
+            {
+              "pos": 7,
+              "number": "110",
+              "driver": "Roberto Forzani / Francisco Moldes",
+              "team": "Peugeot 208",
+              "gap": "+1:07:33.4"
+            },
+            {
+              "pos": 8,
+              "number": "105",
+              "driver": "Gerardo Ontivero / Matías Ramos",
+              "team": "Peugeot 208",
+              "gap": "+1:16:58.3"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/",
+            "status": "provisional",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
+        },
+        {
           "id": "rally-argentino-2026-7-general",
           "kind": "carrera",
           "name": "Clasificación general",
           "start": "2026-10-04T12:00:00-03:00",
           "timeKnown": false,
-          "durationMin": 30
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Federico Villagra / Diego Curletto",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "1:32:32.6",
+              "class": "RC2"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Miguel Baldoni / Gustavo Franchello",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+48.3",
+              "class": "RC2"
+            },
+            {
+              "pos": 3,
+              "number": "10",
+              "driver": "Rodrigo Disalvo / Andrés Pissaco",
+              "team": "Skoda Fabia R5",
+              "gap": "+2:49.5",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 4,
+              "number": "26",
+              "driver": "Genaro González / Zacarías García",
+              "team": "Skoda Fabia R5",
+              "gap": "+3:06.5",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 5,
+              "number": "28",
+              "driver": "Leandro Bonnin / Javier Taboada",
+              "team": "Citroen C3 Rally2",
+              "gap": "+3:51.8",
+              "class": "RC2"
+            },
+            {
+              "pos": 6,
+              "number": "16",
+              "driver": "Carlos Bello / Pablo Bohl",
+              "team": "Skoda Fabia R5",
+              "gap": "+4:50.8",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 7,
+              "number": "41",
+              "driver": "Rubén Montoro / Ignacio Uez",
+              "team": "VW Gol Trend MRT",
+              "gap": "+5:42.1",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 8,
+              "number": "45",
+              "driver": "Nadia Cutro / Miguel Recalt",
+              "team": "Toyota Yaris MRT",
+              "gap": "+7:17.6",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 9,
+              "number": "6",
+              "driver": "Diego Miceli / Sergio Daparte",
+              "team": "Skoda Fabia RS Rally2",
+              "gap": "+7:51.1",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 10,
+              "number": "87",
+              "driver": "Fernando Daparte / Emanuel Rozados",
+              "team": "Ford Fiesta",
+              "gap": "+12:18.6",
+              "class": "RC3"
+            },
+            {
+              "pos": 11,
+              "number": "82",
+              "driver": "Mario Rasso / Rodolfo Guevara",
+              "team": "Peugeot 208 G1",
+              "gap": "+12:23.9",
+              "class": "RC3"
+            },
+            {
+              "pos": 12,
+              "number": "76",
+              "driver": "Guillermo Ambrosio / Franco Amaya",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+13:04.5",
+              "class": "RC4"
+            },
+            {
+              "pos": 13,
+              "number": "92",
+              "driver": "Valentino Cardoso / Sebastián Mugni",
+              "team": "Ford Fiesta",
+              "gap": "+14:09.8",
+              "class": "RC3"
+            },
+            {
+              "pos": 14,
+              "number": "18",
+              "driver": "Meliza Prevedello / Leonardo Londero",
+              "team": "Skoda Fabia R5",
+              "gap": "+14:26.8",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 15,
+              "number": "77",
+              "driver": "Sabrina Scicolone / Sofía Sabbatini",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+17:20.8",
+              "class": "RC4"
+            },
+            {
+              "pos": 16,
+              "number": "104",
+              "driver": "Fernando Muller / Gonzalo Martínez",
+              "team": "Peugeot 208",
+              "gap": "+22:52.5",
+              "class": "RC5"
+            },
+            {
+              "pos": 17,
+              "number": "112",
+              "driver": "José Gómez / Ignacio Casamiquella",
+              "team": "Ford Fiesta",
+              "gap": "+23:29.8",
+              "class": "RC5"
+            },
+            {
+              "pos": 18,
+              "number": "159",
+              "driver": "Federico Antúnez / Enzo Abanoni",
+              "team": "Ford Fiesta",
+              "gap": "+23:49.1",
+              "class": "RC5"
+            },
+            {
+              "pos": 19,
+              "number": "124",
+              "driver": "Rodrigo Ferreyra / Tomás Perosino",
+              "team": "Ford Fiesta",
+              "gap": "+24:13.5",
+              "class": "RC5"
+            },
+            {
+              "pos": 20,
+              "number": "114",
+              "driver": "Horacio Marino / Luis Sanhueza",
+              "team": "Peugeot 208",
+              "gap": "+25:46.6",
+              "class": "RC5"
+            },
+            {
+              "pos": 21,
+              "number": "34",
+              "driver": "Martín Maisonnave / Federico Maisonnave",
+              "team": "Citroen C3 Rally2",
+              "gap": "+42:34.4",
+              "class": "Copa RC2"
+            },
+            {
+              "pos": 22,
+              "number": "50",
+              "driver": "Nicolás González / Gerónimo Bordignon",
+              "team": "VW Polo MRT",
+              "gap": "+1:04:41.5",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 23,
+              "number": "44",
+              "driver": "Victorio Ballay / Claudio Moreno",
+              "team": "Citroen DS3 MRT",
+              "gap": "+1:06:54.0",
+              "class": "Maxi Rally"
+            },
+            {
+              "pos": 24,
+              "number": "141",
+              "driver": "Maximiliano Arnaiz / Pablo Kern",
+              "team": "Ford Fiesta",
+              "gap": "+1:20:52.6",
+              "class": "RC5"
+            },
+            {
+              "pos": 25,
+              "number": "73",
+              "driver": "Juan Saraleguy / Luis Gatica",
+              "team": "Peugeot 208 Rally4",
+              "gap": "+1:24:19.8",
+              "class": "RC4"
+            },
+            {
+              "pos": 26,
+              "number": "110",
+              "driver": "Roberto Forzani / Francisco Moldes",
+              "team": "Peugeot 208",
+              "gap": "+1:30:25.9",
+              "class": "RC5"
+            },
+            {
+              "pos": 27,
+              "number": "83",
+              "driver": "Ignacio Villa / Gonzalo Díaz",
+              "team": "Peugeot 208 G2",
+              "gap": "+1:31:53.5",
+              "class": "RC3"
+            },
+            {
+              "pos": 28,
+              "number": "105",
+              "driver": "Gerardo Ontivero / Matías Ramos",
+              "team": "Peugeot 208",
+              "gap": "+1:39:50.8",
+              "class": "RC5"
+            }
+          ],
+          "resultsSource": {
+            "name": "Rally Argentino · tiempos oficiales",
+            "url": "https://tiemposonline.rallyargentino.com/",
+            "status": "provisional",
+            "note": "Figuran los pilotos clasificados: quienes no terminaron la carrera no aparecen en la clasificación de la fuente."
+          }
         }
       ]
     },
@@ -188113,7 +191973,7 @@
           "winnerUrl": "https://campeones.com.ar/lucas-carabajal-festejo-en-el-zonda-su-primera-victoria-en-tc2000/"
         }
       ],
-      "campeonesFeed": true,
+      "campeonesFeed": false,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -188464,44 +192324,856 @@
     "rally-argentino": {
       "clases": {
         "rc2": {
-          "status": "sin-campeonato",
-          "reason": "La página del campeonato no trae la tabla de esta clase."
+          "status": "oficial",
+          "asOfRound": 6,
+          "source": {
+            "name": "rallyargentino.com",
+            "url": "https://www.rallyargentino.com/campeonato-pilotos.php"
+          },
+          "rows": [
+            {
+              "pos": 1,
+              "driver": "Federico Villagra",
+              "team": "Skoda",
+              "points": 324
+            },
+            {
+              "pos": 2,
+              "driver": "Miguel Baldoni",
+              "team": "Skoda",
+              "points": 293.5
+            },
+            {
+              "pos": 3,
+              "driver": "Augusto D'Agostini",
+              "team": "Skoda",
+              "points": 212
+            },
+            {
+              "pos": 4,
+              "driver": "Diego Miceli",
+              "team": "Skoda",
+              "points": 204.5
+            },
+            {
+              "pos": 5,
+              "driver": "Rodrigo Disalvo",
+              "team": "Skoda",
+              "points": 137
+            },
+            {
+              "pos": 6,
+              "driver": "Gastón Pasten",
+              "team": "Skoda",
+              "points": 102.5
+            },
+            {
+              "pos": 7,
+              "driver": "Genaro Gonzalez",
+              "team": "Skoda",
+              "points": 91
+            },
+            {
+              "pos": 8,
+              "driver": "Carlos Bello",
+              "team": "Skoda",
+              "points": 84
+            },
+            {
+              "pos": 9,
+              "driver": "Augusto Bestard",
+              "team": "Toyota",
+              "points": 72
+            },
+            {
+              "pos": 10,
+              "driver": "Meliza Prevedello",
+              "team": "Skoda",
+              "points": 67
+            },
+            {
+              "pos": 11,
+              "driver": "Walter D'Agostini",
+              "team": "Skoda",
+              "points": 62.5
+            },
+            {
+              "pos": 12,
+              "driver": "Valentín Folledo",
+              "team": "Citroen",
+              "points": 59
+            },
+            {
+              "pos": 13,
+              "driver": "Alejandro Cancio",
+              "team": "Skoda",
+              "points": 48
+            },
+            {
+              "pos": 14,
+              "driver": "Leandro Bonnin",
+              "team": "Citroen",
+              "points": 36
+            },
+            {
+              "pos": 15,
+              "driver": "Hernán Echeverría",
+              "team": "Skoda",
+              "points": 33
+            },
+            {
+              "pos": 16,
+              "driver": "Agustín Mondani",
+              "team": "Hyundai",
+              "points": 30
+            },
+            {
+              "pos": 17,
+              "driver": "Rodrigo Zeballos",
+              "team": "Citroen",
+              "points": 30
+            },
+            {
+              "pos": 18,
+              "driver": "Mario Llinas",
+              "team": "Skoda",
+              "points": 30
+            },
+            {
+              "pos": 19,
+              "driver": "Antonio Prevedello",
+              "team": "Skoda",
+              "points": 25
+            },
+            {
+              "pos": 20,
+              "driver": "Tomás Perotti",
+              "team": "Skoda",
+              "points": 22
+            },
+            {
+              "pos": 21,
+              "driver": "Santino Rossi",
+              "team": "Citroen",
+              "points": 15
+            },
+            {
+              "pos": 22,
+              "driver": "Diego Martínez",
+              "team": "Skoda",
+              "points": 13
+            },
+            {
+              "pos": 23,
+              "driver": "Federico Villagra (h)",
+              "team": "Hyundai",
+              "points": 11.5
+            },
+            {
+              "pos": 24,
+              "driver": "Sergio Centorame",
+              "team": "Hyundai",
+              "points": 7
+            },
+            {
+              "pos": 25,
+              "driver": "Sergio Ribodino",
+              "team": "Ford",
+              "points": 7
+            },
+            {
+              "pos": 26,
+              "driver": "Marcos Martelotto",
+              "team": "Ford",
+              "points": 6
+            }
+          ]
         },
         "copa-rc2": {
-          "status": "sin-campeonato",
-          "reason": "La página del campeonato no trae la tabla de esta clase."
+          "status": "oficial",
+          "asOfRound": 6,
+          "source": {
+            "name": "rallyargentino.com",
+            "url": "https://www.rallyargentino.com/campeonato-pilotos.php"
+          },
+          "rows": [
+            {
+              "pos": 1,
+              "driver": "Diego Miceli",
+              "team": "Skoda",
+              "points": 352.5
+            },
+            {
+              "pos": 2,
+              "driver": "Rodrigo Disalvo",
+              "team": "Skoda",
+              "points": 229
+            },
+            {
+              "pos": 3,
+              "driver": "Genaro González",
+              "team": "Skoda",
+              "points": 183.5
+            },
+            {
+              "pos": 4,
+              "driver": "Meliza Prevedello",
+              "team": "Skoda",
+              "points": 163.5
+            },
+            {
+              "pos": 5,
+              "driver": "Carlos Bello",
+              "team": "Skoda",
+              "points": 147
+            },
+            {
+              "pos": 6,
+              "driver": "Walter D'Agostini",
+              "team": "Skoda",
+              "points": 137
+            },
+            {
+              "pos": 7,
+              "driver": "Valentín Folledo",
+              "team": "Citroen",
+              "points": 104.5
+            },
+            {
+              "pos": 8,
+              "driver": "Hernán Echeverría",
+              "team": "Skoda",
+              "points": 64
+            },
+            {
+              "pos": 9,
+              "driver": "Antonio Prevedello",
+              "team": "Skoda",
+              "points": 49
+            },
+            {
+              "pos": 10,
+              "driver": "Mario Llinas",
+              "team": "Skoda",
+              "points": 48
+            },
+            {
+              "pos": 11,
+              "driver": "Agustín Mondani",
+              "team": "Hyundai",
+              "points": 48
+            },
+            {
+              "pos": 12,
+              "driver": "Tomás Perotti",
+              "team": "Skoda",
+              "points": 40
+            },
+            {
+              "pos": 13,
+              "driver": "Federico Villagra (h)",
+              "team": "Hyundai",
+              "points": 31.5
+            },
+            {
+              "pos": 14,
+              "driver": "Santino Rossi",
+              "team": "Citroen",
+              "points": 28
+            },
+            {
+              "pos": 15,
+              "driver": "Diego Martinez",
+              "team": "Skoda",
+              "points": 28
+            },
+            {
+              "pos": 16,
+              "driver": "Sergio Centorame",
+              "team": "Hyundai",
+              "points": 23
+            },
+            {
+              "pos": 17,
+              "driver": "Sergio Ribodino",
+              "team": "Ford",
+              "points": 20
+            },
+            {
+              "pos": 18,
+              "driver": "Marcos Martelotto",
+              "team": "Ford",
+              "points": 16
+            }
+          ]
         },
         "copa-toyota": {
           "status": "sin-campeonato",
-          "reason": "La página del campeonato no trae la tabla de esta clase."
+          "reason": "Todavía no hay puntos en la tabla oficial de esta clase."
         },
         "maxi-rally": {
-          "status": "sin-campeonato",
-          "reason": "La página del campeonato no trae la tabla de esta clase."
+          "status": "oficial",
+          "asOfRound": 6,
+          "source": {
+            "name": "rallyargentino.com",
+            "url": "https://www.rallyargentino.com/campeonato-pilotos.php"
+          },
+          "rows": [
+            {
+              "pos": 1,
+              "driver": "Nicolás González",
+              "team": "VW",
+              "points": 314
+            },
+            {
+              "pos": 2,
+              "driver": "Rubén Montoro",
+              "team": "VW",
+              "points": 261
+            },
+            {
+              "pos": 3,
+              "driver": "Victorio Ballay",
+              "team": "Citroen",
+              "points": 225
+            },
+            {
+              "pos": 4,
+              "driver": "Nadia Cutro",
+              "team": "Toyota",
+              "points": 222
+            },
+            {
+              "pos": 5,
+              "driver": "Santino Rossi",
+              "team": "VW",
+              "points": 129
+            },
+            {
+              "pos": 6,
+              "driver": "Gastón González",
+              "team": "VW",
+              "points": 118.5
+            },
+            {
+              "pos": 7,
+              "driver": "Ramiro Kaufmann",
+              "team": "Citroen",
+              "points": 109.5
+            },
+            {
+              "pos": 8,
+              "driver": "José Iribarren",
+              "team": "VW",
+              "points": 90.5
+            },
+            {
+              "pos": 9,
+              "driver": "Miguel Patat",
+              "team": "Renault",
+              "points": 43
+            },
+            {
+              "pos": 10,
+              "driver": "Gastón Salazar",
+              "team": "VW",
+              "points": 25
+            },
+            {
+              "pos": 11,
+              "driver": "Ramiro Gandolfo",
+              "team": "VW",
+              "points": 2
+            }
+          ]
         },
         "rc3": {
-          "status": "sin-campeonato",
-          "reason": "La página del campeonato no trae la tabla de esta clase."
+          "status": "oficial",
+          "asOfRound": 6,
+          "source": {
+            "name": "rallyargentino.com",
+            "url": "https://www.rallyargentino.com/campeonato-pilotos.php"
+          },
+          "rows": [
+            {
+              "pos": 1,
+              "driver": "Ignacio Villa",
+              "team": "Peugeot",
+              "points": 305
+            },
+            {
+              "pos": 2,
+              "driver": "Mario Rasso",
+              "team": "Peugeot",
+              "points": 256
+            },
+            {
+              "pos": 3,
+              "driver": "Fernando Daparte",
+              "team": "Ford",
+              "points": 229.5
+            },
+            {
+              "pos": 4,
+              "driver": "Valentino Cardoso",
+              "team": "Ford",
+              "points": 164.5
+            },
+            {
+              "pos": 5,
+              "driver": "Germán Galfrascoli",
+              "team": "VW",
+              "points": 100.5
+            },
+            {
+              "pos": 6,
+              "driver": "Diego Semper",
+              "team": "VW",
+              "points": 93.5
+            },
+            {
+              "pos": 7,
+              "driver": "Guillermo Ambrosio",
+              "team": "VW",
+              "points": 44
+            },
+            {
+              "pos": 8,
+              "driver": "Tomás Vega",
+              "team": "Toyota",
+              "points": 33
+            },
+            {
+              "pos": 9,
+              "driver": "Pedro Skruta",
+              "team": "VW",
+              "points": 32
+            },
+            {
+              "pos": 10,
+              "driver": "Jorge Villarino",
+              "team": "Renault",
+              "points": 29
+            },
+            {
+              "pos": 11,
+              "driver": "Jorge Quiroga",
+              "team": "VW",
+              "points": 24
+            },
+            {
+              "pos": 12,
+              "driver": "Gianfranco Pichetti",
+              "team": "Toyota",
+              "points": 4
+            },
+            {
+              "pos": 13,
+              "driver": "Federico Devoto",
+              "team": "VW",
+              "points": 2
+            }
+          ]
         },
         "rc4": {
-          "status": "sin-campeonato",
-          "reason": "La página del campeonato no trae la tabla de esta clase."
+          "status": "oficial",
+          "asOfRound": 6,
+          "source": {
+            "name": "rallyargentino.com",
+            "url": "https://www.rallyargentino.com/campeonato-pilotos.php"
+          },
+          "rows": [
+            {
+              "pos": 1,
+              "driver": "Juan Saraleguy",
+              "team": "Peugeot",
+              "points": 199.5
+            },
+            {
+              "pos": 2,
+              "driver": "Carlos Cataldo",
+              "team": "Peugeot",
+              "points": 194
+            },
+            {
+              "pos": 3,
+              "driver": "Guillermo Ambrosio",
+              "team": "Peugeot",
+              "points": 152
+            },
+            {
+              "pos": 4,
+              "driver": "Sabrina Scicolone",
+              "team": "Peugeot",
+              "points": 146
+            },
+            {
+              "pos": 5,
+              "driver": "Julián Larrosa",
+              "team": "Peugeot",
+              "points": 90
+            },
+            {
+              "pos": 6,
+              "driver": "Roberto Raimondi",
+              "team": "Peugeot",
+              "points": 56
+            },
+            {
+              "pos": 7,
+              "driver": "Franco Forzani",
+              "team": "Peugeot",
+              "points": 50
+            },
+            {
+              "pos": 8,
+              "driver": "Arturo Ortiz",
+              "team": "Peugeot",
+              "points": 47
+            },
+            {
+              "pos": 9,
+              "driver": "Andrés Paredes",
+              "team": "Peugeot",
+              "points": 40
+            },
+            {
+              "pos": 10,
+              "driver": "Pablo Lonati",
+              "team": "Peugeot",
+              "points": 29
+            },
+            {
+              "pos": 11,
+              "driver": "Mario Sampayo",
+              "team": "Peugeot",
+              "points": 12
+            },
+            {
+              "pos": 12,
+              "driver": "Andrés Lucich",
+              "team": "Peugeot",
+              "points": 2
+            }
+          ]
         },
         "rc5": {
-          "status": "sin-campeonato",
-          "reason": "La página del campeonato no trae la tabla de esta clase."
+          "status": "oficial",
+          "asOfRound": 6,
+          "source": {
+            "name": "rallyargentino.com",
+            "url": "https://www.rallyargentino.com/campeonato-pilotos.php"
+          },
+          "rows": [
+            {
+              "pos": 1,
+              "driver": "Fernando Muller",
+              "team": "Peugeot",
+              "points": 220
+            },
+            {
+              "pos": 2,
+              "driver": "José Gómez",
+              "team": "Ford",
+              "points": 161
+            },
+            {
+              "pos": 3,
+              "driver": "Roberto Forzani",
+              "team": "Peugeot",
+              "points": 152
+            },
+            {
+              "pos": 4,
+              "driver": "Pablo Alessandrini",
+              "team": "Ford",
+              "points": 141
+            },
+            {
+              "pos": 5,
+              "driver": "Pablo Curletto",
+              "team": "Peugeot",
+              "points": 124
+            },
+            {
+              "pos": 6,
+              "driver": "Gerardo Ontivero",
+              "team": "Peugeot",
+              "points": 123.5
+            },
+            {
+              "pos": 7,
+              "driver": "Santiago Sabbatini",
+              "team": "Ford",
+              "points": 121
+            },
+            {
+              "pos": 8,
+              "driver": "Sebastián Landa",
+              "team": "Ford",
+              "points": 98
+            },
+            {
+              "pos": 9,
+              "driver": "Rodrigo Ferreyra",
+              "team": "Ford",
+              "points": 88.5
+            },
+            {
+              "pos": 10,
+              "driver": "Emilio Bustos",
+              "team": "Ford",
+              "points": 58.5
+            },
+            {
+              "pos": 11,
+              "driver": "Juan Borgonovo",
+              "team": "Peugeot",
+              "points": 48
+            },
+            {
+              "pos": 12,
+              "driver": "Rodolfo Ramos",
+              "team": "Ford",
+              "points": 46
+            },
+            {
+              "pos": 13,
+              "driver": "Horacio Marino",
+              "team": "Peugeot",
+              "points": 42.5
+            },
+            {
+              "pos": 14,
+              "driver": "Juan Manuel Varas",
+              "team": "Ford",
+              "points": 36
+            },
+            {
+              "pos": 15,
+              "driver": "Franco Fossatti",
+              "team": "Ford",
+              "points": 36
+            },
+            {
+              "pos": 16,
+              "driver": "Walter Guardia",
+              "team": "Chevrolet",
+              "points": 34
+            },
+            {
+              "pos": 17,
+              "driver": "Salvador Arceluz",
+              "team": "Peugeot",
+              "points": 32
+            },
+            {
+              "pos": 18,
+              "driver": "Maximiliano Arnaiz",
+              "team": "Ford",
+              "points": 31
+            },
+            {
+              "pos": 19,
+              "driver": "Gino Bacci",
+              "team": "Nissan",
+              "points": 30
+            },
+            {
+              "pos": 20,
+              "driver": "Luis Vega",
+              "team": "Peugeot",
+              "points": 28
+            },
+            {
+              "pos": 21,
+              "driver": "Sabrina Scicolone",
+              "team": "Ford",
+              "points": 25.5
+            },
+            {
+              "pos": 22,
+              "driver": "Carlos Borgonovo",
+              "team": "Peugeot",
+              "points": 25
+            },
+            {
+              "pos": 23,
+              "driver": "Matías Avila",
+              "team": "Ford",
+              "points": 25
+            },
+            {
+              "pos": 24,
+              "driver": "Emilio Mere",
+              "team": "Ford",
+              "points": 21
+            },
+            {
+              "pos": 25,
+              "driver": "Cesar Fisogni",
+              "team": "Nissan",
+              "points": 20.5
+            },
+            {
+              "pos": 26,
+              "driver": "Maximiliano Figueroa",
+              "team": "Ford",
+              "points": 19
+            },
+            {
+              "pos": 27,
+              "driver": "Leandro Martínez",
+              "team": "Ford",
+              "points": 14
+            },
+            {
+              "pos": 28,
+              "driver": "Miguel Radomich",
+              "team": "Peugeot",
+              "points": 14
+            },
+            {
+              "pos": 29,
+              "driver": "Santiago Gambetta",
+              "team": "Ford",
+              "points": 12
+            },
+            {
+              "pos": 30,
+              "driver": "Ignacio Anselmi",
+              "team": "Ford",
+              "points": 10
+            },
+            {
+              "pos": 31,
+              "driver": "Ariel Canalis",
+              "team": "Ford",
+              "points": 9
+            },
+            {
+              "pos": 32,
+              "driver": "Santino Guareschi",
+              "team": "Ford",
+              "points": 7
+            },
+            {
+              "pos": 33,
+              "driver": "Jeremias Tieri",
+              "team": "Ford",
+              "points": 7
+            },
+            {
+              "pos": 34,
+              "driver": "Luis Cairone",
+              "team": "Nissan",
+              "points": 6
+            },
+            {
+              "pos": 35,
+              "driver": "Leandro Vietto",
+              "team": "Chevrolet",
+              "points": 6
+            },
+            {
+              "pos": 36,
+              "driver": "Julián Rébola",
+              "team": "Ford",
+              "points": 6
+            },
+            {
+              "pos": 37,
+              "driver": "Gastón De Rossi",
+              "team": "Peugeot",
+              "points": 5
+            },
+            {
+              "pos": 38,
+              "driver": "Magdalena Manochi",
+              "team": "Ford",
+              "points": 4
+            },
+            {
+              "pos": 39,
+              "driver": "Lautaro Angeloni",
+              "team": "Ford",
+              "points": 4
+            },
+            {
+              "pos": 40,
+              "driver": "Julio Quilodran",
+              "team": "Chevrolet",
+              "points": 4
+            },
+            {
+              "pos": 41,
+              "driver": "Sergio Albano",
+              "team": "Peugeot",
+              "points": 4
+            },
+            {
+              "pos": 42,
+              "driver": "Gustavo Rojas",
+              "team": "Ford",
+              "points": 2
+            },
+            {
+              "pos": 43,
+              "driver": "Claudio Bustos",
+              "team": "Ford",
+              "points": 2
+            },
+            {
+              "pos": 44,
+              "driver": "Diego Orellana",
+              "team": "Ford",
+              "points": 2
+            },
+            {
+              "pos": 45,
+              "driver": "Leandro Paulovich",
+              "team": "Ford",
+              "points": 2
+            },
+            {
+              "pos": 46,
+              "driver": "Federico Durbano",
+              "team": "Peugeot",
+              "points": 2
+            },
+            {
+              "pos": 47,
+              "driver": "Agustín Martelotto",
+              "team": "Peugeot",
+              "points": 2
+            },
+            {
+              "pos": 48,
+              "driver": "Federico Rasetto",
+              "team": "Ford",
+              "points": 2
+            },
+            {
+              "pos": 49,
+              "driver": "Pablo Veiras",
+              "team": "Toyota",
+              "points": 2
+            },
+            {
+              "pos": 50,
+              "driver": "Alberto Jaime",
+              "team": "Ford",
+              "points": 2
+            },
+            {
+              "pos": 51,
+              "driver": "Marcelo Sosa",
+              "team": "Ford",
+              "points": 2
+            }
+          ]
         }
       }
-    },
-    "rallyArgentino": {
-      "events": 9,
-      "filledResults": 0,
-      "errors": [
-        "calendario: No se pudo descargar https://www.rallyargentino.com/calendario.php?anio=2026: HTTP 403 (text/html; charset=UTF-8) (se usa el calendario guardado el 4/10)",
-        "carrera en curso: No se pudo descargar https://api.rallyargentino.com/api/v2/cabecera-dashboard: HTTP 403 (text/html; charset=UTF-8)",
-        "campeonato: No se pudo descargar https://www.rallyargentino.com/campeonato-pilotos.php: HTTP 403 (text/html; charset=UTF-8)"
-      ],
-      "ignored": []
     },
     "nuevo-car-show": {
       "clases": {
@@ -188527,20 +193199,18 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 270,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
+    "rallyArgentino": {
+      "events": 9,
+      "filledResults": 7,
+      "errors": [],
+      "ignored": [
+        "fecha 1: la API no tiene la clasificación (historico)"
       ],
-      "errors": []
+      "vercel": {
+        "at": "2026-10-05T00:17:22.423Z",
+        "ok": true,
+        "errors": []
+      }
     },
     "tc-pista": {
       "standingsLabel": "Tabla oficial de la ACTC",
@@ -188621,8 +193291,7 @@
     }
   },
   "failures": [
-    "Rally Argentino: calendario: No se pudo descargar https://www.rallyargentino.com/calendario.php?anio=2026: HTTP 403 (text/html; charset=UTF-8) (se usa el calendario guardado el 4/10)",
-    "Rally Argentino: carrera en curso: No se pudo descargar https://api.rallyargentino.com/api/v2/cabecera-dashboard: HTTP 403 (text/html; charset=UTF-8)",
-    "Rally Argentino: campeonato: No se pudo descargar https://www.rallyargentino.com/campeonato-pilotos.php: HTTP 403 (text/html; charset=UTF-8)"
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Se conservaron resultados de 7 sesiones que las fuentes dejaron de traer"
   ]
 }

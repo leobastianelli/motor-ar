@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T23:24:05.328Z",
+  "generatedAt": "2026-10-05T00:23:03.633Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -252,16 +252,14 @@
       "lastSeen": "2026-02-15"
     },
     {
-      "key": "agustin menendez",
+      "key": "agustin dezotti",
       "keys": [
         "agustin dezotti",
         "agustin menendez"
       ],
       "slug": "agustin-menendez",
       "name": "Agustín Menendez",
-      "aliases": [
-        "Agustin Dezotti"
-      ],
+      "aliases": [],
       "series": [
         "nuevo-car-show"
       ],
@@ -392,6 +390,26 @@
       },
       "firstSeen": "2026-07-25",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "alejandro cancio",
+      "keys": [
+        "alejandro cancio"
+      ],
+      "slug": "alejandro-cancio",
+      "name": "Alejandro Cancio",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "27"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia R5"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
     },
     {
       "key": "alejandro inella",
@@ -588,9 +606,7 @@
       ],
       "slug": "andres-cief",
       "name": "Andrés Cief",
-      "aliases": [
-        "Andres Sief"
-      ],
+      "aliases": [],
       "series": [
         "nuevo-car-show"
       ],
@@ -646,6 +662,26 @@
       },
       "firstSeen": "2026-03-06",
       "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "andres paredes",
+      "keys": [
+        "andres paredes"
+      ],
+      "slug": "andres-paredes",
+      "name": "Andrés Paredes",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "80"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208 Rally4"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19"
     },
     {
       "key": "angel b marino",
@@ -710,6 +746,26 @@
       "lastSeen": "2026-09-13"
     },
     {
+      "key": "antonio prevedello",
+      "keys": [
+        "antonio prevedello"
+      ],
+      "slug": "antonio-prevedello",
+      "name": "Antonio Prevedello",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "9"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia R5"
+      },
+      "firstSeen": "2026-06-28",
+      "lastSeen": "2026-08-02"
+    },
+    {
       "key": "andrada ariel",
       "keys": [
         "andrada ariel"
@@ -750,6 +806,26 @@
       "lastSeen": "2026-08-23"
     },
     {
+      "key": "ariel canalis",
+      "keys": [
+        "ariel canalis"
+      ],
+      "slug": "ariel-canalis",
+      "name": "Ariel Canalis",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "157"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
+    },
+    {
       "key": "ariel e pavon",
       "keys": [
         "ariel e pavon"
@@ -766,6 +842,46 @@
       "teams": {},
       "firstSeen": "2026-04-03",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "arturo ortiz",
+      "keys": [
+        "arturo ortiz"
+      ],
+      "slug": "arturo-ortiz",
+      "name": "Arturo Ortíz",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "79"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208 Rally4"
+      },
+      "firstSeen": "2026-06-28",
+      "lastSeen": "2026-06-28"
+    },
+    {
+      "key": "augusto bestard",
+      "keys": [
+        "augusto bestard"
+      ],
+      "slug": "augusto-bestard",
+      "name": "Augusto Bestard",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "11"
+      },
+      "teams": {
+        "rally-argentino": "Toyota Yaris GR Rally2"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19"
     },
     {
       "key": "augusto carinelli",
@@ -786,6 +902,26 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "agostini augusto d",
+      "keys": [
+        "agostini augusto d"
+      ],
+      "slug": "augusto-d-agostini",
+      "name": "Augusto D'Agostini",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "24"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia RS Rally2"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-09-06"
     },
     {
       "key": "ayrton martinez",
@@ -1117,6 +1253,66 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "bello carlos",
+      "keys": [
+        "bello carlos"
+      ],
+      "slug": "carlos-bello",
+      "name": "Carlos Bello",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "16"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia R5"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "borgonovo carlos",
+      "keys": [
+        "borgonovo carlos"
+      ],
+      "slug": "carlos-borgonovo",
+      "name": "Carlos Borgonovo",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "151"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
+    },
+    {
+      "key": "carlos cataldo",
+      "keys": [
+        "carlos cataldo"
+      ],
+      "slug": "carlos-cataldo",
+      "name": "Carlos Cataldo",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "74"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208 Rally4"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-08-02"
+    },
+    {
       "key": "carlos falvo",
       "keys": [
         "carlos falvo"
@@ -1176,6 +1372,26 @@
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "cesar fisogni",
+      "keys": [
+        "cesar fisogni"
+      ],
+      "slug": "cesar-fisogni",
+      "name": "César Fisogni",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "119"
+      },
+      "teams": {
+        "rally-argentino": "Nissan March"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19"
     },
     {
       "key": "cesar pellenc",
@@ -1252,6 +1468,26 @@
       "teams": {},
       "firstSeen": "2026-07-04",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "bustos claudio",
+      "keys": [
+        "bustos claudio"
+      ],
+      "slug": "claudio-bustos",
+      "name": "Claudio Bustos",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "128"
+      },
+      "teams": {
+        "rally-argentino": "Ford Ka"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
     },
     {
       "key": "caglieris claudio",
@@ -1908,6 +2144,46 @@
       "lastSeen": "2026-09-20"
     },
     {
+      "key": "diego martinez",
+      "keys": [
+        "diego martinez"
+      ],
+      "slug": "diego-martinez",
+      "name": "Diego Martínez",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "30"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia R5"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
+    },
+    {
+      "key": "diego miceli",
+      "keys": [
+        "diego miceli"
+      ],
+      "slug": "diego-miceli",
+      "name": "Diego Miceli",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "6"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia RS Rally2"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "diego minudri",
       "keys": [
         "diego minudri"
@@ -1924,6 +2200,26 @@
       "teams": {},
       "firstSeen": "2026-04-04",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "diego semper",
+      "keys": [
+        "diego semper"
+      ],
+      "slug": "diego-semper",
+      "name": "Diego Semper",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "90"
+      },
+      "teams": {
+        "rally-argentino": "VW Gol Trend"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19"
     },
     {
       "key": "di dino palma",
@@ -2160,6 +2456,46 @@
       },
       "firstSeen": "2026-03-06",
       "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "bustos emilio",
+      "keys": [
+        "bustos emilio"
+      ],
+      "slug": "emilio-bustos",
+      "name": "Emilio Bustos",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "118"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-06-28"
+    },
+    {
+      "key": "emilio mere",
+      "keys": [
+        "emilio mere"
+      ],
+      "slug": "emilio-mere",
+      "name": "Emilio Mere",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "146"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
     },
     {
       "key": "enzo raul tentella",
@@ -2504,9 +2840,7 @@
       ],
       "slug": "fabio-canciani",
       "name": "Fabio Canciani",
-      "aliases": [
-        "Fabio Cacciari"
-      ],
+      "aliases": [],
       "series": [
         "nuevo-car-show"
       ],
@@ -2756,6 +3090,26 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "antunez federico",
+      "keys": [
+        "antunez federico"
+      ],
+      "slug": "federico-antunez",
+      "name": "Federico Antúnez",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "159"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-10-04",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "corral federico",
       "keys": [
         "corral federico"
@@ -2852,6 +3206,26 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "federico villagra",
+      "keys": [
+        "federico villagra"
+      ],
+      "slug": "federico-villagra",
+      "name": "Federico Villagra",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "3"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia RS Rally2"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "bernasconi felipe",
       "keys": [
         "bernasconi felipe"
@@ -2930,6 +3304,26 @@
       "lastSeen": "2026-08-23"
     },
     {
+      "key": "daparte fernando",
+      "keys": [
+        "daparte fernando"
+      ],
+      "slug": "fernando-daparte",
+      "name": "Fernando Daparte",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "87"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "degiorigio fernando",
       "keys": [
         "fernando schmukler",
@@ -2937,9 +3331,7 @@
       ],
       "slug": "fernando-degiorigio",
       "name": "Fernando Degiorigio",
-      "aliases": [
-        "Fernando Schmukler"
-      ],
+      "aliases": [],
       "series": [
         "nuevo-car-show"
       ],
@@ -2951,6 +3343,26 @@
       },
       "firstSeen": "2026-04-18",
       "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "fernando muller",
+      "keys": [
+        "fernando muller"
+      ],
+      "slug": "fernando-muller",
+      "name": "Fernando Muller",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "104"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "fernando sanchez",
@@ -3190,6 +3602,46 @@
       "lastSeen": "2026-09-13"
     },
     {
+      "key": "forzani franco",
+      "keys": [
+        "forzani franco"
+      ],
+      "slug": "franco-forzani",
+      "name": "Franco Forzani",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "79"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208 Rally4"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
+    },
+    {
+      "key": "fossatti franco",
+      "keys": [
+        "fossatti franco"
+      ],
+      "slug": "franco-fossatti",
+      "name": "Franco Fossatti",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "127"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
+    },
+    {
       "key": "franco melli",
       "keys": [
         "franco melli"
@@ -3418,6 +3870,26 @@
       "lastSeen": "2026-09-13"
     },
     {
+      "key": "de gaston rossi",
+      "keys": [
+        "de gaston rossi"
+      ],
+      "slug": "gaston-de-rossi",
+      "name": "Gastón De Rossi",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "150"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
+    },
+    {
       "key": "ferrante gaston",
       "keys": [
         "ferrante gaston"
@@ -3476,6 +3948,26 @@
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "gaston gonzalez",
+      "keys": [
+        "gaston gonzalez"
+      ],
+      "slug": "gaston-gonzalez",
+      "name": "Gaston González",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "51"
+      },
+      "teams": {
+        "rally-argentino": "VW Polo MRT"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-06-28"
     },
     {
       "key": "gaston grippo",
@@ -3566,6 +4058,66 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "gaston pasten",
+      "keys": [
+        "gaston pasten"
+      ],
+      "slug": "gaston-pasten",
+      "name": "Gastón Pasten",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "2"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia Rally2 evo"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-06-28"
+    },
+    {
+      "key": "gaston salazar",
+      "keys": [
+        "gaston salazar"
+      ],
+      "slug": "gaston-salazar",
+      "name": "Gastón Salazar",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "53"
+      },
+      "teams": {
+        "rally-argentino": "VW Polo MRT"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
+    },
+    {
+      "key": "genaro gonzalez",
+      "keys": [
+        "genaro gonzalez"
+      ],
+      "slug": "genaro-gonzalez",
+      "name": "Genaro González",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "26"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia R5"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "genaro rasetto",
       "keys": [
         "genaro rasetto"
@@ -3604,6 +4156,46 @@
       "lastSeen": "2026-08-16"
     },
     {
+      "key": "gerardo ontivero",
+      "keys": [
+        "gerardo ontivero"
+      ],
+      "slug": "gerardo-ontivero",
+      "name": "Gerardo Ontivero",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "105"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "galfrascoli german",
+      "keys": [
+        "galfrascoli german"
+      ],
+      "slug": "german-galfrascoli",
+      "name": "Germán Galfrascoli",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "91"
+      },
+      "teams": {
+        "rally-argentino": "VW Gol Trend"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-06-28"
+    },
+    {
       "key": "borgnino german jorge",
       "keys": [
         "borgnino german jorge",
@@ -3611,9 +4203,7 @@
       ],
       "slug": "german-jorge-borgnino",
       "name": "German Jorge Borgnino",
-      "aliases": [
-        "Germ N Jorge Borgnino"
-      ],
+      "aliases": [],
       "series": [
         "nuevo-car-show"
       ],
@@ -3719,6 +4309,26 @@
       "lastSeen": "2026-08-23"
     },
     {
+      "key": "bacci gino",
+      "keys": [
+        "bacci gino"
+      ],
+      "slug": "gino-bacci",
+      "name": "Gino Bacci",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "140"
+      },
+      "teams": {
+        "rally-argentino": "Nissan March"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
+    },
+    {
       "key": "giuliano rivosecchi",
       "keys": [
         "giuliano rivosecchi"
@@ -3819,6 +4429,26 @@
       },
       "firstSeen": "2026-08-14",
       "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "ambrosio guillermo",
+      "keys": [
+        "ambrosio guillermo"
+      ],
+      "slug": "guillermo-ambrosio",
+      "name": "Guillermo Ambrosio",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "76"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208 Rally4"
+      },
+      "firstSeen": "2026-06-28",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "diez guillermo",
@@ -4055,6 +4685,26 @@
       "lastSeen": "2026-08-16"
     },
     {
+      "key": "echeverria hernan",
+      "keys": [
+        "echeverria hernan"
+      ],
+      "slug": "hernan-echeverria",
+      "name": "Hernán Echeverría",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "21"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia Rally2 evo"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19"
+    },
+    {
       "key": "hernan palazzo",
       "keys": [
         "hernan palazzo",
@@ -4162,6 +4812,26 @@
       "lastSeen": "2026-08-16"
     },
     {
+      "key": "horacio marino",
+      "keys": [
+        "horacio marino"
+      ],
+      "slug": "horacio-marino",
+      "name": "Horacio Marino",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "114"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "hugo styl",
       "keys": [
         "hugo styl"
@@ -4196,6 +4866,26 @@
       "teams": {},
       "firstSeen": "2026-04-03",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "anselmi ignacio",
+      "keys": [
+        "anselmi ignacio"
+      ],
+      "slug": "ignacio-anselmi",
+      "name": "Ignacio Anselmi",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "143"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
     },
     {
       "key": "fain ignacio",
@@ -4370,6 +5060,26 @@
       },
       "firstSeen": "2026-01-24",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "ignacio villa",
+      "keys": [
+        "ignacio villa"
+      ],
+      "slug": "ignacio-villa",
+      "name": "Ignacio Villa",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "83"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208 G2"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "arrias inaki",
@@ -4595,6 +5305,26 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "jeremias tieri",
+      "keys": [
+        "jeremias tieri"
+      ],
+      "slug": "jeremias-tieri",
+      "name": "Jeremías Tieri",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "130"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
     },
     {
       "key": "jeronimo teti",
@@ -4949,6 +5679,26 @@
       "lastSeen": "2026-08-22"
     },
     {
+      "key": "jorge quiroga",
+      "keys": [
+        "jorge quiroga"
+      ],
+      "slug": "jorge-quiroga",
+      "name": "Jorge Quiroga",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "95"
+      },
+      "teams": {
+        "rally-argentino": "VW Gol Trend"
+      },
+      "firstSeen": "2026-06-28",
+      "lastSeen": "2026-06-28"
+    },
+    {
       "key": "alberto goya jose",
       "keys": [
         "alberto goya jose"
@@ -5028,6 +5778,26 @@
       "lastSeen": "2026-09-26"
     },
     {
+      "key": "gomez jose",
+      "keys": [
+        "gomez jose"
+      ],
+      "slug": "jose-gomez",
+      "name": "José Gómez",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "112"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "herrero jose",
       "keys": [
         "herrero jose"
@@ -5046,6 +5816,26 @@
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "iribarren jose",
+      "keys": [
+        "iribarren jose"
+      ],
+      "slug": "jose-iribarren",
+      "name": "José Iribarren",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "52"
+      },
+      "teams": {
+        "rally-argentino": "VW Gol Trend MRT"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-08-02"
     },
     {
       "key": "arrate jose luis",
@@ -5266,6 +6056,26 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "borgonovo juan",
+      "keys": [
+        "borgonovo juan"
+      ],
+      "slug": "juan-borgonovo",
+      "name": "Juan Borgonovo",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "117"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
     },
     {
       "key": "benvenutti cruz juan",
@@ -5955,9 +6765,7 @@
       ],
       "slug": "juan-pablo-massello",
       "name": "Juan Pablo Massello",
-      "aliases": [
-        "Juan Francisco Luca"
-      ],
+      "aliases": [],
       "series": [
         "nuevo-car-show"
       ],
@@ -6007,6 +6815,26 @@
       "teams": {},
       "firstSeen": "2026-06-06",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "juan saraleguy",
+      "keys": [
+        "juan saraleguy"
+      ],
+      "slug": "juan-saraleguy",
+      "name": "Juan Saraleguy",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "73"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208 Rally4"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "gallo juan sebastian",
@@ -6091,6 +6919,46 @@
       "lastSeen": "2026-04-19"
     },
     {
+      "key": "julian larrosa",
+      "keys": [
+        "julian larrosa"
+      ],
+      "slug": "julian-larrosa",
+      "name": "Julián Larrosa",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "71"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208 Rally4"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19"
+    },
+    {
+      "key": "julian rebola",
+      "keys": [
+        "julian rebola"
+      ],
+      "slug": "julian-rebola",
+      "name": "Julián Rébola",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "148"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
+    },
+    {
       "key": "julian santero",
       "keys": [
         "julian santero",
@@ -6138,6 +7006,26 @@
       "lastSeen": "2026-08-23"
     },
     {
+      "key": "julio quilodran",
+      "keys": [
+        "julio quilodran"
+      ],
+      "slug": "julio-quilodran",
+      "name": "Julio Quilodran",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "135"
+      },
+      "teams": {
+        "rally-argentino": "Chevrolet Onix"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
+    },
+    {
       "key": "candela kevin",
       "keys": [
         "candela kevin",
@@ -6157,6 +7045,26 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "angeloni lautaro",
+      "keys": [
+        "angeloni lautaro"
+      ],
+      "slug": "lautaro-angeloni",
+      "name": "Lautaro Angeloni",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "132"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
     },
     {
       "key": "dominguez lautaro",
@@ -6213,6 +7121,26 @@
       "teams": {},
       "firstSeen": "2026-08-22",
       "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "bonnin leandro",
+      "keys": [
+        "bonnin leandro"
+      ],
+      "slug": "leandro-bonnin",
+      "name": "Leandro Bonnin",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "28"
+      },
+      "teams": {
+        "rally-argentino": "Citroen C3 Rally2"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "carducci leandro",
@@ -6299,6 +7227,26 @@
       "lastSeen": "2026-09-13"
     },
     {
+      "key": "leandro martinez",
+      "keys": [
+        "leandro martinez"
+      ],
+      "slug": "leandro-martinez",
+      "name": "Leandro Martínez",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "133"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
+    },
+    {
       "key": "leandro rubino",
       "keys": [
         "leandro rubino"
@@ -6317,6 +7265,26 @@
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "leandro vietto",
+      "keys": [
+        "leandro vietto"
+      ],
+      "slug": "leandro-vietto",
+      "name": "Leandro Vietto",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "158"
+      },
+      "teams": {
+        "rally-argentino": "Chevrolet Sonic"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
     },
     {
       "key": "arevalo leonardo",
@@ -6827,6 +7795,26 @@
       "lastSeen": "2026-08-16"
     },
     {
+      "key": "cairone luis",
+      "keys": [
+        "cairone luis"
+      ],
+      "slug": "luis-cairone",
+      "name": "Luis Cairone",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "136"
+      },
+      "teams": {
+        "rally-argentino": "Nissan March"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
+    },
+    {
       "key": "catelli luis",
       "keys": [
         "catelli luis"
@@ -6901,6 +7889,26 @@
       "teams": {},
       "firstSeen": "2026-06-06",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "luis vega",
+      "keys": [
+        "luis vega"
+      ],
+      "slug": "luis-vega",
+      "name": "Luis Vega",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "142"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
     },
     {
       "key": "borgert manuel",
@@ -7212,6 +8220,26 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "marcos martelotto",
+      "keys": [
+        "marcos martelotto"
+      ],
+      "slug": "marcos-martelotto",
+      "name": "Marcos Martelotto",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "33"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta R5"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
+    },
+    {
       "key": "marcos palombizio",
       "keys": [
         "marcos palombizio"
@@ -7432,6 +8460,26 @@
       "lastSeen": "2026-04-19"
     },
     {
+      "key": "mario rasso",
+      "keys": [
+        "mario rasso"
+      ],
+      "slug": "mario-rasso",
+      "name": "Mario Rasso",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "82"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208 G1"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "blasig martin",
       "keys": [
         "blasig martin",
@@ -7556,6 +8604,26 @@
       "formerSlugs": [
         "marta-n-leston"
       ]
+    },
+    {
+      "key": "maisonnave martin",
+      "keys": [
+        "maisonnave martin"
+      ],
+      "slug": "martin-maisonnave",
+      "name": "Martín Maisonnave",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "34"
+      },
+      "teams": {
+        "rally-argentino": "Citroen C3 Rally2"
+      },
+      "firstSeen": "2026-10-04",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "martin mura",
@@ -7701,6 +8769,26 @@
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "avila matias",
+      "keys": [
+        "avila matias"
+      ],
+      "slug": "matias-avila",
+      "name": "Matías Avila",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "131"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
     },
     {
       "key": "balestro matias",
@@ -8117,6 +9205,26 @@
       "lastSeen": "2026-08-16"
     },
     {
+      "key": "arnaiz maximiliano",
+      "keys": [
+        "arnaiz maximiliano"
+      ],
+      "slug": "maximiliano-arnaiz",
+      "name": "Maximiliano Arnaiz",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "141"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-08-02",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "bestani maximiliano",
       "keys": [
         "bestani maximiliano"
@@ -8135,6 +9243,26 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-08-30"
+    },
+    {
+      "key": "figueroa maximiliano",
+      "keys": [
+        "figueroa maximiliano"
+      ],
+      "slug": "maximiliano-figueroa",
+      "name": "Maximiliano Figueroa",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "139"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-06-28",
+      "lastSeen": "2026-06-28"
     },
     {
       "key": "fontana maximiliano",
@@ -8199,6 +9327,26 @@
       ]
     },
     {
+      "key": "meliza prevedello",
+      "keys": [
+        "meliza prevedello"
+      ],
+      "slug": "meliza-prevedello",
+      "name": "Meliza Prevedello",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "18"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia R5"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "a garnero miguel",
       "keys": [
         "a garnero miguel"
@@ -8233,6 +9381,26 @@
       "teams": {},
       "firstSeen": "2026-06-06",
       "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "baldoni miguel",
+      "keys": [
+        "baldoni miguel"
+      ],
+      "slug": "miguel-baldoni",
+      "name": "Miguel Baldoni",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "1"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia RS Rally2"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "candela miguel",
@@ -8274,6 +9442,26 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-09-20"
+    },
+    {
+      "key": "miguel radomich",
+      "keys": [
+        "miguel radomich"
+      ],
+      "slug": "miguel-radomich",
+      "name": "Miguel Radomich",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "129"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
     },
     {
       "key": "miguel ruffino",
@@ -8331,6 +9519,26 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-04-18",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "cutro nadia",
+      "keys": [
+        "cutro nadia"
+      ],
+      "slug": "nadia-cutro",
+      "name": "Nadia Cutro",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "45"
+      },
+      "teams": {
+        "rally-argentino": "Toyota Yaris MRT"
+      },
+      "firstSeen": "2026-04-19",
       "lastSeen": "2026-10-04"
     },
     {
@@ -8665,16 +9873,19 @@
       "name": "Nicolás Gonzalez",
       "aliases": [],
       "series": [
-        "nuevo-car-show"
+        "nuevo-car-show",
+        "rally-argentino"
       ],
       "numbers": {
-        "nuevo-car-show": "4"
+        "nuevo-car-show": "4",
+        "rally-argentino": "50"
       },
       "teams": {
-        "nuevo-car-show": "Fiat Uno Way"
+        "nuevo-car-show": "Fiat Uno Way",
+        "rally-argentino": "VW Polo MRT"
       },
       "firstSeen": "2026-03-06",
-      "lastSeen": "2026-09-13"
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "impiombato nicolas",
@@ -9067,6 +10278,26 @@
       "lastSeen": "2026-03-08"
     },
     {
+      "key": "alessandrini pablo",
+      "keys": [
+        "alessandrini pablo"
+      ],
+      "slug": "pablo-alessandrini",
+      "name": "Pablo Alessandrini",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "116"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-06-28"
+    },
+    {
       "key": "cismondi pablo",
       "keys": [
         "cismondi pablo"
@@ -9107,6 +10338,26 @@
       "lastSeen": "2026-09-20"
     },
     {
+      "key": "curletto pablo",
+      "keys": [
+        "curletto pablo"
+      ],
+      "slug": "pablo-curletto",
+      "name": "Pablo Curletto",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "123"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-09-06"
+    },
+    {
       "key": "bo del di natale pablo",
       "keys": [
         "bo del di natale pablo"
@@ -9143,6 +10394,26 @@
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "lonati pablo",
+      "keys": [
+        "lonati pablo"
+      ],
+      "slug": "pablo-lonati",
+      "name": "Pablo Lonati",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "80"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208 Rally4"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
     },
     {
       "key": "moreno pablo",
@@ -9281,6 +10552,26 @@
       "lastSeen": "2026-08-30"
     },
     {
+      "key": "pedro skruta",
+      "keys": [
+        "pedro skruta"
+      ],
+      "slug": "pedro-skruta",
+      "name": "Pedro Skruta",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "93"
+      },
+      "teams": {
+        "rally-argentino": "VW Gol Trend"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
+    },
+    {
       "key": "montironi rafael",
       "keys": [
         "montironi rafael"
@@ -9340,6 +10631,26 @@
       },
       "firstSeen": "2026-02-28",
       "lastSeen": "2026-03-22"
+    },
+    {
+      "key": "kaufmann ramiro",
+      "keys": [
+        "kaufmann ramiro"
+      ],
+      "slug": "ramiro-kaufmann",
+      "name": "Ramiro Kaufmann",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "47"
+      },
+      "teams": {
+        "rally-argentino": "Citroen DS3 MRT"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-06-28"
     },
     {
       "key": "massio raul",
@@ -9492,9 +10803,7 @@
       ],
       "slug": "roberto-carlos-main",
       "name": "Roberto Carlos Main",
-      "aliases": [
-        "Roberto Main"
-      ],
+      "aliases": [],
       "series": [
         "nuevo-car-show"
       ],
@@ -9506,6 +10815,26 @@
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "forzani roberto",
+      "keys": [
+        "forzani roberto"
+      ],
+      "slug": "roberto-forzani",
+      "name": "Roberto Forzani",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "110"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "gomez roberto",
@@ -9524,6 +10853,26 @@
       "teams": {},
       "firstSeen": "2026-04-03",
       "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "raimondi roberto",
+      "keys": [
+        "raimondi roberto"
+      ],
+      "slug": "roberto-raimondi",
+      "name": "Roberto Raimondi",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "78"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208 Rally4"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
     },
     {
       "key": "claudio m robledo",
@@ -9562,6 +10911,66 @@
       },
       "firstSeen": "2026-03-06",
       "lastSeen": "2026-04-19"
+    },
+    {
+      "key": "ramos rodolfo",
+      "keys": [
+        "ramos rodolfo"
+      ],
+      "slug": "rodolfo-ramos",
+      "name": "Rodolfo Ramos",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "121"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19"
+    },
+    {
+      "key": "disalvo rodrigo",
+      "keys": [
+        "disalvo rodrigo"
+      ],
+      "slug": "rodrigo-disalvo",
+      "name": "Rodrigo Disalvo",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "10"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia R5"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "ferreyra rodrigo",
+      "keys": [
+        "ferreyra rodrigo"
+      ],
+      "slug": "rodrigo-ferreyra",
+      "name": "Rodrigo Ferreyra",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "124"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "juarez rodrigo",
@@ -9642,6 +11051,26 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "rodrigo zeballos",
+      "keys": [
+        "rodrigo zeballos"
+      ],
+      "slug": "rodrigo-zeballos",
+      "name": "Rodrigo Zeballos",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "8"
+      },
+      "teams": {
+        "rally-argentino": "Citroen C3 Rally2"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
+    },
+    {
       "key": "roman serra",
       "keys": [
         "roman serra"
@@ -9680,6 +11109,26 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "montoro ruben",
+      "keys": [
+        "montoro ruben"
+      ],
+      "slug": "ruben-montoro",
+      "name": "Rubén Montoro",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "41"
+      },
+      "teams": {
+        "rally-argentino": "VW Gol Trend MRT"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "nicolas ruiz",
       "keys": [
         "nicolas ruiz"
@@ -9716,6 +11165,26 @@
       "lastSeen": "2026-05-10"
     },
     {
+      "key": "sabrina scicolone",
+      "keys": [
+        "sabrina scicolone"
+      ],
+      "slug": "sabrina-scicolone",
+      "name": "Sabrina Scicolone",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "77"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208 Rally4"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "gonzalo salis",
       "keys": [
         "gonzalo salis"
@@ -9732,6 +11201,26 @@
       "teams": {},
       "firstSeen": "2026-04-03",
       "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "arceluz salvador",
+      "keys": [
+        "arceluz salvador"
+      ],
+      "slug": "salvador-arceluz",
+      "name": "Salvador Arceluz",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "145"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
     },
     {
       "key": "ferretti sandro",
@@ -10019,6 +11508,26 @@
       "lastSeen": "2026-08-23"
     },
     {
+      "key": "sabbatini santiago",
+      "keys": [
+        "sabbatini santiago"
+      ],
+      "slug": "santiago-sabbatini",
+      "name": "Santiago Sabbatini",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "101"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-06-28"
+    },
+    {
       "key": "santiago sosa",
       "keys": [
         "santiago sosa"
@@ -10077,6 +11586,26 @@
       "lastSeen": "2026-08-23"
     },
     {
+      "key": "guareschi santino",
+      "keys": [
+        "guareschi santino"
+      ],
+      "slug": "santino-guareschi",
+      "name": "Santino Guareschi",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "149"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
+    },
+    {
       "key": "ortiz santino",
       "keys": [
         "ortiz santino"
@@ -10095,6 +11624,26 @@
       },
       "firstSeen": "2026-01-23",
       "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "rossi santino",
+      "keys": [
+        "rossi santino"
+      ],
+      "slug": "santino-rossi",
+      "name": "Santino Rossi",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "29"
+      },
+      "teams": {
+        "rally-argentino": "Citroen C3 Rally2"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-09-06"
     },
     {
       "key": "luque sebastan",
@@ -10184,6 +11733,26 @@
       "lastSeen": "2026-08-16"
     },
     {
+      "key": "landa sebastian",
+      "keys": [
+        "landa sebastian"
+      ],
+      "slug": "sebastian-landa",
+      "name": "Sebastián Landa",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "111"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-05-24",
+      "lastSeen": "2026-05-24"
+    },
+    {
       "key": "pidoni sebastian",
       "keys": [
         "pidoni sebastian"
@@ -10240,6 +11809,26 @@
       },
       "firstSeen": "2026-08-15",
       "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "albano sergio",
+      "keys": [
+        "albano sergio"
+      ],
+      "slug": "sergio-albano",
+      "name": "Sergio Albano",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "156"
+      },
+      "teams": {
+        "rally-argentino": "Peugeot 208"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
     },
     {
       "key": "fernandez sergio",
@@ -10340,6 +11929,26 @@
       "teams": {},
       "firstSeen": "2026-08-22",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "ribodino sergio",
+      "keys": [
+        "ribodino sergio"
+      ],
+      "slug": "sergio-ribodino",
+      "name": "Sergio Ribodino",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "31"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta R5"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
     },
     {
       "key": "antonino sganga",
@@ -10685,6 +12294,26 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "perotti tomas",
+      "keys": [
+        "perotti tomas"
+      ],
+      "slug": "tomas-perotti",
+      "name": "Tomás Perotti",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "32"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia Rally2 evo"
+      },
+      "firstSeen": "2026-09-06",
+      "lastSeen": "2026-09-06"
+    },
+    {
       "key": "tasca tomas",
       "keys": [
         "tasca tomas"
@@ -10701,6 +12330,26 @@
       "teams": {},
       "firstSeen": "2026-06-06",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "tomas vega",
+      "keys": [
+        "tomas vega"
+      ],
+      "slug": "tomas-vega",
+      "name": "Tomás Vega",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "94"
+      },
+      "teams": {
+        "rally-argentino": "Toyota Etios"
+      },
+      "firstSeen": "2026-06-28",
+      "lastSeen": "2026-06-28"
     },
     {
       "key": "tomas vitar",
@@ -10826,6 +12475,26 @@
       "lastSeen": "2026-08-16"
     },
     {
+      "key": "folledo valentin",
+      "keys": [
+        "folledo valentin"
+      ],
+      "slug": "valentin-folledo",
+      "name": "Valentín Folledo",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "23"
+      },
+      "teams": {
+        "rally-argentino": "Citroen C3 Rally2"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-06-28"
+    },
+    {
       "key": "larrosa valentin",
       "keys": [
         "larrosa valentin"
@@ -10925,6 +12594,26 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "cardoso valentino",
+      "keys": [
+        "cardoso valentino"
+      ],
+      "slug": "valentino-cardoso",
+      "name": "Valentino Cardoso",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "92"
+      },
+      "teams": {
+        "rally-argentino": "Ford Fiesta"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "paulini valentino",
       "keys": [
         "paulini valentino"
@@ -11003,6 +12692,26 @@
       "lastSeen": "2026-08-23"
     },
     {
+      "key": "ballay victorio",
+      "keys": [
+        "ballay victorio"
+      ],
+      "slug": "victorio-ballay",
+      "name": "Victorio Ballay",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "44"
+      },
+      "teams": {
+        "rally-argentino": "Citroen DS3 MRT"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "simon volpi",
       "keys": [
         "simon volpi"
@@ -11041,6 +12750,46 @@
       },
       "firstSeen": "2026-04-18",
       "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "agostini d walter",
+      "keys": [
+        "agostini d walter"
+      ],
+      "slug": "walter-d-agostini",
+      "name": "Walter D'Agostini",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "22"
+      },
+      "teams": {
+        "rally-argentino": "Skoda Fabia R5"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-08-02"
+    },
+    {
+      "key": "guardia walter",
+      "keys": [
+        "guardia walter"
+      ],
+      "slug": "walter-guardia",
+      "name": "Walter Guardia",
+      "aliases": [],
+      "series": [
+        "rally-argentino"
+      ],
+      "numbers": {
+        "rally-argentino": "120"
+      },
+      "teams": {
+        "rally-argentino": "Chevrolet Sonic"
+      },
+      "firstSeen": "2026-04-19",
+      "lastSeen": "2026-04-19"
     },
     {
       "key": "mazzetti walter",
@@ -11090,9 +12839,7 @@
       ],
       "slug": "wily-signetto",
       "name": "Wily Signetto",
-      "aliases": [
-        "Guillermo Signetto"
-      ],
+      "aliases": [],
       "series": [
         "nuevo-car-show"
       ],
