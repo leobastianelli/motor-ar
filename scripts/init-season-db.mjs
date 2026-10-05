@@ -34,6 +34,10 @@ await sql`ALTER TABLE season_versions ALTER COLUMN body DROP NOT NULL`;
 await sql`CREATE TABLE IF NOT EXISTS hot_lock (id INTEGER PRIMARY KEY, at TIMESTAMPTZ NOT NULL)`;
 await sql`INSERT INTO hot_lock (id, at) VALUES (1, 'epoch') ON CONFLICT (id) DO NOTHING`;
 
+// Candado del refresco del Rally Argentino (una fila, aparte del de F1). El código también lo crea solo la primera vez (src/lib/rally-refresh.ts).
+await sql`CREATE TABLE IF NOT EXISTS rally_lock (id INTEGER PRIMARY KEY, at TIMESTAMPTZ NOT NULL)`;
+await sql`INSERT INTO rally_lock (id, at) VALUES (1, 'epoch') ON CONFLICT (id) DO NOTHING`;
+
 // Borradores para redes ya mandados por Telegram (ver src/lib/redes-envio.mjs): reemplaza la caché de GitHub Actions (.redes-state.json), ahora
 // que /api/pulso los manda cada 5 min y no sólo la sincronización. La clave es la misma que usaba el archivo (p. ej. "sesion:<id>").
 await sql`CREATE TABLE IF NOT EXISTS redes_enviados (clave TEXT PRIMARY KEY, enviado_at TIMESTAMPTZ NOT NULL)`;
