@@ -287,6 +287,15 @@ a.home-more::after {
 .home-moment li:first-child .home-when {
   font-size: 28px;
 }
+.home-when-day {
+  font-size: 0.7em;
+  font-weight: 600;
+  color: var(--muted);
+  margin-right: 2px;
+}
+.home-when-time {
+  font-variant-numeric: tabular-nums;
+}
 .home-moment li:first-child .home-moment-name {
   font-size: 20px;
   font-weight: 750;
