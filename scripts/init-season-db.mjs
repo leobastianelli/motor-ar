@@ -34,7 +34,7 @@ await sql`ALTER TABLE season_versions ALTER COLUMN body DROP NOT NULL`;
 await sql`CREATE TABLE IF NOT EXISTS hot_lock (id INTEGER PRIMARY KEY, at TIMESTAMPTZ NOT NULL)`;
 await sql`INSERT INTO hot_lock (id, at) VALUES (1, 'epoch') ON CONFLICT (id) DO NOTHING`;
 
-// Candado del refresco del Rally Argentino (una fila, aparte del de F1). El código también lo crea solo la primera vez (src/lib/rally-refresh.ts).
+// Candado del refresco del Rally Argentino desde Vercel (una fila, aparte del de F1). Quedó sin uso: Vercel también recibe 403 (ver scripts/sync-rally.mjs).
 await sql`CREATE TABLE IF NOT EXISTS rally_lock (id INTEGER PRIMARY KEY, at TIMESTAMPTZ NOT NULL)`;
 await sql`INSERT INTO rally_lock (id, at) VALUES (1, 'epoch') ON CONFLICT (id) DO NOTHING`;
 

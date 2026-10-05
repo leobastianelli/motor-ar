@@ -101,7 +101,7 @@ async function withSchedules(io, events, previous, failures) {
 
 /**
  * `skip`: rótulos de SOURCES que no se consultan en esta corrida. Su categoría pasa tal cual de la versión anterior, sin anotar una falla:
- * hoy sólo el Rally en GitHub Actions, donde rallyargentino.com contesta 403 y lo trae el refresco desde Vercel (src/lib/rally-refresh.ts).
+ * hoy sólo el Rally en GitHub Actions, donde rallyargentino.com contesta 403 y también a Vercel: lo publica `npm run sync:rally` desde una PC (scripts/sync-rally.mjs).
  */
 export async function buildSeason(io, previous = { events: [], standings: {}, meta: {} }, log = () => {}, { skip = [] } = {}) {
   let events = [];

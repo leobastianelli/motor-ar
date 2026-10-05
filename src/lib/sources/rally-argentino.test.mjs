@@ -302,12 +302,12 @@ test("temporada: no se pega la clasificación de otra carrera a la fecha en curs
   assert.match(out.meta.rallyArgentino.errors[0], /idéntica a la de otra fecha/);
 });
 
-test("temporada: una fecha vieja con resultados oficiales guardados no se vuelve a pedir; si la fuente falla, lo guardado se conserva", async () => {
+test("temporada: una fecha vieja con resultados oficiales guardados no se vuelve a pedir (la ilegible sí: pudo ser un bloqueo); si la fuente falla, lo guardado se conserva", async () => {
   const primera = await rallyArgentinoSeason(fakeIo(respuestas()), undefined, { now: NOW });
   const pedidos = [];
-  // Dentro de 40 días la fecha 2 (terminó el 6/9) ya es vieja: sólo se pide lo reciente; la fecha 1 (nunca legible) tampoco se vuelve a intentar.
+  // Dentro de 40 días la fecha 2 (terminó el 6/9) ya es vieja: sólo se pide lo reciente y la fecha 1, que quedó ilegible (un 403 la habría marcado igual).
   const despues = await rallyArgentinoSeason(fakeIo(respuestas(), pedidos), { events: primera.events, standings: {}, meta: primera.meta }, { now: new Date("2026-11-13T10:00:00-03:00") });
-  assert.equal(pedidos.some((u) => u.includes("2026-carrera-01")), false);
+  assert.equal(pedidos.some((u) => u.includes("2026-carrera-01")), true);
   assert.equal(pedidos.some((u) => u.includes("2026-carrera-06")), false);
   assert.deepEqual(despues.events[1].sessions, primera.events[1].sessions);
   assert.equal(general_(despues.events[0]).resultsUnread, true);
