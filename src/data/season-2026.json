@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T00:23:02.059Z",
+  "generatedAt": "2026-10-05T12:59:43.010Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -165248,12 +165248,7 @@
               "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
               "start": "09:25"
             }
-          ],
-          "resultsGap": {
-            "reason": "incompleto",
-            "url": "https://tiempos.actc.org.ar/resultados/896/ver",
-            "rows": 4
-          }
+          ]
         },
         {
           "id": "tcp-2026-11-practica-2entrenamiento",
@@ -165285,12 +165280,7 @@
               "url": "https://www.solotc.com.ar/tc-san-luis-horarios-tv-cronograma-fecha-11-2026/",
               "start": "15:24"
             }
-          ],
-          "resultsGap": {
-            "reason": "incompleto",
-            "url": "https://tiempos.actc.org.ar/resultados/902/ver",
-            "rows": 4
-          }
+          ]
         },
         {
           "id": "tcp-2026-11-serie-serie1",
@@ -188562,31 +188552,31 @@
         "pos": 2,
         "driver": "Arthur Leclerc / Thomas Neubauer",
         "team": "AF Corse",
-        "points": 53.5
+        "points": 65.5
       },
       {
         "pos": 3,
         "driver": "Daniel Juncadella",
         "team": "Mercedes-AMG Team Verstappen Racing",
-        "points": 53
+        "points": 59
       },
       {
         "pos": 4,
-        "driver": "Kelvin van der Linde / Charles Weerts",
-        "team": "Team WRT",
-        "points": 50.5
+        "driver": "Ben Green / Thierry Vermeulen",
+        "team": "Emil Frey Racing",
+        "points": 56.5
       },
       {
         "pos": 5,
-        "driver": "Lucas Auer / Maro Engel",
-        "team": "Winward Racing",
-        "points": 45.5
+        "driver": "Kelvin van der Linde / Charles Weerts",
+        "team": "Team WRT",
+        "points": 55
       },
       {
         "pos": 6,
-        "driver": "Ben Green / Thierry Vermeulen",
-        "team": "Emil Frey Racing",
-        "points": 40
+        "driver": "Lucas Auer / Maro Engel",
+        "team": "Winward Racing",
+        "points": 45.5
       },
       {
         "pos": 7,
@@ -188608,33 +188598,33 @@
       },
       {
         "pos": 10,
-        "driver": "Dean MacDonald",
-        "team": "Garage 59",
-        "points": 25.5
+        "driver": "Chris Lulham",
+        "team": "Mercedes-AMG Team Verstappen Racing",
+        "points": 26.5
       },
       {
         "pos": 11,
-        "driver": "Morris Schuring",
-        "team": "Boutsen VDS",
-        "points": 25
+        "driver": "Dean MacDonald",
+        "team": "Garage 59",
+        "points": 26.5
       },
       {
         "pos": 12,
         "driver": "Alex Aka / Dylan Pereira",
         "team": "Tresor Attempto Racing",
-        "points": 24.5
+        "points": 25
       },
       {
         "pos": 13,
-        "driver": "Luca Engstler / Patric Niederhauser",
-        "team": "Rutronik Racing",
-        "points": 22
+        "driver": "Morris Schuring",
+        "team": "Boutsen VDS",
+        "points": 25
       },
       {
         "pos": 14,
-        "driver": "Chris Lulham",
-        "team": "Mercedes-AMG Team Verstappen Racing",
-        "points": 20.5
+        "driver": "Luca Engstler / Patric Niederhauser",
+        "team": "Rutronik Racing",
+        "points": 22
       },
       {
         "pos": 15,
@@ -188662,15 +188652,15 @@
       },
       {
         "pos": 19,
-        "driver": "Amaury Cordeel / Jordan Pepper",
-        "team": "Team WRT",
-        "points": 14
+        "driver": "Kobe Pauwels / Nicki Thiim",
+        "team": "Comtoyou Racing",
+        "points": 16.5
       },
       {
         "pos": 20,
-        "driver": "Kobe Pauwels / Nicki Thiim",
-        "team": "Comtoyou Racing",
-        "points": 13.5
+        "driver": "Amaury Cordeel / Jordan Pepper",
+        "team": "Team WRT",
+        "points": 16
       },
       {
         "pos": 21,
@@ -188680,54 +188670,60 @@
       },
       {
         "pos": 22,
+        "driver": "Andrea Frassineti / Ariel Levi",
+        "team": "Tresor Attempto Racing",
+        "points": 9.5
+      },
+      {
+        "pos": 23,
+        "driver": "Mattia Michelotto / Loris Spinelli",
+        "team": "VSR",
+        "points": 8.5
+      },
+      {
+        "pos": 24,
         "driver": "Christopher Haase / Simon Reicher",
         "team": "Eastalent Racing",
         "points": 8
       },
       {
-        "pos": 23,
+        "pos": 25,
         "driver": "Eddie Cheever III / Peter Dempsey",
         "team": "Ziggo Sport – Tempesta Racing",
         "points": 6
       },
       {
-        "pos": 24,
+        "pos": 26,
         "driver": "James Kell / Arthur Rougier",
         "team": "CSA Racing",
-        "points": 4
+        "points": 4.5
       },
       {
-        "pos": 25,
+        "pos": 27,
         "driver": "Robin Knutsson / Gilles Magnus",
         "team": "Boutsen VDS",
         "points": 3
       },
       {
-        "pos": 26,
+        "pos": 28,
         "driver": "David Pittard / Jop Rappange",
         "team": "KPX Motorsport",
         "points": 2
       },
       {
-        "pos": 27,
+        "pos": 29,
         "driver": "Alessio Picariello",
         "team": "Boutsen VDS",
         "points": 1
       },
       {
-        "pos": 27,
+        "pos": 29,
         "driver": "Dennis Marschall",
         "team": "Kessel Racing",
         "points": 1
       },
       {
-        "pos": 27,
-        "driver": "Mattia Michelotto / Loris Spinelli",
-        "team": "VSR",
-        "points": 1
-      },
-      {
-        "pos": 28,
+        "pos": 30,
         "driver": "Romain Andriolo / Simon Gachet",
         "team": "CSA Racing",
         "points": 0.5
@@ -191973,7 +191969,7 @@
           "winnerUrl": "https://campeones.com.ar/lucas-carabajal-festejo-en-el-zonda-su-primera-victoria-en-tc2000/"
         }
       ],
-      "campeonesFeed": false,
+      "campeonesFeed": true,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -193199,6 +193195,21 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -193247,7 +193258,7 @@
     },
     "timing": {
       "documents": 800,
-      "pagesFetched": 54,
+      "pagesFetched": 39,
       "eventsWithResults": 58
     },
     "openf1": {
@@ -193291,7 +193302,6 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 7 sesiones que las fuentes dejaron de traer"
   ]
 }
