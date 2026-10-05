@@ -1,5 +1,5 @@
 // Lógica pura del Rally Argentino fuera de GitHub Actions: rallyargentino.com y api.rallyargentino.com (Cloudflare) le contestan 403 a las IPs de
-// Actions, donde corre la sincronización. El refresco desde Vercel (src/lib/rally-refresh.ts) trae el Rally por su cuenta y escribe sólo lo suyo;
+// Actions, donde corre la sincronización. Vercel también recibe 403: el Rally lo publica scripts/sync-rally.mjs desde una PC, que escribe sólo lo suyo;
 // la sincronización, en Actions, se saltea la fuente y deja intacto lo que escribió Vercel. Sin red ni base, así `npm test` la cubre.
 import { protectSeason, protectStandings } from "./sources/guard.mjs";
 

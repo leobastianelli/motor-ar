@@ -62,9 +62,9 @@ const previous = start.raw;
 console.log(`Se parte de: ${start.label}`);
 
 // rallyargentino.com y su API (Cloudflare) contestan 403 a las IPs de GitHub Actions: ahí el Rally se saltea y se conserva lo que haya escrito el
-// refresco desde Vercel (src/lib/rally-refresh.ts), sin anotar una falla que no es nuestra. Corriendo en otro lado (local) se consulta normal.
+// script `npm run sync:rally` desde una PC (scripts/sync-rally.mjs; Vercel también recibe 403), sin anotar una falla que no es nuestra. Corriendo en otro lado (local) se consulta normal.
 const skipRally = inActions();
-if (skipRally) console.log("Rally Argentino: se saltea en GitHub Actions (lo trae el refresco desde Vercel).");
+if (skipRally) console.log("Rally Argentino: se saltea en GitHub Actions (lo publica npm run sync:rally desde una PC).");
 const season = await buildSeason(
   io,
   previous,

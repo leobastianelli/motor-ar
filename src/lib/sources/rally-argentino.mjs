@@ -303,7 +303,8 @@ export async function rallyArgentinoSeason(io, previous = { events: [], standing
     const fuentes = !empezo ? [] : r === actual ? [...(terminó ? ["historico"] : []), "actual"] : terminó ? ["historico"] : [];
     const guardada = Boolean(anterior?.results?.length) && anterior.resultsSource?.status !== "provisional";
     const vieja = ymd(r.end) < viejo;
-    if (prev && vieja && (guardada || anterior?.resultsUnread)) {
+    // Una fecha marcada ilegible se vuelve a pedir: puede haber sido un bloqueo (403) y no un 404 (cuesta un pedido por corrida).
+    if (prev && vieja && guardada) {
       events.push({ ...base, sessions: prev.sessions });
       continue;
     }
@@ -338,7 +339,8 @@ export async function rallyArgentinoSeason(io, previous = { events: [], standing
         if (/(^|\D)404(\D|$)|no se encontro/i.test(error.message)) ignored.push(`fecha ${r.round}: la API no tiene la clasificación (${fuente})`);
         else errors.push(`fecha ${r.round}: ${error.message}`);
         // La fuente publicó los resultados (enlace en el calendario) y no los pudimos leer.
-        if (fuente === "historico" && r.published) unread = true;
+        // Un 403 (Cloudflare bloqueando la red desde la que se corre) no dice nada de la fuente: no se marca como ilegible.
+        if (fuente === "historico" && r.published && !/HTTP 403/.test(error.message)) unread = true;
       }
     }
     if (res) filled += 1 + Object.keys(res.clases).length;
