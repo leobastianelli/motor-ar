@@ -6,7 +6,8 @@ import { getAllDrivers, getAllSeries, getNow, getSeason, getSeries } from "@/lib
 import { fmtDayShort, fmtTime } from "@/lib/format";
 import { horarioSeriesSlug } from "@/lib/horarios";
 
-export const revalidate = 60;
+// Los datos nuevos la invalidan por evento; por tiempo sólo cambia cuál es la próxima sesión de cada categoría (a lo sumo 15 min de atraso). Sin estados "en vivo": esos van en la página de cada categoría.
+export const revalidate = 900;
 export const metadata: Metadata = {
   title: "Horarios de automovilismo en hora argentina",
   description: "A qué hora corren la Fórmula 1, el Turismo Carretera, el TN y los pilotos argentinos, y dónde verlos. Siempre en hora argentina.",

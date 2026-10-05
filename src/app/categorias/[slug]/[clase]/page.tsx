@@ -9,7 +9,8 @@ import { getAllSeries, getSeason, getSeries } from "@/lib/data";
 import { fmtDayNum, fmtMonthShort, fmtRange } from "@/lib/format";
 import { OG_DEFAULTS } from "@/lib/site";
 
-export const revalidate = 60;
+// No depende de la hora: sólo de los datos (campeonato y resultados de la clase), que la invalidan por evento. El día es una red de seguridad.
+export const revalidate = 86400;
 
 /** Una página por clase de cada categoría con clases: /categorias/cordoba-pista/tc4000. El id de la clase sólo vale dentro de su categoría. */
 export function generateStaticParams() {

@@ -1,5 +1,5 @@
 # Sincroniza la temporada desde las fuentes y la escribe en el almacén (tabla season_versions de Neon), que es lo que lee el sitio; después invalida las
-# páginas (/api/refresh). Los borradores para redes ya no salen de aquí: los manda /api/pulso (cron externo cada 5 min, ver
+# páginas (/api/refresh, sólo si se publicó una versión nueva). Los borradores para redes ya no salen de aquí: los manda /api/pulso (cron externo cada 5 min, ver
 # docs/plan-lanzamiento/01-borradores-para-redes.md). La instantánea src/data/season-2026.json es sólo el respaldo: se sube al repo una vez por día (vercel.json evita redesplegar por ella).
 name: Sincronizar temporada
 
