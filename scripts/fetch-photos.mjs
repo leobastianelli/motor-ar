@@ -25,14 +25,22 @@ const PHOTOS = {
   "series-tc-mouras": { file: "File:TC Mouras 2026, Fecha 5. Domingo, Carrera - 05.jpg", alt: "TC Mouras en carrera, Fecha 5 de 2026" },
   "series-tc-pista-mouras": { file: "File:TC Pista Mouras 2026 Fecha 5. Domingo, Carrera - (5).jpg", alt: "TC Pista Mouras en carrera, Fecha 5 de 2026" },
   "series-tc-pick-up": { file: "File:Gran Premio Autojuntas AUVO 2021 - Ford Ranger TC Pick Up de Eddy Mión.jpg", alt: "El Ford Ranger de Eddy Mión en TC Pick Up, 2021" },
+  "series-tcr-sa": { file: "File:2025 Gran Premio Racing 10W60 Lubricantes Ancap - TCR South America afternoon race 05.jpg", alt: "Carrera de TCR South America en El Pinar, Uruguay, 2025" },
+  "series-imsa": { file: "File:MSR GTP 60 WGI25 06.jpg", alt: "El Acura ARX-06 de Meyer Shank Racing en las Six Hours de Watkins Glen, IMSA 2025" },
+  "series-f3": { file: "File:FIA F3 Imola 2025 Tsolov (2).jpg", alt: "El auto Nº12 de Campos Racing en Imola, FIA Fórmula 3 2025" },
+  "series-f4-italia": { file: "File:Andrea Dupe F4 Prema.jpg", alt: "Los autos de Prema Racing en la grilla de la Fórmula 4 Italiana, Mugello 2025" },
+  "series-wec": { file: "File:2026 6 Hours of Spa-Francorchamps Ferrari AF Corse Ferrari 499P No.51 (DSC08169).jpg", alt: "El Ferrari 499P Nº51 en las 6 Horas de Spa-Francorchamps del WEC, 2026" },
   "series-zonal-bsas": { file: "File:ProCar 4000, Gran Premio FAD Medical 2023 (27).jpg", alt: "Carrera de Procar4000, Gran Premio FAD Medical 2023" },
 };
 
 const strip = (s) => String(s ?? "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
 
 fs.mkdirSync("public/img/commons", { recursive: true });
-const credits = {};
+// Solo baja las fotos que todavía no están en photos.json (o las que se pasen por argumento), para no tocar las existentes.
+const credits = JSON.parse(fs.readFileSync("src/data/photos.json", "utf8"));
+const only = process.argv.slice(2);
 for (const [key, { file, alt }] of Object.entries(PHOTOS)) {
+  if (only.length ? !only.includes(key) : credits[key]) continue;
   const api = `https://commons.wikimedia.org/w/api.php?action=query&titles=${encodeURIComponent(file)}&prop=imageinfo&iiprop=url|extmetadata|size&iiurlwidth=${WIDTH}&format=json`;
   const page = Object.values((await (await fetch(api, { headers: UA })).json()).query.pages)[0];
   const info = page.imageinfo[0];
