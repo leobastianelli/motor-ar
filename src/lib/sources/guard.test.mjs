@@ -87,3 +87,21 @@ test("protectSeason limpia los resultados imposibles y lo avisa", () => {
   assert.equal(events[0].sessions[0].results, undefined);
   assert.match(warnings[0], /todavía no se corrieron/);
 });
+
+test("un provisorio que no cambió (la fuente no se consultó) no cuenta como conservado", () => {
+  const prov = { status: "provisional", name: "Rally", url: "https://x" };
+  const kept = { ...ses("r", "General", [{ pos: 1, driver: "A" }, { pos: 2, driver: "B" }]), resultsSource: prov };
+  const previous = { events: [ev("rally-7", "rally-argentino", [kept])] };
+  assert.equal(protectSeason([ev("rally-7", "rally-argentino", [kept])], previous).warnings.length, 0);
+  const copy = structuredClone(kept);
+  assert.equal(protectSeason([ev("rally-7", "rally-argentino", [copy])], previous).warnings.length, 0);
+});
+
+test("un provisorio más corto que el anterior sigue sin pisarlo y avisa", () => {
+  const prov = { status: "provisional", name: "Rally", url: "https://x" };
+  const rows = [{ pos: 1, driver: "A" }, { pos: 2, driver: "B" }];
+  const previous = { events: [ev("rally-7", "rally-argentino", [{ ...ses("r", "General", rows), resultsSource: prov }])] };
+  const { events, warnings } = protectSeason([ev("rally-7", "rally-argentino", [{ ...ses("r", "General", rows.slice(0, 1)), resultsSource: prov }])], previous);
+  assert.deepEqual(events[0].sessions[0].results, rows);
+  assert.match(warnings[0], /1 sesiones/);
+});

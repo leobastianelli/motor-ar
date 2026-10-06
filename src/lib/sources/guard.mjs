@@ -40,7 +40,8 @@ export function keepSessionData(event, old) {
       target.results = before.results;
       if (before.resultsSource) target.resultsSource = before.resultsSource;
       restored++;
-    } else if (isProvisional(now) && reconcileSession(now, before) === before) {
+    } else if (isProvisional(now) && reconcileSession(now, before) === before && !sameResults(now, before)) {
+      // Si la fuente no se consultó (el Rally sólo se publica desde la PC), `now` es la misma sesión guardada: no hay nada que conservar.
       // Un resultado provisorio nunca pisa uno oficial (ni a un provisorio más completo): vale lo que ya se tenía.
       const target = sessions.find((s) => s.id === now.id);
       target.results = before.results;
@@ -52,6 +53,8 @@ export function keepSessionData(event, old) {
   sessions.sort((a, b) => Date.parse(a.start) - Date.parse(b.start));
   return { event: { ...event, sessions }, restored };
 }
+
+const sameResults = (a, b) => a === b || (JSON.stringify(a.results) === JSON.stringify(b.results) && JSON.stringify(a.resultsSource) === JSON.stringify(b.resultsSource));
 
 const TZ = "America/Argentina/Buenos_Aires";
 const dayFmt = new Intl.DateTimeFormat("en-CA", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit" });
