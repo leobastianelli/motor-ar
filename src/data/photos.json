@@ -159,6 +159,56 @@
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gran_Premio_Autojuntas_AUVO_2021_-_Ford_Ranger_TC_Pick_Up_de_Eddy_Mi%C3%B3n.jpg"
   },
+  "series-tcr-sa": {
+    "src": "/img/commons/series-tcr-sa.jpg",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Carrera de TCR South America en El Pinar, Uruguay, 2025",
+    "author": "NaBUru38",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2025_Gran_Premio_Racing_10W60_Lubricantes_Ancap_-_TCR_South_America_afternoon_race_05.jpg"
+  },
+  "series-imsa": {
+    "src": "/img/commons/series-imsa.jpg",
+    "width": 1920,
+    "height": 1277,
+    "alt": "El Acura ARX-06 de Meyer Shank Racing en las Six Hours de Watkins Glen, IMSA 2025",
+    "author": "SmackJam",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:MSR_GTP_60_WGI25_06.jpg"
+  },
+  "series-f3": {
+    "src": "/img/commons/series-f3.jpg",
+    "width": 1920,
+    "height": 1223,
+    "alt": "El auto Nº12 de Campos Racing en Imola, FIA Fórmula 3 2025",
+    "author": "Jen_ross83",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:FIA_F3_Imola_2025_Tsolov_(2).jpg"
+  },
+  "series-f4-italia": {
+    "src": "/img/commons/series-f4-italia.jpg",
+    "width": 1920,
+    "height": 1080,
+    "alt": "Los autos de Prema Racing en la grilla de la Fórmula 4 Italiana, Mugello 2025",
+    "author": "Legend7583",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Andrea_Dupe_F4_Prema.jpg"
+  },
+  "series-wec": {
+    "src": "/img/commons/series-wec.jpg",
+    "width": 1920,
+    "height": 1080,
+    "alt": "El Ferrari 499P Nº51 en las 6 Horas de Spa-Francorchamps del WEC, 2026",
+    "author": "MarcelX42",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2026_6_Hours_of_Spa-Francorchamps_Ferrari_AF_Corse_Ferrari_499P_No.51_(DSC08169).jpg"
+  },
   "series-zonal-bsas": {
     "src": "/img/commons/series-zonal-bsas.jpg",
     "width": 1920,
