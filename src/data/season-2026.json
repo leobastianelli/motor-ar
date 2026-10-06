@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T12:59:43.010Z",
+  "generatedAt": "2026-10-06T18:57:34.536Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -192314,7 +192314,7 @@
       ],
       "discrepancies": [
         "Fecha 4 Carrera 1, puesto 3: Wikipedia Tiago Pernía / Diego Ciantini, API Tiago Pernía",
-        "Puntos hasta la fecha 5 distintos: Carlos Javier Merlo 22 (Wikipedia) y 0 (API); Alberto Cattucci 6 (Wikipedia) y 0 (API)"
+        "Puntos hasta la fecha 5 distintos: Leonel Pernía 435 (Wikipedia) y 265 (API); Néstor Girolami 377 (Wikipedia) y 174 (API); Raphael Reis 372 (Wikipedia) y 227 (API); Tiago Pernía 304 (Wikipedia) y 155 (API); Juan Ángel Rosso 268 (Wikipedia) y 167 (API) y 18 más"
       ]
     },
     "rally-argentino": {
@@ -193301,7 +193301,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "Se conservaron resultados de 7 sesiones que las fuentes dejaron de traer"
-  ]
+  "failures": []
 }
