@@ -71,21 +71,24 @@
   "standings": {
     "tc": {
       "asOfRound": 12,
-      "source": "ACTC oficial (https://tiempos.actc.org.ar/copa-de-oro-tc/campeonato, tabla provisoria con 31 pilotos; se cargan los 13 clasificados por la etapa regular), Copa de Oro tras la fecha 12 en San Nicolás; coincide con Carburando (https://www.carburando.com/notas/asi-quedo-la-copa-de-oro-tras-la-final-del-tc-en-san-nicolas)",
+      "source": "ACTC oficial (https://tiempos.actc.org.ar/copa-de-oro-tc/campeonato, puntaje provisorio), Copa de Oro tras la fecha 12 en San Nicolás: los 13 clasificados por la etapa regular y los 3 que hoy entran por último minuto (Santero, Di Palma y Dianda; se define al cierre de la ventana). Los clasificados coinciden con Carburando (https://www.carburando.com/notas/asi-quedo-la-copa-de-oro-tras-la-final-del-tc-en-san-nicolas)",
       "rows": [
         { "pos": 1, "driver": "Facundo Chapur", "team": "Torino", "points": 82.5, "wins": 1 },
-        { "pos": 2, "driver": "Otto Fritzler", "team": "Mercedes-Benz", "points": 78, "wins": 1 },
-        { "pos": 3, "driver": "Agustín Canapino", "team": "Chevrolet", "points": 63, "wins": 1 },
-        { "pos": 4, "driver": "Ignacio Faín", "team": "Torino", "points": 59, "wins": 1 },
-        { "pos": 5, "driver": "Mariano Werner", "team": "Ford", "points": 59, "wins": 2 },
-        { "pos": 6, "driver": "Jonatan Castellano", "team": "Dodge", "points": 58.5, "wins": 0 },
-        { "pos": 7, "driver": "Christian Ledesma", "team": "Chevrolet", "points": 48, "wins": 0 },
-        { "pos": 8, "driver": "José Hernán Palazzo", "team": "Toyota", "points": 37, "wins": 0 },
-        { "pos": 9, "driver": "Matías Rossi", "team": "Toyota", "points": 36, "wins": 0 },
-        { "pos": 10, "driver": "Juan Pablo Gianini", "team": "Ford", "points": 31, "wins": 0 },
-        { "pos": 11, "driver": "José Manuel Urcera", "team": "Mercedes-Benz", "points": 30.5, "wins": 0 },
-        { "pos": 12, "driver": "Marcos Landa", "team": "Chevrolet", "points": 30, "wins": 0 },
-        { "pos": 13, "driver": "Mauricio Lambiris", "team": "Ford", "points": 20.5, "wins": 0 }
+        { "pos": 2, "driver": "Julián Santero", "team": "BMW", "points": 81 },
+        { "pos": 3, "driver": "Otto Fritzler", "team": "Mercedes-Benz", "points": 78, "wins": 1 },
+        { "pos": 4, "driver": "Luis José Di Palma", "team": "Toyota", "points": 69.5 },
+        { "pos": 5, "driver": "Agustín Canapino", "team": "Chevrolet", "points": 63, "wins": 1 },
+        { "pos": 6, "driver": "Ignacio Faín", "team": "Torino", "points": 59, "wins": 1 },
+        { "pos": 7, "driver": "Mariano Werner", "team": "Ford", "points": 59, "wins": 2 },
+        { "pos": 8, "driver": "Jonatan Castellano", "team": "Dodge", "points": 58.5, "wins": 0 },
+        { "pos": 9, "driver": "Marco Dianda", "team": "Dodge", "points": 55.5 },
+        { "pos": 10, "driver": "Christian Ledesma", "team": "Chevrolet", "points": 48, "wins": 0 },
+        { "pos": 11, "driver": "José Hernán Palazzo", "team": "Toyota", "points": 37, "wins": 0 },
+        { "pos": 12, "driver": "Matías Rossi", "team": "Toyota", "points": 36, "wins": 0 },
+        { "pos": 13, "driver": "Juan Pablo Gianini", "team": "Ford", "points": 31, "wins": 0 },
+        { "pos": 14, "driver": "José Manuel Urcera", "team": "Mercedes-Benz", "points": 30.5, "wins": 0 },
+        { "pos": 15, "driver": "Marcos Landa", "team": "Chevrolet", "points": 30, "wins": 0 },
+        { "pos": 16, "driver": "Mauricio Lambiris", "team": "Ford", "points": 20.5, "wins": 0 }
       ]
     },
     "tc2000": {
