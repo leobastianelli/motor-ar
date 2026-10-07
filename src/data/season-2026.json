@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T18:57:34.536Z",
+  "generatedAt": "2026-10-07T15:58:04.830Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -192313,8 +192313,7 @@
         "Carlos Okulovich"
       ],
       "discrepancies": [
-        "Fecha 4 Carrera 1, puesto 3: Wikipedia Tiago Pernía / Diego Ciantini, API Tiago Pernía",
-        "Puntos hasta la fecha 5 distintos: Leonel Pernía 435 (Wikipedia) y 265 (API); Néstor Girolami 377 (Wikipedia) y 174 (API); Raphael Reis 372 (Wikipedia) y 227 (API); Tiago Pernía 304 (Wikipedia) y 155 (API); Juan Ángel Rosso 268 (Wikipedia) y 167 (API) y 18 más"
+        "Puntos hasta la fecha 8 distintos: Carlos Javier Merlo 22 (Wikipedia) y 0 (API); Alberto Cattucci 6 (Wikipedia) y 0 (API)"
       ]
     },
     "rally-argentino": {
@@ -193175,23 +193174,23 @@
       "clases": {
         "clase1": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 7 de las 7 fechas que ésta cubre (por ejemplo, el auto 78 de la fecha 1: 1,5 contra 0 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "Faltan los resultados de la final de la fecha 8 (se corrió el 04/10): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
         },
         "clase2": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 7 de las 7 fechas que ésta cubre (por ejemplo, el auto 28 de la fecha 1: 9 contra 1,5 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "Faltan los resultados de la final de la fecha 8 (se corrió el 04/10): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
         },
         "clase3": {
           "status": "sin-campeonato",
-          "reason": "Faltan los resultados de la final de la fecha 7 (se corrió el 13/09): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
+          "reason": "Faltan los resultados de la final de las fechas 7 y 8 (la primera se corrió el 13/09): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
         },
         "tc4000": {
           "status": "sin-campeonato",
-          "reason": "Faltan los resultados de la final de la fecha 7 (se corrió el 13/09): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
+          "reason": "Faltan los resultados de la final de las fechas 7 y 8 (la primera se corrió el 13/09): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
         },
         "fiat600": {
           "status": "sin-campeonato",
-          "reason": "Faltan los resultados de la final de la fecha 7 (se corrió el 13/09): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
+          "reason": "Faltan los resultados de la final de las fechas 7 y 8 (la primera se corrió el 13/09): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
         }
       }
     },
