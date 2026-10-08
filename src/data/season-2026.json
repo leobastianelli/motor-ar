@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-07T15:58:04.830Z",
+  "generatedAt": "2026-10-08T16:00:49.599Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -186703,13 +186703,13 @@
       "id": "tcm-2026-10",
       "seriesId": "tc-mouras",
       "round": 10,
-      "name": "Fecha 10 · ",
+      "name": "Fecha 10 · La Plata",
       "circuit": {
-        "name": "A CONFIRMAR",
-        "city": "A CONFIRMAR",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -186727,13 +186727,13 @@
       "id": "tcpm-2026-10",
       "seriesId": "tc-pista-mouras",
       "round": 10,
-      "name": "Fecha 10 · ",
+      "name": "Fecha 10 · La Plata",
       "circuit": {
-        "name": "A CONFIRMAR",
-        "city": "A CONFIRMAR",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -186751,13 +186751,13 @@
       "id": "tcpk-2026-9",
       "seriesId": "tc-pick-up",
       "round": 9,
-      "name": "Fecha 9 · ",
+      "name": "Fecha 9 · La Plata",
       "circuit": {
-        "name": "A CONFIRMAR",
-        "city": "A CONFIRMAR",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -186775,13 +186775,13 @@
       "id": "tcppk-2026-9",
       "seriesId": "tc-pista-pick-up",
       "round": 9,
-      "name": "Fecha 9 · ",
+      "name": "Fecha 9 · La Plata",
       "circuit": {
-        "name": "A CONFIRMAR",
-        "city": "A CONFIRMAR",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -189002,14 +189002,14 @@
         "pos": 3,
         "driver": "Nicanor Santilli Pazos",
         "team": "",
-        "points": 386,
+        "points": 387,
         "wins": 1
       },
       {
         "pos": 4,
         "driver": "Benjamín Antón",
         "team": "",
-        "points": 384,
+        "points": 385,
         "wins": 2
       },
       {
@@ -189030,7 +189030,7 @@
         "pos": 7,
         "driver": "Santiago Biagi",
         "team": "",
-        "points": 358.5,
+        "points": 359.5,
         "wins": 2
       },
       {
@@ -189058,7 +189058,7 @@
         "pos": 11,
         "driver": "Eugenio Provens",
         "team": "",
-        "points": 335.5,
+        "points": 336.5,
         "wins": 1
       },
       {
@@ -189072,7 +189072,7 @@
         "pos": 13,
         "driver": "Gustavo (h) Tadei",
         "team": "",
-        "points": 280.5,
+        "points": 281.5,
         "wins": 0
       },
       {
@@ -189100,7 +189100,7 @@
         "pos": 17,
         "driver": "Juan Antonio Sandin",
         "team": "",
-        "points": 125,
+        "points": 126,
         "wins": 0
       },
       {
@@ -189112,16 +189112,16 @@
       },
       {
         "pos": 19,
-        "driver": "Braian Quevedo",
+        "driver": "Jaime Nicolas",
         "team": "",
         "points": 76,
         "wins": 0
       },
       {
         "pos": 20,
-        "driver": "Jaime Nicolas",
+        "driver": "Braian Quevedo",
         "team": "",
-        "points": 75,
+        "points": 76,
         "wins": 0
       }
     ],
