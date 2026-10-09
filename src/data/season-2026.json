@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T16:00:49.599Z",
+  "generatedAt": "2026-10-09T09:45:15.315Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -189002,7 +189002,7 @@
         "pos": 3,
         "driver": "Nicanor Santilli Pazos",
         "team": "",
-        "points": 387,
+        "points": 387.5,
         "wins": 1
       },
       {
@@ -189030,7 +189030,7 @@
         "pos": 7,
         "driver": "Santiago Biagi",
         "team": "",
-        "points": 359.5,
+        "points": 360,
         "wins": 2
       },
       {
@@ -189044,7 +189044,7 @@
         "pos": 9,
         "driver": "Manuel Borgert",
         "team": "",
-        "points": 354.5,
+        "points": 355,
         "wins": 0
       },
       {
@@ -189065,21 +189065,21 @@
         "pos": 12,
         "driver": "Juan Sebastian Gallo",
         "team": "",
-        "points": 335,
+        "points": 335.5,
         "wins": 1
       },
       {
         "pos": 13,
         "driver": "Gustavo (h) Tadei",
         "team": "",
-        "points": 281.5,
+        "points": 282,
         "wins": 0
       },
       {
         "pos": 14,
         "driver": "Juan Ignacio Maceira",
         "team": "",
-        "points": 275.5,
+        "points": 275,
         "wins": 0
       },
       {
@@ -189112,16 +189112,16 @@
       },
       {
         "pos": 19,
-        "driver": "Jaime Nicolas",
+        "driver": "Braian Quevedo",
         "team": "",
         "points": 76,
         "wins": 0
       },
       {
         "pos": 20,
-        "driver": "Braian Quevedo",
+        "driver": "Jaime Nicolas",
         "team": "",
-        "points": 76,
+        "points": 73.5,
         "wins": 0
       }
     ],
@@ -193266,9 +193266,11 @@
       "sessionsWithResults": 43
     },
     "f1Official": {
-      "requests": 0,
+      "requests": 1,
       "sessionsWithResults": 0,
-      "errors": []
+      "errors": [
+        "GP de Singapur · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -193300,5 +193302,8 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de Singapur · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+  ]
 }
