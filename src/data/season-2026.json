@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T13:30:02.010Z",
+  "generatedAt": "2026-10-09T14:15:41.205Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -186708,7 +186708,7 @@
             {
               "pos": 18,
               "number": "27",
-              "driver": "Nico Hülkenberg",
+              "driver": "Nico Hulkenberg",
               "code": "HUL",
               "team": "Audi",
               "gap": "+2.610"
@@ -186732,7 +186732,7 @@
             {
               "pos": 21,
               "number": "11",
-              "driver": "Sergio Pérez",
+              "driver": "Sergio Perez",
               "code": "PER",
               "team": "Cadillac",
               "gap": "+3.025"
@@ -186747,8 +186747,8 @@
             }
           ],
           "resultsSource": {
-            "name": "Fórmula 1 (oficial)",
-            "url": "https://www.formula1.com/en/results/2026/races/1296/singapore/practice/1"
+            "name": "OpenF1",
+            "url": "https://api.openf1.org/v1/session_result?session_key=11378"
           },
           "videos": [
             {
@@ -193435,12 +193435,12 @@
     },
     "openf1": {
       "sessions": 131,
-      "requests": 12,
-      "sessionsWithResults": 43
+      "requests": 14,
+      "sessionsWithResults": 44
     },
     "f1Official": {
-      "requests": 2,
-      "sessionsWithResults": 1,
+      "requests": 1,
+      "sessionsWithResults": 0,
       "errors": [
         "GP de Singapur · Clasificación sprint: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
       ]
@@ -193477,7 +193477,6 @@
   },
   "failures": [
     "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: HTTP 403 (text/html)",
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
     "F1 oficial: GP de Singapur · Clasificación sprint: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
   ]
 }
