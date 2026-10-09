@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T09:45:15.315Z",
+  "generatedAt": "2026-10-09T13:30:02.010Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -186567,7 +186567,195 @@
           "name": "Práctica 1",
           "start": "2026-10-09T08:30:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "1:32.274"
+            },
+            {
+              "pos": 2,
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "+0.198"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "+0.273"
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+0.499"
+            },
+            {
+              "pos": 5,
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+0.564"
+            },
+            {
+              "pos": 6,
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "+0.732"
+            },
+            {
+              "pos": 7,
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+1.251"
+            },
+            {
+              "pos": 8,
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "+1.449"
+            },
+            {
+              "pos": 9,
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "+1.764"
+            },
+            {
+              "pos": 10,
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "+1.881"
+            },
+            {
+              "pos": 11,
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+2.057"
+            },
+            {
+              "pos": 12,
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+2.202"
+            },
+            {
+              "pos": 13,
+              "number": "31",
+              "driver": "Esteban Ocon",
+              "code": "OCO",
+              "team": "Haas F1 Team",
+              "gap": "+2.207"
+            },
+            {
+              "pos": 14,
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+2.221"
+            },
+            {
+              "pos": 15,
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+2.377"
+            },
+            {
+              "pos": 16,
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "+2.462"
+            },
+            {
+              "pos": 17,
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "+2.531"
+            },
+            {
+              "pos": 18,
+              "number": "27",
+              "driver": "Nico Hülkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+2.610"
+            },
+            {
+              "pos": 19,
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "+2.709"
+            },
+            {
+              "pos": 20,
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "+2.994"
+            },
+            {
+              "pos": 21,
+              "number": "11",
+              "driver": "Sergio Pérez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "+3.025"
+            },
+            {
+              "pos": 22,
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "+3.346"
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 1 (oficial)",
+            "url": "https://www.formula1.com/en/results/2026/races/1296/singapore/practice/1"
+          },
+          "videos": [
+            {
+              "id": "NCmVXDwA74E",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-17-sprintqualifying",
@@ -193194,21 +193382,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -193266,15 +193439,15 @@
       "sessionsWithResults": 43
     },
     "f1Official": {
-      "requests": 1,
-      "sessionsWithResults": 0,
+      "requests": 2,
+      "sessionsWithResults": 1,
       "errors": [
-        "GP de Singapur · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+        "GP de Singapur · Clasificación sprint: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
       ]
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 5,
+      "sessions": 6,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
@@ -193303,7 +193476,8 @@
     }
   },
   "failures": [
+    "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: HTTP 403 (text/html)",
     "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
-    "F1 oficial: GP de Singapur · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+    "F1 oficial: GP de Singapur · Clasificación sprint: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
   ]
 }
