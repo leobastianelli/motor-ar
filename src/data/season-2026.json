@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T11:34:31.134Z",
+  "generatedAt": "2026-10-10T13:45:21.102Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -193933,6 +193933,7 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: HTTP 403 (text/html)"
+    "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: HTTP 403 (text/html)",
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
   ]
 }
