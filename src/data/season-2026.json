@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T10:43:53.082Z",
+  "generatedAt": "2026-10-10T11:34:31.134Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -186989,7 +186989,248 @@
           "name": "Sprint",
           "start": "2026-10-10T09:00:00Z",
           "timeKnown": true,
-          "durationMin": 45
+          "durationMin": 45,
+          "results": [
+            {
+              "pos": 1,
+              "positionText": "1",
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "39:48.162",
+              "points": 8
+            },
+            {
+              "pos": 2,
+              "positionText": "2",
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+2.591",
+              "points": 7
+            },
+            {
+              "pos": 3,
+              "positionText": "3",
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "+16.871",
+              "points": 6
+            },
+            {
+              "pos": 4,
+              "positionText": "4",
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+17.238",
+              "points": 5
+            },
+            {
+              "pos": 5,
+              "positionText": "5",
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "+20.632",
+              "points": 4
+            },
+            {
+              "pos": 6,
+              "positionText": "6",
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+24.321",
+              "points": 3
+            },
+            {
+              "pos": 7,
+              "positionText": "7",
+              "number": "27",
+              "driver": "Nico Hülkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+27.525",
+              "points": 2
+            },
+            {
+              "pos": 8,
+              "positionText": "8",
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "+28.272",
+              "points": 1
+            },
+            {
+              "pos": 9,
+              "positionText": "9",
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "+36.220",
+              "points": 0
+            },
+            {
+              "pos": 10,
+              "positionText": "10",
+              "number": "31",
+              "driver": "Esteban Ocon",
+              "code": "OCO",
+              "team": "Haas F1 Team",
+              "gap": "+37.640",
+              "points": 0
+            },
+            {
+              "pos": 11,
+              "positionText": "11",
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+50.464",
+              "points": 0
+            },
+            {
+              "pos": 12,
+              "positionText": "12",
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+52.467",
+              "points": 0
+            },
+            {
+              "pos": 13,
+              "positionText": "13",
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+55.792",
+              "points": 0
+            },
+            {
+              "pos": 14,
+              "positionText": "14",
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 15,
+              "positionText": "NC",
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 16,
+              "positionText": "NC",
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 17,
+              "positionText": "NC",
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 18,
+              "positionText": "NC",
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 19,
+              "positionText": "NC",
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 20,
+              "positionText": "NC",
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 21,
+              "positionText": "NC",
+              "number": "11",
+              "driver": "Sergio Pérez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 22,
+              "positionText": "NC",
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 1 (oficial)",
+            "url": "https://www.formula1.com/en/results/2026/races/1296/singapore/sprint-results"
+          },
+          "videos": [
+            {
+              "id": "Rf7NEIpm5vI",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-17-qualifying",
@@ -193658,14 +193899,12 @@
     },
     "f1Official": {
       "requests": 1,
-      "sessionsWithResults": 0,
-      "errors": [
-        "GP de Singapur · Sprint: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
-      ]
+      "sessionsWithResults": 1,
+      "errors": []
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 7,
+      "sessions": 8,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
@@ -193694,7 +193933,6 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "F1 oficial: GP de Singapur · Sprint: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+    "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: HTTP 403 (text/html)"
   ]
 }
