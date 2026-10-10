@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T09:58:47.341Z",
+  "generatedAt": "2026-10-10T10:43:53.082Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -193695,7 +193695,6 @@
   },
   "failures": [
     "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
     "F1 oficial: GP de Singapur · Sprint: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
   ]
 }
