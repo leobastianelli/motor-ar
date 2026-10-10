@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T16:15:12.357Z",
+  "generatedAt": "2026-10-10T18:45:27.073Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -193263,7 +193263,7 @@
           "winnerUrl": "https://campeones.com.ar/lucas-carabajal-festejo-en-el-zonda-su-primera-victoria-en-tc2000/"
         }
       ],
-      "campeonesFeed": true,
+      "campeonesFeed": false,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
