@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T14:35:32.734Z",
+  "generatedAt": "2026-10-10T14:59:00.078Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -187238,7 +187238,191 @@
           "name": "Clasificación",
           "start": "2026-10-10T13:00:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "1:31.373"
+            },
+            {
+              "pos": 2,
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "1:31.427"
+            },
+            {
+              "pos": 3,
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "1:31.496"
+            },
+            {
+              "pos": 4,
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "1:31.562"
+            },
+            {
+              "pos": 5,
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "1:31.712"
+            },
+            {
+              "pos": 6,
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "1:31.747"
+            },
+            {
+              "pos": 7,
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "1:31.860"
+            },
+            {
+              "pos": 8,
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "1:32.225"
+            },
+            {
+              "pos": 9,
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "1:32.369"
+            },
+            {
+              "pos": 10,
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "1:32.781"
+            },
+            {
+              "pos": 11,
+              "number": "27",
+              "driver": "Nico Hülkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "1:32.784"
+            },
+            {
+              "pos": 12,
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "1:32.908"
+            },
+            {
+              "pos": 13,
+              "number": "31",
+              "driver": "Esteban Ocon",
+              "code": "OCO",
+              "team": "Haas F1 Team",
+              "gap": "1:33.323"
+            },
+            {
+              "pos": 14,
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "1:33.526"
+            },
+            {
+              "pos": 15,
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "1:33.658"
+            },
+            {
+              "pos": 16,
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "1:33.787"
+            },
+            {
+              "pos": 17,
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "1:34.223"
+            },
+            {
+              "pos": 18,
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "1:34.289"
+            },
+            {
+              "pos": 19,
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "1:34.946"
+            },
+            {
+              "pos": 20,
+              "number": "11",
+              "driver": "Sergio Pérez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "1:35.123"
+            },
+            {
+              "pos": 21,
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "1:35.984"
+            },
+            {
+              "pos": 22,
+              "positionText": "RT",
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 1 (oficial)",
+            "url": "https://www.formula1.com/en/results/2026/races/1296/singapore/qualifying"
+          }
         },
         {
           "id": "f1-2026-17-race",
@@ -193899,10 +194083,8 @@
     },
     "f1Official": {
       "requests": 2,
-      "sessionsWithResults": 1,
-      "errors": [
-        "GP de Singapur · Clasificación: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
-      ]
+      "sessionsWithResults": 2,
+      "errors": []
     },
     "f1Youtube": {
       "scanned": 15,
@@ -193936,7 +194118,6 @@
   },
   "failures": [
     "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: HTTP 403 (text/html)",
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
-    "F1 oficial: GP de Singapur · Clasificación: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
   ]
 }
