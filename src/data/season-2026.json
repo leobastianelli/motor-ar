@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T15:25:06.180Z",
+  "generatedAt": "2026-10-10T16:15:12.357Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -187659,6 +187659,259 @@
           }
         },
         {
+          "id": "tn-2026-10-c3-practica2",
+          "kind": "practica",
+          "name": "2° Entrenamiento Clase 3",
+          "start": "2026-10-10T12:30:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3744743",
+              "start": "2026-10-10T12:30:00-03:00"
+            }
+          ],
+          "durationMin": 55,
+          "results": [
+            {
+              "pos": 1,
+              "number": "79",
+              "driver": "Facundo Chapur",
+              "team": "",
+              "gap": "1:34.468"
+            },
+            {
+              "pos": 2,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "",
+              "gap": "+0.242"
+            },
+            {
+              "pos": 3,
+              "number": "144",
+              "driver": "Leonel Pernia",
+              "team": "",
+              "gap": "+0.680"
+            },
+            {
+              "pos": 4,
+              "number": "111",
+              "driver": "Javier Merlo",
+              "team": "",
+              "gap": "+0.706"
+            },
+            {
+              "pos": 5,
+              "number": "88",
+              "driver": "Facundo Marques",
+              "team": "",
+              "gap": "+0.710"
+            },
+            {
+              "pos": 6,
+              "number": "83",
+              "driver": "Facundo Ardusso",
+              "team": "",
+              "gap": "+0.961"
+            },
+            {
+              "pos": 7,
+              "number": "19",
+              "driver": "Lucas Vicino",
+              "team": "",
+              "gap": "+1.074"
+            },
+            {
+              "pos": 8,
+              "number": "1",
+              "driver": "Julian Santero",
+              "team": "",
+              "gap": "+1.129"
+            },
+            {
+              "pos": 9,
+              "number": "9",
+              "driver": "Fabian Yannantuoni",
+              "team": "",
+              "gap": "+1.163"
+            },
+            {
+              "pos": 10,
+              "number": "7",
+              "driver": "Alfonso Domenech",
+              "team": "",
+              "gap": "+1.335"
+            },
+            {
+              "pos": 11,
+              "number": "238",
+              "driver": "Ever Franetovich",
+              "team": "",
+              "gap": "+1.363"
+            },
+            {
+              "pos": 12,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "",
+              "gap": "+1.391"
+            },
+            {
+              "pos": 13,
+              "number": "152",
+              "driver": "Thiago Martinez",
+              "team": "",
+              "gap": "+1.403"
+            },
+            {
+              "pos": 14,
+              "number": "123",
+              "driver": "Mauricio Lambiris",
+              "team": "",
+              "gap": "+1.439"
+            },
+            {
+              "pos": 15,
+              "number": "2",
+              "driver": "Jorge Barrio",
+              "team": "",
+              "gap": "+1.541"
+            },
+            {
+              "pos": 16,
+              "number": "231",
+              "driver": "Jose Manuel Urcera",
+              "team": "",
+              "gap": "+1.592"
+            },
+            {
+              "pos": 17,
+              "number": "89",
+              "driver": "Jeremias Olmedo",
+              "team": "",
+              "gap": "+1.613"
+            },
+            {
+              "pos": 18,
+              "number": "94",
+              "driver": "Gonzalo Antolin",
+              "team": "",
+              "gap": "+1.735"
+            },
+            {
+              "pos": 19,
+              "number": "46",
+              "driver": "Miguel Ciaurro",
+              "team": "",
+              "gap": "+1.848"
+            },
+            {
+              "pos": 20,
+              "number": "177",
+              "driver": "Leandro Gonzalez",
+              "team": "",
+              "gap": "+1.863"
+            },
+            {
+              "pos": 21,
+              "number": "11",
+              "driver": "Jonatan Castellano",
+              "team": "",
+              "gap": "+1.918"
+            },
+            {
+              "pos": 22,
+              "number": "16",
+              "driver": "Matias Munoz Marchesi",
+              "team": "",
+              "gap": "+2.016"
+            },
+            {
+              "pos": 23,
+              "number": "66",
+              "driver": "Adrian Percaz",
+              "team": "",
+              "gap": "+2.050"
+            },
+            {
+              "pos": 24,
+              "number": "18",
+              "driver": "Leonel Larrauri",
+              "team": "",
+              "gap": "+2.203"
+            },
+            {
+              "pos": 25,
+              "number": "96",
+              "driver": "Juan Cruz Benvenuti",
+              "team": "",
+              "gap": "+2.241"
+            },
+            {
+              "pos": 26,
+              "number": "72",
+              "driver": "Lucas Tedeschi",
+              "team": "",
+              "gap": "+2.290"
+            },
+            {
+              "pos": 27,
+              "number": "133",
+              "driver": "Valentin Aguirre",
+              "team": "",
+              "gap": "+2.664"
+            },
+            {
+              "pos": 28,
+              "number": "69",
+              "driver": "Ramiro Cano",
+              "team": "",
+              "gap": "+2.827"
+            },
+            {
+              "pos": 29,
+              "number": "77",
+              "driver": "Matias Cohen",
+              "team": "",
+              "gap": "+3.550"
+            },
+            {
+              "pos": 30,
+              "number": "86",
+              "driver": "Agustin Canapino",
+              "team": "",
+              "gap": "+6.838"
+            },
+            {
+              "pos": 31,
+              "number": "8",
+              "driver": "Joel Gassmann",
+              "team": "",
+              "gap": "+9.844"
+            },
+            {
+              "pos": 32,
+              "number": "27",
+              "driver": "Leandro Carducci",
+              "team": "",
+              "gap": "+21.573"
+            },
+            {
+              "pos": 33,
+              "number": "24",
+              "driver": "Sebastian Gomez",
+              "team": "",
+              "gap": "+27.719"
+            }
+          ],
+          "resultsSource": {
+            "name": "Speedhive · cronometraje (provisorio)",
+            "url": "https://speedhive.mylaps.com/sessions/12957575"
+          }
+        },
+        {
           "id": "tn-2026-10-c2",
           "kind": "final",
           "name": "Final Clase 2",
@@ -194322,7 +194575,7 @@
     "speedhiveTn": {
       "filledResults": 0,
       "realTimes": 0,
-      "addedSessions": 1,
+      "addedSessions": 2,
       "errors": []
     }
   },
