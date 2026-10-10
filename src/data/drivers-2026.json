@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T00:23:03.633Z",
+  "generatedAt": "2026-10-10T15:25:06.796Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -142,7 +142,7 @@
         "tn": "DS 3"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-08-02",
+      "lastSeen": "2026-10-10",
       "formerSlugs": [
         "agusta-n-bonomo"
       ]
@@ -593,7 +593,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20",
+      "lastSeen": "2026-10-10",
       "formerSlugs": [
         "andra-s-caldera-n"
       ]
@@ -1007,7 +1007,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "anton benjamin",
@@ -1130,7 +1130,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "brian massa",
@@ -1230,7 +1230,7 @@
         "tn": "Toyota Etios"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "camilo trappa",
@@ -2727,7 +2727,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "companc ezequiel perez",
@@ -3442,7 +3442,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "francisco frigeri",
@@ -3713,7 +3713,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-03-15",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "franco sanchez",
@@ -6159,7 +6159,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "emilio guazzeroni juan",
@@ -6237,7 +6237,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "chesta ignacio juan",
@@ -6581,7 +6581,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "juan martin trucco",
@@ -6937,6 +6937,24 @@
       },
       "firstSeen": "2026-04-19",
       "lastSeen": "2026-04-19"
+    },
+    {
+      "key": "julian modica",
+      "keys": [
+        "julian modica"
+      ],
+      "slug": "julian-modica",
+      "name": "Julián Módica",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "44"
+      },
+      "teams": {},
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "julian rebola",
@@ -8049,7 +8067,7 @@
         "tn": "Chevrolet Onix"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "luca marcelo",
@@ -8498,7 +8516,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-04-04",
-      "lastSeen": "2026-09-20",
+      "lastSeen": "2026-10-10",
       "formerSlugs": [
         "blasig-marta-n"
       ]
@@ -8600,7 +8618,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20",
+      "lastSeen": "2026-10-10",
       "formerSlugs": [
         "marta-n-leston"
       ]
@@ -8643,7 +8661,7 @@
         "tn": "Chevrolet Onix"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "martin serrano",
@@ -9582,7 +9600,7 @@
         "nuevo-car-show": "Toyota Etios"
       },
       "firstSeen": "2026-04-18",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "nahuel pizzi",
@@ -10335,7 +10353,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "curletto pablo",
@@ -11487,7 +11505,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "rubiolo santiago",
@@ -11565,7 +11583,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "estanguet santino",
@@ -11849,7 +11867,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20",
+      "lastSeen": "2026-10-10",
       "formerSlugs": [
         "sergio-ferna-ndez"
       ]
@@ -12049,7 +12067,7 @@
         "nuevo-car-show": "Chevrolet Corsa"
       },
       "firstSeen": "2026-03-06",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "martinez thiago",
@@ -12111,7 +12129,7 @@
         "tn": "Toyota Etios"
       },
       "firstSeen": "2026-05-02",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "pozner thomas",
@@ -12270,6 +12288,24 @@
       "lastSeen": "2026-05-17"
     },
     {
+      "key": "martin tomas",
+      "keys": [
+        "martin tomas"
+      ],
+      "slug": "tomas-martin",
+      "name": "Tomás Martín",
+      "aliases": [],
+      "series": [
+        "tn"
+      ],
+      "numbers": {
+        "tn": "232"
+      },
+      "teams": {},
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10"
+    },
+    {
       "key": "pellandino tomas",
       "keys": [
         "pellandino tomas",
@@ -12370,7 +12406,7 @@
         "tn": "Nissan March"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20",
+      "lastSeen": "2026-10-10",
       "formerSlugs": [
         "toma-s-vitar"
       ]
@@ -12651,7 +12687,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-09-20"
+      "lastSeen": "2026-10-10"
     },
     {
       "key": "valentino zane",

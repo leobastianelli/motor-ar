@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T14:59:00.078Z",
+  "generatedAt": "2026-10-10T15:25:06.180Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -187422,7 +187422,13 @@
           "resultsSource": {
             "name": "Fórmula 1 (oficial)",
             "url": "https://www.formula1.com/en/results/2026/races/1296/singapore/qualifying"
-          }
+          },
+          "videos": [
+            {
+              "id": "ofZbJdPaH3A",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-17-race",
@@ -187448,6 +187454,210 @@
         "province": ""
       },
       "sessions": [
+        {
+          "id": "tn-2026-10-c2-practica2",
+          "kind": "practica",
+          "name": "2° Entrenamiento Clase 2",
+          "start": "2026-10-10T11:00:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3744743",
+              "start": "2026-10-10T11:00:00-03:00"
+            }
+          ],
+          "durationMin": 55,
+          "results": [
+            {
+              "pos": 1,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "",
+              "gap": "1:38.062"
+            },
+            {
+              "pos": 2,
+              "number": "44",
+              "driver": "Julián Módica",
+              "team": "",
+              "gap": "+0.304"
+            },
+            {
+              "pos": 3,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "",
+              "gap": "+0.461"
+            },
+            {
+              "pos": 4,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "",
+              "gap": "+0.551"
+            },
+            {
+              "pos": 5,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "",
+              "gap": "+0.576"
+            },
+            {
+              "pos": 6,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "",
+              "gap": "+0.623"
+            },
+            {
+              "pos": 7,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "",
+              "gap": "+0.707"
+            },
+            {
+              "pos": 8,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "",
+              "gap": "+0.748"
+            },
+            {
+              "pos": 9,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "",
+              "gap": "+1.210"
+            },
+            {
+              "pos": 10,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "",
+              "gap": "+1.264"
+            },
+            {
+              "pos": 11,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "",
+              "gap": "+1.375"
+            },
+            {
+              "pos": 12,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "",
+              "gap": "+1.407"
+            },
+            {
+              "pos": 13,
+              "number": "232",
+              "driver": "Tomás Martín",
+              "team": "",
+              "gap": "+1.492"
+            },
+            {
+              "pos": 14,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "",
+              "gap": "+1.505"
+            },
+            {
+              "pos": 15,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "",
+              "gap": "+1.581"
+            },
+            {
+              "pos": 16,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "",
+              "gap": "+1.918"
+            },
+            {
+              "pos": 17,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "",
+              "gap": "+2.281"
+            },
+            {
+              "pos": 18,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "",
+              "gap": "+2.323"
+            },
+            {
+              "pos": 19,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "",
+              "gap": "+2.378"
+            },
+            {
+              "pos": 20,
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "",
+              "gap": "+2.776"
+            },
+            {
+              "pos": 21,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "",
+              "gap": "+3.109"
+            },
+            {
+              "pos": 22,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "",
+              "gap": "+3.180"
+            },
+            {
+              "pos": 23,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "",
+              "gap": "+3.378"
+            },
+            {
+              "pos": 24,
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "",
+              "gap": "+3.871"
+            },
+            {
+              "pos": 25,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "",
+              "gap": "+10.623"
+            },
+            {
+              "pos": 26,
+              "number": "92",
+              "driver": "Thomas Marchesin",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Speedhive · cronometraje (provisorio)",
+            "url": "https://speedhive.mylaps.com/sessions/12957056"
+          }
+        },
         {
           "id": "tn-2026-10-c2",
           "kind": "final",
@@ -194088,7 +194298,7 @@
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 8,
+      "sessions": 9,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
@@ -194112,12 +194322,11 @@
     "speedhiveTn": {
       "filledResults": 0,
       "realTimes": 0,
-      "addedSessions": 0,
+      "addedSessions": 1,
       "errors": []
     }
   },
   "failures": [
-    "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: HTTP 403 (text/html)",
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
+    "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: HTTP 403 (text/html)"
   ]
 }
