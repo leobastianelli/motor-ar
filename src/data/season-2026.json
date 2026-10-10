@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T13:45:21.102Z",
+  "generatedAt": "2026-10-10T14:35:32.734Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -193898,9 +193898,11 @@
       "sessionsWithResults": 45
     },
     "f1Official": {
-      "requests": 1,
+      "requests": 2,
       "sessionsWithResults": 1,
-      "errors": []
+      "errors": [
+        "GP de Singapur · Clasificación: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -193934,6 +193936,7 @@
   },
   "failures": [
     "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: HTTP 403 (text/html)",
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de Singapur · Clasificación: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
   ]
 }
