@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T16:35:17.783Z",
+  "generatedAt": "2026-10-11T17:55:10.172Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -189296,14 +189296,6 @@
           }
         },
         {
-          "id": "tn-2026-10-c3",
-          "kind": "final",
-          "name": "Final Clase 3",
-          "start": "2026-10-11T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 35
-        },
-        {
           "id": "tn-2026-10-c2",
           "kind": "final",
           "name": "Final Clase 2",
@@ -189500,6 +189492,259 @@
           "resultsSource": {
             "name": "Speedhive · cronometraje (provisorio)",
             "url": "https://speedhive.mylaps.com/sessions/12969260"
+          }
+        },
+        {
+          "id": "tn-2026-10-c3",
+          "kind": "final",
+          "name": "Final Clase 3",
+          "start": "2026-10-11T14:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 35,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3744743",
+              "start": "2026-10-11T14:00:00-03:00"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "111",
+              "driver": "Javier Merlo",
+              "team": "",
+              "gap": "32:49.444"
+            },
+            {
+              "pos": 2,
+              "number": "123",
+              "driver": "Mauricio Lambiris",
+              "team": "",
+              "gap": "+0.317"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Julian Santero",
+              "team": "",
+              "gap": "+0.536"
+            },
+            {
+              "pos": 4,
+              "number": "86",
+              "driver": "Agustin Canapino",
+              "team": "",
+              "gap": "+6.194"
+            },
+            {
+              "pos": 5,
+              "number": "2",
+              "driver": "Jorge Barrio",
+              "team": "",
+              "gap": "+6.479"
+            },
+            {
+              "pos": 6,
+              "number": "152",
+              "driver": "Thiago Martinez",
+              "team": "",
+              "gap": "+6.953"
+            },
+            {
+              "pos": 7,
+              "number": "83",
+              "driver": "Facundo Ardusso",
+              "team": "",
+              "gap": "+7.326"
+            },
+            {
+              "pos": 8,
+              "number": "19",
+              "driver": "Lucas Vicino",
+              "team": "",
+              "gap": "+8.414"
+            },
+            {
+              "pos": 9,
+              "number": "238",
+              "driver": "Ever Franetovich",
+              "team": "",
+              "gap": "+9.513"
+            },
+            {
+              "pos": 10,
+              "number": "79",
+              "driver": "Facundo Chapur",
+              "team": "",
+              "gap": "+11.536"
+            },
+            {
+              "pos": 11,
+              "number": "89",
+              "driver": "Jeremias Olmedo",
+              "team": "",
+              "gap": "+19.252"
+            },
+            {
+              "pos": 12,
+              "number": "9",
+              "driver": "Fabian Yannantuoni",
+              "team": "",
+              "gap": "+21.179"
+            },
+            {
+              "pos": 13,
+              "number": "7",
+              "driver": "Alfonso Domenech",
+              "team": "",
+              "gap": "+21.874"
+            },
+            {
+              "pos": 14,
+              "number": "231",
+              "driver": "Jose Manuel Urcera",
+              "team": "",
+              "gap": "+23.241"
+            },
+            {
+              "pos": 15,
+              "number": "24",
+              "driver": "Sebastian Gomez",
+              "team": "",
+              "gap": "+24.465"
+            },
+            {
+              "pos": 16,
+              "number": "133",
+              "driver": "Valentin Aguirre",
+              "team": "",
+              "gap": "+25.507"
+            },
+            {
+              "pos": 17,
+              "number": "16",
+              "driver": "Matias Munoz Marchesi",
+              "team": "",
+              "gap": "+27.695"
+            },
+            {
+              "pos": 18,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "",
+              "gap": "+28.058"
+            },
+            {
+              "pos": 19,
+              "number": "27",
+              "driver": "Leandro Carducci",
+              "team": "",
+              "gap": "+29.927"
+            },
+            {
+              "pos": 20,
+              "number": "69",
+              "driver": "Ramiro Cano",
+              "team": "",
+              "gap": "+33.579"
+            },
+            {
+              "pos": 21,
+              "number": "96",
+              "driver": "Juan Cruz Benvenuti",
+              "team": "",
+              "gap": "+33.998"
+            },
+            {
+              "pos": 22,
+              "number": "18",
+              "driver": "Leonel Larrauri",
+              "team": "",
+              "gap": "+37.760"
+            },
+            {
+              "pos": 23,
+              "number": "8",
+              "driver": "Joel Gassmann",
+              "team": "",
+              "gap": "+38.079"
+            },
+            {
+              "pos": 24,
+              "number": "72",
+              "driver": "Lucas Tedeschi",
+              "team": "",
+              "gap": "+41.291"
+            },
+            {
+              "pos": 25,
+              "number": "77",
+              "driver": "Matias Cohen",
+              "team": "",
+              "gap": "+1:56.646"
+            },
+            {
+              "pos": 26,
+              "number": "46",
+              "driver": "Miguel Ciaurro",
+              "team": "",
+              "gap": "+2 vueltas"
+            },
+            {
+              "pos": 27,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "",
+              "gap": "+3 vueltas"
+            },
+            {
+              "pos": 28,
+              "number": "144",
+              "driver": "Leonel Pernia",
+              "team": "",
+              "gap": "+6 vueltas"
+            },
+            {
+              "pos": 29,
+              "number": "94",
+              "driver": "Gonzalo Antolin",
+              "team": "",
+              "gap": "+6 vueltas"
+            },
+            {
+              "pos": 30,
+              "number": "88",
+              "driver": "Facundo Marques",
+              "team": "",
+              "gap": "+8 vueltas"
+            },
+            {
+              "pos": 31,
+              "number": "177",
+              "driver": "Leandro Gonzalez",
+              "team": "",
+              "gap": "+13 vueltas"
+            },
+            {
+              "pos": 32,
+              "number": "11",
+              "driver": "Jonatan Castellano",
+              "team": "",
+              "gap": "+13 vueltas"
+            },
+            {
+              "pos": 33,
+              "number": "66",
+              "driver": "Adrian Percaz",
+              "team": "",
+              "gap": "+15 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "Speedhive · cronometraje (provisorio)",
+            "url": "https://speedhive.mylaps.com/sessions/12970328"
           }
         }
       ],
@@ -196268,13 +196513,13 @@
       "skipped": "sin YOUTUBE_API_KEY"
     },
     "speedhiveTn": {
-      "filledResults": 1,
-      "realTimes": 1,
+      "filledResults": 2,
+      "realTimes": 2,
       "addedSessions": 10,
       "errors": []
     }
   },
   "failures": [
-    "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: HTTP 403 (text/html)"
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON"
   ]
 }
