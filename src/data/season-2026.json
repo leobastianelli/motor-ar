@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T13:39:54.643Z",
+  "generatedAt": "2026-10-11T14:25:47.540Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -187404,7 +187404,237 @@
           "name": "Carrera",
           "start": "2026-10-11T12:00:00Z",
           "timeKnown": true,
-          "durationMin": 120
+          "durationMin": 120,
+          "results": [
+            {
+              "pos": 1,
+              "positionText": "1",
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "1:42:00.785",
+              "points": 25
+            },
+            {
+              "pos": 2,
+              "positionText": "2",
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "+7.335",
+              "points": 18
+            },
+            {
+              "pos": 3,
+              "positionText": "3",
+              "number": "12",
+              "driver": "Andrea Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+24.573",
+              "points": 15
+            },
+            {
+              "pos": 4,
+              "positionText": "4",
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "+40.506",
+              "points": 12
+            },
+            {
+              "pos": 5,
+              "positionText": "5",
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+49.644",
+              "points": 10
+            },
+            {
+              "pos": 6,
+              "positionText": "6",
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+53.188",
+              "points": 8
+            },
+            {
+              "pos": 7,
+              "positionText": "7",
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "+81.666",
+              "points": 6
+            },
+            {
+              "pos": 8,
+              "positionText": "8",
+              "number": "27",
+              "driver": "Nico Hülkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+83.386",
+              "points": 4
+            },
+            {
+              "pos": 9,
+              "positionText": "9",
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "+84.677",
+              "points": 2
+            },
+            {
+              "pos": 10,
+              "positionText": "10",
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "+90.862",
+              "points": 1
+            },
+            {
+              "pos": 11,
+              "positionText": "11",
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "+1 vuelta",
+              "points": 0
+            },
+            {
+              "pos": 12,
+              "positionText": "12",
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+1 vuelta",
+              "points": 0
+            },
+            {
+              "pos": 13,
+              "positionText": "13",
+              "number": "31",
+              "driver": "Esteban Ocon",
+              "code": "OCO",
+              "team": "Haas F1 Team",
+              "gap": "+1 vuelta",
+              "points": 0
+            },
+            {
+              "pos": 14,
+              "positionText": "14",
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+1 vuelta",
+              "points": 0
+            },
+            {
+              "pos": 15,
+              "positionText": "15",
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+1 vuelta",
+              "points": 0
+            },
+            {
+              "pos": 16,
+              "positionText": "16",
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+1 vuelta",
+              "points": 0
+            },
+            {
+              "pos": 17,
+              "positionText": "17",
+              "number": "11",
+              "driver": "Sergio Pérez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "+2 vueltas",
+              "points": 0
+            },
+            {
+              "pos": 18,
+              "positionText": "18",
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 19,
+              "positionText": "19",
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "+3 vueltas",
+              "points": 0
+            },
+            {
+              "pos": 20,
+              "positionText": "NC",
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 21,
+              "positionText": "NC",
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            },
+            {
+              "pos": 22,
+              "positionText": "NC",
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "",
+              "points": 0,
+              "status": "Abandonó"
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 1 (oficial)",
+            "url": "https://www.formula1.com/en/results/2026/races/1296/singapore/race-result"
+          }
         }
       ],
       "source": "Jolpica-F1"
@@ -188644,6 +188874,218 @@
           "resultsSource": {
             "name": "Speedhive · cronometraje (provisorio)",
             "url": "https://speedhive.mylaps.com/sessions/12966956"
+          }
+        },
+        {
+          "id": "tn-2026-10-c2-serie2",
+          "kind": "serie",
+          "name": "Serie 2 Clase 2",
+          "start": "2026-10-11T10:20:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3744743",
+              "start": "2026-10-11T10:20:00-03:00"
+            }
+          ],
+          "durationMin": 35,
+          "results": [
+            {
+              "pos": 1,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "",
+              "gap": "8:18.637"
+            },
+            {
+              "pos": 2,
+              "number": "44",
+              "driver": "Julián Módica",
+              "team": "",
+              "gap": "+2.075"
+            },
+            {
+              "pos": 3,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "",
+              "gap": "+3.817"
+            },
+            {
+              "pos": 4,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "",
+              "gap": "+6.962"
+            },
+            {
+              "pos": 5,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "",
+              "gap": "+9.127"
+            },
+            {
+              "pos": 6,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "",
+              "gap": "+11.148"
+            },
+            {
+              "pos": 7,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "",
+              "gap": "+11.451"
+            },
+            {
+              "pos": 8,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "",
+              "gap": "+13.517"
+            },
+            {
+              "pos": 9,
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "",
+              "gap": "+14.263"
+            },
+            {
+              "pos": 10,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "",
+              "gap": "+15.188"
+            },
+            {
+              "pos": 11,
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "",
+              "gap": "+17.663"
+            },
+            {
+              "pos": 12,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "",
+              "gap": "+2 vueltas"
+            },
+            {
+              "pos": 13,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Speedhive · cronometraje (provisorio)",
+            "url": "https://speedhive.mylaps.com/sessions/12967118"
+          }
+        },
+        {
+          "id": "tn-2026-10-c3-serie1",
+          "kind": "serie",
+          "name": "Serie 1 Clase 3",
+          "start": "2026-10-11T10:55:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3744743",
+              "start": "2026-10-11T10:55:00-03:00"
+            }
+          ],
+          "durationMin": 35,
+          "results": [
+            {
+              "pos": 1,
+              "number": "111",
+              "driver": "Javier Merlo",
+              "team": "",
+              "gap": "8:00.387"
+            },
+            {
+              "pos": 2,
+              "number": "144",
+              "driver": "Leonel Pernia",
+              "team": "",
+              "gap": "+0.734"
+            },
+            {
+              "pos": 3,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "",
+              "gap": "+2.694"
+            },
+            {
+              "pos": 4,
+              "number": "19",
+              "driver": "Lucas Vicino",
+              "team": "",
+              "gap": "+11.024"
+            },
+            {
+              "pos": 5,
+              "number": "231",
+              "driver": "Jose Manuel Urcera",
+              "team": "",
+              "gap": "+11.784"
+            },
+            {
+              "pos": 6,
+              "number": "16",
+              "driver": "Matias Munoz Marchesi",
+              "team": "",
+              "gap": "+14.141"
+            },
+            {
+              "pos": 7,
+              "number": "69",
+              "driver": "Ramiro Cano",
+              "team": "",
+              "gap": "+17.271"
+            },
+            {
+              "pos": 8,
+              "number": "96",
+              "driver": "Juan Cruz Benvenuti",
+              "team": "",
+              "gap": "+17.353"
+            },
+            {
+              "pos": 9,
+              "number": "18",
+              "driver": "Leonel Larrauri",
+              "team": "",
+              "gap": "+19.562"
+            },
+            {
+              "pos": 10,
+              "number": "8",
+              "driver": "Joel Gassmann",
+              "team": "",
+              "gap": "+4 vueltas"
+            },
+            {
+              "pos": 11,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "",
+              "gap": "+5 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "Speedhive · cronometraje (provisorio)",
+            "url": "https://speedhive.mylaps.com/sessions/12967292"
           }
         },
         {
@@ -195280,11 +195722,9 @@
       "sessionsWithResults": 45
     },
     "f1Official": {
-      "requests": 1,
+      "requests": 0,
       "sessionsWithResults": 0,
-      "errors": [
-        "GP de Singapur · Carrera: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
-      ]
+      "errors": []
     },
     "f1Youtube": {
       "scanned": 15,
@@ -195312,14 +195752,13 @@
     "speedhiveTn": {
       "filledResults": 0,
       "realTimes": 0,
-      "addedSessions": 6,
+      "addedSessions": 8,
       "errors": []
     }
   },
   "failures": [
     "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
-    "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: HTTP 403 (text/html)",
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
-    "F1 oficial: GP de Singapur · Carrera: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+    "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: fetch failed",
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
   ]
 }
