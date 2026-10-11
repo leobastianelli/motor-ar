@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T09:35:03.107Z",
+  "generatedAt": "2026-10-11T13:39:55.333Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -1007,7 +1007,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "anton benjamin",
@@ -1230,7 +1230,7 @@
         "tn": "Toyota Etios"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "camilo trappa",
@@ -3442,7 +3442,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "francisco frigeri",
@@ -3713,7 +3713,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-03-15",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "franco sanchez",
@@ -4010,7 +4010,7 @@
         "tn": "Chevrolet Onix"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "gaston martinez minetti",
@@ -6237,7 +6237,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "chesta ignacio juan",
@@ -8516,7 +8516,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-04-04",
-      "lastSeen": "2026-10-10",
+      "lastSeen": "2026-10-11",
       "formerSlugs": [
         "blasig-marta-n"
       ]
@@ -10353,7 +10353,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "curletto pablo",
@@ -11505,7 +11505,7 @@
         "tn": "Toyota Yaris"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "rubiolo santiago",
@@ -11867,7 +11867,7 @@
         "tn": "Peugeot 208"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-10",
+      "lastSeen": "2026-10-11",
       "formerSlugs": [
         "sergio-ferna-ndez"
       ]
@@ -12067,7 +12067,7 @@
         "nuevo-car-show": "Chevrolet Corsa"
       },
       "firstSeen": "2026-03-06",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "martinez thiago",
@@ -12303,7 +12303,7 @@
       },
       "teams": {},
       "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-10"
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "pellandino tomas",
@@ -12406,7 +12406,7 @@
         "tn": "Nissan March"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-10",
+      "lastSeen": "2026-10-11",
       "formerSlugs": [
         "toma-s-vitar"
       ]
