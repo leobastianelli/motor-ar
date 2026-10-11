@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T14:25:47.540Z",
+  "generatedAt": "2026-10-11T15:14:56.014Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -187430,7 +187430,7 @@
               "pos": 3,
               "positionText": "3",
               "number": "12",
-              "driver": "Andrea Kimi Antonelli",
+              "driver": "Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
               "gap": "+24.573",
@@ -187634,7 +187634,13 @@
           "resultsSource": {
             "name": "Fórmula 1 (oficial)",
             "url": "https://www.formula1.com/en/results/2026/races/1296/singapore/race-result"
-          }
+          },
+          "videos": [
+            {
+              "id": "ohgEehLtucc",
+              "kind": "highlights"
+            }
+          ]
         }
       ],
       "source": "Jolpica-F1"
@@ -189086,6 +189092,211 @@
           "resultsSource": {
             "name": "Speedhive · cronometraje (provisorio)",
             "url": "https://speedhive.mylaps.com/sessions/12967292"
+          }
+        },
+        {
+          "id": "tn-2026-10-c3-serie2",
+          "kind": "serie",
+          "name": "Serie 2 Clase 3",
+          "start": "2026-10-11T11:20:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3744743",
+              "start": "2026-10-11T11:20:00-03:00"
+            }
+          ],
+          "durationMin": 35,
+          "results": [
+            {
+              "pos": 1,
+              "number": "86",
+              "driver": "Agustin Canapino",
+              "team": "",
+              "gap": "8:08.967"
+            },
+            {
+              "pos": 2,
+              "number": "2",
+              "driver": "Jorge Barrio",
+              "team": "",
+              "gap": "+0.621"
+            },
+            {
+              "pos": 3,
+              "number": "79",
+              "driver": "Facundo Chapur",
+              "team": "",
+              "gap": "+0.964"
+            },
+            {
+              "pos": 4,
+              "number": "24",
+              "driver": "Sebastian Gomez",
+              "team": "",
+              "gap": "+1.599"
+            },
+            {
+              "pos": 5,
+              "number": "27",
+              "driver": "Leandro Carducci",
+              "team": "",
+              "gap": "+2.409"
+            },
+            {
+              "pos": 6,
+              "number": "88",
+              "driver": "Facundo Marques",
+              "team": "",
+              "gap": "+2.638"
+            },
+            {
+              "pos": 7,
+              "number": "11",
+              "driver": "Jonatan Castellano",
+              "team": "",
+              "gap": "+4.834"
+            },
+            {
+              "pos": 8,
+              "number": "7",
+              "driver": "Alfonso Domenech",
+              "team": "",
+              "gap": "+6.724"
+            },
+            {
+              "pos": 9,
+              "number": "77",
+              "driver": "Matias Cohen",
+              "team": "",
+              "gap": "+6.902"
+            },
+            {
+              "pos": 10,
+              "number": "177",
+              "driver": "Leandro Gonzalez",
+              "team": "",
+              "gap": "+7.080"
+            },
+            {
+              "pos": 11,
+              "number": "72",
+              "driver": "Lucas Tedeschi",
+              "team": "",
+              "gap": "+7.351"
+            },
+            {
+              "pos": 12,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Speedhive · cronometraje (provisorio)",
+            "url": "https://speedhive.mylaps.com/sessions/12967430"
+          }
+        },
+        {
+          "id": "tn-2026-10-c3-serie3",
+          "kind": "serie",
+          "name": "Serie 3 Clase 3",
+          "start": "2026-10-11T11:45:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Speedhive (cronometraje)",
+              "url": "https://speedhive.mylaps.com/events/3744743",
+              "start": "2026-10-11T11:45:00-03:00"
+            }
+          ],
+          "durationMin": 35,
+          "results": [
+            {
+              "pos": 1,
+              "number": "123",
+              "driver": "Mauricio Lambiris",
+              "team": "",
+              "gap": "8:02.770"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Julian Santero",
+              "team": "",
+              "gap": "+1.484"
+            },
+            {
+              "pos": 3,
+              "number": "238",
+              "driver": "Ever Franetovich",
+              "team": "",
+              "gap": "+2.275"
+            },
+            {
+              "pos": 4,
+              "number": "83",
+              "driver": "Facundo Ardusso",
+              "team": "",
+              "gap": "+4.661"
+            },
+            {
+              "pos": 5,
+              "number": "152",
+              "driver": "Thiago Martinez",
+              "team": "",
+              "gap": "+5.977"
+            },
+            {
+              "pos": 6,
+              "number": "89",
+              "driver": "Jeremias Olmedo",
+              "team": "",
+              "gap": "+7.361"
+            },
+            {
+              "pos": 7,
+              "number": "133",
+              "driver": "Valentin Aguirre",
+              "team": "",
+              "gap": "+15.787"
+            },
+            {
+              "pos": 8,
+              "number": "46",
+              "driver": "Miguel Ciaurro",
+              "team": "",
+              "gap": "+17.463"
+            },
+            {
+              "pos": 9,
+              "number": "9",
+              "driver": "Fabian Yannantuoni",
+              "team": "",
+              "gap": "+17.580"
+            },
+            {
+              "pos": 10,
+              "number": "66",
+              "driver": "Adrian Percaz",
+              "team": "",
+              "gap": "+19.423"
+            },
+            {
+              "pos": 11,
+              "number": "94",
+              "driver": "Gonzalo Antolin",
+              "team": "",
+              "gap": "+1:41.148"
+            }
+          ],
+          "resultsSource": {
+            "name": "Speedhive · cronometraje (provisorio)",
+            "url": "https://speedhive.mylaps.com/sessions/12968015"
           }
         },
         {
@@ -195722,13 +195933,13 @@
       "sessionsWithResults": 45
     },
     "f1Official": {
-      "requests": 0,
-      "sessionsWithResults": 0,
+      "requests": 1,
+      "sessionsWithResults": 1,
       "errors": []
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 9,
+      "sessions": 10,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
@@ -195752,13 +195963,11 @@
     "speedhiveTn": {
       "filledResults": 0,
       "realTimes": 0,
-      "addedSessions": 8,
+      "addedSessions": 10,
       "errors": []
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
-    "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: fetch failed",
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON"
   ]
 }
