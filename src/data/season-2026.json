@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T17:55:10.172Z",
+  "generatedAt": "2026-10-12T13:52:00.343Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -187655,11 +187655,193 @@
       },
       "sessions": [
         {
-          "id": "tn-2026-10-c2-practica2",
+          "id": "tn-2026-10-c2-2-entrenamiento-clase-2",
           "kind": "practica",
           "name": "2° Entrenamiento Clase 2",
           "start": "2026-10-10T11:00:00-03:00",
           "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "1:38.062"
+            },
+            {
+              "pos": 2,
+              "number": "44",
+              "driver": "Julián Modica",
+              "team": "Toyota Etios",
+              "gap": "+0.304"
+            },
+            {
+              "pos": 3,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+0.461"
+            },
+            {
+              "pos": 4,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+0.551"
+            },
+            {
+              "pos": 5,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+0.576"
+            },
+            {
+              "pos": 6,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+0.623"
+            },
+            {
+              "pos": 7,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+0.707"
+            },
+            {
+              "pos": 8,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+0.748"
+            },
+            {
+              "pos": 9,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+1.210"
+            },
+            {
+              "pos": 10,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+1.264"
+            },
+            {
+              "pos": 11,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+1.375"
+            },
+            {
+              "pos": 12,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+1.407"
+            },
+            {
+              "pos": 13,
+              "number": "232",
+              "driver": "Martín Tomás",
+              "team": "Chevrolet Onix",
+              "gap": "+1.492"
+            },
+            {
+              "pos": 14,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "+1.505"
+            },
+            {
+              "pos": 15,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "Ford F. Kinetic",
+              "gap": "+1.581"
+            },
+            {
+              "pos": 16,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+1.918"
+            },
+            {
+              "pos": 17,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+2.281"
+            },
+            {
+              "pos": 18,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Yaris",
+              "gap": "+2.323"
+            },
+            {
+              "pos": 19,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+2.378"
+            },
+            {
+              "pos": 20,
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "DS 3",
+              "gap": "+2.776"
+            },
+            {
+              "pos": 21,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "+3.109"
+            },
+            {
+              "pos": 22,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+3.180"
+            },
+            {
+              "pos": 23,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+3.378"
+            },
+            {
+              "pos": 24,
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "Toyota Etios",
+              "gap": "+3.871"
+            },
+            {
+              "pos": 25,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+10.623"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-10-11"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -187667,203 +187849,882 @@
               "url": "https://speedhive.mylaps.com/events/3744743",
               "start": "2026-10-10T11:00:00-03:00"
             }
-          ],
-          "durationMin": 55,
+          ]
+        },
+        {
+          "id": "tn-2026-10-c2-1-entrenamiento-clase-2",
+          "kind": "practica",
+          "name": "1° Entrenamiento Clase 2",
+          "start": "2026-10-10T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
           "results": [
             {
               "pos": 1,
-              "number": "177",
-              "driver": "Tomas Vitar",
-              "team": "",
-              "gap": "1:38.062"
+              "number": "232",
+              "driver": "Martín Tomás",
+              "team": "Chevrolet Onix",
+              "gap": "1:38.377"
             },
             {
               "pos": 2,
               "number": "44",
-              "driver": "Julián Módica",
-              "team": "",
-              "gap": "+0.304"
+              "driver": "Julián Modica",
+              "team": "Toyota Etios",
+              "gap": "+0.207"
             },
             {
               "pos": 3,
-              "number": "2",
-              "driver": "Francisco Coltrinari",
-              "team": "",
-              "gap": "+0.461"
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "+0.287"
             },
             {
               "pos": 4,
-              "number": "151",
-              "driver": "Exequiel Bastidas",
-              "team": "",
-              "gap": "+0.551"
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+0.388"
             },
             {
               "pos": 5,
-              "number": "95",
-              "driver": "Santino Balerini",
-              "team": "",
-              "gap": "+0.576"
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+0.496"
             },
             {
               "pos": 6,
               "number": "86",
               "driver": "Martin Leston",
-              "team": "",
-              "gap": "+0.623"
+              "team": "Peugeot 208",
+              "gap": "+0.519"
             },
             {
               "pos": 7,
-              "number": "70",
-              "driver": "Juan Ignacio Canela",
-              "team": "",
-              "gap": "+0.707"
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+0.620"
             },
             {
               "pos": 8,
-              "number": "79",
-              "driver": "Andres Calderon",
-              "team": "",
-              "gap": "+0.748"
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "+0.690"
             },
             {
               "pos": 9,
-              "number": "98",
-              "driver": "Braian Reinoso",
-              "team": "",
-              "gap": "+1.210"
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+0.723"
             },
             {
               "pos": 10,
-              "number": "14",
-              "driver": "Juan Eduardo Kreitz",
-              "team": "",
-              "gap": "+1.264"
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+0.838"
             },
             {
               "pos": 11,
-              "number": "89",
-              "driver": "Valentino Quattrocchi",
-              "team": "",
-              "gap": "+1.375"
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+1.057"
             },
             {
               "pos": 12,
-              "number": "25",
-              "driver": "Santiago Robledo",
-              "team": "",
-              "gap": "+1.407"
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+1.143"
             },
             {
               "pos": 13,
-              "number": "232",
-              "driver": "Tomás Martín",
-              "team": "",
-              "gap": "+1.492"
+              "number": "92",
+              "driver": "Thomas Marchesin",
+              "team": "Toyota Etios",
+              "gap": "+1.206"
             },
             {
               "pos": 14,
-              "number": "97",
-              "driver": "Bruno Pace",
-              "team": "",
-              "gap": "+1.505"
-            },
-            {
-              "pos": 15,
-              "number": "221",
-              "driver": "Thiago Ferrari",
-              "team": "",
-              "gap": "+1.581"
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+1.365"
             },
             {
               "pos": 16,
-              "number": "43",
-              "driver": "Marcelo Guevara",
-              "team": "",
-              "gap": "+1.918"
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "+1.425"
             },
             {
               "pos": 17,
-              "number": "174",
-              "driver": "Sergio Fernandez",
-              "team": "",
-              "gap": "+2.281"
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Yaris",
+              "gap": "+1.578"
             },
             {
               "pos": 18,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+1.650"
+            },
+            {
+              "pos": 19,
+              "number": "155",
+              "driver": "Gaston Iansa",
+              "team": "Peugeot 208",
+              "gap": "+1.880"
+            },
+            {
+              "pos": 20,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+1.961"
+            },
+            {
+              "pos": 21,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+2.095"
+            },
+            {
+              "pos": 22,
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "DS 3",
+              "gap": "+2.246"
+            },
+            {
+              "pos": 23,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+2.547"
+            },
+            {
+              "pos": 24,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+2.567"
+            },
+            {
+              "pos": 25,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+3.252"
+            },
+            {
+              "pos": 26,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+6.142"
+            },
+            {
+              "pos": 27,
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "Toyota Etios",
+              "gap": "+6.193"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-10-11"
+          }
+        },
+        {
+          "id": "tn-2026-10-c3-1-entrenamiento-clase-3",
+          "kind": "practica",
+          "name": "1° Entrenamiento Clase 3",
+          "start": "2026-10-10T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "123",
+              "driver": "Mauricio Lambiris",
+              "team": "Ford Focus",
+              "gap": "1:35.030"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Julian Santero",
+              "team": "VW Virtus",
+              "gap": "+0.028"
+            },
+            {
+              "pos": 3,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "VW Vento GLI",
+              "gap": "+0.134"
+            },
+            {
+              "pos": 4,
+              "number": "79",
+              "driver": "Facundo Chapur",
+              "team": "Honda Civic",
+              "gap": "+0.375"
+            },
+            {
+              "pos": 5,
+              "number": "111",
+              "driver": "Javier Merlo",
+              "team": "VW Virtus",
+              "gap": "+0.737"
+            },
+            {
+              "pos": 6,
+              "number": "83",
+              "driver": "Facundo Ardusso",
+              "team": "Toyota Corolla",
+              "gap": "+0.743"
+            },
+            {
+              "pos": 7,
+              "number": "9",
+              "driver": "Fabian Yannantuoni",
+              "team": "Ford Focus",
+              "gap": "+0.880"
+            },
+            {
+              "pos": 8,
+              "number": "2",
+              "driver": "Jorge Barrio",
+              "team": "Chevrolet Cruze",
+              "gap": "+0.950"
+            },
+            {
+              "pos": 9,
+              "number": "238",
+              "driver": "Ever Franetovich",
+              "team": "Ford Focus",
+              "gap": "+1.012"
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Facundo Marques",
+              "team": "Ford Focus",
+              "gap": "+1.092"
+            },
+            {
+              "pos": 11,
+              "number": "7",
+              "driver": "Alfonso Domenech",
+              "team": "Honda Civic",
+              "gap": "+1.093"
+            },
+            {
+              "pos": 12,
+              "number": "86",
+              "driver": "Agustin Canapino",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.134"
+            },
+            {
+              "pos": 13,
+              "number": "144",
+              "driver": "Leonel Pernia",
+              "team": "Ford Focus",
+              "gap": "+1.317"
+            },
+            {
+              "pos": 14,
+              "number": "231",
+              "driver": "Jose Manuel Urcera",
+              "team": "Honda Civic",
+              "gap": "+1.341"
+            },
+            {
+              "pos": 15,
+              "number": "94",
+              "driver": "Gonzalo Antolin",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.366"
+            },
+            {
+              "pos": 16,
+              "number": "27",
+              "driver": "Leandro Carducci",
+              "team": "Ford Focus",
+              "gap": "+1.480"
+            },
+            {
+              "pos": 17,
+              "number": "16",
+              "driver": "Matias Munoz Marchesi",
+              "team": "VW Vento",
+              "gap": "+1.615"
+            },
+            {
+              "pos": 18,
+              "number": "24",
+              "driver": "Sebastian Gomez",
+              "team": "VW Vento GLI",
+              "gap": "+1.688"
+            },
+            {
+              "pos": 19,
+              "number": "19",
+              "driver": "Lucas Vicino",
+              "team": "Toyota Corolla",
+              "gap": "+1.748"
+            },
+            {
+              "pos": 20,
+              "number": "177",
+              "driver": "Leandro Gonzalez",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.763"
+            },
+            {
+              "pos": 21,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.812"
+            },
+            {
+              "pos": 22,
+              "number": "72",
+              "driver": "Lucas Tedeschi",
+              "team": "Ford Focus",
+              "gap": "+1.878"
+            },
+            {
+              "pos": 23,
+              "number": "69",
+              "driver": "Ramiro Cano",
+              "team": "Ford Focus",
+              "gap": "+1.944"
+            },
+            {
+              "pos": 24,
+              "number": "18",
+              "driver": "Leonel Larrauri",
+              "team": "Honda Civic",
+              "gap": "+2.036"
+            },
+            {
+              "pos": 25,
+              "number": "66",
+              "driver": "Adrian Percaz",
+              "team": "Ford Focus",
+              "gap": "+2.057"
+            },
+            {
+              "pos": 26,
+              "number": "133",
+              "driver": "Valentin Aguirre",
+              "team": "Toyota Corolla",
+              "gap": "+2.185"
+            },
+            {
+              "pos": 27,
+              "number": "152",
+              "driver": "Thiago Martinez",
+              "team": "Ford Focus",
+              "gap": "+2.225"
+            },
+            {
+              "pos": 28,
+              "number": "8",
+              "driver": "Joel Gassmann",
+              "team": "Chevrolet Cruze",
+              "gap": "+2.295"
+            },
+            {
+              "pos": 29,
+              "number": "89",
+              "driver": "Jeremias Olmedo",
+              "team": "Chevrolet Cruze",
+              "gap": "+2.332"
+            },
+            {
+              "pos": 30,
+              "number": "11",
+              "driver": "Jonatan Castellano",
+              "team": "Chevrolet Cruze",
+              "gap": "+2.524"
+            },
+            {
+              "pos": 31,
+              "number": "46",
+              "driver": "Miguel Ciaurro",
+              "team": "VW Virtus",
+              "gap": "+2.698"
+            },
+            {
+              "pos": 32,
+              "number": "96",
+              "driver": "Juan Cruz Benvenuti",
+              "team": "VW Vento GLI",
+              "gap": "+3.166"
+            },
+            {
+              "pos": 33,
+              "number": "77",
+              "driver": "Matias Cohen",
+              "team": "VW Virtus",
+              "gap": "+3.367"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c3/2026-10-11"
+          }
+        },
+        {
+          "id": "tn-2026-10-c2-clasificacio-n-clase-2",
+          "kind": "clasificacion",
+          "name": "Clasificación Clase 2",
+          "start": "2026-10-10T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "1:38.398"
+            },
+            {
+              "pos": 2,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+0.008"
+            },
+            {
+              "pos": 3,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "Ford F. Kinetic",
+              "gap": "+0.231"
+            },
+            {
+              "pos": 4,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+0.280"
+            },
+            {
+              "pos": 5,
+              "number": "44",
+              "driver": "Julián Modica",
+              "team": "Toyota Etios",
+              "gap": "+0.397"
+            },
+            {
+              "pos": 6,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+0.607"
+            },
+            {
+              "pos": 7,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+0.691"
+            },
+            {
+              "pos": 8,
               "number": "117",
               "driver": "Pablo Collazo",
-              "team": "",
-              "gap": "+2.323"
+              "team": "Toyota Yaris",
+              "gap": "+0.840"
+            },
+            {
+              "pos": 9,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+0.843"
+            },
+            {
+              "pos": 10,
+              "number": "232",
+              "driver": "Martín Tomás",
+              "team": "Chevrolet Onix",
+              "gap": "+0.878"
+            },
+            {
+              "pos": 11,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+0.898"
+            },
+            {
+              "pos": 12,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+0.927"
+            },
+            {
+              "pos": 13,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "+1.106"
+            },
+            {
+              "pos": 14,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+1.244"
+            },
+            {
+              "pos": 15,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+1.249"
+            },
+            {
+              "pos": 16,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+1.408"
+            },
+            {
+              "pos": 17,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+1.561"
+            },
+            {
+              "pos": 18,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+1.651"
             },
             {
               "pos": 19,
               "number": "47",
               "driver": "Bautista Roqueta",
-              "team": "",
-              "gap": "+2.378"
+              "team": "Toyota Yaris",
+              "gap": "+2.165"
             },
             {
               "pos": 20,
-              "number": "56",
-              "driver": "Agustin Bonomo",
-              "team": "",
-              "gap": "+2.776"
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "+2.198"
             },
             {
               "pos": 21,
-              "number": "193",
-              "driver": "Franco Romano",
-              "team": "",
-              "gap": "+3.109"
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "DS 3",
+              "gap": "+2.391"
             },
             {
               "pos": 22,
-              "number": "150",
-              "driver": "Juan Martin Eluchans",
-              "team": "",
-              "gap": "+3.180"
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+2.624"
             },
             {
               "pos": 23,
-              "number": "93",
-              "driver": "Martin Mura",
-              "team": "",
-              "gap": "+3.378"
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "Toyota Etios",
+              "gap": "+2.651"
             },
             {
               "pos": 24,
-              "number": "119",
-              "driver": "Nahuel Della Santina",
-              "team": "",
-              "gap": "+3.871"
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+2.668"
             },
             {
               "pos": 25,
-              "number": "192",
-              "driver": "Martin Blasig",
-              "team": "",
-              "gap": "+10.623"
-            },
-            {
-              "pos": 26,
-              "number": "92",
-              "driver": "Thomas Marchesin",
-              "team": "",
-              "gap": ""
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+4.192"
             }
           ],
           "resultsSource": {
-            "name": "Speedhive · cronometraje (provisorio)",
-            "url": "https://speedhive.mylaps.com/sessions/12957056"
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-10-11"
           }
         },
         {
-          "id": "tn-2026-10-c3-practica2",
+          "id": "tn-2026-10-c3-2-entrenamiento-clase-3",
           "kind": "practica",
           "name": "2° Entrenamiento Clase 3",
           "start": "2026-10-10T12:30:00-03:00",
           "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "79",
+              "driver": "Facundo Chapur",
+              "team": "Honda Civic",
+              "gap": "1:34.468"
+            },
+            {
+              "pos": 2,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "VW Vento GLI",
+              "gap": "+0.242"
+            },
+            {
+              "pos": 3,
+              "number": "144",
+              "driver": "Leonel Pernia",
+              "team": "Ford Focus",
+              "gap": "+0.680"
+            },
+            {
+              "pos": 4,
+              "number": "111",
+              "driver": "Javier Merlo",
+              "team": "VW Virtus",
+              "gap": "+0.706"
+            },
+            {
+              "pos": 5,
+              "number": "88",
+              "driver": "Facundo Marques",
+              "team": "Ford Focus",
+              "gap": "+0.710"
+            },
+            {
+              "pos": 6,
+              "number": "83",
+              "driver": "Facundo Ardusso",
+              "team": "Toyota Corolla",
+              "gap": "+0.961"
+            },
+            {
+              "pos": 7,
+              "number": "19",
+              "driver": "Lucas Vicino",
+              "team": "Toyota Corolla",
+              "gap": "+1.074"
+            },
+            {
+              "pos": 8,
+              "number": "1",
+              "driver": "Julian Santero",
+              "team": "VW Virtus",
+              "gap": "+1.129"
+            },
+            {
+              "pos": 9,
+              "number": "9",
+              "driver": "Fabian Yannantuoni",
+              "team": "Ford Focus",
+              "gap": "+1.163"
+            },
+            {
+              "pos": 10,
+              "number": "7",
+              "driver": "Alfonso Domenech",
+              "team": "Honda Civic",
+              "gap": "+1.335"
+            },
+            {
+              "pos": 11,
+              "number": "238",
+              "driver": "Ever Franetovich",
+              "team": "Ford Focus",
+              "gap": "+1.363"
+            },
+            {
+              "pos": 12,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.391"
+            },
+            {
+              "pos": 13,
+              "number": "152",
+              "driver": "Thiago Martinez",
+              "team": "Ford Focus",
+              "gap": "+1.403"
+            },
+            {
+              "pos": 14,
+              "number": "123",
+              "driver": "Mauricio Lambiris",
+              "team": "Ford Focus",
+              "gap": "+1.439"
+            },
+            {
+              "pos": 15,
+              "number": "2",
+              "driver": "Jorge Barrio",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.541"
+            },
+            {
+              "pos": 16,
+              "number": "231",
+              "driver": "Jose Manuel Urcera",
+              "team": "Honda Civic",
+              "gap": "+1.592"
+            },
+            {
+              "pos": 17,
+              "number": "89",
+              "driver": "Jeremias Olmedo",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.613"
+            },
+            {
+              "pos": 18,
+              "number": "94",
+              "driver": "Gonzalo Antolin",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.735"
+            },
+            {
+              "pos": 19,
+              "number": "46",
+              "driver": "Miguel Ciaurro",
+              "team": "VW Virtus",
+              "gap": "+1.848"
+            },
+            {
+              "pos": 20,
+              "number": "177",
+              "driver": "Leandro Gonzalez",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.863"
+            },
+            {
+              "pos": 21,
+              "number": "11",
+              "driver": "Jonatan Castellano",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.918"
+            },
+            {
+              "pos": 22,
+              "number": "16",
+              "driver": "Matias Munoz Marchesi",
+              "team": "VW Vento",
+              "gap": "+2.016"
+            },
+            {
+              "pos": 23,
+              "number": "66",
+              "driver": "Adrian Percaz",
+              "team": "Ford Focus",
+              "gap": "+2.050"
+            },
+            {
+              "pos": 24,
+              "number": "18",
+              "driver": "Leonel Larrauri",
+              "team": "Honda Civic",
+              "gap": "+2.203"
+            },
+            {
+              "pos": 25,
+              "number": "96",
+              "driver": "Juan Cruz Benvenuti",
+              "team": "VW Vento GLI",
+              "gap": "+2.241"
+            },
+            {
+              "pos": 26,
+              "number": "72",
+              "driver": "Lucas Tedeschi",
+              "team": "Ford Focus",
+              "gap": "+2.290"
+            },
+            {
+              "pos": 27,
+              "number": "133",
+              "driver": "Valentin Aguirre",
+              "team": "Toyota Corolla",
+              "gap": "+2.664"
+            },
+            {
+              "pos": 28,
+              "number": "69",
+              "driver": "Ramiro Cano",
+              "team": "Ford Focus",
+              "gap": "+2.827"
+            },
+            {
+              "pos": 29,
+              "number": "77",
+              "driver": "Matias Cohen",
+              "team": "VW Virtus",
+              "gap": "+3.550"
+            },
+            {
+              "pos": 30,
+              "number": "86",
+              "driver": "Agustin Canapino",
+              "team": "Chevrolet Cruze",
+              "gap": "+6.838"
+            },
+            {
+              "pos": 31,
+              "number": "8",
+              "driver": "Joel Gassmann",
+              "team": "Chevrolet Cruze",
+              "gap": "+9.844"
+            },
+            {
+              "pos": 32,
+              "number": "27",
+              "driver": "Leandro Carducci",
+              "team": "Ford Focus",
+              "gap": "+21.573"
+            },
+            {
+              "pos": 33,
+              "number": "24",
+              "driver": "Sebastian Gomez",
+              "team": "VW Vento GLI",
+              "gap": "+27.719"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c3/2026-10-11"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -187871,245 +188732,7 @@
               "url": "https://speedhive.mylaps.com/events/3744743",
               "start": "2026-10-10T12:30:00-03:00"
             }
-          ],
-          "durationMin": 55,
-          "results": [
-            {
-              "pos": 1,
-              "number": "79",
-              "driver": "Facundo Chapur",
-              "team": "",
-              "gap": "1:34.468"
-            },
-            {
-              "pos": 2,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "",
-              "gap": "+0.242"
-            },
-            {
-              "pos": 3,
-              "number": "144",
-              "driver": "Leonel Pernia",
-              "team": "",
-              "gap": "+0.680"
-            },
-            {
-              "pos": 4,
-              "number": "111",
-              "driver": "Javier Merlo",
-              "team": "",
-              "gap": "+0.706"
-            },
-            {
-              "pos": 5,
-              "number": "88",
-              "driver": "Facundo Marques",
-              "team": "",
-              "gap": "+0.710"
-            },
-            {
-              "pos": 6,
-              "number": "83",
-              "driver": "Facundo Ardusso",
-              "team": "",
-              "gap": "+0.961"
-            },
-            {
-              "pos": 7,
-              "number": "19",
-              "driver": "Lucas Vicino",
-              "team": "",
-              "gap": "+1.074"
-            },
-            {
-              "pos": 8,
-              "number": "1",
-              "driver": "Julian Santero",
-              "team": "",
-              "gap": "+1.129"
-            },
-            {
-              "pos": 9,
-              "number": "9",
-              "driver": "Fabian Yannantuoni",
-              "team": "",
-              "gap": "+1.163"
-            },
-            {
-              "pos": 10,
-              "number": "7",
-              "driver": "Alfonso Domenech",
-              "team": "",
-              "gap": "+1.335"
-            },
-            {
-              "pos": 11,
-              "number": "238",
-              "driver": "Ever Franetovich",
-              "team": "",
-              "gap": "+1.363"
-            },
-            {
-              "pos": 12,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "",
-              "gap": "+1.391"
-            },
-            {
-              "pos": 13,
-              "number": "152",
-              "driver": "Thiago Martinez",
-              "team": "",
-              "gap": "+1.403"
-            },
-            {
-              "pos": 14,
-              "number": "123",
-              "driver": "Mauricio Lambiris",
-              "team": "",
-              "gap": "+1.439"
-            },
-            {
-              "pos": 15,
-              "number": "2",
-              "driver": "Jorge Barrio",
-              "team": "",
-              "gap": "+1.541"
-            },
-            {
-              "pos": 16,
-              "number": "231",
-              "driver": "Jose Manuel Urcera",
-              "team": "",
-              "gap": "+1.592"
-            },
-            {
-              "pos": 17,
-              "number": "89",
-              "driver": "Jeremias Olmedo",
-              "team": "",
-              "gap": "+1.613"
-            },
-            {
-              "pos": 18,
-              "number": "94",
-              "driver": "Gonzalo Antolin",
-              "team": "",
-              "gap": "+1.735"
-            },
-            {
-              "pos": 19,
-              "number": "46",
-              "driver": "Miguel Ciaurro",
-              "team": "",
-              "gap": "+1.848"
-            },
-            {
-              "pos": 20,
-              "number": "177",
-              "driver": "Leandro Gonzalez",
-              "team": "",
-              "gap": "+1.863"
-            },
-            {
-              "pos": 21,
-              "number": "11",
-              "driver": "Jonatan Castellano",
-              "team": "",
-              "gap": "+1.918"
-            },
-            {
-              "pos": 22,
-              "number": "16",
-              "driver": "Matias Munoz Marchesi",
-              "team": "",
-              "gap": "+2.016"
-            },
-            {
-              "pos": 23,
-              "number": "66",
-              "driver": "Adrian Percaz",
-              "team": "",
-              "gap": "+2.050"
-            },
-            {
-              "pos": 24,
-              "number": "18",
-              "driver": "Leonel Larrauri",
-              "team": "",
-              "gap": "+2.203"
-            },
-            {
-              "pos": 25,
-              "number": "96",
-              "driver": "Juan Cruz Benvenuti",
-              "team": "",
-              "gap": "+2.241"
-            },
-            {
-              "pos": 26,
-              "number": "72",
-              "driver": "Lucas Tedeschi",
-              "team": "",
-              "gap": "+2.290"
-            },
-            {
-              "pos": 27,
-              "number": "133",
-              "driver": "Valentin Aguirre",
-              "team": "",
-              "gap": "+2.664"
-            },
-            {
-              "pos": 28,
-              "number": "69",
-              "driver": "Ramiro Cano",
-              "team": "",
-              "gap": "+2.827"
-            },
-            {
-              "pos": 29,
-              "number": "77",
-              "driver": "Matias Cohen",
-              "team": "",
-              "gap": "+3.550"
-            },
-            {
-              "pos": 30,
-              "number": "86",
-              "driver": "Agustin Canapino",
-              "team": "",
-              "gap": "+6.838"
-            },
-            {
-              "pos": 31,
-              "number": "8",
-              "driver": "Joel Gassmann",
-              "team": "",
-              "gap": "+9.844"
-            },
-            {
-              "pos": 32,
-              "number": "27",
-              "driver": "Leandro Carducci",
-              "team": "",
-              "gap": "+21.573"
-            },
-            {
-              "pos": 33,
-              "number": "24",
-              "driver": "Sebastian Gomez",
-              "team": "",
-              "gap": "+27.719"
-            }
-          ],
-          "resultsSource": {
-            "name": "Speedhive · cronometraje (provisorio)",
-            "url": "https://speedhive.mylaps.com/sessions/12957575"
-          }
+          ]
         },
         {
           "id": "tn-2026-10-c2-clasificacion1",
@@ -188309,11 +188932,250 @@
           }
         },
         {
-          "id": "tn-2026-10-c3-clasificacion",
+          "id": "tn-2026-10-c3-clasificacio-n-clase-3",
           "kind": "clasificacion",
           "name": "Clasificación Clase 3",
           "start": "2026-10-10T16:00:00-03:00",
           "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "111",
+              "driver": "Javier Merlo",
+              "team": "VW Virtus",
+              "gap": "1:34.846"
+            },
+            {
+              "pos": 2,
+              "number": "79",
+              "driver": "Facundo Chapur",
+              "team": "Honda Civic",
+              "gap": "+0.128"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Julian Santero",
+              "team": "VW Virtus",
+              "gap": "+0.244"
+            },
+            {
+              "pos": 4,
+              "number": "144",
+              "driver": "Leonel Pernia",
+              "team": "Ford Focus",
+              "gap": "+0.245"
+            },
+            {
+              "pos": 5,
+              "number": "86",
+              "driver": "Agustin Canapino",
+              "team": "Chevrolet Cruze",
+              "gap": "+0.394"
+            },
+            {
+              "pos": 6,
+              "number": "123",
+              "driver": "Mauricio Lambiris",
+              "team": "Ford Focus",
+              "gap": "+0.411"
+            },
+            {
+              "pos": 7,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "VW Vento GLI",
+              "gap": "+0.447"
+            },
+            {
+              "pos": 8,
+              "number": "2",
+              "driver": "Jorge Barrio",
+              "team": "Chevrolet Cruze",
+              "gap": "+0.555"
+            },
+            {
+              "pos": 9,
+              "number": "83",
+              "driver": "Facundo Ardusso",
+              "team": "Toyota Corolla",
+              "gap": "+0.617"
+            },
+            {
+              "pos": 10,
+              "number": "19",
+              "driver": "Lucas Vicino",
+              "team": "Toyota Corolla",
+              "gap": "+0.819"
+            },
+            {
+              "pos": 11,
+              "number": "88",
+              "driver": "Facundo Marques",
+              "team": "Ford Focus",
+              "gap": "+0.912"
+            },
+            {
+              "pos": 12,
+              "number": "238",
+              "driver": "Ever Franetovich",
+              "team": "Ford Focus",
+              "gap": "+0.912"
+            },
+            {
+              "pos": 13,
+              "number": "8",
+              "driver": "Joel Gassmann",
+              "team": "Chevrolet Cruze",
+              "gap": "+0.993"
+            },
+            {
+              "pos": 14,
+              "number": "24",
+              "driver": "Sebastian Gomez",
+              "team": "VW Vento GLI",
+              "gap": "+1.072"
+            },
+            {
+              "pos": 15,
+              "number": "9",
+              "driver": "Fabian Yannantuoni",
+              "team": "Ford Focus",
+              "gap": "+1.073"
+            },
+            {
+              "pos": 16,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.178"
+            },
+            {
+              "pos": 17,
+              "number": "27",
+              "driver": "Leandro Carducci",
+              "team": "Ford Focus",
+              "gap": "+1.280"
+            },
+            {
+              "pos": 18,
+              "number": "152",
+              "driver": "Thiago Martinez",
+              "team": "Ford Focus",
+              "gap": "+1.307"
+            },
+            {
+              "pos": 19,
+              "number": "231",
+              "driver": "Jose Manuel Urcera",
+              "team": "Honda Civic",
+              "gap": "+1.325"
+            },
+            {
+              "pos": 20,
+              "number": "11",
+              "driver": "Jonatan Castellano",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.405"
+            },
+            {
+              "pos": 21,
+              "number": "94",
+              "driver": "Gonzalo Antolin",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.509"
+            },
+            {
+              "pos": 22,
+              "number": "16",
+              "driver": "Matias Munoz Marchesi",
+              "team": "VW Vento",
+              "gap": "+1.647"
+            },
+            {
+              "pos": 23,
+              "number": "72",
+              "driver": "Lucas Tedeschi",
+              "team": "Ford Focus",
+              "gap": "+1.979"
+            },
+            {
+              "pos": 24,
+              "number": "89",
+              "driver": "Jeremias Olmedo",
+              "team": "Chevrolet Cruze",
+              "gap": "+1.986"
+            },
+            {
+              "pos": 25,
+              "number": "18",
+              "driver": "Leonel Larrauri",
+              "team": "Honda Civic",
+              "gap": "+2.007"
+            },
+            {
+              "pos": 26,
+              "number": "7",
+              "driver": "Alfonso Domenech",
+              "team": "Honda Civic",
+              "gap": "+2.119"
+            },
+            {
+              "pos": 27,
+              "number": "66",
+              "driver": "Adrian Percaz",
+              "team": "Ford Focus",
+              "gap": "+2.178"
+            },
+            {
+              "pos": 28,
+              "number": "96",
+              "driver": "Juan Cruz Benvenuti",
+              "team": "VW Vento GLI",
+              "gap": "+2.239"
+            },
+            {
+              "pos": 29,
+              "number": "177",
+              "driver": "Leandro Gonzalez",
+              "team": "Chevrolet Cruze",
+              "gap": "+2.299"
+            },
+            {
+              "pos": 30,
+              "number": "46",
+              "driver": "Miguel Ciaurro",
+              "team": "VW Virtus",
+              "gap": "+2.539"
+            },
+            {
+              "pos": 31,
+              "number": "69",
+              "driver": "Ramiro Cano",
+              "team": "Ford Focus",
+              "gap": "+2.677"
+            },
+            {
+              "pos": 32,
+              "number": "77",
+              "driver": "Matias Cohen",
+              "team": "VW Virtus",
+              "gap": "+3.488"
+            },
+            {
+              "pos": 33,
+              "number": "133",
+              "driver": "Valentin Aguirre",
+              "team": "Toyota Corolla",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c3/2026-10-11"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -188321,245 +189183,7 @@
               "url": "https://speedhive.mylaps.com/events/3744743",
               "start": "2026-10-10T16:00:00-03:00"
             }
-          ],
-          "durationMin": 40,
-          "results": [
-            {
-              "pos": 1,
-              "number": "111",
-              "driver": "Javier Merlo",
-              "team": "",
-              "gap": "1:34.846"
-            },
-            {
-              "pos": 2,
-              "number": "79",
-              "driver": "Facundo Chapur",
-              "team": "",
-              "gap": "+0.128"
-            },
-            {
-              "pos": 3,
-              "number": "1",
-              "driver": "Julian Santero",
-              "team": "",
-              "gap": "+0.244"
-            },
-            {
-              "pos": 4,
-              "number": "144",
-              "driver": "Leonel Pernia",
-              "team": "",
-              "gap": "+0.245"
-            },
-            {
-              "pos": 5,
-              "number": "86",
-              "driver": "Agustin Canapino",
-              "team": "",
-              "gap": "+0.394"
-            },
-            {
-              "pos": 6,
-              "number": "123",
-              "driver": "Mauricio Lambiris",
-              "team": "",
-              "gap": "+0.411"
-            },
-            {
-              "pos": 7,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "",
-              "gap": "+0.447"
-            },
-            {
-              "pos": 8,
-              "number": "2",
-              "driver": "Jorge Barrio",
-              "team": "",
-              "gap": "+0.555"
-            },
-            {
-              "pos": 9,
-              "number": "83",
-              "driver": "Facundo Ardusso",
-              "team": "",
-              "gap": "+0.617"
-            },
-            {
-              "pos": 10,
-              "number": "19",
-              "driver": "Lucas Vicino",
-              "team": "",
-              "gap": "+0.819"
-            },
-            {
-              "pos": 11,
-              "number": "9",
-              "driver": "Fabian Yannantuoni",
-              "team": "",
-              "gap": "+0.885"
-            },
-            {
-              "pos": 12,
-              "number": "88",
-              "driver": "Facundo Marques",
-              "team": "",
-              "gap": "+0.912"
-            },
-            {
-              "pos": 13,
-              "number": "238",
-              "driver": "Ever Franetovich",
-              "team": "",
-              "gap": "+0.912"
-            },
-            {
-              "pos": 14,
-              "number": "8",
-              "driver": "Joel Gassmann",
-              "team": "",
-              "gap": "+0.993"
-            },
-            {
-              "pos": 15,
-              "number": "24",
-              "driver": "Sebastian Gomez",
-              "team": "",
-              "gap": "+1.072"
-            },
-            {
-              "pos": 16,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "",
-              "gap": "+1.178"
-            },
-            {
-              "pos": 17,
-              "number": "27",
-              "driver": "Leandro Carducci",
-              "team": "",
-              "gap": "+1.280"
-            },
-            {
-              "pos": 18,
-              "number": "152",
-              "driver": "Thiago Martinez",
-              "team": "",
-              "gap": "+1.307"
-            },
-            {
-              "pos": 19,
-              "number": "231",
-              "driver": "Jose Manuel Urcera",
-              "team": "",
-              "gap": "+1.325"
-            },
-            {
-              "pos": 20,
-              "number": "11",
-              "driver": "Jonatan Castellano",
-              "team": "",
-              "gap": "+1.405"
-            },
-            {
-              "pos": 21,
-              "number": "94",
-              "driver": "Gonzalo Antolin",
-              "team": "",
-              "gap": "+1.509"
-            },
-            {
-              "pos": 22,
-              "number": "16",
-              "driver": "Matias Munoz Marchesi",
-              "team": "",
-              "gap": "+1.647"
-            },
-            {
-              "pos": 23,
-              "number": "72",
-              "driver": "Lucas Tedeschi",
-              "team": "",
-              "gap": "+1.979"
-            },
-            {
-              "pos": 24,
-              "number": "89",
-              "driver": "Jeremias Olmedo",
-              "team": "",
-              "gap": "+1.986"
-            },
-            {
-              "pos": 25,
-              "number": "18",
-              "driver": "Leonel Larrauri",
-              "team": "",
-              "gap": "+2.007"
-            },
-            {
-              "pos": 26,
-              "number": "7",
-              "driver": "Alfonso Domenech",
-              "team": "",
-              "gap": "+2.119"
-            },
-            {
-              "pos": 27,
-              "number": "66",
-              "driver": "Adrian Percaz",
-              "team": "",
-              "gap": "+2.178"
-            },
-            {
-              "pos": 28,
-              "number": "96",
-              "driver": "Juan Cruz Benvenuti",
-              "team": "",
-              "gap": "+2.239"
-            },
-            {
-              "pos": 29,
-              "number": "177",
-              "driver": "Leandro Gonzalez",
-              "team": "",
-              "gap": "+2.299"
-            },
-            {
-              "pos": 30,
-              "number": "46",
-              "driver": "Miguel Ciaurro",
-              "team": "",
-              "gap": "+2.539"
-            },
-            {
-              "pos": 31,
-              "number": "69",
-              "driver": "Ramiro Cano",
-              "team": "",
-              "gap": "+2.677"
-            },
-            {
-              "pos": 32,
-              "number": "77",
-              "driver": "Matias Cohen",
-              "team": "",
-              "gap": "+3.488"
-            },
-            {
-              "pos": 33,
-              "number": "133",
-              "driver": "Valentin Aguirre",
-              "team": "",
-              "gap": "+18:32.923"
-            }
-          ],
-          "resultsSource": {
-            "name": "Speedhive · cronometraje (provisorio)",
-            "url": "https://speedhive.mylaps.com/sessions/12959102"
-          }
+          ]
         },
         {
           "id": "tn-2026-10-c2-clasificacion2",
@@ -188766,11 +189390,111 @@
           }
         },
         {
-          "id": "tn-2026-10-c2-serie1",
+          "id": "tn-2026-10-c2-serie-1-clase-2",
           "kind": "serie",
           "name": "Serie 1 Clase 2",
           "start": "2026-10-11T09:55:00-03:00",
           "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "8:18.258"
+            },
+            {
+              "pos": 2,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+2.392"
+            },
+            {
+              "pos": 3,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "Ford F. Kinetic",
+              "gap": "+5.724"
+            },
+            {
+              "pos": 4,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+6.069"
+            },
+            {
+              "pos": 5,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+9.691"
+            },
+            {
+              "pos": 6,
+              "number": "155",
+              "driver": "Gaston Iansa",
+              "team": "Peugeot 208",
+              "gap": "+13.247"
+            },
+            {
+              "pos": 7,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "+14.041"
+            },
+            {
+              "pos": 8,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+14.427"
+            },
+            {
+              "pos": 9,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+15.383"
+            },
+            {
+              "pos": 10,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+17.524"
+            },
+            {
+              "pos": 11,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Yaris",
+              "gap": "+1 Vuelta"
+            },
+            {
+              "pos": 12,
+              "number": "232",
+              "driver": "Martín Tomás",
+              "team": "Chevrolet Onix",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 13,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-10-11"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -188778,112 +189502,113 @@
               "url": "https://speedhive.mylaps.com/events/3744743",
               "start": "2026-10-11T09:55:00-03:00"
             }
-          ],
-          "durationMin": 35,
-          "results": [
-            {
-              "pos": 1,
-              "number": "177",
-              "driver": "Tomas Vitar",
-              "team": "",
-              "gap": "8:18.258"
-            },
-            {
-              "pos": 2,
-              "number": "2",
-              "driver": "Francisco Coltrinari",
-              "team": "",
-              "gap": "+2.392"
-            },
-            {
-              "pos": 3,
-              "number": "221",
-              "driver": "Thiago Ferrari",
-              "team": "",
-              "gap": "+5.724"
-            },
-            {
-              "pos": 4,
-              "number": "70",
-              "driver": "Juan Ignacio Canela",
-              "team": "",
-              "gap": "+6.069"
-            },
-            {
-              "pos": 5,
-              "number": "25",
-              "driver": "Santiago Robledo",
-              "team": "",
-              "gap": "+9.691"
-            },
-            {
-              "pos": 6,
-              "number": "155",
-              "driver": "Gaston Iansa",
-              "team": "",
-              "gap": "+13.247"
-            },
-            {
-              "pos": 7,
-              "number": "97",
-              "driver": "Bruno Pace",
-              "team": "",
-              "gap": "+14.041"
-            },
-            {
-              "pos": 8,
-              "number": "192",
-              "driver": "Martin Blasig",
-              "team": "",
-              "gap": "+14.427"
-            },
-            {
-              "pos": 9,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "",
-              "gap": "+15.383"
-            },
-            {
-              "pos": 10,
-              "number": "174",
-              "driver": "Sergio Fernandez",
-              "team": "",
-              "gap": "+17.524"
-            },
-            {
-              "pos": 11,
-              "number": "117",
-              "driver": "Pablo Collazo",
-              "team": "",
-              "gap": "+1 vuelta"
-            },
-            {
-              "pos": 12,
-              "number": "232",
-              "driver": "Tomás Martín",
-              "team": "",
-              "gap": ""
-            },
-            {
-              "pos": 13,
-              "number": "193",
-              "driver": "Franco Romano",
-              "team": "",
-              "gap": ""
-            }
-          ],
-          "resultsSource": {
-            "name": "Speedhive · cronometraje (provisorio)",
-            "url": "https://speedhive.mylaps.com/sessions/12966956"
-          }
+          ]
         },
         {
-          "id": "tn-2026-10-c2-serie2",
+          "id": "tn-2026-10-c2-serie-2-clase-2",
           "kind": "serie",
           "name": "Serie 2 Clase 2",
           "start": "2026-10-11T10:20:00-03:00",
           "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "8:18.637"
+            },
+            {
+              "pos": 2,
+              "number": "44",
+              "driver": "Julián Modica",
+              "team": "Toyota Etios",
+              "gap": "+2.075"
+            },
+            {
+              "pos": 3,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+3.817"
+            },
+            {
+              "pos": 4,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+6.962"
+            },
+            {
+              "pos": 5,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+9.127"
+            },
+            {
+              "pos": 6,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+11.148"
+            },
+            {
+              "pos": 7,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+11.451"
+            },
+            {
+              "pos": 8,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+13.517"
+            },
+            {
+              "pos": 9,
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "Peugeot 208",
+              "gap": "+14.263"
+            },
+            {
+              "pos": 10,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+15.188"
+            },
+            {
+              "pos": 11,
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "Toyota Etios",
+              "gap": "+17.663"
+            },
+            {
+              "pos": 12,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+2 Vueltas"
+            },
+            {
+              "pos": 13,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-10-11"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -188891,112 +189616,98 @@
               "url": "https://speedhive.mylaps.com/events/3744743",
               "start": "2026-10-11T10:20:00-03:00"
             }
-          ],
-          "durationMin": 35,
-          "results": [
-            {
-              "pos": 1,
-              "number": "151",
-              "driver": "Exequiel Bastidas",
-              "team": "",
-              "gap": "8:18.637"
-            },
-            {
-              "pos": 2,
-              "number": "44",
-              "driver": "Julián Módica",
-              "team": "",
-              "gap": "+2.075"
-            },
-            {
-              "pos": 3,
-              "number": "86",
-              "driver": "Martin Leston",
-              "team": "",
-              "gap": "+3.817"
-            },
-            {
-              "pos": 4,
-              "number": "14",
-              "driver": "Juan Eduardo Kreitz",
-              "team": "",
-              "gap": "+6.962"
-            },
-            {
-              "pos": 5,
-              "number": "79",
-              "driver": "Andres Calderon",
-              "team": "",
-              "gap": "+9.127"
-            },
-            {
-              "pos": 6,
-              "number": "43",
-              "driver": "Marcelo Guevara",
-              "team": "",
-              "gap": "+11.148"
-            },
-            {
-              "pos": 7,
-              "number": "150",
-              "driver": "Juan Martin Eluchans",
-              "team": "",
-              "gap": "+11.451"
-            },
-            {
-              "pos": 8,
-              "number": "89",
-              "driver": "Valentino Quattrocchi",
-              "team": "",
-              "gap": "+13.517"
-            },
-            {
-              "pos": 9,
-              "number": "56",
-              "driver": "Agustin Bonomo",
-              "team": "",
-              "gap": "+14.263"
-            },
-            {
-              "pos": 10,
-              "number": "93",
-              "driver": "Martin Mura",
-              "team": "",
-              "gap": "+15.188"
-            },
-            {
-              "pos": 11,
-              "number": "119",
-              "driver": "Nahuel Della Santina",
-              "team": "",
-              "gap": "+17.663"
-            },
-            {
-              "pos": 12,
-              "number": "95",
-              "driver": "Santino Balerini",
-              "team": "",
-              "gap": "+2 vueltas"
-            },
-            {
-              "pos": 13,
-              "number": "98",
-              "driver": "Braian Reinoso",
-              "team": "",
-              "gap": ""
-            }
-          ],
-          "resultsSource": {
-            "name": "Speedhive · cronometraje (provisorio)",
-            "url": "https://speedhive.mylaps.com/sessions/12967118"
-          }
+          ]
         },
         {
-          "id": "tn-2026-10-c3-serie1",
+          "id": "tn-2026-10-c3-serie-1-clase-3",
           "kind": "serie",
           "name": "Serie 1 Clase 3",
           "start": "2026-10-11T10:55:00-03:00",
           "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "111",
+              "driver": "Javier Merlo",
+              "team": "VW Virtus",
+              "gap": "8:00.387"
+            },
+            {
+              "pos": 2,
+              "number": "144",
+              "driver": "Leonel Pernia",
+              "team": "Ford Focus",
+              "gap": "+0.734"
+            },
+            {
+              "pos": 3,
+              "number": "19",
+              "driver": "Lucas Vicino",
+              "team": "Toyota Corolla",
+              "gap": "+11.024"
+            },
+            {
+              "pos": 4,
+              "number": "231",
+              "driver": "Jose Manuel Urcera",
+              "team": "Honda Civic",
+              "gap": "+11.784"
+            },
+            {
+              "pos": 5,
+              "number": "16",
+              "driver": "Matias Munoz Marchesi",
+              "team": "VW Vento",
+              "gap": "+14.141"
+            },
+            {
+              "pos": 6,
+              "number": "69",
+              "driver": "Ramiro Cano",
+              "team": "Ford Focus",
+              "gap": "+17.271"
+            },
+            {
+              "pos": 7,
+              "number": "96",
+              "driver": "Juan Cruz Benvenuti",
+              "team": "VW Vento GLI",
+              "gap": "+17.353"
+            },
+            {
+              "pos": 8,
+              "number": "18",
+              "driver": "Leonel Larrauri",
+              "team": "Honda Civic",
+              "gap": "+19.562"
+            },
+            {
+              "pos": 9,
+              "number": "8",
+              "driver": "Joel Gassmann",
+              "team": "Chevrolet Cruze",
+              "gap": "+4 Vueltas"
+            },
+            {
+              "pos": 10,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Chevrolet Cruze",
+              "gap": "+5 Vueltas"
+            },
+            {
+              "pos": 11,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "VW Vento GLI",
+              "gap": "8:03.081"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c3/2026-10-11"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -189004,98 +189715,98 @@
               "url": "https://speedhive.mylaps.com/events/3744743",
               "start": "2026-10-11T10:55:00-03:00"
             }
-          ],
-          "durationMin": 35,
-          "results": [
-            {
-              "pos": 1,
-              "number": "111",
-              "driver": "Javier Merlo",
-              "team": "",
-              "gap": "8:00.387"
-            },
-            {
-              "pos": 2,
-              "number": "144",
-              "driver": "Leonel Pernia",
-              "team": "",
-              "gap": "+0.734"
-            },
-            {
-              "pos": 3,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "",
-              "gap": "+2.694"
-            },
-            {
-              "pos": 4,
-              "number": "19",
-              "driver": "Lucas Vicino",
-              "team": "",
-              "gap": "+11.024"
-            },
-            {
-              "pos": 5,
-              "number": "231",
-              "driver": "Jose Manuel Urcera",
-              "team": "",
-              "gap": "+11.784"
-            },
-            {
-              "pos": 6,
-              "number": "16",
-              "driver": "Matias Munoz Marchesi",
-              "team": "",
-              "gap": "+14.141"
-            },
-            {
-              "pos": 7,
-              "number": "69",
-              "driver": "Ramiro Cano",
-              "team": "",
-              "gap": "+17.271"
-            },
-            {
-              "pos": 8,
-              "number": "96",
-              "driver": "Juan Cruz Benvenuti",
-              "team": "",
-              "gap": "+17.353"
-            },
-            {
-              "pos": 9,
-              "number": "18",
-              "driver": "Leonel Larrauri",
-              "team": "",
-              "gap": "+19.562"
-            },
-            {
-              "pos": 10,
-              "number": "8",
-              "driver": "Joel Gassmann",
-              "team": "",
-              "gap": "+4 vueltas"
-            },
-            {
-              "pos": 11,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "",
-              "gap": "+5 vueltas"
-            }
-          ],
-          "resultsSource": {
-            "name": "Speedhive · cronometraje (provisorio)",
-            "url": "https://speedhive.mylaps.com/sessions/12967292"
-          }
+          ]
         },
         {
-          "id": "tn-2026-10-c3-serie2",
+          "id": "tn-2026-10-c3-serie-2-clase-3",
           "kind": "serie",
           "name": "Serie 2 Clase 3",
           "start": "2026-10-11T11:20:00-03:00",
           "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "86",
+              "driver": "Agustin Canapino",
+              "team": "Chevrolet Cruze",
+              "gap": "8:08.967"
+            },
+            {
+              "pos": 2,
+              "number": "2",
+              "driver": "Jorge Barrio",
+              "team": "Chevrolet Cruze",
+              "gap": "+0.621"
+            },
+            {
+              "pos": 3,
+              "number": "79",
+              "driver": "Facundo Chapur",
+              "team": "Honda Civic",
+              "gap": "+0.964"
+            },
+            {
+              "pos": 4,
+              "number": "24",
+              "driver": "Sebastian Gomez",
+              "team": "VW Vento GLI",
+              "gap": "+1.599"
+            },
+            {
+              "pos": 5,
+              "number": "27",
+              "driver": "Leandro Carducci",
+              "team": "Ford Focus",
+              "gap": "+2.409"
+            },
+            {
+              "pos": 6,
+              "number": "88",
+              "driver": "Facundo Marques",
+              "team": "Ford Focus",
+              "gap": "+2.638"
+            },
+            {
+              "pos": 7,
+              "number": "11",
+              "driver": "Jonatan Castellano",
+              "team": "Chevrolet Cruze",
+              "gap": "+4.834"
+            },
+            {
+              "pos": 8,
+              "number": "7",
+              "driver": "Alfonso Domenech",
+              "team": "Honda Civic",
+              "gap": "+6.724"
+            },
+            {
+              "pos": 9,
+              "number": "77",
+              "driver": "Matias Cohen",
+              "team": "VW Virtus",
+              "gap": "+6.902"
+            },
+            {
+              "pos": 10,
+              "number": "177",
+              "driver": "Leandro Gonzalez",
+              "team": "Chevrolet Cruze",
+              "gap": "+7.080"
+            },
+            {
+              "pos": 11,
+              "number": "72",
+              "driver": "Lucas Tedeschi",
+              "team": "Ford Focus",
+              "gap": "+7.351"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c3/2026-10-11"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -189103,105 +189814,98 @@
               "url": "https://speedhive.mylaps.com/events/3744743",
               "start": "2026-10-11T11:20:00-03:00"
             }
-          ],
-          "durationMin": 35,
-          "results": [
-            {
-              "pos": 1,
-              "number": "86",
-              "driver": "Agustin Canapino",
-              "team": "",
-              "gap": "8:08.967"
-            },
-            {
-              "pos": 2,
-              "number": "2",
-              "driver": "Jorge Barrio",
-              "team": "",
-              "gap": "+0.621"
-            },
-            {
-              "pos": 3,
-              "number": "79",
-              "driver": "Facundo Chapur",
-              "team": "",
-              "gap": "+0.964"
-            },
-            {
-              "pos": 4,
-              "number": "24",
-              "driver": "Sebastian Gomez",
-              "team": "",
-              "gap": "+1.599"
-            },
-            {
-              "pos": 5,
-              "number": "27",
-              "driver": "Leandro Carducci",
-              "team": "",
-              "gap": "+2.409"
-            },
-            {
-              "pos": 6,
-              "number": "88",
-              "driver": "Facundo Marques",
-              "team": "",
-              "gap": "+2.638"
-            },
-            {
-              "pos": 7,
-              "number": "11",
-              "driver": "Jonatan Castellano",
-              "team": "",
-              "gap": "+4.834"
-            },
-            {
-              "pos": 8,
-              "number": "7",
-              "driver": "Alfonso Domenech",
-              "team": "",
-              "gap": "+6.724"
-            },
-            {
-              "pos": 9,
-              "number": "77",
-              "driver": "Matias Cohen",
-              "team": "",
-              "gap": "+6.902"
-            },
-            {
-              "pos": 10,
-              "number": "177",
-              "driver": "Leandro Gonzalez",
-              "team": "",
-              "gap": "+7.080"
-            },
-            {
-              "pos": 11,
-              "number": "72",
-              "driver": "Lucas Tedeschi",
-              "team": "",
-              "gap": "+7.351"
-            },
-            {
-              "pos": 12,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "",
-              "gap": ""
-            }
-          ],
-          "resultsSource": {
-            "name": "Speedhive · cronometraje (provisorio)",
-            "url": "https://speedhive.mylaps.com/sessions/12967430"
-          }
+          ]
         },
         {
-          "id": "tn-2026-10-c3-serie3",
+          "id": "tn-2026-10-c3-serie-3-clase-3",
           "kind": "serie",
           "name": "Serie 3 Clase 3",
           "start": "2026-10-11T11:45:00-03:00",
           "timeKnown": true,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "123",
+              "driver": "Mauricio Lambiris",
+              "team": "Ford Focus",
+              "gap": "8:02.770"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Julian Santero",
+              "team": "VW Virtus",
+              "gap": "+1.484"
+            },
+            {
+              "pos": 3,
+              "number": "238",
+              "driver": "Ever Franetovich",
+              "team": "Ford Focus",
+              "gap": "+2.275"
+            },
+            {
+              "pos": 4,
+              "number": "83",
+              "driver": "Facundo Ardusso",
+              "team": "Toyota Corolla",
+              "gap": "+4.661"
+            },
+            {
+              "pos": 5,
+              "number": "152",
+              "driver": "Thiago Martinez",
+              "team": "Ford Focus",
+              "gap": "+5.977"
+            },
+            {
+              "pos": 6,
+              "number": "89",
+              "driver": "Jeremias Olmedo",
+              "team": "Chevrolet Cruze",
+              "gap": "+7.361"
+            },
+            {
+              "pos": 7,
+              "number": "133",
+              "driver": "Valentin Aguirre",
+              "team": "Toyota Corolla",
+              "gap": "+15.787"
+            },
+            {
+              "pos": 8,
+              "number": "46",
+              "driver": "Miguel Ciaurro",
+              "team": "VW Virtus",
+              "gap": "+17.463"
+            },
+            {
+              "pos": 9,
+              "number": "9",
+              "driver": "Fabian Yannantuoni",
+              "team": "Ford Focus",
+              "gap": "+17.580"
+            },
+            {
+              "pos": 10,
+              "number": "66",
+              "driver": "Adrian Percaz",
+              "team": "Ford Focus",
+              "gap": "+19.423"
+            },
+            {
+              "pos": 11,
+              "number": "94",
+              "driver": "Gonzalo Antolin",
+              "team": "Chevrolet Cruze",
+              "gap": "+1:41.148"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c3/2026-10-11"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -189209,91 +189913,7 @@
               "url": "https://speedhive.mylaps.com/events/3744743",
               "start": "2026-10-11T11:45:00-03:00"
             }
-          ],
-          "durationMin": 35,
-          "results": [
-            {
-              "pos": 1,
-              "number": "123",
-              "driver": "Mauricio Lambiris",
-              "team": "",
-              "gap": "8:02.770"
-            },
-            {
-              "pos": 2,
-              "number": "1",
-              "driver": "Julian Santero",
-              "team": "",
-              "gap": "+1.484"
-            },
-            {
-              "pos": 3,
-              "number": "238",
-              "driver": "Ever Franetovich",
-              "team": "",
-              "gap": "+2.275"
-            },
-            {
-              "pos": 4,
-              "number": "83",
-              "driver": "Facundo Ardusso",
-              "team": "",
-              "gap": "+4.661"
-            },
-            {
-              "pos": 5,
-              "number": "152",
-              "driver": "Thiago Martinez",
-              "team": "",
-              "gap": "+5.977"
-            },
-            {
-              "pos": 6,
-              "number": "89",
-              "driver": "Jeremias Olmedo",
-              "team": "",
-              "gap": "+7.361"
-            },
-            {
-              "pos": 7,
-              "number": "133",
-              "driver": "Valentin Aguirre",
-              "team": "",
-              "gap": "+15.787"
-            },
-            {
-              "pos": 8,
-              "number": "46",
-              "driver": "Miguel Ciaurro",
-              "team": "",
-              "gap": "+17.463"
-            },
-            {
-              "pos": 9,
-              "number": "9",
-              "driver": "Fabian Yannantuoni",
-              "team": "",
-              "gap": "+17.580"
-            },
-            {
-              "pos": 10,
-              "number": "66",
-              "driver": "Adrian Percaz",
-              "team": "",
-              "gap": "+19.423"
-            },
-            {
-              "pos": 11,
-              "number": "94",
-              "driver": "Gonzalo Antolin",
-              "team": "",
-              "gap": "+1:41.148"
-            }
-          ],
-          "resultsSource": {
-            "name": "Speedhive · cronometraje (provisorio)",
-            "url": "https://speedhive.mylaps.com/sessions/12968015"
-          }
+          ]
         },
         {
           "id": "tn-2026-10-c2",
@@ -189302,6 +189922,197 @@
           "start": "2026-10-11T12:25:00-03:00",
           "timeKnown": true,
           "durationMin": 35,
+          "results": [
+            {
+              "pos": 1,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "26:54.880"
+            },
+            {
+              "pos": 2,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+2.222"
+            },
+            {
+              "pos": 3,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+4.941"
+            },
+            {
+              "pos": 4,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+7.749"
+            },
+            {
+              "pos": 5,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+14.990"
+            },
+            {
+              "pos": 6,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+15.299"
+            },
+            {
+              "pos": 7,
+              "number": "44",
+              "driver": "Julián Modica",
+              "team": "Toyota Etios",
+              "gap": "+15.836"
+            },
+            {
+              "pos": 8,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+16.440"
+            },
+            {
+              "pos": 9,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+20.678"
+            },
+            {
+              "pos": 10,
+              "number": "155",
+              "driver": "Gaston Iansa",
+              "team": "Peugeot 208",
+              "gap": "+21.001"
+            },
+            {
+              "pos": 11,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+21.507"
+            },
+            {
+              "pos": 12,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+22.185"
+            },
+            {
+              "pos": 13,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "+22.868"
+            },
+            {
+              "pos": 14,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+33.732"
+            },
+            {
+              "pos": 15,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+33.930"
+            },
+            {
+              "pos": 16,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+34.873"
+            },
+            {
+              "pos": 17,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Yaris",
+              "gap": "+35.192"
+            },
+            {
+              "pos": 18,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+38.990"
+            },
+            {
+              "pos": 19,
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "Peugeot 208",
+              "gap": "+40.120"
+            },
+            {
+              "pos": 20,
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "Toyota Etios",
+              "gap": "+51.031"
+            },
+            {
+              "pos": 21,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+55.980"
+            },
+            {
+              "pos": 22,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+1:20.963"
+            },
+            {
+              "pos": 23,
+              "number": "232",
+              "driver": "Martín Tomás",
+              "team": "Chevrolet Onix",
+              "gap": "+9 Vueltas"
+            },
+            {
+              "pos": 24,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "Ford F. Kinetic",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 25,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 26,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-10-11"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -189309,190 +190120,7 @@
               "url": "https://speedhive.mylaps.com/events/3744743",
               "start": "2026-10-11T12:25:00-03:00"
             }
-          ],
-          "results": [
-            {
-              "pos": 1,
-              "number": "177",
-              "driver": "Tomas Vitar",
-              "team": "",
-              "gap": "26:54.541"
-            },
-            {
-              "pos": 2,
-              "number": "151",
-              "driver": "Exequiel Bastidas",
-              "team": "",
-              "gap": "+2.222"
-            },
-            {
-              "pos": 3,
-              "number": "86",
-              "driver": "Martin Leston",
-              "team": "",
-              "gap": "+4.941"
-            },
-            {
-              "pos": 4,
-              "number": "2",
-              "driver": "Francisco Coltrinari",
-              "team": "",
-              "gap": "+7.749"
-            },
-            {
-              "pos": 5,
-              "number": "14",
-              "driver": "Juan Eduardo Kreitz",
-              "team": "",
-              "gap": "+14.990"
-            },
-            {
-              "pos": 6,
-              "number": "70",
-              "driver": "Juan Ignacio Canela",
-              "team": "",
-              "gap": "+15.299"
-            },
-            {
-              "pos": 7,
-              "number": "44",
-              "driver": "Julián Módica",
-              "team": "",
-              "gap": "+15.836"
-            },
-            {
-              "pos": 8,
-              "number": "79",
-              "driver": "Andres Calderon",
-              "team": "",
-              "gap": "+16.440"
-            },
-            {
-              "pos": 9,
-              "number": "43",
-              "driver": "Marcelo Guevara",
-              "team": "",
-              "gap": "+20.678"
-            },
-            {
-              "pos": 10,
-              "number": "155",
-              "driver": "Gaston Iansa",
-              "team": "",
-              "gap": "+21.001"
-            },
-            {
-              "pos": 11,
-              "number": "89",
-              "driver": "Valentino Quattrocchi",
-              "team": "",
-              "gap": "+21.507"
-            },
-            {
-              "pos": 12,
-              "number": "25",
-              "driver": "Santiago Robledo",
-              "team": "",
-              "gap": "+22.185"
-            },
-            {
-              "pos": 13,
-              "number": "97",
-              "driver": "Bruno Pace",
-              "team": "",
-              "gap": "+22.868"
-            },
-            {
-              "pos": 14,
-              "number": "192",
-              "driver": "Martin Blasig",
-              "team": "",
-              "gap": "+33.732"
-            },
-            {
-              "pos": 15,
-              "number": "98",
-              "driver": "Braian Reinoso",
-              "team": "",
-              "gap": "+33.930"
-            },
-            {
-              "pos": 16,
-              "number": "150",
-              "driver": "Juan Martin Eluchans",
-              "team": "",
-              "gap": "+34.873"
-            },
-            {
-              "pos": 17,
-              "number": "117",
-              "driver": "Pablo Collazo",
-              "team": "",
-              "gap": "+35.192"
-            },
-            {
-              "pos": 18,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "",
-              "gap": "+38.990"
-            },
-            {
-              "pos": 19,
-              "number": "56",
-              "driver": "Agustin Bonomo",
-              "team": "",
-              "gap": "+40.120"
-            },
-            {
-              "pos": 20,
-              "number": "119",
-              "driver": "Nahuel Della Santina",
-              "team": "",
-              "gap": "+51.031"
-            },
-            {
-              "pos": 21,
-              "number": "174",
-              "driver": "Sergio Fernandez",
-              "team": "",
-              "gap": "+55.980"
-            },
-            {
-              "pos": 22,
-              "number": "93",
-              "driver": "Martin Mura",
-              "team": "",
-              "gap": "+1:20.963"
-            },
-            {
-              "pos": 23,
-              "number": "232",
-              "driver": "Tomás Martín",
-              "team": "",
-              "gap": "+9 vueltas"
-            },
-            {
-              "pos": 24,
-              "status": "No largó",
-              "number": "193",
-              "driver": "Franco Romano",
-              "team": "",
-              "gap": ""
-            },
-            {
-              "pos": 25,
-              "status": "No largó",
-              "number": "221",
-              "driver": "Thiago Ferrari",
-              "team": "",
-              "gap": ""
-            }
-          ],
-          "resultsSource": {
-            "name": "Speedhive · cronometraje (provisorio)",
-            "url": "https://speedhive.mylaps.com/sessions/12969260"
-          }
+          ]
         },
         {
           "id": "tn-2026-10-c3",
@@ -189501,6 +190129,243 @@
           "start": "2026-10-11T14:00:00-03:00",
           "timeKnown": true,
           "durationMin": 35,
+          "results": [
+            {
+              "pos": 1,
+              "number": "111",
+              "driver": "Javier Merlo",
+              "team": "VW Virtus",
+              "gap": "32:49.711"
+            },
+            {
+              "pos": 2,
+              "number": "123",
+              "driver": "Mauricio Lambiris",
+              "team": "Ford Focus",
+              "gap": "+0.317"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Julian Santero",
+              "team": "VW Virtus",
+              "gap": "+0.536"
+            },
+            {
+              "pos": 4,
+              "number": "86",
+              "driver": "Agustin Canapino",
+              "team": "Chevrolet Cruze",
+              "gap": "+6.194"
+            },
+            {
+              "pos": 5,
+              "number": "2",
+              "driver": "Jorge Barrio",
+              "team": "Chevrolet Cruze",
+              "gap": "+6.479"
+            },
+            {
+              "pos": 6,
+              "number": "152",
+              "driver": "Thiago Martinez",
+              "team": "Ford Focus",
+              "gap": "+6.953"
+            },
+            {
+              "pos": 7,
+              "number": "83",
+              "driver": "Facundo Ardusso",
+              "team": "Toyota Corolla",
+              "gap": "+7.326"
+            },
+            {
+              "pos": 8,
+              "number": "19",
+              "driver": "Lucas Vicino",
+              "team": "Toyota Corolla",
+              "gap": "+8.414"
+            },
+            {
+              "pos": 9,
+              "number": "79",
+              "driver": "Facundo Chapur",
+              "team": "Honda Civic",
+              "gap": "+11.536"
+            },
+            {
+              "pos": 10,
+              "number": "238",
+              "driver": "Ever Franetovich",
+              "team": "Ford Focus",
+              "gap": "+11.537"
+            },
+            {
+              "pos": 11,
+              "number": "89",
+              "driver": "Jeremias Olmedo",
+              "team": "Chevrolet Cruze",
+              "gap": "+19.252"
+            },
+            {
+              "pos": 12,
+              "number": "9",
+              "driver": "Fabian Yannantuoni",
+              "team": "Ford Focus",
+              "gap": "+21.179"
+            },
+            {
+              "pos": 13,
+              "number": "231",
+              "driver": "Jose Manuel Urcera",
+              "team": "Honda Civic",
+              "gap": "+23.241"
+            },
+            {
+              "pos": 14,
+              "number": "7",
+              "driver": "Alfonso Domenech",
+              "team": "Honda Civic",
+              "gap": "+23.242"
+            },
+            {
+              "pos": 15,
+              "number": "24",
+              "driver": "Sebastian Gomez",
+              "team": "VW Vento GLI",
+              "gap": "+24.465"
+            },
+            {
+              "pos": 16,
+              "number": "133",
+              "driver": "Valentin Aguirre",
+              "team": "Toyota Corolla",
+              "gap": "+25.507"
+            },
+            {
+              "pos": 17,
+              "number": "16",
+              "driver": "Matias Munoz Marchesi",
+              "team": "VW Vento",
+              "gap": "+27.695"
+            },
+            {
+              "pos": 18,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "VW Vento GLI",
+              "gap": "+28.058"
+            },
+            {
+              "pos": 19,
+              "number": "27",
+              "driver": "Leandro Carducci",
+              "team": "Ford Focus",
+              "gap": "+29.927"
+            },
+            {
+              "pos": 20,
+              "number": "69",
+              "driver": "Ramiro Cano",
+              "team": "Ford Focus",
+              "gap": "+33.579"
+            },
+            {
+              "pos": 21,
+              "number": "96",
+              "driver": "Juan Cruz Benvenuti",
+              "team": "VW Vento GLI",
+              "gap": "+33.998"
+            },
+            {
+              "pos": 22,
+              "number": "18",
+              "driver": "Leonel Larrauri",
+              "team": "Honda Civic",
+              "gap": "+37.760"
+            },
+            {
+              "pos": 23,
+              "number": "8",
+              "driver": "Joel Gassmann",
+              "team": "Chevrolet Cruze",
+              "gap": "+38.079"
+            },
+            {
+              "pos": 24,
+              "number": "72",
+              "driver": "Lucas Tedeschi",
+              "team": "Ford Focus",
+              "gap": "+41.291"
+            },
+            {
+              "pos": 25,
+              "number": "77",
+              "driver": "Matias Cohen",
+              "team": "VW Virtus",
+              "gap": "+1:56.646"
+            },
+            {
+              "pos": 26,
+              "number": "46",
+              "driver": "Miguel Ciaurro",
+              "team": "VW Virtus",
+              "gap": "+2 Vueltas"
+            },
+            {
+              "pos": 27,
+              "number": "144",
+              "driver": "Leonel Pernia",
+              "team": "Ford Focus",
+              "gap": "+6 Vueltas"
+            },
+            {
+              "pos": 28,
+              "number": "94",
+              "driver": "Gonzalo Antolin",
+              "team": "Chevrolet Cruze",
+              "gap": "+6 Vueltas"
+            },
+            {
+              "pos": 29,
+              "number": "88",
+              "driver": "Facundo Marques",
+              "team": "Ford Focus",
+              "gap": "+8 Vueltas"
+            },
+            {
+              "pos": 30,
+              "number": "177",
+              "driver": "Leandro Gonzalez",
+              "team": "Chevrolet Cruze",
+              "gap": "+13 Vueltas"
+            },
+            {
+              "pos": 31,
+              "number": "11",
+              "driver": "Jonatan Castellano",
+              "team": "Chevrolet Cruze",
+              "gap": "+13 Vueltas"
+            },
+            {
+              "pos": 32,
+              "number": "66",
+              "driver": "Adrian Percaz",
+              "team": "Ford Focus",
+              "gap": "+15 Vueltas"
+            },
+            {
+              "pos": 33,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Chevrolet Cruze",
+              "gap": "28:23.318"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c3/2026-10-11"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -189508,244 +190373,7 @@
               "url": "https://speedhive.mylaps.com/events/3744743",
               "start": "2026-10-11T14:00:00-03:00"
             }
-          ],
-          "results": [
-            {
-              "pos": 1,
-              "number": "111",
-              "driver": "Javier Merlo",
-              "team": "",
-              "gap": "32:49.444"
-            },
-            {
-              "pos": 2,
-              "number": "123",
-              "driver": "Mauricio Lambiris",
-              "team": "",
-              "gap": "+0.317"
-            },
-            {
-              "pos": 3,
-              "number": "1",
-              "driver": "Julian Santero",
-              "team": "",
-              "gap": "+0.536"
-            },
-            {
-              "pos": 4,
-              "number": "86",
-              "driver": "Agustin Canapino",
-              "team": "",
-              "gap": "+6.194"
-            },
-            {
-              "pos": 5,
-              "number": "2",
-              "driver": "Jorge Barrio",
-              "team": "",
-              "gap": "+6.479"
-            },
-            {
-              "pos": 6,
-              "number": "152",
-              "driver": "Thiago Martinez",
-              "team": "",
-              "gap": "+6.953"
-            },
-            {
-              "pos": 7,
-              "number": "83",
-              "driver": "Facundo Ardusso",
-              "team": "",
-              "gap": "+7.326"
-            },
-            {
-              "pos": 8,
-              "number": "19",
-              "driver": "Lucas Vicino",
-              "team": "",
-              "gap": "+8.414"
-            },
-            {
-              "pos": 9,
-              "number": "238",
-              "driver": "Ever Franetovich",
-              "team": "",
-              "gap": "+9.513"
-            },
-            {
-              "pos": 10,
-              "number": "79",
-              "driver": "Facundo Chapur",
-              "team": "",
-              "gap": "+11.536"
-            },
-            {
-              "pos": 11,
-              "number": "89",
-              "driver": "Jeremias Olmedo",
-              "team": "",
-              "gap": "+19.252"
-            },
-            {
-              "pos": 12,
-              "number": "9",
-              "driver": "Fabian Yannantuoni",
-              "team": "",
-              "gap": "+21.179"
-            },
-            {
-              "pos": 13,
-              "number": "7",
-              "driver": "Alfonso Domenech",
-              "team": "",
-              "gap": "+21.874"
-            },
-            {
-              "pos": 14,
-              "number": "231",
-              "driver": "Jose Manuel Urcera",
-              "team": "",
-              "gap": "+23.241"
-            },
-            {
-              "pos": 15,
-              "number": "24",
-              "driver": "Sebastian Gomez",
-              "team": "",
-              "gap": "+24.465"
-            },
-            {
-              "pos": 16,
-              "number": "133",
-              "driver": "Valentin Aguirre",
-              "team": "",
-              "gap": "+25.507"
-            },
-            {
-              "pos": 17,
-              "number": "16",
-              "driver": "Matias Munoz Marchesi",
-              "team": "",
-              "gap": "+27.695"
-            },
-            {
-              "pos": 18,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "",
-              "gap": "+28.058"
-            },
-            {
-              "pos": 19,
-              "number": "27",
-              "driver": "Leandro Carducci",
-              "team": "",
-              "gap": "+29.927"
-            },
-            {
-              "pos": 20,
-              "number": "69",
-              "driver": "Ramiro Cano",
-              "team": "",
-              "gap": "+33.579"
-            },
-            {
-              "pos": 21,
-              "number": "96",
-              "driver": "Juan Cruz Benvenuti",
-              "team": "",
-              "gap": "+33.998"
-            },
-            {
-              "pos": 22,
-              "number": "18",
-              "driver": "Leonel Larrauri",
-              "team": "",
-              "gap": "+37.760"
-            },
-            {
-              "pos": 23,
-              "number": "8",
-              "driver": "Joel Gassmann",
-              "team": "",
-              "gap": "+38.079"
-            },
-            {
-              "pos": 24,
-              "number": "72",
-              "driver": "Lucas Tedeschi",
-              "team": "",
-              "gap": "+41.291"
-            },
-            {
-              "pos": 25,
-              "number": "77",
-              "driver": "Matias Cohen",
-              "team": "",
-              "gap": "+1:56.646"
-            },
-            {
-              "pos": 26,
-              "number": "46",
-              "driver": "Miguel Ciaurro",
-              "team": "",
-              "gap": "+2 vueltas"
-            },
-            {
-              "pos": 27,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "",
-              "gap": "+3 vueltas"
-            },
-            {
-              "pos": 28,
-              "number": "144",
-              "driver": "Leonel Pernia",
-              "team": "",
-              "gap": "+6 vueltas"
-            },
-            {
-              "pos": 29,
-              "number": "94",
-              "driver": "Gonzalo Antolin",
-              "team": "",
-              "gap": "+6 vueltas"
-            },
-            {
-              "pos": 30,
-              "number": "88",
-              "driver": "Facundo Marques",
-              "team": "",
-              "gap": "+8 vueltas"
-            },
-            {
-              "pos": 31,
-              "number": "177",
-              "driver": "Leandro Gonzalez",
-              "team": "",
-              "gap": "+13 vueltas"
-            },
-            {
-              "pos": 32,
-              "number": "11",
-              "driver": "Jonatan Castellano",
-              "team": "",
-              "gap": "+13 vueltas"
-            },
-            {
-              "pos": 33,
-              "number": "66",
-              "driver": "Adrian Percaz",
-              "team": "",
-              "gap": "+15 vueltas"
-            }
-          ],
-          "resultsSource": {
-            "name": "Speedhive · cronometraje (provisorio)",
-            "url": "https://speedhive.mylaps.com/sessions/12970328"
-          }
+          ]
         }
       ],
       "source": "APAT (apat.org.ar)"
@@ -191411,151 +192039,151 @@
         "pos": 1,
         "driver": "Agustin Canapino",
         "team": "Salvita Racing",
-        "points": 269
+        "points": 299
       },
       {
         "pos": 2,
         "driver": "Julian Santero",
         "team": "Ambrogio Racing",
-        "points": 225
+        "points": 256
       },
       {
         "pos": 3,
         "driver": "Facundo Chapur",
         "team": "Larrauri Racing",
-        "points": 213
+        "points": 232
       },
       {
         "pos": 4,
         "driver": "Mauricio Lambiris",
         "team": "MG-C Pergamino",
-        "points": 189
+        "points": 224
       },
       {
         "pos": 5,
         "driver": "Jorge Barrio",
         "team": "Febase Performance",
-        "points": 187
+        "points": 214
       },
       {
         "pos": 6,
         "driver": "Bautista Damiani",
         "team": "Saturni Racing",
-        "points": 174
+        "points": 177
       },
       {
         "pos": 7,
         "driver": "Sebastian Gomez",
         "team": "Martos Competicion",
-        "points": 154
+        "points": 166
       },
       {
         "pos": 8,
-        "driver": "Leonel Pernia",
-        "team": "MG-C Pergamino",
-        "points": 151
+        "driver": "Facundo Ardusso",
+        "team": "Ale Bucci Racing",
+        "points": 164
       },
       {
         "pos": 9,
-        "driver": "Facundo Ardusso",
-        "team": "Ale Bucci Racing",
-        "points": 143
+        "driver": "Lucas Vicino",
+        "team": "Escuderia Vicino",
+        "points": 161
       },
       {
         "pos": 10,
-        "driver": "Lucas Vicino",
-        "team": "Escuderia Vicino",
-        "points": 141
+        "driver": "Leonel Pernia",
+        "team": "MG-C Pergamino",
+        "points": 159
       },
       {
         "pos": 11,
         "driver": "Jose Manuel Urcera",
         "team": "GR Competicion",
-        "points": 139
+        "points": 153
       },
       {
         "pos": 12,
         "driver": "Jonatan Castellano",
         "team": "Jorge Piedra Competicion",
-        "points": 130
+        "points": 133
       },
       {
         "pos": 13,
         "driver": "Alfonso Domenech",
         "team": "MG-C Pergamino",
-        "points": 118
+        "points": 127
       },
       {
         "pos": 14,
-        "driver": "Facundo Marques",
-        "team": "Paladini Racing",
-        "points": 104
+        "driver": "Javier Merlo",
+        "team": "Scuderia Prema",
+        "points": 109
       },
       {
         "pos": 15,
-        "driver": "Joel Gassmann",
-        "team": "Scuderia Philagro JT",
-        "points": 88
+        "driver": "Facundo Marques",
+        "team": "Paladini Racing",
+        "points": 108
       },
       {
         "pos": 16,
         "driver": "Ever Franetovich",
         "team": "Crucianelli GC Competicion",
-        "points": 86
+        "points": 104
       },
       {
         "pos": 17,
         "driver": "Thiago Martinez",
         "team": "Crucianelli GC Competicion",
-        "points": 81
+        "points": 103
       },
       {
         "pos": 18,
         "driver": "Fabian Yannantuoni",
         "team": "Paladini Racing",
-        "points": 81
+        "points": 91
       },
       {
         "pos": 19,
+        "driver": "Jeremias Olmedo",
+        "team": "Salvita Racing",
+        "points": 90
+      },
+      {
+        "pos": 20,
+        "driver": "Joel Gassmann",
+        "team": "Scuderia Philagro JT",
+        "points": 88
+      },
+      {
+        "pos": 21,
         "driver": "Leandro Gonzalez",
         "team": "MG-C Pergamino",
         "points": 79
       },
       {
-        "pos": 20,
-        "driver": "Jeremias Olmedo",
-        "team": "Salvita Racing",
-        "points": 76
-      },
-      {
-        "pos": 21,
+        "pos": 22,
         "driver": "Ricardo Risatti",
         "team": "Nico Kern Racing Car",
         "points": 72
       },
       {
-        "pos": 22,
-        "driver": "Javier Merlo",
-        "team": "Scuderia Prema",
-        "points": 67
-      },
-      {
         "pos": 23,
         "driver": "Leandro Carducci",
         "team": "GR Competicion",
-        "points": 62
+        "points": 69
       },
       {
         "pos": 24,
         "driver": "Matias Munoz Marchesi",
         "team": "Mumu Racing",
-        "points": 47
+        "points": 56
       },
       {
         "pos": 25,
         "driver": "Ramiro Cano",
         "team": "Crucianelli GC Competicion",
-        "points": 40
+        "points": 45
       },
       {
         "pos": 26,
@@ -191567,13 +192195,13 @@
         "pos": 27,
         "driver": "Leonel Larrauri",
         "team": "Larrauri Racing",
-        "points": 32
+        "points": 34
       },
       {
         "pos": 28,
         "driver": "Miguel Ciaurro",
         "team": "Giacone Competicion",
-        "points": 29
+        "points": 31
       },
       {
         "pos": 29,
@@ -191601,33 +192229,33 @@
       },
       {
         "pos": 33,
-        "driver": "Matias Cohen",
-        "team": "Scuderia Prema",
-        "points": 16
+        "driver": "Juan Cruz Benvenuti",
+        "team": "Salvita Racing",
+        "points": 18
       },
       {
         "pos": 34,
-        "driver": "Juan Cruz Benvenuti",
-        "team": "Salvita Racing",
-        "points": 15
+        "driver": "Matias Cohen",
+        "team": "Scuderia Prema",
+        "points": 17
       },
       {
         "pos": 35,
+        "driver": "Valentin Aguirre",
+        "team": "Ale Bucci Racing",
+        "points": 16
+      },
+      {
+        "pos": 36,
         "driver": "Carlos Okulovich",
         "team": "Febase Performance",
         "points": 14
       },
       {
-        "pos": 36,
+        "pos": 37,
         "driver": "Braian Quevedo",
         "team": "Scuderia Philagro JT",
         "points": 9
-      },
-      {
-        "pos": 37,
-        "driver": "Valentin Aguirre",
-        "team": "Ale Bucci Racing",
-        "points": 8
       },
       {
         "pos": 38,
@@ -194796,31 +195424,31 @@
           "pos": 1,
           "driver": "Exequiel Bastidas",
           "team": "Ale Bucci Racing",
-          "points": 256
+          "points": 291
         },
         {
           "pos": 2,
           "driver": "Francisco Coltrinari",
           "team": "Saturni Racing",
-          "points": 251
+          "points": 280
         },
         {
           "pos": 3,
           "driver": "Tomas Vitar",
           "team": "GR Competicion",
-          "points": 235
+          "points": 277
         },
         {
           "pos": 4,
           "driver": "Juan Ignacio Canela",
           "team": "Alquat Motorsport",
-          "points": 189
+          "points": 212
         },
         {
           "pos": 5,
           "driver": "Martin Leston",
           "team": "Antolin Competicion",
-          "points": 162
+          "points": 189
         },
         {
           "pos": 6,
@@ -194842,75 +195470,75 @@
         },
         {
           "pos": 9,
+          "driver": "Valentino Quattrocchi",
+          "team": "Alquat Motorsport",
+          "points": 140
+        },
+        {
+          "pos": 10,
+          "driver": "Andres Calderon",
+          "team": "GR Competicion",
+          "points": 139
+        },
+        {
+          "pos": 11,
           "driver": "Renzo Blotta",
           "team": "Ale Bucci Racing",
           "points": 136
         },
         {
-          "pos": 10,
-          "driver": "Valentino Quattrocchi",
-          "team": "Alquat Motorsport",
-          "points": 128
-        },
-        {
-          "pos": 11,
-          "driver": "Andres Calderon",
-          "team": "GR Competicion",
-          "points": 121
-        },
-        {
           "pos": 12,
+          "driver": "Juan Martin Eluchans",
+          "team": "Alquat Motorsport",
+          "points": 116
+        },
+        {
+          "pos": 13,
           "driver": "Lucas Petracchini",
           "team": "JPM Racing",
           "points": 114
         },
         {
-          "pos": 13,
-          "driver": "Juan Martin Eluchans",
-          "team": "Alquat Motorsport",
-          "points": 108
+          "pos": 14,
+          "driver": "Juan Eduardo Kreitz",
+          "team": "Antolin Competicion",
+          "points": 103
         },
         {
-          "pos": 14,
+          "pos": 15,
           "driver": "Thomas Marchesin",
           "team": "Equipo Propio",
           "points": 102
         },
         {
-          "pos": 15,
+          "pos": 16,
           "driver": "Nicolas Posco",
           "team": "Ale Bucci Racing",
           "points": 88
         },
         {
-          "pos": 16,
-          "driver": "Juan Eduardo Kreitz",
-          "team": "Antolin Competicion",
-          "points": 84
-        },
-        {
           "pos": 17,
           "driver": "Braian Reinoso",
           "team": "Giacone Competicion",
-          "points": 82
+          "points": 88
         },
         {
           "pos": 18,
           "driver": "Santiago Robledo",
           "team": "Robledo Competicion",
-          "points": 67
+          "points": 81
         },
         {
           "pos": 19,
           "driver": "Thiago Ferrari",
           "team": "Ale Bucci Racing",
-          "points": 61
+          "points": 68
         },
         {
           "pos": 20,
           "driver": "Martin Blasig",
           "team": "GR Competicion",
-          "points": 57
+          "points": 66
         },
         {
           "pos": 21,
@@ -194932,38 +195560,38 @@
         },
         {
           "pos": 24,
-          "driver": "Pablo Collazo",
-          "team": "Ale Bucci Racing",
-          "points": 46
+          "driver": "Gaston Iansa",
+          "team": "JPM Racing",
+          "points": 54
         },
         {
           "pos": 25,
-          "driver": "Gaston Iansa",
-          "team": "JPM Racing",
-          "points": 39
+          "driver": "Marcelo Guevara",
+          "team": "GR Competicion",
+          "points": 54
         },
         {
           "pos": 26,
+          "driver": "Pablo Collazo",
+          "team": "Ale Bucci Racing",
+          "points": 50
+        },
+        {
+          "pos": 27,
           "driver": "Horacio Evolo",
           "team": "Evolo Motorsport",
           "points": 39
         },
         {
-          "pos": 27,
-          "driver": "Marcelo Guevara",
-          "team": "GR Competicion",
+          "pos": 28,
+          "driver": "Bautista Roqueta",
+          "team": "Salvita Racing",
           "points": 38
         },
         {
-          "pos": 28,
+          "pos": 29,
           "driver": "Sergio Fernandez",
           "team": "JF Racing",
-          "points": 34
-        },
-        {
-          "pos": 29,
-          "driver": "Bautista Roqueta",
-          "team": "Salvita Racing",
           "points": 34
         },
         {
@@ -194992,72 +195620,78 @@
         },
         {
           "pos": 34,
+          "driver": "Bruno Pace",
+          "team": "Tunka Competicion",
+          "points": 27
+        },
+        {
+          "pos": 35,
           "driver": "Daniel Costa Sanchez",
           "team": "MSC Competición",
           "points": 26
         },
         {
-          "pos": 35,
-          "driver": "Bruno Pace",
-          "team": "Tunka Competicion",
-          "points": 16
+          "pos": 36,
+          "driver": "Julián Modica",
+          "team": "Escuderia Vicino",
+          "points": 23
         },
         {
-          "pos": 36,
+          "pos": 37,
+          "driver": "Agustin Bonomo",
+          "team": "Bonomo Motorsport",
+          "points": 13
+        },
+        {
+          "pos": 38,
           "driver": "Ignacio Grippo",
           "team": "GR Competicion",
           "points": 13
         },
         {
-          "pos": 37,
+          "pos": 39,
           "driver": "Federico Luques",
           "team": "GR Competicion",
           "points": 13
         },
         {
-          "pos": 38,
-          "driver": "Agustin Bonomo",
-          "team": "Bonomo Motorsport",
-          "points": 10
-        },
-        {
-          "pos": 39,
+          "pos": 40,
           "driver": "Maximo Donzino",
           "team": "Monti Motorsport",
           "points": 9
         },
         {
-          "pos": 40,
+          "pos": 41,
           "driver": "Jose Luis Arrate",
           "team": "Jorge Piedra Competicion",
           "points": 6
         },
         {
-          "pos": 41,
+          "pos": 42,
           "driver": "Diego Farina",
           "team": "Guindani Racing",
           "points": 6
         },
         {
-          "pos": 42,
+          "pos": 43,
+          "driver": "Nahuel Della Santina",
+          "team": "Giacone Competicion",
+          "points": 5
+        },
+        {
+          "pos": 44,
           "driver": "Gaston Martinez Minetti",
           "team": "GM Racing Team",
           "points": 5
         },
         {
-          "pos": 43,
-          "driver": "Nahuel Della Santina",
-          "team": "Giacone Competicion",
-          "points": 4
-        },
-        {
-          "pos": 44,
+          "pos": 45,
           "driver": "Damian Kirstein",
           "team": "GPA Racing",
           "points": 3
         },
         {
-          "pos": 45,
+          "pos": 46,
           "driver": "Cristian Vaira",
           "team": "Giacone Competicion",
           "points": 3
@@ -196513,13 +197147,14 @@
       "skipped": "sin YOUTUBE_API_KEY"
     },
     "speedhiveTn": {
-      "filledResults": 2,
-      "realTimes": 2,
-      "addedSessions": 10,
+      "filledResults": 0,
+      "realTimes": 10,
+      "addedSessions": 0,
       "errors": []
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON"
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
