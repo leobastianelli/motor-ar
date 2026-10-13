@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T19:00:03.583Z",
+  "generatedAt": "2026-10-13T19:54:10.390Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -6893,7 +6893,7 @@
         "nuevo-car-show": "33"
       },
       "teams": {
-        "nuevo-car-show": "Fiat Uno"
+        "nuevo-car-show": "Chevrolet Corsa"
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-10-04"
@@ -10568,9 +10568,7 @@
       ],
       "slug": "pablo-alejandro-ferace",
       "name": "Pablo Alejandro Ferace",
-      "aliases": [
-        "Pablo Ferace"
-      ],
+      "aliases": [],
       "series": [
         "nuevo-car-show"
       ],

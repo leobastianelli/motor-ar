@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T19:00:01.936Z",
+  "generatedAt": "2026-10-13T19:54:09.027Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -3359,6 +3359,727 @@
       "source": "APAT (apat.org.ar)"
     },
     {
+      "id": "tcp-2026-1",
+      "seriesId": "tc-pista",
+      "round": 1,
+      "name": "Fecha 1 · Calafate",
+      "circuit": {
+        "name": "Calafate",
+        "city": "Calafate",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Santa Cruz"
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-1-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-02-14T08:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "08:30"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": "1:22.906"
+            },
+            {
+              "pos": 2,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "+0.094"
+            },
+            {
+              "pos": 3,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "+0.134"
+            },
+            {
+              "pos": 4,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+0.236"
+            },
+            {
+              "pos": 5,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira",
+              "team": "Ford",
+              "gap": "+0.443"
+            },
+            {
+              "pos": 6,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+0.617"
+            },
+            {
+              "pos": 7,
+              "number": "19",
+              "driver": "Luciano Cotignola",
+              "team": "Toyota",
+              "gap": "+1.217"
+            },
+            {
+              "pos": 8,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Dodge",
+              "gap": "+1.224"
+            },
+            {
+              "pos": 9,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": "+1.318"
+            },
+            {
+              "pos": 10,
+              "number": "31",
+              "driver": "Lucas Guerra",
+              "team": "Torino",
+              "gap": "+1.939"
+            },
+            {
+              "pos": 11,
+              "number": "53",
+              "driver": "Eugenio Provens",
+              "team": "Dodge",
+              "gap": "+2.088"
+            },
+            {
+              "pos": 12,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": "+2.530"
+            },
+            {
+              "pos": 13,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Toyota",
+              "gap": "+2.728"
+            },
+            {
+              "pos": 14,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+3.133"
+            },
+            {
+              "pos": 15,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": "+14.860"
+            },
+            {
+              "pos": 16,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/67/ver"
+          }
+        },
+        {
+          "id": "tcp-2026-1-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-02-14T09:40:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "09:40"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "1:20.415"
+            },
+            {
+              "pos": 2,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": "+0.158"
+            },
+            {
+              "pos": 3,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+0.405"
+            },
+            {
+              "pos": 4,
+              "number": "53",
+              "driver": "Eugenio Provens",
+              "team": "Dodge",
+              "gap": "+0.604"
+            },
+            {
+              "pos": 5,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "+0.761"
+            },
+            {
+              "pos": 6,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": "+0.860"
+            },
+            {
+              "pos": 7,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Toyota",
+              "gap": "+1.200"
+            },
+            {
+              "pos": 8,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira",
+              "team": "Ford",
+              "gap": "+1.220"
+            },
+            {
+              "pos": 9,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Dodge",
+              "gap": "+1.253"
+            },
+            {
+              "pos": 10,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": "+1.258"
+            },
+            {
+              "pos": 11,
+              "number": "31",
+              "driver": "Lucas Guerra",
+              "team": "Torino",
+              "gap": "+1.368"
+            },
+            {
+              "pos": 12,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+1.486"
+            },
+            {
+              "pos": 13,
+              "number": "19",
+              "driver": "Luciano Cotignola",
+              "team": "Toyota",
+              "gap": "+1.504"
+            },
+            {
+              "pos": 14,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+1.610"
+            },
+            {
+              "pos": 15,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": "+1.984"
+            },
+            {
+              "pos": 16,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": "+2.686"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/70/ver"
+          }
+        },
+        {
+          "id": "tcp-2026-1-practica-3entrenamiento",
+          "kind": "practica",
+          "name": "3° Entrenamiento",
+          "start": "2026-02-14T11:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "11:55"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "1:20.267"
+            },
+            {
+              "pos": 2,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "+0.193"
+            },
+            {
+              "pos": 3,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+0.250"
+            },
+            {
+              "pos": 4,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": "+0.414"
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": "+0.749"
+            },
+            {
+              "pos": 6,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Dodge",
+              "gap": "+0.819"
+            },
+            {
+              "pos": 7,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira",
+              "team": "Ford",
+              "gap": "+0.927"
+            },
+            {
+              "pos": 8,
+              "number": "19",
+              "driver": "Luciano Cotignola",
+              "team": "Toyota",
+              "gap": "+1.146"
+            },
+            {
+              "pos": 9,
+              "number": "53",
+              "driver": "Eugenio Provens",
+              "team": "Dodge",
+              "gap": "+1.194"
+            },
+            {
+              "pos": 10,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+1.441"
+            },
+            {
+              "pos": 11,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": "+1.591"
+            },
+            {
+              "pos": 12,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Toyota",
+              "gap": "+1.607"
+            },
+            {
+              "pos": 13,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+1.884"
+            },
+            {
+              "pos": 14,
+              "number": "31",
+              "driver": "Lucas Guerra",
+              "team": "Torino",
+              "gap": "+2.455"
+            },
+            {
+              "pos": 15,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": "+2.688"
+            },
+            {
+              "pos": 16,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": "+3.385"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/74/ver"
+          }
+        },
+        {
+          "id": "tcp-2026-1-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-02-14T15:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 36,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "15:05"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-1-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-02-15T10:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "10:10"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "43",
+              "driver": "Benjamin Anton F.mustang",
+              "team": "Ford",
+              "gap": "6:49.447"
+            },
+            {
+              "pos": 2,
+              "number": "105",
+              "driver": "Manuel Borgert F.mustang",
+              "team": "Ford",
+              "gap": "+1407 vueltas"
+            },
+            {
+              "pos": 3,
+              "number": "44",
+              "driver": "Thomas Pozner F.mustang",
+              "team": "Ford",
+              "gap": "+11568 vueltas"
+            },
+            {
+              "pos": 4,
+              "number": "144",
+              "driver": "Faustino Cifre F.mustang",
+              "team": "Ford",
+              "gap": "+11994 vueltas"
+            },
+            {
+              "pos": 5,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+28176 vueltas"
+            },
+            {
+              "pos": 6,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos F.mustang",
+              "team": "Ford",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 7,
+              "number": "66",
+              "driver": "Gustavo Tadei (h) Chev.",
+              "team": "Chevrolet",
+              "gap": "+4 vueltas"
+            },
+            {
+              "pos": 8,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Dodge",
+              "gap": "+4 vueltas"
+            },
+            {
+              "pos": 1,
+              "number": "99",
+              "driver": "Bautista Damiani Chev.",
+              "team": "Chevrolet",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 2,
+              "number": "10",
+              "driver": "Gabriel Gandulia F.mustang",
+              "team": "Ford",
+              "gap": "+1815 vueltas"
+            },
+            {
+              "pos": 3,
+              "number": "53",
+              "driver": "Eugenio Provens",
+              "team": "Dodge",
+              "gap": "+5269 vueltas"
+            },
+            {
+              "pos": 4,
+              "number": "31",
+              "driver": "Lucas Guerra",
+              "team": "Torino",
+              "gap": "+42489 vueltas"
+            },
+            {
+              "pos": 5,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "+58.185"
+            },
+            {
+              "pos": 6,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Toyota",
+              "gap": "+58.186"
+            },
+            {
+              "pos": 7,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira F.mustang",
+              "team": "Ford",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 8,
+              "number": "19",
+              "driver": "Luciano Cotignola N.l.",
+              "team": "Toyota",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/89/ver"
+          }
+        },
+        {
+          "id": "tcp-2026-1-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-02-15T10:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "10:35"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-1-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-02-15T12:40:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "12:40"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "99",
+              "driver": "Bautista Damiani Chev.",
+              "team": "Chevrolet",
+              "gap": "27:56.454"
+            },
+            {
+              "pos": 2,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+2331 vueltas"
+            },
+            {
+              "pos": 3,
+              "number": "53",
+              "driver": "Eugenio Provens",
+              "team": "Dodge",
+              "gap": "+2436 vueltas"
+            },
+            {
+              "pos": 4,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "+3492 vueltas"
+            },
+            {
+              "pos": 5,
+              "number": "19",
+              "driver": "Luciano Cotignola",
+              "team": "Toyota",
+              "gap": "+4324 vueltas"
+            },
+            {
+              "pos": 6,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": "+6944 vueltas"
+            },
+            {
+              "pos": 7,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "+10633 vueltas"
+            },
+            {
+              "pos": 8,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira",
+              "team": "Ford",
+              "gap": "+11798 vueltas"
+            },
+            {
+              "pos": 9,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": "+20194 vueltas"
+            },
+            {
+              "pos": 10,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+20369 vueltas"
+            },
+            {
+              "pos": 11,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": "+31604 vueltas"
+            },
+            {
+              "pos": 12,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Toyota",
+              "gap": "+3 vueltas"
+            },
+            {
+              "pos": 13,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Dodge",
+              "gap": "+9 vueltas"
+            },
+            {
+              "pos": 14,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+9 vueltas"
+            },
+            {
+              "pos": 15,
+              "number": "31",
+              "driver": "Lucas Guerra",
+              "team": "Torino",
+              "gap": "+12 vueltas"
+            },
+            {
+              "pos": 16,
+              "number": "66",
+              "driver": "Gustavo Tadei (h) Chev.",
+              "team": "Chevrolet",
+              "gap": "+14 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/86/ver"
+          }
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tc-2026-1",
       "seriesId": "tc",
       "round": 1,
@@ -3372,12 +4093,20 @@
       },
       "sessions": [
         {
-          "id": "tc-2026-1-1-entrenamiento",
+          "id": "tc-2026-1-practica-1entrenamiento",
           "kind": "practica",
           "name": "1° Entrenamiento",
-          "start": "2026-02-14T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-02-14T09:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 35,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "09:00"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -3778,12 +4507,20 @@
           }
         },
         {
-          "id": "tc-2026-1-2-entrenamiento",
+          "id": "tc-2026-1-practica-2entrenamiento",
           "kind": "practica",
           "name": "2° Entrenamiento",
-          "start": "2026-02-14T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-02-14T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "11:05"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -4177,12 +4914,20 @@
           }
         },
         {
-          "id": "tc-2026-1-3-entrenamiento",
+          "id": "tc-2026-1-practica-3entrenamiento",
           "kind": "practica",
           "name": "3° Entrenamiento",
-          "start": "2026-02-14T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-02-14T13:15:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "13:15"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -4569,12 +5314,20 @@
           }
         },
         {
-          "id": "tc-2026-1-clasificacion",
+          "id": "tc-2026-1-clasificacion-clasificacion",
           "kind": "clasificacion",
           "name": "Clasificación",
-          "start": "2026-02-14T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-02-14T15:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "15:55"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -4954,12 +5707,20 @@
           }
         },
         {
-          "id": "tc-2026-1-serie-1",
+          "id": "tc-2026-1-serie-serie1",
           "kind": "serie",
           "name": "Serie 1",
-          "start": "2026-02-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-02-15T11:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "11:00"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -5351,12 +6112,52 @@
           }
         },
         {
-          "id": "tc-2026-1-final",
+          "id": "tc-2026-1-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-02-15T11:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "11:25"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-1-serie-serie3",
+          "kind": "serie",
+          "name": "Serie 3",
+          "start": "2026-02-15T11:50:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "11:50"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-1-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-02-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
+          "start": "2026-02-15T13:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-inicio-campeonato-tc-el-calafate-2026/",
+              "start": "13:55"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -5747,1184 +6548,6 @@
       "source": "ACTC (calendario) · Wikipedia (podios)"
     },
     {
-      "id": "tcp-2026-1",
-      "seriesId": "tc-pista",
-      "round": 1,
-      "name": "Fecha 1 · Calafate",
-      "circuit": {
-        "name": "Calafate",
-        "city": "Calafate",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Santa Cruz"
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-1-1-entrenamiento",
-          "kind": "practica",
-          "name": "1° Entrenamiento",
-          "start": "2026-02-14T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "Chevrolet",
-              "gap": "1:22.906"
-            },
-            {
-              "pos": 2,
-              "number": "67",
-              "driver": "Santiago Biagi",
-              "team": "Dodge",
-              "gap": "+0.094"
-            },
-            {
-              "pos": 3,
-              "number": "123",
-              "driver": "Nicanor Santilli Pazos",
-              "team": "Ford",
-              "gap": "+0.134"
-            },
-            {
-              "pos": 4,
-              "number": "133",
-              "driver": "Felipe Bernasconi",
-              "team": "Toyota",
-              "gap": "+0.236"
-            },
-            {
-              "pos": 5,
-              "number": "59",
-              "driver": "Juan Ignacio Maceira",
-              "team": "Ford",
-              "gap": "+0.443"
-            },
-            {
-              "pos": 6,
-              "number": "144",
-              "driver": "Faustino Cifre",
-              "team": "Ford",
-              "gap": "+0.617"
-            },
-            {
-              "pos": 7,
-              "number": "19",
-              "driver": "Luciano Cotignola",
-              "team": "Toyota",
-              "gap": "+1.217"
-            },
-            {
-              "pos": 8,
-              "number": "111",
-              "driver": "Benjamin Ochoa",
-              "team": "Dodge",
-              "gap": "+1.224"
-            },
-            {
-              "pos": 9,
-              "number": "10",
-              "driver": "Gabriel Gandulia",
-              "team": "Ford",
-              "gap": "+1.318"
-            },
-            {
-              "pos": 10,
-              "number": "31",
-              "driver": "Lucas Guerra",
-              "team": "Torino",
-              "gap": "+1.939"
-            },
-            {
-              "pos": 11,
-              "number": "53",
-              "driver": "Eugenio Provens",
-              "team": "Dodge",
-              "gap": "+2.088"
-            },
-            {
-              "pos": 12,
-              "number": "66",
-              "driver": "Gustavo Tadei (h)",
-              "team": "Chevrolet",
-              "gap": "+2.530"
-            },
-            {
-              "pos": 13,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "Toyota",
-              "gap": "+2.728"
-            },
-            {
-              "pos": 14,
-              "number": "105",
-              "driver": "Manuel Borgert",
-              "team": "Ford",
-              "gap": "+3.133"
-            },
-            {
-              "pos": 15,
-              "number": "44",
-              "driver": "Thomas Pozner",
-              "team": "Ford",
-              "gap": "+14.860"
-            },
-            {
-              "pos": 16,
-              "number": "43",
-              "driver": "Benjamin Anton",
-              "team": "Ford",
-              "gap": "",
-              "status": "Sin tiempo"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/67/ver"
-          }
-        },
-        {
-          "id": "tcp-2026-1-2-entrenamiento",
-          "kind": "practica",
-          "name": "2° Entrenamiento",
-          "start": "2026-02-14T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "123",
-              "driver": "Nicanor Santilli Pazos",
-              "team": "Ford",
-              "gap": "1:20.415"
-            },
-            {
-              "pos": 2,
-              "number": "10",
-              "driver": "Gabriel Gandulia",
-              "team": "Ford",
-              "gap": "+0.158"
-            },
-            {
-              "pos": 3,
-              "number": "133",
-              "driver": "Felipe Bernasconi",
-              "team": "Toyota",
-              "gap": "+0.405"
-            },
-            {
-              "pos": 4,
-              "number": "53",
-              "driver": "Eugenio Provens",
-              "team": "Dodge",
-              "gap": "+0.604"
-            },
-            {
-              "pos": 5,
-              "number": "67",
-              "driver": "Santiago Biagi",
-              "team": "Dodge",
-              "gap": "+0.761"
-            },
-            {
-              "pos": 6,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "Chevrolet",
-              "gap": "+0.860"
-            },
-            {
-              "pos": 7,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "Toyota",
-              "gap": "+1.200"
-            },
-            {
-              "pos": 8,
-              "number": "59",
-              "driver": "Juan Ignacio Maceira",
-              "team": "Ford",
-              "gap": "+1.220"
-            },
-            {
-              "pos": 9,
-              "number": "111",
-              "driver": "Benjamin Ochoa",
-              "team": "Dodge",
-              "gap": "+1.253"
-            },
-            {
-              "pos": 10,
-              "number": "43",
-              "driver": "Benjamin Anton",
-              "team": "Ford",
-              "gap": "+1.258"
-            },
-            {
-              "pos": 11,
-              "number": "31",
-              "driver": "Lucas Guerra",
-              "team": "Torino",
-              "gap": "+1.368"
-            },
-            {
-              "pos": 12,
-              "number": "105",
-              "driver": "Manuel Borgert",
-              "team": "Ford",
-              "gap": "+1.486"
-            },
-            {
-              "pos": 13,
-              "number": "19",
-              "driver": "Luciano Cotignola",
-              "team": "Toyota",
-              "gap": "+1.504"
-            },
-            {
-              "pos": 14,
-              "number": "144",
-              "driver": "Faustino Cifre",
-              "team": "Ford",
-              "gap": "+1.610"
-            },
-            {
-              "pos": 15,
-              "number": "66",
-              "driver": "Gustavo Tadei (h)",
-              "team": "Chevrolet",
-              "gap": "+1.984"
-            },
-            {
-              "pos": 16,
-              "number": "44",
-              "driver": "Thomas Pozner",
-              "team": "Ford",
-              "gap": "+2.686"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/70/ver"
-          }
-        },
-        {
-          "id": "tcp-2026-1-3-entrenamiento",
-          "kind": "practica",
-          "name": "3° Entrenamiento",
-          "start": "2026-02-14T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "123",
-              "driver": "Nicanor Santilli Pazos",
-              "team": "Ford",
-              "gap": "1:20.267"
-            },
-            {
-              "pos": 2,
-              "number": "67",
-              "driver": "Santiago Biagi",
-              "team": "Dodge",
-              "gap": "+0.193"
-            },
-            {
-              "pos": 3,
-              "number": "133",
-              "driver": "Felipe Bernasconi",
-              "team": "Toyota",
-              "gap": "+0.250"
-            },
-            {
-              "pos": 4,
-              "number": "10",
-              "driver": "Gabriel Gandulia",
-              "team": "Ford",
-              "gap": "+0.414"
-            },
-            {
-              "pos": 5,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "Chevrolet",
-              "gap": "+0.749"
-            },
-            {
-              "pos": 6,
-              "number": "111",
-              "driver": "Benjamin Ochoa",
-              "team": "Dodge",
-              "gap": "+0.819"
-            },
-            {
-              "pos": 7,
-              "number": "59",
-              "driver": "Juan Ignacio Maceira",
-              "team": "Ford",
-              "gap": "+0.927"
-            },
-            {
-              "pos": 8,
-              "number": "19",
-              "driver": "Luciano Cotignola",
-              "team": "Toyota",
-              "gap": "+1.146"
-            },
-            {
-              "pos": 9,
-              "number": "53",
-              "driver": "Eugenio Provens",
-              "team": "Dodge",
-              "gap": "+1.194"
-            },
-            {
-              "pos": 10,
-              "number": "144",
-              "driver": "Faustino Cifre",
-              "team": "Ford",
-              "gap": "+1.441"
-            },
-            {
-              "pos": 11,
-              "number": "44",
-              "driver": "Thomas Pozner",
-              "team": "Ford",
-              "gap": "+1.591"
-            },
-            {
-              "pos": 12,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "Toyota",
-              "gap": "+1.607"
-            },
-            {
-              "pos": 13,
-              "number": "105",
-              "driver": "Manuel Borgert",
-              "team": "Ford",
-              "gap": "+1.884"
-            },
-            {
-              "pos": 14,
-              "number": "31",
-              "driver": "Lucas Guerra",
-              "team": "Torino",
-              "gap": "+2.455"
-            },
-            {
-              "pos": 15,
-              "number": "43",
-              "driver": "Benjamin Anton",
-              "team": "Ford",
-              "gap": "+2.688"
-            },
-            {
-              "pos": 16,
-              "number": "66",
-              "driver": "Gustavo Tadei (h)",
-              "team": "Chevrolet",
-              "gap": "+3.385"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/74/ver"
-          }
-        },
-        {
-          "id": "tcp-2026-1-serie-1",
-          "kind": "serie",
-          "name": "Serie 1",
-          "start": "2026-02-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "43",
-              "driver": "Benjamin Anton F.mustang",
-              "team": "Ford",
-              "gap": "6:49.447"
-            },
-            {
-              "pos": 2,
-              "number": "105",
-              "driver": "Manuel Borgert F.mustang",
-              "team": "Ford",
-              "gap": "+1407 vueltas"
-            },
-            {
-              "pos": 3,
-              "number": "44",
-              "driver": "Thomas Pozner F.mustang",
-              "team": "Ford",
-              "gap": "+11568 vueltas"
-            },
-            {
-              "pos": 4,
-              "number": "144",
-              "driver": "Faustino Cifre F.mustang",
-              "team": "Ford",
-              "gap": "+11994 vueltas"
-            },
-            {
-              "pos": 5,
-              "number": "133",
-              "driver": "Felipe Bernasconi",
-              "team": "Toyota",
-              "gap": "+28176 vueltas"
-            },
-            {
-              "pos": 6,
-              "number": "123",
-              "driver": "Nicanor Santilli Pazos F.mustang",
-              "team": "Ford",
-              "gap": "+1 vuelta"
-            },
-            {
-              "pos": 7,
-              "number": "66",
-              "driver": "Gustavo Tadei (h) Chev.",
-              "team": "Chevrolet",
-              "gap": "+4 vueltas"
-            },
-            {
-              "pos": 8,
-              "number": "111",
-              "driver": "Benjamin Ochoa",
-              "team": "Dodge",
-              "gap": "+4 vueltas"
-            },
-            {
-              "pos": 1,
-              "number": "99",
-              "driver": "Bautista Damiani Chev.",
-              "team": "Chevrolet",
-              "gap": "",
-              "status": "Sin tiempo"
-            },
-            {
-              "pos": 2,
-              "number": "10",
-              "driver": "Gabriel Gandulia F.mustang",
-              "team": "Ford",
-              "gap": "+1815 vueltas"
-            },
-            {
-              "pos": 3,
-              "number": "53",
-              "driver": "Eugenio Provens",
-              "team": "Dodge",
-              "gap": "+5269 vueltas"
-            },
-            {
-              "pos": 4,
-              "number": "31",
-              "driver": "Lucas Guerra",
-              "team": "Torino",
-              "gap": "+42489 vueltas"
-            },
-            {
-              "pos": 5,
-              "number": "67",
-              "driver": "Santiago Biagi",
-              "team": "Dodge",
-              "gap": "+58.185"
-            },
-            {
-              "pos": 6,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "Toyota",
-              "gap": "+58.186"
-            },
-            {
-              "pos": 7,
-              "number": "59",
-              "driver": "Juan Ignacio Maceira F.mustang",
-              "team": "Ford",
-              "gap": "+1 vuelta"
-            },
-            {
-              "pos": 8,
-              "number": "19",
-              "driver": "Luciano Cotignola N.l.",
-              "team": "Toyota",
-              "gap": "",
-              "status": "Sin tiempo"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/89/ver"
-          }
-        },
-        {
-          "id": "tcp-2026-1-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-02-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40,
-          "results": [
-            {
-              "pos": 1,
-              "number": "99",
-              "driver": "Bautista Damiani Chev.",
-              "team": "Chevrolet",
-              "gap": "27:56.454"
-            },
-            {
-              "pos": 2,
-              "number": "105",
-              "driver": "Manuel Borgert",
-              "team": "Ford",
-              "gap": "+2331 vueltas"
-            },
-            {
-              "pos": 3,
-              "number": "53",
-              "driver": "Eugenio Provens",
-              "team": "Dodge",
-              "gap": "+2436 vueltas"
-            },
-            {
-              "pos": 4,
-              "number": "67",
-              "driver": "Santiago Biagi",
-              "team": "Dodge",
-              "gap": "+3492 vueltas"
-            },
-            {
-              "pos": 5,
-              "number": "19",
-              "driver": "Luciano Cotignola",
-              "team": "Toyota",
-              "gap": "+4324 vueltas"
-            },
-            {
-              "pos": 6,
-              "number": "44",
-              "driver": "Thomas Pozner",
-              "team": "Ford",
-              "gap": "+6944 vueltas"
-            },
-            {
-              "pos": 7,
-              "number": "123",
-              "driver": "Nicanor Santilli Pazos",
-              "team": "Ford",
-              "gap": "+10633 vueltas"
-            },
-            {
-              "pos": 8,
-              "number": "59",
-              "driver": "Juan Ignacio Maceira",
-              "team": "Ford",
-              "gap": "+11798 vueltas"
-            },
-            {
-              "pos": 9,
-              "number": "10",
-              "driver": "Gabriel Gandulia",
-              "team": "Ford",
-              "gap": "+20194 vueltas"
-            },
-            {
-              "pos": 10,
-              "number": "144",
-              "driver": "Faustino Cifre",
-              "team": "Ford",
-              "gap": "+20369 vueltas"
-            },
-            {
-              "pos": 11,
-              "number": "43",
-              "driver": "Benjamin Anton",
-              "team": "Ford",
-              "gap": "+31604 vueltas"
-            },
-            {
-              "pos": 12,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "Toyota",
-              "gap": "+3 vueltas"
-            },
-            {
-              "pos": 13,
-              "number": "111",
-              "driver": "Benjamin Ochoa",
-              "team": "Dodge",
-              "gap": "+9 vueltas"
-            },
-            {
-              "pos": 14,
-              "number": "133",
-              "driver": "Felipe Bernasconi",
-              "team": "Toyota",
-              "gap": "+9 vueltas"
-            },
-            {
-              "pos": 15,
-              "number": "31",
-              "driver": "Lucas Guerra",
-              "team": "Torino",
-              "gap": "+12 vueltas"
-            },
-            {
-              "pos": 16,
-              "number": "66",
-              "driver": "Gustavo Tadei (h) Chev.",
-              "team": "Chevrolet",
-              "gap": "+14 vueltas"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/86/ver"
-          }
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tcpk-2026-1",
-      "seriesId": "tc-pick-up",
-      "round": 1,
-      "name": "Fecha 1 · La Plata",
-      "circuit": {
-        "name": "Roberto José Mouras",
-        "city": "La Plata",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcpk-2026-1-1-entrenamiento",
-          "kind": "practica",
-          "name": "1° Entrenamiento",
-          "start": "2026-02-21T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "119",
-              "driver": "Hernán Palazzo",
-              "team": "",
-              "gap": "1:28.986"
-            },
-            {
-              "pos": 2,
-              "number": "2",
-              "driver": "Juan José Ebarlín",
-              "team": "",
-              "gap": "+0.170"
-            },
-            {
-              "pos": 3,
-              "number": "86",
-              "driver": "Ignacio Faín",
-              "team": "",
-              "gap": "+0.256"
-            },
-            {
-              "pos": 5,
-              "number": "13",
-              "driver": "Diego De Carlo",
-              "team": "",
-              "gap": "+0.595"
-            },
-            {
-              "pos": 6,
-              "number": "147",
-              "driver": "Marco Dianda",
-              "team": "",
-              "gap": "+0.609"
-            },
-            {
-              "pos": 7,
-              "number": "12",
-              "driver": "Tomás Abdala",
-              "team": "",
-              "gap": "+0.646"
-            },
-            {
-              "pos": 8,
-              "number": "256",
-              "driver": "Otto Fritzler",
-              "team": "",
-              "gap": "+0.968"
-            },
-            {
-              "pos": 9,
-              "number": "11",
-              "driver": "Gaston Mazzacane",
-              "team": "",
-              "gap": "+1.000"
-            },
-            {
-              "pos": 10,
-              "number": "110",
-              "driver": "Diego Azar",
-              "team": "",
-              "gap": "+1.073"
-            },
-            {
-              "pos": 11,
-              "number": "154",
-              "driver": "Joaquín Ochoa",
-              "team": "",
-              "gap": "+1.350"
-            },
-            {
-              "pos": 12,
-              "number": "55",
-              "driver": "Gaston Iansa",
-              "team": "",
-              "gap": "+1.914"
-            },
-            {
-              "pos": 13,
-              "number": "3",
-              "driver": "Mariano Werner",
-              "team": "",
-              "gap": "+8.935"
-            },
-            {
-              "pos": 14,
-              "number": "100",
-              "driver": "Reutemann Ian",
-              "team": "",
-              "gap": "+11.217"
-            },
-            {
-              "pos": 15,
-              "number": "112",
-              "driver": "Lucas Valle",
-              "team": "",
-              "gap": "+16.626"
-            },
-            {
-              "pos": 16,
-              "number": "140",
-              "driver": "Gaspar Chansard",
-              "team": "",
-              "gap": "+22.021"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/115/ver"
-          }
-        },
-        {
-          "id": "tcpk-2026-1-clasificacion",
-          "kind": "clasificacion",
-          "name": "Clasificación",
-          "start": "2026-02-21T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "2",
-              "driver": "Juan José Ebarlín",
-              "team": "",
-              "gap": "1:29.126"
-            },
-            {
-              "pos": 2,
-              "number": "110",
-              "driver": "Diego Azar",
-              "team": "",
-              "gap": "+0.165"
-            },
-            {
-              "pos": 3,
-              "number": "3",
-              "driver": "Mariano Werner",
-              "team": "",
-              "gap": "+0.195"
-            },
-            {
-              "pos": 4,
-              "number": "1",
-              "driver": "Agustín Canapino",
-              "team": "",
-              "gap": "+0.225"
-            },
-            {
-              "pos": 5,
-              "number": "147",
-              "driver": "Marco Dianda",
-              "team": "",
-              "gap": "+0.293"
-            },
-            {
-              "pos": 6,
-              "number": "86",
-              "driver": "Ignacio Faín",
-              "team": "",
-              "gap": "+0.323"
-            },
-            {
-              "pos": 7,
-              "number": "11",
-              "driver": "Gaston Mazzacane",
-              "team": "",
-              "gap": "+0.533"
-            },
-            {
-              "pos": 8,
-              "number": "119",
-              "driver": "Hernán Palazzo",
-              "team": "",
-              "gap": "+0.628"
-            },
-            {
-              "pos": 9,
-              "number": "154",
-              "driver": "Joaquín Ochoa",
-              "team": "",
-              "gap": "+1.135"
-            },
-            {
-              "pos": 10,
-              "number": "256",
-              "driver": "Otto Fritzler",
-              "team": "",
-              "gap": "",
-              "status": "Sin tiempo"
-            },
-            {
-              "pos": 11,
-              "number": "100",
-              "driver": "Reutemann Ian",
-              "team": "",
-              "gap": "+0.945"
-            },
-            {
-              "pos": 12,
-              "number": "112",
-              "driver": "Lucas Valle",
-              "team": "",
-              "gap": "+1.164"
-            },
-            {
-              "pos": 13,
-              "number": "13",
-              "driver": "Diego De Carlo",
-              "team": "",
-              "gap": "+1.225"
-            },
-            {
-              "pos": 14,
-              "number": "55",
-              "driver": "Gaston Iansa",
-              "team": "",
-              "gap": "+1.391"
-            },
-            {
-              "pos": 15,
-              "number": "140",
-              "driver": "Gaspar Chansard",
-              "team": "",
-              "gap": "+2.147"
-            },
-            {
-              "pos": 16,
-              "number": "12",
-              "driver": "Tomás Abdala",
-              "team": "",
-              "gap": "",
-              "status": "Sin tiempo"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/142/ver"
-          }
-        },
-        {
-          "id": "tcpk-2026-1-serie-1",
-          "kind": "serie",
-          "name": "Serie 1",
-          "start": "2026-02-22T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "2",
-              "driver": "Juan José Ebarlín",
-              "team": "",
-              "gap": "7:34.743"
-            },
-            {
-              "pos": 2,
-              "number": "3",
-              "driver": "Mariano Werner",
-              "team": "",
-              "gap": "+1.225"
-            },
-            {
-              "pos": 3,
-              "number": "147",
-              "driver": "Marco Dianda",
-              "team": "",
-              "gap": "+1.467"
-            },
-            {
-              "pos": 4,
-              "number": "13",
-              "driver": "Diego De Carlo",
-              "team": "",
-              "gap": "+12.964"
-            },
-            {
-              "pos": 5,
-              "number": "154",
-              "driver": "Joaquín Ochoa",
-              "team": "",
-              "gap": "+14.197"
-            },
-            {
-              "pos": 6,
-              "number": "140",
-              "driver": "Gaspar Chansard",
-              "team": "",
-              "gap": "+14.198"
-            },
-            {
-              "pos": 7,
-              "number": "100",
-              "driver": "Reutemann Ian",
-              "team": "",
-              "gap": "+15.443"
-            },
-            {
-              "pos": 8,
-              "number": "11",
-              "driver": "Gaston Mazzacane",
-              "team": "",
-              "gap": "+2 vueltas"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/156/ver"
-          }
-        },
-        {
-          "id": "tcpk-2026-1-serie-2",
-          "kind": "serie",
-          "name": "Serie 2",
-          "start": "2026-02-22T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "110",
-              "driver": "Diego Azar",
-              "team": "",
-              "gap": "7:37.430"
-            },
-            {
-              "pos": 2,
-              "number": "86",
-              "driver": "Ignacio Faín",
-              "team": "",
-              "gap": "+0.453"
-            },
-            {
-              "pos": 3,
-              "number": "119",
-              "driver": "Hernán Palazzo",
-              "team": "",
-              "gap": "+0.850"
-            },
-            {
-              "pos": 4,
-              "number": "256",
-              "driver": "Otto Fritzler",
-              "team": "",
-              "gap": "+1.047"
-            },
-            {
-              "pos": 5,
-              "number": "12",
-              "driver": "Tomás Abdala",
-              "team": "",
-              "gap": "+6.831"
-            },
-            {
-              "pos": 6,
-              "number": "55",
-              "driver": "Gaston Iansa",
-              "team": "",
-              "gap": "+8.358"
-            },
-            {
-              "pos": 7,
-              "number": "112",
-              "driver": "Lucas Valle",
-              "team": "",
-              "gap": "+13.697"
-            },
-            {
-              "pos": 8,
-              "number": "1",
-              "driver": "Agustín Canapino",
-              "team": "",
-              "gap": "+36.640"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/157/ver"
-          }
-        },
-        {
-          "id": "tcpk-2026-1-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-02-22T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 35,
-          "results": [
-            {
-              "pos": 1,
-              "number": "110",
-              "driver": "Diego Azar",
-              "team": "",
-              "gap": "31:01.681"
-            },
-            {
-              "pos": 2,
-              "number": "147",
-              "driver": "Marco Dianda",
-              "team": "",
-              "gap": "+0.365"
-            },
-            {
-              "pos": 3,
-              "number": "119",
-              "driver": "Hernán Palazzo",
-              "team": "",
-              "gap": "+0.827"
-            },
-            {
-              "pos": 4,
-              "number": "86",
-              "driver": "Ignacio Faín",
-              "team": "",
-              "gap": "+1.068"
-            },
-            {
-              "pos": 5,
-              "number": "1",
-              "driver": "Agustín Canapino",
-              "team": "",
-              "gap": "+1.499"
-            },
-            {
-              "pos": 6,
-              "number": "154",
-              "driver": "Joaquín Ochoa",
-              "team": "",
-              "gap": "+1.782"
-            },
-            {
-              "pos": 7,
-              "number": "12",
-              "driver": "Tomás Abdala",
-              "team": "",
-              "gap": "+4.411"
-            },
-            {
-              "pos": 8,
-              "number": "3",
-              "driver": "Mariano Werner",
-              "team": "",
-              "gap": "+9.656"
-            },
-            {
-              "pos": 9,
-              "number": "11",
-              "driver": "Gaston Mazzacane",
-              "team": "",
-              "gap": "+22.274"
-            },
-            {
-              "pos": 10,
-              "number": "13",
-              "driver": "Diego De Carlo",
-              "team": "",
-              "gap": "+25.534"
-            },
-            {
-              "pos": 11,
-              "number": "112",
-              "driver": "Lucas Valle",
-              "team": "",
-              "gap": "+25.991"
-            },
-            {
-              "pos": 12,
-              "number": "256",
-              "driver": "Otto Fritzler",
-              "team": "",
-              "gap": "+27.382"
-            },
-            {
-              "pos": 13,
-              "number": "100",
-              "driver": "Reutemann Ian",
-              "team": "",
-              "gap": "+2 vueltas"
-            },
-            {
-              "pos": 14,
-              "number": "140",
-              "driver": "Gaspar Chansard",
-              "team": "",
-              "gap": "+4 vueltas"
-            },
-            {
-              "pos": 15,
-              "number": "55",
-              "driver": "Gaston Iansa",
-              "team": "",
-              "gap": "+9 vueltas"
-            },
-            {
-              "pos": 16,
-              "number": "2",
-              "driver": "Juan José Ebarlín",
-              "team": "",
-              "gap": "+15 vueltas"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/166/ver"
-          }
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
       "id": "tcppk-2026-1",
       "seriesId": "tc-pista-pick-up",
       "round": 1,
@@ -6938,12 +6561,20 @@
       },
       "sessions": [
         {
-          "id": "tcppk-2026-1-1-entrenamiento",
+          "id": "tcppk-2026-1-practica-1entrenamiento",
           "kind": "practica",
           "name": "1° Entrenamiento",
-          "start": "2026-02-21T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-02-21T08:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 35,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-pick-up-la-plata-fecha-1-2026/",
+              "start": "08:30"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -7099,12 +6730,20 @@
           }
         },
         {
-          "id": "tcppk-2026-1-2-entrenamiento",
+          "id": "tcppk-2026-1-practica-2entrenamiento",
           "kind": "practica",
           "name": "2° Entrenamiento",
-          "start": "2026-02-21T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-02-21T11:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 35,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-pick-up-la-plata-fecha-1-2026/",
+              "start": "11:30"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -7260,12 +6899,20 @@
           }
         },
         {
-          "id": "tcppk-2026-1-clasificacion",
+          "id": "tcppk-2026-1-clasificacion-clasificacion",
           "kind": "clasificacion",
           "name": "Clasificación",
-          "start": "2026-02-21T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-02-21T15:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 38,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-pick-up-la-plata-fecha-1-2026/",
+              "start": "15:30"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -7428,12 +7075,20 @@
           }
         },
         {
-          "id": "tcppk-2026-1-serie-1",
+          "id": "tcppk-2026-1-serie-serie1",
           "kind": "serie",
           "name": "Serie 1",
-          "start": "2026-02-22T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-02-22T10:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-pick-up-la-plata-fecha-1-2026/",
+              "start": "10:10"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -7519,12 +7174,20 @@
           }
         },
         {
-          "id": "tcppk-2026-1-serie-2",
+          "id": "tcppk-2026-1-serie-serie2",
           "kind": "serie",
           "name": "Serie 2",
-          "start": "2026-02-22T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-02-22T10:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-pick-up-la-plata-fecha-1-2026/",
+              "start": "10:35"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -7610,12 +7273,20 @@
           }
         },
         {
-          "id": "tcppk-2026-1-final",
+          "id": "tcppk-2026-1-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-02-22T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-02-22T13:10:00-03:00",
+          "timeKnown": true,
           "durationMin": 30,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-pick-up-la-plata-fecha-1-2026/",
+              "start": "13:10"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -7775,6 +7446,591 @@
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
             "url": "https://tiempos.actc.org.ar/resultados/164/ver"
+          }
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
+      "id": "tcpk-2026-1",
+      "seriesId": "tc-pick-up",
+      "round": 1,
+      "name": "Fecha 1 · La Plata",
+      "circuit": {
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcpk-2026-1-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-02-21T09:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-pick-up-la-plata-fecha-1-2026/",
+              "start": "09:10"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "",
+              "gap": "1:28.986"
+            },
+            {
+              "pos": 2,
+              "number": "2",
+              "driver": "Juan José Ebarlín",
+              "team": "",
+              "gap": "+0.170"
+            },
+            {
+              "pos": 3,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "",
+              "gap": "+0.256"
+            },
+            {
+              "pos": 5,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "",
+              "gap": "+0.595"
+            },
+            {
+              "pos": 6,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "",
+              "gap": "+0.609"
+            },
+            {
+              "pos": 7,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "",
+              "gap": "+0.646"
+            },
+            {
+              "pos": 8,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "",
+              "gap": "+0.968"
+            },
+            {
+              "pos": 9,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "",
+              "gap": "+1.000"
+            },
+            {
+              "pos": 10,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "",
+              "gap": "+1.073"
+            },
+            {
+              "pos": 11,
+              "number": "154",
+              "driver": "Joaquín Ochoa",
+              "team": "",
+              "gap": "+1.350"
+            },
+            {
+              "pos": 12,
+              "number": "55",
+              "driver": "Gaston Iansa",
+              "team": "",
+              "gap": "+1.914"
+            },
+            {
+              "pos": 13,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "",
+              "gap": "+8.935"
+            },
+            {
+              "pos": 14,
+              "number": "100",
+              "driver": "Reutemann Ian",
+              "team": "",
+              "gap": "+11.217"
+            },
+            {
+              "pos": 15,
+              "number": "112",
+              "driver": "Lucas Valle",
+              "team": "",
+              "gap": "+16.626"
+            },
+            {
+              "pos": 16,
+              "number": "140",
+              "driver": "Gaspar Chansard",
+              "team": "",
+              "gap": "+22.021"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/115/ver"
+          }
+        },
+        {
+          "id": "tcpk-2026-1-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-02-21T12:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-pick-up-la-plata-fecha-1-2026/",
+              "start": "12:10"
+            }
+          ]
+        },
+        {
+          "id": "tcpk-2026-1-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-02-21T16:14:00-03:00",
+          "timeKnown": true,
+          "durationMin": 38,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-pick-up-la-plata-fecha-1-2026/",
+              "start": "16:14"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "2",
+              "driver": "Juan José Ebarlín",
+              "team": "",
+              "gap": "1:29.126"
+            },
+            {
+              "pos": 2,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "",
+              "gap": "+0.165"
+            },
+            {
+              "pos": 3,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "",
+              "gap": "+0.195"
+            },
+            {
+              "pos": 4,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "",
+              "gap": "+0.225"
+            },
+            {
+              "pos": 5,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "",
+              "gap": "+0.293"
+            },
+            {
+              "pos": 6,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "",
+              "gap": "+0.323"
+            },
+            {
+              "pos": 7,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "",
+              "gap": "+0.533"
+            },
+            {
+              "pos": 8,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "",
+              "gap": "+0.628"
+            },
+            {
+              "pos": 9,
+              "number": "154",
+              "driver": "Joaquín Ochoa",
+              "team": "",
+              "gap": "+1.135"
+            },
+            {
+              "pos": 10,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 11,
+              "number": "100",
+              "driver": "Reutemann Ian",
+              "team": "",
+              "gap": "+0.945"
+            },
+            {
+              "pos": 12,
+              "number": "112",
+              "driver": "Lucas Valle",
+              "team": "",
+              "gap": "+1.164"
+            },
+            {
+              "pos": 13,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "",
+              "gap": "+1.225"
+            },
+            {
+              "pos": 14,
+              "number": "55",
+              "driver": "Gaston Iansa",
+              "team": "",
+              "gap": "+1.391"
+            },
+            {
+              "pos": 15,
+              "number": "140",
+              "driver": "Gaspar Chansard",
+              "team": "",
+              "gap": "+2.147"
+            },
+            {
+              "pos": 16,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/142/ver"
+          }
+        },
+        {
+          "id": "tcpk-2026-1-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-02-22T11:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-pick-up-la-plata-fecha-1-2026/",
+              "start": "11:00"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "2",
+              "driver": "Juan José Ebarlín",
+              "team": "",
+              "gap": "7:34.743"
+            },
+            {
+              "pos": 2,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "",
+              "gap": "+1.225"
+            },
+            {
+              "pos": 3,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "",
+              "gap": "+1.467"
+            },
+            {
+              "pos": 4,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "",
+              "gap": "+12.964"
+            },
+            {
+              "pos": 5,
+              "number": "154",
+              "driver": "Joaquín Ochoa",
+              "team": "",
+              "gap": "+14.197"
+            },
+            {
+              "pos": 6,
+              "number": "140",
+              "driver": "Gaspar Chansard",
+              "team": "",
+              "gap": "+14.198"
+            },
+            {
+              "pos": 7,
+              "number": "100",
+              "driver": "Reutemann Ian",
+              "team": "",
+              "gap": "+15.443"
+            },
+            {
+              "pos": 8,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "",
+              "gap": "+2 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/156/ver"
+          }
+        },
+        {
+          "id": "tcpk-2026-1-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-02-22T11:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-pick-up-la-plata-fecha-1-2026/",
+              "start": "11:25"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "",
+              "gap": "7:37.430"
+            },
+            {
+              "pos": 2,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "",
+              "gap": "+0.453"
+            },
+            {
+              "pos": 3,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "",
+              "gap": "+0.850"
+            },
+            {
+              "pos": 4,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "",
+              "gap": "+1.047"
+            },
+            {
+              "pos": 5,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "",
+              "gap": "+6.831"
+            },
+            {
+              "pos": 6,
+              "number": "55",
+              "driver": "Gaston Iansa",
+              "team": "",
+              "gap": "+8.358"
+            },
+            {
+              "pos": 7,
+              "number": "112",
+              "driver": "Lucas Valle",
+              "team": "",
+              "gap": "+13.697"
+            },
+            {
+              "pos": 8,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "",
+              "gap": "+36.640"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/157/ver"
+          }
+        },
+        {
+          "id": "tcpk-2026-1-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-02-22T14:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-pick-up-la-plata-fecha-1-2026/",
+              "start": "14:10"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "",
+              "gap": "31:01.681"
+            },
+            {
+              "pos": 2,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "",
+              "gap": "+0.365"
+            },
+            {
+              "pos": 3,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "",
+              "gap": "+0.827"
+            },
+            {
+              "pos": 4,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "",
+              "gap": "+1.068"
+            },
+            {
+              "pos": 5,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "",
+              "gap": "+1.499"
+            },
+            {
+              "pos": 6,
+              "number": "154",
+              "driver": "Joaquín Ochoa",
+              "team": "",
+              "gap": "+1.782"
+            },
+            {
+              "pos": 7,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "",
+              "gap": "+4.411"
+            },
+            {
+              "pos": 8,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "",
+              "gap": "+9.656"
+            },
+            {
+              "pos": 9,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "",
+              "gap": "+22.274"
+            },
+            {
+              "pos": 10,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "",
+              "gap": "+25.534"
+            },
+            {
+              "pos": 11,
+              "number": "112",
+              "driver": "Lucas Valle",
+              "team": "",
+              "gap": "+25.991"
+            },
+            {
+              "pos": 12,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "",
+              "gap": "+27.382"
+            },
+            {
+              "pos": 13,
+              "number": "100",
+              "driver": "Reutemann Ian",
+              "team": "",
+              "gap": "+2 vueltas"
+            },
+            {
+              "pos": 14,
+              "number": "140",
+              "driver": "Gaspar Chansard",
+              "team": "",
+              "gap": "+4 vueltas"
+            },
+            {
+              "pos": 15,
+              "number": "55",
+              "driver": "Gaston Iansa",
+              "team": "",
+              "gap": "+9 vueltas"
+            },
+            {
+              "pos": 16,
+              "number": "2",
+              "driver": "Juan José Ebarlín",
+              "team": "",
+              "gap": "+15 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/166/ver"
           }
         }
       ],
@@ -17215,6 +17471,592 @@
       "source": "nuevocarshow.com.ar (calendario y planillas de cronometraje)"
     },
     {
+      "id": "tcp-2026-2",
+      "seriesId": "tc-pista",
+      "round": 2,
+      "name": "Fecha 2 · Viedma",
+      "circuit": {
+        "name": "Ciudad de Viedma",
+        "city": "Viedma",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Rio Negro"
+      },
+      "sessions": [
+        {
+          "id": "tcp-2026-2-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-03-07T09:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "09:25"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "1:30.061"
+            },
+            {
+              "pos": 2,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": "+0.149"
+            },
+            {
+              "pos": 3,
+              "number": "19",
+              "driver": "Luciano Cotignola",
+              "team": "Toyota",
+              "gap": "+0.261"
+            },
+            {
+              "pos": 4,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": "+0.352"
+            },
+            {
+              "pos": 5,
+              "number": "53",
+              "driver": "Eugenio Provens",
+              "team": "Dodge",
+              "gap": "+0.463"
+            },
+            {
+              "pos": 6,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+0.528"
+            },
+            {
+              "pos": 7,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Dodge",
+              "gap": "+0.901"
+            },
+            {
+              "pos": 8,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": "+0.903"
+            },
+            {
+              "pos": 9,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Toyota",
+              "gap": "+0.980"
+            },
+            {
+              "pos": 10,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira",
+              "team": "Ford",
+              "gap": "+1.051"
+            },
+            {
+              "pos": 11,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+1.643"
+            },
+            {
+              "pos": 12,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "+2.000"
+            },
+            {
+              "pos": 13,
+              "number": "31",
+              "driver": "Lucas Guerra",
+              "team": "Torino",
+              "gap": "+2.039"
+            },
+            {
+              "pos": 14,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+2.481"
+            },
+            {
+              "pos": 15,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": "+2.835"
+            },
+            {
+              "pos": 16,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": "+4.865"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/225/ver"
+          }
+        },
+        {
+          "id": "tcp-2026-2-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-03-07T11:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "11:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-2-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-03-07T15:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 34,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "15:20"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "1:28.941"
+            },
+            {
+              "pos": 2,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "+0.475"
+            },
+            {
+              "pos": 3,
+              "number": "53",
+              "driver": "Eugenio Provens",
+              "team": "Dodge",
+              "gap": "+0.625"
+            },
+            {
+              "pos": 4,
+              "number": "19",
+              "driver": "Luciano Cotignola",
+              "team": "Toyota",
+              "gap": "+0.870"
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": "+1.316"
+            },
+            {
+              "pos": 6,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+1.795"
+            },
+            {
+              "pos": 7,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+1.805"
+            },
+            {
+              "pos": 8,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": "+2.106"
+            },
+            {
+              "pos": 9,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+2.252"
+            },
+            {
+              "pos": 10,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": "+10.297"
+            },
+            {
+              "pos": 11,
+              "number": "31",
+              "driver": "Lucas Guerra",
+              "team": "Torino",
+              "gap": "+15.613"
+            },
+            {
+              "pos": 12,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira",
+              "team": "Ford",
+              "gap": "+15.613"
+            },
+            {
+              "pos": 13,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 14,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 15,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Toyota",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 16,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Dodge",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 1,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "+0.000"
+            },
+            {
+              "pos": 2,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "+0.475"
+            },
+            {
+              "pos": 3,
+              "number": "53",
+              "driver": "Eugenio Provens",
+              "team": "Dodge",
+              "gap": "+0.625"
+            },
+            {
+              "pos": 4,
+              "number": "19",
+              "driver": "Luciano Cotignola",
+              "team": "Toyota",
+              "gap": "+0.870"
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": "+1.316"
+            },
+            {
+              "pos": 6,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+1.795"
+            },
+            {
+              "pos": 7,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+1.805"
+            },
+            {
+              "pos": 8,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": "+2.106"
+            },
+            {
+              "pos": 9,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+2.252"
+            },
+            {
+              "pos": 10,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": "+10.297"
+            },
+            {
+              "pos": 11,
+              "number": "31",
+              "driver": "Lucas Guerra",
+              "team": "Torino",
+              "gap": "+15.613"
+            },
+            {
+              "pos": 12,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira",
+              "team": "Ford",
+              "gap": "+15.613"
+            },
+            {
+              "pos": 13,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 14,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 15,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Toyota",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 16,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Dodge",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/244/ver"
+          }
+        },
+        {
+          "id": "tcp-2026-2-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-03-08T10:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "10:05"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-2-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-03-08T10:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "10:30"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-2-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-03-08T12:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "12:55"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": "31:07.957"
+            },
+            {
+              "pos": 2,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": "+1.497"
+            },
+            {
+              "pos": 3,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "+3.435"
+            },
+            {
+              "pos": 4,
+              "number": "19",
+              "driver": "Luciano Cotignola",
+              "team": "Toyota",
+              "gap": "+3.558"
+            },
+            {
+              "pos": 5,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": "+8.625"
+            },
+            {
+              "pos": 6,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+9.510"
+            },
+            {
+              "pos": 7,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Dodge",
+              "gap": "+10.148"
+            },
+            {
+              "pos": 8,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira",
+              "team": "Ford",
+              "gap": "+14.742"
+            },
+            {
+              "pos": 9,
+              "number": "53",
+              "driver": "Eugenio Provens",
+              "team": "Dodge",
+              "gap": "+15.161"
+            },
+            {
+              "pos": 10,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+18.839"
+            },
+            {
+              "pos": 11,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": "+19.114"
+            },
+            {
+              "pos": 12,
+              "number": "31",
+              "driver": "Lucas Guerra",
+              "team": "Torino",
+              "gap": "+45.625"
+            },
+            {
+              "pos": 13,
+              "number": "169",
+              "driver": "Braian Quevedo",
+              "team": "Toyota",
+              "gap": "+3 vueltas"
+            },
+            {
+              "pos": 14,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "+17 vueltas"
+            },
+            {
+              "pos": 15,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": "+18 vueltas"
+            },
+            {
+              "pos": 16,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+18 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/260/ver"
+          }
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tc-2026-2",
       "seriesId": "tc",
       "round": 2,
@@ -17228,12 +18070,20 @@
       },
       "sessions": [
         {
-          "id": "tc-2026-2-1-entrenamiento",
+          "id": "tc-2026-2-practica-1entrenamiento",
           "kind": "practica",
           "name": "1° Entrenamiento",
-          "start": "2026-03-07T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-03-07T11:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "11:05"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -17648,12 +18498,20 @@
           }
         },
         {
-          "id": "tc-2026-2-2-entrenamiento",
+          "id": "tc-2026-2-practica-2entrenamiento",
           "kind": "practica",
           "name": "2° Entrenamiento",
-          "start": "2026-03-07T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-03-07T13:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "13:20"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -18069,12 +18927,20 @@
           }
         },
         {
-          "id": "tc-2026-2-clasificacion",
+          "id": "tc-2026-2-clasificacion-clasificacion",
           "kind": "clasificacion",
           "name": "Clasificación",
-          "start": "2026-03-07T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-03-07T16:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 47,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "16:00"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -18489,12 +19355,20 @@
           }
         },
         {
-          "id": "tc-2026-2-serie-1",
+          "id": "tc-2026-2-serie-serie1",
           "kind": "serie",
           "name": "Serie 1",
-          "start": "2026-03-08T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-03-08T10:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "10:55"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -18643,12 +19517,20 @@
           }
         },
         {
-          "id": "tc-2026-2-serie-2",
+          "id": "tc-2026-2-serie-serie2",
           "kind": "serie",
           "name": "Serie 2",
-          "start": "2026-03-08T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-03-08T11:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "11:20"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -18790,12 +19672,20 @@
           }
         },
         {
-          "id": "tc-2026-2-serie-3",
+          "id": "tc-2026-2-serie-serie3",
           "kind": "serie",
           "name": "Serie 3",
-          "start": "2026-03-08T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
+          "start": "2026-03-08T11:45:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "11:45"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -18937,12 +19827,20 @@
           }
         },
         {
-          "id": "tc-2026-2-final",
+          "id": "tc-2026-2-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-03-08T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
+          "start": "2026-03-08T14:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-viedma-fecha-2-2026/",
+              "start": "14:00"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -19351,520 +20249,6 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
-      "id": "tcp-2026-2",
-      "seriesId": "tc-pista",
-      "round": 2,
-      "name": "Fecha 2 · Viedma",
-      "circuit": {
-        "name": "Ciudad de Viedma",
-        "city": "Viedma",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Rio Negro"
-      },
-      "sessions": [
-        {
-          "id": "tcp-2026-2-1-entrenamiento",
-          "kind": "practica",
-          "name": "1° Entrenamiento",
-          "start": "2026-03-07T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "123",
-              "driver": "Nicanor Santilli Pazos",
-              "team": "Ford",
-              "gap": "1:30.061"
-            },
-            {
-              "pos": 2,
-              "number": "10",
-              "driver": "Gabriel Gandulia",
-              "team": "Ford",
-              "gap": "+0.149"
-            },
-            {
-              "pos": 3,
-              "number": "19",
-              "driver": "Luciano Cotignola",
-              "team": "Toyota",
-              "gap": "+0.261"
-            },
-            {
-              "pos": 4,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "Chevrolet",
-              "gap": "+0.352"
-            },
-            {
-              "pos": 5,
-              "number": "53",
-              "driver": "Eugenio Provens",
-              "team": "Dodge",
-              "gap": "+0.463"
-            },
-            {
-              "pos": 6,
-              "number": "144",
-              "driver": "Faustino Cifre",
-              "team": "Ford",
-              "gap": "+0.528"
-            },
-            {
-              "pos": 7,
-              "number": "111",
-              "driver": "Benjamin Ochoa",
-              "team": "Dodge",
-              "gap": "+0.901"
-            },
-            {
-              "pos": 8,
-              "number": "66",
-              "driver": "Gustavo Tadei (h)",
-              "team": "Chevrolet",
-              "gap": "+0.903"
-            },
-            {
-              "pos": 9,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "Toyota",
-              "gap": "+0.980"
-            },
-            {
-              "pos": 10,
-              "number": "59",
-              "driver": "Juan Ignacio Maceira",
-              "team": "Ford",
-              "gap": "+1.051"
-            },
-            {
-              "pos": 11,
-              "number": "133",
-              "driver": "Felipe Bernasconi",
-              "team": "Toyota",
-              "gap": "+1.643"
-            },
-            {
-              "pos": 12,
-              "number": "67",
-              "driver": "Santiago Biagi",
-              "team": "Dodge",
-              "gap": "+2.000"
-            },
-            {
-              "pos": 13,
-              "number": "31",
-              "driver": "Lucas Guerra",
-              "team": "Torino",
-              "gap": "+2.039"
-            },
-            {
-              "pos": 14,
-              "number": "105",
-              "driver": "Manuel Borgert",
-              "team": "Ford",
-              "gap": "+2.481"
-            },
-            {
-              "pos": 15,
-              "number": "44",
-              "driver": "Thomas Pozner",
-              "team": "Ford",
-              "gap": "+2.835"
-            },
-            {
-              "pos": 16,
-              "number": "43",
-              "driver": "Benjamin Anton",
-              "team": "Ford",
-              "gap": "+4.865"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/225/ver"
-          }
-        },
-        {
-          "id": "tcp-2026-2-clasificacion",
-          "kind": "clasificacion",
-          "name": "Clasificación",
-          "start": "2026-03-07T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30,
-          "results": [
-            {
-              "pos": 1,
-              "number": "67",
-              "driver": "Santiago Biagi",
-              "team": "Dodge",
-              "gap": "1:28.941"
-            },
-            {
-              "pos": 2,
-              "number": "123",
-              "driver": "Nicanor Santilli Pazos",
-              "team": "Ford",
-              "gap": "+0.475"
-            },
-            {
-              "pos": 3,
-              "number": "53",
-              "driver": "Eugenio Provens",
-              "team": "Dodge",
-              "gap": "+0.625"
-            },
-            {
-              "pos": 4,
-              "number": "19",
-              "driver": "Luciano Cotignola",
-              "team": "Toyota",
-              "gap": "+0.870"
-            },
-            {
-              "pos": 5,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "Chevrolet",
-              "gap": "+1.316"
-            },
-            {
-              "pos": 6,
-              "number": "105",
-              "driver": "Manuel Borgert",
-              "team": "Ford",
-              "gap": "+1.795"
-            },
-            {
-              "pos": 7,
-              "number": "144",
-              "driver": "Faustino Cifre",
-              "team": "Ford",
-              "gap": "+1.805"
-            },
-            {
-              "pos": 8,
-              "number": "10",
-              "driver": "Gabriel Gandulia",
-              "team": "Ford",
-              "gap": "+2.106"
-            },
-            {
-              "pos": 9,
-              "number": "133",
-              "driver": "Felipe Bernasconi",
-              "team": "Toyota",
-              "gap": "+2.252"
-            },
-            {
-              "pos": 10,
-              "number": "44",
-              "driver": "Thomas Pozner",
-              "team": "Ford",
-              "gap": "+10.297"
-            },
-            {
-              "pos": 11,
-              "number": "31",
-              "driver": "Lucas Guerra",
-              "team": "Torino",
-              "gap": "+15.613"
-            },
-            {
-              "pos": 12,
-              "number": "59",
-              "driver": "Juan Ignacio Maceira",
-              "team": "Ford",
-              "gap": "+15.613"
-            },
-            {
-              "pos": 13,
-              "number": "43",
-              "driver": "Benjamin Anton",
-              "team": "Ford",
-              "gap": "",
-              "status": "Sin tiempo"
-            },
-            {
-              "pos": 14,
-              "number": "66",
-              "driver": "Gustavo Tadei (h)",
-              "team": "Chevrolet",
-              "gap": "",
-              "status": "Sin tiempo"
-            },
-            {
-              "pos": 15,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "Toyota",
-              "gap": "",
-              "status": "Sin tiempo"
-            },
-            {
-              "pos": 16,
-              "number": "111",
-              "driver": "Benjamin Ochoa",
-              "team": "Dodge",
-              "gap": "",
-              "status": "Sin tiempo"
-            },
-            {
-              "pos": 1,
-              "number": "67",
-              "driver": "Santiago Biagi",
-              "team": "Dodge",
-              "gap": "+0.000"
-            },
-            {
-              "pos": 2,
-              "number": "123",
-              "driver": "Nicanor Santilli Pazos",
-              "team": "Ford",
-              "gap": "+0.475"
-            },
-            {
-              "pos": 3,
-              "number": "53",
-              "driver": "Eugenio Provens",
-              "team": "Dodge",
-              "gap": "+0.625"
-            },
-            {
-              "pos": 4,
-              "number": "19",
-              "driver": "Luciano Cotignola",
-              "team": "Toyota",
-              "gap": "+0.870"
-            },
-            {
-              "pos": 5,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "Chevrolet",
-              "gap": "+1.316"
-            },
-            {
-              "pos": 6,
-              "number": "105",
-              "driver": "Manuel Borgert",
-              "team": "Ford",
-              "gap": "+1.795"
-            },
-            {
-              "pos": 7,
-              "number": "144",
-              "driver": "Faustino Cifre",
-              "team": "Ford",
-              "gap": "+1.805"
-            },
-            {
-              "pos": 8,
-              "number": "10",
-              "driver": "Gabriel Gandulia",
-              "team": "Ford",
-              "gap": "+2.106"
-            },
-            {
-              "pos": 9,
-              "number": "133",
-              "driver": "Felipe Bernasconi",
-              "team": "Toyota",
-              "gap": "+2.252"
-            },
-            {
-              "pos": 10,
-              "number": "44",
-              "driver": "Thomas Pozner",
-              "team": "Ford",
-              "gap": "+10.297"
-            },
-            {
-              "pos": 11,
-              "number": "31",
-              "driver": "Lucas Guerra",
-              "team": "Torino",
-              "gap": "+15.613"
-            },
-            {
-              "pos": 12,
-              "number": "59",
-              "driver": "Juan Ignacio Maceira",
-              "team": "Ford",
-              "gap": "+15.613"
-            },
-            {
-              "pos": 13,
-              "number": "43",
-              "driver": "Benjamin Anton",
-              "team": "Ford",
-              "gap": "",
-              "status": "Sin tiempo"
-            },
-            {
-              "pos": 14,
-              "number": "66",
-              "driver": "Gustavo Tadei (h)",
-              "team": "Chevrolet",
-              "gap": "",
-              "status": "Sin tiempo"
-            },
-            {
-              "pos": 15,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "Toyota",
-              "gap": "",
-              "status": "Sin tiempo"
-            },
-            {
-              "pos": 16,
-              "number": "111",
-              "driver": "Benjamin Ochoa",
-              "team": "Dodge",
-              "gap": "",
-              "status": "Sin tiempo"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/244/ver"
-          }
-        },
-        {
-          "id": "tcp-2026-2-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-03-08T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40,
-          "results": [
-            {
-              "pos": 1,
-              "number": "10",
-              "driver": "Gabriel Gandulia",
-              "team": "Ford",
-              "gap": "31:07.957"
-            },
-            {
-              "pos": 2,
-              "number": "99",
-              "driver": "Bautista Damiani",
-              "team": "Chevrolet",
-              "gap": "+1.497"
-            },
-            {
-              "pos": 3,
-              "number": "123",
-              "driver": "Nicanor Santilli Pazos",
-              "team": "Ford",
-              "gap": "+3.435"
-            },
-            {
-              "pos": 4,
-              "number": "19",
-              "driver": "Luciano Cotignola",
-              "team": "Toyota",
-              "gap": "+3.558"
-            },
-            {
-              "pos": 5,
-              "number": "43",
-              "driver": "Benjamin Anton",
-              "team": "Ford",
-              "gap": "+8.625"
-            },
-            {
-              "pos": 6,
-              "number": "144",
-              "driver": "Faustino Cifre",
-              "team": "Ford",
-              "gap": "+9.510"
-            },
-            {
-              "pos": 7,
-              "number": "111",
-              "driver": "Benjamin Ochoa",
-              "team": "Dodge",
-              "gap": "+10.148"
-            },
-            {
-              "pos": 8,
-              "number": "59",
-              "driver": "Juan Ignacio Maceira",
-              "team": "Ford",
-              "gap": "+14.742"
-            },
-            {
-              "pos": 9,
-              "number": "53",
-              "driver": "Eugenio Provens",
-              "team": "Dodge",
-              "gap": "+15.161"
-            },
-            {
-              "pos": 10,
-              "number": "133",
-              "driver": "Felipe Bernasconi",
-              "team": "Toyota",
-              "gap": "+18.839"
-            },
-            {
-              "pos": 11,
-              "number": "44",
-              "driver": "Thomas Pozner",
-              "team": "Ford",
-              "gap": "+19.114"
-            },
-            {
-              "pos": 12,
-              "number": "31",
-              "driver": "Lucas Guerra",
-              "team": "Torino",
-              "gap": "+45.625"
-            },
-            {
-              "pos": 13,
-              "number": "169",
-              "driver": "Braian Quevedo",
-              "team": "Toyota",
-              "gap": "+3 vueltas"
-            },
-            {
-              "pos": 14,
-              "number": "67",
-              "driver": "Santiago Biagi",
-              "team": "Dodge",
-              "gap": "+17 vueltas"
-            },
-            {
-              "pos": 15,
-              "number": "66",
-              "driver": "Gustavo Tadei (h)",
-              "team": "Chevrolet",
-              "gap": "+18 vueltas"
-            },
-            {
-              "pos": 16,
-              "number": "105",
-              "driver": "Manuel Borgert",
-              "team": "Ford",
-              "gap": "+18 vueltas"
-            }
-          ],
-          "resultsSource": {
-            "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/260/ver"
-          }
-        }
-      ],
-      "source": "ACTC (calendario)"
     },
     {
       "id": "tcr-sa-2026-1",
@@ -23626,7 +24010,7 @@
           }
         },
         {
-          "id": "tcpk-2026-2-clasificacion-clasificacin",
+          "id": "tcpk-2026-2-clasificacion-clasificacion",
           "kind": "clasificacion",
           "name": "Clasificación",
           "start": "2026-03-21T16:12:00-03:00",
@@ -23924,12 +24308,20 @@
           }
         },
         {
-          "id": "tcpk-2026-2-final",
+          "id": "tcpk-2026-2-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-03-22T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 35,
+          "start": "2026-03-22T13:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-fecha-2-tc-pick-up-la-plata-2026/",
+              "start": "13:10"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -24344,7 +24736,7 @@
           }
         },
         {
-          "id": "tcppk-2026-2-clasificacion-clasificacin",
+          "id": "tcppk-2026-2-clasificacion-clasificacion",
           "kind": "clasificacion",
           "name": "Clasificación",
           "start": "2026-03-21T15:29:00-03:00",
@@ -24804,12 +25196,20 @@
           }
         },
         {
-          "id": "tcppk-2026-2-final",
+          "id": "tcppk-2026-2-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-03-22T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-03-22T12:25:00-03:00",
+          "timeKnown": true,
           "durationMin": 30,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-fecha-2-tc-pick-up-la-plata-2026/",
+              "start": "12:25"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -27607,12 +28007,20 @@
           }
         },
         {
-          "id": "tcp-2026-3-final",
+          "id": "tcp-2026-3-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-03-29T12:00:00-03:00",
-          "timeKnown": false,
+          "start": "2026-03-29T12:55:00-03:00",
+          "timeKnown": true,
           "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "12:55"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -29233,12 +29641,20 @@
           }
         },
         {
-          "id": "tc-2026-3-final",
+          "id": "tc-2026-3-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-03-29T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45,
+          "start": "2026-03-29T14:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/horarios-tv-cronograma-tc-neuquen-fecha-3-2026/",
+              "start": "14:00"
+            }
+          ],
           "results": [
             {
               "pos": 1,
@@ -206284,7 +206700,7 @@
     },
     "nuevoCarShow": {
       "events": 10,
-      "pdfs": 58,
+      "pdfs": 0,
       "calendarioEstatico": false,
       "rounds": [
         1,
@@ -206338,12 +206754,12 @@
       "standingsSource": "https://actc.org.ar/tcppk/campeonato"
     },
     "schedules": {
-      "notes": 14,
+      "notes": 21,
       "officialPdfs": 0,
-      "sessions": 173,
+      "sessions": 261,
       "confirmed": 0,
       "conflicts": 0,
-      "eventsWithTimes": 28
+      "eventsWithTimes": 38
     },
     "timing": {
       "documents": 800,
