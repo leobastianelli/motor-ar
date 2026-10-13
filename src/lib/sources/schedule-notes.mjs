@@ -120,23 +120,35 @@ export function scheduleSection(text) {
 
 // ——— Adaptadores ———
 
-/** SoloTC (WordPress, robots.txt permite todo): notas "Horarios de TV y cronograma" de las categorías de la ACTC. */
-export async function solotcNotes(io, { sinceDays = 200 } = {}) {
-  const after = new Date(Date.now() - sinceDays * 86400000).toISOString().slice(0, 19);
-  const url = `https://www.solotc.com.ar/wp-json/wp/v2/posts?categories=25,26,27,28,29,1180&search=cronograma&after=${after}&per_page=100&_fields=id,date,link,title,content`;
+/**
+ * SoloTC (WordPress, robots.txt permite todo): notas "Horarios de TV y cronograma" de las categorías de la ACTC.
+ * Desde el 1/12 del año anterior (la temporada entera, con las notas previas a la fecha 1) y todas las páginas: los horarios
+ * de las fechas viejas salen sólo de acá, así que una ventana corrida en días los iba borrando de a una (el 12/10 se perdió el de la fecha 3).
+ */
+export async function solotcNotes(io, { now = new Date() } = {}) {
+  const after = `${now.getUTCFullYear() - 1}-12-01T00:00:00`;
   const headers = { Accept: "application/json", "Accept-Language": "es-AR,es;q=0.9", "Accept-Encoding": "identity" };
-  // Un reintento corto: un bloqueo anti-bot o un corte momentáneo suele ceder a los pocos segundos.
-  let posts;
-  let lastError;
-  for (let attempt = 1; attempt <= 2 && !posts; attempt++) {
-    try {
-      posts = parseJsonBody(await io.text(url, { revalidate: attempt === 1 ? 3600 : 0, headers }), "SoloTC");
-    } catch (error) {
-      lastError = error;
-      if (attempt < 2) await io.sleep?.(2500);
+  const PER_PAGE = 100;
+  const posts = [];
+  for (let page = 1; page <= 5; page++) {
+    const url = `https://www.solotc.com.ar/wp-json/wp/v2/posts?categories=25,26,27,28,29,1180&search=cronograma&after=${after}&per_page=${PER_PAGE}&page=${page}&_fields=id,date,link,title,content`;
+    // Un reintento corto: un bloqueo anti-bot o un corte momentáneo suele ceder a los pocos segundos.
+    let batch;
+    let lastError;
+    for (let attempt = 1; attempt <= 2 && !batch; attempt++) {
+      try {
+        batch = parseJsonBody(await io.text(url, { revalidate: attempt === 1 ? 3600 : 0, headers }), "SoloTC");
+      } catch (error) {
+        lastError = error;
+        if (attempt < 2) await io.sleep?.(2500);
+      }
     }
+    // Si la página anterior vino justo llena, WordPress contesta 400 a la siguiente: no hay más.
+    if (!batch && page > 1 && /\b400\b/.test(String(lastError?.message))) break;
+    if (!batch) throw lastError;
+    posts.push(...batch);
+    if (batch.length < PER_PAGE) break;
   }
-  if (!posts) throw lastError;
   return posts
     .filter((p) => /cronograma/i.test(p.title.rendered))
     .map((p) => ({
