@@ -20,19 +20,19 @@ export const drivers: Driver[] = [
     aliases: ["Nico Varrone"],
     number: 4,
     seriesId: "imsa",
-    // Corre el Petit Le Mans (IMSA, 1–3/10/2026) con el Corvette número 4 de Pratt Miller en GTD Pro, según el cronograma que publicó él.
+    // Corrió el Petit Le Mans (IMSA, 1–3/10/2026) con el Corvette número 4 de Pratt Miller en GTD Pro: terminó 12.º de la clase (28.º en la general), a una vuelta del ganador. Resultado: planilla de IMSA, ver manual-overrides.json.
     // Se desvinculó de Van Amersfoort Racing en la F2 el 17/9/2026 y por ahora no corre más ahí; evalúa F2, el WEC o un rol en Cadillac F1 para 2027.
     // https://www.infobae.com/deportes/2026/09/17/por-que-el-argentino-nico-varrone-se-desvinculo-de-su-equipo-de-formula-2-y-cual-seria-su-futuro/
     team: "Pratt Miller Motorsports",
     hometown: "Ingeniero Maschwitz, Buenos Aires",
     born: "06/12/2000",
-    tagline: "Corre el Petit Le Mans de IMSA con el Corvette de Pratt Miller; dejó la F2 en septiembre y evalúa su 2027.",
+    tagline: "Terminó 12.º en GTD Pro el Petit Le Mans de IMSA con el Corvette de Pratt Miller; dejó la F2 en septiembre y evalúa su 2027.",
     career: [
       { year: "2022", series: "Fórmula 3 FIA", team: "Van Amersfoort Racing", highlight: "Temporada en la F3 de la FIA." },
       { year: "2023", series: "WEC · GTE Am", team: "Corvette Racing", highlight: "Campeón del mundo de la clase y ganador en las 24 Horas de Le Mans." },
       { year: "2024", series: "24 Horas de Le Mans · LMP2 Pro-Am", team: "", highlight: "Segunda victoria de clase en Le Mans." },
       { year: "2026", series: "Fórmula 2", team: "Van Amersfoort Racing", highlight: "Corrió con el número 22 hasta desvincularse del equipo en septiembre, a tres fechas del final." },
-      { year: "2026", series: "IMSA · Petit Le Mans", team: "Pratt Miller Motorsports", highlight: "Corvette Z06 GT3.R número 4 en GTD Pro con Tommy Milner y Nicky Catsburg, líderes del campeonato de la clase; antes corrió Daytona (4.º) y Sebring (3.º)." },
+      { year: "2026", series: "IMSA · Petit Le Mans", team: "Pratt Miller Motorsports", highlight: "Corvette Z06 GT3.R número 4 en GTD Pro con Tommy Milner y Nicky Catsburg. Terminó 12.º de la clase (28.º en la general), a una vuelta del ganador; antes corrió Daytona (4.º) y Sebring (3.º)." },
     ].reverse(),
   },
   {
