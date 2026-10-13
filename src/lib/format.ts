@@ -1,27 +1,22 @@
 import { TZ, dayKey, dayStart, relativeDayInfo, sessionStatus as sessionStatusOf } from "./session-status.mjs";
+import { capitalize, fmtDayShort, fmtTime } from "./fmt-core.mjs";
 import type { ResultRow, Session } from "./types";
 
-export { TZ, dayKey };
+export { TZ, dayKey, capitalize, fmtDayShort, fmtTime };
 
 const f = (options: Intl.DateTimeFormatOptions) => new Intl.DateTimeFormat("es-AR", { timeZone: TZ, ...options });
-const timeFmt = f({ hour: "2-digit", minute: "2-digit", hour12: false });
 const weekdayFmt = f({ weekday: "long" });
 const dayNumFmt = f({ day: "numeric" });
 const monthLongFmt = f({ month: "long" });
 const monthShortFmt = f({ month: "short" });
-const dayShortFmt = f({ weekday: "short", day: "numeric" });
 const dayLongFmt = f({ weekday: "long", day: "numeric", month: "long" });
 const monthYearFmt = f({ month: "long", year: "numeric" });
 
-export const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
-
-export const fmtTime = (iso: string) => timeFmt.format(new Date(iso));
 export const fmtWeekday = (iso: string) => capitalize(weekdayFmt.format(new Date(iso)));
 export const fmtDayNum = (iso: string) => dayNumFmt.format(new Date(iso));
 export const fmtMonthLong = (iso: string) => monthLongFmt.format(new Date(iso));
 /** "SEP", "OCT"… para tiras de fechas. */
 export const fmtMonthShort = (iso: string) => monthShortFmt.format(new Date(iso)).replace(".", "").slice(0, 3).toUpperCase();
-export const fmtDayShort = (iso: string) => capitalize(dayShortFmt.format(new Date(iso)).replace(".", ""));
 export const fmtDayLong = (iso: string) => dayLongFmt.format(new Date(iso));
 export const fmtMonth = (iso: string) => monthYearFmt.format(new Date(iso));
 

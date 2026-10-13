@@ -5,12 +5,13 @@ import { notFound } from "next/navigation";
 import { breadcrumb, itemListJsonLd, JsonLd, seasonEventSummary } from "@/components/json-ld";
 import { AgregarCalendario } from "@/components/agregar-calendario";
 import { CalendarioPlegable } from "@/components/calendario-plegable";
-import { AutoRefresh } from "@/components/live-clock";
-import { Momento } from "@/components/momento";
+import { Disputadas, FilaFecha, MomentoCategoria, ProximaFecha, UltimoResultado, type Transmisiones } from "@/components/en-vivo";
 import { NotesBlock } from "@/components/notas";
 import { ClassSeal, PhotoCredit, SectionTitle } from "@/components/pista";
 import { notesForSeries } from "@/lib/notas";
-import { getAllSeries, getHistory, getNow, getSeason, getSeries, isSimulatedNow } from "@/lib/data";
+import { getAllSeries, getHistory, getNow, getSeason, getSeries, isSimulatedNow, seriesTier } from "@/lib/data";
+import { fechasDeCategoria, ultimosResultados } from "@/lib/snapshot.mjs";
+import { eventDoneAt } from "@/lib/tiempo.mjs";
 import { drivers } from "@/data/drivers";
 import { getPhoto } from "@/lib/photos";
 import { fmtDayNum, fmtMonthShort, fmtRange, surname } from "@/lib/format";
@@ -19,7 +20,10 @@ import { OG_DEFAULTS } from "@/lib/site";
 import type { CategoryHistory, RaceEvent, StandingRow } from "@/lib/types";
 import type { CSSProperties } from "react";
 
-export const revalidate = 60;
+// Lo que depende de la hora (el momento, el estado de cada sesión, cuántas fechas van, la próxima) se dibuja en el navegador con la hora real
+// (src/components/en-vivo.tsx): la regeneración por tiempo puede ser lenta. Los datos nuevos invalidan la página por evento (/api/refresh).
+// El título y la descripción para buscadores salen del momento a la hora de la última regeneración: pueden tener hasta 15 minutos de atraso.
+export const revalidate = 900;
 
 export function generateStaticParams() {
   return getAllSeries().map((s) => ({ slug: s.id }));
@@ -174,8 +178,9 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
   const season = await getSeason();
 
   const events = season.getEventsForSeries(series.id);
-  const done = events.filter((e) => !season.getNextSession(e, now));
-  const next = events.find((e) => season.getNextSession(e, now));
+  // Cuándo termina cada fecha (ms): el navegador cuenta cuántas ya se corrieron y cuál es la próxima con su hora.
+  const hechas = events.map((e) => eventDoneAt(e));
+  const proximas = events.map((e) => ({ doneAt: eventDoneAt(e), ...raceDay(e) }));
   const fullTable = season.getStandings(series.id);
   const table = fullTable.slice(0, 10);
   const rest = fullTable.slice(10);
@@ -183,9 +188,13 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
   const meta = season.getSeasonMeta(series.id);
   const history = getHistory(series.id);
   const photo = getPhoto(`series-${series.id}`);
-  const momento = season.getMomentoCategoria(series.id, now);
-  const momentoEvent = momento.fecha ? season.getEvent(momento.fecha.id) : undefined;
+  const simulated = isSimulatedNow();
+  // El momento se calcula en el navegador sobre este recorte de la categoría (src/lib/snapshot.mjs).
+  const recorte = fechasDeCategoria(events, now);
+  const transmisiones: Transmisiones = Object.fromEntries(recorte.map((e) => [e.id, { names: e.broadcasts.map((b) => b.name), timingUrl: e.broadcasts.find((b) => b.kind === "timing")?.url }]));
+  const argentineSlugs = series.scope === "internacional" ? drivers.filter((d) => d.seriesId === series.id).map((d) => d.slug) : [];
   const nuestros = drivers.filter((d) => d.seriesId === series.id);
+  const seriesById = Object.fromEntries(getAllSeries().map((s) => [s.id, s]));
   // Categoría con clases (Córdoba Pista): el campeonato es uno por clase y vive en la página de cada clase.
   const clases = series.classes ?? [];
 
@@ -227,14 +236,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
         )}
       </section>
 
-      <Momento
-        data={momento}
-        now={now}
-        simulated={isSimulatedNow()}
-        broadcasts={(momentoEvent?.broadcasts ?? []).map((b) => ({ name: b.name }))}
-        tiemposUrl={momentoEvent?.broadcasts.find((b) => b.kind === "timing")?.url}
-      />
-      {(momento.modo === "en-pista" || momento.modo === "finde") && <AutoRefresh everyMs={60_000} />}
+      <MomentoCategoria events={recorte} argentineSlugs={argentineSlugs} failures={season.failures} transmisiones={transmisiones} serverNow={now} simulated={simulated} />
       <AgregarCalendario kind="categoria" id={series.id} />
 
       <section className="season-ribbon category-stats">
@@ -245,7 +247,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
         <div>
           <span>Disputadas</span>
           <strong>
-            {done.length}/{events.length || "—"}
+            <Disputadas hechas={hechas} serverNow={now} simulated={simulated} />/{events.length || "—"}
           </strong>
           {meta.incomplete && <small>calendario incompleto</small>}
         </div>
@@ -271,8 +273,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
         )}
         <div>
           <span>Próxima</span>
-          <strong>{next ? raceDay(next).value : "—"}</strong>
-          {next && <small>{raceDay(next).note}</small>}
+          <ProximaFecha fechas={proximas} serverNow={now} simulated={simulated} />
         </div>
       </section>
 
@@ -341,7 +342,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
             <CalendarioPlegable total={events.length} color={series.color}>
               <ol>
                 {events.map((e) => (
-                  <li key={e.id} className={season.getNextSession(e, now) ? undefined : "done"}>
+                  <FilaFecha key={e.id} doneAt={eventDoneAt(e)} serverNow={now} simulated={simulated}>
                     <b>{String(e.round).padStart(2, "0")}</b>
                     <span>
                       <Link href={`/eventos/${e.id}`} className="list-link">
@@ -349,7 +350,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
                       </Link>
                     </span>
                     <time>{shortDate(e.sessions.at(-1)!.start)}</time>
-                  </li>
+                  </FilaFecha>
                 ))}
               </ol>
             </CalendarioPlegable>
@@ -389,14 +390,14 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
           <ul className="nuestros-list">
             {nuestros.map((d) => {
               const pos = season.getStandingPosition(d);
-              const last = season.getDriverResults(d.slug, now)[0];
+              const ultimos = ultimosResultados(season.getAllEvents(), d.slug, { seriesById, tierOf: seriesTier });
               return (
                 <li key={d.slug}>
                   <Link href={`/pilotos/${d.slug}`} className="list-link">
                     <strong>{d.name}</strong>
                     <span>{d.team}</span>
                     <em>{pos ? `${pos.position}.º en el campeonato · ${pos.points} pts` : "Sin posición en el campeonato todavía"}</em>
-                    <em>{last ? `Último resultado: ${last.row.pos}.º · ${last.session.name}, ${last.event.circuit.city}` : "Sin resultados cargados todavía"}</em>
+                    <UltimoResultado candidatos={ultimos} serverNow={now} simulated={simulated} />
                   </Link>
                 </li>
               );

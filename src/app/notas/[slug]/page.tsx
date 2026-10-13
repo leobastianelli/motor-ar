@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import type { CSSProperties } from "react";
 import { breadcrumb, JsonLd } from "@/components/json-ld";
 import { LinkedText, noteDate } from "@/components/notas";
-import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
+import { NotaRelacionados } from "@/components/en-vivo";
+import { SectionTitle } from "@/components/pista";
 import { notas } from "@/data/notas";
-import { getDriver, getIndexedDriver, getNow, getSeason, getSeries } from "@/lib/data";
+import { getDriver, getIndexedDriver, getNow, getSeason, getSeries, isSimulatedNow, seriesParaElNavegador } from "@/lib/data";
 import { getNote, related } from "@/lib/notas";
-import type { StateKind } from "@/lib/format";
 import { OG_DEFAULTS } from "@/lib/site";
-import type { Series } from "@/lib/types";
+import { fechasDeCategoria, fechasDeLosPilotos } from "@/lib/snapshot.mjs";
 
-type DriverRow = { slug: string; name: string; series?: Series; headline: string; state?: StateKind };
-
-export const revalidate = 60;
+// El estado de los pilotos y la próxima fecha de cada categoría (el costado "En Fierros") se calculan en el navegador con la hora real: la
+// regeneración por tiempo puede ser lenta. Los datos nuevos invalidan la página por evento (/api/refresh).
+export const revalidate = 900;
 
 export function generateStaticParams() {
   return notas.map((n) => ({ slug: n.slug }));
@@ -39,22 +38,19 @@ export default async function NotaPage(props: PageProps<"/notas/[slug]">) {
   const season = await getSeason();
   const links = related(nota);
 
-  const drivers = links.drivers.flatMap((slug): DriverRow[] => {
+  const curados = links.drivers.flatMap((slug) => {
+    const d = getDriver(slug);
+    return d && getSeries(d.seriesId) ? [d] : [];
+  });
+  const drivers = links.drivers.flatMap((slug) => {
     const curated = getDriver(slug);
-    if (curated) {
-      const series = getSeries(curated.seriesId);
-      const status = season.getRunnerStatus(curated, now);
-      return series ? [{ slug, name: curated.name, series, headline: `${status.stateLabel}: ${status.headline}`, state: status.state }] : [];
-    }
+    if (curated) return getSeries(curated.seriesId) ? [{ slug, name: curated.name, ficha: { seriesId: curated.seriesId, team: curated.team } }] : [];
     const indexed = getIndexedDriver(slug);
-    return indexed ? [{ slug, name: indexed.name, headline: "" }] : [];
+    return indexed ? [{ slug, name: indexed.name }] : [];
   });
-  const seriesList = links.series.flatMap((id) => {
-    const series = getSeries(id);
-    if (!series) return [];
-    const next = season.getEventsForSeries(id).find((e) => season.getNextSession(e, now));
-    return [{ series, next }];
-  });
+  const seriesList = links.series.flatMap((id) => (getSeries(id) ? [{ id, events: fechasDeCategoria(season.getEventsForSeries(id), now, { pasadas: 0 }) }] : []));
+  // Todas las categorías: las fechas de un piloto pueden ser de otra (Canapino corre el TC y el TN).
+  const { seriesById, tiers } = seriesParaElNavegador();
   const events = links.events.flatMap((id) => {
     const event = season.getEvent(id);
     return event ? [event] : [];
@@ -137,44 +133,27 @@ export default async function NotaPage(props: PageProps<"/notas/[slug]">) {
 
           <aside className="nota-related" aria-label="En Fierros">
             <SectionTitle title="En Fierros" />
-            {drivers.length > 0 && (
-              <section>
-                <h3>Pilotos</h3>
-                {drivers.map((d) => (
-                  <Link key={d.slug} href={`/pilotos/${d.slug}`} className="nota-rel list-link" style={d.series ? ({ "--cat": d.series.color } as CSSProperties) : undefined}>
-                    <strong>{d.name}</strong>
-                    {d.series && <CategoryLabel series={d.series} />}
-                    {d.state && (
-                      <span className="nota-rel-status">
-                        <StateTag kind={d.state}>{d.headline.split(":")[0]}</StateTag> {d.headline.split(": ").slice(1).join(": ")}
-                      </span>
-                    )}
-                  </Link>
-                ))}
-              </section>
-            )}
-            {seriesList.length > 0 && (
-              <section>
-                <h3>Categorías</h3>
-                {seriesList.map(({ series, next }) => (
-                  <Link key={series.id} href={`/categorias/${series.id}`} className="nota-rel list-link">
-                    <CategoryLabel series={series} />
-                    <span className="nota-rel-status">{next ? `Próxima: ${next.name}` : "Sin fechas próximas cargadas"}</span>
-                  </Link>
-                ))}
-              </section>
-            )}
-            {events.length > 0 && (
-              <section>
-                <h3>Fechas</h3>
-                {events.map((e) => (
-                  <Link key={e.id} href={`/eventos/${e.id}`} className="nota-rel list-link">
-                    <strong>{e.name}</strong>
-                    <span className="nota-rel-status">{getSeries(e.seriesId)?.name}</span>
-                  </Link>
-                ))}
-              </section>
-            )}
+            <NotaRelacionados
+              pilotos={drivers}
+              categorias={seriesList}
+              eventosPilotos={fechasDeLosPilotos(season.getAllEvents(), now, curados)}
+              seriesById={seriesById}
+              tiers={tiers}
+              serverNow={now}
+              simulated={isSimulatedNow()}
+            >
+              {events.length > 0 && (
+                <section>
+                  <h3>Fechas</h3>
+                  {events.map((e) => (
+                    <Link key={e.id} href={`/eventos/${e.id}`} className="nota-rel list-link">
+                      <strong>{e.name}</strong>
+                      <span className="nota-rel-status">{getSeries(e.seriesId)?.name}</span>
+                    </Link>
+                  ))}
+                </section>
+              )}
+            </NotaRelacionados>
           </aside>
         </div>
       </article>
