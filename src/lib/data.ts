@@ -5,13 +5,12 @@ import history from "@/data/history.json";
 import driverIndex from "@/data/drivers-2026.json";
 import manualOverrides from "@/data/manual-overrides.json";
 import { driverKey } from "./sources/driver-index.mjs";
-import { diaDeHoy } from "./hoy.mjs";
 import { momentoDeCategoria, momentoDeEvento, momentoDePiloto } from "./momento.mjs";
 import { isProvisional } from "./provisorio.mjs";
 import { mergeSessionPatches } from "./sources/overrides.mjs";
 import { series, seriesById } from "@/data/series";
-import { dayKey, fmtDayShort, fmtTime, sessionStatus, type SessionStatus, type StateKind } from "./format";
-import { sessionEnd as sessionEndOf } from "./session-status.mjs";
+import { dayKey } from "./format";
+import { createTimeViews, eventStart, ms, weekendWindow } from "./tiempo.mjs";
 import { loadRawSeason, type RawSeason } from "./season-data";
 import type { Broadcast, CategoryHistory, Driver, RaceEvent, ResultRow, Series, Session, StandingRow } from "./types";
 
@@ -22,12 +21,6 @@ import type { Broadcast, CategoryHistory, Driver, RaceEvent, ResultRow, Series, 
 export const getNow = () => process.env.FIERROS_NOW ?? new Date().toISOString();
 /** Con FIERROS_NOW definida la hora está congelada: el navegador no debe reemplazarla por la real. */
 export const isSimulatedNow = () => Boolean(process.env.FIERROS_NOW);
-
-/**
- * Qué busca la gente según el momento: en pista o de jueves a domingo antes de que termine lo del día, lo que pasa y lo que viene;
- * el domingo ya terminado, el lunes y el martes, los resultados; el miércoles es intermedio.
- */
-export type HomeMode = "live" | "weekend" | "results" | "midweek";
 
 export const getSeries = (id: string): Series | undefined => seriesById[id];
 export const getAllSeries = () => series;
@@ -72,7 +65,6 @@ export interface DriverSeason {
 /** Argentinos que corren afuera: los que aparecen en "Los nuestros". */
 export const getDriversAbroad = () => drivers.filter((d) => seriesById[d.seriesId]?.scope === "internacional");
 
-export const ms = (iso: string) => new Date(iso).getTime();
 
 /**
  * Prioridad de una categoría cuando dos cosas pasan al mismo tiempo (el orden principal siempre es la hora):
@@ -80,22 +72,7 @@ export const ms = (iso: string) => new Date(iso).getTime();
  */
 const WITH_ARGENTINES = new Set(drivers.map((d) => d.seriesId));
 export const seriesTier = (s: Series): 1 | 2 | 3 => (s.scope !== "internacional" ? 1 : WITH_ARGENTINES.has(s.id) ? 2 : 3);
-export const eventStart = (e: RaceEvent) => e.sessions[0].start;
-const sessionEnd = (s: Session) => sessionEndOf(s);
-const eventEnd = (e: RaceEvent) => Math.max(...e.sessions.map(sessionEnd));
-
-/** Fin de semana de carreras: el actual (viernes a domingo) o, de lunes a jueves, el próximo. */
-export function weekendWindow(now: string) {
-  const today = new Date(`${dayKey(now)}T12:00:00-03:00`);
-  const weekday = today.getUTCDay();
-  const shift = weekday === 0 ? -2 : weekday === 6 ? -1 : 5 - weekday;
-  const friday = today.getTime() + shift * 86400000;
-  const days = [0, 1, 2].map((k) => {
-    const key = dayKey(new Date(friday + k * 86400000).toISOString());
-    return { key, iso: `${key}T12:00:00-03:00` };
-  });
-  return { days, from: `${days[0].key}T00:00:00-03:00`, to: new Date(ms(`${days[2].key}T00:00:00-03:00`) + 86400000).toISOString() };
-}
+export { eventStart, ms, weekendWindow };
 
 const normalize = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
 const SLUG_BY_NAME = new Map(drivers.flatMap((d) => [d.name, ...(d.aliases ?? [])].map((n) => [normalize(n), d.slug] as const)));
@@ -103,35 +80,8 @@ const SLUG_BY_NAME = new Map(drivers.flatMap((d) => [d.name, ...(d.aliases ?? []
 const slugFor = (name: string) => SLUG_BY_NAME.get(normalize(name)) ?? name.split(" / ").map((n) => SLUG_BY_NAME.get(normalize(n))).find(Boolean);
 
 const RACE_KINDS = ["carrera", "final", "sprint"];
-// Para "lo último que pasó" cuentan también las series (TN), pero no para estadísticas: una serie no es una carrera ganada.
-const RECENT_KINDS = [...RACE_KINDS, "serie"];
-const KIND_WEIGHT: Record<string, number> = { final: 0, carrera: 0, sprint: 1, serie: 2 };
 
-const VERB: Record<Session["kind"], string> = {
-  practica: "Practica",
-  clasificacion: "Clasifica",
-  sprint: "Corre la sprint",
-  serie: "Corre la serie",
-  final: "Corre la final",
-  carrera: "Corre",
-};
-
-export interface FeedItem {
-  session: Session;
-  event: RaceEvent;
-  series: Series;
-  status: SessionStatus;
-}
-
-export interface RunnerStatus {
-  /** Cuándo vuelve a estar en pista (ms): sirve para ordenar por orden de aparición. Infinity si no hay nada cargado. */
-  at: number;
-  state: StateKind;
-  stateLabel: string;
-  headline: string;
-  detail: string;
-  href: string;
-}
+export type { FeedItem, HomeMode, RunnerStatus } from "./tiempo.mjs";
 
 export interface SeasonMeta {
   standingsLabel?: string;
@@ -275,10 +225,8 @@ export function createSeason(raw: RawSeason) {
     };
   }
 
-  const baseItems = events
-    .flatMap((event) => event.sessions.map((session) => ({ session, event, series: seriesById[event.seriesId] })))
-    .sort((a, b) => ms(a.session.start) - ms(b.session.start) || seriesTier(a.series) - seriesTier(b.series));
-  const itemsAt = (now: string): FeedItem[] => baseItems.map((i) => ({ ...i, status: sessionStatus(i.session, now) }));
+  // Todo lo que depende de "ahora" vive en tiempo.mjs, compartido con el navegador (los componentes lo recalculan con la hora real).
+  const views = createTimeViews({ events, seriesById, tierOf: seriesTier, driversAbroad: getDriversAbroad() });
 
   const getStandings = (seriesId: string) => standings[seriesId] ?? [];
 
@@ -351,64 +299,6 @@ export function createSeason(raw: RawSeason) {
   const getEventsForSeries = (seriesId: string) =>
     events.filter((e) => e.seriesId === seriesId).sort((a, b) => ms(eventStart(a)) - ms(eventStart(b)));
 
-  const getNextSession = (event: RaceEvent, now: string) => event.sessions.find((s) => sessionStatus(s, now) !== "done");
-
-  const getRecentResults = (now: string, scope?: Series["scope"]) =>
-    itemsAt(now)
-      .filter((i) => i.status === "done" && i.session.results?.length && RECENT_KINDS.includes(i.session.kind))
-      .filter((i) => !scope || i.series.scope === scope)
-      // Lo más reciente primero; con la misma hora (p. ej. TN sin horario), la final antes que las series.
-      .sort((a, b) => ms(b.session.start) - ms(a.session.start) || KIND_WEIGHT[a.session.kind] - KIND_WEIGHT[b.session.kind]);
-
-  /**
-   * Sesiones de cualquier tipo (también prácticas y clasificaciones) que terminaron hace poco y ya tienen resultados: lo primero que
-   * busca alguien que entra justo después de una sesión. Lo que terminó más recientemente va primero; a igual hora, la categoría argentina.
-   */
-  const getJustFinished = (now: string, hours = 30) =>
-    itemsAt(now)
-      .filter((i) => {
-        if (i.status !== "done" || !i.session.results?.length || i.session.timeKnown === false) return false;
-        const ended = ms(i.session.start) + i.session.durationMin * 60000;
-        return ms(now) - ended < hours * 3600000;
-      })
-      .sort((a, b) => ms(b.session.start) + b.session.durationMin * 60000 - (ms(a.session.start) + a.session.durationMin * 60000) || seriesTier(a.series) - seriesTier(b.series));
-
-  const getDriverResults = (slug: string, now: string) =>
-    itemsAt(now)
-      .filter((i) => i.status === "done" && i.session.results?.some((r) => r.driverSlug === slug))
-      .map((i) => ({ ...i, row: i.session.results!.find((r) => r.driverSlug === slug)! }))
-      .sort((a, b) => ms(b.session.start) - ms(a.session.start));
-
-  function getRunnerStatus(driver: Driver, now: string): RunnerStatus {
-    const items = itemsAt(now).filter((i) => i.event.seriesId === driver.seriesId);
-    const live = items.find((i) => i.status === "live");
-    const upcoming = items.find((i) => i.status === "upcoming");
-    const at = live ? ms(now) : upcoming ? ms(upcoming.session.start) : Infinity;
-    if (live) {
-      return { at, state: "live", stateLabel: "En pista", headline: `${live.session.name} en curso`, detail: live.event.circuit.city, href: `/eventos/${live.event.id}` };
-    }
-    const next = items.find((i) => i.status === "upcoming");
-    const today = next && dayKey(next.session.start) === dayKey(now);
-    const last = getDriverResults(driver.slug, now)[0];
-    if (last && !today && ms(now) - ms(last.session.start) < 4 * 86400000) {
-      const verb = last.session.kind === "clasificacion" ? "Clasificó" : last.session.kind === "practica" ? "Fue" : "Terminó";
-      return { at, state: "finished", stateLabel: "Final", headline: `${verb} ${last.row.pos}.º`, detail: `${last.session.name} · ${last.event.circuit.city}`, href: `/eventos/${last.event.id}` };
-    }
-    // Sin equipo confirmado (p. ej. un piloto entre butacas) no hay forma de saber si va a estar en la próxima
-    // fecha del calendario de la categoría: mejor "sin datos" que dar por hecho que corre.
-    if (next && driver.team) {
-      const when = next.session.timeKnown === false ? "" : `, ${fmtTime(next.session.start)}`;
-      return {
-        at,
-        state: "upcoming",
-        stateLabel: "Próxima",
-        headline: today ? `${VERB[next.session.kind]} hoy${when}` : `${next.session.name} · ${fmtDayShort(next.session.start)}`,
-        detail: `${next.session.name} · ${next.event.circuit.city}`,
-        href: `/eventos/${next.event.id}`,
-      };
-    }
-    return { at: Infinity, state: "no-data", stateLabel: "Sin datos", headline: "Sin actividad próxima cargada", detail: "", href: `/pilotos/${driver.slug}` };
-  }
 
   /** "Los nuestros" son los pilotos con ficha de las categorías internacionales; en las nacionales corre todo el mundo y no hay a quién destacar. */
   const momentoOptions = (seriesId: string) => ({
@@ -455,72 +345,7 @@ export function createSeason(raw: RawSeason) {
     getMomentoPiloto: (seriesIds: string[], keys: string[], now: string) =>
       momentoDePiloto(events.filter((e) => seriesIds.includes(e.seriesId)), now, keys, { failures: raw.failures ?? [] }),
     getEventsForSeries,
-    getNextSession,
-    getRecentResults,
-    getJustFinished,
-    getDriverResults,
-    getRunnerStatus,
-
-    /**
-     * Agenda de la home: sólo lo que está en curso y lo que sigue. Arranca en el día de la primera sesión pendiente
-     * (aunque sea otra semana) y llega hasta el domingo de esa semana. Lo que ya terminó no aparece.
-     */
-    getAgenda(now: string) {
-      const pending = itemsAt(now).filter((i) => i.status !== "done");
-      if (!pending.length) return { items: [], days: [], firstDay: undefined, to: now };
-      const firstDay = dayKey(pending[0].session.start);
-      const start = ms(`${firstDay}T00:00:00-03:00`);
-      const weekday = new Date(`${firstDay}T12:00:00-03:00`).getUTCDay();
-      const end = start + (weekday === 0 ? 1 : 8 - weekday) * 86400000;
-      const items = pending.filter((i) => ms(i.session.start) < end);
-      const days = [...new Set(items.map((i) => dayKey(i.session.start)))].map((key) => ({ key, iso: `${key}T12:00:00-03:00` }));
-      return { items, days, firstDay, to: new Date(end).toISOString() };
-    },
-
-    /**
-     * Qué corre hoy (día calendario argentino), de todas las categorías: ver src/lib/hoy.mjs. Si hoy no hay nada,
-     * trae el próximo día con actividad. A diferencia de `getAgenda`, incluye también lo que ya terminó hoy.
-     */
-    getToday: (now: string) => diaDeHoy(itemsAt(now), now),
-
-    /** Lo que está en pista ahora. Si hay varias cosas a la vez, primero la categoría argentina, después la internacional con argentinos y al final el resto; dentro de cada nivel, la que arrancó antes. */
-    getLiveItems: (now: string) =>
-      itemsAt(now)
-        .filter((i) => i.status === "live")
-        .sort((a, b) => seriesTier(a.series) - seriesTier(b.series) || ms(a.session.start) - ms(b.session.start)),
-
-    getHomeMode(now: string): HomeMode {
-      const items = itemsAt(now);
-      if (items.some((i) => i.status === "live")) return "live";
-      const today = dayKey(now);
-      const weekday = new Date(`${today}T12:00:00-03:00`).getUTCDay();
-      if (weekday === 1 || weekday === 2) return "results";
-      if (weekday === 3) return "midweek";
-      if (weekday === 0) {
-        const pendingToday = items.some((i) => i.status !== "done" && dayKey(i.session.start) === today);
-        return pendingToday ? "weekend" : "results";
-      }
-      return "weekend";
-    },
-
-    getUpcomingEvents: (now: string) => events.filter((e) => eventEnd(e) >= ms(now)).sort((a, b) => ms(eventStart(a)) - ms(eventStart(b))),
-
-    getNextRace: (seriesId: string, now: string) =>
-      itemsAt(now).find((i) => i.event.seriesId === seriesId && i.status !== "done" && ["carrera", "final"].includes(i.session.kind)),
-
-    /** Resultados recientes de argentinos que corren afuera, del mejor al peor. */
-    getArgentineHighlights(now: string, days = 8) {
-      const abroad = new Set(getDriversAbroad().map((d) => d.slug));
-      return getRecentResults(now, "internacional")
-        .filter((i) => ms(now) - ms(i.session.start) < days * 86400000)
-        .flatMap((i) => i.session.results!.filter((r) => r.driverSlug && abroad.has(r.driverSlug)).map((row) => ({ ...i, row })))
-        .sort((a, b) => a.row.pos - b.row.pos || ms(b.session.start) - ms(a.session.start));
-    },
-
-    /** Próxima sesión con participación argentina: categorías argentinas o internacionales donde corre alguno de los nuestros. */
-    getNextArgentineSession(now: string) {
-      return itemsAt(now).find((i) => seriesTier(i.series) <= 2 && i.status === "upcoming");
-    },
+    ...views,
 
     getStandingPosition(driver: Driver) {
       const row = getStandings(driver.seriesId).find((r) => r.driverSlug === driver.slug);

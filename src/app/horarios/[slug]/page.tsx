@@ -3,16 +3,20 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
 import { breadcrumb, JsonLd, sportsEventJsonLd } from "@/components/json-ld";
-import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
-import { getDriver, getNow, getSeason, getSeries, type Season } from "@/lib/data";
-import { dayKey, fmtDayShort, fmtRange, fmtTime, fmtWeekday, fmtDayNum, raceWinner, sessionState, sessionStatus, sessionTime } from "@/lib/format";
+import { HorarioProxima, HorarioRespuesta } from "@/components/en-vivo";
+import { CategoryLabel, SectionTitle } from "@/components/pista";
+import { getAllSeries, getDriver, getNow, getSeason, getSeries, isSimulatedNow, seriesTier, type Season } from "@/lib/data";
+import { fmtDayShort, fmtRange, fmtTime, raceWinner, sessionStatus } from "@/lib/format";
 import { provisionalSuffix } from "@/lib/provisorio.mjs";
+import { fechasDeCategoria } from "@/lib/snapshot.mjs";
 import { driverKey } from "@/lib/sources/driver-index.mjs";
 import { allHorarioSlugs, horarioSeriesSlug, resolveHorario } from "@/lib/horarios";
 import { OG_DEFAULTS } from "@/lib/site";
-import type { RaceEvent } from "@/lib/types";
 
-export const revalidate = 60;
+// La respuesta de arriba ("la próxima sesión es…") y el cronograma con el estado de cada sesión se calculan en el navegador con la hora real:
+// la regeneración por tiempo puede ser lenta. Los datos nuevos invalidan la página por evento (/api/refresh). El título, la descripción y los
+// datos estructurados para buscadores salen de la próxima sesión a la hora de la última regeneración: pueden tener hasta 15 minutos de atraso.
+export const revalidate = 900;
 
 export function generateStaticParams() {
   return allHorarioSlugs().map((slug) => ({ slug }));
@@ -63,9 +67,12 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
   const lastWinner = lastRace && raceWinner(lastRace.results);
   const title = driver ? `A qué hora corre ${driver.name}` : `Horario de ${series.name}`;
   // Las sesiones ya corridas dicen cómo le fue al piloto, no sólo "Terminó".
-  const mine = driver ? new Set([driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n))) : null;
-  const myRow = (s: RaceEvent["sessions"][number]) => (mine ? s.results?.find((r) => r.driver.split(" / ").some((part) => mine.has(driverKey(part)))) : undefined);
-  const byDay = next ? Map.groupBy(next.sessions, (s) => dayKey(s.start)) : new Map();
+  const keys = driver ? [driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n)) : undefined;
+  // La próxima fecha y su cronograma se calculan en el navegador sobre este recorte de la categoría (src/lib/snapshot.mjs).
+  const events = fechasDeCategoria(season.getEventsForSeries(series.id), now, { keys: keys && new Set(keys), pasadas: 0 });
+  const seriesById = Object.fromEntries(getAllSeries().map((s) => [s.id, s]));
+  const tiers = Object.fromEntries(getAllSeries().map((s) => [s.id, seriesTier(s)]));
+  const simulated = isSimulatedNow();
 
   const answer = next && nextSession
     ? driver
@@ -92,64 +99,11 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
         <div>
           <CategoryLabel series={series} detail={driver ? driver.team : series.org} href={`/categorias/${series.id}`} />
           <h1>{title}</h1>
-          <p className="horario-answer">{answer}</p>
+          <HorarioRespuesta events={events} serie={{ id: series.id, name: series.name }} piloto={driver?.name} seriesById={seriesById} tiers={tiers} serverNow={now} simulated={simulated} />
         </div>
       </section>
 
-      {next && (
-        <section className="section-block">
-          <SectionTitle title={next.name}>
-            <Link href={`/eventos/${next.id}`}>Ver la fecha</Link>
-          </SectionTitle>
-          <div className="horario-grid">
-            <div>
-              {[...byDay.entries()].map(([key, sessions]) => (
-                <div key={key} className="horario-day">
-                  <h3>
-                    {fmtWeekday(sessions[0].start)} {fmtDayNum(sessions[0].start)}
-                  </h3>
-                  <ul>
-                    {sessions.map((s: RaceEvent["sessions"][number]) => {
-                      const state = sessionState(s, now);
-                      const row = state.kind === "finished" ? myRow(s) : undefined;
-                      return (
-                        <li key={s.id}>
-                          <time dateTime={s.start}>{sessionTime(s)}</time>
-                          <strong>{s.name}</strong>
-                          {row && (
-                            <b className="horario-pos">
-                              {row.positionText && !/^d+$/.test(row.positionText) ? row.positionText : `${row.pos}.º`}
-                              {row.gap ? <small> {row.gap}</small> : null}
-                            </b>
-                          )}
-                          <StateTag kind={state.kind}>{state.label}</StateTag>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </div>
-              ))}
-              <p className="source-note">Horarios de Argentina. {next.sessions.some((s) => s.timeKnown === false) ? "Algunas sesiones todavía no tienen horario oficial." : ""}</p>
-            </div>
-            <aside className="horario-watch">
-              <h3>Dónde verlo</h3>
-              {next.broadcasts.length ? (
-                <ul>
-                  {next.broadcasts.map((b) => (
-                    <li key={b.name}>{b.url ? <a href={b.url} target="_blank" rel="noreferrer">{b.name}</a> : b.name}</li>
-                  ))}
-                </ul>
-              ) : (
-                <p>Sin transmisión confirmada en Argentina.</p>
-              )}
-              <p>
-                {next.circuit.name} · {next.circuit.city}
-                {next.circuit.country && next.circuit.country !== "Argentina" ? `, ${next.circuit.country}` : ""}
-              </p>
-            </aside>
-          </div>
-        </section>
-      )}
+      <HorarioProxima events={events} keys={keys} seriesById={seriesById} tiers={tiers} serverNow={now} simulated={simulated} />
 
       <section className="section-block">
         <SectionTitle title={driver ? "Cómo viene" : "Última fecha"} />

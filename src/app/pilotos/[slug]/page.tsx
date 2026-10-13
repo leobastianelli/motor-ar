@@ -3,9 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
-import { AgregarCalendario } from "@/components/agregar-calendario";
-import { AutoRefresh } from "@/components/live-clock";
-import { Momento, ProximaSesion } from "@/components/momento";
+import { MomentoDelPiloto, ProximaDelPiloto, type Transmisiones } from "@/components/en-vivo";
 import { CategoryLabel, PhotoCredit, SectionTitle } from "@/components/pista";
 import { colapintoData, finishLabel, quotes, raceCode, raceName, recentMilestones, statusLabel, type ColapintoData } from "@/lib/colapinto";
 import { getAllDrivers, getDriver, getIndexedDriver, getNow, getSeason, getSeries, isSimulatedNow, type Season } from "@/lib/data";
@@ -18,10 +16,14 @@ import { driverKey } from "@/lib/sources/driver-index.mjs";
 import { breadcrumb, isoDate, JsonLd } from "@/components/json-ld";
 import { descripcionPiloto, tituloPiloto } from "@/lib/seo-titulos.mjs";
 import { OG_DEFAULTS } from "@/lib/site";
+import { fechasDeCategoria } from "@/lib/snapshot.mjs";
 import type { IndexedDriver } from "@/lib/data";
 import type { Driver } from "@/lib/types";
 
-export const revalidate = 60;
+// Lo que depende de la hora (el momento del piloto con su fila en cada sesión, "próxima sesión") se dibuja en el navegador con la hora real
+// (src/components/en-vivo.tsx): la regeneración por tiempo puede ser lenta. Los datos nuevos invalidan la página por evento (/api/refresh).
+// El título y la descripción para buscadores salen del momento a la hora de la última regeneración: pueden tener hasta 15 minutos de atraso.
+export const revalidate = 900;
 
 // Sólo se prerenderizan las fichas curadas: las ~630 del índice se generan en la primera visita y quedan en la caché de ISR (dynamicParams sigue en true;
 // un slug que no está en el índice da 404 igual). Prerenderizarlas todas multiplicaba el tamaño de cada deploy, y son muchos por mes.
@@ -84,24 +86,14 @@ function indexedSummary(entry: IndexedDriver, season: Season) {
  * recalcula estados y horas. Un piloto sin ficha sólo lo muestra si figura en los resultados de la fecha (si no, no sabemos que corre).
  */
 function MomentoPiloto({ seriesIds, keys, season, now, confirmado, slug }: { seriesIds: string[]; keys: string[]; season: Season; now: string; confirmado: boolean; slug: string }) {
-  const data = season.getMomentoPiloto(seriesIds, keys, now);
-  if (!confirmado && !data.participa) return null;
-  if (data.modo === "resultados" && !data.participa) return null;
-  const event = data.fecha ? season.getEvent(data.fecha.id) : undefined;
-  return (
-    <>
-      <Momento
-        data={data}
-        now={now}
-        simulated={isSimulatedNow()}
-        piloto
-        broadcasts={(event?.broadcasts ?? []).map((b) => ({ name: b.name }))}
-        tiemposUrl={event?.broadcasts.find((b) => b.kind === "timing")?.url}
-      />
-      {(data.modo === "en-pista" || data.modo === "finde") && <AutoRefresh everyMs={60_000} />}
-      <AgregarCalendario kind="piloto" id={slug} />
-    </>
-  );
+  const events = recorteDelPiloto(season, seriesIds, keys, now);
+  const transmisiones: Transmisiones = Object.fromEntries(events.map((e) => [e.id, { names: e.broadcasts.map((b) => b.name), timingUrl: e.broadcasts.find((b) => b.kind === "timing")?.url }]));
+  return <MomentoDelPiloto events={events} keys={keys} failures={season.failures} confirmado={confirmado} slug={slug} transmisiones={transmisiones} serverNow={now} simulated={isSimulatedNow()} />;
+}
+
+/** Las fechas de sus categorías que el navegador necesita para calcular el momento del piloto (src/lib/snapshot.mjs), con su fila en cada sesión. */
+function recorteDelPiloto(season: Season, seriesIds: string[], keys: string[], now: string) {
+  return seriesIds.flatMap((id) => fechasDeCategoria(season.getEventsForSeries(id), now, { keys: new Set(keys) }));
 }
 
 /** Ficha armada sólo con resultados: categoría, estadísticas de la temporada y cada sesión. Sin datos biográficos. */
@@ -247,7 +239,8 @@ function NextRace({ driver, now, season }: { driver: Driver; now: string; season
   // Sin equipo confirmado (driver.team vacío, p. ej. entre butacas) no hay manera de saber si va a estar en la
   // próxima fecha del calendario de la categoría: mejor no decir nada que dar por hecho que corre.
   if (!driver.team) return null;
-  return <ProximaSesion data={season.getMomentoPiloto([driver.seriesId], driverKeys(driver), now)} now={now} simulated={isSimulatedNow()} />;
+  const keys = driverKeys(driver);
+  return <ProximaDelPiloto events={recorteDelPiloto(season, [driver.seriesId], keys, now)} keys={keys} failures={season.failures} serverNow={now} simulated={isSimulatedNow()} />;
 }
 
 const driverKeys = (d: Driver) => [d.name, ...(d.aliases ?? [])].map((n) => driverKey(n));

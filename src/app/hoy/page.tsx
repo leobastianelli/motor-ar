@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import type { CSSProperties } from "react";
-import { HoyAgenda } from "@/components/hoy-agenda";
+import { HoyView } from "@/components/hoy-agenda";
 import { breadcrumb, itemListJsonLd, JsonLd, sportsEventFromSession } from "@/components/json-ld";
-import { CategoryLabel, SectionTitle } from "@/components/pista";
-import { getNow, getSeason, isSimulatedNow } from "@/lib/data";
-import { fmtDayNum, fmtMonthLong, fmtWeekday } from "@/lib/format";
-import { descripcionHoy, fechaLarga, nombreDia, tituloHoy } from "@/lib/hoy.mjs";
+import { getAllSeries, getNow, getSeason, isSimulatedNow, seriesTier } from "@/lib/data";
+import { descripcionHoy, tituloHoy } from "@/lib/hoy.mjs";
 import { OG_DEFAULTS } from "@/lib/site";
+import { fechasDeHoy } from "@/lib/snapshot.mjs";
+import type { Series } from "@/lib/types";
 
-export const revalidate = 60;
+// El día, lo que está en vivo y el estado de cada sesión se dibujan en el navegador con la hora real (<HoyView>): a medianoche la página cambia
+// de día sola. La regeneración por tiempo puede ser lenta; los datos nuevos invalidan la página por evento (/api/refresh). El título, la descripción
+// y los datos estructurados para buscadores salen del día a la hora de la última regeneración: pueden tener hasta 15 minutos de atraso.
+export const revalidate = 900;
 
 async function load() {
   const now = getNow();
   const season = await getSeason();
   const dia = season.getToday(now);
-  return { now, dia, simulated: isSimulatedNow() };
+  return { now, season, dia, simulated: isSimulatedNow() };
 }
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -26,9 +27,10 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function HoyPage() {
-  const { now, dia, simulated } = await load();
-  const { items, isToday } = dia;
-  const live = items.find((i) => i.status === "live");
+  const { now, season, dia, simulated } = await load();
+  const { fechas, cubreHasta } = fechasDeHoy(season.getAllEvents(), now);
+  const seriesById: Record<string, Series> = Object.fromEntries(getAllSeries().filter((s) => fechas.some((e) => e.seriesId === s.id)).map((s) => [s.id, s]));
+  const tiers = Object.fromEntries(Object.values(seriesById).map((s) => [s.id, seriesTier(s)]));
 
   return (
     <>
@@ -36,7 +38,7 @@ export default async function HoyPage() {
         data={{
           "@context": "https://schema.org",
           "@graph": [
-            itemListJsonLd(items.map((i) => sportsEventFromSession(i.session, i.event, i.series))),
+            itemListJsonLd(dia.items.map((i) => sportsEventFromSession(i.session, i.event, i.series))),
             breadcrumb([
               ["Inicio", "/"],
               ["Hoy", "/hoy"],
@@ -44,47 +46,7 @@ export default async function HoyPage() {
           ],
         }}
       />
-      <section className="weekend-head">
-        <h1>{isToday ? "Hoy" : "Hoy no hay carreras"}</h1>
-        <p className="lede">
-          {isToday && (
-            <span>
-              {fmtWeekday(now)} {fmtDayNum(now)} de {fmtMonthLong(now)}
-            </span>
-          )}
-          {!isToday && dia.key && (
-            <span>
-              Próximo: {nombreDia(dia.key).toLowerCase()} {fechaLarga(dia.key)}
-            </span>
-          )}
-          {!dia.key && <span>No hay carreras próximas cargadas.</span>}
-          {!isToday && (
-            <span>
-              <Link href="/calendario">Ver el calendario</Link>
-            </span>
-          )}
-        </p>
-      </section>
-
-      {live && (
-        <div className="live-callout" style={{ "--cat": live.series.color } as CSSProperties}>
-          <span className="pulse" aria-hidden="true" />
-          <div>
-            <CategoryLabel series={live.series} detail={live.event.circuit.city} href={`/categorias/${live.series.id}`} />
-            <strong>{live.session.name}</strong>
-          </div>
-          <Link href={`/eventos/${live.event.id}`}>
-            Ver en vivo <span aria-hidden="true">→</span>
-          </Link>
-        </div>
-      )}
-
-      {items.length > 0 && (
-        <section className="section-block">
-          <SectionTitle as="h2" title={isToday ? "Todo lo de hoy, por hora" : "Lo de esa fecha, por hora"} />
-          <HoyAgenda items={items} serverNow={now} simulated={simulated} />
-        </section>
-      )}
+      <HoyView events={fechas} seriesById={seriesById} tiers={tiers} cubreHasta={cubreHasta} serverNow={now} simulated={simulated} />
     </>
   );
 }
