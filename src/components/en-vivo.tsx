@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import type { CSSProperties, ReactNode } from "react";
+import { Fragment, type CSSProperties, type ReactNode } from "react";
 import { momentoDeCategoria, momentoDeEvento, momentoDePiloto } from "@/lib/momento.mjs";
 import { CategoryLabel, SectionTitle, StateTag } from "@/components/pista";
 import { dayKey, fmtDayNum, fmtDayShort, fmtTime, fmtWeekday, sessionState, sessionTime } from "@/lib/format";
@@ -217,7 +217,7 @@ export function NotaRelacionados({
           })}
         </section>
       )}
-      {children}
+      <Fragment key="fechas">{children}</Fragment>
     </>
   );
 }

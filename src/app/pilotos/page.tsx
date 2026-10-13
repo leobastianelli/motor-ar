@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { DriverDirectory, type DirectoryEntry } from "@/components/driver-directory";
 import { TarjetasDePilotos } from "@/components/en-vivo";
 import { SectionTitle } from "@/components/pista";
-import { getAllDrivers, getAllSeries, getIndexedDrivers, getNow, getSeason, getSeries, isSimulatedNow, seriesTier } from "@/lib/data";
+import { getAllDrivers, getAllSeries, getIndexedDrivers, getNow, getSeason, getSeries, isSimulatedNow, seriesParaElNavegador } from "@/lib/data";
 import { fechasDeLosPilotos } from "@/lib/snapshot.mjs";
 import { driverKey } from "@/lib/sources/driver-index.mjs";
 
@@ -19,8 +19,7 @@ export default async function DriversPage() {
   const now = getNow();
   const season = await getSeason();
   const featured = getAllDrivers();
-  const seriesById = Object.fromEntries(getAllSeries().map((s) => [s.id, s]));
-  const tiers = Object.fromEntries(getAllSeries().map((s) => [s.id, seriesTier(s)]));
+  const { seriesById, tiers } = seriesParaElNavegador();
 
   // Los destacados (fichas completas) van también en la tabla y el buscador: no tiene sentido que sólo
   // aparezcan en las tarjetas de arriba. getIndexedDrivers() ya los excluye (CURATED_KEYS en data.ts), así que

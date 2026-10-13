@@ -515,7 +515,7 @@ export function HomeView({
               ))}
           </ul>
         </div>
-        {jump}
+        <Fragment key="jump">{jump}</Fragment>
       </section>
       {ORDER[mode].map((id) => <Fragment key={id}>{all[id]}</Fragment>)}
     </div>

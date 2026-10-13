@@ -5,7 +5,7 @@ import type { CSSProperties } from "react";
 import { breadcrumb, JsonLd, sportsEventJsonLd } from "@/components/json-ld";
 import { HorarioProxima, HorarioRespuesta } from "@/components/en-vivo";
 import { CategoryLabel, SectionTitle } from "@/components/pista";
-import { getAllSeries, getDriver, getNow, getSeason, getSeries, isSimulatedNow, seriesTier, type Season } from "@/lib/data";
+import { getDriver, getNow, getSeason, getSeries, isSimulatedNow, seriesParaElNavegador, type Season } from "@/lib/data";
 import { fmtDayShort, fmtRange, fmtTime, raceWinner, sessionStatus } from "@/lib/format";
 import { provisionalSuffix } from "@/lib/provisorio.mjs";
 import { fechasDeCategoria } from "@/lib/snapshot.mjs";
@@ -70,8 +70,7 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
   const keys = driver ? [driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n)) : undefined;
   // La próxima fecha y su cronograma se calculan en el navegador sobre este recorte de la categoría (src/lib/snapshot.mjs).
   const events = fechasDeCategoria(season.getEventsForSeries(series.id), now, { keys: keys && new Set(keys), pasadas: 0 });
-  const seriesById = Object.fromEntries(getAllSeries().map((s) => [s.id, s]));
-  const tiers = Object.fromEntries(getAllSeries().map((s) => [s.id, seriesTier(s)]));
+  const { seriesById, tiers } = seriesParaElNavegador([series.id]);
   const simulated = isSimulatedNow();
 
   const answer = next && nextSession

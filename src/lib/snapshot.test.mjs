@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { datosPortada } from "./portada.mjs";
 import { deps, driversAbroad, events, igual } from "./prueba-temporada.mjs";
-import { fechasDeLaPortada, recortarFecha, recortarSesion } from "./snapshot.mjs";
+import { fechasDeLaPortada, recortarFecha, recortarResultados, recortarSesion } from "./snapshot.mjs";
 import { createTimeViews, eventDoneAt, sessionDoneAt } from "./tiempo.mjs";
 import { sessionStatus } from "./session-status.mjs";
 
@@ -18,6 +18,7 @@ const normalizar = (valor) =>
     JSON.stringify(valor, function (key, v) {
       if (v?.sessions && v?.seriesId) return { id: v.id, seriesId: v.seriesId, name: v.name, round: v.round, city: v.circuit?.city, sessions: v.sessions.map((s) => s.id) };
       if (key === "session" && v?.id) return recortarSesion(v, true);
+      if (key === "row" && v?.pos !== undefined) return recortarResultados([v])[0];
       return v;
     }),
   );

@@ -72,6 +72,22 @@ export const getDriversAbroad = () => drivers.filter((d) => seriesById[d.seriesI
  */
 const WITH_ARGENTINES = new Set(drivers.map((d) => d.seriesId));
 export const seriesTier = (s: Series): 1 | 2 | 3 => (s.scope !== "internacional" ? 1 : WITH_ARGENTINES.has(s.id) ? 2 : 3);
+
+/**
+ * Las categorías que un componente de navegador necesita (`ids`, o todas): sólo los campos que se dibujan (sin clases ni enlaces) y la prioridad de
+ * cada una (`seriesTier`). Es lo que viaja con los recortes de la temporada (src/lib/snapshot.mjs).
+ */
+export function seriesParaElNavegador(ids?: Iterable<string>) {
+  const wanted = ids ? new Set(ids) : undefined;
+  const porId: Record<string, Series> = {};
+  const tiers: Record<string, 1 | 2 | 3> = {};
+  for (const s of series) {
+    if (wanted && !wanted.has(s.id)) continue;
+    porId[s.id] = { id: s.id, name: s.name, short: s.short, code: s.code, org: s.org, scope: s.scope, color: s.color };
+    tiers[s.id] = seriesTier(s);
+  }
+  return { seriesById: porId, tiers };
+}
 export { eventStart, ms, weekendWindow };
 
 const normalize = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();

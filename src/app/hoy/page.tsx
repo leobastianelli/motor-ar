@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import { HoyView } from "@/components/hoy-agenda";
 import { breadcrumb, itemListJsonLd, JsonLd, sportsEventFromSession } from "@/components/json-ld";
-import { getAllSeries, getNow, getSeason, isSimulatedNow, seriesTier } from "@/lib/data";
+import { getNow, getSeason, isSimulatedNow, seriesParaElNavegador } from "@/lib/data";
 import { descripcionHoy, tituloHoy } from "@/lib/hoy.mjs";
 import { OG_DEFAULTS } from "@/lib/site";
 import { fechasDeHoy } from "@/lib/snapshot.mjs";
-import type { Series } from "@/lib/types";
 
 // El día, lo que está en vivo y el estado de cada sesión se dibujan en el navegador con la hora real (<HoyView>): a medianoche la página cambia
 // de día sola. La regeneración por tiempo puede ser lenta; los datos nuevos invalidan la página por evento (/api/refresh). El título, la descripción
@@ -29,8 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function HoyPage() {
   const { now, season, dia, simulated } = await load();
   const { fechas, cubreHasta } = fechasDeHoy(season.getAllEvents(), now);
-  const seriesById: Record<string, Series> = Object.fromEntries(getAllSeries().filter((s) => fechas.some((e) => e.seriesId === s.id)).map((s) => [s.id, s]));
-  const tiers = Object.fromEntries(Object.values(seriesById).map((s) => [s.id, seriesTier(s)]));
+  const { seriesById, tiers } = seriesParaElNavegador(fechas.map((e) => e.seriesId));
 
   return (
     <>

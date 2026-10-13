@@ -6,7 +6,7 @@ import { LinkedText, noteDate } from "@/components/notas";
 import { NotaRelacionados } from "@/components/en-vivo";
 import { SectionTitle } from "@/components/pista";
 import { notas } from "@/data/notas";
-import { getAllSeries, getDriver, getIndexedDriver, getNow, getSeason, getSeries, isSimulatedNow, seriesTier } from "@/lib/data";
+import { getDriver, getIndexedDriver, getNow, getSeason, getSeries, isSimulatedNow, seriesParaElNavegador } from "@/lib/data";
 import { getNote, related } from "@/lib/notas";
 import { OG_DEFAULTS } from "@/lib/site";
 import { fechasDeCategoria, fechasDeLosPilotos } from "@/lib/snapshot.mjs";
@@ -50,8 +50,7 @@ export default async function NotaPage(props: PageProps<"/notas/[slug]">) {
   });
   const seriesList = links.series.flatMap((id) => (getSeries(id) ? [{ id, events: fechasDeCategoria(season.getEventsForSeries(id), now, { pasadas: 0 }) }] : []));
   // Todas las categorías: las fechas de un piloto pueden ser de otra (Canapino corre el TC y el TN).
-  const seriesById = Object.fromEntries(getAllSeries().map((s) => [s.id, s]));
-  const tiers = Object.fromEntries(getAllSeries().map((s) => [s.id, seriesTier(s)]));
+  const { seriesById, tiers } = seriesParaElNavegador();
   const events = links.events.flatMap((id) => {
     const event = season.getEvent(id);
     return event ? [event] : [];

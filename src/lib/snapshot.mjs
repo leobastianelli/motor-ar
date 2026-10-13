@@ -17,13 +17,39 @@ export const PORTADA_DIAS_ATRAS = 10;
 /**
  * Las filas de resultados que alguna página usa: el podio, los pilotos con ficha (`driverSlug`) y, si se pasan, los que coinciden con
  * `keys` (`driverKey` de cada forma del nombre). La primera fila siempre queda: sin ella `results.length` y "el mejor puesto conocido" cambiarían.
+ * Y de cada fila sólo los campos que se muestran (el número del auto, las vueltas o el estado no viajan).
  * @param {ResultRow[] | undefined} results
  * @param {Set<string>} [keys]
  */
 export function recortarResultados(results, keys) {
   if (!results?.length) return results;
-  return results.filter((r, i) => i === 0 || r.pos <= 3 || r.driverSlug || (keys && r.driver.split(" / ").some((p) => keys.has(driverKey(p)))));
+  return results
+    .filter((r, i) => i === 0 || r.pos <= 3 || r.driverSlug || (keys && r.driver.split(" / ").some((p) => keys.has(driverKey(p)))))
+    .map((r) => {
+      /** @type {ResultRow} */
+      const out = { pos: r.pos, driver: r.driver, team: r.team, gap: r.gap };
+      if (r.code) out.code = r.code;
+      if (r.driverSlug) out.driverSlug = r.driverSlug;
+      if (r.points !== undefined) out.points = r.points;
+      if (r.positionText) out.positionText = r.positionText;
+      return out;
+    });
 }
+
+/**
+ * De la fuente de los resultados, lo que el navegador usa: si es provisoria, qué dice la aclaración y si reemplazó a una provisoria (sin el podio
+ * que se había mostrado, que sólo hace falta del lado del servidor).
+ * @param {NonNullable<Session["resultsSource"]>} src
+ */
+const recortarFuente = (src) => {
+  // El nombre y la dirección sólo se muestran en la página de la fecha (servidor): acá viajan vacíos.
+  /** @type {NonNullable<Session["resultsSource"]>} */
+  const out = { name: "", url: "" };
+  if (src.status) out.status = src.status;
+  if (src.note) out.note = src.note;
+  if (src.provisional) out.provisional = { podium: [] };
+  return out;
+};
 
 /**
  * La sesión con lo que el navegador necesita; `conResultados` dice si conserva (recortada) su tabla.
@@ -37,7 +63,7 @@ export function recortarSesion(s, conResultados, keys) {
   const out = { id: s.id, kind: s.kind, name: s.name, start: s.start, durationMin: s.durationMin };
   if (s.timeKnown !== undefined) out.timeKnown = s.timeKnown;
   if (s.classId) out.classId = s.classId;
-  if (s.resultsSource) out.resultsSource = s.resultsSource;
+  if (conResultados && s.results?.length && s.resultsSource) out.resultsSource = recortarFuente(s.resultsSource);
   if (s.resultsUnread) out.resultsUnread = s.resultsUnread;
   if (s.resultsGap) out.resultsGap = s.resultsGap;
   if (s.videos?.length) out.videos = s.videos;

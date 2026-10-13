@@ -120,7 +120,7 @@ function Cronograma({ sesiones, seriesId, failures, hechas, now, tiempos }: { se
           </section>
         ))}
       </div>
-      {tiempos}
+      <Fragment key="tiempos">{tiempos}</Fragment>
     </div>
   );
 }
@@ -165,18 +165,18 @@ export function EventoCuerpo({
   return (
     <>
       {/* Con resultados, el último resultado y dónde verlo van antes que el cronograma; sin ellos, el cronograma manda. */}
-      {latest && heroes[latest.id]}
+      {latest && <Fragment key={latest.id}>{heroes[latest.id]}</Fragment>}
 
       <section className={`event-grid section-block${latest ? " where-first" : ""}`}>
         {latest ? (
           <>
-            {where}
+            <Fragment key="where">{where}</Fragment>
             {schedule}
           </>
         ) : (
           <>
             {schedule}
-            {where}
+            <Fragment key="where">{where}</Fragment>
           </>
         )}
       </section>

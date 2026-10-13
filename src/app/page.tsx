@@ -4,10 +4,9 @@ import "./home.css";
 import { HomeView, type PortadaDriver } from "@/components/home-view";
 import { noteDate } from "@/components/notas";
 import { HCode, HTitle } from "@/components/home-parts";
-import { getAllSeries, getDriversAbroad, getNow, getSeason, getSeries, isSimulatedNow, seriesTier } from "@/lib/data";
+import { getAllSeries, getDriversAbroad, getNow, getSeason, getSeries, isSimulatedNow, seriesParaElNavegador, seriesTier } from "@/lib/data";
 import { getAllNotes } from "@/lib/notas";
 import { fechasDeLaPortada } from "@/lib/snapshot.mjs";
-import type { Series } from "@/lib/types";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
 // La home es lo que la gente mira mientras pasa la carrera, pero lo que depende de la hora (qué está en vivo, el orden de las secciones, "Recién
@@ -28,15 +27,7 @@ export default async function Home() {
   const events = fechasDeLaPortada(season.getAllEvents(), now, { seriesById: allSeries, tierOf: seriesTier, driversAbroad });
 
   // Sólo las categorías que el recorte usa, y sólo los campos que la portada muestra.
-  const used = new Set([...events.map((e) => e.seriesId), ...driversAbroad.map((d) => d.seriesId)]);
-  const seriesById: Record<string, Series> = {};
-  const tiers: Record<string, 1 | 2 | 3> = {};
-  for (const id of used) {
-    const s = getSeries(id);
-    if (!s) continue;
-    seriesById[id] = { id: s.id, name: s.name, short: s.short, code: s.code, org: s.org, scope: s.scope, color: s.color };
-    tiers[id] = seriesTier(s);
-  }
+  const { seriesById, tiers } = seriesParaElNavegador([...events.map((e) => e.seriesId), ...driversAbroad.map((d) => d.seriesId)]);
   const standings = Object.fromEntries(
     abroad.map((d) => {
       const st = season.getStandingPosition(d);
