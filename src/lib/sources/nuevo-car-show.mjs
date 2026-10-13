@@ -6,7 +6,8 @@
 // mismo evento; cada sesión lleva `classId` y el nombre de la clase ("Final Clase 3"). El campeonato de cada clase sale de estos resultados
 // (nuevo-car-show-campeonato.mjs) y sólo se publica si reproduce la tabla oficial.
 //
-// El sitio rechaza los pedidos sin navegador (403): hay que mandar un User-Agent de navegador, Accept y Accept-Language.
+// El sitio rechaza los pedidos sin navegador (403): hay que mandar un User-Agent de navegador, Accept y Accept-Language. Desde octubre
+// también rechaza versiones viejas de Chrome (la 124 daba 403 y la 141 da 200): si vuelve el 403, probar con la versión actual.
 import { dateOnly } from "./common.mjs";
 import { CLASES, claseById, SERIES_ID } from "./nuevo-car-show-clases.mjs";
 import { campeonatosDeNuevoCarShow, parseTablaOficial, slugOficial } from "./nuevo-car-show-campeonato.mjs";
@@ -20,7 +21,7 @@ export const NCS_SOURCE = "Nuevo Car Show · planillas de cronometraje";
 const TIME_SOURCE = "Nuevo Car Show (planilla de tiempos oficial)";
 const EVENT_SOURCE = "nuevocarshow.com.ar (calendario y planillas de cronometraje)";
 export const HEADERS = {
-  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36",
   Accept: "text/html,application/xhtml+xml,application/json,application/pdf;q=0.9,*/*;q=0.8",
   "Accept-Language": "es-AR,es;q=0.9",
 };
