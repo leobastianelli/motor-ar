@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T19:54:09.027Z",
+  "generatedAt": "2026-10-14T14:15:33.904Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -200018,9 +200018,25 @@
           ]
         },
         {
-          "id": "gt3-2026-e5-q",
+          "id": "gt3-2026-e5-fp2",
+          "kind": "practica",
+          "name": "Práctica libre 2",
+          "start": "2026-10-16T12:45:00+01:00",
+          "durationMin": 60,
+          "timeKnown": true,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "GT World Challenge Europe (oficial)",
+              "url": "https://www.gt-world-challenge-europe.com/event/255/portimao",
+              "start": "2026-10-16T12:45:00+01:00"
+            }
+          ]
+        },
+        {
+          "id": "gt3-2026-e5-q1",
           "kind": "clasificacion",
-          "name": "Clasificación",
+          "name": "Clasificación 1",
           "start": "2026-10-16T17:55:00+01:00",
           "durationMin": 20,
           "timeKnown": true,
@@ -200030,6 +200046,38 @@
               "name": "GT World Challenge Europe (oficial)",
               "url": "https://www.gt-world-challenge-europe.com/event/255/portimao",
               "start": "2026-10-16T17:55:00+01:00"
+            }
+          ]
+        },
+        {
+          "id": "gt3-2026-e5-q2",
+          "kind": "clasificacion",
+          "name": "Clasificación 2",
+          "start": "2026-10-16T18:20:00+01:00",
+          "durationMin": 20,
+          "timeKnown": true,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "GT World Challenge Europe (oficial)",
+              "url": "https://www.gt-world-challenge-europe.com/event/255/portimao",
+              "start": "2026-10-16T18:20:00+01:00"
+            }
+          ]
+        },
+        {
+          "id": "gt3-2026-e5-q3",
+          "kind": "clasificacion",
+          "name": "Clasificación 3",
+          "start": "2026-10-16T18:45:00+01:00",
+          "durationMin": 20,
+          "timeKnown": true,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "GT World Challenge Europe (oficial)",
+              "url": "https://www.gt-world-challenge-europe.com/event/255/portimao",
+              "start": "2026-10-16T18:45:00+01:00"
             }
           ]
         },
@@ -200051,6 +200099,230 @@
         }
       ],
       "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+    },
+    {
+      "id": "tcppk-2026-9",
+      "seriesId": "tc-pista-pick-up",
+      "round": 9,
+      "name": "Fecha 9 · La Plata",
+      "circuit": {
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcppk-2026-9-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-10-17T10:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 30,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "10:05"
+            }
+          ]
+        },
+        {
+          "id": "tcppk-2026-9-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-10-17T12:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "12:05"
+            }
+          ]
+        },
+        {
+          "id": "tcppk-2026-9-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-10-17T15:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "15:25"
+            }
+          ]
+        },
+        {
+          "id": "tcppk-2026-9-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-10-18T09:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "09:25"
+            }
+          ]
+        },
+        {
+          "id": "tcppk-2026-9-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-10-18T09:50:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "09:50"
+            }
+          ]
+        },
+        {
+          "id": "tcppk-2026-9-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-10-18T13:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 30,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "13:10"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
+      "id": "tcpk-2026-9",
+      "seriesId": "tc-pick-up",
+      "round": 9,
+      "name": "Fecha 9 · La Plata",
+      "circuit": {
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcpk-2026-9-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-10-17T10:40:00-03:00",
+          "timeKnown": true,
+          "durationMin": 30,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "10:40"
+            }
+          ]
+        },
+        {
+          "id": "tcpk-2026-9-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-10-17T12:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "12:35"
+            }
+          ]
+        },
+        {
+          "id": "tcpk-2026-9-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-10-17T16:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "16:10"
+            }
+          ]
+        },
+        {
+          "id": "tcpk-2026-9-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-10-18T11:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "11:10"
+            }
+          ]
+        },
+        {
+          "id": "tcpk-2026-9-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-10-18T11:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "11:35"
+            }
+          ]
+        },
+        {
+          "id": "tcpk-2026-9-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-10-18T14:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
+              "start": "14:10"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
     },
     {
       "id": "tcm-2026-10",
@@ -200091,54 +200363,6 @@
       "sessions": [
         {
           "id": "tcpm-2026-10-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-10-18T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tcpk-2026-9",
-      "seriesId": "tc-pick-up",
-      "round": 9,
-      "name": "Fecha 9 · La Plata",
-      "circuit": {
-        "name": "Roberto José Mouras",
-        "city": "La Plata",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcpk-2026-9-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-10-18T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 35
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tcppk-2026-9",
-      "seriesId": "tc-pista-pick-up",
-      "round": 9,
-      "name": "Fecha 9 · La Plata",
-      "circuit": {
-        "name": "Roberto José Mouras",
-        "city": "La Plata",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcppk-2026-9-final",
           "kind": "final",
           "name": "Final",
           "start": "2026-10-18T12:00:00-03:00",
@@ -206698,22 +206922,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -206754,12 +206962,12 @@
       "standingsSource": "https://actc.org.ar/tcppk/campeonato"
     },
     "schedules": {
-      "notes": 21,
+      "notes": 22,
       "officialPdfs": 0,
-      "sessions": 261,
+      "sessions": 273,
       "confirmed": 0,
       "conflicts": 0,
-      "eventsWithTimes": 38
+      "eventsWithTimes": 40
     },
     "timing": {
       "documents": 800,
@@ -206792,7 +207000,7 @@
     },
     "gtwcOfficial": {
       "meetings": 10,
-      "sessions": 8,
+      "sessions": 11,
       "withResults": 5,
       "errors": []
     },
@@ -206807,6 +207015,7 @@
     }
   },
   "failures": [
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
