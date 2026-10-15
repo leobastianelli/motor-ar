@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14T14:15:33.904Z",
+  "generatedAt": "2026-10-15T10:35:38.383Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -202023,7 +202023,7 @@
       {
         "pos": 26,
         "driver": "Gonzalo Antolin",
-        "team": "Jorge Piedra Competicion",
+        "team": "Escuderia Vicino",
         "points": 37
       },
       {
@@ -202708,14 +202708,14 @@
         "driver": "Nicolás Jaime",
         "team": "",
         "points": 366,
-        "wins": 3
+        "wins": 4
       },
       {
         "pos": 2,
         "driver": "Francisco Luengo",
         "team": "",
         "points": 358.5,
-        "wins": 3
+        "wins": 2
       },
       {
         "pos": 3,
@@ -206918,9 +206918,25 @@
         },
         "fiat600": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 3 de las 4 fechas que ésta cubre (por ejemplo, el auto 8 de la fecha 1: 1,5 contra 1,13 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 6 de las 8 fechas que ésta cubre (por ejemplo, el auto 8 de la fecha 1: 1,5 contra 1,13 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
         }
       }
+    },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
     },
     "rallyArgentino": {
       "events": 9,
@@ -207015,7 +207031,6 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
