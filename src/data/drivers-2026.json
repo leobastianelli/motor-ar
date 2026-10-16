@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T19:54:10.390Z",
+  "generatedAt": "2026-10-16T13:41:48.079Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -2805,7 +2805,7 @@
         "gt3": "Sainteloc Racing"
       },
       "firstSeen": "2026-04-10",
-      "lastSeen": "2026-08-30"
+      "lastSeen": "2026-10-16"
     },
     {
       "key": "ezequiel trulie",
@@ -5052,7 +5052,7 @@
         "gt3": "Team WRT"
       },
       "firstSeen": "2026-04-10",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-16"
     },
     {
       "key": "ignacio nieto",
@@ -8516,6 +8516,24 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "marcos siebert",
+      "keys": [
+        "marcos siebert"
+      ],
+      "slug": "marcos-siebert",
+      "name": "Marcos Siebert",
+      "aliases": [],
+      "series": [
+        "gt3"
+      ],
+      "numbers": {},
+      "teams": {
+        "gt3": "Team Motopark"
+      },
+      "firstSeen": "2026-10-16",
+      "lastSeen": "2026-10-16"
     },
     {
       "key": "mariano moine",
