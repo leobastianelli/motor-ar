@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T15:45:25.698Z",
+  "generatedAt": "2026-10-17T16:17:30.485Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -203157,7 +203157,111 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
               "start": "12:35"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": "1:29.214"
+            },
+            {
+              "pos": 2,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Ford",
+              "gap": "+0.059"
+            },
+            {
+              "pos": 3,
+              "number": "68",
+              "driver": "Julián Santero",
+              "team": "Ford",
+              "gap": "+0.067"
+            },
+            {
+              "pos": 4,
+              "number": "107",
+              "driver": "Tobías Martínez",
+              "team": "Chevrolet",
+              "gap": "+0.205"
+            },
+            {
+              "pos": 5,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
+              "gap": "+0.800"
+            },
+            {
+              "pos": 6,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Toyota",
+              "gap": "+0.911"
+            },
+            {
+              "pos": 7,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": "+0.926"
+            },
+            {
+              "pos": 8,
+              "number": "126",
+              "driver": "Thomas Ricciardi",
+              "team": "Ford",
+              "gap": "+1.268"
+            },
+            {
+              "pos": 9,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
+              "gap": "+1.475"
+            },
+            {
+              "pos": 10,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Ford",
+              "gap": "+2.397"
+            },
+            {
+              "pos": 11,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "Foton",
+              "gap": "+9.262"
+            },
+            {
+              "pos": 12,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": "+9.394"
+            },
+            {
+              "pos": 13,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": "+12.585"
+            },
+            {
+              "pos": 14,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
+              "gap": "+33.141"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1015/ver"
+          }
         },
         {
           "id": "tcpk-2026-9-clasificacion-clasificacion",
@@ -210207,8 +210311,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 811,
-      "pagesFetched": 114,
+      "documents": 813,
+      "pagesFetched": 115,
       "eventsWithResults": 61
     },
     "openf1": {
@@ -210233,9 +210337,12 @@
     },
     "gtwcOfficial": {
       "meetings": 10,
-      "sessions": 9,
-      "withResults": 8,
-      "errors": []
+      "sessions": 0,
+      "withResults": 0,
+      "errors": [
+        "gt3-2026-s5: No se pudo descargar https://www.gt-world-challenge-europe.com/results?filter_season_id=26&filter_meeting_id=254: fetch failed",
+        "gt3-2026-e5: No se pudo descargar https://www.gt-world-challenge-europe.com/event/255/portimao: fetch failed"
+      ]
     },
     "gtwcYoutube": {
       "skipped": "sin YOUTUBE_API_KEY"
@@ -210248,7 +210355,7 @@
     }
   },
   "failures": [
-    "GT World oficial: No se pudo descargar https://www.gt-world-challenge-europe.com/calendar: fetch failed (se conservan los datos anteriores)",
+    "GT World oficial: gt3-2026-s5: No se pudo descargar https://www.gt-world-challenge-europe.com/results?filter_season_id=26&filter_meeting_id=254: fetch failed; gt3-2026-e5: No se pudo descargar https://www.gt-world-challenge-europe.com/event/255/portimao: fetch failed",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
