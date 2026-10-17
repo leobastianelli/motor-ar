@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T14:35:23.566Z",
+  "generatedAt": "2026-10-17T14:50:07.741Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -203376,6 +203376,97 @@
       },
       "sessions": [
         {
+          "id": "tcpm-2026-10-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-10-17T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "199",
+              "driver": "Damián Pérez",
+              "team": "Dodge",
+              "gap": "1:27.114"
+            },
+            {
+              "pos": 2,
+              "number": "145",
+              "driver": "Arrias Iñlaki",
+              "team": "Ford",
+              "gap": "+0.187"
+            },
+            {
+              "pos": 3,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": "+0.557"
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Juan José Conde",
+              "team": "Chevrolet",
+              "gap": "+1.130"
+            },
+            {
+              "pos": 5,
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": "+1.225"
+            },
+            {
+              "pos": 6,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "+1.638"
+            },
+            {
+              "pos": 7,
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": "+1.988"
+            },
+            {
+              "pos": 8,
+              "number": "100",
+              "driver": "Leonardo Forte",
+              "team": "Ford",
+              "gap": "+2.830"
+            },
+            {
+              "pos": 9,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": "+3.897"
+            },
+            {
+              "pos": 10,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": "+4.300"
+            },
+            {
+              "pos": 11,
+              "number": "148",
+              "driver": "Daniel Faggiano",
+              "team": "Dodge",
+              "gap": "+4.334"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1008/ver"
+          }
+        },
+        {
           "id": "tcpm-2026-10-final",
           "kind": "final",
           "name": "Final",
@@ -210018,9 +210109,9 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 804,
-      "pagesFetched": 112,
-      "eventsWithResults": 60
+      "documents": 806,
+      "pagesFetched": 113,
+      "eventsWithResults": 61
     },
     "openf1": {
       "sessions": 131,

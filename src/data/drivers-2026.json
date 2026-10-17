@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T14:35:24.613Z",
+  "generatedAt": "2026-10-17T14:50:08.708Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -1030,7 +1030,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "anton benjamin",
@@ -1696,7 +1696,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "damian romero",
@@ -1853,7 +1853,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-02-27",
-      "lastSeen": "2026-03-22"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "daniel lapalma",
@@ -3126,7 +3126,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "facundo marques",
@@ -5043,7 +5043,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "ignacio montenegro",
@@ -5105,7 +5105,7 @@
         "tc-pista-pick-up": "Torino"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "ignacio vaira",
@@ -5148,7 +5148,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "ignacio villa",
@@ -5173,11 +5173,14 @@
     {
       "key": "arrias inaki",
       "keys": [
-        "arrias inaki"
+        "arrias inaki",
+        "arrias inlaki"
       ],
       "slug": "inaki-arrias",
       "name": "Iñaki Arrias",
-      "aliases": [],
+      "aliases": [
+        "Arrias Iñlaki"
+      ],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -5191,7 +5194,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-28",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "inaki zugasti",
@@ -6452,7 +6455,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "ebarlin jose juan",
@@ -7488,7 +7491,7 @@
         "tc-pista-pick-up": "Volkswagen"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "giovacchini leonel",
@@ -8991,7 +8994,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-27",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "martin vazquez",
