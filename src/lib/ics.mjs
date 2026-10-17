@@ -87,7 +87,7 @@ function descriptionFor(s) {
   if (s.hasResults) {
     if (s.ganador) lines.push(`Ganador${s.provisorio ? " (provisorio)" : ""}: ${s.ganador.name}.`);
     if (s.argentinos?.length) {
-      const nuestros = s.argentinos.map((a) => `${a.name} ${a.noTermino ?? `${a.pos}.º`}`).join(", ");
+      const nuestros = s.argentinos.map((a) => `${a.name} ${a.noTermino ?? (a.clase ? `${a.clase.pos}.º en ${a.clase.class} (${a.pos}.º en la general)` : `${a.pos}.º`)}`).join(", ");
       lines.push(`Argentinos: ${nuestros}.`);
     }
   }
@@ -111,7 +111,7 @@ function descriptionFor(s) {
  * @property {boolean} [hasResults]
  * @property {{ name: string }} [ganador]
  * @property {boolean} [provisorio] el resultado es la planilla de la ACTC, todavía sin la revisión de los comisarios
- * @property {{ name: string, pos: number, noTermino?: string }[]} [argentinos]
+ * @property {{ name: string, pos: number, noTermino?: string, clase?: { pos: number, class: string } }[]} [argentinos]
  * @property {string} [dtstamp] ISO; si falta, se usa el `dtstamp` de `buildCalendar`
  */
 

@@ -139,14 +139,14 @@ const dondeVerlo = (broadcasts) => {
 /** "P2: ganó Russell, Colapinto 11.º" (una sesión terminada con resultados). */
 function resultadoDe(s) {
   if (!s.ganador) return "";
-  const arg = (s.argentinos ?? []).slice(0, 2).map((a) => `${apellido(a.name)} ${a.noTermino ?? `${a.pos}.º`}`);
-  return `${s.name}: ganó ${apellido(s.ganador.name)}${s.provisorio ? " (provisorio)" : ""}${arg.length ? `, ${arg.join(", ")}` : ""}.`;
+  const arg = (s.argentinos ?? []).slice(0, 2).map((a) => `${apellido(a.name)} ${a.noTermino ?? (a.clase ? `${a.clase.pos}.º en ${a.clase.class}` : `${a.pos}.º`)}`);
+  return `${s.name}: ${s.multiclase ? "ganó la general" : "ganó"} ${apellido(s.ganador.name)}${s.provisorio ? " (provisorio)" : ""}${arg.length ? `, ${arg.join(", ")}` : ""}.`;
 }
 
 /** "P2: Colapinto 11.º" (lo que hizo el piloto en una sesión terminada). */
 function filaDe(name, s) {
   if (!s.fila) return "";
-  return `${s.name}: ${apellido(name)} ${s.fila.noTermino ?? `${s.fila.pos}.º`}.`;
+  return `${s.name}: ${apellido(name)} ${s.fila.noTermino ?? (s.fila.clase ? `${s.fila.clase.pos}.º en ${s.fila.clase.class}` : `${s.fila.pos}.º`)}.`;
 }
 
 /** "GP de Azerbaiyán" en la F1; en el resto, el lugar ("San Luis"): los nombres de las fechas nacionales son "Fecha 11 · San Luis". */

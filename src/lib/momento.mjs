@@ -1,6 +1,7 @@
 // "El momento" de una categoría: en qué situación está (en pista, fin de semana, resultados recientes o entre semana) y
 // qué mostrar. JavaScript puro, sin Next ni alias `@/`, para que `npm test` la cubra. Los estados de las sesiones salen de
 // `session-status.mjs`, la misma fuente que usa `format.ts`.
+import { esMulticlase, puestoEnClase } from "./clase.mjs";
 import { isProvisional } from "./provisorio.mjs";
 import { noResultsReason } from "./salud-core.mjs";
 import { sessionEnd, sessionStatus } from "./session-status.mjs";
@@ -22,6 +23,12 @@ const endMs = (e) => Math.max(...e.sessions.map(sessionEnd));
 const isDone = (e, now) => e.sessions.every((s) => sessionStatus(s, now) === "done");
 const classified = (r) => !r.positionText || /^\d+$/.test(r.positionText);
 
+/** Multiclase (GT3, la general del Rally): el puesto en su clase, que es el que vale (ver clase.mjs). */
+function enClase(results, r) {
+  const c = puestoEnClase(results, r);
+  return c ? { clase: { pos: c.pos, class: c.class } } : {};
+}
+
 /** Los nuestros en una tabla de resultados, en el orden en que terminaron. Quien no terminó lleva `noTermino`. */
 function argentinosDe(results, argentineSlugs) {
   return (results ?? [])
@@ -31,6 +38,7 @@ function argentinosDe(results, argentineSlugs) {
       name: r.driver,
       pos: r.pos,
       ...(classified(r) ? {} : { noTermino: NO_TERMINO[String(r.positionText).toUpperCase()] ?? "sin clasificar" }),
+      ...enClase(results, r),
     }))
     .sort((a, b) => a.pos - b.pos);
 }
@@ -56,6 +64,8 @@ function resumenSesion(s, now, seriesId, failures, argentineSlugs) {
     hasResults,
     estado: ESTADO[sessionStatus(s, now)],
     ganador: ganadorDe(s.results),
+    // Con varias clases en pista, el ganador es el de la general: la ficha lo aclara ("Ganó la general").
+    ...(esMulticlase(s.results) ? { multiclase: true } : {}),
     // Resultado provisorio de la ACTC (planilla antes de la revisión de los comisarios): se dice junto al ganador.
     ...(isProvisional(s) ? { provisorio: true } : {}),
     argentinos: argentinosDe(s.results, argentineSlugs),
@@ -166,6 +176,7 @@ function filaDe(results, keys) {
     pos: r.pos,
     ...(classified(r) ? {} : { noTermino: NO_TERMINO[String(r.positionText).toUpperCase()] ?? "sin clasificar" }),
     ...(r.gap ? { gap: r.gap } : {}),
+    ...enClase(results, r),
   };
 }
 

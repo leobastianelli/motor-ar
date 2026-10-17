@@ -1,4 +1,5 @@
 import type { Nota } from "@/data/notas";
+import { esMulticlase, fraseEnClase, nombreClase, puestoEnClase } from "./clase.mjs";
 import { nombreVisibleSesion } from "./momento.mjs";
 import { provisionalSuffix } from "./provisorio.mjs";
 import type { RaceEvent, ResultRow, Session, SessionKind } from "./types";
@@ -28,6 +29,8 @@ const priority = (s: Session) => PRIORITY[s.kind] - (s.kind === "clasificacion" 
 const lower = (name: string) => name.charAt(0).toLowerCase() + name.slice(1);
 const ordinal = (pos: number) => `${pos}.º`;
 const withResults = (s: Session) => (s.results?.length ?? 0) > 0;
+/** Una tripulación ("A / B / C") lleva el verbo en plural. */
+const crew = (driver: string) => driver.includes(" / ");
 
 /** Sólo los que terminaron la sesión con posición numérica (no abandonos ni descalificados) figuran entre los primeros. */
 const classified = (r: ResultRow) => !r.status && (!r.positionText || /^\d+$/.test(r.positionText));
@@ -51,7 +54,7 @@ function headline(event: RaceEvent, s: Session): string {
     case "final":
     case "sprint":
     case "serie":
-      return `${event.name}: ${first.driver} ganó la ${name}${provisionalSuffix(s)}`;
+      return `${event.name}: ${first.driver} ${crew(first.driver) ? "ganaron" : "ganó"} la ${name}${provisionalSuffix(s)}`;
     case "clasificacion":
       return `${event.name}: ${first.driver} hizo el mejor tiempo en la ${name}`;
     default:
@@ -107,14 +110,23 @@ export function autoNotes(events: RaceEvent[], { now, argentines, tierOf, series
     const main = [...latest].sort((a, b) => priority(b) - priority(a) || Date.parse(b.start) - Date.parse(a.start))[0];
 
     // Cómo les fue a los argentinos en las sesiones destacadas (sin repetir a quien ya está entre los tres primeros).
-    const shown = new Set(lead.flatMap((s) => top(s, 3).map((r) => r.driver)));
+    // En una carrera multiclase los argentinos van siempre, con su clase, aunque estén entre los tres primeros de la general.
+    const shown = new Set(lead.flatMap((s) => (esMulticlase(s.results) ? [] : top(s, 3).map((r) => r.driver))));
     const home: string[] = [];
     for (const s of lead) {
       for (const r of s.results ?? []) {
         if (!r.driverSlug || !argentines.has(r.driverSlug) || shown.has(r.driver)) continue;
         shown.add(r.driver);
         const visible = lower(nombreVisibleSesion(s, event.sessions));
-        home.push(r.status ? `${r.driver} no completó la ${visible}` : `${r.driver} fue ${ordinal(r.pos)} en la ${visible}`);
+        // Multiclase (GT3, la general del Rally): vale el puesto en su clase, con la general entre paréntesis.
+        const enClase = !r.status && fraseEnClase(s.results, r, s.kind, { plural: crew(r.driver) });
+        home.push(
+          r.status
+            ? `${r.driver} no completó la ${visible}`
+            : enClase
+              ? `${r.driver} ${enClase.replace(/ \(/, ` en la ${visible} (`)}`
+              : `${r.driver} ${crew(r.driver) ? "fueron" : "fue"} ${ordinal(r.pos)} en la ${visible}`,
+        );
       }
     }
 
@@ -124,10 +136,17 @@ export function autoNotes(events: RaceEvent[], { now, argentines, tierOf, series
       .map(([day, list]) => `${capitalize(dayName(new Date(`${day}T12:00:00-03:00`)))}: ${pick(list).map((s) => line(s, event.sessions)).filter(Boolean).join(" ")}`);
 
     const sources = [...new Set(done.map((s) => s.resultsSource?.name).filter((n): n is string => !!n))];
+    // Un argentino que ganó su clase en la sesión principal es la noticia, aunque la general la haya ganado otro auto (Portimão, 17/10/2026).
+    const classWin = (main.results ?? []).find((r) => r.driverSlug && argentines.has(r.driverSlug) && puestoEnClase(main.results, r)?.pos === 1);
+    const classTitle =
+      classWin && classWin.pos !== 1 && ["carrera", "final", "sprint", "clasificacion"].includes(main.kind)
+        ? `${event.name}: ${classWin.driver} ${main.kind === "clasificacion" ? (crew(classWin.driver) ? "hicieron la pole de" : "hizo la pole de") : crew(classWin.driver) ? "ganaron en" : "ganó en"} ${nombreClase(classWin.class!)}${main.kind === "clasificacion" || event.name.includes(main.name) ? "" : ` en la ${lower(nombreVisibleSesion(main, event.sessions))}`}`
+        : null;
+    const title = classTitle ?? headline(event, main);
     out.push({
       slug: `${event.id}-cronica`,
-      title: headline(event, main),
-      seoTitle: seoHeadline(series.name, event.name, headline(event, main)),
+      title,
+      seoTitle: seoHeadline(series.name, event.name, title),
       publishedAt: latestDay,
       source: { medio: `Fierros · ${series.short}`, url: `/eventos/${event.id}`, headline: event.name },
       summary,

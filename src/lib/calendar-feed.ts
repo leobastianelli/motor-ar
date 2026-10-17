@@ -25,7 +25,7 @@ export interface CalendarSessionInput {
   ganador?: { name: string };
   /** Resultado provisorio (planilla de la ACTC antes de la revisión de los comisarios). */
   provisorio?: boolean;
-  argentinos?: { name: string; pos: number; noTermino?: string }[];
+  argentinos?: { name: string; pos: number; noTermino?: string; clase?: { pos: number; class: string } }[];
 }
 
 /** Las sesiones de una fecha, listas para `buildCalendar`. */

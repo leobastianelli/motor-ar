@@ -10,13 +10,19 @@ import { SectionTitle, StateTag } from "./pista";
 
 type MomentoData = ReturnType<Season["getMomentoCategoria"]>;
 /** La fila del piloto en una sesión (sólo en la ficha de un piloto). */
-type Fila = { pos: number; noTermino?: string; gap?: string };
+type Fila = { pos: number; noTermino?: string; gap?: string; clase?: { pos: number; class: string } };
 type Sesion = MomentoData["sesiones"][number] & { fila?: Fila };
 type Fecha = NonNullable<MomentoData["fecha"]>;
 type Argentino = Sesion["argentinos"][number];
 
 /** "GP de Azerbaiyán · Baku"; si el nombre ya trae el lugar ("Fecha 11 · San Luis"), no se repite. */
 const placeName = (f: Pick<Fecha, "name" | "city">) => (f.city && !f.name.includes(f.city) ? `${f.name} · ${f.city}` : f.name);
+/** "Ganó", o "Ganó la general" cuando hay varias clases en pista (el ganador de la clase del piloto puede ser otro). */
+const ganoLabel = (s: { kind: string; multiclase?: boolean }) => {
+  const tiempo = s.kind === "practica" || s.kind === "clasificacion";
+  if (!s.multiclase) return tiempo ? "Mejor tiempo" : "Ganó";
+  return tiempo ? "Mejor tiempo de la general" : "Ganó la general";
+};
 const shortName = (name: string) => name.split(" / ").map(surname).join(" / ");
 
 export function Piloto({ name, slug }: { name: string; slug?: string }) {
@@ -30,7 +36,7 @@ export function Argentinos({ rows }: { rows: Argentino[] }) {
       {rows.map((a, i) => (
         <span key={a.slug} className="momento-arg">
           {i > 0 && ", "}
-          <Piloto name={a.name} slug={a.slug} /> {a.noTermino ?? `${a.pos}.º`}
+          <Piloto name={a.name} slug={a.slug} /> {a.noTermino ?? (a.clase ? `${a.clase.pos}.º en ${a.clase.class}` : `${a.pos}.º`)}
         </span>
       ))}
     </>
@@ -44,7 +50,13 @@ function FilaPiloto({ s }: { s: Sesion }) {
     <>
       {f ? (
         <>
-          <b className="momento-pos">{f.noTermino ?? `${f.pos}.º`}</b>
+          <b className="momento-pos">{f.noTermino ?? `${f.clase?.pos ?? f.pos}.º`}</b>
+          {f.clase && !f.noTermino && (
+            <>
+              {" "}
+              en {f.clase.class} · {f.pos}.º en la general
+            </>
+          )}
           {f.gap && !f.noTermino && <> · {f.gap}</>}
         </>
       ) : (
@@ -52,7 +64,7 @@ function FilaPiloto({ s }: { s: Sesion }) {
       )}
       {s.ganador && f?.pos !== 1 && (
         <small className="momento-ganador">
-          {s.kind === "practica" || s.kind === "clasificacion" ? "Mejor tiempo" : "Ganó"}: <Piloto name={s.ganador.name} slug={s.ganador.slug} />
+          {ganoLabel(s)}: <Piloto name={s.ganador.name} slug={s.ganador.slug} />
           {s.provisorio && " (provisorio)"}
         </small>
       )}
@@ -80,7 +92,7 @@ function Terminada({ s, piloto, fechaId }: { s: Sesion; piloto?: boolean; fechaI
         <>
           {s.ganador ? (
             <>
-              {s.kind === "practica" || s.kind === "clasificacion" ? "Mejor tiempo" : "Ganó"}: <Piloto name={s.ganador.name} slug={s.ganador.slug} />
+              {ganoLabel(s)}: <Piloto name={s.ganador.name} slug={s.ganador.slug} />
               {s.provisorio && " (provisorio)"}
             </>
           ) : (
@@ -218,7 +230,7 @@ export function ResultadoCarrera({ carrera }: { carrera?: Fecha["carrera"] }) {
   if (!carrera || carrera.estado !== "terminada" || !carrera.hasResults || !carrera.ganador) return null;
   return (
     <p className="event-result">
-      Ganó <Piloto name={carrera.ganador.name} slug={carrera.ganador.slug} />
+      {carrera.multiclase ? "Ganó la general" : "Ganó"} <Piloto name={carrera.ganador.name} slug={carrera.ganador.slug} />
       {carrera.provisorio && " (provisorio)"}
       {carrera.argentinos.length > 0 && (
         <>
@@ -282,7 +294,7 @@ function Ahora({ data, now, tiemposUrl }: { data: MomentoData; now: string; tiem
                 <span>
                   {last.s.ganador ? (
                     <>
-                      {last.s.kind === "practica" || last.s.kind === "clasificacion" ? "Mejor tiempo" : "Ganó"}: <Piloto name={last.s.ganador.name} slug={last.s.ganador.slug} />
+                      {ganoLabel(last.s)}: <Piloto name={last.s.ganador.name} slug={last.s.ganador.slug} />
                       {last.s.provisorio && " (provisorio)"}
                     </>
                   ) : (

@@ -111,10 +111,10 @@ export function FilaFecha({ doneAt, serverNow, simulated, children }: { doneAt: 
 }
 
 /** "Último resultado: 7.º · Final, San Martín" de un piloto con ficha, siempre al día. `candidatos` viene de `ultimosResultados` (src/lib/snapshot.mjs). */
-export function UltimoResultado({ candidatos, serverNow, simulated }: { candidatos: { doneAt: number; pos: number; session: string; city: string }[]; serverNow: string; simulated: boolean }) {
+export function UltimoResultado({ candidatos, serverNow, simulated }: { candidatos: { doneAt: number; pos: number; clase?: { pos: number; class: string }; session: string; city: string }[]; serverNow: string; simulated: boolean }) {
   const now = new Date(useNow(serverNow, simulated)).getTime();
   const last = candidatos.find((c) => c.doneAt <= now);
-  return <em>{last ? `Último resultado: ${last.pos}.º · ${last.session}, ${last.city}` : "Sin resultados cargados todavía"}</em>;
+  return <em>{last ? `Último resultado: ${last.clase ? `${last.clase.pos}.º en ${last.clase.class} (${last.pos}.º en la general)` : `${last.pos}.º`} · ${last.session}, ${last.city}` : "Sin resultados cargados todavía"}</em>;
 }
 
 

@@ -2,6 +2,7 @@
 // de la hora: mandan las fechas y sesiones que hacen falta y el navegador decide qué está en vivo, qué sigue y qué terminó con
 // `tiempo.mjs` (src/lib/tiempo.mjs). JavaScript puro, sin Next ni alias `@/`: `npm test` verifica que el recorte da lo mismo que la
 // temporada entera para cualquier hora de las 15 siguientes (src/lib/snapshot.test.mjs).
+import { puestoEnClase } from "./clase.mjs";
 import { dayKey } from "./session-status.mjs";
 import { driverKey } from "./sources/driver-index.mjs";
 import { createTimeViews, eventDoneAt, eventStart, ms, sessionDoneAt } from "./tiempo.mjs";
@@ -28,6 +29,9 @@ export function recortarResultados(results, keys) {
     .map((r) => {
       /** @type {ResultRow} */
       const out = { pos: r.pos, driver: r.driver, team: r.team, gap: r.gap };
+      // Multiclase: la clase y el puesto en ella se calculan con la tabla entera, antes de recortarla.
+      const c = puestoEnClase(results, r);
+      if (c) Object.assign(out, { class: c.class, classPos: c.pos });
       if (r.code) out.code = r.code;
       if (r.driverSlug) out.driverSlug = r.driverSlug;
       if (r.points !== undefined) out.points = r.points;
@@ -166,7 +170,12 @@ export function ultimosResultados(events, slug, { seriesById, tierOf }) {
     .filter(({ s }) => s.results?.some((r) => r.driverSlug === slug))
     .sort((a, b) => ms(b.s.start) - ms(a.s.start))
     .slice(0, 3)
-    .map(({ e, s }) => ({ doneAt: sessionDoneAt(s), pos: /** @type {ResultRow} */ (s.results?.find((r) => r.driverSlug === slug)).pos, session: s.name, city: e.circuit.city }));
+    .map(({ e, s }) => {
+      const row = /** @type {ResultRow} */ (s.results?.find((r) => r.driverSlug === slug));
+      // Multiclase (GT3, la general del Rally): el puesto que vale es el de su clase.
+      const c = puestoEnClase(s.results, row);
+      return { doneAt: sessionDoneAt(s), pos: row.pos, ...(c ? { clase: { pos: c.pos, class: c.class } } : {}), session: s.name, city: e.circuit.city };
+    });
 }
 
 /**
