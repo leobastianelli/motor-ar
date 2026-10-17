@@ -67,6 +67,8 @@ export interface ResultRow {
   number?: string;
   /** Clase dentro de la carrera (GT: Pro, Gold, Silver o Bronze Cup), si la fuente la publica. */
   class?: string;
+  /** Puesto dentro de su clase, cuando la tabla viaja recortada al navegador y ya no tiene a los autos de adelante (ver clase.mjs). */
+  classPos?: number;
   /** Vueltas completadas, si la fuente las publica (el puntaje de Córdoba Pista exige el 75 % de las del ganador). */
   laps?: number;
   /** Posición tal como la publica la fuente ("R" = abandono, etc.). */

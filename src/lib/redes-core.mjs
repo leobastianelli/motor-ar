@@ -2,6 +2,7 @@
 // corre"). Lógica pura, sin red ni disco: recibe los datos y la hora, devuelve los borradores nuevos. Nada se publica solo: el mensaje de Telegram
 // lleva un botón que abre X con el texto escrito y la persona confirma (ver scripts/borradores-redes.mjs).
 // Reglas de contenido: sólo datos que el sitio ya muestra, un enlace por borrador, sin "EN VIVO", y si falta un dato no se manda.
+import { esMulticlase, fraseEnClase } from "./clase.mjs";
 import { dateStatus, dayKey } from "./monitor/checks.mjs";
 import { nombreVisibleSesion } from "./momento.mjs";
 import { PROVISIONAL, isProvisional } from "./provisorio.mjs";
@@ -50,7 +51,12 @@ export const xIntentUrl = (text) => `https://x.com/intent/post?text=${encodeURIC
 // ——— Datos ———
 
 export const normalize = (s) => String(s ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
-export const surname = (name) => String(name).trim().split(/\s+/).at(-1);
+/** Apellido para los textos cortos; en una tripulación ("Ralf Aron / Maximilian Götz / Fabian Schiller"), el de cada uno: "Aron / Götz / Schiller". */
+export const surname = (name) =>
+  String(name)
+    .split(" / ")
+    .map((n) => n.trim().split(/\s+/).at(-1))
+    .join(" / ");
 const ordinal = (pos) => `${pos}.º`;
 const endOf = (s) => (s.timeKnown === false ? dayOnlyEnd(s.start) : Date.parse(s.start) + (s.durationMin ?? 60) * MIN);
 
@@ -90,10 +96,15 @@ const HOW = {
   W: "no largó",
   DNS: "no largó",
 };
-/** Qué le pasó a un argentino en una sesión: su posición, o por qué no terminó. */
-export function outcome(row, kind) {
+/**
+ * Qué le pasó a un argentino en una sesión: su posición, o por qué no terminó. Con los `results` de una carrera multiclase (GT3, la general
+ * del Rally) vale su puesto en la clase, con la general entre paréntesis (`fraseEnClase`).
+ */
+export function outcome(row, kind, results, { corta = false } = {}) {
   const code = String(row.positionText ?? "");
   if (HOW[code]) return HOW[code];
+  const enClase = results && fraseEnClase(results, row, kind, { corta });
+  if (enClase) return enClase;
   if (/abandon/i.test(row.status ?? "")) return "abandonó";
   if (/descalific/i.test(row.status ?? "")) return "fue descalificado";
   if (/no larg/i.test(row.status ?? "")) return "no largó";
@@ -109,6 +120,8 @@ export function sessionDraft({ event, session, series, leader, argentines, chang
   const rows = session.results ?? [];
   const podium = [1, 2, 3].map((p) => rows.find((r) => r.pos === p));
   if (podium.some((r) => !r?.driver) || !series) return null;
+  // Multiclase: el podio es el de la general, y cada argentino va con su puesto en su clase, aunque esté en ese podio.
+  const multiclass = esMulticlase(rows);
   const url = `${BASE_URL}/eventos/${event.id}`;
   // La sesión siempre con su nombre visible ("Serie 2", "Clasificación 1" si hay otra "Clasificación 2", "Final").
   const label = nombreVisibleSesion(session, event.sessions);
@@ -119,12 +132,13 @@ export function sessionDraft({ event, session, series, leader, argentines, chang
     const name = (r) => (full ? r.driver : surname(r.driver));
     for (const withLeader of [true, false]) {
       for (const withEvent of [true, false]) {
+        for (const corta of multiclass ? [false, true] : [false]) {
         const inPodium = new Set(podium.map((r) => r.pos));
         const argLines = argentines
-          .filter(({ row }) => !inPodium.has(row.pos) || /^(R|D|W|DNS)$/.test(String(row.positionText ?? "")))
-          .map(({ driver, row }) => `🇦🇷 ${surname(driver.name)} ${outcome(row, session.kind)}`);
+          .filter(({ row }) => multiclass || !inPodium.has(row.pos) || /^(R|D|W|DNS)$/.test(String(row.positionText ?? "")))
+          .map(({ driver, row }) => `🇦🇷 ${surname(driver.name)} ${outcome(row, session.kind, rows, { corta })}`);
         const blocks = [
-          `🏁 ${series.short}${withEvent ? ` · ${event.name}` : ""} · ${label}`,
+          `🏁 ${series.short}${withEvent ? ` · ${event.name}` : ""} · ${label}${multiclass ? " · General" : ""}`,
           podium.map((r, i) => `${i + 1}. ${MEDALS[i]} ${name(r)}`).join("\n"),
           [
             change ? `📋 ${change.replace(/\.?$/, ".")}` : "",
@@ -138,6 +152,7 @@ export function sessionDraft({ event, session, series, leader, argentines, chang
         ].filter(Boolean);
         const text = `${blocks.join("\n\n")}\n\n${url}`;
         if (fits(text)) return { text, link: url };
+        }
       }
     }
   }
@@ -353,7 +368,7 @@ function summaryDraft({ events, season, manual, now, catalog, enviados }) {
     // Cuando la fecha tiene más de una sesión del mismo tipo (dos "Carrera principal"), se aclara cuál fue.
     const sameKindCount = e.sessions.filter((s) => s.kind === main.kind).length;
     const label = sameKindCount > 1 ? nombreVisibleSesion(main, e.sessions) : null;
-    const argNote = argentines.map(({ driver, row }) => `${surname(driver.name)} ${outcome(row, main.kind)}`).join(" y ");
+    const argNote = argentines.map(({ driver, row }) => `${surname(driver.name)} ${outcome(row, main.kind, main.results)}`).join(" y ");
     return `${byId[e.seriesId].short}${label ? ` (${label})` : ""}: ganó ${winner}${argNote ? `; ${argNote}` : ""}`;
   };
   const head = "🏁 Así quedó el finde (hora argentina):";

@@ -6,12 +6,19 @@ import { Agenda } from "@/components/agenda";
 import { AutoRefresh, MinutesLeft, useNow } from "@/components/live-clock";
 import { HCode, HLabel, HState, HTitle } from "@/components/home-parts";
 import { ResultsStatus } from "@/components/results-status";
+import { puestoEnClase } from "@/lib/clase.mjs";
 import { provisionalSuffix } from "@/lib/provisorio.mjs";
 import { VideoLinkThumb } from "@/components/video-sesion";
 import { datosPortada } from "@/lib/portada.mjs";
 import { createTimeViews, ms, weekendWindow } from "@/lib/tiempo.mjs";
 import { dayKey, driverCode, fmtDayNum, fmtDayShort, fmtMonthShort, fmtTime, raceWinner, surname } from "@/lib/format";
 import type { RaceEvent, Series } from "@/lib/types";
+
+/** "5.º", o "1.º en Silver Cup" en una carrera con varias clases (GT3, la general del Rally): ahí vale el puesto en la clase. */
+const enSuClase = (results: Parameters<typeof puestoEnClase>[0], row: { pos: number; class?: string }) => {
+  const c = puestoEnClase(results, row);
+  return c ? `${c.pos}.º en ${c.class}` : `${row.pos}.º`;
+};
 
 /**
  * La portada, dibujada en el navegador con la hora real. El servidor (src/app/page.tsx) manda el recorte de la temporada que hace falta
@@ -339,7 +346,7 @@ export function HomeView({
                       {argRows.length > 0 && (
                         <>
                           {" · "}
-                          {argRows.map((r) => `${r.driver} ${r.pos}.º`).join(", ")}
+                          {argRows.map((r) => `${r.driver} ${enSuClase(i.session.results, r)}`).join(", ")}
                         </>
                       )}
                     </p>
@@ -426,11 +433,16 @@ export function HomeView({
                 <span className="home-eyebrow">Argentino destacado afuera</span>
                 <HLabel series={highlight.series} detail={highlight.event.circuit.city} />
                 <div className="home-highlight-body">
-                  <b className="home-big-pos">{highlight.row.pos}.º</b>
+                  <b className="home-big-pos">{(puestoEnClase(highlight.session.results, highlight.row)?.pos ?? highlight.row.pos)}.º</b>
                   <div>
                     <h3>{highlight.row.driver}</h3>
                     <p>
-                      {highlight.session.name} de {highlight.series.name} en {highlight.event.circuit.city}.
+                      {highlight.session.name} de {highlight.series.name} en {highlight.event.circuit.city}
+                      {(() => {
+                        const c = puestoEnClase(highlight.session.results, highlight.row);
+                        return c ? `, en ${c.class} (${c.overall}.º en la general)` : "";
+                      })()}
+                      .
                     </p>
                     {highlight.row.points !== undefined && highlight.row.points > 0 && (
                       <p className="home-highlight-pts">
@@ -452,7 +464,7 @@ export function HomeView({
                   <Link key={`${n.session.id}-${n.row.driver}`} href={`/eventos/${n.event.id}`}>
                     <HLabel series={n.series} detail={n.event.circuit.city} />
                     <strong>
-                      {surname(n.row.driver)} terminó {n.row.pos}.º
+                      {surname(n.row.driver)} terminó {enSuClase(n.session.results, n.row)}
                     </strong>
                     <small>{n.row.points ? `Sumó ${n.row.points} ${n.row.points === 1 ? "punto" : "puntos"}` : n.session.name}</small>
                   </Link>
