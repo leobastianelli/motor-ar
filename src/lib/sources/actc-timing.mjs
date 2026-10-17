@@ -48,6 +48,7 @@ export function parseListing(html) {
   for (const block of html.split(/<div class="acc-item"/).slice(1)) {
     const seriesId = TAB_SERIES[block.match(/data-tab="([^"]+)"/)?.[1]];
     if (!seriesId) continue;
+    const blockId = block.match(/id="([^"]+)"/)?.[1] ?? "";
     for (const row of block.split(/<div class="result-row/).slice(1)) {
       const title = plain(row.match(/result-title">([\s\S]*?)<\/div>/)?.[1] ?? "");
       const date = row.match(/result-date">\s*(\d{2})\/(\d{2})\/(\d+)/);
@@ -57,19 +58,44 @@ export function parseListing(html) {
       const year = /^20\d\d$/.test(date[3]) ? date[3] : "2026";
       // El botón de descarga dice qué es: Excel (planilla del cronometraje), PDF (clasificación de los comisarios) o nada (Mouras, otro sistema).
       const format = row.match(/dl-btn (xlsx|pdf)/)?.[1];
-      docs.push({ seriesId, title, day: `${year}-${date[2]}-${date[1]}`, id: Number(id), url: `${BASE}/resultados/${id}/ver`, ...(format ? { format } : {}) });
+      docs.push({ seriesId, block: blockId, title, day: `${year}-${date[2]}-${date[1]}`, id: Number(id), url: `${BASE}/resultados/${id}/ver`, ...(format ? { format } : {}) });
     }
   }
   return docs;
 }
 
-/** Título del portal → sesión nuestra. Los parciales y las grillas no son clasificaciones. */
+/** Categoría como la rotula la página de un resultado ("🏷 Turismo Carretera Pista Pick Up", a veces "TC PISTA MOURAS") → serie. */
+const LABEL_SERIES = {
+  "TURISMO CARRETERA": "tc",
+  "TURISMO CARRETERA PISTA": "tc-pista",
+  "TURISMO CARRETERA MOURAS": "tc-mouras",
+  "TURISMO CARRETERA PISTA MOURAS": "tc-pista-mouras",
+  "TURISMO CARRETERA PICK UP": "tc-pick-up",
+  "TURISMO CARRETERA PISTA PICK UP": "tc-pista-pick-up",
+};
+
+/** La serie que dice la página de un resultado, o null si no la dice (los PDF de los comisarios y las grillas no traen la etiqueta). */
+export function pageSeries(html) {
+  const label = String(html).match(/<span>\s*🏷️?\s*([^<]+)<\/span>/)?.[1];
+  if (!label) return null;
+  const t = fold(plain(label)).toUpperCase().replace(/\s+/g, " ").trim().replace(/^TC\b/, "TURISMO CARRETERA");
+  return LABEL_SERIES[t] ?? null;
+}
+
+/**
+ * Una tanda de una clasificación por etapas, no la clasificación: los cortes eliminatorios de las Pick Up ("CLASIFICACION CL1", "CL3 PARCIALES
+ * CLASIFICACION TC PICK UP") y los grupos del TC ("CUARTOS CLASIFICATORIOS", "TERCIOS", "GRUPOS"). El mejor de un corte no es el de la pole
+ * (La Plata, 17/10/2026: Mazzacane ganó el CL1 del TC Pick Up y Werner el CL2); vale sólo la clasificación final que publican después.
+ */
+export const isQualifyingStage = (title) => /\bCL\s*\d\b|\bCUARTOS?\b|\bTERCIOS?\b|\bGRUPOS?\b/.test(fold(title).toUpperCase());
+
+/** Título del portal → sesión nuestra. Los parciales, las grillas y las tandas de una clasificación por etapas no son clasificaciones. */
 export function classify(title) {
   const t = fold(title).toUpperCase();
   if (/PARCIAL|GRILLA|GRILA|LARGADA/.test(t)) return null;
   const n = t.match(/\b(\d)\s*(?:ERA|ER|DA|DO|RA|RO|TA|TO)?\b/)?.[1] ?? "1";
   if (/ENTRENAMIENTO|PRACTICA|ENSAYO/.test(t)) return { kind: "practica", name: `${n}° Entrenamiento` };
-  if (/CLASIFICACION/.test(t)) return { kind: "clasificacion", name: "Clasificación" };
+  if (/CLASIFICACION/.test(t)) return isQualifyingStage(t) ? null : { kind: "clasificacion", name: "Clasificación" };
   if (/SERIE UNICA/.test(t)) return { kind: "serie", name: "Serie única" };
   if (/SERIE/.test(t)) return { kind: "serie", name: `Serie ${n}` };
   if (/FINAL/.test(t)) return { kind: "final", name: "Final" };
@@ -239,7 +265,8 @@ export function keepPreviousTiming(events, previous) {
 
 /**
  * Series, finales y clasificaciones: la planilla es lo primero que se muestra y el PDF de los comisarios la reemplaza. Las prácticas quedan afuera
- * (sus planillas son rondas intermedias). En la clasificación se toma la planilla de id más alto, que es la última ronda publicada.
+ * (sus planillas son rondas intermedias). En la clasificación vale la planilla de la clasificación entera ("CLASIFICACION PARCIALES"), nunca la de un
+ * corte o un grupo (`isQualifyingStage`).
  */
 export const PROVISIONAL_KINDS = new Set(["clasificacion", "serie", "final"]);
 const PARTIAL_TITLE = /PARCIAL/;
@@ -354,24 +381,94 @@ export function chooseDocs(docs, { provisional = false } = {}) {
   return chosen;
 }
 
+// ─── Documentos en la pestaña equivocada y tandas de la clasificación ─────────────────────────────────────────────
+// El portal a veces carga una fecha entera en la pestaña de otra categoría: La Plata, 17/10/2026, el TC Pista Pick Up (fecha 9) quedó bajo "TCM"
+// y su clasificación se mostró como la del TC Mouras. Cada bloque reciente del listado se confirma con la etiqueta de sus páginas
+// (`pageSeries`); si dice otra categoría, el bloque entero pasa a esa. Lo decidido se guarda en `meta.timing.retagged` (id del documento →
+// { from, to }) para que, cuando la fecha ya no sea reciente, el documento no vuelva a la pestaña equivocada.
+
+/** Clave de un documento leído para una categoría: así se marca lo que nunca debió cargarse en ella. */
+const misreadKey = (seriesId, url) => `${seriesId} ${url}`;
+
+/** Los bloques del listado con algún documento desde `since`: la categoría que dicen sus páginas, si no es la de la pestaña. */
+async function checkBlocks(io, listing, { since, delayMs, pages }) {
+  const blocks = new Map();
+  for (const d of listing) {
+    if (!d.block) continue;
+    if (!blocks.has(d.block)) blocks.set(d.block, []);
+    blocks.get(d.block).push(d);
+  }
+  const retagged = {};
+  let fetched = 0;
+  for (const docs of blocks.values()) {
+    if (!docs.some((d) => Date.parse(`${d.day}T12:00:00-03:00`) >= since)) continue;
+    // Las planillas casi siempre traen la etiqueta; los PDF de los comisarios y las grillas casi nunca.
+    const order = [...docs].sort((a, b) => Number(b.format === "xlsx") - Number(a.format === "xlsx") || b.id - a.id);
+    for (const doc of order.slice(0, 3)) {
+      let html;
+      try {
+        html = await page(io, doc.url, 1800);
+      } catch {
+        continue;
+      }
+      fetched++;
+      pages.set(doc.url, html);
+      await io.sleep(delayMs);
+      const series = pageSeries(html);
+      if (!series) continue;
+      if (series !== doc.seriesId) for (const d of docs) retagged[d.id] = { from: d.seriesId, to: series };
+      break;
+    }
+  }
+  return { retagged, fetched };
+}
+
+/** La temporada guardada sin los resultados que salieron de documentos mal leídos (`actcTiming(...).misread`): que nada los reponga. */
+export function withoutMisread(season, misread = []) {
+  const bad = new Set(misread);
+  if (!bad.size || !season?.events) return season;
+  return { ...season, events: season.events.map((e) => dropMisread(e, bad)) };
+}
+
+function dropMisread(event, bad) {
+  if (!event.sessions.some((s) => bad.has(misreadKey(event.seriesId, s.resultsSource?.url)))) return event;
+  return {
+    ...event,
+    sessions: event.sessions.map((s) => {
+      if (!bad.has(misreadKey(event.seriesId, s.resultsSource?.url))) return s;
+      const { results, resultsSource, ...rest } = s;
+      return rest;
+    }),
+  };
+}
+
 /**
  * Completa las fechas de la ACTC con los resultados del portal. Las fechas recientes (`windowDays`) se consultan;
  * las viejas reutilizan lo ya guardado, así cada actualización pide pocas páginas.
  */
 export async function actcTiming(io, events, previous, { windowDays = 10, knownNames = [], delayMs = 400 } = {}) {
-  const listing = parseListing(await io.text(LISTING_URL, { revalidate: 900 }));
+  const raw = parseListing(await io.text(LISTING_URL, { revalidate: 900 }));
   const known = knownIndex(knownNames);
-  const before = new Map((previous?.events ?? []).map((e) => [e.id, e]));
   const now = Date.now();
-  let fetched = 0;
+  const pages = new Map();
+  const checked = await checkBlocks(io, raw, { since: now - windowDays * DAY, delayMs, pages });
+  let fetched = checked.fetched;
   let withResults = 0;
+  // Lo que ya se había decidido antes, más lo de hoy; si el portal corrigió la pestaña, el documento ya está donde debe.
+  const retagged = { ...(previous?.meta?.timing?.retagged ?? {}), ...checked.retagged };
+  const listing = raw.map((d) => (retagged[d.id] && retagged[d.id].to !== d.seriesId ? { ...d, seriesId: retagged[d.id].to } : d));
+  const misread = new Set();
+  for (const d of raw) if (retagged[d.id]) misread.add(misreadKey(retagged[d.id].from, d.url));
+  for (const d of listing) if (/CLASIFIC/i.test(fold(d.title)) && isQualifyingStage(d.title)) misread.add(misreadKey(d.seriesId, d.url));
+  const before = new Map((previous?.events ?? []).map((e) => [e.id, dropMisread(e, misread)]));
 
   const out = [];
-  for (const event of events) {
-    if (!TIMING_SERIES.has(event.seriesId)) {
-      out.push(event);
+  for (const input of events) {
+    if (!TIMING_SERIES.has(input.seriesId)) {
+      out.push(input);
       continue;
     }
+    const event = dropMisread(input, misread);
     const lastDay = event.sessions.map((s) => s.start.slice(0, 10)).sort().at(-1);
     const end = Date.parse(`${lastDay}T23:59:59-03:00`);
     const docs = listing.filter((d) => {
@@ -401,10 +498,17 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
       let incomplete = null;
       for (const { doc, partial } of candidates.slice(0, MAX_CANDIDATES)) {
         try {
-          const html = await page(io, doc.url, recent ? 1800 : 30 * 86400);
-          fetched++;
+          let html = pages.get(doc.url);
+          if (!html) {
+            html = await page(io, doc.url, recent ? 1800 : 30 * 86400);
+            fetched++;
+          }
           const format = pageFormat(html);
-          if (format === "planilla" && PROVISIONAL_KINDS.has(session.kind)) {
+          const labeled = pageSeries(html);
+          // La página dice que es de otra categoría: no se carga acá, aunque el listado la ponga en esta pestaña.
+          if (labeled && labeled !== event.seriesId) {
+            misread.add(misreadKey(event.seriesId, doc.url));
+          } else if (format === "planilla" && PROVISIONAL_KINDS.has(session.kind)) {
             if (!planilla) {
               const rows = parsePlanilla(html);
               if (!provisionalProblems(rows, session.kind).length) planilla = { doc, results: planillaResults(rows, known, session.kind) };
@@ -505,5 +609,9 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
       ? { ...e, sessions: e.sessions.map((s) => (s.results ? { ...s, results: s.results.map((r) => ({ ...r, driver: resolve(r.driver) })) } : s)) }
       : e,
   );
-  return { events: unified, meta: { documents: listing.length, pagesFetched: fetched, eventsWithResults: withResults } };
+  return {
+    events: unified,
+    meta: { documents: listing.length, pagesFetched: fetched, eventsWithResults: withResults, ...(Object.keys(retagged).length ? { retagged } : {}) },
+    misread: [...misread],
+  };
 }

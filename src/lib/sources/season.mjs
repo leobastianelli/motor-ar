@@ -11,7 +11,7 @@ import { gtwcSeason } from "./gtwc.mjs";
 import { gtwcOfficial, keepPreviousGtwc } from "./gtwc-official.mjs";
 import { gtwcYoutube, keepPreviousYoutube } from "./gtwc-youtube.mjs";
 import { keepPreviousSpeedhive, speedhiveTn } from "./speedhive-tn.mjs";
-import { actcTiming, keepPreviousTiming, TIMING_SERIES } from "./actc-timing.mjs";
+import { actcTiming, keepPreviousTiming, TIMING_SERIES, withoutMisread } from "./actc-timing.mjs";
 import { fiaF2, keepPreviousFia } from "./fia-f2.mjs";
 import { keepPreviousOpenf1, openf1Sessions } from "./openf1.mjs";
 import { f1OfficialSessions, keepPreviousF1Official } from "./f1-official.mjs";
@@ -169,6 +169,8 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
     const timing = await actcTiming(io, events, previous, { windowDays: io.timingWindowDays ?? 10, delayMs: io.timingDelayMs ?? 400, knownNames });
     events = timing.events;
     meta.timing = timing.meta;
+    // Lo que se había cargado de un documento de otra categoría o de un corte de la clasificación no lo repone la red de seguridad.
+    previous = withoutMisread(previous, timing.misread);
   } catch (error) {
     failures.push(`Tiempos ACTC: ${error.message} (se conservan los resultados anteriores)`);
     events = keepPreviousTiming(events, previous);
