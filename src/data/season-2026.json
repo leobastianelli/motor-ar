@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T17:08:51.086Z",
+  "generatedAt": "2026-10-17T17:57:50.162Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -210338,9 +210338,8 @@
     "gtwcOfficial": {
       "meetings": 10,
       "sessions": 5,
-      "withResults": 4,
+      "withResults": 5,
       "errors": [
-        "gt3-2026-s5/free-practice-1: No se pudo descargar https://www.gt-world-challenge-europe.com/results/2026/barcelona/free-practice-1: fetch failed",
         "gt3-2026-e5: No se pudo descargar https://www.gt-world-challenge-europe.com/event/255/portimao: fetch failed"
       ]
     },
@@ -210355,7 +210354,7 @@
     }
   },
   "failures": [
-    "GT World oficial: gt3-2026-s5/free-practice-1: No se pudo descargar https://www.gt-world-challenge-europe.com/results/2026/barcelona/free-practice-1: fetch failed; gt3-2026-e5: No se pudo descargar https://www.gt-world-challenge-europe.com/event/255/portimao: fetch failed",
-    "Se conservaron resultados de 3 sesiones que las fuentes dejaron de traer"
+    "GT World oficial: gt3-2026-e5: No se pudo descargar https://www.gt-world-challenge-europe.com/event/255/portimao: fetch failed",
+    "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
