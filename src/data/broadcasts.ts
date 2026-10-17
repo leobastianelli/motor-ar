@@ -70,5 +70,27 @@ export const broadcastsBySeries: Record<string, { items: Broadcast[]; source?: s
     ],
     source: "https://www.ellitoral.com/deportes/nicolasvarrone-petitlemans-imsa-corvette-roadatlanta-prattmillermotorsports_0_0RZxAFM9M9.html",
   },
+  "nuevo-car-show": {
+    items: [
+      { name: "TV Pública", kind: "tv" },
+      // Cronometraje oficial en vivo, enlazado desde la web de la categoría.
+      { name: "Tiempos en vivo (Speedhive)", kind: "timing", url: "https://speedhive.mylaps.com/livetiming/KJTUNRVR-2147484951" },
+    ],
+    source: "https://www.lavozdesanjusto.com.ar/el-nuevo-car-show-llega-a-la-tv-publica-en-2026",
+  },
+  f3: {
+    items: [{ name: "F1 TV Pro", kind: "streaming", url: "https://f1tv.formula1.com" }],
+    source: "https://www.formula1.com/en/page/what-is-f1-tv-pro",
+  },
+  "f4-italia": {
+    // Las carreras van gratis por el canal de YouTube y la página de Facebook de ACI Sport; los libres y la clasificación no se transmiten.
+    items: [{ name: "ACI Sport (YouTube, gratis, sólo carreras)", kind: "youtube" }],
+    source: "https://www.pitdebrief.com/?p=115353",
+  },
+  wec: {
+    // Plataforma propia y paga del campeonato. No encontramos una fuente que confirme TV abierta o por cable en Argentina.
+    items: [{ name: "FIAWEC+ (plataforma oficial, paga)", kind: "streaming", url: "https://www.fiawec.com" }],
+    source: "https://www.speedweek.com/en/a/fia-wec/how-to-watch-the-fia-wec-from-interlagos-on-tv-and-via-live-stream",
+  },
   "zonal-bsas": { items: [] },
 };
