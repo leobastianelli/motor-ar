@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T14:50:07.741Z",
+  "generatedAt": "2026-10-17T15:20:32.546Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -203249,106 +203249,92 @@
           "results": [
             {
               "pos": 1,
-              "number": "144",
-              "driver": "Faustino Cifre",
-              "team": "Ford",
-              "gap": "1:29.904"
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "1:26.235"
             },
             {
               "pos": 2,
-              "number": "107",
-              "driver": "Sganga Antonino",
-              "team": "Ford",
-              "gap": "+0.753"
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "+0.197"
             },
             {
               "pos": 3,
-              "number": "66",
-              "driver": "Gonzalo Aramburu",
-              "team": "Toyota",
-              "gap": "+1.038"
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "+0.399"
             },
             {
               "pos": 4,
-              "number": "127",
-              "driver": "Nahuel Cordone",
+              "number": "75",
+              "driver": "Matias Frano",
               "team": "Ford",
-              "gap": "+1.078"
+              "gap": "+0.727"
             },
             {
               "pos": 5,
-              "number": "132",
-              "driver": "Tomas Pellandino",
+              "number": "118",
+              "driver": "Fabrizio Maggini",
               "team": "Ford",
-              "gap": "+1.167"
+              "gap": "+1.376"
             },
             {
               "pos": 6,
-              "number": "67",
-              "driver": "Santiago Biagi",
-              "team": "Toyota",
-              "gap": "+1.198"
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "+1.470"
             },
             {
               "pos": 7,
-              "number": "14",
-              "driver": "Nestor Omar Goya",
-              "team": "Ford",
-              "gap": "+1.969"
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Dodge",
+              "gap": "+1.676"
             },
             {
               "pos": 8,
-              "number": "10",
-              "driver": "Luis Catelli",
-              "team": "Toyota",
-              "gap": "+2.275"
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+2.718"
             },
             {
               "pos": 9,
-              "number": "133",
-              "driver": "Juan Pablo Alberti",
-              "team": "Volkswagen",
-              "gap": "+2.572"
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+2.878"
             },
             {
               "pos": 10,
-              "number": "76",
-              "driver": "Juan José Suárez",
-              "team": "Ford",
-              "gap": "+2.613"
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Dodge",
+              "gap": "+2.924"
             },
             {
               "pos": 11,
-              "number": "15",
-              "driver": "Jose Alberto Goya",
+              "number": "121",
+              "driver": "Francisco Nonnenmacher",
               "team": "Ford",
-              "gap": "+2.627"
+              "gap": "+2.958"
             },
             {
               "pos": 12,
-              "number": "8",
-              "driver": "Juan Antonio Sandin",
+              "number": "221",
+              "driver": "Esteban Luna",
               "team": "Ford",
-              "gap": "+2.854"
-            },
-            {
-              "pos": 13,
-              "number": "88",
-              "driver": "Alvaro Oroza",
-              "team": "Ford",
-              "gap": "+4.334"
-            },
-            {
-              "pos": 14,
-              "number": "123",
-              "driver": "Nicanor Santilli Pazos",
-              "team": "Foton",
-              "gap": "+14.281"
+              "gap": "+3.278"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1004/ver"
+            "url": "https://tiempos.actc.org.ar/resultados/1011/ver"
           }
         },
         {
@@ -210045,22 +210031,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -210109,7 +210079,7 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 806,
+      "documents": 809,
       "pagesFetched": 113,
       "eventsWithResults": 61
     },
@@ -210150,6 +210120,7 @@
     }
   },
   "failures": [
+    "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: fetch failed",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }

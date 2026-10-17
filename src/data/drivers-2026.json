@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T14:50:08.708Z",
+  "generatedAt": "2026-10-17T15:20:33.728Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -389,7 +389,7 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-07-25",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "alejandro cancio",
@@ -471,7 +471,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "alejandro minem",
@@ -2674,7 +2674,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "esteban mancuso",
@@ -2694,7 +2694,7 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "esteban postay",
@@ -2994,7 +2994,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "aldrighetti facundo",
@@ -3569,7 +3569,7 @@
         "tc-mouras": "Chevrolet"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "francisco nonnenmacher",
@@ -3589,7 +3589,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-09-26",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "francisco olmos",
@@ -5178,9 +5178,7 @@
       ],
       "slug": "inaki-arrias",
       "name": "Iñaki Arrias",
-      "aliases": [
-        "Arrias Iñlaki"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-mouras",
         "tc-pista-pick-up"
@@ -7018,7 +7016,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "catalan juan magni tomas",
@@ -9223,7 +9221,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-04-25",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "jalaf matias",
@@ -10290,7 +10288,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "lombardi nicolas",
@@ -11720,7 +11718,7 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "ballesio santiago",
@@ -13054,7 +13052,7 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "cardoso valentino",
