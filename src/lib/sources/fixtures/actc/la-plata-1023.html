@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<body>
+
+
+<header class="topbar">
+  <a href="/" class="mark">
+    <div class="mark-badge">A</div>
+    <div><div>ACTC</div><div class="mark-sub">Tiempos · Live Timing</div></div>
+  </a>
+  <nav class="nav">
+    <a href="/">Inicio</a>
+    <a href="/live">En vivo</a>
+    <a href="/campeonatos">Campeonatos</a>
+    <a href="/ranking">Ranking</a>
+    <a href="/noticias">Noticias</a>
+    <a href="/calendario">Calendario</a>
+    <a href="/autodromos">Autódromos</a>
+    <a href="/resultados">Resultados</a>
+    <a href="/historico">Parciales</a>
+  </nav>
+  <button class="nav-burger" id="navBurger" aria-label="Menú">☰</button>
+  <button class="icon-btn" id="themeBtn" title="Cambiar tema">☾</button>
+</header>
+
+
+<div class="rv-wrap">
+
+  <!-- Back breadcrumb -->
+  <div style="margin-bottom:16px;">
+    <a href="/resultados" style="font-size:13px;color:var(--ink-3);text-decoration:none;">← Resultados</a>
+  </div>
+
+  <!-- Header card -->
+  <div class="rv-hd">
+    <div>
+      <div class="rv-title">CLASIFICACION CL1 PARCIALES</div>
+      <div class="rv-meta">
+        
+        <span>📅 17/10/2026</span>
+        
+        
+          <span>🏁 9 - Roberto José Mouras - TCPK, TCPPK</span>
+          <span>📍 Roberto José Mouras</span>
+          <span>🏷 Turismo Carretera Pick Up</span>
+          
+        
+      </div>
+    </div>
+    <div class="rv-actions">
+      
+      <a href="/parciales/362" class="dl-btn">📊 Análisis de parciales</a>
+      
+      
+      
+      
+      <a href="/descargar/20261017_162641_CLASIFICACION_CL1_PARCIALES.xlsx" class="dl-btn xlsx">▤ Descargar Excel</a>
+      
+    </div>
+  </div>
+
+  
+  <!-- ── STANDINGS TABLE ── -->
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+
+  <div class="rv-table-wrap">
+    <table class="rv-table" id="standingsTable">
+      <thead>
+        <tr>
+          <th style="text-align:center;width:42px">P</th>
+          <th style="width:52px">N°</th>
+          <th>Piloto</th>
+          
+          <th>Mejor vuelta</th>
+          <th>Dif.</th>
+          <th>S1 Tm</th><th>S2 Tm</th><th>S3 Tm</th><th>S4 Tm</th><th>S5 Tm</th>
+          
+          <th style="width:32px"></th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="0"
+            onclick="toggleLaps(0, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos p1">
+            <span class="medal medal-1">1</span>
+            
+          </td>
+
+          <td><span class="rv-nro">11</span></td>
+          <td><span class="rv-driver">MAZZACANE GASTON</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best pole">1:28.456</span></td>
+          <td class="rv-gap">
+            —
+          </td>
+          <td class="rv-sec">12.874</td><td class="rv-sec">15.199</td><td class="rv-sec">13.338</td><td class="rv-sec">28.549</td><td class="rv-sec">18.496</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-0">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — MAZZACANE GASTON</div>
+                <table class="laps-table">
+                  
+                  <tr class="best-row">
+                    <td>V1</td>
+                    
+                    <td>1:28.456</td>
+                    <td style="padding-right:12px">12.874</td><td style="padding-right:12px">15.199</td><td style="padding-right:12px">13.338</td><td style="padding-right:12px">28.549</td><td style="padding-right:12px">18.496</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V2</td>
+                    
+                    <td>2:11.396</td>
+                    <td style="padding-right:12px">18.521</td><td style="padding-right:12px">19.945</td><td style="padding-right:12px">16.354</td><td style="padding-right:12px">37.074</td><td style="padding-right:12px">39.502</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="1"
+            onclick="toggleLaps(1, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos p2">
+            <span class="medal medal-2">2</span>
+            
+          </td>
+
+          <td><span class="rv-nro">107</span></td>
+          <td><span class="rv-driver">MARTINEZ TOBIAS</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best ">1:28.522</span></td>
+          <td class="rv-gap">
+            
+              
+              +0.066
+            
+          </td>
+          <td class="rv-sec">12.816</td><td class="rv-sec">15.293</td><td class="rv-sec">13.254</td><td class="rv-sec">28.820</td><td class="rv-sec">18.339</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-1">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — MARTINEZ TOBIAS</div>
+                <table class="laps-table">
+                  
+                  <tr class="best-row">
+                    <td>V1</td>
+                    
+                    <td>1:28.522</td>
+                    <td style="padding-right:12px">12.816</td><td style="padding-right:12px">15.293</td><td style="padding-right:12px">13.254</td><td style="padding-right:12px">28.820</td><td style="padding-right:12px">18.339</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V2</td>
+                    
+                    <td>2:08.301</td>
+                    <td style="padding-right:12px">18.179</td><td style="padding-right:12px">19.930</td><td style="padding-right:12px">15.879</td><td style="padding-right:12px">37.034</td><td style="padding-right:12px">37.279</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="2"
+            onclick="toggleLaps(2, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos p3">
+            <span class="medal medal-3">3</span>
+            
+          </td>
+
+          <td><span class="rv-nro">68</span></td>
+          <td><span class="rv-driver">SANTERO JULIAN</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best ">1:28.641</span></td>
+          <td class="rv-gap">
+            
+              
+              +0.185
+            
+          </td>
+          <td class="rv-sec">12.831</td><td class="rv-sec">15.317</td><td class="rv-sec">13.260</td><td class="rv-sec">28.873</td><td class="rv-sec">18.360</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-2">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — SANTERO JULIAN</div>
+                <table class="laps-table">
+                  
+                  <tr class="best-row">
+                    <td>V1</td>
+                    
+                    <td>1:28.641</td>
+                    <td style="padding-right:12px">12.831</td><td style="padding-right:12px">15.317</td><td style="padding-right:12px">13.260</td><td style="padding-right:12px">28.873</td><td style="padding-right:12px">18.360</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V2</td>
+                    
+                    <td>2:06.144</td>
+                    <td style="padding-right:12px">14.619</td><td style="padding-right:12px">19.285</td><td style="padding-right:12px">16.510</td><td style="padding-right:12px">34.549</td><td style="padding-right:12px">41.181</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="3"
+            onclick="toggleLaps(3, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos ">
+            4
+          </td>
+
+          <td><span class="rv-nro">86</span></td>
+          <td><span class="rv-driver">FAIN IGNACIO</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best ">1:28.709</span></td>
+          <td class="rv-gap">
+            
+              
+              +0.253
+            
+          </td>
+          <td class="rv-sec">12.907</td><td class="rv-sec">15.387</td><td class="rv-sec">13.346</td><td class="rv-sec">28.711</td><td class="rv-sec">18.358</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-3">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — FAIN IGNACIO</div>
+                <table class="laps-table">
+                  
+                  <tr class="best-row">
+                    <td>V1</td>
+                    
+                    <td>1:28.709</td>
+                    <td style="padding-right:12px">12.907</td><td style="padding-right:12px">15.387</td><td style="padding-right:12px">13.346</td><td style="padding-right:12px">28.711</td><td style="padding-right:12px">18.358</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V2</td>
+                    
+                    <td>2:08.751</td>
+                    <td style="padding-right:12px">17.921</td><td style="padding-right:12px">19.628</td><td style="padding-right:12px">16.068</td><td style="padding-right:12px">37.408</td><td style="padding-right:12px">37.726</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="4"
+            onclick="toggleLaps(4, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos ">
+            5
+          </td>
+
+          <td><span class="rv-nro">119</span></td>
+          <td><span class="rv-driver">PALAZZO HERNAN</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best ">1:28.855</span></td>
+          <td class="rv-gap">
+            
+              
+              +0.399
+            
+          </td>
+          <td class="rv-sec">13.079</td><td class="rv-sec">15.317</td><td class="rv-sec">13.367</td><td class="rv-sec">28.664</td><td class="rv-sec">18.428</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-4">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — PALAZZO HERNAN</div>
+                <table class="laps-table">
+                  
+                  <tr class="best-row">
+                    <td>V1</td>
+                    
+                    <td>1:28.855</td>
+                    <td style="padding-right:12px">13.079</td><td style="padding-right:12px">15.317</td><td style="padding-right:12px">13.367</td><td style="padding-right:12px">28.664</td><td style="padding-right:12px">18.428</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V2</td>
+                    
+                    <td>2:03.480</td>
+                    <td style="padding-right:12px">14.091</td><td style="padding-right:12px">18.678</td><td style="padding-right:12px">16.119</td><td style="padding-right:12px">34.488</td><td style="padding-right:12px">40.104</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="5"
+            onclick="toggleLaps(5, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos ">
+            6
+          </td>
+
+          <td><span class="rv-nro">256</span></td>
+          <td><span class="rv-driver">FRITZLER OTTO</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best ">1:28.956</span></td>
+          <td class="rv-gap">
+            
+              
+              +0.500
+            
+          </td>
+          <td class="rv-sec">12.848</td><td class="rv-sec">15.368</td><td class="rv-sec">13.347</td><td class="rv-sec">28.889</td><td class="rv-sec">18.504</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-5">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — FRITZLER OTTO</div>
+                <table class="laps-table">
+                  
+                  <tr class="best-row">
+                    <td>V1</td>
+                    
+                    <td>1:28.956</td>
+                    <td style="padding-right:12px">12.848</td><td style="padding-right:12px">15.368</td><td style="padding-right:12px">13.347</td><td style="padding-right:12px">28.889</td><td style="padding-right:12px">18.504</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V2</td>
+                    
+                    <td>2:04.634</td>
+                    <td style="padding-right:12px">13.879</td><td style="padding-right:12px">19.532</td><td style="padding-right:12px">16.652</td><td style="padding-right:12px">34.473</td><td style="padding-right:12px">40.098</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="6"
+            onclick="toggleLaps(6, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos ">
+            7
+          </td>
+
+          <td><span class="rv-nro">126</span></td>
+          <td><span class="rv-driver">RICCIARDI THOMAS</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best ">1:29.076</span></td>
+          <td class="rv-gap">
+            
+              
+              +0.620
+            
+          </td>
+          <td class="rv-sec">13.095</td><td class="rv-sec">15.352</td><td class="rv-sec">13.247</td><td class="rv-sec">28.870</td><td class="rv-sec">18.512</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-6">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — RICCIARDI THOMAS</div>
+                <table class="laps-table">
+                  
+                  <tr class="best-row">
+                    <td>V1</td>
+                    
+                    <td>1:29.076</td>
+                    <td style="padding-right:12px">13.095</td><td style="padding-right:12px">15.352</td><td style="padding-right:12px">13.247</td><td style="padding-right:12px">28.870</td><td style="padding-right:12px">18.512</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V2</td>
+                    
+                    <td>2:11.055</td>
+                    <td style="padding-right:12px">16.283</td><td style="padding-right:12px">20.026</td><td style="padding-right:12px">17.444</td><td style="padding-right:12px">35.607</td><td style="padding-right:12px">41.695</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="7"
+            onclick="toggleLaps(7, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos ">
+            8
+          </td>
+
+          <td><span class="rv-nro">1</span></td>
+          <td><span class="rv-driver">CANAPINO AGUSTIN</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best ">1:29.198</span></td>
+          <td class="rv-gap">
+            
+              
+              +0.742
+            
+          </td>
+          <td class="rv-sec">13.160</td><td class="rv-sec">15.513</td><td class="rv-sec">13.228</td><td class="rv-sec">28.806</td><td class="rv-sec">18.491</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-7">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — CANAPINO AGUSTIN</div>
+                <table class="laps-table">
+                  
+                  <tr class="best-row">
+                    <td>V1</td>
+                    
+                    <td>1:29.198</td>
+                    <td style="padding-right:12px">13.160</td><td style="padding-right:12px">15.513</td><td style="padding-right:12px">13.228</td><td style="padding-right:12px">28.806</td><td style="padding-right:12px">18.491</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V2</td>
+                    
+                    <td>1:48.578</td>
+                    <td style="padding-right:12px">17.425</td><td style="padding-right:12px">19.837</td><td style="padding-right:12px">15.994</td><td style="padding-right:12px">33.883</td><td style="padding-right:12px">21.439</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="8"
+            onclick="toggleLaps(8, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos ">
+            9
+          </td>
+
+          <td><span class="rv-nro">3</span></td>
+          <td><span class="rv-driver">WERNER MARIANO</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best ">1:29.254</span></td>
+          <td class="rv-gap">
+            
+              
+              +0.798
+            
+          </td>
+          <td class="rv-sec">13.014</td><td class="rv-sec">15.502</td><td class="rv-sec">13.294</td><td class="rv-sec">28.819</td><td class="rv-sec">18.625</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-8">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — WERNER MARIANO</div>
+                <table class="laps-table">
+                  
+                  <tr class="best-row">
+                    <td>V1</td>
+                    
+                    <td>1:29.254</td>
+                    <td style="padding-right:12px">13.014</td><td style="padding-right:12px">15.502</td><td style="padding-right:12px">13.294</td><td style="padding-right:12px">28.819</td><td style="padding-right:12px">18.625</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V2</td>
+                    
+                    <td>2:07.922</td>
+                    <td style="padding-right:12px">18.356</td><td style="padding-right:12px">20.585</td><td style="padding-right:12px">16.458</td><td style="padding-right:12px">37.434</td><td style="padding-right:12px">35.089</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="9"
+            onclick="toggleLaps(9, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos ">
+            10
+          </td>
+
+          <td><span class="rv-nro">147</span></td>
+          <td><span class="rv-driver">DIANDA MARCO</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best ">1:29.347</span></td>
+          <td class="rv-gap">
+            
+              
+              +0.891
+            
+          </td>
+          <td class="rv-sec">13.031</td><td class="rv-sec">15.614</td><td class="rv-sec">13.308</td><td class="rv-sec">28.859</td><td class="rv-sec">18.535</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-9">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — DIANDA MARCO</div>
+                <table class="laps-table">
+                  
+                  <tr class="best-row">
+                    <td>V1</td>
+                    
+                    <td>1:29.347</td>
+                    <td style="padding-right:12px">13.031</td><td style="padding-right:12px">15.614</td><td style="padding-right:12px">13.308</td><td style="padding-right:12px">28.859</td><td style="padding-right:12px">18.535</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V2</td>
+                    
+                    <td>1:36.392</td>
+                    <td style="padding-right:12px">15.336</td><td style="padding-right:12px">18.633</td><td style="padding-right:12px">14.171</td><td style="padding-right:12px">29.305</td><td style="padding-right:12px">18.947</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V3</td>
+                    
+                    <td>1:43.605</td>
+                    <td style="padding-right:12px">13.153</td><td style="padding-right:12px">15.596</td><td style="padding-right:12px">13.378</td><td style="padding-right:12px">32.732</td><td style="padding-right:12px">28.746</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="10"
+            onclick="toggleLaps(10, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos ">
+            11
+          </td>
+
+          <td><span class="rv-nro">110</span></td>
+          <td><span class="rv-driver">AZAR DIEGO</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best ">1:29.486</span></td>
+          <td class="rv-gap">
+            
+              
+              +1.030
+            
+          </td>
+          <td class="rv-sec">13.097</td><td class="rv-sec">15.578</td><td class="rv-sec">13.337</td><td class="rv-sec">28.890</td><td class="rv-sec">18.584</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-10">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — AZAR DIEGO</div>
+                <table class="laps-table">
+                  
+                  <tr class="best-row">
+                    <td>V1</td>
+                    
+                    <td>1:29.486</td>
+                    <td style="padding-right:12px">13.097</td><td style="padding-right:12px">15.578</td><td style="padding-right:12px">13.337</td><td style="padding-right:12px">28.890</td><td style="padding-right:12px">18.584</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V2</td>
+                    
+                    <td>1:47.982</td>
+                    <td style="padding-right:12px">17.799</td><td style="padding-right:12px">20.511</td><td style="padding-right:12px">17.248</td><td style="padding-right:12px">33.322</td><td style="padding-right:12px">19.102</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="11"
+            onclick="toggleLaps(11, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos ">
+            12
+          </td>
+
+          <td><span class="rv-nro">13</span></td>
+          <td><span class="rv-driver">DE CARLO DIEGO</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best ">1:29.644</span></td>
+          <td class="rv-gap">
+            
+              
+              +1.188
+            
+          </td>
+          <td class="rv-sec">13.066</td><td class="rv-sec">15.621</td><td class="rv-sec">13.297</td><td class="rv-sec">29.035</td><td class="rv-sec">18.625</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-11">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — DE CARLO DIEGO</div>
+                <table class="laps-table">
+                  
+                  <tr >
+                    <td>V1</td>
+                    
+                    <td>1:34.199</td>
+                    <td style="padding-right:12px">13.134</td><td style="padding-right:12px">16.890</td><td style="padding-right:12px">14.816</td><td style="padding-right:12px">30.152</td><td style="padding-right:12px">19.207</td>
+                  </tr>
+                  
+                  <tr class="best-row">
+                    <td>V2</td>
+                    
+                    <td>1:29.644</td>
+                    <td style="padding-right:12px">13.066</td><td style="padding-right:12px">15.621</td><td style="padding-right:12px">13.297</td><td style="padding-right:12px">29.035</td><td style="padding-right:12px">18.625</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V3</td>
+                    
+                    <td>1:52.873</td>
+                    <td style="padding-right:12px">17.309</td><td style="padding-right:12px">31.257</td><td style="padding-right:12px">14.980</td><td style="padding-right:12px">30.362</td><td style="padding-right:12px">18.965</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+        
+        
+        
+        <tr class="driver-row" data-idx="12"
+            onclick="toggleLaps(12, this)" style="cursor:pointer">
+
+          <!-- Position -->
+          <td class="rv-pos ">
+            13
+          </td>
+
+          <td><span class="rv-nro">12</span></td>
+          <td><span class="rv-driver">ABDALA TOMAS</span>
+            
+          </td>
+
+          
+          <td><span class="rv-best ">1:29.744</span></td>
+          <td class="rv-gap">
+            
+              
+              +1.288
+            
+          </td>
+          <td class="rv-sec">13.112</td><td class="rv-sec">15.461</td><td class="rv-sec">13.417</td><td class="rv-sec">29.178</td><td class="rv-sec">18.576</td>
+          
+          
+
+          <td>
+            
+            <button class="rv-expand" title="Ver vueltas">▾</button>
+            
+          </td>
+        </tr>
+
+        
+        <tr class="laps-row">
+          <td colspan="11">
+            <div class="laps-wrap" id="laps-12">
+              <div class="laps-inner">
+                <div class="laps-title">Todas las vueltas — ABDALA TOMAS</div>
+                <table class="laps-table">
+                  
+                  <tr class="best-row">
+                    <td>V1</td>
+                    
+                    <td>1:29.744</td>
+                    <td style="padding-right:12px">13.112</td><td style="padding-right:12px">15.461</td><td style="padding-right:12px">13.417</td><td style="padding-right:12px">29.178</td><td style="padding-right:12px">18.576</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V2</td>
+                    
+                    <td>1:42.891</td>
+                    <td style="padding-right:12px">13.041</td><td style="padding-right:12px">17.797</td><td style="padding-right:12px">16.494</td><td style="padding-right:12px">36.418</td><td style="padding-right:12px">19.141</td>
+                  </tr>
+                  
+                  <tr >
+                    <td>V3</td>
+                    
+                    <td>1:43.243</td>
+                    <td style="padding-right:12px">13.002</td><td style="padding-right:12px">15.401</td><td style="padding-right:12px">13.348</td><td style="padding-right:12px">32.020</td><td style="padding-right:12px">29.472</td>
+                  </tr>
+                  
+                </table>
+              </div>
+            </div>
+          </td>
+        </tr>
+        
+        
+      </tbody>
+    </table>
+  </div>
+
+  
+  <p style="font-size:11px;color:var(--ink-4);margin-top:10px;text-align:right">
+    Hacé click en una fila para ver todas las vueltas del piloto.
+  </p>
+  
+
+  
+
+  
+
+</div>
+
+
+</body>
+</html>
