@@ -57,7 +57,7 @@ export const drivers: Driver[] = [
     team: "Saintéloc Racing",
     hometown: "Buenos Aires",
     born: "05/07/1994",
-    tagline: "Porteño con más de diez años en el GT World Challenge Europe; este año corre el Endurance Cup con Saintéloc.",
+    tagline: "Porteño de larga trayectoria en el GT europeo; este año corre el Endurance Cup del GT World Challenge con Saintéloc.",
     career: [
       { year: "2014", series: "Ferrari Challenge Europe · Trofeo Pirelli", team: "Motor Piacenza", highlight: "Campeón de la clase Am." },
       { year: "2015", series: "International GT Open · Pro-Am", team: "AF Corse", highlight: "Tercero en la clase." },
