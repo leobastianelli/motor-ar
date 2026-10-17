@@ -1,3 +1,4 @@
+import { puestoEnClase } from "@/lib/clase.mjs";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -74,7 +75,11 @@ function indexedSummary(entry: IndexedDriver, season: Season) {
   return [
     `${entry.name} corre en ${main.name}${number ? ` con el número ${number}` : ""}${team ? `, con ${team}` : ""}.`,
     s && !main.partialResults ? `En 2026 lleva ${count(s.races, "carrera", "carreras")}, ${count(s.wins, "victoria", "victorias")} y ${count(s.podiums, "podio", "podios")}${s.best ? `; su mejor resultado es un ${s.best}.º puesto` : ""}.` : "",
-    standing ? `Está ${standing.pos}.º en el campeonato${standing.classId ? ` de ${main.classes?.find((c) => c.id === standing.classId)?.name ?? "su clase"}` : ""} con ${standing.points} puntos.` : "",
+    standing
+      ? standing.classLabel
+        ? `En el campeonato de su clase va ${standing.pos}.º con ${standing.points} puntos (${standing.classLabel}).`
+        : `Está ${standing.pos}.º en el campeonato${standing.classId ? ` de ${main.classes?.find((c) => c.id === standing.classId)?.name ?? "su clase"}` : ""} con ${standing.points} puntos.`
+      : "",
     others.length ? `También corrió en ${others.join(" y ")}.` : "",
   ]
     .filter(Boolean)
@@ -161,7 +166,7 @@ function SeasonBlocks({ keys, season }: { keys: string[]; season: Season }) {
         const campeonato = [
           "Campeonato",
           standing ? `${standing.pos}.º` : "—",
-          standing ? `${standing.points} pts${claseName ? ` · ${claseName}` : ""}` : series.classes?.length ? "Sin campeonato publicado" : "",
+          standing ? `${standing.points} pts${standing.classLabel ? ` · ${standing.classLabel}` : claseName ? ` · ${claseName}` : ""}` : series.classes?.length ? "Sin campeonato publicado" : "",
         ];
         const byEvent = Map.groupBy(
           stats.results.filter((r) => r.event.seriesId === id),
@@ -210,8 +215,17 @@ function SeasonBlocks({ keys, season }: { keys: string[]; season: Season }) {
                       {rows.map(({ session, row }) => (
                         <li key={session.id} className={RACES.has(session.kind) ? "race" : undefined}>
                           <span>{session.name}</span>
-                          <b>{row.positionText && !/^\d+$/.test(row.positionText) ? row.positionText : `${row.pos}.º`}</b>
-                          <small>{[row.status ?? row.gap, isProvisional(session) ? "provisorio" : ""].filter(Boolean).join(" · ")}</small>
+                          <b>{row.positionText && !/^\d+$/.test(row.positionText) ? row.positionText : `${puestoEnClase(session.results, row)?.pos ?? row.pos}.º`}</b>
+                          <small>
+                            {[
+                              // Multiclase (GT3, la general del Rally): el puesto grande es el de su clase; la general va acá.
+                              puestoEnClase(session.results, row) ? `en ${row.class} · ${row.pos}.º en la general` : "",
+                              row.status ?? row.gap,
+                              isProvisional(session) ? "provisorio" : "",
+                            ]
+                              .filter(Boolean)
+                              .join(" · ")}
+                          </small>
                         </li>
                       ))}
                     </ul>
@@ -417,6 +431,7 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
     : driver.career.map((c) => ({ years: c.year, title: c.series, text: c.highlight, stat: c.team, major: false })).reverse();
 
   let ribbon: { label: string; value: string; note?: string }[];
+  const classChamps = season.getClassChampionships(driver);
   if (data) {
     const trend = data.championshipTrend();
     const stats = data.seasonStats(2026);
@@ -429,11 +444,12 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
     ];
   } else {
     const standing = season.getStandingPosition(driver);
+    const enClase = season.getClassChampionships(driver)[0];
     ribbon = [
       { label: "Campeonato", value: standing ? `${standing.position}.º` : "—", note: standing?.label },
       { label: "Puntos", value: standing ? String(standing.points) : "—" },
       // Victorias contadas desde los resultados de la temporada, igual que en los bloques de abajo.
-      { label: "Victorias", value: series.partialResults ? "—" : String(season.getDriverSeason({ key: "", keys: [driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n)) }).bySeries[driver.seriesId]?.wins ?? 0), note: series.partialResults ? "sin la temporada completa" : undefined },
+      { label: "Victorias", value: series.partialResults ? "—" : String(season.getDriverSeason({ key: "", keys: [driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n)) }).bySeries[driver.seriesId]?.wins ?? 0), note: series.partialResults ? "sin la temporada completa" : enClase ? `en la ${enClase.class}` : undefined },
       { label: "Categoría", value: series.short, note: driver.team },
     ];
   }
@@ -496,6 +512,23 @@ export default async function DriverPage(props: PageProps<"/pilotos/[slug]">) {
           </div>
         ))}
       </section>
+
+      {classChamps.length > 0 && (
+        // GT World Challenge: el campeonato de su clase en cada uno de los tres campeonatos (temporada completa, Endurance y Sprint).
+        <section className="season-ribbon" aria-label={`Campeonatos de la ${classChamps[0].class}`}>
+          {classChamps.map((c) => (
+            <div key={c.cup}>
+              <span>
+                {c.class} · {c.cupLabel}
+              </span>
+              <strong>{c.final && c.pos === 1 ? "Campeón" : `${c.pos}.º`}</strong>
+              <small>
+                {c.points} pts{c.atrasada ? " · la tabla oficial todavía no suma la última carrera" : c.final ? " · temporada terminada" : ""}
+              </small>
+            </div>
+          ))}
+        </section>
+      )}
 
       {data && <ColapintoSections data={data} />}
       {!data && <SeasonBlocks keys={[driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n))} season={season} />}

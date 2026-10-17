@@ -263,10 +263,121 @@ export async function gtwcOfficial(io, events, previous, { windowDays = 10, dela
     }
   }
 
+  const updated = events.map((e) => done.get(e.id) ?? e);
+  const clases = await classStandings(io, updated, previous, { delayMs, errors });
   return {
-    events: events.map((e) => done.get(e.id) ?? e),
-    meta: { gtwcOfficial: { meetings: pairs.length, sessions: sessionsWithTimes, withResults: sessionsWithResults, errors } },
+    events: updated,
+    meta: { gtwcOfficial: { meetings: pairs.length, sessions: sessionsWithTimes, withResults: sessionsWithResults, errors }, gt3Clases: clases },
   };
+}
+
+// ─── Campeonatos por clase ──────────────────────────────────────────────────────────────────────────────────────
+// Cada clase (Gold, Silver y Bronze Cup) tiene su campeonato de pilotos en la temporada completa del GT World Challenge Europe, en el Endurance
+// Cup y en el Sprint Cup. Para un piloto Silver la tabla que cuenta es la de la Silver Cup, no la general: en 2026 Montenegro figuraba 18.º en
+// la general del Sprint y fue campeón Silver en los tres campeonatos.
+
+export const STANDING_CUPS = [
+  { id: "general", code: 0, label: "GT World Challenge Europe" },
+  { id: "endurance", code: 42, label: "Endurance Cup" },
+  { id: "sprint", code: 43, label: "Sprint Cup" },
+];
+export const STANDING_CLASSES = [
+  { code: 81, name: "Gold Cup" },
+  { code: 82, name: "Silver Cup" },
+  { code: 80, name: "Bronze Cup" },
+];
+/** Filas que se guardan de cada tabla: las primeras y las de los argentinos. */
+const TOP_ROWS = 5;
+
+/**
+ * Tabla de campeonato de pilotos del sitio oficial → fechas (con su columna de carrera) y filas. Los pilotos de un mismo auto comparten puesto y
+ * puntos: se juntan en una fila ("Ignacio Montenegro / Matisse Lismont"). Una fecha está sumada si alguna fila tiene puntos en su carrera (la
+ * última columna de la fecha: "MR", "R2" o "24hr"); las clasificaciones suman puntos antes de la carrera, así que no alcanzan.
+ */
+export function parseStandings(html) {
+  const table = html.match(/<table class="table standing[\s\S]*?<\/table>/)?.[0];
+  if (!table) return null;
+  const trs = table.match(/<tr[\s\S]*?<\/tr>/g) ?? [];
+  const cells = (tr) => [...tr.matchAll(/<t([dh])([^>]*)>([\s\S]*?)<\/t\1>/g)].map((m) => ({ text: text(m[3]), span: Number(m[2].match(/colspan="(\d+)"/)?.[1] ?? 1), html: m[3] }));
+  const head = cells(trs[0] ?? "").slice(1);
+  const tracks = cells(trs[1] ?? "").slice(1);
+  const rounds = [];
+  let col = 0;
+  head.forEach((h, i) => {
+    col += h.span;
+    rounds.push({ round: h.text, track: text(tracks[i]?.html.replace(/<span[\s\S]*?<\/span>/g, "") ?? ""), raceCol: col - 1 });
+  });
+  const rows = [];
+  for (const tr of trs.slice(3)) {
+    const c = cells(tr);
+    const pos = Number.parseInt(c[0]?.text ?? "", 10);
+    if (!Number.isFinite(pos) || !c[1]?.text) continue;
+    const points = Number(String(c[2]?.text ?? "").replace(",", "."));
+    rows.push({ pos, driver: c[1].text, points: Number.isFinite(points) ? points : 0, races: c.slice(3).map((x) => x.text) });
+  }
+  // Índices de las fechas cuya carrera ya tiene puntos en esta tabla.
+  const scoredRounds = rounds.flatMap((r, i) => (rows.some((row) => row.races[r.raceCol]) ? [i] : []));
+  const merged = [];
+  for (const r of rows) {
+    const last = merged.at(-1);
+    if (last && last.pos === r.pos && last.points === r.points) last.driver = `${last.driver} / ${r.driver}`;
+    else merged.push({ pos: r.pos, driver: r.driver, points: r.points });
+  }
+  return { rounds: rounds.map(({ round, track }) => ({ round, track })), scored: scoredRounds.length, scoredRounds, rows: merged };
+}
+
+/** Fechas de GT3 cuya carrera (o carreras, en el Sprint) ya terminó con resultados, por campeonato. */
+function racesDone(events, cup) {
+  return events.filter((e) => {
+    if (e.seriesId !== "gt3") return false;
+    if (cup === "sprint" && !e.id.startsWith("gt3-2026-s")) return false;
+    if (cup === "endurance" && !e.id.startsWith("gt3-2026-e")) return false;
+    const races = e.sessions.filter((s) => s.kind === "carrera");
+    return races.length > 0 && races.every((s) => s.results?.length);
+  }).length;
+}
+
+export async function classStandings(io, events, previous, { delayMs, errors }) {
+  const prev = previous?.meta?.gt3Clases ?? [];
+  const argentines = new Set((previous?.meta?.gt3?.argentines ?? []).map(norm));
+  const isArgentine = (driver) => driver.split(" / ").some((d) => argentines.has(norm(d)));
+  const out = [];
+  for (const cup of STANDING_CUPS) {
+    const read = [];
+    for (const cls of STANDING_CLASSES) {
+      const old = prev.find((t) => t.cup === cup.id && t.class === cls.name);
+      try {
+        await io.sleep(delayMs);
+        const url = `${BASE}/standings?filter_season_id=${SEASON_ID}&filter_standing_type=${cup.code}_${cls.code}_drivers`;
+        const parsed = parseStandings(await io.text(url, { revalidate: 1800 }));
+        if (!parsed?.rows.length) throw new Error("la tabla vino vacía");
+        read.push({ cls, url, parsed });
+      } catch (error) {
+        errors.push(`campeonato ${cup.label} ${cls.name}: ${error.message}`);
+        if (old) out.push(old);
+      }
+    }
+    // Una clase puede no sumar puntos en una fecha (nadie de la clase corrió): la fecha cuenta como sumada si alguna clase ya la tiene.
+    const scored = new Set(read.flatMap((r) => r.parsed.scoredRounds));
+    const done = racesDone(events, cup.id);
+    for (const { cls, url, parsed } of read) {
+      const last = parsed.rounds[Math.max(-1, ...scored)];
+      out.push({
+        cup: cup.id,
+        cupLabel: cup.label,
+        class: cls.name,
+        // La tabla oficial a veces tarda en sumar la última carrera: hasta que la suma, se dice hasta dónde llega.
+        status: scored.size >= done ? "oficial" : "atrasada",
+        scoredRounds: scored.size,
+        totalRounds: parsed.rounds.length,
+        racesDone: done,
+        ...(last ? { asOf: last.track } : {}),
+        source: url,
+        rows: parsed.rows.filter((r, i) => i < TOP_ROWS || isArgentine(r.driver)),
+      });
+    }
+  }
+  return out;
 }
 
 /** Si la fuente oficial falla por completo: se conservan los horarios y resultados oficiales de la versión anterior. */

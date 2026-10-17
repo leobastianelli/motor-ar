@@ -36,7 +36,7 @@ export default async function DriversPage() {
         name: d.name,
         number: d.number !== undefined ? String(d.number) : undefined,
         team: d.team,
-        standing: standing ? `${standing.position}.º en el campeonato` : undefined,
+        standing: standing ? `${standing.position}.º en ${standing.clase ? `la ${standing.clase}` : "el campeonato"}` : undefined,
         wins: stats?.wins ?? 0,
         races: stats?.races ?? 0,
         series: { id: series.id, name: series.name, code: series.code, color: series.color },
@@ -57,7 +57,7 @@ export default async function DriversPage() {
         name: d.name,
         number: d.numbers[main],
         team: d.teams[main],
-        standing: standing ? `${standing.pos}.º en el campeonato` : undefined,
+        standing: standing ? `${standing.pos}.º en ${standing.clase ? `la ${standing.clase}` : "el campeonato"}` : undefined,
         wins: stats.bySeries[main]?.wins ?? 0,
         races: stats.bySeries[main]?.races ?? 0,
         series: { id: series.id, name: series.name, code: series.code, color: series.color },
@@ -87,7 +87,7 @@ export default async function DriversPage() {
         <TarjetasDePilotos
           pilotos={featured.map((d) => {
             const standing = season.getStandingPosition(d);
-            return { slug: d.slug, name: d.name, number: d.number, team: d.team, seriesId: d.seriesId, standing: standing ? `${standing.position}.º en el campeonato · ${standing.points} pts` : undefined };
+            return { slug: d.slug, name: d.name, number: d.number, team: d.team, seriesId: d.seriesId, standing: standing ? `${standing.position}.º en ${standing.clase ? `la ${standing.clase}` : "el campeonato"} · ${standing.points} pts` : undefined };
           })}
           events={fechasDeLosPilotos(season.getAllEvents(), now, featured)}
           seriesById={seriesById}

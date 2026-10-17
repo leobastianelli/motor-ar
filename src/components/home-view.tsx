@@ -63,7 +63,7 @@ export function HomeView({
   /** Prioridad de cada categoría cuando dos cosas pasan a la vez (`seriesTier`): 1 argentina, 2 internacional con argentinos, 3 el resto. */
   tiers: Record<string, 1 | 2 | 3>;
   driversAbroad: PortadaDriver[];
-  standings: Record<string, { position: number; points: number } | null>;
+  standings: Record<string, { position: number; points: number; clase?: string } | null>;
   serverNow: string;
   simulated: boolean;
   /** El acceso directo a cada categoría (no depende de la hora: se dibuja en el servidor). */
@@ -188,7 +188,7 @@ export function HomeView({
   const idleNote = idle.length > 0 && idle.every((r) => r.status.headline === idle[0].status.headline) ? `${idle[0].status.stateLabel} · ${idle[0].status.headline}` : undefined;
   const standingOf = (r: (typeof runners)[number]) => {
     const st = standings[r.driver.slug];
-    return st && `${st.position}.º en el campeonato · ${st.points} pts`;
+    return st && `${st.position}.º en ${st.clase ? `la ${st.clase}` : "el campeonato"} · ${st.points} pts`;
   };
 
   // ——— Secciones ———
@@ -295,7 +295,7 @@ export function HomeView({
                         {r.driver.number && <span>#{r.driver.number}</span>}
                       </span>
                       <span className="home-idle-meta">
-                        {[idleNote ? "" : r.status.headline, standings[r.driver.slug] && `${standings[r.driver.slug]!.position}.º · ${standings[r.driver.slug]!.points} pts`].filter(Boolean).join(" · ")}
+                        {[idleNote ? "" : r.status.headline, standings[r.driver.slug] && `${standings[r.driver.slug]!.position}.º${standings[r.driver.slug]!.clase ? ` en la ${standings[r.driver.slug]!.clase}` : ""} · ${standings[r.driver.slug]!.points} pts`].filter(Boolean).join(" · ")}
                       </span>
                     </Link>
                   </li>

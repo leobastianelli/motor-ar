@@ -397,7 +397,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
                   <Link href={`/pilotos/${d.slug}`} className="list-link">
                     <strong>{d.name}</strong>
                     <span>{d.team}</span>
-                    <em>{pos ? `${pos.position}.º en el campeonato · ${pos.points} pts` : "Sin posición en el campeonato todavía"}</em>
+                    <em>{pos ? `${pos.position}.º en ${pos.clase ? `la ${pos.clase}` : "el campeonato"} · ${pos.points} pts` : "Sin posición en el campeonato todavía"}</em>
                     <UltimoResultado candidatos={ultimos} serverNow={now} simulated={simulated} />
                   </Link>
                 </li>
