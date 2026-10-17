@@ -31,6 +31,7 @@ const PHOTOS = {
   "series-f4-italia": { file: "File:Andrea Dupe F4 Prema.jpg", alt: "Los autos de Prema Racing en la grilla de la Fórmula 4 Italiana, Mugello 2025" },
   "series-wec": { file: "File:2026 6 Hours of Spa-Francorchamps Ferrari AF Corse Ferrari 499P No.51 (DSC08169).jpg", alt: "El Ferrari 499P Nº51 en las 6 Horas de Spa-Francorchamps del WEC, 2026" },
   "series-zonal-bsas": { file: "File:ProCar 4000, Gran Premio FAD Medical 2023 (27).jpg", alt: "Carrera de Procar4000, Gran Premio FAD Medical 2023" },
+  "series-rally-argentino": { file: "File:2026 Rally del Jaaukanigás, Villagra.jpg", alt: "El Škoda Fabia RS Rally2 Nº3 de Federico Villagra, visto desde atrás, en el Rally del Jaaukanigás 2026 del Rally Argentino" },
 };
 
 const strip = (s) => String(s ?? "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim();
