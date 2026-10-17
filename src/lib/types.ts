@@ -139,6 +139,10 @@ export interface StandingRow {
   driverSlug?: string;
   /** En una categoría con clases, la clase de esta tabla. */
   classId?: string;
+  /** GT World Challenge: el campeonato de la clase en que corre ("Campeón de la Silver Cup · Sprint Cup"). */
+  classLabel?: string;
+  /** GT World Challenge: la clase de ese campeonato ("Silver Cup"). */
+  clase?: string;
 }
 
 export interface CareerStint {

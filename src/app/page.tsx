@@ -31,7 +31,7 @@ export default async function Home() {
   const standings = Object.fromEntries(
     abroad.map((d) => {
       const st = season.getStandingPosition(d);
-      return [d.slug, st ? { position: st.position, points: st.points } : null];
+      return [d.slug, st ? { position: st.position, points: st.points, ...(st.clase ? { clase: st.clase } : {}) } : null];
     }),
   );
   const latestNotes = (await getAllNotes()).slice(0, 3);

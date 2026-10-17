@@ -120,7 +120,7 @@ export default async function HorarioPage(props: PageProps<"/horarios/[slug]">) 
             <Link href={`/pilotos/${driver!.slug}`} className="next-card list-link" style={{ "--cat": series.color } as CSSProperties}>
               <CategoryLabel series={series} />
               <strong>
-                {standing.position}.º en el campeonato · {standing.points} pts
+                {standing.position}.º en {standing.clase ? `la ${standing.clase}` : "el campeonato"} · {standing.points} pts
               </strong>
               <time>Ver ficha de {driver!.name}</time>
             </Link>

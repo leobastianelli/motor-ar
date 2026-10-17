@@ -4,6 +4,7 @@ import { drivers } from "@/data/drivers";
 import history from "@/data/history.json";
 import driverIndex from "@/data/drivers-2026.json";
 import manualOverrides from "@/data/manual-overrides.json";
+import { puestoEnClase } from "./clase.mjs";
 import { driverKey } from "./sources/driver-index.mjs";
 import { momentoDeCategoria, momentoDeEvento, momentoDePiloto } from "./momento.mjs";
 import { isProvisional } from "./provisorio.mjs";
@@ -265,14 +266,16 @@ export function createSeason(raw: RawSeason) {
             const s = (d.bySeries[event.seriesId] ??= { races: 0, wins: 0, podiums: 0, poles: 0, best: null });
             const classified = !row.positionText || /^\d+$/.test(row.positionText);
             // Un resultado provisorio (planilla de la ACTC antes de la revisión de los comisarios) se lista pero no suma victorias, podios ni "mejor resultado".
+            // Con varias clases en pista (GT3, la general del Rally), las victorias, los podios y las poles son los de su clase.
+            const pos = puestoEnClase(session.results, row)?.pos ?? row.pos;
             if (RACE_KINDS.includes(session.kind) && !isProvisional(session) && !(hayGeneral && session.classId)) {
               s.races++;
-              if (classified && row.pos === 1) s.wins++;
-              if (classified && row.pos <= 3) s.podiums++;
-              if (classified && (s.best === null || row.pos < s.best)) s.best = row.pos;
+              if (classified && pos === 1) s.wins++;
+              if (classified && pos <= 3) s.podiums++;
+              if (classified && (s.best === null || pos < s.best)) s.best = pos;
             }
             // La "Súper clasificación" de Fórmula Renault Plus no es la pole de la fecha.
-            if (session.kind === "clasificacion" && !/s[uú]per/i.test(session.name) && classified && row.pos === 1) s.poles++;
+            if (session.kind === "clasificacion" && !/s[uú]per/i.test(session.name) && classified && pos === 1) s.poles++;
           }
         }
       }
@@ -280,7 +283,29 @@ export function createSeason(raw: RawSeason) {
     driverSeasons = map;
     return map;
   }
+  // GT World Challenge: cada clase (Gold, Silver, Bronze) tiene su campeonato; para un piloto de esas clases es el que vale, no la general.
+  const gtClassTables = ((raw.meta as Record<string, unknown> | undefined)?.gt3Clases as GtClassTable[] | undefined) ?? [];
+  const CUP_ORDER = { general: 0, endurance: 1, sprint: 2 } as const;
+  const classChampionshipsFor = (keys: string | string[]): ClassChampionship[] => {
+    const wanted = new Set(Array.isArray(keys) ? keys : [keys]);
+    return gtClassTables
+      .map((t) => {
+        const row = t.rows.find((r) => r.driver.split(" / ").some((p) => wanted.has(driverKey(p))));
+        if (!row) return null;
+        return { cup: t.cup, cupLabel: t.cupLabel, class: t.class, pos: row.pos, points: row.points, final: t.status === "oficial" && t.scoredRounds >= t.totalRounds, atrasada: t.status === "atrasada", source: t.source };
+      })
+      .filter((x): x is ClassChampionship => x !== null)
+      .sort((a, b) => CUP_ORDER[a.cup] - CUP_ORDER[b.cup]);
+  };
+  /** "Silver Cup · GT World Challenge Europe", con lo que haga falta aclarar (campeón, o que la tabla oficial está atrasada). */
+  const classLabel = (c: ClassChampionship) =>
+    [c.final && c.pos === 1 ? `Campeón de la ${c.class}` : c.class, c.cupLabel, c.atrasada ? "la tabla oficial todavía no suma la última carrera" : ""].filter(Boolean).join(" · ");
+
   const standingFor = (seriesId: string, keys: string | string[]) => {
+    if (seriesId === "gt3") {
+      const c = classChampionshipsFor(keys)[0];
+      if (c) return { pos: c.pos, driver: "", team: "", points: c.points, classLabel: classLabel(c), clase: c.class };
+    }
     const wanted = new Set(Array.isArray(keys) ? keys : [keys]);
     const match = (rows: StandingRow[]) => rows.find((r) => r.driver.split(" / ").some((p) => wanted.has(driverKey(p))));
     // Un piloto puede estar sólo en un campeonato secundario de la categoría (p. ej. Clase 2 del TN).
@@ -363,7 +388,15 @@ export function createSeason(raw: RawSeason) {
     getEventsForSeries,
     ...views,
 
+    /** Los campeonatos de su clase (GT World Challenge Europe: general, Endurance y Sprint), si corre en Gold, Silver o Bronze. */
+    getClassChampionships: (driver: Pick<Driver, "name" | "aliases" | "seriesId">) =>
+      driver.seriesId === "gt3" ? classChampionshipsFor([driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n))) : [],
+
     getStandingPosition(driver: Driver) {
+      if (driver.seriesId === "gt3") {
+        const c = classChampionshipsFor([driver.name, ...(driver.aliases ?? [])].map((n) => driverKey(n)))[0];
+        if (c) return { position: c.pos, points: c.points, wins: undefined, label: classLabel(c), clase: c.class as string | undefined };
+      }
       const row = getStandings(driver.seriesId).find((r) => r.driverSlug === driver.slug);
       if (row) return { position: row.pos, points: row.points, wins: row.wins, label: meta[driver.seriesId]?.standingsLabel };
       // Un piloto puede estar sólo en un campeonato secundario de la categoría (p. ej. Clase 2 del TN).
@@ -375,6 +408,35 @@ export function createSeason(raw: RawSeason) {
 }
 
 export type Season = ReturnType<typeof createSeason>;
+
+/** Campeonato de una clase del GT World Challenge Europe, de la tabla oficial (src/lib/sources/gtwc-official.mjs). */
+interface GtClassTable {
+  cup: "general" | "endurance" | "sprint";
+  cupLabel: string;
+  class: string;
+  /** "atrasada": la tabla oficial todavía no suma la última carrera corrida. */
+  status: "oficial" | "atrasada";
+  scoredRounds: number;
+  totalRounds: number;
+  racesDone: number;
+  asOf?: string;
+  source: string;
+  rows: { pos: number; driver: string; points: number }[];
+}
+
+/** Lo que un piloto lleva en el campeonato de su clase, en cada uno de los tres campeonatos del GT World Challenge Europe. */
+export interface ClassChampionship {
+  cup: GtClassTable["cup"];
+  cupLabel: string;
+  class: string;
+  pos: number;
+  points: number;
+  /** Ya se sumaron todas las fechas del año: si va 1.º, es campeón. */
+  final: boolean;
+  /** La tabla oficial todavía no suma la última carrera corrida. */
+  atrasada: boolean;
+  source: string;
+}
 
 let cached: { raw: RawSeason; season: Season } | null = null;
 
