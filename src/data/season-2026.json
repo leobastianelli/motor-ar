@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T18:49:07.254Z",
+  "generatedAt": "2026-10-17T19:10:03.709Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -187809,7 +187809,7 @@
           }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "nuevo-car-show-2026-8",
@@ -210237,22 +210237,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -210301,8 +210285,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 818,
-      "pagesFetched": 117,
+      "documents": 819,
+      "pagesFetched": 118,
       "eventsWithResults": 61
     },
     "openf1": {
@@ -210345,7 +210329,8 @@
     }
   },
   "failures": [
-    "GT World oficial: gt3-2026-s5/race-1: No se pudo descargar https://www.gt-world-challenge-europe.com/results/2026/barcelona/race-1: fetch failed; gt3-2026-e5: No se pudo descargar https://www.gt-world-challenge-europe.com/event/255/portimao: fetch failed",
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "GT World oficial: No se pudo descargar https://www.gt-world-challenge-europe.com/calendar: fetch failed (se conservan los datos anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
