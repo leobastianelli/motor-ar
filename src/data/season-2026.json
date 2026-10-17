@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T15:20:32.546Z",
+  "generatedAt": "2026-10-17T15:45:25.698Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -38732,7 +38732,7 @@
           }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "tc2000-2026-2",
@@ -55340,7 +55340,7 @@
           }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "tn-2026-4",
@@ -75452,7 +75452,7 @@
           }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "tcp-2026-6",
@@ -101111,7 +101111,7 @@
           }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "f2-2026-6",
@@ -124570,7 +124570,7 @@
           }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "f2-2026-9",
@@ -130815,7 +130815,7 @@
           }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "tn-2026-7",
@@ -157480,7 +157480,7 @@
           }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "tn-2026-8",
@@ -174823,7 +174823,7 @@
           }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "tn-2026-9",
@@ -188009,7 +188009,7 @@
           }
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "nuevo-car-show-2026-8",
@@ -202896,7 +202896,7 @@
           ]
         }
       ],
-      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "tcppk-2026-9",
@@ -203335,6 +203335,118 @@
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
             "url": "https://tiempos.actc.org.ar/resultados/1011/ver"
+          }
+        },
+        {
+          "id": "tcm-2026-10-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-10-17T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "1:30.504"
+            },
+            {
+              "pos": 2,
+              "number": "132",
+              "driver": "Tomas Pellandino",
+              "team": "Ford",
+              "gap": "+0.111"
+            },
+            {
+              "pos": 3,
+              "number": "127",
+              "driver": "Nahuel Cordone",
+              "team": "Ford",
+              "gap": "+0.235"
+            },
+            {
+              "pos": 4,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Toyota",
+              "gap": "+0.309"
+            },
+            {
+              "pos": 5,
+              "number": "133",
+              "driver": "Juan Pablo Alberti",
+              "team": "Volkswagen",
+              "gap": "+0.568"
+            },
+            {
+              "pos": 6,
+              "number": "66",
+              "driver": "Gonzalo Aramburu",
+              "team": "Toyota",
+              "gap": "+0.606"
+            },
+            {
+              "pos": 7,
+              "number": "10",
+              "driver": "Luis Catelli",
+              "team": "Toyota",
+              "gap": "+0.641"
+            },
+            {
+              "pos": 8,
+              "number": "107",
+              "driver": "Sganga Antonino",
+              "team": "Ford",
+              "gap": "+1.113"
+            },
+            {
+              "pos": 9,
+              "number": "14",
+              "driver": "Nestor Omar Goya",
+              "team": "Ford",
+              "gap": "+1.720"
+            },
+            {
+              "pos": 10,
+              "number": "8",
+              "driver": "Juan Antonio Sandin",
+              "team": "Ford",
+              "gap": "+1.790"
+            },
+            {
+              "pos": 11,
+              "number": "76",
+              "driver": "Juan José Suárez",
+              "team": "Ford",
+              "gap": "+1.863"
+            },
+            {
+              "pos": 12,
+              "number": "15",
+              "driver": "Jose Alberto Goya",
+              "team": "Ford",
+              "gap": "+1.975"
+            },
+            {
+              "pos": 13,
+              "number": "88",
+              "driver": "Alvaro Oroza",
+              "team": "Ford",
+              "gap": "+3.807"
+            },
+            {
+              "pos": 14,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Foton",
+              "gap": "+316.380"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1013/ver"
           }
         },
         {
@@ -210031,6 +210143,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -210079,8 +210207,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 809,
-      "pagesFetched": 113,
+      "documents": 811,
+      "pagesFetched": 114,
       "eventsWithResults": 61
     },
     "openf1": {
@@ -210120,7 +210248,7 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: No se pudo descargar https://nuevocarshow.com.ar/wp-json/wp/v2/pages?slug=calendario&_fields=content,modified: fetch failed",
+    "GT World oficial: No se pudo descargar https://www.gt-world-challenge-europe.com/calendar: fetch failed (se conservan los datos anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
