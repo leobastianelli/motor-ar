@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T00:57:21.517Z",
+  "generatedAt": "2026-10-17T01:10:52.274Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -209787,7 +209787,7 @@
     },
     "timing": {
       "documents": 800,
-      "pagesFetched": 163,
+      "pagesFetched": 110,
       "eventsWithResults": 58
     },
     "openf1": {
@@ -209832,7 +209832,6 @@
   },
   "failures": [
     "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "YouTube F1: No se pudo descargar https://www.youtube.com/feeds/videos.xml?channel_id=UCB_qr75-ydFVKSF9Dmo6izg: HTTP 404 (text/html; charset=UTF-8) (se conservan los videos anteriores)",
-    "Se conservaron resultados de 4 sesiones que las fuentes dejaron de traer"
+    "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
