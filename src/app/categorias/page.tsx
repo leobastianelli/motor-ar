@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import type { CSSProperties } from "react";
+import { Avisar } from "@/components/avisar";
 import { CategoryLabel, SectionTitle } from "@/components/pista";
 import { getAllSeries, getNow, getSeason } from "@/lib/data";
 import { fmtDayShort, fmtMonthShort } from "@/lib/format";
@@ -56,6 +57,7 @@ export default async function CategoriesPage() {
           </div>
         </section>
       ))}
+      <Avisar />
     </>
   );
 }

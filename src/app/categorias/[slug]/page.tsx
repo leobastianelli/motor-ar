@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { breadcrumb, itemListJsonLd, JsonLd, seasonEventSummary } from "@/components/json-ld";
+import { Avisar } from "@/components/avisar";
 import { AgregarCalendario } from "@/components/agregar-calendario";
 import { CalendarioPlegable } from "@/components/calendario-plegable";
 import { AutoRefresh } from "@/components/live-clock";
@@ -417,6 +418,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
           </div>
         </section>
       )}
+      <Avisar categoria={{ name: series.name, id: series.id }} />
     </>
   );
 }
