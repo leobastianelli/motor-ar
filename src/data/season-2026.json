@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T20:25:27.927Z",
+  "generatedAt": "2026-10-17T20:35:14.528Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -204104,7 +204104,112 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
               "start": "16:10"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "Foton",
+              "gap": "1:27.946"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": "+0.588"
+            },
+            {
+              "pos": 3,
+              "number": "107",
+              "driver": "Tobías Martínez",
+              "team": "Chevrolet",
+              "gap": "+0.751"
+            },
+            {
+              "pos": 4,
+              "number": "68",
+              "driver": "Julián Santero",
+              "team": "Ford",
+              "gap": "+1.305"
+            },
+            {
+              "pos": 5,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Ford",
+              "gap": "+8.438"
+            },
+            {
+              "pos": 6,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": "+0.960"
+            },
+            {
+              "pos": 7,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
+              "gap": "+1.454"
+            },
+            {
+              "pos": 8,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
+              "gap": "+2.100"
+            },
+            {
+              "pos": 9,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": "+2.846"
+            },
+            {
+              "pos": 10,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Toyota",
+              "gap": "+1.540"
+            },
+            {
+              "pos": 11,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
+              "gap": "+1.698"
+            },
+            {
+              "pos": 12,
+              "number": "126",
+              "driver": "Thomas Ricciardi",
+              "team": "Ford",
+              "gap": "+1.188"
+            },
+            {
+              "pos": 13,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": "+1.798"
+            },
+            {
+              "pos": 14,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1029/ver"
+          }
         },
         {
           "id": "tcpk-2026-9-serie-serie1",
@@ -204364,6 +204469,91 @@
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
             "url": "https://tiempos.actc.org.ar/resultados/1019/ver"
+          }
+        },
+        {
+          "id": "tcm-2026-10-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-10-17T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "1:25.334"
+            },
+            {
+              "pos": 2,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "+0.092"
+            },
+            {
+              "pos": 3,
+              "number": "75",
+              "driver": "Matias Frano",
+              "team": "Ford",
+              "gap": "+0.176"
+            },
+            {
+              "pos": 4,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "+0.413"
+            },
+            {
+              "pos": 5,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "+0.723"
+            },
+            {
+              "pos": 6,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+1.028"
+            },
+            {
+              "pos": 7,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+1.211"
+            },
+            {
+              "pos": 8,
+              "number": "118",
+              "driver": "Fabrizio Maggini",
+              "team": "Ford",
+              "gap": "+1.517"
+            },
+            {
+              "pos": 9,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+2.080"
+            },
+            {
+              "pos": 10,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Dodge",
+              "gap": "+2.500"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1031/ver",
+            "status": "provisional"
           }
         },
         {
@@ -211243,22 +211433,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -211307,8 +211481,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 826,
-      "pagesFetched": 125,
+      "documents": 829,
+      "pagesFetched": 126,
       "eventsWithResults": 62,
       "retagged": {
         "1003": {
@@ -211386,7 +211560,7 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
