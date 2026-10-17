@@ -1,3 +1,4 @@
+import { puestoEnClase } from "@/lib/clase.mjs";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -214,8 +215,17 @@ function SeasonBlocks({ keys, season }: { keys: string[]; season: Season }) {
                       {rows.map(({ session, row }) => (
                         <li key={session.id} className={RACES.has(session.kind) ? "race" : undefined}>
                           <span>{session.name}</span>
-                          <b>{row.positionText && !/^\d+$/.test(row.positionText) ? row.positionText : `${row.pos}.º`}</b>
-                          <small>{[row.status ?? row.gap, isProvisional(session) ? "provisorio" : ""].filter(Boolean).join(" · ")}</small>
+                          <b>{row.positionText && !/^\d+$/.test(row.positionText) ? row.positionText : `${puestoEnClase(session.results, row)?.pos ?? row.pos}.º`}</b>
+                          <small>
+                            {[
+                              // Multiclase (GT3, la general del Rally): el puesto grande es el de su clase; la general va acá.
+                              puestoEnClase(session.results, row) ? `en ${row.class} · ${row.pos}.º en la general` : "",
+                              row.status ?? row.gap,
+                              isProvisional(session) ? "provisorio" : "",
+                            ]
+                              .filter(Boolean)
+                              .join(" · ")}
+                          </small>
                         </li>
                       ))}
                     </ul>
