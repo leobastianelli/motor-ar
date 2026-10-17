@@ -23,6 +23,16 @@ export const broadcastsBySeries: Record<string, { items: Broadcast[]; source?: s
     items: [{ name: "Canal 9", kind: "tv" }],
     source: "https://tavilatam.com/argentina-turismo-carretera-tc-pista-y-las-principales-categorias-automovilisticas-argentinas-pasan-de-la-tv-publica-a-canal-9/",
   },
+  "tc-mouras": {
+    // La nota de la ACTC dice «Transmisión de 15 a 18 horas por TV Pública» (las finales del domingo 18/10, Fecha 10 en La Plata).
+    items: [{ name: "TV Pública", kind: "tv" }],
+    source: "https://www.actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana",
+  },
+  "tc-pista-mouras": {
+    // La nota de la ACTC dice «Transmisión de 15 a 18 horas por TV Pública» (las finales del domingo 18/10, Fecha 10 en La Plata).
+    items: [{ name: "TV Pública", kind: "tv" }],
+    source: "https://www.actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana",
+  },
   tn: {
     items: [
       { name: "Canal 9", kind: "tv" },
