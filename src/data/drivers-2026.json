@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T00:57:22.348Z",
+  "generatedAt": "2026-10-17T13:50:18.679Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -583,16 +583,19 @@
       "name": "Alvaro Oroza",
       "aliases": [],
       "series": [
-        "tc-pista-pick-up"
+        "tc-pista-pick-up",
+        "tc-mouras"
       ],
       "numbers": {
-        "tc-pista-pick-up": "88"
+        "tc-pista-pick-up": "88",
+        "tc-mouras": "88"
       },
       "teams": {
-        "tc-pista-pick-up": "Ford"
+        "tc-pista-pick-up": "Ford",
+        "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "andres calderon",
@@ -3156,18 +3159,21 @@
       "aliases": [],
       "series": [
         "tc-pista",
-        "tc-pista-pick-up"
+        "tc-pista-pick-up",
+        "tc-mouras"
       ],
       "numbers": {
         "tc-pista": "144",
-        "tc-pista-pick-up": "144"
+        "tc-pista-pick-up": "144",
+        "tc-mouras": "144"
       },
       "teams": {
         "tc-pista": "Ford",
-        "tc-pista-pick-up": "Ford"
+        "tc-pista-pick-up": "Ford",
+        "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "antunez federico",
@@ -4461,16 +4467,19 @@
       "name": "Gonzalo Aramburu",
       "aliases": [],
       "series": [
-        "tc-pista-pick-up"
+        "tc-pista-pick-up",
+        "tc-mouras"
       ],
       "numbers": {
-        "tc-pista-pick-up": "66"
+        "tc-pista-pick-up": "66",
+        "tc-mouras": "66"
       },
       "teams": {
-        "tc-pista-pick-up": "Toyota"
+        "tc-pista-pick-up": "Toyota",
+        "tc-mouras": "Toyota"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "gonzalo viel",
@@ -5827,16 +5836,19 @@
       "name": "Jose Alberto Goya",
       "aliases": [],
       "series": [
-        "tc-pista-pick-up"
+        "tc-pista-pick-up",
+        "tc-mouras"
       ],
       "numbers": {
-        "tc-pista-pick-up": "15"
+        "tc-pista-pick-up": "15",
+        "tc-mouras": "15"
       },
       "teams": {
-        "tc-pista-pick-up": "Ford"
+        "tc-pista-pick-up": "Ford",
+        "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "carlos jose montanari",
@@ -6144,18 +6156,21 @@
       "aliases": [],
       "series": [
         "tc-pista-pick-up",
-        "tc-pista"
+        "tc-pista",
+        "tc-mouras"
       ],
       "numbers": {
         "tc-pista-pick-up": "8",
-        "tc-pista": "32"
+        "tc-pista": "32",
+        "tc-mouras": "8"
       },
       "teams": {
         "tc-pista-pick-up": "Ford",
-        "tc-pista": "Toyota"
+        "tc-pista": "Toyota",
+        "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "b benedictis de juan",
@@ -6515,18 +6530,21 @@
       "aliases": [],
       "series": [
         "tc-pista-mouras",
-        "tc-pista-pick-up"
+        "tc-pista-pick-up",
+        "tc-mouras"
       ],
       "numbers": {
         "tc-pista-mouras": "76",
-        "tc-pista-pick-up": "76"
+        "tc-pista-pick-up": "76",
+        "tc-mouras": "76"
       },
       "teams": {
         "tc-pista-mouras": "Ford",
-        "tc-pista-pick-up": "Ford"
+        "tc-pista-pick-up": "Ford",
+        "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "jose juan tomasello",
@@ -6770,16 +6788,19 @@
       "name": "Juan Pablo Alberti",
       "aliases": [],
       "series": [
-        "tc-pista-pick-up"
+        "tc-pista-pick-up",
+        "tc-mouras"
       ],
       "numbers": {
-        "tc-pista-pick-up": "133"
+        "tc-pista-pick-up": "133",
+        "tc-mouras": "133"
       },
       "teams": {
-        "tc-pista-pick-up": "Volkswagen"
+        "tc-pista-pick-up": "Volkswagen",
+        "tc-mouras": "Volkswagen"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "cortina juan pablo",
@@ -8043,16 +8064,19 @@
       "name": "Luis Catelli",
       "aliases": [],
       "series": [
-        "tc-pista-pick-up"
+        "tc-pista-pick-up",
+        "tc-mouras"
       ],
       "numbers": {
-        "tc-pista-pick-up": "10"
+        "tc-pista-pick-up": "10",
+        "tc-mouras": "10"
       },
       "teams": {
-        "tc-pista-pick-up": "Toyota"
+        "tc-pista-pick-up": "Toyota",
+        "tc-mouras": "Toyota"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "di jose luis palma",
@@ -9811,16 +9835,19 @@
       "name": "Nahuel Cordone",
       "aliases": [],
       "series": [
-        "tc-pista-pick-up"
+        "tc-pista-pick-up",
+        "tc-mouras"
       ],
       "numbers": {
-        "tc-pista-pick-up": "127"
+        "tc-pista-pick-up": "127",
+        "tc-mouras": "127"
       },
       "teams": {
-        "tc-pista-pick-up": "Ford"
+        "tc-pista-pick-up": "Ford",
+        "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "della nahuel santina",
@@ -9972,16 +9999,19 @@
       "name": "Nestor Omar Goya",
       "aliases": [],
       "series": [
-        "tc-pista-pick-up"
+        "tc-pista-pick-up",
+        "tc-mouras"
       ],
       "numbers": {
-        "tc-pista-pick-up": "14"
+        "tc-pista-pick-up": "14",
+        "tc-mouras": "14"
       },
       "teams": {
-        "tc-pista-pick-up": "Ford"
+        "tc-pista-pick-up": "Ford",
+        "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "nicanor pazos santilli",
@@ -9994,18 +10024,21 @@
       "aliases": [],
       "series": [
         "tc-pista",
-        "tc-pista-pick-up"
+        "tc-pista-pick-up",
+        "tc-mouras"
       ],
       "numbers": {
         "tc-pista": "123",
-        "tc-pista-pick-up": "123"
+        "tc-pista-pick-up": "123",
+        "tc-mouras": "123"
       },
       "teams": {
         "tc-pista": "Ford",
-        "tc-pista-pick-up": "Foton"
+        "tc-pista-pick-up": "Foton",
+        "tc-mouras": "Foton"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "nico varrone",
@@ -11734,18 +11767,21 @@
       "aliases": [],
       "series": [
         "tc-pista",
-        "tc-pista-pick-up"
+        "tc-pista-pick-up",
+        "tc-mouras"
       ],
       "numbers": {
         "tc-pista": "67",
-        "tc-pista-pick-up": "67"
+        "tc-pista-pick-up": "67",
+        "tc-mouras": "67"
       },
       "teams": {
         "tc-pista": "Dodge",
-        "tc-pista-pick-up": "Toyota"
+        "tc-pista-pick-up": "Toyota",
+        "tc-mouras": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "cistola santiago",
@@ -12357,16 +12393,19 @@
       "name": "Sganga Antonino",
       "aliases": [],
       "series": [
-        "tc-pista-pick-up"
+        "tc-pista-pick-up",
+        "tc-mouras"
       ],
       "numbers": {
-        "tc-pista-pick-up": "107"
+        "tc-pista-pick-up": "107",
+        "tc-mouras": "107"
       },
       "teams": {
-        "tc-pista-pick-up": "Ford"
+        "tc-pista-pick-up": "Ford",
+        "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "micol simon",
@@ -12698,18 +12737,21 @@
       "aliases": [],
       "series": [
         "tc-pista-pick-up",
-        "tc-pista"
+        "tc-pista",
+        "tc-mouras"
       ],
       "numbers": {
         "tc-pista-pick-up": "132",
-        "tc-pista": "132"
+        "tc-pista": "132",
+        "tc-mouras": "132"
       },
       "teams": {
         "tc-pista-pick-up": "Ford",
-        "tc-pista": "Dodge"
+        "tc-pista": "Dodge",
+        "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-17"
     },
     {
       "key": "perotti tomas",
