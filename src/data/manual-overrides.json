@@ -120,6 +120,23 @@
         { "kind": "practica", "name": "Warm Up", "start": "2026-10-11T10:35:00-03:00", "timeKnown": true, "durationMin": 15, "timeSources": [{"name": "TC2000 oficial · cronograma de actividades", "url": "https://tc2000.com.ar/", "start": "2026-10-11T10:35:00-03:00"}] },
         { "kind": "carrera", "name": "Carrera", "start": "2026-10-11T13:00:00-03:00", "timeKnown": true, "durationMin": 40, "timeSources": [{"name": "TC2000 oficial · cronograma de actividades", "url": "https://tc2000.com.ar/", "start": "2026-10-11T13:00:00-03:00"}] }
       ]
+    },
+    "rally-argentino-2026-1": {
+      "sessions": [
+        {
+          "kind": "carrera", "name": "Clasificación general", "resultsUnread": false,
+          "resultsSource": {
+            "name": "Rally Argentino · Rally Pagos del Tuyú (General Madariaga): sólo el podio de la clasificación general, cargado a mano de las notas de Carburando y Entrelíneas, porque los tiempos oficiales de esta fecha no se pudieron leer",
+            "url": "https://www.entrelineas.info/articulo/1067/44782/general-madariaga-el-historico-federico-villagra-gano-el-rally-pagos-del-tuyu",
+            "note": "Figuran solo los tres primeros de la general (Carburando: https://www.carburando.com/notas/rally-argentino-villagra-ganador-de-punta-a-punta-en-pagos-del-tuyu). Faltan el resto de la clasificación, los números de auto y los tiempos de cada uno: las notas no los dan."
+          },
+          "results": [
+            {"pos": 1, "driver": "Federico Villagra / Diego Curletto", "team": "Skoda Fabia RS Rally2", "gap": "", "class": "RC2"},
+            {"pos": 2, "driver": "Miguel Baldoni / Gustavo Franchello", "team": "Skoda Fabia RS Rally2", "gap": "+21.4", "class": "RC2"},
+            {"pos": 3, "driver": "Augusto D'Agostini / Juan Pablo Carrera", "team": "Skoda Fabia RS Rally2", "gap": "", "class": "RC2"}
+          ]
+        }
+      ]
     }
   },
   "_ayuda_standings": "Campeonato cargado a mano por categoría. 'asOfRound' es la última fecha que incluye: gana sobre la fuente automática sólo si la fuente no cubre más fechas. Cuando la fuente se ponga al día, se usa la fuente.",
@@ -222,9 +239,80 @@
       "name": "Fecha 1 · NOLA Motorsports Park",
       "circuit": { "name": "NOLA Motorsports Park", "city": "Avondale", "country": "Estados Unidos", "flag": "US", "province": "Luisiana" },
       "sessions": [
-        { "id": "ligier-jfc-2026-1-carreras", "kind": "carrera", "name": "Carreras", "start": "2026-04-12T12:00:00-04:00", "timeKnown": false, "durationMin": 30 }
+        {
+          "id": "ligier-jfc-2026-1-carrera-1-gen-1", "kind": "carrera", "name": "Carrera 1 · Gen. 1", "start": "2026-04-11T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 1), clase Gen. 1. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-1-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 2, "number": "47", "driver": "Truly Adams", "team": "Berg Racing", "gap": "+0.920", "class": "Gen. 1"},
+            {"pos": 3, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "+4.982", "class": "Gen. 1"},
+            {"pos": 4, "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "+12.454", "class": "Gen. 1"},
+            {"pos": 5, "number": "09", "driver": "Will Franklin", "team": "Kiwi Motorsport", "gap": "+32.735", "class": "Gen. 1"},
+            {"pos": 6, "number": "33", "driver": "Alexander Savage", "team": "G Tech Motorsports", "gap": "+44.562", "class": "Gen. 1"},
+            {"pos": 7, "number": "12", "driver": "Michael Fatutta", "team": "G Tech Motorsports", "gap": "+1:03.777", "class": "Gen. 1"},
+            {"pos": 8, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "+1:15.922", "class": "Gen. 1"},
+            {"pos": 9, "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "+1 vuelta", "class": "Gen. 1"},
+            {"pos": 10, "positionText": "NC", "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "+9 vueltas", "class": "Gen. 1", "status": "No clasificado"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-1-carrera-1-gen-2", "kind": "carrera", "name": "Carrera 1 · Gen. 2", "start": "2026-04-11T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 1), clase Gen. 2. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-1-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "30", "driver": "Edward Kennedy", "team": "MLT Motorsports", "gap": "31:16.295", "class": "Gen. 2"},
+            {"pos": 2, "number": "07", "driver": "Jack Speth", "team": "Kiwi Motorsport", "gap": "+22.951", "class": "Gen. 2"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-1-carrera-2-gen-1", "kind": "carrera", "name": "Carrera 2 · Gen. 1", "start": "2026-04-11T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 2), clase Gen. 1. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-2-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 2, "number": "47", "driver": "Truly Adams", "team": "Berg Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 3, "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 4, "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 5, "number": "09", "driver": "Will Franklin", "team": "Kiwi Motorsport", "gap": "", "class": "Gen. 1"},
+            {"pos": 6, "number": "33", "driver": "Alexander Savage", "team": "G Tech Motorsports", "gap": "", "class": "Gen. 1"},
+            {"pos": 7, "number": "12", "driver": "Michael Fatutta", "team": "G Tech Motorsports", "gap": "", "class": "Gen. 1"},
+            {"pos": 8, "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "+1 vuelta", "class": "Gen. 1"},
+            {"pos": 9, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "+2 vueltas", "class": "Gen. 1"},
+            {"pos": 10, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "+3 vueltas", "class": "Gen. 1"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-1-carrera-2-gen-2", "kind": "carrera", "name": "Carrera 2 · Gen. 2", "start": "2026-04-11T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 2), clase Gen. 2. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-2-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "30", "driver": "Edward Kennedy", "team": "MLT Motorsports", "gap": "30:52.830", "class": "Gen. 2"},
+            {"pos": 2, "number": "07", "driver": "Jack Speth", "team": "Kiwi Motorsport", "gap": "+26.368", "class": "Gen. 2"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-1-carrera-3-gen-1", "kind": "carrera", "name": "Carrera 3 · Gen. 1", "start": "2026-04-12T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 3), clase Gen. 1. La planilla anota penalizaciones de 5 s a los #12, #33 y #52 por salida en falso. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-3-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "", "class": "Gen. 1"},
+            {"pos": 2, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "+9.979", "class": "Gen. 1"},
+            {"pos": 3, "number": "47", "driver": "Truly Adams", "team": "Berg Racing", "gap": "+15.304", "class": "Gen. 1"},
+            {"pos": 4, "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "+15.868", "class": "Gen. 1"},
+            {"pos": 5, "number": "09", "driver": "Will Franklin", "team": "Kiwi Motorsport", "gap": "+38.972", "class": "Gen. 1"},
+            {"pos": 6, "number": "33", "driver": "Alexander Savage", "team": "G Tech Motorsports", "gap": "+45.176", "class": "Gen. 1"},
+            {"pos": 7, "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "+58.897", "class": "Gen. 1"},
+            {"pos": 8, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "+1:05.906", "class": "Gen. 1"},
+            {"pos": 9, "number": "12", "driver": "Michael Fatutta", "team": "G Tech Motorsports", "gap": "+1:32.145", "class": "Gen. 1"},
+            {"pos": 10, "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "+1 vuelta", "class": "Gen. 1"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-1-carrera-3-gen-2", "kind": "carrera", "name": "Carrera 3 · Gen. 2", "start": "2026-04-12T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 3), clase Gen. 2. La planilla anota penalizaciones de 5 s a los #12, #33 y #52 por salida en falso. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-3-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "30", "driver": "Edward Kennedy", "team": "MLT Motorsports", "gap": "30:59.275", "class": "Gen. 2"},
+            {"pos": 2, "number": "07", "driver": "Jack Speth", "team": "Kiwi Motorsport", "gap": "+41.217", "class": "Gen. 2"}
+          ]
+        }
       ],
-      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (abril 9–12)"
+      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (abril 9–12) y resultados oficiales de las tres carreras (PDF de cada ronda, clases Gen. 1 y Gen. 2)"
     },
     {
       "id": "ligier-jfc-2026-2",
@@ -233,9 +321,50 @@
       "name": "Fecha 2 · Road America",
       "circuit": { "name": "Road America", "city": "Elkhart Lake", "country": "Estados Unidos", "flag": "US", "province": "Wisconsin" },
       "sessions": [
-        { "id": "ligier-jfc-2026-2-carreras", "kind": "carrera", "name": "Carreras", "start": "2026-05-17T12:00:00-04:00", "timeKnown": false, "durationMin": 30 }
+        {
+          "id": "ligier-jfc-2026-2-carrera-1-gen-1", "kind": "carrera", "name": "Carrera 1 · Gen. 1", "start": "2026-05-16T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 4), clase Gen. 1. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-4-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "30:27.809", "class": "Gen. 1"},
+            {"pos": 2, "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "+0.427", "class": "Gen. 1"},
+            {"pos": 3, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "+0.829", "class": "Gen. 1"},
+            {"pos": 4, "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "+5.999", "class": "Gen. 1"},
+            {"pos": 5, "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "+15.214", "class": "Gen. 1"},
+            {"pos": 6, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "+2 vueltas", "class": "Gen. 1"},
+            {"pos": 7, "positionText": "NC", "number": "33", "driver": "Alexander Savage", "team": "G Tech Motorsports", "gap": "+8 vueltas", "class": "Gen. 1", "status": "No clasificado"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-2-carrera-1-gen-2", "kind": "carrera", "name": "Carrera 1 · Gen. 2", "start": "2026-05-16T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 4), clase Gen. 2. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-4-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "07", "driver": "Jack Speth", "team": "Kiwi Motorsport", "gap": "", "class": "Gen. 2"},
+            {"pos": 2, "positionText": "NC", "number": "54", "driver": "Michael Fatutta", "team": "G Tech Motorsports", "gap": "+6 vueltas", "class": "Gen. 2", "status": "No clasificado"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-2-carrera-2-gen-1", "kind": "carrera", "name": "Carrera 2 · Gen. 1", "start": "2026-05-17T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 5), clase Gen. 1. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-5-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "30:59.436", "class": "Gen. 1"},
+            {"pos": 2, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "+0.021", "class": "Gen. 1"},
+            {"pos": 3, "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "+0.168", "class": "Gen. 1"},
+            {"pos": 4, "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "+12.464", "class": "Gen. 1"},
+            {"pos": 5, "number": "33", "driver": "Alexander Savage", "team": "G Tech Motorsports", "gap": "+33.970", "class": "Gen. 1"},
+            {"pos": 6, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "+1:19.107", "class": "Gen. 1"},
+            {"pos": 7, "positionText": "NC", "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "", "class": "Gen. 1", "status": "No clasificado"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-2-carrera-2-gen-2", "kind": "carrera", "name": "Carrera 2 · Gen. 2", "start": "2026-05-17T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 5), clase Gen. 2. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-5-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "07", "driver": "Jack Speth", "team": "Kiwi Motorsport", "gap": "", "class": "Gen. 2"},
+            {"pos": 2, "number": "54", "driver": "Michael Fatutta", "team": "G Tech Motorsports", "gap": "+1 vuelta", "class": "Gen. 2"}
+          ]
+        }
       ],
-      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (mayo 14–17)"
+      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (mayo 14–17) y resultados oficiales de las dos carreras disputadas (PDF de cada ronda); la tercera carrera se canceló por mal clima, según la web de la serie"
     },
     {
       "id": "ligier-jfc-2026-3",
@@ -244,9 +373,71 @@
       "name": "Fecha 3 · Mid-Ohio",
       "circuit": { "name": "Mid-Ohio Sports Car Course", "city": "Lexington", "country": "Estados Unidos", "flag": "US", "province": "Ohio" },
       "sessions": [
-        { "id": "ligier-jfc-2026-3-carreras", "kind": "carrera", "name": "Carreras", "start": "2026-06-14T12:00:00-04:00", "timeKnown": false, "durationMin": 30 }
+        {
+          "id": "ligier-jfc-2026-3-carrera-1-gen-1", "kind": "carrera", "name": "Carrera 1 · Gen. 1", "start": "2026-06-13T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 7), clase Gen. 1. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Mid-Ohio-2026-Round-7-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 2, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "", "class": "Gen. 1"},
+            {"pos": 3, "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 4, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 5, "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 6, "number": "33", "driver": "Alexander Savage", "team": "G Tech Motorsports", "gap": "+3 vueltas", "class": "Gen. 1"},
+            {"pos": 7, "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "+4 vueltas", "class": "Gen. 1"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-3-carrera-1-gen-2", "kind": "carrera", "name": "Carrera 1 · Gen. 2", "start": "2026-06-13T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 7), clase Gen. 2. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Mid-Ohio-2026-Round-7-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "30", "driver": "Edward Kennedy", "team": "MLT Motorsports", "gap": "30:37.138", "class": "Gen. 2"},
+            {"pos": 2, "number": "07", "driver": "Jack Speth", "team": "Kiwi Motorsport", "gap": "+0.616", "class": "Gen. 2"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-3-carrera-2-gen-1", "kind": "carrera", "name": "Carrera 2 · Gen. 1", "start": "2026-06-14T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 8), clase Gen. 1. La planilla anota una penalización de 30 s al #7 (decisión de comisarios 312). Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Mid-Ohio-2026-Round-8-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "", "class": "Gen. 1"},
+            {"pos": 2, "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 3, "number": "33", "driver": "Alexander Savage", "team": "G Tech Motorsports", "gap": "", "class": "Gen. 1"},
+            {"pos": 4, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 5, "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 6, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 7, "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "+1 vuelta", "class": "Gen. 1"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-3-carrera-2-gen-2", "kind": "carrera", "name": "Carrera 2 · Gen. 2", "start": "2026-06-14T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 8), clase Gen. 2. La planilla anota una penalización de 30 s al #7 (decisión de comisarios 312). Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Mid-Ohio-2026-Round-8-Official-Race-Results.pdf" },
+          "results": [
+            {"pos": 1, "number": "30", "driver": "Edward Kennedy", "team": "MLT Motorsports", "gap": "30:30.429", "class": "Gen. 2"},
+            {"pos": 2, "number": "07", "driver": "Jack Speth", "team": "Kiwi Motorsport", "gap": "", "class": "Gen. 2"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-3-carrera-3-gen-1", "kind": "carrera", "name": "Carrera 3 · Gen. 1", "start": "2026-06-14T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 9), clase Gen. 1. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Mid-Ohio-2026-Round-9-Official-Race-Results-1.pdf" },
+          "results": [
+            {"pos": 1, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 2, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "", "class": "Gen. 1"},
+            {"pos": 3, "number": "33", "driver": "Alexander Savage", "team": "G Tech Motorsports", "gap": "", "class": "Gen. 1"},
+            {"pos": 4, "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 5, "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 6, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 7, "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "+1 vuelta", "class": "Gen. 1"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-3-carrera-3-gen-2", "kind": "carrera", "name": "Carrera 3 · Gen. 2", "start": "2026-06-14T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 9), clase Gen. 2. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Mid-Ohio-2026-Round-9-Official-Race-Results-1.pdf" },
+          "results": [
+            {"pos": 1, "number": "07", "driver": "Jack Speth", "team": "Kiwi Motorsport", "gap": "30:31.196", "class": "Gen. 2"},
+            {"pos": 2, "number": "30", "driver": "Edward Kennedy", "team": "MLT Motorsports", "gap": "+2.578", "class": "Gen. 2"}
+          ]
+        }
       ],
-      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (junio 11–14)"
+      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (junio 11–14) y resultados oficiales de las tres carreras (PDF de cada ronda, clases Gen. 1 y Gen. 2)"
     },
     {
       "id": "ligier-jfc-2026-4",
@@ -255,9 +446,71 @@
       "name": "Fecha 4 · New Jersey Motorsports Park",
       "circuit": { "name": "New Jersey Motorsports Park", "city": "Millville", "country": "Estados Unidos", "flag": "US", "province": "Nueva Jersey" },
       "sessions": [
-        { "id": "ligier-jfc-2026-4-carreras", "kind": "carrera", "name": "Carreras", "start": "2026-08-02T12:00:00-04:00", "timeKnown": false, "durationMin": 30 }
+        {
+          "id": "ligier-jfc-2026-4-carrera-1-gen-1", "kind": "carrera", "name": "Carrera 1 · Gen. 1", "start": "2026-08-01T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 10), clase Gen. 1. La planilla anota que la penalización del #07 se convirtió en 30 s (decisión de comisarios 508). Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-10-Official-Race-Results-1.pdf" },
+          "results": [
+            {"pos": 1, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 2, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "+3.799", "class": "Gen. 1"},
+            {"pos": 3, "number": "33", "driver": "Alexander Savage", "team": "G Tech Motorsports", "gap": "+4.434", "class": "Gen. 1"},
+            {"pos": 4, "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "+5.017", "class": "Gen. 1"},
+            {"pos": 5, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "+23.785", "class": "Gen. 1"},
+            {"pos": 6, "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "+51.465", "class": "Gen. 1"},
+            {"pos": 7, "positionText": "NC", "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "+9 vueltas", "class": "Gen. 1", "status": "No clasificado"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-4-carrera-1-gen-2", "kind": "carrera", "name": "Carrera 1 · Gen. 2", "start": "2026-08-01T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 10), clase Gen. 2. La planilla anota que la penalización del #07 se convirtió en 30 s (decisión de comisarios 508). Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-10-Official-Race-Results-1.pdf" },
+          "results": [
+            {"pos": 1, "number": "30", "driver": "Edward Kennedy", "team": "MLT Motorsports", "gap": "30:42.213", "class": "Gen. 2"},
+            {"pos": 2, "number": "07", "driver": "Jack Speth", "team": "Kiwi Motorsport", "gap": "+36.727", "class": "Gen. 2"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-4-carrera-2-gen-1", "kind": "carrera", "name": "Carrera 2 · Gen. 1", "start": "2026-08-02T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 11), clase Gen. 1. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-11-Official-Race-Results-1.pdf" },
+          "results": [
+            {"pos": 1, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 2, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "+2.759", "class": "Gen. 1"},
+            {"pos": 3, "number": "33", "driver": "Alexander Savage", "team": "G Tech Motorsports", "gap": "+15.743", "class": "Gen. 1"},
+            {"pos": 4, "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "+16.614", "class": "Gen. 1"},
+            {"pos": 5, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "+59.681", "class": "Gen. 1"},
+            {"pos": 6, "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "+1 vuelta", "class": "Gen. 1"},
+            {"pos": 7, "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "+1 vuelta", "class": "Gen. 1"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-4-carrera-2-gen-2", "kind": "carrera", "name": "Carrera 2 · Gen. 2", "start": "2026-08-02T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 11), clase Gen. 2. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-11-Official-Race-Results-1.pdf" },
+          "results": [
+            {"pos": 1, "number": "30", "driver": "Edward Kennedy", "team": "MLT Motorsports", "gap": "29:50.435", "class": "Gen. 2"},
+            {"pos": 2, "number": "07", "driver": "Jack Speth", "team": "Kiwi Motorsport", "gap": "+14.689", "class": "Gen. 2"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-4-carrera-3-gen-1", "kind": "carrera", "name": "Carrera 3 · Gen. 1", "start": "2026-08-02T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 12), clase Gen. 1. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-12-Official-Race-Results-1.pdf" },
+          "results": [
+            {"pos": 1, "number": "7", "driver": "Beckham Jacir", "team": "Champagne Racing", "gap": "", "class": "Gen. 1"},
+            {"pos": 2, "number": "11", "driver": "Lazaro Bainotti", "team": "Speed Factory", "gap": "+3.806", "class": "Gen. 1"},
+            {"pos": 3, "number": "26", "driver": "Ava Hanssen", "team": "Ava Hanssen Racing", "gap": "+37.176", "class": "Gen. 1"},
+            {"pos": 4, "number": "52", "driver": "Ella White", "team": "Berg Racing", "gap": "+1 vuelta", "class": "Gen. 1"},
+            {"pos": 5, "number": "9", "driver": "Tyler Wade", "team": "Berg Racing", "gap": "+1 vuelta", "class": "Gen. 1"},
+            {"pos": 6, "positionText": "NC", "number": "33", "driver": "Alexander Savage", "team": "G Tech Motorsports", "gap": "+20 vueltas", "class": "Gen. 1", "status": "No clasificado"},
+            {"pos": 7, "positionText": "NC", "number": "21", "driver": "AJ Abdullah", "team": "Berg Racing", "gap": "+20 vueltas", "class": "Gen. 1", "status": "No clasificado"}
+          ]
+        },
+        {
+          "id": "ligier-jfc-2026-4-carrera-3-gen-2", "kind": "carrera", "name": "Carrera 3 · Gen. 2", "start": "2026-08-02T12:00:00-04:00", "timeKnown": false, "durationMin": 30,
+          "resultsSource": { "name": "Ligier JFC · resultados oficiales de la carrera (ronda 12), clase Gen. 2. Sólo se muestran las diferencias que la planilla da respecto del líder de la clase; donde las da respecto de otro auto, se omiten", "url": "https://ligierjuniorformulachampionship.com/wp-content/uploads/JFC-Round-12-Official-Race-Results-1.pdf" },
+          "results": [
+            {"pos": 1, "number": "30", "driver": "Edward Kennedy", "team": "MLT Motorsports", "gap": "30:43.504", "class": "Gen. 2"},
+            {"pos": 2, "number": "07", "driver": "Jack Speth", "team": "Kiwi Motorsport", "gap": "+23.956", "class": "Gen. 2"}
+          ]
+        }
       ],
-      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (julio 31 – agosto 2)"
+      "source": "Carga manual · calendario oficial de ligierjuniorformulachampionship.com (julio 31 – agosto 2) y resultados oficiales de las tres carreras (PDF de cada ronda, clases Gen. 1 y Gen. 2)"
     },
     {
       "id": "ligier-jfc-2026-5",
