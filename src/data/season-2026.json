@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T20:35:14.528Z",
+  "generatedAt": "2026-10-17T20:44:38.653Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -211433,6 +211433,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -211549,6 +211565,360 @@
       "withResults": 9,
       "errors": []
     },
+    "gt3Clases": [
+      {
+        "cup": "general",
+        "cupLabel": "GT World Challenge Europe",
+        "class": "Gold Cup",
+        "status": "atrasada",
+        "scoredRounds": 9,
+        "totalRounds": 10,
+        "racesDone": 10,
+        "asOf": "Barcelona",
+        "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=0_81_drivers",
+        "rows": [
+          {
+            "pos": 1,
+            "driver": "Thomas Fleming / Louis Prette",
+            "points": 169.5
+          },
+          {
+            "pos": 2,
+            "driver": "Simon Gachet",
+            "points": 136
+          },
+          {
+            "pos": 3,
+            "driver": "Arthur Rougier / James Kell",
+            "points": 129.5
+          },
+          {
+            "pos": 4,
+            "driver": "Dylan Pereira",
+            "points": 120.5
+          },
+          {
+            "pos": 5,
+            "driver": "Alex Aka",
+            "points": 119.5
+          }
+        ]
+      },
+      {
+        "cup": "general",
+        "cupLabel": "GT World Challenge Europe",
+        "class": "Silver Cup",
+        "status": "atrasada",
+        "scoredRounds": 9,
+        "totalRounds": 10,
+        "racesDone": 10,
+        "asOf": "Barcelona",
+        "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=0_82_drivers",
+        "rows": [
+          {
+            "pos": 1,
+            "driver": "Ignacio Montenegro / Matisse Lismont",
+            "points": 211
+          },
+          {
+            "pos": 2,
+            "driver": "Guilherme Oliveira / Mikey Porter",
+            "points": 108.5
+          },
+          {
+            "pos": 3,
+            "driver": "Oliver Soderstrom",
+            "points": 105
+          },
+          {
+            "pos": 4,
+            "driver": "Gilles Stadsbader / Jef Machiels",
+            "points": 104.5
+          },
+          {
+            "pos": 5,
+            "driver": "Aurélien Panis / Anthony Bartone",
+            "points": 101.5
+          },
+          {
+            "pos": 34,
+            "driver": "Etienne Cheli / Ivan Klymenko / Ezequiel Perez Companc",
+            "points": 20
+          }
+        ]
+      },
+      {
+        "cup": "general",
+        "cupLabel": "GT World Challenge Europe",
+        "class": "Bronze Cup",
+        "status": "atrasada",
+        "scoredRounds": 9,
+        "totalRounds": 10,
+        "racesDone": 10,
+        "asOf": "Barcelona",
+        "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=0_80_drivers",
+        "rows": [
+          {
+            "pos": 1,
+            "driver": "Dennis Marschall",
+            "points": 161.5
+          },
+          {
+            "pos": 2,
+            "driver": "Marvin Dienst / Rinat Salikhov",
+            "points": 141
+          },
+          {
+            "pos": 3,
+            "driver": "Darren Leung",
+            "points": 137
+          },
+          {
+            "pos": 4,
+            "driver": "Eddie Cheever",
+            "points": 135
+          },
+          {
+            "pos": 5,
+            "driver": "Charles Dawson / Kiern Jewiss",
+            "points": 126.5
+          }
+        ]
+      },
+      {
+        "cup": "endurance",
+        "cupLabel": "Endurance Cup",
+        "class": "Gold Cup",
+        "status": "atrasada",
+        "scoredRounds": 4,
+        "totalRounds": 5,
+        "racesDone": 5,
+        "asOf": "Nürburgring",
+        "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=42_81_drivers",
+        "rows": [
+          {
+            "pos": 1,
+            "driver": "Ugo De Wilde / Jens Klingmann / Tim Tramnitz",
+            "points": 89
+          },
+          {
+            "pos": 2,
+            "driver": "Benjamin Goethe / Louis Prette / Thomas Fleming",
+            "points": 86
+          },
+          {
+            "pos": 3,
+            "driver": "Simon Birch / Frederik Schandorff / Malte Ebdrup",
+            "points": 79
+          },
+          {
+            "pos": 4,
+            "driver": "Arthur Rougier / Simon Gachet / James Kell",
+            "points": 64
+          },
+          {
+            "pos": 5,
+            "driver": "Gilles Magnus / Robin Knutsson",
+            "points": 48
+          }
+        ]
+      },
+      {
+        "cup": "endurance",
+        "cupLabel": "Endurance Cup",
+        "class": "Silver Cup",
+        "status": "atrasada",
+        "scoredRounds": 4,
+        "totalRounds": 5,
+        "racesDone": 5,
+        "asOf": "Nürburgring",
+        "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=42_82_drivers",
+        "rows": [
+          {
+            "pos": 1,
+            "driver": "Ignacio Montenegro / Amaury Cordeel / Matisse Lismont",
+            "points": 88
+          },
+          {
+            "pos": 2,
+            "driver": "Eduardo Coseteng",
+            "points": 56
+          },
+          {
+            "pos": 3,
+            "driver": "Aliaksandr Malykhin / Max Hofer",
+            "points": 49
+          },
+          {
+            "pos": 4,
+            "driver": "Jef Machiels / Matias Zagazeta / Gilles Stadsbader",
+            "points": 45
+          },
+          {
+            "pos": 5,
+            "driver": "Ariel Levi / Sebastian Øgaard / Rocco Mazzola",
+            "points": 44
+          },
+          {
+            "pos": 18,
+            "driver": "Ivan Klymenko / Ezequiel Perez Companc / Etienne Cheli",
+            "points": 20
+          }
+        ]
+      },
+      {
+        "cup": "endurance",
+        "cupLabel": "Endurance Cup",
+        "class": "Bronze Cup",
+        "status": "atrasada",
+        "scoredRounds": 4,
+        "totalRounds": 5,
+        "racesDone": 5,
+        "asOf": "Nürburgring",
+        "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=42_80_drivers",
+        "rows": [
+          {
+            "pos": 1,
+            "driver": "Dennis Marschall",
+            "points": 102
+          },
+          {
+            "pos": 2,
+            "driver": "Dustin Blattner",
+            "points": 87
+          },
+          {
+            "pos": 3,
+            "driver": "Darren Leung / James Kellett",
+            "points": 72
+          },
+          {
+            "pos": 4,
+            "driver": "Gabriele Piana / Rinat Salikhov / Marvin Dienst",
+            "points": 58
+          },
+          {
+            "pos": 5,
+            "driver": "Kiern Jewiss / Reece Barr / Charles Dawson",
+            "points": 57
+          }
+        ]
+      },
+      {
+        "cup": "sprint",
+        "cupLabel": "Sprint Cup",
+        "class": "Gold Cup",
+        "status": "oficial",
+        "scoredRounds": 5,
+        "totalRounds": 5,
+        "racesDone": 5,
+        "asOf": "Barcelona",
+        "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=43_81_drivers",
+        "rows": [
+          {
+            "pos": 1,
+            "driver": "Tommaso Mosca / Matias Zagazeta",
+            "points": 106
+          },
+          {
+            "pos": 2,
+            "driver": "Dylan Pereira / Alex Aka",
+            "points": 90.5
+          },
+          {
+            "pos": 3,
+            "driver": "Louis Prette / Thomas Fleming",
+            "points": 83.5
+          },
+          {
+            "pos": 4,
+            "driver": "Romain Andriolo / Simon Gachet",
+            "points": 72
+          },
+          {
+            "pos": 5,
+            "driver": "Loris Spinelli / Mattia Michelotto",
+            "points": 71.5
+          }
+        ]
+      },
+      {
+        "cup": "sprint",
+        "cupLabel": "Sprint Cup",
+        "class": "Silver Cup",
+        "status": "oficial",
+        "scoredRounds": 5,
+        "totalRounds": 5,
+        "racesDone": 5,
+        "asOf": "Barcelona",
+        "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=43_82_drivers",
+        "rows": [
+          {
+            "pos": 1,
+            "driver": "Matisse Lismont / Ignacio Montenegro",
+            "points": 123
+          },
+          {
+            "pos": 2,
+            "driver": "Jamie Day / Mateo Villagomez",
+            "points": 88
+          },
+          {
+            "pos": 3,
+            "driver": "Mikey Porter / Guilherme Oliveira",
+            "points": 79.5
+          },
+          {
+            "pos": 4,
+            "driver": "Arthur Dorison / Oliver Soderstrom",
+            "points": 67
+          },
+          {
+            "pos": 5,
+            "driver": "Aurélien Panis / Anthony Bartone",
+            "points": 62
+          }
+        ]
+      },
+      {
+        "cup": "sprint",
+        "cupLabel": "Sprint Cup",
+        "class": "Bronze Cup",
+        "status": "oficial",
+        "scoredRounds": 5,
+        "totalRounds": 5,
+        "racesDone": 5,
+        "asOf": "Barcelona",
+        "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=43_80_drivers",
+        "rows": [
+          {
+            "pos": 1,
+            "driver": "Peter Dempsey / Eddie Cheever",
+            "points": 104
+          },
+          {
+            "pos": 2,
+            "driver": "Rinat Salikhov / Marvin Dienst",
+            "points": 83
+          },
+          {
+            "pos": 3,
+            "driver": "Kiern Jewiss / Charles Dawson",
+            "points": 69.5
+          },
+          {
+            "pos": 4,
+            "driver": "Darren Leung / Augusto Farfus",
+            "points": 65
+          },
+          {
+            "pos": 5,
+            "driver": "Dennis Marschall",
+            "points": 59.5
+          }
+        ]
+      }
+    ],
     "gtwcYoutube": {
       "skipped": "sin YOUTUBE_API_KEY"
     },
@@ -211560,7 +211930,7 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/12/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
