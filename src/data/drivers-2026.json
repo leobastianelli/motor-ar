@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T13:41:48.079Z",
+  "generatedAt": "2026-10-17T00:57:22.348Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -3849,7 +3849,7 @@
       "numbers": {},
       "teams": {},
       "firstSeen": "2026-05-02",
-      "lastSeen": "2026-06-27"
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "gabriel gandulia",
@@ -5181,7 +5181,7 @@
         "tc-pista-mouras": "Ford",
         "tc-pista-pick-up": "Ford"
       },
-      "firstSeen": "2026-03-01",
+      "firstSeen": "2026-02-28",
       "lastSeen": "2026-09-27"
     },
     {
@@ -10414,6 +10414,22 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "nicolas traut",
+      "keys": [
+        "nicolas traut"
+      ],
+      "slug": "nicolas-traut",
+      "name": "Nicolás Traut",
+      "aliases": [],
+      "series": [
+        "tc2000"
+      ],
+      "numbers": {},
+      "teams": {},
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-10"
+    },
+    {
       "key": "nicolas trosset",
       "keys": [
         "nicolas trosset"
@@ -13131,7 +13147,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-28",
-      "lastSeen": "2026-04-25"
+      "lastSeen": "2026-04-26"
     },
     {
       "key": "belich walter",
