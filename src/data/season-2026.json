@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T13:50:16.849Z",
+  "generatedAt": "2026-10-17T14:35:23.566Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -203037,7 +203037,111 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
               "start": "10:40"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": "1:29.072"
+            },
+            {
+              "pos": 2,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Ford",
+              "gap": "+0.241"
+            },
+            {
+              "pos": 3,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
+              "gap": "+0.341"
+            },
+            {
+              "pos": 4,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": "+0.357"
+            },
+            {
+              "pos": 5,
+              "number": "107",
+              "driver": "Tobías Martínez",
+              "team": "Chevrolet",
+              "gap": "+0.422"
+            },
+            {
+              "pos": 6,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": "+0.510"
+            },
+            {
+              "pos": 7,
+              "number": "68",
+              "driver": "Julián Santero",
+              "team": "Ford",
+              "gap": "+0.811"
+            },
+            {
+              "pos": 8,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Toyota",
+              "gap": "+0.966"
+            },
+            {
+              "pos": 9,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
+              "gap": "+1.381"
+            },
+            {
+              "pos": 10,
+              "number": "126",
+              "driver": "Thomas Ricciardi",
+              "team": "Ford",
+              "gap": "+1.535"
+            },
+            {
+              "pos": 11,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
+              "gap": "+2.128"
+            },
+            {
+              "pos": 12,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Ford",
+              "gap": "+2.580"
+            },
+            {
+              "pos": 13,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": "+8.919"
+            },
+            {
+              "pos": 14,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "Foton",
+              "gap": "+15.293"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1006/ver"
+          }
         },
         {
           "id": "tcpk-2026-9-practica-2entrenamiento",
@@ -209914,9 +210018,9 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 802,
-      "pagesFetched": 111,
-      "eventsWithResults": 59
+      "documents": 804,
+      "pagesFetched": 112,
+      "eventsWithResults": 60
     },
     "openf1": {
       "sessions": 131,
