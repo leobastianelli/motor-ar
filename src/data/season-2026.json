@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T20:44:38.653Z",
+  "generatedAt": "2026-10-17T21:00:43.438Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -204548,12 +204548,48 @@
               "driver": "Alejandro Martínez",
               "team": "Dodge",
               "gap": "+2.500"
+            },
+            {
+              "pos": 11,
+              "number": "121",
+              "driver": "Francisco Nonnenmacher",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 12,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Dodge",
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1031/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1034/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1031/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "26",
+                  "driver": "Valentino Alaux"
+                },
+                {
+                  "pos": 2,
+                  "number": "141",
+                  "driver": "Francisco Luengo"
+                },
+                {
+                  "pos": 3,
+                  "number": "75",
+                  "driver": "Matias Frano"
+                }
+              ]
+            },
+            "note": "Oficial"
           }
         },
         {
@@ -204807,51 +204843,72 @@
             },
             {
               "pos": 6,
-              "number": "77",
-              "driver": "Ignacio Vilas",
-              "team": "Dodge",
-              "gap": "+0.826"
-            },
-            {
-              "pos": 7,
               "number": "111",
               "driver": "Ignacio Quintana",
               "team": "Torino",
               "gap": "+1.207"
             },
             {
-              "pos": 8,
+              "pos": 7,
               "number": "100",
               "driver": "Leonardo Forte",
               "team": "Ford",
               "gap": "+1.944"
             },
             {
-              "pos": 9,
+              "pos": 8,
               "number": "144",
               "driver": "Martin Taha",
               "team": "Ford",
               "gap": "+2.611"
             },
             {
-              "pos": 10,
+              "pos": 9,
               "number": "148",
               "driver": "Daniel Faggiano",
               "team": "Dodge",
               "gap": "+3.409"
             },
             {
-              "pos": 11,
+              "pos": 10,
               "number": "74",
               "driver": "Facundo Ludueña",
               "team": "Chevrolet",
               "gap": "+3.450"
+            },
+            {
+              "pos": 11,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1028/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1032/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1028/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "63",
+                  "driver": "Ignacio Lovich"
+                },
+                {
+                  "pos": 2,
+                  "number": "145",
+                  "driver": "Arrias Iñlaki"
+                },
+                {
+                  "pos": 3,
+                  "number": "199",
+                  "driver": "Damián Pérez"
+                }
+              ]
+            },
+            "note": "Oficial"
           }
         },
         {
@@ -211497,8 +211554,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 829,
-      "pagesFetched": 126,
+      "documents": 833,
+      "pagesFetched": 128,
       "eventsWithResults": 62,
       "retagged": {
         "1003": {
@@ -211930,7 +211987,6 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/12/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
