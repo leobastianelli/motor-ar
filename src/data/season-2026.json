@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T16:17:30.485Z",
+  "generatedAt": "2026-10-17T17:08:51.086Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -188009,7 +188009,7 @@
           }
         }
       ],
-      "source": "Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
+      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Sprint Cup"
     },
     {
       "id": "nuevo-car-show-2026-8",
@@ -210337,10 +210337,10 @@
     },
     "gtwcOfficial": {
       "meetings": 10,
-      "sessions": 0,
-      "withResults": 0,
+      "sessions": 5,
+      "withResults": 4,
       "errors": [
-        "gt3-2026-s5: No se pudo descargar https://www.gt-world-challenge-europe.com/results?filter_season_id=26&filter_meeting_id=254: fetch failed",
+        "gt3-2026-s5/free-practice-1: No se pudo descargar https://www.gt-world-challenge-europe.com/results/2026/barcelona/free-practice-1: fetch failed",
         "gt3-2026-e5: No se pudo descargar https://www.gt-world-challenge-europe.com/event/255/portimao: fetch failed"
       ]
     },
@@ -210355,7 +210355,7 @@
     }
   },
   "failures": [
-    "GT World oficial: gt3-2026-s5: No se pudo descargar https://www.gt-world-challenge-europe.com/results?filter_season_id=26&filter_meeting_id=254: fetch failed; gt3-2026-e5: No se pudo descargar https://www.gt-world-challenge-europe.com/event/255/portimao: fetch failed",
-    "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
+    "GT World oficial: gt3-2026-s5/free-practice-1: No se pudo descargar https://www.gt-world-challenge-europe.com/results/2026/barcelona/free-practice-1: fetch failed; gt3-2026-e5: No se pudo descargar https://www.gt-world-challenge-europe.com/event/255/portimao: fetch failed",
+    "Se conservaron resultados de 3 sesiones que las fuentes dejaron de traer"
   ]
 }
