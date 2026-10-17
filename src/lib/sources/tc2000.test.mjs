@@ -40,3 +40,17 @@ test("por número sólo se une con un evento cercano en el calendario", () => {
   assert.equal(events.length, 2);
   assert.equal(events[0].circuit.city, "X");
 });
+
+test("Campeones: títulos como «resistió y se llevó la carrera» y «con su primera pole» cuentan como ganador y pole", async () => {
+  const { parseWeekends } = await import("./tc2000-campeones.mjs");
+  const post = (date, title, text) => ({ date, title, text, link: `https://campeones.com.ar/${encodeURIComponent(title)}` });
+  const weekends = parseWeekends([
+    post("2026-10-11T22:48:58.000Z", "Vivian resistió y se llevó la carrera del TC2000 en La Pampa", "En el autódromo «Provincia de La Pampa», Franco Vivian (Chevrolet Tracker) ganó la novena fecha de Turismo Competición 2000."),
+    post("2026-10-10T19:46:23.000Z", "TC2000: Traut, con su primera «pole» en el cierre de la clasificación pampeana", "Nicolás Traut estampó el «1» en el circuito corto de Toay."),
+  ]);
+  assert.equal(weekends.length, 1);
+  assert.equal(weekends[0].raceDay, "2026-10-11");
+  assert.equal(weekends[0].city, "Toay");
+  assert.equal(weekends[0].winner, "Franco Vivian");
+  assert.equal(weekends[0].pole, "Nicolás Traut");
+});

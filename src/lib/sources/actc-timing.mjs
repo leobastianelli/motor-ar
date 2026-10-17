@@ -13,6 +13,8 @@ export const TIMING_SOURCE = "ACTC · tiempos oficiales";
 export const LISTING_URL = `${BASE}/resultados`;
 
 const DAY = 86400000;
+/** Días después del último día de la fecha en que todavía se acepta un documento del portal como suyo. */
+const LATE_DOCS_DAYS = 2;
 /** Cuántos documentos de una misma sesión se leen como máximo hasta dar con uno oficial. */
 const MAX_CANDIDATES = 4;
 const ORDER = { practica: 0, clasificacion: 1, serie: 2, sprint: 3, final: 4, carrera: 4 };
@@ -374,11 +376,14 @@ export async function actcTiming(io, events, previous, { windowDays = 10, knownN
     const end = Date.parse(`${lastDay}T23:59:59-03:00`);
     const docs = listing.filter((d) => {
       const t = Date.parse(`${d.day}T12:00:00-03:00`);
-      return d.seriesId === event.seriesId && t <= end && t >= end - 3 * DAY;
+      // El portal a veces sube una rectificada un par de días después de la carrera (la final del TC Mouras de Concepción, del 3/3).
+      return d.seriesId === event.seriesId && t <= end + LATE_DOCS_DAYS * DAY && t >= end - 3 * DAY;
     });
     const stored = before.get(event.id)?.sessions.filter((s) => fromActc(s) && !brokenActcResults(s) && belongsToEvent(event, s)) ?? [];
     const recent = now - end < windowDays * DAY;
-    if (!docs.length || (!recent && stored.length)) {
+    // Una fecha vieja se reutiliza tal cual sólo si ya tiene todo lo que el portal publicó; si el portal sumó una sesión que falta, se la va a buscar.
+    const missing = !recent && stored.length && [...chooseDocs(docs, { provisional: true }).values()].some(({ session }) => !stored.some((s) => sessionKey(s) === sessionKey(session)));
+    if (!docs.length || (!recent && stored.length && !missing)) {
       out.push(stored.length ? mergeTiming(event, stored) : event);
       if (stored.length) withResults++;
       continue;

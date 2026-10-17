@@ -31,7 +31,7 @@ const ORDINALS = { primera: 1, segunda: 2, tercera: 3, cuarta: 4, quinta: 5, sex
 
 const DAY = 86400000;
 const ymd = (ms) => new Date(ms).toISOString().slice(0, 10);
-const RESULT_TITLE = /gan[oó]|venci[oó]|triunf|victoria|profeta|se impuso/i;
+const RESULT_TITLE = /gan[oó]|venci[oó]|triunf|victoria|profeta|se impuso|se llev[oó] la (?:carrera|final|victoria)/i;
 
 /** Domingo (hora argentina) del fin de semana de una nota. Un lunes con resultado es del domingo anterior; si no, es previa. */
 function sundayOf(post) {
@@ -119,7 +119,7 @@ function poleOf(posts, known) {
     const title = stripTitle(p.title);
     found.push(
       p.text.match(new RegExp(`«pole(?:\\s+position)?»\\s+(?:fue|es|quedó)\\s+(?:de|para)\\s+${NAME}`))?.[1],
-      title.match(new RegExp(`${NAME},?\\s+(?:el mejor del s[aá]bado|se quedó con la «pole|logró (?:la|su \\S+) «pole|se adjudicó la «pole|volvió con «pole|conquistó el mejor tiempo de la clasificación)`))?.[1],
+      title.match(new RegExp(`${NAME},?\\s+(?:el mejor del s[aá]bado|se quedó con la «pole|logró (?:la|su \\S+) «pole|con su \\S+ «pole|se adjudicó la «pole|volvió con «pole|conquistó el mejor tiempo de la clasificación)`))?.[1],
       title.match(new RegExp(`«1»\\s+de la mano de\\s+${NAME}`))?.[1],
       title.match(new RegExp(`es de ${NAME}:\\s*se quedó con la «pole`))?.[1],
     );
@@ -131,7 +131,7 @@ function winnerOf(posts, known) {
   for (const p of posts.filter((x) => RESULT_TITLE.test(x.title))) {
     const title = stripTitle(p.title);
     const name = firstName([
-      title.match(new RegExp(`^${NAME}[,:]?\\s+(?:le ganó|ganó|venció|se impuso|triunfó|festejó|aguantó y ganó|brindó por su \\S+ triunfo|volvió al triunfo|otra vez profeta)`))?.[1],
+      title.match(new RegExp(`^${NAME}[,:]?\\s+(?:le ganó|ganó|venció|se impuso|triunfó|festejó|aguantó y ganó|resistió y se llevó la (?:carrera|final|victoria)|se llevó la (?:carrera|final|victoria)|brindó por su \\S+ triunfo|volvió al triunfo|otra vez profeta)`))?.[1],
       p.text.match(new RegExp(`(?:triunfo|victoria)\\s+en TC2000\\s+del?\\s+(?:local\\s+)?${NAME}`))?.[1],
     ]);
     if (name) return { name: fullName(name, posts, known), url: p.link };
