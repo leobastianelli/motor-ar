@@ -78,10 +78,8 @@ const HTTPS = /^https:\/\//;
 // Tienen "start" porque el motor necesita una fecha para ordenarlas, pero no hay horario que citar: cuando se sepa la hora real hay que
 // agregarle timeSources y sacarla de esta lista. No inventar una fuente para cerrar la prueba.
 const SIN_FUENTE_DE_HORA = new Set([
-  "ligier-jfc-2026-1-carreras", // calendario oficial sólo da el fin de semana, no la hora de la carrera
-  "ligier-jfc-2026-2-carreras",
-  "ligier-jfc-2026-3-carreras",
-  "ligier-jfc-2026-4-carreras",
+  // Fechas 1 a 4 (ya corridas): las carreras figuran sólo con el día (el de la fecha de impresión de la planilla oficial), sin hora.
+  ...[1, 2, 3, 4].flatMap((f) => [1, 2, 3].flatMap((n) => ["gen-1", "gen-2"].map((c) => `ligier-jfc-2026-${f}-carrera-${n}-${c}`))),
   "ligier-jfc-2026-5-carrera-3", // las carreras 1 y 2 de esta fecha sí tienen horario y fuente; la 3 todavía no se corrió
   "ligier-jfc-2026-6-carreras",
 ]);
