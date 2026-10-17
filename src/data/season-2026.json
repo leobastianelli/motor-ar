@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T19:41:51.983Z",
+  "generatedAt": "2026-10-17T19:50:02.168Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -203647,107 +203647,130 @@
           "results": [
             {
               "pos": 1,
-              "number": "144",
-              "driver": "Faustino Cifre",
-              "team": "",
-              "gap": "1:30.631"
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Toyota",
+              "gap": "1:29.812"
             },
             {
               "pos": 2,
-              "number": "132",
-              "driver": "Tomas Pellandino",
-              "team": "",
-              "gap": "+0.121"
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+0.074"
             },
             {
               "pos": 3,
-              "number": "67",
-              "driver": "Santiago Biagi",
-              "team": "",
-              "gap": "+0.342"
+              "number": "132",
+              "driver": "Tomas Pellandino",
+              "team": "Ford",
+              "gap": "+0.314"
             },
             {
               "pos": 4,
-              "number": "123",
-              "driver": "Nicanor Santilli Pazos",
-              "team": "",
-              "gap": "+0.466"
+              "number": "127",
+              "driver": "Nahuel Cordone",
+              "team": "Ford",
+              "gap": "+0.424"
             },
             {
               "pos": 5,
-              "number": "127",
-              "driver": "Nahuel Cordone",
-              "team": "",
-              "gap": "+0.583"
+              "number": "107",
+              "driver": "Sganga Antonino",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 6,
-              "number": "76",
-              "driver": "Juan José Suárez",
-              "team": "",
-              "gap": "+0.689"
+              "number": "10",
+              "driver": "Luis Catelli",
+              "team": "Toyota",
+              "gap": "+1.049"
             },
             {
               "pos": 7,
-              "number": "10",
-              "driver": "Luis Catelli",
-              "team": "",
-              "gap": "+0.718"
+              "number": "66",
+              "driver": "Gonzalo Aramburu",
+              "team": "Toyota",
+              "gap": "+1.361"
             },
             {
               "pos": 8,
-              "number": "107",
-              "driver": "Sganga Antonino",
-              "team": "",
-              "gap": "+0.747"
+              "number": "14",
+              "driver": "Nestor Omar Goya",
+              "team": "Ford",
+              "gap": "+2.551"
             },
             {
               "pos": 9,
-              "number": "66",
-              "driver": "Gonzalo Aramburu",
-              "team": "",
-              "gap": "+1.022"
+              "number": "15",
+              "driver": "Jose Alberto Goya",
+              "team": "Ford",
+              "gap": "+2.941"
             },
             {
               "pos": 10,
-              "number": "133",
-              "driver": "Juan Pablo Alberti",
-              "team": "",
-              "gap": "+1.405"
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Foton",
+              "gap": "+0.776"
             },
             {
               "pos": 11,
-              "number": "14",
-              "driver": "Nestor Omar Goya",
-              "team": "",
-              "gap": "+1.732"
+              "number": "8",
+              "driver": "Juan Antonio Sandin",
+              "team": "Ford",
+              "gap": "+2.969"
             },
             {
               "pos": 12,
-              "number": "15",
-              "driver": "Jose Alberto Goya",
-              "team": "",
-              "gap": "+2.122"
+              "number": "88",
+              "driver": "Alvaro Oroza",
+              "team": "Ford",
+              "gap": "+33.468"
             },
             {
               "pos": 13,
-              "number": "8",
-              "driver": "Juan Antonio Sandin",
-              "team": "",
-              "gap": "+2.150"
+              "number": "133",
+              "driver": "Juan Pablo Alberti",
+              "team": "Volkswagen",
+              "gap": "",
+              "status": "Sin tiempo"
             },
             {
               "pos": 14,
-              "number": "88",
-              "driver": "Alvaro Oroza",
-              "team": "Dodge",
-              "gap": "+32.649"
+              "number": "76",
+              "driver": "Juan José Suárez",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1020/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1025/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1020/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "144",
+                  "driver": "Faustino Cifre"
+                },
+                {
+                  "pos": 2,
+                  "number": "132",
+                  "driver": "Tomas Pellandino"
+                },
+                {
+                  "pos": 3,
+                  "number": "67",
+                  "driver": "Santiago Biagi"
+                }
+              ]
+            },
+            "note": "Oficial: cambió el ganador"
           }
         },
         {
@@ -210583,8 +210606,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 821,
-      "pagesFetched": 120,
+      "documents": 824,
+      "pagesFetched": 119,
       "eventsWithResults": 61
     },
     "openf1": {
