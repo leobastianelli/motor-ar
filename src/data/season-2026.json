@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T19:10:03.709Z",
+  "generatedAt": "2026-10-17T19:23:01.700Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -17074,6 +17074,7 @@
           "name": "Final Fiat 600",
           "start": "2026-03-08T12:10:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -17082,7 +17083,6 @@
               "start": "2026-03-08T12:10:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -17181,6 +17181,7 @@
           "name": "Final Clase 1",
           "start": "2026-03-08T13:10:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -17189,7 +17190,6 @@
               "start": "2026-03-08T13:10:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -17470,6 +17470,7 @@
           "name": "Final Clase 3",
           "start": "2026-03-08T13:50:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -17478,7 +17479,6 @@
               "start": "2026-03-08T13:50:00-03:00"
             }
           ],
-          "durationMin": 40,
           "results": [
             {
               "pos": 1,
@@ -17621,6 +17621,7 @@
           "name": "Final TC 4000",
           "start": "2026-03-08T14:30:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -17629,7 +17630,6 @@
               "start": "2026-03-08T14:30:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -17788,6 +17788,7 @@
           "name": "Final Clase 2",
           "start": "2026-03-08T15:10:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -17796,7 +17797,6 @@
               "start": "2026-03-08T15:10:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -44737,6 +44737,7 @@
           "name": "Final Fiat 600",
           "start": "2026-04-19T12:10:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -44745,7 +44746,6 @@
               "start": "2026-04-19T12:10:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -44837,6 +44837,7 @@
           "name": "Final Clase 2",
           "start": "2026-04-19T13:10:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -44845,7 +44846,6 @@
               "start": "2026-04-19T13:10:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -45121,6 +45121,7 @@
           "name": "Final Clase 3",
           "start": "2026-04-19T13:50:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -45129,7 +45130,6 @@
               "start": "2026-04-19T13:50:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -45301,6 +45301,7 @@
           "name": "Final TC 4000",
           "start": "2026-04-19T14:30:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -45309,7 +45310,6 @@
               "start": "2026-04-19T14:30:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -45508,6 +45508,7 @@
           "name": "Final Clase 1",
           "start": "2026-04-19T15:10:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -45516,7 +45517,6 @@
               "start": "2026-04-19T15:10:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -67670,6 +67670,7 @@
           "name": "Final Clase 1",
           "start": "2026-05-17T08:20:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -67678,7 +67679,6 @@
               "start": "2026-05-17T08:20:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -67999,6 +67999,7 @@
           "name": "Final Clase 2",
           "start": "2026-05-17T09:00:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -68007,7 +68008,6 @@
               "start": "2026-05-17T09:00:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -68295,6 +68295,7 @@
           "name": "Final TC 4000",
           "start": "2026-05-17T09:40:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -68303,7 +68304,6 @@
               "start": "2026-05-17T09:40:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -68495,6 +68495,7 @@
           "name": "Final Fiat 600",
           "start": "2026-05-17T10:20:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -68503,7 +68504,6 @@
               "start": "2026-05-17T10:20:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -68615,6 +68615,7 @@
           "name": "Final Clase 3",
           "start": "2026-05-17T11:00:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -68623,7 +68624,6 @@
               "start": "2026-05-17T11:00:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -94778,6 +94778,7 @@
           "name": "Final Clase 2",
           "start": "2026-06-21T11:45:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -94786,7 +94787,6 @@
               "start": "2026-06-21T11:45:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -95077,6 +95077,7 @@
           "name": "Final TC 4000",
           "start": "2026-06-21T12:45:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -95085,7 +95086,6 @@
               "start": "2026-06-21T12:45:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -95307,6 +95307,7 @@
           "name": "Final Clase 3",
           "start": "2026-06-21T13:30:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -95315,7 +95316,6 @@
               "start": "2026-06-21T13:30:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -95459,6 +95459,7 @@
           "name": "Final Clase 1",
           "start": "2026-06-21T14:30:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -95467,7 +95468,6 @@
               "start": "2026-06-21T14:30:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -95782,6 +95782,7 @@
           "name": "Final Fiat 600",
           "start": "2026-06-21T15:15:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -95790,7 +95791,6 @@
               "start": "2026-06-21T15:15:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -117682,12 +117682,22 @@
           }
         },
         {
+          "id": "nuevo-car-show-2026-5-tc4000-final",
+          "classId": "tc4000",
+          "kind": "final",
+          "name": "Final TC 4000",
+          "start": "2026-07-12T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        },
+        {
           "id": "nuevo-car-show-2026-5-clase1-final",
           "classId": "clase1",
           "kind": "final",
           "name": "Final Clase 1",
           "start": "2026-07-12T12:55:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -117696,7 +117706,6 @@
               "start": "2026-07-12T12:55:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -118002,6 +118011,7 @@
           "name": "Final Clase 3",
           "start": "2026-07-12T13:40:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -118010,7 +118020,6 @@
               "start": "2026-07-12T13:40:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -118147,6 +118156,7 @@
           "name": "Final Clase 2",
           "start": "2026-07-12T14:25:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -118155,7 +118165,6 @@
               "start": "2026-07-12T14:25:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -118398,6 +118407,7 @@
           "name": "Final Fiat 600",
           "start": "2026-07-12T15:10:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -118406,7 +118416,6 @@
               "start": "2026-07-12T15:10:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -143789,12 +143798,22 @@
           }
         },
         {
+          "id": "nuevo-car-show-2026-6-fiat600-final",
+          "classId": "fiat600",
+          "kind": "final",
+          "name": "Final Fiat 600",
+          "start": "2026-08-16T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        },
+        {
           "id": "nuevo-car-show-2026-6-clase1-final",
           "classId": "clase1",
           "kind": "final",
           "name": "Final Clase 1",
           "start": "2026-08-16T12:05:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -143803,7 +143822,6 @@
               "start": "2026-08-16T12:05:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -144303,6 +144321,7 @@
           "name": "Final TC 4000",
           "start": "2026-08-16T13:25:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -144311,7 +144330,6 @@
               "start": "2026-08-16T13:25:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -144486,6 +144504,7 @@
           "name": "Final Clase 3",
           "start": "2026-08-16T14:05:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -144494,7 +144513,6 @@
               "start": "2026-08-16T14:05:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -144820,6 +144838,7 @@
           "name": "Final Clase 2",
           "start": "2026-08-16T15:30:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -144828,7 +144847,6 @@
               "start": "2026-08-16T15:30:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -169055,6 +169073,7 @@
           "name": "Final Clase 2",
           "start": "2026-09-13T10:35:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -169063,7 +169082,6 @@
               "start": "2026-09-13T10:35:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -169314,6 +169332,7 @@
           "name": "Final Clase 3",
           "start": "2026-09-13T11:25:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -169322,7 +169341,6 @@
               "start": "2026-09-13T11:25:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -169511,6 +169529,7 @@
           "name": "Final Clase 1",
           "start": "2026-09-13T12:15:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -169519,7 +169538,6 @@
               "start": "2026-09-13T12:15:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -169824,6 +169842,7 @@
           "name": "Final TC 4000",
           "start": "2026-09-13T13:15:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -169832,7 +169851,6 @@
               "start": "2026-09-13T13:15:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -170057,6 +170075,7 @@
           "name": "Final Fiat 600",
           "start": "2026-09-13T14:15:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -170065,7 +170084,6 @@
               "start": "2026-09-13T14:15:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -192594,6 +192612,7 @@
           "name": "Final Clase 3",
           "start": "2026-10-04T09:55:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -192602,7 +192621,6 @@
               "start": "2026-10-04T09:55:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -192760,6 +192778,7 @@
           "name": "Final TC 4000",
           "start": "2026-10-04T10:25:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -192768,7 +192787,6 @@
               "start": "2026-10-04T10:25:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -192957,6 +192975,7 @@
           "name": "Final Clase 2",
           "start": "2026-10-04T11:15:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -192965,7 +192984,6 @@
               "start": "2026-10-04T11:15:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -193396,6 +193414,7 @@
           "name": "Final Fiat 600",
           "start": "2026-10-04T12:25:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -193404,7 +193423,6 @@
               "start": "2026-10-04T12:25:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -193523,6 +193541,7 @@
           "name": "Final Clase 1",
           "start": "2026-10-04T13:05:00-03:00",
           "timeKnown": true,
+          "durationMin": 30,
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -193531,7 +193550,6 @@
               "start": "2026-10-04T13:05:00-03:00"
             }
           ],
-          "durationMin": 30,
           "results": [
             {
               "pos": 1,
@@ -202696,7 +202714,7 @@
           ]
         }
       ],
-      "source": "Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
+      "source": "GT World Challenge Europe (oficial) · Wikipedia · 2026 GT World Challenge Europe Endurance Cup"
     },
     {
       "id": "tcppk-2026-9",
@@ -210217,25 +210235,43 @@
       "clases": {
         "clase1": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 8 de las 8 fechas que ésta cubre (por ejemplo, el auto 172 de la fecha 1: 6 contra 0 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
         },
         "clase2": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 8 de las 8 fechas que ésta cubre (por ejemplo, el auto 28 de la fecha 1: 9 contra 1,5 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
         },
         "clase3": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 5 de las 8 fechas que ésta cubre (por ejemplo, el auto 69 de la fecha 2: 0 contra 2 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
         },
         "tc4000": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 7 de las 8 fechas que ésta cubre (por ejemplo, el auto 6 de la fecha 2: 0 contra 1 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
         },
         "fiat600": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 6 de las 8 fechas que ésta cubre (por ejemplo, el auto 8 de la fecha 1: 1,5 contra 1,13 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
         }
       }
+    },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [],
+      "errors": [
+        "resultados Clase 1: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "resultados Clase 2: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "resultados Clase 3: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "resultados TC 4000: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "resultados Fiat 600: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "tabla oficial Clase 1: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "tabla oficial Clase 2: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "tabla oficial Clase 3: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "tabla oficial TC 4000: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "tabla oficial Fiat 600: Unexpected token '<', \"<html><hea\"... is not valid JSON"
+      ]
     },
     "rallyArgentino": {
       "events": 9,
@@ -210285,8 +210321,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 819,
-      "pagesFetched": 118,
+      "documents": 820,
+      "pagesFetched": 119,
       "eventsWithResults": 61
     },
     "openf1": {
@@ -210311,11 +210347,12 @@
     },
     "gtwcOfficial": {
       "meetings": 10,
-      "sessions": 5,
-      "withResults": 4,
+      "sessions": 4,
+      "withResults": 1,
       "errors": [
-        "gt3-2026-s5/race-1: No se pudo descargar https://www.gt-world-challenge-europe.com/results/2026/barcelona/race-1: fetch failed",
-        "gt3-2026-e5: No se pudo descargar https://www.gt-world-challenge-europe.com/event/255/portimao: fetch failed"
+        "gt3-2026-s5: No se pudo descargar https://www.gt-world-challenge-europe.com/event/254/barcelona: fetch failed",
+        "gt3-2026-e5/free-practice-1: No se pudo descargar https://www.gt-world-challenge-europe.com/results/2026/portimao/free-practice-1: fetch failed",
+        "gt3-2026-e5/qualifying-combined: No se pudo descargar https://www.gt-world-challenge-europe.com/results/2026/portimao/qualifying-combined: fetch failed"
       ]
     },
     "gtwcYoutube": {
@@ -210329,8 +210366,17 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "GT World oficial: No se pudo descargar https://www.gt-world-challenge-europe.com/calendar: fetch failed (se conservan los datos anteriores)",
-    "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
+    "Nuevo Car Show: resultados Clase 1: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: resultados Clase 2: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: resultados Clase 3: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: resultados TC 4000: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: resultados Fiat 600: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: tabla oficial Clase 1: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: tabla oficial Clase 2: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: tabla oficial Clase 3: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: tabla oficial TC 4000: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: tabla oficial Fiat 600: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "GT World oficial: gt3-2026-s5: No se pudo descargar https://www.gt-world-challenge-europe.com/event/254/barcelona: fetch failed; gt3-2026-e5/free-practice-1: No se pudo descargar https://www.gt-world-challenge-europe.com/results/2026/portimao/free-practice-1: fetch failed; gt3-2026-e5/qualifying-combined: No se pudo descargar https://www.gt-world-challenge-europe.com/results/2026/portimao/qualifying-combined: fetch failed",
+    "Se conservaron resultados de 4 sesiones que las fuentes dejaron de traer"
   ]
 }
