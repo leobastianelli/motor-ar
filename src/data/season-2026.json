@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T21:00:43.438Z",
+  "generatedAt": "2026-10-18T12:26:14.084Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -204912,6 +204912,98 @@
           }
         },
         {
+          "id": "tcpm-2026-10-serie-serieunica",
+          "kind": "serie",
+          "name": "Serie única",
+          "start": "2026-10-18T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "145",
+              "driver": "Arrias Iñlaki",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "199",
+              "driver": "Damián Pérez",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Juan José Conde",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "100",
+              "driver": "Leonardo Forte",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "148",
+              "driver": "Daniel Faggiano",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1036/ver",
+            "status": "provisional"
+          }
+        },
+        {
           "id": "tcpm-2026-10-final",
           "kind": "final",
           "name": "Final",
@@ -210240,7 +210332,7 @@
           ]
         }
       ],
-      "campeonesFeed": true,
+      "campeonesFeed": false,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -211490,22 +211582,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -211554,7 +211630,7 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 833,
+      "documents": 834,
       "pagesFetched": 128,
       "eventsWithResults": 62,
       "retagged": {
@@ -211987,6 +212063,7 @@
     }
   },
   "failures": [
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
