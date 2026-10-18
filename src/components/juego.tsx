@@ -3,9 +3,10 @@
 import { useEffect, useId, useRef, useState, type CSSProperties } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { buscar, rachaVigente, registrarResultado, textoCompartir } from "@/lib/juego/cliente.mjs";
-import { FALLOS_PARA_PISTA, JUEGO_NOMBRE, MAX_INTENTOS } from "@/lib/juego/config.mjs";
+import { FALLOS_PARA_PISTA, JUEGO_NOMBRE, JUEGO_URL_CORTA, MAX_INTENTOS } from "@/lib/juego/config.mjs";
 import { dia, sumarDias } from "@/lib/juego/dia.mjs";
 import { Cartel, Radio } from "./juego-efectos";
+import { dibujarPlaca } from "./juego-placa";
 
 const ATRIBUTOS = ["nacio", "provincia", "categorias", "titulos", "corre2026"] as const; // mismo orden que ATRIBUTOS en comparar.mjs
 type Estado = "verde" | "amarillo" | "gris";
@@ -234,24 +235,68 @@ function Luces({ usados, acerto }: { usados: number; acerto: boolean }) {
   );
 }
 
-function Fin({ partida, animar }: { partida: Partida; animar: boolean }) {
+function Fin({ partida, animar, racha }: { partida: Partida; animar: boolean; racha: number }) {
   const [aviso, setAviso] = useState("");
+  const [placa, setPlaca] = useState<{ blob: Blob; url: string } | null>(null);
   const gano = partida.filas.some((f) => f.acerto);
   const p = partida.respuesta;
+  const texto = textoCompartir({ numero: partida.numero, acerto: gano, comparaciones: partida.filas.map((f) => f.comparacion) });
+  const archivo = `fierros-adivina-el-piloto-${partida.numero}.png`;
+
+  // La placa se dibuja una vez al terminar y se muestra en miniatura: así se ve lo que se va a compartir.
+  useEffect(() => {
+    let url = "";
+    let vivo = true;
+    dibujarPlaca({
+      numero: partida.numero,
+      acerto: gano,
+      intentos: partida.filas.length,
+      maximo: MAX_INTENTOS,
+      filas: partida.filas.map((f) => ATRIBUTOS.map((a) => f.comparacion[a].estado)),
+      racha,
+      url: JUEGO_URL_CORTA,
+      nombreJuego: JUEGO_NOMBRE,
+    })
+      .then((blob) => {
+        if (!vivo) return;
+        url = URL.createObjectURL(blob);
+        setPlaca({ blob, url });
+      })
+      .catch(() => {});
+    return () => {
+      vivo = false;
+      if (url) URL.revokeObjectURL(url);
+    };
+  }, [partida.numero, partida.filas, gano, racha]);
+
+  function descargar() {
+    if (!placa) return;
+    const enlace = document.createElement("a");
+    enlace.href = placa.url;
+    enlace.download = archivo;
+    enlace.click();
+  }
 
   async function compartir() {
-    const texto = textoCompartir({ numero: partida.numero, acerto: gano, comparaciones: partida.filas.map((f) => f.comparacion) });
-    trackEvent("juego_compartir", { numero: partida.numero, acerto: gano });
+    trackEvent("juego_compartir", { numero: partida.numero, acerto: gano, imagen: !!placa });
     try {
-      if (typeof navigator.share === "function") {
+      const file = placa ? new File([placa.blob], archivo, { type: "image/png" }) : null;
+      // En el celular: la imagen con el texto, al menú de compartir del teléfono.
+      if (file && typeof navigator.canShare === "function" && navigator.canShare({ files: [file] })) {
+        await navigator.share({ files: [file], text: texto });
+        return;
+      }
+      if (!placa && typeof navigator.share === "function") {
         await navigator.share({ text: texto });
         return;
       }
+      // En la computadora: se baja la imagen y se copia el texto.
+      if (placa) descargar();
       await navigator.clipboard.writeText(texto);
-      setAviso("¡Copiado! Pegalo en el grupo.");
+      setAviso(placa ? "Imagen descargada y texto copiado. ¡A mandarlo al grupo!" : "¡Copiado! Pegalo en el grupo.");
     } catch (e) {
       if (e instanceof DOMException && e.name === "AbortError") return; // Cerró el menú de compartir.
-      setAviso("No pudimos copiarlo. Sacale una captura al tablero.");
+      setAviso(placa ? "No pudimos compartirla: usá «Descargar imagen»." : "No pudimos copiarlo. Sacale una captura al tablero.");
     }
   }
 
@@ -297,10 +342,25 @@ function Fin({ partida, animar }: { partida: Partida; animar: boolean }) {
       ) : (
         <p>Destapando al piloto del día…</p>
       )}
+      {placa && (
+        // eslint-disable-next-line @next/next/no-img-element -- imagen generada en el navegador (blob:), no pasa por next/image
+        <img
+          className="jg-placa"
+          src={placa.url}
+          width={1080}
+          height={1350}
+          alt={`Placa del resultado: ${gano ? `lo sacaste en ${partida.filas.length} de ${MAX_INTENTOS}` : "no lo sacaste"}, racha ${racha}`}
+        />
+      )}
       <div className="jg-acciones">
         <button type="button" className="jg-boton grande" onClick={compartir}>
           Compartir resultado
         </button>
+        {placa && (
+          <button type="button" className="jg-boton sec" onClick={descargar}>
+            Descargar imagen
+          </button>
+        )}
         <span role="status" aria-live="polite">{aviso}</span>
       </div>
       <p className="jg-proximo">Mañana a las 00:00 hay otro piloto.</p>
@@ -448,7 +508,7 @@ export function Juego({ pilotos, inicio, hayBase }: { pilotos: PilotoLista[]; in
         </p>
 
         {fin ? (
-          <Fin partida={partida} animar={finEnVivo} />
+          <Fin partida={partida} animar={finEnVivo} racha={racha} />
         ) : (
           <div className={sacudir ? "jg-sacude" : ""} onAnimationEnd={(e) => e.target === e.currentTarget && setSacudir(false)}>
             <Buscador pilotos={pilotos} usados={partida.filas.map((f) => f.slug)} deshabilitado={ocupado} onElegir={elegir} />

@@ -166,3 +166,4 @@
   .jg-celda{min-height:92px}
 }
 @media(prefers-reduced-motion:reduce){.jg *,.jg *::before,.jg *::after{transition:none!important;animation:none!important}}
+.jg-placa{display:block;width:min(240px,60%);height:auto;margin:18px 0 0;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,.45)}

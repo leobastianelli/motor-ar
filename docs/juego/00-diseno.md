@@ -16,7 +16,7 @@ Estado: en construcción (17/10/2026). El nombre del juego lo decide Leonel; mie
 | Corre en 2026 | igual | — | distinto | — |
 
 - Después del 3.º y del 6.º intento fallido se destapa una pista escrita (2 por piloto).
-- Fase 1 sin cuentas: el progreso, la racha y el "ya jugaste hoy" se guardan en el navegador. Al terminar se puede compartir un resultado con cuadraditos y sin el nombre.
+- Fase 1 sin cuentas: el progreso, la racha y el "ya jugaste hoy" se guardan en el navegador. Al terminar se puede compartir el resultado sin el nombre: una placa 1080×1350 dibujada en el navegador (src/components/juego-placa.ts) más el texto con cuadraditos. En el celular va al menú de compartir; en la computadora se descarga la imagen y se copia el texto.
 - Fase 2 (más adelante, si engancha): login y ranking en Neon.
 
 ## Regiones
