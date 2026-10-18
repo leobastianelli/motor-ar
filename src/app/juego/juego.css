@@ -137,12 +137,26 @@
 .jg-pronto-t{margin:0;text-align:center;font-size:clamp(32px,6vw,52px);font-weight:900;font-stretch:80%;line-height:1;color:var(--jg-celeste)}
 .jg-pronto-p{margin:10px auto 0;max-width:40ch;text-align:center;font-size:16px;color:var(--jg-suave)}
 
-/* Texto de la página, fuera del tablero */
-.jg-info{max-width:760px;margin:var(--space-6) auto;padding:0 16px}
-.jg-info h2{font-size:22px;margin:24px 0 8px}
-.jg-info p,.jg-info li{font-size:16px;line-height:1.55}
-.jg-info ul{padding-left:20px;margin:0 0 12px}
-.jg-info a{color:var(--blue-deep)}
+/* Reglas, dentro de la misma escena */
+.jg-reglas{max-width:780px;margin:44px auto 0;padding-top:32px;border-top:1px solid var(--jg-borde)}
+.jg-reglas h2{margin:0 0 10px;font-size:clamp(26px,4vw,34px);font-weight:900;font-stretch:80%;line-height:1;letter-spacing:-.01em;color:var(--jg-texto)}
+.jg-reglas-intro{margin:0 0 18px;font-size:17px;line-height:1.5;color:var(--jg-suave)}
+.jg-leyenda{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;padding:0}
+.jg-leyenda li{display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:7px;font-size:14px;font-weight:800}
+.jg-leyenda b{font-size:15px}
+.jg-leyenda .verde{background:var(--jg-verde);color:#06120b}
+.jg-leyenda .amarillo{background:var(--jg-amarillo);color:#141005}
+.jg-leyenda .gris{background:var(--jg-gris);color:var(--jg-texto)}
+.jg-leyenda .flecha{background:var(--jg-panel-2);color:var(--jg-texto)}
+.jg-datos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin:0 0 18px}
+.jg-datos div{padding:12px 14px;background:var(--jg-panel);border-radius:8px}
+.jg-datos dt{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--jg-celeste)}
+.jg-datos dd{margin:4px 0 0;font-size:15px;line-height:1.4;color:var(--jg-texto)}
+.jg-extras{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;margin:0 0 32px;padding:0}
+.jg-extras li{padding:12px 14px;border:1px solid var(--jg-borde);border-radius:8px;font-size:14px;line-height:1.4;color:var(--jg-suave)}
+.jg-extras b{display:block;margin-bottom:2px;font-size:16px;font-weight:900;font-stretch:88%;color:var(--jg-amarillo)}
+.jg-reglas-fuentes{margin:0;font-size:14px;line-height:1.55;color:var(--jg-suave)}
+.jg-reglas a{color:var(--jg-celeste)}
 .jg-prueba{max-width:780px;margin:16px auto;padding:10px 14px;border-left:4px solid var(--yellow);background:#fff5cc;font-size:14px}
 
 @media(min-width:640px){
