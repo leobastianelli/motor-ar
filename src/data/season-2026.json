@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T12:26:14.084Z",
+  "generatedAt": "2026-10-18T12:57:19.653Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -203049,14 +203049,6 @@
             },
             {
               "pos": 20,
-              "number": "58",
-              "class": "Gold Cup",
-              "driver": "Thomas Fleming / Louis Prette / Benjamin Goethe",
-              "team": "Garage 59",
-              "gap": "+32.333"
-            },
-            {
-              "pos": 21,
               "number": "65",
               "class": "Silver Cup",
               "driver": "Maxime Oosten / Nicolas Baert / Eduardo Coseteng",
@@ -203064,7 +203056,7 @@
               "gap": "+36.627"
             },
             {
-              "pos": 22,
+              "pos": 21,
               "number": "98",
               "class": "Pro Cup",
               "driver": "Philipp Eng / Marco Wittmann / Jake Dennis",
@@ -203072,7 +203064,7 @@
               "gap": "+38.177"
             },
             {
-              "pos": 23,
+              "pos": 22,
               "number": "19",
               "class": "Silver Cup",
               "driver": "Aaron Walker / Marcos Siebert / Christian Mansell",
@@ -203080,7 +203072,7 @@
               "gap": "+39.336"
             },
             {
-              "pos": 24,
+              "pos": 23,
               "number": "23",
               "class": "Silver Cup",
               "driver": "Horatio Fitz-Simon / Maxwell Lynn / Ben Dörr",
@@ -203088,7 +203080,7 @@
               "gap": "+47.534"
             },
             {
-              "pos": 25,
+              "pos": 24,
               "number": "25",
               "class": "Silver Cup",
               "driver": "Ezequiel Perez Companc / Etienne Cheli / Ivan Klymenko",
@@ -203096,7 +203088,7 @@
               "gap": "+1:00.979"
             },
             {
-              "pos": 26,
+              "pos": 25,
               "number": "992",
               "class": "Silver Cup",
               "driver": "Daryl De Leon / Christian Hahn / Josh Rowledge",
@@ -203104,7 +203096,7 @@
               "gap": "+1:03.050"
             },
             {
-              "pos": 27,
+              "pos": 26,
               "number": "42",
               "class": "Bronze Cup",
               "driver": "Javier Sagrera / Ahmad Al Harthy / Calan Williams",
@@ -203112,7 +203104,7 @@
               "gap": "+1:07.414"
             },
             {
-              "pos": 28,
+              "pos": 27,
               "number": "4",
               "class": "Gold Cup",
               "driver": "Freddie Tomlinson / Harry George / Adam Smalley",
@@ -203120,7 +203112,7 @@
               "gap": "+1:19.636"
             },
             {
-              "pos": 29,
+              "pos": 28,
               "number": "52",
               "class": "Silver Cup",
               "driver": "Jef Machiels / Gilles Stadsbader / Matias Zagazeta",
@@ -203128,7 +203120,7 @@
               "gap": "+2:02.186"
             },
             {
-              "pos": 30,
+              "pos": 29,
               "number": "32",
               "class": "Pro Cup",
               "driver": "Kelvin van der Linde / Jordan Pepper / Charles Weerts",
@@ -203136,7 +203128,7 @@
               "gap": "+1 vuelta"
             },
             {
-              "pos": 31,
+              "pos": 30,
               "number": "99",
               "class": "Gold Cup",
               "driver": "Dylan Pereira / Andrea Frassineti / Alex Aka",
@@ -203144,7 +203136,7 @@
               "gap": "+1 vuelta"
             },
             {
-              "pos": 32,
+              "pos": 31,
               "number": "991",
               "class": "Bronze Cup",
               "driver": "James Kellett / Darren Leung / Robert De Haan",
@@ -203152,7 +203144,7 @@
               "gap": "+1 vuelta"
             },
             {
-              "pos": 33,
+              "pos": 32,
               "number": "21",
               "class": "Silver Cup",
               "driver": "Kobe Pauwels / Oliver Söderström / Sebastien Baud",
@@ -203160,7 +203152,7 @@
               "gap": "+1 vuelta"
             },
             {
-              "pos": 34,
+              "pos": 33,
               "number": "74",
               "class": "Bronze Cup",
               "driver": "Dustin Blattner / Lorenzo Patrese / Dennis Marschall",
@@ -203168,7 +203160,7 @@
               "gap": "+1 vuelta"
             },
             {
-              "pos": 35,
+              "pos": 34,
               "number": "555",
               "class": "Silver Cup",
               "driver": "Jean-Baptiste Simmenauer / James Higgins / Loris Cabirou",
@@ -203176,7 +203168,7 @@
               "gap": "+1 vuelta"
             },
             {
-              "pos": 36,
+              "pos": 35,
               "number": "77",
               "class": "Bronze Cup",
               "driver": "Jop Rappange / Nigel Schoonderwoerd / Yelmer Buurman",
@@ -203184,7 +203176,7 @@
               "gap": "+1 vuelta"
             },
             {
-              "pos": 37,
+              "pos": 36,
               "number": "88",
               "class": "Bronze Cup",
               "driver": "Daniele Di Amato / Carrie Schreiner / Aleksei Nesov",
@@ -203192,7 +203184,7 @@
               "gap": "+1 vuelta"
             },
             {
-              "pos": 38,
+              "pos": 37,
               "number": "91",
               "class": "Bronze Cup",
               "driver": "Ralf Bohn / Robert Renauer / Huub van Eijndhoven",
@@ -203200,7 +203192,7 @@
               "gap": "+1 vuelta"
             },
             {
-              "pos": 39,
+              "pos": 38,
               "number": "11",
               "class": "Bronze Cup",
               "driver": "Marcelo Tomasoni / Aaron Muss / Valentin Hasse-Clot",
@@ -203208,7 +203200,7 @@
               "gap": "+1 vuelta"
             },
             {
-              "pos": 40,
+              "pos": 39,
               "number": "111",
               "class": "Gold Cup",
               "driver": "Jim Pla / Simon Gachet / James Kell",
@@ -203216,7 +203208,7 @@
               "gap": "+1 vuelta"
             },
             {
-              "pos": 41,
+              "pos": 40,
               "number": "12",
               "class": "Bronze Cup",
               "driver": "Gabriel Rindone / Tom Kalender / Mikael Grenier",
@@ -203224,7 +203216,7 @@
               "gap": "+1 vuelta"
             },
             {
-              "pos": 42,
+              "pos": 41,
               "number": "45",
               "class": "Silver Cup",
               "driver": "Axcil Jefferies / Dylan Medler / David Perel",
@@ -203232,7 +203224,7 @@
               "gap": "+2 vueltas"
             },
             {
-              "pos": 43,
+              "pos": 42,
               "number": "999",
               "class": "Bronze Cup",
               "driver": "Patrick Charlaix / Jordan Boisson / Marvin Klein",
@@ -203240,7 +203232,7 @@
               "gap": "+3 vueltas"
             },
             {
-              "pos": 44,
+              "pos": 43,
               "number": "914",
               "class": "Bronze Cup",
               "driver": "Richard Wolf / Max Mutschlechner / Leo Pichler",
@@ -203248,7 +203240,7 @@
               "gap": "+3 vueltas"
             },
             {
-              "pos": 45,
+              "pos": 44,
               "number": "8",
               "class": "Bronze Cup",
               "driver": "Reinhold Krahn / Pietro Armanni / Joel Sturm",
@@ -203256,7 +203248,7 @@
               "gap": "+4 vueltas"
             },
             {
-              "pos": 46,
+              "pos": 45,
               "number": "35",
               "class": "Silver Cup",
               "driver": "Lucas Legeret / Mark Kastelic / Mateo Villagomez",
@@ -203264,7 +203256,7 @@
               "gap": "+8 vueltas"
             },
             {
-              "pos": 47,
+              "pos": 46,
               "number": "89",
               "class": "Bronze Cup",
               "driver": "Bashar Mardini / Patrick Kolb / Alex Fontana",
@@ -203272,7 +203264,7 @@
               "gap": "+8 vueltas"
             },
             {
-              "pos": 48,
+              "pos": 47,
               "number": "41",
               "class": "Bronze Cup",
               "driver": "Sebá Malucelli / Alan Hellmeister / Marcos Gomes",
@@ -203280,7 +203272,7 @@
               "gap": "+13 vueltas"
             },
             {
-              "pos": 49,
+              "pos": 48,
               "number": "24",
               "class": "Gold Cup",
               "driver": "Mikkel Mac / Kasper H. Jensen / Dennis Lind",
@@ -203288,7 +203280,7 @@
               "gap": "+17 vueltas"
             },
             {
-              "pos": 50,
+              "pos": 49,
               "number": "46",
               "class": "Pro Cup",
               "driver": "Max Hesse / Valentino Rossi / Neil Verhagen",
@@ -203296,7 +203288,7 @@
               "gap": "+19 vueltas"
             },
             {
-              "pos": 51,
+              "pos": 50,
               "number": "96",
               "class": "Pro Cup",
               "driver": "Patric Niederhauser / Marco Mapelli / Luca Engstler",
@@ -203304,7 +203296,7 @@
               "gap": "+20 vueltas"
             },
             {
-              "pos": 52,
+              "pos": 51,
               "number": "63",
               "class": "Pro Cup",
               "driver": "Franck Perera / Maximilian Paul / Mirko Bortolotti",
@@ -203312,17 +203304,7 @@
               "gap": "+26 vueltas"
             },
             {
-              "pos": 105,
-              "positionText": "NC",
-              "status": "No clasificado",
-              "number": "9",
-              "class": "Silver Cup",
-              "driver": "Max Hofer / Mikkel Pedersen / Aliaksandr Malykhin",
-              "team": "Pure Rxcing",
-              "gap": ""
-            },
-            {
-              "pos": 106,
+              "pos": 103,
               "positionText": "NC",
               "status": "No clasificado",
               "number": "54",
@@ -203332,7 +203314,7 @@
               "gap": ""
             },
             {
-              "pos": 107,
+              "pos": 104,
               "positionText": "NC",
               "status": "No clasificado",
               "number": "269",
@@ -203342,7 +203324,7 @@
               "gap": ""
             },
             {
-              "pos": 108,
+              "pos": 105,
               "positionText": "NC",
               "status": "No clasificado",
               "number": "20",
@@ -203352,7 +203334,7 @@
               "gap": ""
             },
             {
-              "pos": 109,
+              "pos": 106,
               "positionText": "NC",
               "status": "No clasificado",
               "number": "7",
@@ -203362,7 +203344,17 @@
               "gap": ""
             },
             {
-              "pos": 110,
+              "pos": 107,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "9",
+              "class": "Silver Cup",
+              "driver": "Max Hofer / Mikkel Pedersen / Aliaksandr Malykhin",
+              "team": "Pure Rxcing",
+              "gap": ""
+            },
+            {
+              "pos": 108,
               "positionText": "NC",
               "status": "No clasificado",
               "number": "10",
@@ -203372,7 +203364,7 @@
               "gap": ""
             },
             {
-              "pos": 111,
+              "pos": 109,
               "positionText": "NC",
               "status": "No clasificado",
               "number": "44",
@@ -203382,7 +203374,7 @@
               "gap": ""
             },
             {
-              "pos": 112,
+              "pos": 110,
               "positionText": "NC",
               "status": "No clasificado",
               "number": "84",
@@ -203392,13 +203384,23 @@
               "gap": ""
             },
             {
-              "pos": 113,
+              "pos": 111,
               "positionText": "NC",
               "status": "No clasificado",
               "number": "93",
               "class": "Bronze Cup",
               "driver": "Lucas Wolf / Eddie Cheever / Christopher Froggatt",
               "team": "Ziggo Sport Tempesta Racing",
+              "gap": ""
+            },
+            {
+              "pos": 112,
+              "positionText": "DSQ",
+              "status": "Descalificado",
+              "number": "58",
+              "class": "Gold Cup",
+              "driver": "Thomas Fleming / Louis Prette / Benjamin Goethe",
+              "team": "Garage 59",
               "gap": ""
             }
           ],
@@ -203800,7 +203802,63 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
               "start": "09:25"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "132",
+              "driver": "Tomas Pellandino",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "107",
+              "driver": "Sganga Antonino",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "66",
+              "driver": "Gonzalo Aramburu",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "8",
+              "driver": "Juan Antonio Sandin",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "133",
+              "driver": "Juan Pablo Alberti",
+              "team": "Volkswagen",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "15",
+              "driver": "Jose Alberto Goya",
+              "team": "Ford",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1039/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tcppk-2026-9-serie-serie2",
@@ -204924,83 +204982,103 @@
               "number": "63",
               "driver": "Ignacio Lovich",
               "team": "Dodge",
-              "gap": ""
+              "gap": "7:20.005"
             },
             {
               "pos": 2,
               "number": "145",
               "driver": "Arrias Iñlaki",
               "team": "Ford",
-              "gap": ""
+              "gap": "+0.567"
             },
             {
               "pos": 3,
               "number": "199",
               "driver": "Damián Pérez",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+2.859"
             },
             {
               "pos": 4,
               "number": "44",
               "driver": "Juan José Conde",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "+4.012"
             },
             {
               "pos": 5,
               "number": "47",
               "driver": "Bautista Roqueta",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+4.325"
             },
             {
               "pos": 6,
               "number": "111",
               "driver": "Ignacio Quintana",
               "team": "Torino",
-              "gap": ""
+              "gap": "+7.696"
             },
             {
               "pos": 7,
               "number": "100",
               "driver": "Leonardo Forte",
               "team": "Ford",
-              "gap": ""
+              "gap": "+16.378"
             },
             {
               "pos": 8,
               "number": "77",
               "driver": "Ignacio Vilas",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+16.584"
             },
             {
               "pos": 9,
               "number": "148",
               "driver": "Daniel Faggiano",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+16.632"
             },
             {
               "pos": 10,
               "number": "144",
               "driver": "Martin Taha",
               "team": "Ford",
-              "gap": ""
+              "gap": "+18.923"
             },
             {
               "pos": 11,
               "number": "74",
               "driver": "Facundo Ludueña",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "+45.360"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1036/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1037/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1036/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "63",
+                  "driver": "Ignacio Lovich"
+                },
+                {
+                  "pos": 2,
+                  "number": "145",
+                  "driver": "Arrias Iñlaki"
+                },
+                {
+                  "pos": 3,
+                  "number": "199",
+                  "driver": "Damián Pérez"
+                }
+              ]
+            },
+            "note": "Oficial"
           }
         },
         {
@@ -210332,7 +210410,7 @@
           ]
         }
       ],
-      "campeonesFeed": false,
+      "campeonesFeed": true,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -211582,6 +211660,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -211630,8 +211724,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 834,
-      "pagesFetched": 128,
+      "documents": 837,
+      "pagesFetched": 129,
       "eventsWithResults": 62,
       "retagged": {
         "1003": {
@@ -211669,6 +211763,10 @@
         "1026": {
           "from": "tc-mouras",
           "to": "tc-pista-pick-up"
+        },
+        "1039": {
+          "from": "tc-mouras",
+          "to": "tc-pista-pick-up"
         }
       }
     },
@@ -211703,11 +211801,11 @@
         "cup": "general",
         "cupLabel": "GT World Challenge Europe",
         "class": "Gold Cup",
-        "status": "atrasada",
-        "scoredRounds": 9,
+        "status": "oficial",
+        "scoredRounds": 10,
         "totalRounds": 10,
         "racesDone": 10,
-        "asOf": "Barcelona",
+        "asOf": "Portimao",
         "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=0_81_drivers",
         "rows": [
           {
@@ -211718,22 +211816,22 @@
           {
             "pos": 2,
             "driver": "Simon Gachet",
-            "points": 136
+            "points": 144
           },
           {
             "pos": 3,
-            "driver": "Arthur Rougier / James Kell",
-            "points": 129.5
+            "driver": "James Kell",
+            "points": 137.5
           },
           {
             "pos": 4,
             "driver": "Dylan Pereira",
-            "points": 120.5
+            "points": 130.5
           },
           {
             "pos": 5,
             "driver": "Alex Aka",
-            "points": 119.5
+            "points": 129.5
           }
         ]
       },
@@ -211741,42 +211839,42 @@
         "cup": "general",
         "cupLabel": "GT World Challenge Europe",
         "class": "Silver Cup",
-        "status": "atrasada",
-        "scoredRounds": 9,
+        "status": "oficial",
+        "scoredRounds": 10,
         "totalRounds": 10,
         "racesDone": 10,
-        "asOf": "Barcelona",
+        "asOf": "Portimao",
         "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=0_82_drivers",
         "rows": [
           {
             "pos": 1,
             "driver": "Ignacio Montenegro / Matisse Lismont",
-            "points": 211
+            "points": 236
           },
           {
             "pos": 2,
             "driver": "Guilherme Oliveira / Mikey Porter",
-            "points": 108.5
+            "points": 120.5
           },
           {
             "pos": 3,
-            "driver": "Oliver Soderstrom",
-            "points": 105
+            "driver": "Aurélien Panis / Anthony Bartone",
+            "points": 119.5
           },
           {
             "pos": 4,
-            "driver": "Gilles Stadsbader / Jef Machiels",
-            "points": 104.5
+            "driver": "Ariel Levi",
+            "points": 115.5
           },
           {
             "pos": 5,
-            "driver": "Aurélien Panis / Anthony Bartone",
-            "points": 101.5
+            "driver": "Amaury Cordeel",
+            "points": 113
           },
           {
             "pos": 34,
-            "driver": "Etienne Cheli / Ivan Klymenko / Ezequiel Perez Companc",
-            "points": 20
+            "driver": "Ivan Klymenko / Etienne Cheli / Ezequiel Perez Companc",
+            "points": 26
           }
         ]
       },
@@ -211784,11 +211882,11 @@
         "cup": "general",
         "cupLabel": "GT World Challenge Europe",
         "class": "Bronze Cup",
-        "status": "atrasada",
-        "scoredRounds": 9,
+        "status": "oficial",
+        "scoredRounds": 10,
         "totalRounds": 10,
         "racesDone": 10,
-        "asOf": "Barcelona",
+        "asOf": "Portimao",
         "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=0_80_drivers",
         "rows": [
           {
@@ -211822,17 +211920,17 @@
         "cup": "endurance",
         "cupLabel": "Endurance Cup",
         "class": "Gold Cup",
-        "status": "atrasada",
-        "scoredRounds": 4,
+        "status": "oficial",
+        "scoredRounds": 5,
         "totalRounds": 5,
         "racesDone": 5,
-        "asOf": "Nürburgring",
+        "asOf": "Portimao",
         "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=42_81_drivers",
         "rows": [
           {
             "pos": 1,
             "driver": "Ugo De Wilde / Jens Klingmann / Tim Tramnitz",
-            "points": 89
+            "points": 114
           },
           {
             "pos": 2,
@@ -211846,13 +211944,13 @@
           },
           {
             "pos": 4,
-            "driver": "Arthur Rougier / Simon Gachet / James Kell",
-            "points": 64
+            "driver": "Simon Gachet / James Kell",
+            "points": 74
           },
           {
             "pos": 5,
-            "driver": "Gilles Magnus / Robin Knutsson",
-            "points": 48
+            "driver": "Arthur Rougier",
+            "points": 64
           }
         ]
       },
@@ -211860,42 +211958,42 @@
         "cup": "endurance",
         "cupLabel": "Endurance Cup",
         "class": "Silver Cup",
-        "status": "atrasada",
-        "scoredRounds": 4,
+        "status": "oficial",
+        "scoredRounds": 5,
         "totalRounds": 5,
         "racesDone": 5,
-        "asOf": "Nürburgring",
+        "asOf": "Portimao",
         "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=42_82_drivers",
         "rows": [
           {
             "pos": 1,
             "driver": "Ignacio Montenegro / Amaury Cordeel / Matisse Lismont",
-            "points": 88
+            "points": 113
           },
           {
             "pos": 2,
             "driver": "Eduardo Coseteng",
-            "points": 56
+            "points": 66
           },
           {
             "pos": 3,
+            "driver": "Ariel Levi / Sebastian Øgaard / Rocco Mazzola",
+            "points": 59
+          },
+          {
+            "pos": 4,
+            "driver": "Aurélien Panis / Anthony Bartone / Cesar Gazeau",
+            "points": 58
+          },
+          {
+            "pos": 5,
             "driver": "Aliaksandr Malykhin / Max Hofer",
             "points": 49
           },
           {
-            "pos": 4,
-            "driver": "Jef Machiels / Matias Zagazeta / Gilles Stadsbader",
-            "points": 45
-          },
-          {
-            "pos": 5,
-            "driver": "Ariel Levi / Sebastian Øgaard / Rocco Mazzola",
-            "points": 44
-          },
-          {
             "pos": 18,
-            "driver": "Ivan Klymenko / Ezequiel Perez Companc / Etienne Cheli",
-            "points": 20
+            "driver": "Ezequiel Perez Companc / Ivan Klymenko / Etienne Cheli",
+            "points": 26
           }
         ]
       },
@@ -211903,11 +212001,11 @@
         "cup": "endurance",
         "cupLabel": "Endurance Cup",
         "class": "Bronze Cup",
-        "status": "atrasada",
-        "scoredRounds": 4,
+        "status": "oficial",
+        "scoredRounds": 5,
         "totalRounds": 5,
         "racesDone": 5,
-        "asOf": "Nürburgring",
+        "asOf": "Portimao",
         "source": "https://www.gt-world-challenge-europe.com/standings?filter_season_id=26&filter_standing_type=42_80_drivers",
         "rows": [
           {
@@ -212063,7 +212161,7 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
