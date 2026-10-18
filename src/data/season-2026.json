@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T12:57:19.653Z",
+  "generatedAt": "2026-10-18T13:06:27.534Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -203874,7 +203874,56 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
               "start": "09:50"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "127",
+              "driver": "Nahuel Cordone",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "10",
+              "driver": "Luis Catelli",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Foton",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "76",
+              "driver": "Juan José Suárez",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "14",
+              "driver": "Nestor Omar Goya",
+              "team": "Ford",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1040/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tcppk-2026-9-final-final",
@@ -211724,8 +211773,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 837,
-      "pagesFetched": 129,
+      "documents": 838,
+      "pagesFetched": 130,
       "eventsWithResults": 62,
       "retagged": {
         "1003": {
@@ -211765,6 +211814,10 @@
           "to": "tc-pista-pick-up"
         },
         "1039": {
+          "from": "tc-mouras",
+          "to": "tc-pista-pick-up"
+        },
+        "1040": {
           "from": "tc-mouras",
           "to": "tc-pista-pick-up"
         }
@@ -212161,7 +212214,6 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
