@@ -152,6 +152,8 @@ button{color:inherit;font-family:inherit}
   .masthead>.site-nav{grid-area:nav;padding-left:0;border:0;align-self:stretch;gap:4px}
   .masthead>.site-nav a{display:flex;align-items:center;padding:0 14px}
 }
+/* El enlace al juego no entra en la barra entre 801 y 1199 px (aplasta el logo): ahí sólo está en el menú del celular y en la página. */
+@media(min-width:801px) and (max-width:1199px){.masthead>.site-nav .nav-item:has(>a[href="/juego"]){display:none}}
 /* Menú en mobile: se despliega encima de la página, sin empujarla */
 @media(max-width:800px){
   .masthead{position:sticky}

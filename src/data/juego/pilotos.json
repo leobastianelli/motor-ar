@@ -1,0 +1,7185 @@
+{
+  "generatedAt": "2026-10-18T00:13:33.608Z",
+  "fuentes": {
+    "TC": "https://es.wikipedia.org/wiki/Turismo_Carretera",
+    "TC2000": "https://es.wikipedia.org/wiki/Turismo_Competición_2000",
+    "TN": "https://es.wikipedia.org/wiki/Turismo_Nacional",
+    "F1": "https://api.jolpi.ca/ergast/f1/",
+    "Top Race": "https://es.wikipedia.org/wiki/Top_Race",
+    "Rally": "https://www.rallyargentino.com/documentos/Campeones-Rally-Argentino-1980-2025.pdf",
+    "Dakar": "https://es.wikipedia.org/wiki/Rally_Dakar",
+    "TC Pista": "https://es.wikipedia.org/wiki/TC_Pista",
+    "Mundial de Turismos": "https://en.wikipedia.org/wiki/World_Touring_Car_Championship",
+    "Resistencia": "https://en.wikipedia.org/wiki/List_of_FIA_World_Endurance_champions",
+    "Súper TC2000 (2012-2021)": "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000"
+  },
+  "pilotos": [
+    {
+      "slug": "adolfo-schwelm-cruz",
+      "nombre": "Adolfo Schwelm-Cruz",
+      "nacio": 1923,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q144508",
+        "wikipedia": "https://es.wikipedia.org/wiki/Adolfo_Schwelm-Cruz",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "adrian-hang",
+      "nombre": "Adrián Hang",
+      "nacio": 1972,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1999
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5658545",
+        "wikipedia": "https://es.wikipedia.org/wiki/Adri%C3%A1n_Hang",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "adrian-percaz",
+      "nombre": "Adrián Percaz",
+      "nacio": 1986,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2010
+        },
+        {
+          "categoria": "TN",
+          "anio": 2015
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q111423506",
+        "wikipedia": "https://es.wikipedia.org/wiki/Adri%C3%A1n_Percaz",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "agustin-calamari",
+      "nombre": "Agustín Calamari",
+      "nacio": 1990,
+      "provincia": "La Pampa",
+      "region": "Centro",
+      "categorias": [
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q10850485",
+        "wikipedia": "https://es.wikipedia.org/wiki/Agust%C3%ADn_Calamari",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "agustin-canapino",
+      "nombre": "Agustín Canapino",
+      "nacio": 1990,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "IndyCar",
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 15,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2008
+        },
+        {
+          "categoria": "TC",
+          "anio": 2010
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2010
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2011
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2012
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2013
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2014
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2016
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2016
+        },
+        {
+          "categoria": "TC",
+          "anio": 2017
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2017
+        },
+        {
+          "categoria": "TC",
+          "anio": 2018
+        },
+        {
+          "categoria": "TC",
+          "anio": 2019
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2021
+        },
+        {
+          "categoria": "TC",
+          "anio": 2025
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5686507",
+        "wikipedia": "https://es.wikipedia.org/wiki/Agust%C3%ADn_Canapino",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/TC_Pista",
+          "https://es.wikipedia.org/wiki/Top_Race",
+          "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+          "https://en.wikipedia.org/wiki/TC2000_Championship",
+          "https://es.wikipedia.org/wiki/Agust%C3%ADn_Canapino"
+        ]
+      }
+    },
+    {
+      "slug": "agustin-de-brabandere",
+      "nombre": "Agustín De Brabandere",
+      "nacio": 1997,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q30902086",
+        "wikipedia": "https://es.wikipedia.org/wiki/Agust%C3%ADn_De_Brabandere",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "agustin-martinez",
+      "nombre": "Agustín Martínez",
+      "nacio": 2002,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q124681454",
+        "wikipedia": "https://es.wikipedia.org/wiki/Agust%C3%ADn_Mart%C3%ADnez_(piloto)",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "alan-castellano",
+      "nombre": "Alan Castellano",
+      "nacio": 1989,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q16482642",
+        "wikipedia": "https://es.wikipedia.org/wiki/Alan_Castellano",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "alan-ruggiero",
+      "nombre": "Alan Ruggiero",
+      "nacio": 1993,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q16488286",
+        "wikipedia": "https://es.wikipedia.org/wiki/Alan_Ruggiero",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "alberto-crespo",
+      "nombre": "Alberto Augusto Crespo",
+      "nacio": 1920,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q794544",
+        "wikipedia": "https://es.wikipedia.org/wiki/Alberto_Augusto_Crespo",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "alberto-rodriguez-larreta",
+      "nombre": "Alberto Rodríguez Larreta",
+      "nacio": 1934,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1969
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q172789",
+        "wikipedia": "https://es.wikipedia.org/wiki/Alberto_Rodr%C3%ADguez_Larreta",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "alessandro-de-tomaso",
+      "nombre": "Alejandro De Tomaso",
+      "nacio": 1928,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q172234",
+        "wikipedia": "https://es.wikipedia.org/wiki/Alejandro_De_Tomaso",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "alejandro-gonzalez",
+      "nombre": "Alejandro González",
+      "nacio": 1982,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC Pista",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5665065",
+        "wikipedia": "https://es.wikipedia.org/wiki/Alejandro_Gonz%C3%A1lez_(piloto)",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "alejandro-leguizamon",
+      "nombre": "Alejandro Leguizamón",
+      "nacio": 1969,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Top Race",
+        "TN",
+        "Rally"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q17620597",
+        "wikipedia": "https://es.wikipedia.org/wiki/Alejandro_Leguizam%C3%B3n",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "alejandro-patronelli",
+      "nombre": "Alejandro Patronelli",
+      "nacio": 1978,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "Dakar",
+          "anio": 2011
+        },
+        {
+          "categoria": "Dakar",
+          "anio": 2012
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q2688142",
+        "wikipedia": "https://es.wikipedia.org/wiki/Alejandro_Patronelli",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Rally_Dakar"
+        ]
+      }
+    },
+    {
+      "slug": "alfonso-domenech",
+      "nombre": "Alfonso Domenech",
+      "nacio": 1993,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2016
+        },
+        {
+          "categoria": "TN",
+          "anio": 2024
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q105399556",
+        "wikipedia": "https://es.wikipedia.org/wiki/Alfonso_Domenech",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "alfredo-pian",
+      "nombre": "Alfredo Pián",
+      "nacio": 1912,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "F1"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q555795",
+        "wikipedia": "https://es.wikipedia.org/wiki/Alfredo_Pi%C3%A1n",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "alicia-reina",
+      "nombre": "Alicia Reina",
+      "nacio": 1973,
+      "provincia": "Río Negro",
+      "region": "Patagonia",
+      "categorias": [
+        "TN",
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q21996297",
+        "wikipedia": "https://es.wikipedia.org/wiki/Alicia_Reina",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ana-delfosse",
+      "nombre": "Ana Delfosse",
+      "nacio": 1931,
+      "provincia": "Exterior",
+      "region": "Exterior",
+      "categorias": [
+        "F1"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q30162809",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ana_Delfosse",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "andres-jakos",
+      "nombre": "Andrés Jakos",
+      "nacio": 1999,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q105396692",
+        "wikipedia": "https://es.wikipedia.org/wiki/Andr%C3%A9s_Jakos",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "angel-lo-valvo",
+      "nombre": "Ángel Lo Valvo",
+      "nacio": 1909,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1939
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6173258",
+        "wikipedia": "https://es.wikipedia.org/wiki/%C3%81ngel_Lo_Valvo",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "angel-monguzzi",
+      "nombre": "Ángel Monguzzi",
+      "nacio": 1939,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1968
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q88975274",
+        "wikipedia": "https://es.wikipedia.org/wiki/%C3%81ngel_Monguzzi",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "sganga-antonino",
+      "nombre": "Antonino Sganga",
+      "nacio": 1988,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5677619",
+        "wikipedia": "https://es.wikipedia.org/wiki/Antonino_Sganga",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "antonio-aventin",
+      "nombre": "Antonio Aventín",
+      "nacio": 1950,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1981
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5697783",
+        "wikipedia": "https://es.wikipedia.org/wiki/Antonio_Avent%C3%ADn",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://en.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "ariel-pacho",
+      "nombre": "Ariel Pacho",
+      "nacio": 1968,
+      "provincia": "Chubut",
+      "region": "Patagonia",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5658887",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ariel_Pacho",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "arturo-kruuse",
+      "nombre": "Arturo Kruuse",
+      "nacio": 1897,
+      "provincia": "Río Negro",
+      "region": "Patagonia",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5707303",
+        "wikipedia": "https://es.wikipedia.org/wiki/Arturo_Kruuse",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "augusto-carinelli",
+      "nombre": "Augusto Carinelli",
+      "nacio": 1976,
+      "provincia": "Chaco",
+      "region": "NEA",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5711607",
+        "wikipedia": "https://es.wikipedia.org/wiki/Augusto_Carinelli",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "augusto-scalbi",
+      "nombre": "Augusto Scalbi",
+      "nacio": 1990,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q4821321",
+        "wikipedia": "https://es.wikipedia.org/wiki/Augusto_Scalbi",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "baltazar-leguizamon",
+      "nombre": "Baltazar Leguizamón",
+      "nacio": 2000,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q42303782",
+        "wikipedia": "https://es.wikipedia.org/wiki/Baltazar_Leguizam%C3%B3n",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "bernardo-llaver",
+      "nombre": "Bernardo Llaver",
+      "nacio": 1987,
+      "provincia": "Mendoza",
+      "region": "Cuyo",
+      "categorias": [
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5726828",
+        "wikipedia": "https://es.wikipedia.org/wiki/Bernardo_Llaver",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "bruno-etman",
+      "nombre": "Bruno Etman",
+      "nacio": 1990,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q20015467",
+        "wikipedia": "https://es.wikipedia.org/wiki/Bruno_Etman",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "camilo-echevarria",
+      "nombre": "Camilo Echevarría",
+      "nacio": 1990,
+      "provincia": "Neuquén",
+      "region": "Patagonia",
+      "categorias": [
+        "Mundial de Turismos",
+        "TC",
+        "TC Pista",
+        "Top Race"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2014
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q2894784",
+        "wikipedia": "https://es.wikipedia.org/wiki/Camilo_Echevarr%C3%ADa",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "carlos-javier-merlo",
+      "nombre": "Carlos Javier Merlo",
+      "nacio": 1994,
+      "provincia": "San Luis",
+      "region": "Cuyo",
+      "categorias": [
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q16562424",
+        "wikipedia": "https://es.wikipedia.org/wiki/Carlos_Javier_Merlo",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "carlos-loeffel",
+      "nombre": "Carlos Löeffel",
+      "nacio": 1926,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5750777",
+        "wikipedia": "https://es.wikipedia.org/wiki/Carlos_L%C3%B6effel",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "carlos-okulovich",
+      "nombre": "Carlos Okulovich",
+      "nacio": 1985,
+      "provincia": "Misiones",
+      "region": "NEA",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2010
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5042449",
+        "wikipedia": "https://es.wikipedia.org/wiki/Carlos_Okulovich",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "carlos-pairetti",
+      "nombre": "Carlos Pairetti",
+      "nacio": 1935,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1968
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5042464",
+        "wikipedia": "https://es.wikipedia.org/wiki/Carlos_Pairetti",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "carlos-reutemann",
+      "nombre": "Carlos Reutemann",
+      "nacio": 1942,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "F1",
+        "Resistencia",
+        "TC",
+        "TN",
+        "Rally"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1966
+        },
+        {
+          "categoria": "TN",
+          "anio": 1967
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q173238",
+        "wikipedia": "https://es.wikipedia.org/wiki/Carlos_Reutemann",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "carlos-ruesch",
+      "nombre": "Carlos Ruesch",
+      "nacio": 1943,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1966
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q89381760",
+        "wikipedia": "https://es.wikipedia.org/wiki/Carlos_Ruesch",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "christian-dose",
+      "nombre": "Christian Dose",
+      "nacio": 1970,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q63381933",
+        "wikipedia": "https://es.wikipedia.org/wiki/Christian_Dose",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "christian-ledesma",
+      "nombre": "Christian Ledesma",
+      "nacio": 1976,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 2004
+        },
+        {
+          "categoria": "TC",
+          "anio": 2007
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5109836",
+        "wikipedia": "https://es.wikipedia.org/wiki/Christian_Ledesma",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "clemar-bucci",
+      "nombre": "Clemar Bucci",
+      "nacio": 1920,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "F1"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q173281",
+        "wikipedia": "https://es.wikipedia.org/wiki/Clemar_Bucci",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "cristian-di-scala",
+      "nombre": "Cristian Di Scala",
+      "nacio": 1991,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q20014289",
+        "wikipedia": "https://es.wikipedia.org/wiki/Cristian_Di_Scala",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "damian-fineschi",
+      "nombre": "Damián Fineschi",
+      "nacio": 1988,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5797818",
+        "wikipedia": "https://es.wikipedia.org/wiki/Dami%C3%A1n_Fineschi",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "daniel-cingolani",
+      "nombre": "Daniel Cingolani",
+      "nacio": 1961,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 2000
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5216808",
+        "wikipedia": "https://es.wikipedia.org/wiki/Daniel_Cingolani",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "daniel-domaszewski",
+      "nombre": "Daniel Domaszewski",
+      "nacio": 1973,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q28131842",
+        "wikipedia": "https://es.wikipedia.org/wiki/Daniel_Domaszewski",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "daniel-mazzucco",
+      "nombre": "Daniel Mazzucco",
+      "nacio": 1963,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q28176720",
+        "wikipedia": "https://es.wikipedia.org/wiki/Daniel_Mazzucco",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "dante-emiliozzi",
+      "nombre": "Dante Emiliozzi",
+      "nacio": 1916,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 4,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1962
+        },
+        {
+          "categoria": "TC",
+          "anio": 1963
+        },
+        {
+          "categoria": "TC",
+          "anio": 1964
+        },
+        {
+          "categoria": "TC",
+          "anio": 1965
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q8353801",
+        "wikipedia": "https://es.wikipedia.org/wiki/Dante_Emiliozzi",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "diego-aventin",
+      "nombre": "Diego Aventín",
+      "nacio": 1980,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "Top Race",
+          "anio": 2002
+        },
+        {
+          "categoria": "TC",
+          "anio": 2013
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5274567",
+        "wikipedia": "https://es.wikipedia.org/wiki/Diego_Avent%C3%ADn",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Top_Race"
+        ]
+      }
+    },
+    {
+      "slug": "diego-de-carlo",
+      "nombre": "Diego De Carlo",
+      "nacio": 1974,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q123502098",
+        "wikipedia": "https://es.wikipedia.org/wiki/Diego_De_Carlo",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "diego-azar",
+      "nombre": "Diego Javier Azar",
+      "nacio": 1994,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "Top Race",
+          "anio": 2021
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2022
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2023
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q16556868",
+        "wikipedia": "https://es.wikipedia.org/wiki/Diego_Javier_Azar",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Top_Race"
+        ]
+      }
+    },
+    {
+      "slug": "diego-menendez",
+      "nombre": "Diego Menéndez",
+      "nacio": 1971,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5806391",
+        "wikipedia": "https://es.wikipedia.org/wiki/Diego_Men%C3%A9ndez",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "domingo-marimon",
+      "nombre": "Domingo Marimón",
+      "nacio": 1903,
+      "provincia": "Exterior",
+      "region": "Exterior",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q8561569",
+        "wikipedia": "https://es.wikipedia.org/wiki/Domingo_Marim%C3%B3n",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "edgardo-lavari",
+      "nombre": "Edgardo Lavari",
+      "nacio": 1951,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q8771920",
+        "wikipedia": "https://es.wikipedia.org/wiki/Edgardo_Lavari",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "eduardo-jose-copello",
+      "nombre": "Eduardo Copello",
+      "nacio": 1926,
+      "provincia": "San Juan",
+      "region": "Cuyo",
+      "categorias": [
+        "TC",
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1967
+        },
+        {
+          "categoria": "TC",
+          "anio": 1970
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5340569",
+        "wikipedia": "https://es.wikipedia.org/wiki/Eduardo_Copello",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "eduardo-ramos",
+      "nombre": "Eduardo Ramos",
+      "nacio": 1966,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1994
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5340742",
+        "wikipedia": "https://es.wikipedia.org/wiki/Eduardo_Ramos",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "emanuel-moriatis",
+      "nombre": "Emanuel Moriatis",
+      "nacio": 1980,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 2009
+        },
+        {
+          "categoria": "TN",
+          "anio": 2012
+        },
+        {
+          "categoria": "TN",
+          "anio": 2016
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5369105",
+        "wikipedia": "https://es.wikipedia.org/wiki/Emanuel_Moriatis",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "emiliano-lopez",
+      "nombre": "Emiliano López",
+      "nacio": 1987,
+      "provincia": "Chubut",
+      "region": "Patagonia",
+      "categorias": [
+        "TC Pista",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5830895",
+        "wikipedia": "https://es.wikipedia.org/wiki/Emiliano_L%C3%B3pez",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "emiliano-spataro",
+      "nombre": "Emiliano Spataro",
+      "nacio": 1976,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN",
+        "Dakar"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "Top Race",
+          "anio": 2007
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2008
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5371717",
+        "wikipedia": "https://es.wikipedia.org/wiki/Emiliano_Spataro",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Top_Race"
+        ]
+      }
+    },
+    {
+      "slug": "emilio-bertolini",
+      "nombre": "Emilio Bertolini",
+      "nacio": 1945,
+      "provincia": "Mendoza",
+      "region": "Cuyo",
+      "categorias": [
+        "TC",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q19861856",
+        "wikipedia": "https://es.wikipedia.org/wiki/Emilio_Bertolini",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "emilio-satriano",
+      "nombre": "Emilio Satriano",
+      "nacio": 1952,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1990
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5831324",
+        "wikipedia": "https://es.wikipedia.org/wiki/Emilio_Satriano",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "emmanuel-perez-bravo",
+      "nombre": "Emmanuel Pérez Bravo",
+      "nacio": 1986,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q76762245",
+        "wikipedia": "https://es.wikipedia.org/wiki/Emmanuel_P%C3%A9rez_Bravo",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "eric-lichtenstein",
+      "nombre": "Eric Lichtenstein",
+      "nacio": 1994,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q943015",
+        "wikipedia": "https://es.wikipedia.org/wiki/Eric_Lichtenstein",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ernesto-celestino-bessone",
+      "nombre": "Ernesto Bessone I",
+      "nacio": 1923,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1985
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5412893",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ernesto_Bessone_I",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "ernesto-bessone",
+      "nombre": "Ernesto Bessone II",
+      "nacio": 1958,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 4,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 1996
+        },
+        {
+          "categoria": "TC",
+          "anio": 2003
+        },
+        {
+          "categoria": "TN",
+          "anio": 2003
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2004
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q8777347",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ernesto_Bessone_II",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000",
+          "https://es.wikipedia.org/wiki/Turismo_Nacional",
+          "https://es.wikipedia.org/wiki/Top_Race"
+        ]
+      }
+    },
+    {
+      "slug": "ernesto-soto",
+      "nombre": "Ernesto Soto",
+      "nacio": 1954,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "Rally"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "Rally",
+          "anio": 1980,
+          "clase": "Clase B"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1984,
+          "clase": "Clase 3"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1987,
+          "clase": "Clase 3"
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5837025",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ernesto_Soto",
+        "campeones": [
+          "https://www.rallyargentino.com/documentos/Campeones-Rally-Argentino-1980-2025.pdf"
+        ]
+      }
+    },
+    {
+      "slug": "esteban-gini",
+      "nombre": "Esteban Gini",
+      "nacio": 1989,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2015
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q17541780",
+        "wikipedia": "https://es.wikipedia.org/wiki/Esteban_Gini",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "esteban-guerrieri",
+      "nombre": "Esteban Guerrieri",
+      "nacio": 1985,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Mundial de Turismos",
+        "Resistencia",
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q679544",
+        "wikipedia": "https://es.wikipedia.org/wiki/Esteban_Guerrieri",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "esteban-tuero",
+      "nombre": "Esteban Tuero",
+      "nacio": 1978,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2008
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q173298",
+        "wikipedia": "https://es.wikipedia.org/wiki/Esteban_Tuero",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "eusebio-marcilla",
+      "nombre": "Eusebio Marcilla",
+      "nacio": 1914,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5852307",
+        "wikipedia": "https://es.wikipedia.org/wiki/Eusebio_Marcilla",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ezequiel-bosio",
+      "nombre": "Ezequiel Bosio",
+      "nacio": 1985,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2007
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5423200",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ezequiel_Bosio",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "fabian-acuna",
+      "nombre": "Fabián Acuña",
+      "nacio": 1964,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q20014967",
+        "wikipedia": "https://es.wikipedia.org/wiki/Fabi%C3%A1n_Acu%C3%B1a",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "fabian-flaque",
+      "nombre": "Fabián Flaqué",
+      "nacio": 1970,
+      "provincia": "San Juan",
+      "region": "Cuyo",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5854254",
+        "wikipedia": "https://es.wikipedia.org/wiki/Fabi%C3%A1n_Flaqu%C3%A9",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "fabian-yannantuoni",
+      "nombre": "Fabián Yannantuoni",
+      "nacio": 1979,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "Mundial de Turismos",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2011
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5854308",
+        "wikipedia": "https://es.wikipedia.org/wiki/Fabi%C3%A1n_Yannantuoni",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "facundo-aldrighetti",
+      "nombre": "Facundo Aldrighetti",
+      "nacio": 1997,
+      "provincia": "Río Negro",
+      "region": "Patagonia",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "Top Race",
+          "anio": 2025
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q114443780",
+        "wikipedia": "https://es.wikipedia.org/wiki/Facundo_Aldrighetti",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Top_Race"
+        ]
+      }
+    },
+    {
+      "slug": "facundo-ardusso",
+      "nombre": "Facundo Ardusso",
+      "nacio": 1988,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN",
+        "Dakar"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 2017
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2018
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5429100",
+        "wikipedia": "https://es.wikipedia.org/wiki/Facundo_Ardusso",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+          "https://en.wikipedia.org/wiki/TC2000_Championship"
+        ]
+      }
+    },
+    {
+      "slug": "facundo-chapur",
+      "nombre": "Facundo Chapur",
+      "nacio": 1993,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2012
+        },
+        {
+          "categoria": "TN",
+          "anio": 2013
+        },
+        {
+          "categoria": "TN",
+          "anio": 2015
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5855196",
+        "wikipedia": "https://es.wikipedia.org/wiki/Facundo_Chapur",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "facundo-della-motta",
+      "nombre": "Facundo Della Motta",
+      "nacio": 1986,
+      "provincia": "San Juan",
+      "region": "Cuyo",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5855206",
+        "wikipedia": "https://es.wikipedia.org/wiki/Facundo_Della_Motta",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "facundo-marques",
+      "nombre": "Facundo Marques",
+      "nacio": 1999,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q122695326",
+        "wikipedia": "https://es.wikipedia.org/wiki/Facundo_Marques",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "facu-regalia",
+      "nombre": "Facundo Regalia",
+      "nacio": 1991,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q1335272",
+        "wikipedia": "https://es.wikipedia.org/wiki/Facundo_Regalia",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "federico-lifschitz",
+      "nombre": "Federico Lifschitz",
+      "nacio": 1982,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5857702",
+        "wikipedia": "https://es.wikipedia.org/wiki/Federico_Lifschitz",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "federico-moises",
+      "nombre": "Federico Moisés",
+      "nacio": 1987,
+      "provincia": "Jujuy",
+      "region": "NOA",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q20015011",
+        "wikipedia": "https://es.wikipedia.org/wiki/Federico_Mois%C3%A9s",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "federico-villagra",
+      "nombre": "Federico Villagra",
+      "nacio": 1969,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "Rally",
+        "Dakar"
+      ],
+      "titulos": 21,
+      "titulosDetalle": [
+        {
+          "categoria": "Rally",
+          "anio": 2002,
+          "clase": "Grupo N Clase 4"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2003,
+          "clase": "Grupo N4 Clase 4"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2004,
+          "clase": "Grupo N Clase 4"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2004,
+          "clase": "Absoluto"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2006,
+          "clase": "Grupo N Clase 4"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2006,
+          "clase": "Absoluto"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2007,
+          "clase": "Grupo N Clase 4"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2007,
+          "clase": "Absoluto"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2008,
+          "clase": "Grupo N Clase 4"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2008,
+          "clase": "Absoluto"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2009,
+          "clase": "Grupo N Clase 4"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2009,
+          "clase": "Absoluto"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2010,
+          "clase": "Grupo N Clase 4"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2010,
+          "clase": "Absoluto"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2011,
+          "clase": "Clase 3"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2011,
+          "clase": "Absoluto"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2012,
+          "clase": "Clase MR"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2012,
+          "clase": "Absoluto"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2013,
+          "clase": "Clase MR"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2013,
+          "clase": "Absoluto"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2018,
+          "clase": "Clase RC2 (MR Turbo)"
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q731241",
+        "wikipedia": "https://es.wikipedia.org/wiki/Federico_Villagra",
+        "campeones": [
+          "https://www.rallyargentino.com/documentos/Campeones-Rally-Argentino-1980-2025.pdf"
+        ]
+      }
+    },
+    {
+      "slug": "fernando-croceri",
+      "nombre": "Fernando Croceri",
+      "nacio": 1960,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q63870747",
+        "wikipedia": "https://es.wikipedia.org/wiki/Fernando_Croceri",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "florencia-cutro",
+      "nombre": "Florencia Cutro",
+      "nacio": 1987,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "Rally"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q10878865",
+        "wikipedia": "https://es.wikipedia.org/wiki/Florencia_Cutro",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "francisco-alcuaz",
+      "nombre": "Francisco Alcuaz",
+      "nacio": 1942,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TN",
+        "Rally"
+      ],
+      "titulos": 4,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1978
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1980,
+          "clase": "Clase C"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1981,
+          "clase": "Clase D"
+        },
+        {
+          "categoria": "TN",
+          "anio": 1981
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5865031",
+        "wikipedia": "https://es.wikipedia.org/wiki/Francisco_Alcuaz",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional",
+          "https://www.rallyargentino.com/documentos/Campeones-Rally-Argentino-1980-2025.pdf"
+        ]
+      }
+    },
+    {
+      "slug": "franco-caimi",
+      "nombre": "Franco Caimi",
+      "nacio": 1988,
+      "provincia": "Mendoza",
+      "region": "Cuyo",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q47105584",
+        "wikipedia": "https://es.wikipedia.org/wiki/Franco_Caimi",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "franco-colapinto",
+      "nombre": "Franco Colapinto",
+      "nacio": 2003,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "Resistencia"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q88463514",
+        "wikipedia": "https://es.wikipedia.org/wiki/Franco_Colapinto",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "franco-coscia",
+      "nombre": "Franco Coscia",
+      "nacio": 1981,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5868352",
+        "wikipedia": "https://es.wikipedia.org/wiki/Franco_Coscia",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "franco-de-benedictis",
+      "nombre": "Franco De Benedictis",
+      "nacio": 1993,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q16569406",
+        "wikipedia": "https://es.wikipedia.org/wiki/Franco_De_Benedictis",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "franco-morillo",
+      "nombre": "Franco Morillo",
+      "nacio": 1993,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q51132554",
+        "wikipedia": "https://es.wikipedia.org/wiki/Franco_Morillo",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "franco-vivian",
+      "nombre": "Franco Vivian",
+      "nacio": 1989,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5868416",
+        "wikipedia": "https://es.wikipedia.org/wiki/Franco_Vivian",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "gabriel-ponce-de-leon",
+      "nombre": "Gabriel Ponce de León",
+      "nacio": 1979,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 2001
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2003
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2005
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q977416",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gabriel_Ponce_de_Le%C3%B3n",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "gabriel-raies",
+      "nombre": "Gabriel Raies",
+      "nacio": 1958,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN",
+        "Rally"
+      ],
+      "titulos": 18,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1978
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1981,
+          "clase": "Clase C"
+        },
+        {
+          "categoria": "TN",
+          "anio": 1981
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1984,
+          "clase": "Clase 2"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1986,
+          "clase": "Clase 3"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1988,
+          "clase": "Clase 3"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1989,
+          "clase": "Clase 3"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1990,
+          "clase": "Clase 3"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1991,
+          "clase": "Clase 3"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1992,
+          "clase": "Clase 3"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1994,
+          "clase": "Clase 3"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1995,
+          "clase": "Fórmula 2"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1996,
+          "clase": "Fórmula 2"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2000,
+          "clase": "Grupo N Clase 4"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2001,
+          "clase": "Grupo A Clase 8"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2001,
+          "clase": "Absoluto"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2002,
+          "clase": "Grupo A Clase 8"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2002,
+          "clase": "Absoluto"
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q31209432",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gabriel_Raies",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional",
+          "https://www.rallyargentino.com/documentos/Campeones-Rally-Argentino-1980-2025.pdf"
+        ]
+      }
+    },
+    {
+      "slug": "gaspar-chansard",
+      "nombre": "Gaspar Chansard",
+      "nacio": 2003,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q130301049",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gaspar_Chansard",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "gaston-ferrante",
+      "nombre": "Gastón Ferrante",
+      "nacio": 1988,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5876189",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gast%C3%B3n_Ferrante",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "gaston-gonzalez",
+      "nombre": "Gastón González",
+      "nacio": 1978,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q28129064",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gast%C3%B3n_Gonz%C3%A1lez",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "gaston-iansa",
+      "nombre": "Gastón Iansa",
+      "nacio": 1997,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q112762077",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gast%C3%B3n_Iansa",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "gaston-mazzacane-foton",
+      "nombre": "Gastón Mazzacane",
+      "nacio": 1975,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "IndyCar",
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q172017",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gast%C3%B3n_Mazzacane",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "gaston-rossi",
+      "nombre": "Gastón Rossi",
+      "nacio": 1990,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q8963586",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gast%C3%B3n_Rossi",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "gerardo-salaverria",
+      "nombre": "Gerardo Salaverría",
+      "nacio": 1988,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5878399",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gerardo_Salaverr%C3%ADa",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "german-giles",
+      "nombre": "Germán Giles",
+      "nacio": 1979,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5878684",
+        "wikipedia": "https://es.wikipedia.org/wiki/Germ%C3%A1n_Giles",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "german-sirvent",
+      "nombre": "Germán Sirvent",
+      "nacio": 1987,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5561793",
+        "wikipedia": "https://es.wikipedia.org/wiki/Germ%C3%A1n_Sirvent",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "german-todino",
+      "nombre": "Germán Todino",
+      "nacio": 2000,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q57167365",
+        "wikipedia": "https://es.wikipedia.org/wiki/Germ%C3%A1n_Todino",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "gianfranco-collino",
+      "nombre": "Gianfranco Collino",
+      "nacio": 1991,
+      "provincia": "Río Negro",
+      "region": "Patagonia",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q20024843",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gianfranco_Collino",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "gonzalo-antolin",
+      "nombre": "Gonzalo Antolín",
+      "nacio": 1994,
+      "provincia": "Mendoza",
+      "region": "Cuyo",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q136526453",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gonzalo_Antol%C3%ADn",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "gonzalo-montenegro",
+      "nombre": "Gonzalo Montenegro",
+      "nacio": 1995,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q20015290",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gonzalo_Montenegro",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "gonzalo-perlo",
+      "nombre": "Gonzalo Perlo",
+      "nacio": 1989,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5883168",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gonzalo_Perlo",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "guido-falaschi",
+      "nombre": "Guido Falaschi",
+      "nacio": 1989,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "Top Race",
+          "anio": 2010
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q2702897",
+        "wikipedia": "https://es.wikipedia.org/wiki/Guido_Falaschi",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Top_Race",
+          "https://www.diariodecuyo.com.ar/noticias/falaschi-fue-campeon-de-la-copa-america-en-san-juan-887435.html"
+        ]
+      }
+    },
+    {
+      "slug": "guillermo-castellanos",
+      "nombre": "Guillermo Castellanos",
+      "nacio": 1966,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5888418",
+        "wikipedia": "https://es.wikipedia.org/wiki/Guillermo_Castellanos",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "guillermo-maldonado",
+      "nombre": "Guillermo Maldonado",
+      "nacio": 1952,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 1994
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5616197",
+        "wikipedia": "https://es.wikipedia.org/wiki/Guillermo_Maldonado",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "guillermo-ortelli",
+      "nombre": "Guillermo Ortelli",
+      "nacio": 1973,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 9,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1998
+        },
+        {
+          "categoria": "TC",
+          "anio": 2000
+        },
+        {
+          "categoria": "TC",
+          "anio": 2001
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2001
+        },
+        {
+          "categoria": "TC",
+          "anio": 2002
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2005
+        },
+        {
+          "categoria": "TC",
+          "anio": 2008
+        },
+        {
+          "categoria": "TC",
+          "anio": 2011
+        },
+        {
+          "categoria": "TC",
+          "anio": 2016
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5616228",
+        "wikipedia": "https://es.wikipedia.org/wiki/Guillermo_Ortelli",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Top_Race"
+        ]
+      }
+    },
+    {
+      "slug": "gustavo-der-ohanessian",
+      "nombre": "Gustavo Der Ohanessian",
+      "nacio": 1963,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q70783408",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gustavo_Der_Ohanessian",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "gustavo-micheloud",
+      "nombre": "Gustavo Micheloud",
+      "nacio": 1989,
+      "provincia": "Chubut",
+      "region": "Patagonia",
+      "categorias": [
+        "TC Pista",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5889741",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gustavo_Micheloud",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "hector-luis-gradassi",
+      "nombre": "Héctor Luis Gradassi",
+      "nacio": 1933,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 4,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1972
+        },
+        {
+          "categoria": "TC",
+          "anio": 1974
+        },
+        {
+          "categoria": "TC",
+          "anio": 1975
+        },
+        {
+          "categoria": "TC",
+          "anio": 1976
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5963871",
+        "wikipedia": "https://es.wikipedia.org/wiki/H%C3%A9ctor_Luis_Gradassi",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "henry-martin",
+      "nombre": "Henry Martin",
+      "nacio": 1965,
+      "provincia": "San Juan",
+      "region": "Cuyo",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 1997
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5725519",
+        "wikipedia": "https://es.wikipedia.org/wiki/Henry_Martin",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "hernan-bradas",
+      "nombre": "Hernán Bradas",
+      "nacio": 1972,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q73634072",
+        "wikipedia": "https://es.wikipedia.org/wiki/Hern%C3%A1n_Bradas",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "hugo-mazzacane",
+      "nombre": "Hugo Mazzacane",
+      "nacio": 1946,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q65173994",
+        "wikipedia": "https://es.wikipedia.org/wiki/Hugo_Mazzacane",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "hugo-olmi",
+      "nombre": "Hugo Olmi",
+      "nacio": 1955,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1984
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q60828769",
+        "wikipedia": "https://es.wikipedia.org/wiki/Hugo_Olmi",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "humberto-krujoski",
+      "nombre": "Humberto Krujoski",
+      "nacio": 1978,
+      "provincia": "Corrientes",
+      "region": "NEA",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5904925",
+        "wikipedia": "https://es.wikipedia.org/wiki/Humberto_Krujoski",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "reutemann-ian",
+      "nombre": "Ian Reutemann",
+      "nacio": 2003,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q108841009",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ian_Reutemann",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ianina-zanazzi",
+      "nombre": "Ianina Zanazzi",
+      "nacio": 1982,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5983363",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ianina_Zanazzi",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ignacio-char",
+      "nombre": "Ignacio Char",
+      "nacio": 1989,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5913159",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ignacio_Char",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ignacio-fain",
+      "nombre": "Ignacio Faín",
+      "nacio": 2005,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q132177902",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ignacio_Fa%C3%ADn",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ignacio-julian",
+      "nombre": "Ignacio Julián",
+      "nacio": 1994,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC Pista",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q10977753",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ignacio_Juli%C3%A1n",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ignacio-montenegro",
+      "nombre": "Ignacio Montenegro",
+      "nacio": 2004,
+      "provincia": "Chubut",
+      "region": "Patagonia",
+      "categorias": [
+        "Mundial de Turismos",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q111426821",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ignacio_Montenegro",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "jeremias-gonzalez-ferioli",
+      "nombre": "Jeremías González Ferioli",
+      "nacio": 1995,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q21993983",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jerem%C3%ADas_Gonz%C3%A1lez_Ferioli",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "jeronimo-teti",
+      "nombre": "Jerónimo Teti",
+      "nacio": 1978,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q111700850",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jer%C3%B3nimo_Teti",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "jesus-iglesias",
+      "nombre": "Jesús Iglesias",
+      "nacio": 1922,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q173611",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jes%C3%BAs_Iglesias",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "jonatan-castellano",
+      "nombre": "Jonatan Castellano",
+      "nacio": 1985,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2005
+        },
+        {
+          "categoria": "TN",
+          "anio": 2022
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5933947",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jonatan_Castellano",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional",
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "jonathan-vazquez",
+      "nombre": "Jonathan Vázquez",
+      "nacio": 1985,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q20021958",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jonathan_V%C3%A1zquez",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "jorge-cupeiro",
+      "nombre": "Jorge Cupeiro",
+      "nacio": 1937,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5934822",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jorge_Cupeiro",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "jorge-daponte",
+      "nombre": "Jorge Daponte",
+      "nacio": 1923,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q173593",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jorge_Daponte",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "jorge-omar-del-rio",
+      "nombre": "Jorge Omar del Río",
+      "nacio": 1946,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 1980
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 1981
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 1982
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5935733",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jorge_Omar_del_R%C3%ADo",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "jorge-recalde",
+      "nombre": "Jorge Recalde",
+      "nacio": 1951,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TN",
+        "Rally"
+      ],
+      "titulos": 7,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1974
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1982,
+          "clase": "Clase 12"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1983,
+          "clase": "Clase 3"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1985,
+          "clase": "Clase 3"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 1999,
+          "clase": "Grupo A Clase 8"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2000,
+          "clase": "Grupo A Clase 8"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2000,
+          "clase": "Absoluto"
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q942258",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jorge_Recalde",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional",
+          "https://www.rallyargentino.com/documentos/Campeones-Rally-Argentino-1980-2025.pdf"
+        ]
+      }
+    },
+    {
+      "slug": "jorge-emilio-serafini",
+      "nombre": "Jorge Serafini",
+      "nacio": 1946,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1980
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q18644265",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jorge_Serafini",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "jorge-ternengo",
+      "nombre": "Jorge Ternengo",
+      "nacio": 1935,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q17635461",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jorge_Ternengo",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "jorge-trebbiani",
+      "nombre": "Jorge Trebbiani",
+      "nacio": 1984,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5936156",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jorge_Trebbiani",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "froilan-gonzalez",
+      "nombre": "José Froilán González",
+      "nacio": 1922,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "TC"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q171447",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Froil%C3%A1n_Gonz%C3%A1lez",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "jose-hernan-palazzo",
+      "nombre": "José Hernán Palazzo",
+      "nacio": 2000,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2024
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q69563321",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Hern%C3%A1n_Palazzo",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "jose-luis-di-palma",
+      "nombre": "José Luis Di Palma",
+      "nacio": 1966,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5638105",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Luis_Di_Palma",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "jose-manuel-balbiani",
+      "nombre": "José Manuel Balbiani",
+      "nacio": 1978,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6292968",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Manuel_Balbiani",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "jose-manuel-urcera",
+      "nombre": "José Manuel Urcera",
+      "nacio": 1991,
+      "provincia": "Río Negro",
+      "region": "Patagonia",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2019
+        },
+        {
+          "categoria": "TN",
+          "anio": 2020
+        },
+        {
+          "categoria": "TC",
+          "anio": 2022
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q20021437",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Manuel_Urcera",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "jose-migliore",
+      "nombre": "José Migliore",
+      "nacio": 1930,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1962
+        },
+        {
+          "categoria": "TN",
+          "anio": 1970
+        },
+        {
+          "categoria": "TN",
+          "anio": 1971
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5943883",
+        "wikipedia": "https://es.wikipedia.org/wiki/Jos%C3%A9_Migliore",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "juan-angel-rosso",
+      "nombre": "Juan Ángel Rosso",
+      "nacio": 1993,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "Mundial de Turismos",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q28503037",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_%C3%81ngel_Rosso",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "juan-antonio-de-benedictis",
+      "nombre": "Juan Antonio De Benedictis",
+      "nacio": 1954,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5947256",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Antonio_De_Benedictis",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "juan-bautista-de-benedictis",
+      "nombre": "Juan Bautista De Benedictis",
+      "nacio": 1986,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2006
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q2883981",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Bautista_De_Benedictis",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "juan-cruz-yacopini",
+      "nombre": "Juan Cruz Yacopini",
+      "nacio": 1999,
+      "provincia": "Mendoza",
+      "region": "Cuyo",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q132002884",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Cruz_Yacopini",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "juan-daglio",
+      "nombre": "Juan Daglio",
+      "nacio": 1999,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q125562649",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Daglio",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "juan-galvez",
+      "nombre": "Juan Gálvez",
+      "nacio": 1916,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 9,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1949
+        },
+        {
+          "categoria": "TC",
+          "anio": 1950
+        },
+        {
+          "categoria": "TC",
+          "anio": 1951
+        },
+        {
+          "categoria": "TC",
+          "anio": 1952
+        },
+        {
+          "categoria": "TC",
+          "anio": 1955
+        },
+        {
+          "categoria": "TC",
+          "anio": 1956
+        },
+        {
+          "categoria": "TC",
+          "anio": 1957
+        },
+        {
+          "categoria": "TC",
+          "anio": 1958
+        },
+        {
+          "categoria": "TC",
+          "anio": 1960
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6299959",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_G%C3%A1lvez_(piloto)",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "juan-manuel-bordeu",
+      "nombre": "Juan Manuel Bordeu",
+      "nacio": 1934,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "TC"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1966
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q636886",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Manuel_Bordeu",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "juan-manuel-fangio",
+      "nombre": "Juan Manuel Fangio",
+      "nacio": 1911,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "TC"
+      ],
+      "titulos": 7,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1940
+        },
+        {
+          "categoria": "TC",
+          "anio": 1941
+        },
+        {
+          "categoria": "F1",
+          "anio": 1951
+        },
+        {
+          "categoria": "F1",
+          "anio": 1954
+        },
+        {
+          "categoria": "F1",
+          "anio": 1955
+        },
+        {
+          "categoria": "F1",
+          "anio": 1956
+        },
+        {
+          "categoria": "F1",
+          "anio": 1957
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q2069",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Manuel_Fangio",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://api.jolpi.ca/ergast/f1/"
+        ]
+      }
+    },
+    {
+      "slug": "juan-manuel-lopez",
+      "nombre": "Juan Manuel López",
+      "nacio": 1980,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5951063",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Manuel_L%C3%B3pez_(piloto)",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "juan-manuel-silva-automovilista",
+      "nombre": "Juan Manuel Silva",
+      "nacio": 1972,
+      "provincia": "Chaco",
+      "region": "NEA",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN",
+        "Dakar"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 1999
+        },
+        {
+          "categoria": "TC",
+          "anio": 2005
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6300395",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Manuel_Silva",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "juan-maria-traverso",
+      "nombre": "Juan María Traverso",
+      "nacio": 1950,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN",
+        "Rally"
+      ],
+      "titulos": 16,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1977
+        },
+        {
+          "categoria": "TC",
+          "anio": 1978
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 1986
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 1988
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 1990
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 1991
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 1992
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 1993
+        },
+        {
+          "categoria": "TC",
+          "anio": 1995
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 1995
+        },
+        {
+          "categoria": "TC",
+          "anio": 1996
+        },
+        {
+          "categoria": "TC",
+          "anio": 1997
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 1998
+        },
+        {
+          "categoria": "TC",
+          "anio": 1999
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 1999
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2003
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5487832",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Mar%C3%ADa_Traverso",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000",
+          "https://es.wikipedia.org/wiki/Top_Race"
+        ]
+      }
+    },
+    {
+      "slug": "juan-martin-trucco",
+      "nombre": "Juan Martín Trucco",
+      "nacio": 1987,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5406215",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Mart%C3%ADn_Trucco",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "juan-pablo-gianini",
+      "nombre": "Juan Pablo Gianini",
+      "nacio": 1978,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q3810898",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Pablo_Gianini",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "juan-pablo-koch",
+      "nombre": "Juan Pablo Koch",
+      "nacio": 1986,
+      "provincia": "Misiones",
+      "region": "NEA",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5951801",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Pablo_Koch",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "julia-ballario",
+      "nombre": "Julia Ballario",
+      "nacio": 1992,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5954642",
+        "wikipedia": "https://es.wikipedia.org/wiki/Julia_Ballario",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "julian-falivene",
+      "nombre": "Julián Falivene",
+      "nacio": 1990,
+      "provincia": "Exterior",
+      "region": "Exterior",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5956051",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juli%C3%A1n_Falivene",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "julian-santero",
+      "nombre": "Julián Santero",
+      "nacio": 1993,
+      "provincia": "Mendoza",
+      "region": "Cuyo",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2021
+        },
+        {
+          "categoria": "TC",
+          "anio": 2024
+        },
+        {
+          "categoria": "TN",
+          "anio": 2025
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q16585892",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juli%C3%A1n_Santero",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "julio-catalan-magni",
+      "nombre": "Julio Catalán Magni",
+      "nacio": 1968,
+      "provincia": "Tierra del Fuego",
+      "region": "Patagonia",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1997
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5955126",
+        "wikipedia": "https://es.wikipedia.org/wiki/Julio_Catal%C3%A1n_Magni",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "julio-pardo",
+      "nombre": "Julio Pardo",
+      "nacio": 1940,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1979
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5955607",
+        "wikipedia": "https://es.wikipedia.org/wiki/Julio_Pardo_(piloto)",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "kevin-benavides",
+      "nombre": "Kevin Benavides",
+      "nacio": 1989,
+      "provincia": "Salta",
+      "region": "NOA",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "Dakar",
+          "anio": 2021
+        },
+        {
+          "categoria": "Dakar",
+          "anio": 2023
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q21996039",
+        "wikipedia": "https://es.wikipedia.org/wiki/Kevin_Benavides",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Rally_Dakar"
+        ]
+      }
+    },
+    {
+      "slug": "kevin-candela",
+      "nombre": "Kevin Candela",
+      "nacio": 1992,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2021
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q108822219",
+        "wikipedia": "https://es.wikipedia.org/wiki/Kevin_Candela",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "laureano-campanera",
+      "nombre": "Laureano Campanera",
+      "nacio": 1977,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5854903",
+        "wikipedia": "https://es.wikipedia.org/wiki/Laureano_Campanera",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "lautaro-de-la-iglesia",
+      "nombre": "Lautaro de la Iglesia",
+      "nacio": 1994,
+      "provincia": "Neuquén",
+      "region": "Patagonia",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q124658318",
+        "wikipedia": "https://es.wikipedia.org/wiki/Lautaro_de_la_Iglesia",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "leonel-pernia",
+      "nombre": "Leonel Pernía",
+      "nacio": 1975,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Mundial de Turismos",
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 6,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2018
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2019
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2022
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2023
+        },
+        {
+          "categoria": "TN",
+          "anio": 2023
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2024
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6526251",
+        "wikipedia": "https://es.wikipedia.org/wiki/Leonel_Pern%C3%ADa",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000",
+          "https://es.wikipedia.org/wiki/Turismo_Nacional",
+          "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+          "https://en.wikipedia.org/wiki/TC2000_Championship"
+        ]
+      }
+    },
+    {
+      "slug": "lionel-ugalde",
+      "nombre": "Lionel Ugalde",
+      "nacio": 1973,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2003
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q2878179",
+        "wikipedia": "https://es.wikipedia.org/wiki/Lionel_Ugalde",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "lucas-armellini",
+      "nombre": "Lucas Armellini",
+      "nacio": 1977,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2001
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5981835",
+        "wikipedia": "https://es.wikipedia.org/wiki/Lucas_Armellini",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "lucas-benamo",
+      "nombre": "Lucas Benamo",
+      "nacio": 1985,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6696091",
+        "wikipedia": "https://es.wikipedia.org/wiki/Lucas_Benamo",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "lucas-bonetto",
+      "nombre": "Lucas Bonetto",
+      "nacio": 1991,
+      "provincia": "Tierra del Fuego",
+      "region": "Patagonia",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q19543968",
+        "wikipedia": "https://es.wikipedia.org/wiki/Lucas_Bonetto",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "lucas-colombo-russell",
+      "nombre": "Lucas Colombo Russell",
+      "nacio": 1993,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q18644331",
+        "wikipedia": "https://es.wikipedia.org/wiki/Lucas_Colombo_Russell",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "lucas-guerra",
+      "nombre": "Lucas Guerra",
+      "nacio": 1987,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q16593791",
+        "wikipedia": "https://es.wikipedia.org/wiki/Lucas_Guerra",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "lucas-valle",
+      "nombre": "Lucas Valle",
+      "nacio": 1992,
+      "provincia": "Chubut",
+      "region": "Patagonia",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q28503189",
+        "wikipedia": "https://es.wikipedia.org/wiki/Lucas_Valle",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "luciano-benavides",
+      "nombre": "Luciano Benavides",
+      "nacio": 1995,
+      "provincia": "Salta",
+      "region": "NOA",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "Dakar",
+          "anio": 2026
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q116186233",
+        "wikipedia": "https://es.wikipedia.org/wiki/Luciano_Benavides",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Rally_Dakar"
+        ]
+      }
+    },
+    {
+      "slug": "luciano-crespi",
+      "nombre": "Luciano Crespi",
+      "nacio": 1977,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q70783975",
+        "wikipedia": "https://es.wikipedia.org/wiki/Luciano_Crespi",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "luciano-farroni",
+      "nombre": "Luciano Farroni",
+      "nacio": 1990,
+      "provincia": "Chubut",
+      "region": "Patagonia",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q21001020",
+        "wikipedia": "https://es.wikipedia.org/wiki/Luciano_Farroni",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "lucio-alvarez",
+      "nombre": "Lucio Álvarez",
+      "nacio": 1977,
+      "provincia": "Mendoza",
+      "region": "Cuyo",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5982358",
+        "wikipedia": "https://es.wikipedia.org/wiki/Lucio_%C3%81lvarez",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "luis-belloso",
+      "nombre": "Luis Belloso",
+      "nacio": 1960,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q12180549",
+        "wikipedia": "https://es.wikipedia.org/wiki/Luis_Belloso",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "luis-jose-di-palma",
+      "nombre": "Luis José Di Palma",
+      "nacio": 1989,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "Top Race",
+          "anio": 2024
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5551173",
+        "wikipedia": "https://es.wikipedia.org/wiki/Luis_Jos%C3%A9_Di_Palma",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Top_Race"
+        ]
+      }
+    },
+    {
+      "slug": "luis-minervino",
+      "nombre": "Luis Minervino",
+      "nacio": 1959,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q15640664",
+        "wikipedia": "https://es.wikipedia.org/wiki/Luis_Minervino",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "luis-ruben-di-palma",
+      "nombre": "Luis Rubén Di Palma",
+      "nacio": 1944,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Resistencia",
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1970
+        },
+        {
+          "categoria": "TC",
+          "anio": 1971
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 1983
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q2110445",
+        "wikipedia": "https://es.wikipedia.org/wiki/Luis_Rub%C3%A9n_Di_Palma",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "luis-soppelsa",
+      "nombre": "Luis Soppelsa",
+      "nacio": 1963,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q70874112",
+        "wikipedia": "https://es.wikipedia.org/wiki/Luis_Soppelsa",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "manuel-andujar",
+      "nombre": "Manuel Andújar",
+      "nacio": 1996,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "Dakar",
+          "anio": 2021
+        },
+        {
+          "categoria": "Dakar",
+          "anio": 2024
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q104808294",
+        "wikipedia": "https://es.wikipedia.org/wiki/Manuel_And%C3%BAjar_(motociclista)",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Rally_Dakar"
+        ]
+      }
+    },
+    {
+      "slug": "manuel-luque",
+      "nombre": "Manuel Luque",
+      "nacio": 1994,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q41163290",
+        "wikipedia": "https://es.wikipedia.org/wiki/Manuel_Luque",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "marcelo-agrelo",
+      "nombre": "Marcelo Agrelo",
+      "nacio": 1991,
+      "provincia": "Chubut",
+      "region": "Patagonia",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5995699",
+        "wikipedia": "https://es.wikipedia.org/wiki/Marcelo_Agrelo",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "marcelo-bugliotti",
+      "nombre": "Marcelo Bugliotti",
+      "nacio": 1971,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2009
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5995745",
+        "wikipedia": "https://es.wikipedia.org/wiki/Marcelo_Bugliotti",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "marcelo-ciarrocchi",
+      "nombre": "Marcelo Ciarrocchi",
+      "nacio": 1987,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q61301767",
+        "wikipedia": "https://es.wikipedia.org/wiki/Marcelo_Ciarrocchi",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "marco-dianda",
+      "nombre": "Marco Dianda",
+      "nacio": 2008,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC Pista",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2025
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q137352314",
+        "wikipedia": "https://es.wikipedia.org/wiki/Marco_Dianda",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "marcos-vazquez",
+      "nombre": "Marcos Adolfo Vázquez",
+      "nacio": 1980,
+      "provincia": "Santiago del Estero",
+      "region": "NOA",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5996736",
+        "wikipedia": "https://es.wikipedia.org/wiki/Marcos_Adolfo_V%C3%A1zquez",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "marcos-di-palma",
+      "nombre": "Marcos Di Palma",
+      "nacio": 1972,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5996531",
+        "wikipedia": "https://es.wikipedia.org/wiki/Marcos_Di_Palma",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "marcos-ligato",
+      "nombre": "Marcos Ligato",
+      "nacio": 1977,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "Rally"
+      ],
+      "titulos": 6,
+      "titulosDetalle": [
+        {
+          "categoria": "Rally",
+          "anio": 2005,
+          "clase": "Grupo N Clase 4"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2014,
+          "clase": "Clase MR"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2015,
+          "clase": "Clase MR"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2016,
+          "clase": "Clase MR"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2017,
+          "clase": "Clase MR"
+        },
+        {
+          "categoria": "Rally",
+          "anio": 2022,
+          "clase": "Clase RC2"
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q11767956",
+        "wikipedia": "https://es.wikipedia.org/wiki/Marcos_Ligato",
+        "campeones": [
+          "https://www.rallyargentino.com/documentos/Campeones-Rally-Argentino-1980-2025.pdf"
+        ]
+      }
+    },
+    {
+      "slug": "marcos-muchiut",
+      "nombre": "Marcos Muchiut",
+      "nacio": 1992,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q24961171",
+        "wikipedia": "https://es.wikipedia.org/wiki/Marcos_Muchiut",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "marcos-patronelli",
+      "nombre": "Marcos Patronelli",
+      "nacio": 1980,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "Dakar",
+          "anio": 2010
+        },
+        {
+          "categoria": "Dakar",
+          "anio": 2013
+        },
+        {
+          "categoria": "Dakar",
+          "anio": 2016
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q2688298",
+        "wikipedia": "https://es.wikipedia.org/wiki/Marcos_Patronelli",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Rally_Dakar"
+        ]
+      }
+    },
+    {
+      "slug": "marcos-quijada",
+      "nombre": "Marcos Quijada",
+      "nacio": 2003,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q109910730",
+        "wikipedia": "https://es.wikipedia.org/wiki/Marcos_Quijada",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "mariano-altuna",
+      "nombre": "Mariano Altuna",
+      "nacio": 1982,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5997542",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mariano_Altuna",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "mariano-pernia",
+      "nombre": "Mariano Pernía",
+      "nacio": 1977,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q316992",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mariano_Pern%C3%ADa",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "mariano-werner",
+      "nombre": "Mariano Werner",
+      "nacio": 1988,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 4,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2017
+        },
+        {
+          "categoria": "TC",
+          "anio": 2020
+        },
+        {
+          "categoria": "TC",
+          "anio": 2021
+        },
+        {
+          "categoria": "TC",
+          "anio": 2023
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5998011",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mariano_Werner",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "mario-gayraud",
+      "nombre": "Mario Gayraud",
+      "nacio": 1957,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 1984
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5851941",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mario_Gayraud",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "mario-gerbaldo",
+      "nombre": "Mario Gerbaldo",
+      "nacio": 1992,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q20021462",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mario_Gerbaldo",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "martin-basso",
+      "nombre": "Martín Basso",
+      "nacio": 1974,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6777764",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mart%C3%ADn_Basso",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "martin-coulleri",
+      "nombre": "Martín Coulleri",
+      "nacio": 1992,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q20021463",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mart%C3%ADn_Coulleri",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "martin-ponte",
+      "nombre": "Martín Ponte",
+      "nacio": 1985,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q18649868",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mart%C3%ADn_Ponte",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "martin-serrano",
+      "nombre": "Martín Serrano",
+      "nacio": 1988,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6002886",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mart%C3%ADn_Serrano",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "matias-canapino",
+      "nombre": "Matías Canapino",
+      "nacio": 2000,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q116783726",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mat%C3%ADas_Canapino",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "matias-milla",
+      "nombre": "Matías Milla",
+      "nacio": 1985,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q15143051",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mat%C3%ADas_Milla",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "matias-munoz-marchesi",
+      "nombre": "Matías Muñoz Marchesi",
+      "nacio": 1987,
+      "provincia": "Chaco",
+      "region": "NEA",
+      "categorias": [
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6006669",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mat%C3%ADas_Mu%C3%B1oz_Marchesi",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "matias-rodriguez",
+      "nombre": "Matías Rodríguez",
+      "nacio": 1987,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "Top Race",
+          "anio": 2015
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q83907332",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mat%C3%ADas_Rodr%C3%ADguez",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Top_Race"
+        ]
+      }
+    },
+    {
+      "slug": "matias-rossi",
+      "nombre": "Matías Rossi",
+      "nacio": 1984,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Mundial de Turismos",
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 10,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 2006
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2007
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2011
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2013
+        },
+        {
+          "categoria": "TC",
+          "anio": 2014
+        },
+        {
+          "categoria": "TN",
+          "anio": 2014
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2019
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2020
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2020
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2025
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6792122",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mat%C3%ADas_Rossi",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000",
+          "https://es.wikipedia.org/wiki/Turismo_Nacional",
+          "https://es.wikipedia.org/wiki/Top_Race",
+          "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+          "https://en.wikipedia.org/wiki/TC2000_Championship"
+        ]
+      }
+    },
+    {
+      "slug": "mauricio-chiaverano",
+      "nombre": "Mauricio Chiaverano",
+      "nacio": 1980,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q20021465",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mauricio_Chiaverano",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "mauricio-lambiris",
+      "nombre": "Mauricio Lambiris",
+      "nacio": 1987,
+      "provincia": "Exterior",
+      "region": "Exterior",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q18203210",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mauricio_Lambiris",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "mauro-giallombardo",
+      "nombre": "Mauro Giallombardo",
+      "nacio": 1989,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2010
+        },
+        {
+          "categoria": "TC",
+          "anio": 2012
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q10888627",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mauro_Giallombardo",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "mauro-pichini",
+      "nombre": "Mauro Pichini",
+      "nacio": 1978,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q1911666",
+        "wikipedia": "https://es.wikipedia.org/wiki/Mauro_Pichini",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "maximiliano-valle",
+      "nombre": "Maximiliano Valle",
+      "nacio": 1992,
+      "provincia": "Chubut",
+      "region": "Patagonia",
+      "categorias": [
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q47067572",
+        "wikipedia": "https://es.wikipedia.org/wiki/Maximiliano_Valle",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "miguel-etchegaray",
+      "nombre": "Miguel Ángel Etchegaray",
+      "nacio": 1954,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q9032711",
+        "wikipedia": "https://es.wikipedia.org/wiki/Miguel_%C3%81ngel_Etchegaray",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "miguel-angel-guerra",
+      "nombre": "Miguel Ángel Guerra",
+      "nacio": 1953,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 1989
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q172131",
+        "wikipedia": "https://es.wikipedia.org/wiki/Miguel_%C3%81ngel_Guerra_(piloto)",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "nadia-cutro",
+      "nombre": "Nadia Cutro",
+      "nacio": 1986,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "Rally"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "Rally",
+          "anio": 2017,
+          "clase": "Clase Junior"
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q10947414",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nadia_Cutro",
+        "campeones": [
+          "https://www.rallyargentino.com/documentos/Campeones-Rally-Argentino-1980-2025.pdf"
+        ]
+      }
+    },
+    {
+      "slug": "nasif-estefano",
+      "nombre": "Nasif Estéfano",
+      "nacio": 1932,
+      "provincia": "Tucumán",
+      "region": "NOA",
+      "categorias": [
+        "F1",
+        "Resistencia",
+        "TC",
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1965
+        },
+        {
+          "categoria": "TC",
+          "anio": 1973
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q172090",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nasif_Est%C3%A9fano",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "nelson-garcia",
+      "nombre": "Nelson García",
+      "nacio": 1963,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6039647",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nelson_Garc%C3%ADa",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "nestor-garcia-veiga",
+      "nombre": "Néstor García Veiga",
+      "nacio": 1945,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "Resistencia",
+        "TC",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q2085011",
+        "wikipedia": "https://es.wikipedia.org/wiki/N%C3%A9stor_Garc%C3%ADa_Veiga",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "nestor-girolami",
+      "nombre": "Néstor Girolami",
+      "nacio": 1989,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "Mundial de Turismos",
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 2014
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2015
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6047429",
+        "wikipedia": "https://es.wikipedia.org/wiki/N%C3%A9stor_Girolami",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+          "https://en.wikipedia.org/wiki/TC2000_Championship"
+        ]
+      }
+    },
+    {
+      "slug": "nicolas-gonzalez",
+      "nombre": "Nicolás Augusto González",
+      "nacio": 1988,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6042267",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Augusto_Gonz%C3%A1lez",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "nicolas-bonelli",
+      "nombre": "Nicolás Bonelli",
+      "nacio": 1983,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6042122",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Bonelli",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "nicolas-cavigliasso",
+      "nombre": "Nicolás Cavigliasso",
+      "nacio": 1991,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "Dakar",
+          "anio": 2019
+        },
+        {
+          "categoria": "Dakar",
+          "anio": 2025
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q47448940",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Cavigliasso",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Rally_Dakar"
+        ]
+      }
+    },
+    {
+      "slug": "nicolas-dapero",
+      "nombre": "Nicolás Dapero",
+      "nacio": 1998,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q24256935",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Dapero",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "nicolas-iglesias",
+      "nombre": "Nicolás Iglesias",
+      "nacio": 1975,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6042290",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Iglesias_(piloto)",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "nicolas-palau",
+      "nombre": "Nicolás Palau",
+      "nacio": 2002,
+      "provincia": "Mendoza",
+      "region": "Cuyo",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q124837388",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Palau",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "nicolas-pezzucchi",
+      "nombre": "Nicolás Pezzucchi",
+      "nacio": 1988,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2013
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q16611749",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Pezzucchi",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "nicolas-posco",
+      "nombre": "Nicolás Posco",
+      "nacio": 1987,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2018
+        },
+        {
+          "categoria": "TN",
+          "anio": 2020
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q108479591",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Posco",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "nicolas-trosset",
+      "nombre": "Nicolás Trosset",
+      "nacio": 1992,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6042572",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Trosset",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "nicolas-vuyovich",
+      "nombre": "Nicolás Vuyovich",
+      "nacio": 1981,
+      "provincia": "Salta",
+      "region": "NOA",
+      "categorias": [
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 2000
+        },
+        {
+          "categoria": "TN",
+          "anio": 2002
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q9050063",
+        "wikipedia": "https://es.wikipedia.org/wiki/Nicol%C3%A1s_Vuyovich",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "norberto-fontana",
+      "nombre": "Norberto Fontana",
+      "nacio": 1975,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "Mundial de Turismos",
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 2002
+        },
+        {
+          "categoria": "TC",
+          "anio": 2006
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 2010
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q173311",
+        "wikipedia": "https://es.wikipedia.org/wiki/Norberto_Fontana",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "omar-martinez",
+      "nombre": "Omar Martínez",
+      "nacio": 1966,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 6,
+      "titulosDetalle": [
+        {
+          "categoria": "Top Race",
+          "anio": 1997
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 1998
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2000
+        },
+        {
+          "categoria": "TC",
+          "anio": 2004
+        },
+        {
+          "categoria": "Top Race",
+          "anio": 2006
+        },
+        {
+          "categoria": "TC",
+          "anio": 2015
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q7089755",
+        "wikipedia": "https://es.wikipedia.org/wiki/Omar_Mart%C3%ADnez",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera",
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000",
+          "https://es.wikipedia.org/wiki/Top_Race"
+        ]
+      }
+    },
+    {
+      "slug": "omar-tanoni",
+      "nombre": "Omar Tanoni",
+      "nacio": 1975,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q24238434",
+        "wikipedia": "https://es.wikipedia.org/wiki/Omar_Tanoni",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "onofre-marimon",
+      "nombre": "Onofre Marimón",
+      "nacio": 1923,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q171624",
+        "wikipedia": "https://es.wikipedia.org/wiki/Onofre_Marim%C3%B3n",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "orlando-terranova",
+      "nombre": "Orlando Terranova",
+      "nacio": 1979,
+      "provincia": "Mendoza",
+      "region": "Cuyo",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q3208653",
+        "wikipedia": "https://es.wikipedia.org/wiki/Orlando_Terranova",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "oscar-galvez",
+      "nombre": "Oscar Alfredo Gálvez",
+      "nacio": 1913,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "TC"
+      ],
+      "titulos": 5,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1947
+        },
+        {
+          "categoria": "TC",
+          "anio": 1948
+        },
+        {
+          "categoria": "TC",
+          "anio": 1953
+        },
+        {
+          "categoria": "TC",
+          "anio": 1954
+        },
+        {
+          "categoria": "TC",
+          "anio": 1961
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q172084",
+        "wikipedia": "https://es.wikipedia.org/wiki/Oscar_Alfredo_G%C3%A1lvez",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "oscar-angeletti",
+      "nombre": "Oscar Angeletti",
+      "nacio": 1947,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1986
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q11055601",
+        "wikipedia": "https://es.wikipedia.org/wiki/Oscar_Angeletti",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "oscar-aventin",
+      "nombre": "Oscar Aventín",
+      "nacio": 1946,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1991
+        },
+        {
+          "categoria": "TC",
+          "anio": 1992
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5860874",
+        "wikipedia": "https://es.wikipedia.org/wiki/Oscar_Avent%C3%ADn",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "oscar-castellano",
+      "nombre": "Oscar Castellano",
+      "nacio": 1948,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1987
+        },
+        {
+          "categoria": "TC",
+          "anio": 1988
+        },
+        {
+          "categoria": "TC",
+          "anio": 1989
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5643002",
+        "wikipedia": "https://es.wikipedia.org/wiki/Oscar_Castellano",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "oscar-larrauri",
+      "nombre": "Oscar Larrauri",
+      "nacio": 1954,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "F1"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q171620",
+        "wikipedia": "https://es.wikipedia.org/wiki/Oscar_Larrauri",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "oscar-sanchez",
+      "nombre": "Oscar Sánchez",
+      "nacio": 1972,
+      "provincia": "Chaco",
+      "region": "NEA",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6053980",
+        "wikipedia": "https://es.wikipedia.org/wiki/Oscar_S%C3%A1nchez",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "osvaldo-abel-lopez",
+      "nombre": "Osvaldo Abel López",
+      "nacio": 1947,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 1979
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q7108061",
+        "wikipedia": "https://es.wikipedia.org/wiki/Osvaldo_Abel_L%C3%B3pez",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "osvaldo-morresi",
+      "nombre": "Osvaldo Morresi",
+      "nacio": 1952,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1978
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6054278",
+        "wikipedia": "https://es.wikipedia.org/wiki/Osvaldo_Morresi",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "otto-fritzler",
+      "nombre": "Otto Fritzler",
+      "nacio": 2003,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2022
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q108274303",
+        "wikipedia": "https://es.wikipedia.org/wiki/Otto_Fritzler",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "pablo-birger",
+      "nombre": "Pablo Birger",
+      "nacio": 1924,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1",
+        "TC"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q172418",
+        "wikipedia": "https://es.wikipedia.org/wiki/Pablo_Birger",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "pablo-copetti",
+      "nombre": "Pablo Copetti",
+      "nacio": 1975,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q28113887",
+        "wikipedia": "https://es.wikipedia.org/wiki/Pablo_Copetti",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "pablo-costanzo",
+      "nombre": "Pablo Costanzo",
+      "nacio": 1989,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q20021992",
+        "wikipedia": "https://es.wikipedia.org/wiki/Pablo_Costanzo",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "pablo-peon",
+      "nombre": "Pablo Peón",
+      "nacio": 1967,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1990
+        },
+        {
+          "categoria": "TN",
+          "anio": 1991
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q18590574",
+        "wikipedia": "https://es.wikipedia.org/wiki/Pablo_Pe%C3%B3n",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "pedro-gentile",
+      "nombre": "Pedro Gentile",
+      "nacio": 1990,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6068909",
+        "wikipedia": "https://es.wikipedia.org/wiki/Pedro_Gentile",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "prospero-bonelli",
+      "nombre": "Próspero Bonelli",
+      "nacio": 1975,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2007
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6089573",
+        "wikipedia": "https://es.wikipedia.org/wiki/Pr%C3%B3spero_Bonelli",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "rafael-morgenstern",
+      "nombre": "Rafael Morgenstern",
+      "nacio": 1984,
+      "provincia": "Misiones",
+      "region": "NEA",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6097715",
+        "wikipedia": "https://es.wikipedia.org/wiki/Rafael_Morgenstern",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "rafael-verna",
+      "nombre": "Rafael Verna",
+      "nacio": 1963,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 5,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1989
+        },
+        {
+          "categoria": "TN",
+          "anio": 1992
+        },
+        {
+          "categoria": "TN",
+          "anio": 1993
+        },
+        {
+          "categoria": "TN",
+          "anio": 1994
+        },
+        {
+          "categoria": "TN",
+          "anio": 1995
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6098077",
+        "wikipedia": "https://es.wikipedia.org/wiki/Rafael_Verna",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "ramiro-galarza",
+      "nombre": "Ramiro Galarza",
+      "nacio": 1981,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC Pista",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q107586285",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ramiro_Galarza",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ricardo-joseph",
+      "nombre": "Ricardo Joseph",
+      "nacio": 1959,
+      "provincia": "Exterior",
+      "region": "Exterior",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6108256",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ricardo_Joseph_(piloto)",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ricardo-risatti-iii",
+      "nombre": "Ricardo Risatti III",
+      "nacio": 1986,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q978816",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ricardo_Risatti_III",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ricardo-zunino",
+      "nombre": "Ricardo Zunino",
+      "nacio": 1949,
+      "provincia": "San Juan",
+      "region": "Cuyo",
+      "categorias": [
+        "F1",
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1975
+        },
+        {
+          "categoria": "TN",
+          "anio": 1976
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q172229",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ricardo_Zunino",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "roberto-bonomi",
+      "nombre": "Roberto Bonomi",
+      "nacio": 1919,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q172206",
+        "wikipedia": "https://es.wikipedia.org/wiki/Roberto_Bonomi",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "roberto-rivas",
+      "nombre": "Roberto Carlos Rivas",
+      "nacio": 1975,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 1998
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q123330153",
+        "wikipedia": "https://es.wikipedia.org/wiki/Roberto_Carlos_Rivas",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "roberto-mieres",
+      "nombre": "Roberto Mieres",
+      "nacio": 1924,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "F1"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q171777",
+        "wikipedia": "https://es.wikipedia.org/wiki/Roberto_Mieres",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "roberto-mouras",
+      "nombre": "Roberto Mouras",
+      "nacio": 1948,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TN"
+      ],
+      "titulos": 3,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1983
+        },
+        {
+          "categoria": "TC",
+          "anio": 1984
+        },
+        {
+          "categoria": "TC",
+          "anio": 1985
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q5559272",
+        "wikipedia": "https://es.wikipedia.org/wiki/Roberto_Mouras",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "roberto-urretavizcaya",
+      "nombre": "Roberto Urretavizcaya",
+      "nacio": 1957,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6110038",
+        "wikipedia": "https://es.wikipedia.org/wiki/Roberto_Urretavizcaya",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "rodrigo-moreno-piazolli",
+      "nombre": "Rodrigo Moreno Piazzoli",
+      "nacio": 1977,
+      "provincia": "Exterior",
+      "region": "Exterior",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q60634477",
+        "wikipedia": "https://es.wikipedia.org/wiki/Rodrigo_Moreno_Piazzoli",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "rodrigo-rogani",
+      "nombre": "Rodrigo Rogani",
+      "nacio": 1989,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6110795",
+        "wikipedia": "https://es.wikipedia.org/wiki/Rodrigo_Rogani",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ruben-daray",
+      "nombre": "Rubén Daray",
+      "nacio": 1950,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 2,
+      "titulosDetalle": [
+        {
+          "categoria": "TN",
+          "anio": 1977
+        },
+        {
+          "categoria": "TC2000",
+          "anio": 1985
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6113202",
+        "wikipedia": "https://es.wikipedia.org/wiki/Rub%C3%A9n_Daray",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000",
+          "https://es.wikipedia.org/wiki/Turismo_Nacional"
+        ]
+      }
+    },
+    {
+      "slug": "ruben-derfler",
+      "nombre": "Rubén Derfler",
+      "nacio": 1976,
+      "provincia": "Entre Ríos",
+      "region": "Centro",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q73634593",
+        "wikipedia": "https://es.wikipedia.org/wiki/Rub%C3%A9n_Derfler",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "ruben-salerno",
+      "nombre": "Rubén Salerno",
+      "nacio": 1957,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q9071056",
+        "wikipedia": "https://es.wikipedia.org/wiki/Rub%C3%A9n_Salerno",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "sacha-fenestraz",
+      "nombre": "Sacha Fenestraz",
+      "nacio": 1999,
+      "provincia": "Exterior",
+      "region": "Exterior",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q24940344",
+        "wikipedia": "https://es.wikipedia.org/wiki/Sacha_Fenestraz",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "santiago-mangoni",
+      "nombre": "Santiago Mangoni",
+      "nacio": 1989,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q24238439",
+        "wikipedia": "https://es.wikipedia.org/wiki/Santiago_Mangoni",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "sebastian-halpern",
+      "nombre": "Sebastián Halpern",
+      "nacio": 1979,
+      "provincia": "Mendoza",
+      "region": "Cuyo",
+      "categorias": [
+        "Dakar"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q2688294",
+        "wikipedia": "https://es.wikipedia.org/wiki/Sebasti%C3%A1n_Halpern",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "sebastian-martinez-rios",
+      "nombre": "Sebastián Martínez Ríos",
+      "nacio": 1972,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q17629647",
+        "wikipedia": "https://es.wikipedia.org/wiki/Sebasti%C3%A1n_Mart%C3%ADnez_R%C3%ADos",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "sebastian-porto",
+      "nombre": "Sebastián Porto",
+      "nacio": 1978,
+      "provincia": "Santa Fe",
+      "region": "Centro",
+      "categorias": [
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q1333083",
+        "wikipedia": "https://es.wikipedia.org/wiki/Sebasti%C3%A1n_Porto",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "sergio-alaux",
+      "nombre": "Sergio Alaux",
+      "nacio": 1976,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6125293",
+        "wikipedia": "https://es.wikipedia.org/wiki/Sergio_Alaux",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "sergio-colosi",
+      "nombre": "Sergio Colosi",
+      "nacio": 1959,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "Rally"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "Rally",
+          "anio": 1983,
+          "clase": "Clase 1"
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q2836470",
+        "wikipedia": "https://es.wikipedia.org/wiki/Sergio_Colosi",
+        "campeones": [
+          "https://www.rallyargentino.com/documentos/Campeones-Rally-Argentino-1980-2025.pdf"
+        ]
+      }
+    },
+    {
+      "slug": "sergio-guarnaccia",
+      "nombre": "Sergio Guarnaccia",
+      "nacio": 1965,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "Top Race"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6125467",
+        "wikipedia": "https://es.wikipedia.org/wiki/Sergio_Guarnaccia",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "silvio-oltra",
+      "nombre": "Silvio Oltra",
+      "nacio": 1958,
+      "provincia": "Ciudad de Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC2000",
+          "anio": 1987
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6128668",
+        "wikipedia": "https://es.wikipedia.org/wiki/Silvio_Oltra",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Competición_2000"
+        ]
+      }
+    },
+    {
+      "slug": "tiago-pernia",
+      "nombre": "Tiago Pernía",
+      "nacio": 2003,
+      "provincia": "Exterior",
+      "region": "Exterior",
+      "categorias": [
+        "TC2000",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q130249153",
+        "wikipedia": "https://es.wikipedia.org/wiki/Tiago_Pern%C3%ADa",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "tobias-martinez",
+      "nombre": "Tobías Martínez",
+      "nacio": 2001,
+      "provincia": "San Juan",
+      "region": "Cuyo",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2023
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q105336465",
+        "wikipedia": "https://es.wikipedia.org/wiki/Tob%C3%ADas_Mart%C3%ADnez",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "tomas-cingolani",
+      "nombre": "Tomás Cingolani",
+      "nacio": 1993,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q21001051",
+        "wikipedia": "https://es.wikipedia.org/wiki/Tom%C3%A1s_Cingolani",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "tomas-urretavizcaya",
+      "nombre": "Tomás Urretavizcaya",
+      "nacio": 1987,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "Top Race",
+        "TN"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2009
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6148660",
+        "wikipedia": "https://es.wikipedia.org/wiki/Tom%C3%A1s_Urretavizcaya",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "valentin-aguirre",
+      "nombre": "Valentín Aguirre",
+      "nacio": 1996,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC Pista",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC Pista",
+          "anio": 2017
+        }
+      ],
+      "corre2026": true,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q47493817",
+        "wikipedia": "https://es.wikipedia.org/wiki/Valent%C3%ADn_Aguirre",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/TC_Pista"
+        ]
+      }
+    },
+    {
+      "slug": "vicente-pernia",
+      "nombre": "Vicente Pernía",
+      "nacio": 1949,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TN"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q3065508",
+        "wikipedia": "https://es.wikipedia.org/wiki/Vicente_Pern%C3%ADa",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "victor-rosso",
+      "nombre": "Víctor Rosso",
+      "nacio": 1960,
+      "provincia": "Córdoba",
+      "region": "Centro",
+      "categorias": [
+        "TC2000"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q6165715",
+        "wikipedia": "https://es.wikipedia.org/wiki/V%C3%ADctor_Rosso",
+        "campeones": []
+      }
+    },
+    {
+      "slug": "walter-hernandez",
+      "nombre": "Walter Hernández",
+      "nacio": 1965,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC",
+        "TC2000",
+        "Top Race"
+      ],
+      "titulos": 1,
+      "titulosDetalle": [
+        {
+          "categoria": "TC",
+          "anio": 1993
+        }
+      ],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q7965132",
+        "wikipedia": "https://es.wikipedia.org/wiki/Walter_Hern%C3%A1ndez",
+        "campeones": [
+          "https://es.wikipedia.org/wiki/Turismo_Carretera"
+        ]
+      }
+    },
+    {
+      "slug": "william-brian-atkinson",
+      "nombre": "William Brian Atkinson",
+      "nacio": 1981,
+      "provincia": "Buenos Aires",
+      "region": "Bonaerense",
+      "categorias": [
+        "TC Pista"
+      ],
+      "titulos": 0,
+      "titulosDetalle": [],
+      "corre2026": false,
+      "fuentes": {
+        "wikidata": "https://www.wikidata.org/wiki/Q16648066",
+        "wikipedia": "https://es.wikipedia.org/wiki/William_Brian_Atkinson",
+        "campeones": []
+      }
+    }
+  ]
+}

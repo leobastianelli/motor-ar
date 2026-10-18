@@ -1,6 +1,7 @@
 import { drivers } from "@/data/drivers";
 import { legends } from "@/data/legends";
 import { series } from "@/data/series";
+import { JUEGO_NOMBRE } from "./juego/config.mjs";
 import { horarioSeriesSlug, horarioSeriesIds } from "./horarios";
 import type { Nota } from "@/data/notas";
 import type { Scope } from "./types";
@@ -107,5 +108,7 @@ export function getMenu(notes: Nota[]): MenuItem[] {
       groups: [{ label: "Leyendas", links: legends.map((l) => ({ label: l.name, href: `/historicos/${l.slug}`, hint: l.years })) }],
       all: { label: "Todas las historias", href: "/historicos" },
     },
+    // Enlace directo, sin desplegable.
+    { href: "/juego", label: JUEGO_NOMBRE, groups: [] },
   ];
 }
