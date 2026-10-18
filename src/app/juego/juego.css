@@ -57,3 +57,4 @@
   .jg-celda{min-height:84px}
 }
 @media(prefers-reduced-motion:reduce){.jg *{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+.jg-prueba{max-width:720px;margin:16px auto 0;padding:10px 14px;border-left:4px solid var(--yellow);background:#fff5cc;font-size:14px}

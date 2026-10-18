@@ -144,16 +144,21 @@ button{color:inherit;font-family:inherit}
   .event-meta b{font-size:22px}
   .session .session-winner{font-size:13px}
 }
-/* Cabecera en desktop: una línea alineada con el ancho del contenido (logo · menú · hora) */
+/* Cabecera en desktop: arriba logo y hora; abajo el menú en una franja propia, con todo el ancho del contenido.
+   En una sola línea el menú no entraba entre 801 y ~1300 px y aplastaba el logo. */
 @media(min-width:801px){
-  .masthead{grid-template-columns:auto 1fr auto;grid-template-areas:"brand nav clock";align-items:stretch;min-height:72px;padding:0 max(28px,calc((100vw - 1240px)/2))}
-  .masthead>.brand{grid-area:brand;padding:0 36px 0 0;border:0;align-self:center}
+  .masthead{grid-template-columns:1fr auto;grid-template-areas:"brand clock" "nav nav";align-items:stretch;min-height:0;padding:0 max(28px,calc((100vw - 1240px)/2))}
+  .masthead>.brand{grid-area:brand;padding:14px 0;border:0;align-self:center}
+  .masthead>.brand svg{width:172px;max-width:none}
   .masthead>.clock{grid-area:clock;padding:0;border:0;align-self:center}
-  .masthead>.site-nav{grid-area:nav;padding-left:0;border:0;align-self:stretch;gap:4px}
-  .masthead>.site-nav a{display:flex;align-items:center;padding:0 14px}
+  .masthead>.site-nav{grid-area:nav;padding-left:0;border:0;border-top:1px solid var(--rule);min-height:44px;margin:0 -14px;align-self:stretch;gap:4px}
+  .masthead>.site-nav a{display:flex;align-items:center;padding:0 14px;white-space:nowrap}
 }
-/* El enlace al juego no entra en la barra entre 801 y 1199 px (aplasta el logo): ahí sólo está en el menú del celular y en la página. */
-@media(min-width:801px) and (max-width:1199px){.masthead>.site-nav .nav-item:has(>a[href="/juego"]){display:none}}
+@media(min-width:801px) and (max-width:1023px){
+  .masthead>.site-nav{margin:0 -8px;gap:0}
+  .masthead>.site-nav a,.masthead .site-nav .nav-item.has-sub>a{padding:0 8px}
+}
+@media(min-width:801px) and (max-width:899px){.masthead>.site-nav{margin:0 -6px}.masthead>.site-nav a,.masthead .site-nav .nav-item.has-sub>a{padding:0 6px;font-size:13px}}
 /* Menú en mobile: se despliega encima de la página, sin empujarla */
 @media(max-width:800px){
   .masthead{position:sticky}
@@ -483,6 +488,7 @@ button{color:inherit;font-family:inherit}
 .timing-mini li:has(.state.live){display:block}.timing-mini li a{text-decoration:none;color:inherit}
 .timing-embed{margin:0 0 50px}.timing-embed iframe{display:block;width:100%;height:min(640px,80vh);border:1px solid var(--ink);background:#111}.timing-embed-gate{border:1px solid var(--ink);padding:24px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}.timing-embed-gate p{margin:0;font-size:14px;max-width:52ch}.timing-embed-gate button{background:var(--ink);color:white;border:0;padding:14px 18px;font:inherit;font-weight:700;cursor:pointer}.timing-embed>a{display:inline-block;margin-top:10px;font-size:14px}
 #tiempos-en-vivo{scroll-margin-top:90px}
+@media(min-width:801px){#tiempos-en-vivo{scroll-margin-top:120px}}
 
 /* Más de una cosa en vivo a la vez: la de mayor prioridad va arriba y el resto queda a mano, sin esconderlas. */
 .also-live{max-width:1240px;margin:0 auto;padding:12px 20px;border:1px solid var(--ink);border-top:0;background:#fff;display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;font-size:14px}

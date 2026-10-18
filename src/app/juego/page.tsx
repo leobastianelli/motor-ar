@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Juego } from "@/components/juego";
 import { breadcrumb, JsonLd } from "@/components/json-ld";
 import { FALLOS_PARA_PISTA, JUEGO_NOMBRE, MARGEN_NACIO, MAX_INTENTOS } from "@/lib/juego/config.mjs";
-import { INICIO, pilotosJuego } from "@/lib/juego/servidor";
+import { INICIO, MODO_PRUEBA, pilotosJuego } from "@/lib/juego/servidor";
 import { OG_DEFAULTS } from "@/lib/site";
 import "./juego.css";
 
@@ -44,6 +44,11 @@ export default function JuegoPage() {
         </p>
       </section>
 
+      {MODO_PRUEBA && (
+        <p className="jg-prueba" role="note">
+          Vista previa en modo prueba: el juego ya arrancó y el piloto del día no es el de producción.
+        </p>
+      )}
       <Juego pilotos={pilotos} inicio={INICIO} hayBase={pilotos.length > 0} />
 
       <div className="jg-info">
