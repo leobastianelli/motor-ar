@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState, type CSSProperties } from "react";
 import { trackEvent } from "@/lib/analytics";
 import { buscar, rachaVigente, registrarResultado, textoCompartir } from "@/lib/juego/cliente.mjs";
-import { FALLOS_PARA_PISTA, JUEGO_NOMBRE, MAX_INTENTOS } from "@/lib/juego/config.mjs";
+import { FALLOS_PARA_PISTA, JUEGO_NOMBRE, JUEGO_URL_CORTA, MAX_INTENTOS } from "@/lib/juego/config.mjs";
 import { dia, sumarDias } from "@/lib/juego/dia.mjs";
+import { Cartel, Radio } from "./juego-efectos";
+import { dibujarPlaca } from "./juego-placa";
 
 const ATRIBUTOS = ["nacio", "provincia", "categorias", "titulos", "corre2026"] as const; // mismo orden que ATRIBUTOS en comparar.mjs
 type Estado = "verde" | "amarillo" | "gris";
@@ -23,7 +25,6 @@ interface Fila {
 interface Pista {
   n: number;
   texto: string;
-  fuente: string;
 }
 interface PilotoFinal {
   slug: string;
@@ -88,7 +89,7 @@ async function completar(p: Partida): Promise<Partida> {
     for (const n of [1, 2]) {
       if (fallos(p).length >= FALLOS_PARA_PISTA[n - 1] && !sig.pistas.some((x) => x.n === n)) {
         const r = await pedir<Pista>(`/api/juego/pista?fecha=${p.fecha}&n=${n}&fallados=${falladosSlugs}`);
-        sig = { ...sig, pistas: [...sig.pistas, { n, texto: r.texto, fuente: r.fuente }] };
+        sig = { ...sig, pistas: [...sig.pistas, { n, texto: r.texto }] };
       }
     }
   } else if (!sig.respuesta) {
@@ -171,7 +172,7 @@ function Buscador({ pilotos, usados, deshabilitado, onElegir }: { pilotos: Pilot
         autoComplete="off"
         autoCorrect="off"
         spellCheck={false}
-        placeholder="Escribí un apellido"
+        placeholder="Escribí un piloto…"
         disabled={deshabilitado}
         value={texto}
         onChange={(e) => {
@@ -222,46 +223,113 @@ function Buscador({ pilotos, usados, deshabilitado, onElegir }: { pilotos: Pilot
   );
 }
 
-function Fin({ partida, hoyJuego }: { partida: Partida; hoyJuego: boolean }) {
+/** Las 8 luces de intentos: encendidas las que quedan, apagadas las usadas, verde la del acierto. */
+function Luces({ usados, acerto }: { usados: number; acerto: boolean }) {
+  return (
+    <ol className="jg-luces" aria-label={`${usados} de ${MAX_INTENTOS} intentos usados`}>
+      {Array.from({ length: MAX_INTENTOS }, (_, i) => {
+        const estado = acerto && i === usados - 1 ? "acierto" : i < usados ? "usada" : "viva";
+        return <li key={i} className={`jg-luz ${estado}`} aria-hidden="true" />;
+      })}
+    </ol>
+  );
+}
+
+function Fin({ partida, animar, racha }: { partida: Partida; animar: boolean; racha: number }) {
   const [aviso, setAviso] = useState("");
+  const [placa, setPlaca] = useState<{ blob: Blob; url: string } | null>(null);
   const gano = partida.filas.some((f) => f.acerto);
   const p = partida.respuesta;
+  const texto = textoCompartir({ numero: partida.numero, acerto: gano, comparaciones: partida.filas.map((f) => f.comparacion) });
+  const archivo = `fierros-adivina-el-piloto-${partida.numero}.png`;
+
+  // La placa se dibuja una vez al terminar y se muestra en miniatura: así se ve lo que se va a compartir.
+  useEffect(() => {
+    let url = "";
+    let vivo = true;
+    dibujarPlaca({
+      numero: partida.numero,
+      acerto: gano,
+      intentos: partida.filas.length,
+      maximo: MAX_INTENTOS,
+      filas: partida.filas.map((f) => ATRIBUTOS.map((a) => f.comparacion[a].estado)),
+      racha,
+      url: JUEGO_URL_CORTA,
+      nombreJuego: JUEGO_NOMBRE,
+    })
+      .then((blob) => {
+        if (!vivo) return;
+        url = URL.createObjectURL(blob);
+        setPlaca({ blob, url });
+      })
+      .catch(() => {});
+    return () => {
+      vivo = false;
+      if (url) URL.revokeObjectURL(url);
+    };
+  }, [partida.numero, partida.filas, gano, racha]);
+
+  function descargar() {
+    if (!placa) return;
+    const enlace = document.createElement("a");
+    enlace.href = placa.url;
+    enlace.download = archivo;
+    enlace.click();
+  }
 
   async function compartir() {
-    const texto = textoCompartir({ numero: partida.numero, acerto: gano, comparaciones: partida.filas.map((f) => f.comparacion) });
-    trackEvent("juego_compartir", { numero: partida.numero, acerto: gano });
+    trackEvent("juego_compartir", { numero: partida.numero, acerto: gano, imagen: !!placa });
     try {
-      if (typeof navigator.share === "function") {
+      const file = placa ? new File([placa.blob], archivo, { type: "image/png" }) : null;
+      // En el celular: la imagen con el texto, al menú de compartir del teléfono.
+      if (file && typeof navigator.canShare === "function" && navigator.canShare({ files: [file] })) {
+        await navigator.share({ files: [file], text: texto });
+        return;
+      }
+      if (!placa && typeof navigator.share === "function") {
         await navigator.share({ text: texto });
         return;
       }
+      // En la computadora: se baja la imagen y se copia el texto.
+      if (placa) descargar();
       await navigator.clipboard.writeText(texto);
-      setAviso("Resultado copiado. Pegalo donde quieras.");
+      setAviso(placa ? "Imagen descargada y texto copiado. ¡A mandarlo al grupo!" : "¡Copiado! Pegalo en el grupo.");
     } catch (e) {
       if (e instanceof DOMException && e.name === "AbortError") return; // Cerró el menú de compartir.
-      setAviso("No pudimos copiarlo. Sacale una captura a la grilla.");
+      setAviso(placa ? "No pudimos compartirla: usá «Descargar imagen»." : "No pudimos copiarlo. Sacale una captura al tablero.");
     }
   }
 
   return (
-    <section className={`jg-final ${gano ? "gano" : ""}`} aria-labelledby="jg-final-t">
-      <h2 id="jg-final-t">{gano ? `¡Lo sacaste en ${partida.filas.length}!` : "Se acabaron los intentos"}</h2>
+    <section className={`jg-final ${gano ? "gano" : "perdio"} ${animar ? "entra" : ""}`} aria-labelledby="jg-final-t">
+      <p className="jg-final-sello">{gano ? "Bandera a cuadros" : "Fin de la carrera"}</p>
+      <h2 id="jg-final-t">{gano ? (partida.filas.length === 1 ? "¡A la primera! Pole position." : `¡Lo sacaste en ${partida.filas.length}!`) : "Hoy se te escapó"}</h2>
       {p ? (
         <>
-          <p>
-            {gano ? "Era" : "El piloto de hoy era"} <strong>{p.nombre}</strong>.
-          </p>
-          <dl>
-            <dt>Nació</dt>
-            <dd>{p.nacio}, {p.provincia}</dd>
-            <dt>Categorías</dt>
-            <dd>{p.categorias.join(", ") || "Ninguna"}</dd>
-            <dt>Títulos</dt>
-            <dd>{p.titulos}</dd>
-            <dt>Corre en 2026</dt>
-            <dd>{p.corre2026 ? "Sí" : "No"}</dd>
+          <dl className="jg-ficha-final">
+            <div>
+              <dt>Nació</dt>
+              <dd>{p.nacio}</dd>
+            </div>
+            <div>
+              <dt>Provincia</dt>
+              <dd>{p.provincia}</dd>
+            </div>
+            <div>
+              <dt>Títulos</dt>
+              <dd>{p.titulos}</dd>
+            </div>
+            <div>
+              <dt>Corre 2026</dt>
+              <dd>{p.corre2026 ? "Sí" : "No"}</dd>
+            </div>
+            <div className="ancha">
+              <dt>Categorías</dt>
+              <dd>{p.categorias.join(" · ") || "Ninguna"}</dd>
+            </div>
           </dl>
           <p className="jg-fuentes">
+            <span>Fuentes:</span>
             {p.fuentes.wikipedia && <a href={p.fuentes.wikipedia} target="_blank" rel="noreferrer">Wikipedia</a>}
             {p.fuentes.wikidata && <a href={p.fuentes.wikidata} target="_blank" rel="noreferrer">Wikidata</a>}
             {(p.fuentes.campeones ?? []).map((u) => (
@@ -272,15 +340,30 @@ function Fin({ partida, hoyJuego }: { partida: Partida; hoyJuego: boolean }) {
           </p>
         </>
       ) : (
-        <p>Estamos buscando al piloto del día…</p>
+        <p>Destapando al piloto del día…</p>
+      )}
+      {placa && (
+        // eslint-disable-next-line @next/next/no-img-element -- imagen generada en el navegador (blob:), no pasa por next/image
+        <img
+          className="jg-placa"
+          src={placa.url}
+          width={1080}
+          height={1350}
+          alt={`Placa del resultado: ${gano ? `lo sacaste en ${partida.filas.length} de ${MAX_INTENTOS}` : "no lo sacaste"}, racha ${racha}`}
+        />
       )}
       <div className="jg-acciones">
-        <button type="button" className="jg-boton" onClick={compartir}>
-          Compartir
+        <button type="button" className="jg-boton grande" onClick={compartir}>
+          Compartir resultado
         </button>
+        {placa && (
+          <button type="button" className="jg-boton sec" onClick={descargar}>
+            Descargar imagen
+          </button>
+        )}
         <span role="status" aria-live="polite">{aviso}</span>
       </div>
-      {hoyJuego && <p style={{ marginTop: 12 }}>El próximo juego empieza a las 00:00, hora argentina.</p>}
+      <p className="jg-proximo">Mañana a las 00:00 hay otro piloto.</p>
     </section>
   );
 }
@@ -292,6 +375,11 @@ export function Juego({ pilotos, inicio, hayBase }: { pilotos: PilotoLista[]; in
   const [stats, setStats] = useState<ReturnType<typeof registrarResultado> | null>(null);
   const [ocupado, setOcupado] = useState(false);
   const [error, setError] = useState("");
+  // Qué se animó en esta visita: la fila recién respondida, las pistas nuevas y el final. Lo que vino guardado aparece quieto.
+  const [filaNueva, setFilaNueva] = useState<string | null>(null);
+  const [pistasNuevas, setPistasNuevas] = useState<number[]>([]);
+  const [finEnVivo, setFinEnVivo] = useState(false);
+  const [sacudir, setSacudir] = useState(false);
 
   useEffect(() => {
     const h = dia(new Date(), inicio);
@@ -323,6 +411,8 @@ export function Juego({ pilotos, inicio, hayBase }: { pilotos: PilotoLista[]; in
       const r = await pedir<{ acerto: boolean; intento: Omit<Fila, "acerto" | "comparacion">; comparacion: Comparacion }>(`/api/juego/intento?fecha=${partida.fecha}&slug=${slug}`);
       if (partida.filas.length === 0) trackEvent("juego_inicio", { numero: partida.numero });
       let sig: Partida = { ...partida, filas: [...partida.filas, { ...r.intento, acerto: r.acerto, comparacion: r.comparacion }] };
+      setFilaNueva(slug);
+      if (!r.acerto) setSacudir(true);
       // Primero se anota el intento (y la racha, si terminó): si después falla una pista, el intento ya está guardado.
       if (terminada(sig) && !sig.contada) {
         const gano = sig.filas.some((f) => f.acerto);
@@ -331,11 +421,13 @@ export function Juego({ pilotos, inicio, hayBase }: { pilotos: PilotoLista[]; in
         guardar(CLAVE_STATS, nuevas);
         trackEvent("juego_fin", { acerto: gano, intentos: sig.filas.length });
         sig = { ...sig, contada: true };
+        setFinEnVivo(true);
       }
       setPartida(sig);
       guardar(CLAVE_PARTIDA, sig);
       try {
         const completa = await completar(sig);
+        setPistasNuevas(completa.pistas.filter((x) => !sig.pistas.some((y) => y.n === x.n)).map((x) => x.n));
         setPartida(completa);
         guardar(CLAVE_PARTIDA, completa);
       } catch {
@@ -363,11 +455,13 @@ export function Juego({ pilotos, inicio, hayBase }: { pilotos: PilotoLista[]; in
   if (!hayBase || (listo && hoy.numero < 1)) {
     return (
       <section className="jg" aria-labelledby="jg-pronto-t">
-        <div className="jg-pronto">
-          <h2 id="jg-pronto-t">Muy pronto</h2>
-          <p>
-            El juego del piloto argentino del día todavía no empezó. Cuando arranque, vas a tener {MAX_INTENTOS} intentos por día.
-          </p>
+        <div className="jg-tablero">
+          <p className="jg-kicker">Piloto del día</p>
+          <Cartel texto="" revelado={false} animar={false} />
+          <h2 id="jg-pronto-t" className="jg-pronto-t">
+            Muy pronto
+          </h2>
+          <p className="jg-pronto-p">Un piloto argentino misterioso por día y {MAX_INTENTOS} intentos para sacarlo.</p>
         </div>
       </section>
     );
@@ -375,91 +469,113 @@ export function Juego({ pilotos, inicio, hayBase }: { pilotos: PilotoLista[]; in
   if (!listo || !partida) {
     return (
       <section className="jg" aria-busy="true">
-        <p className="jg-msg">Cargando el juego de hoy…</p>
+        <div className="jg-tablero">
+          <p className="jg-kicker">Cargando el piloto de hoy…</p>
+          <Cartel texto="" revelado={false} animar={false} />
+        </div>
       </section>
     );
   }
 
   const fin = terminada(partida);
+  const gano = partida.filas.some((f) => f.acerto);
   const racha = rachaVigente(stats, hoy.fecha, sumarDias(hoy.fecha, -1));
   const quedan = MAX_INTENTOS - partida.filas.length;
   const faltaAlgo = fin ? !partida.respuesta : fallos(partida).length >= FALLOS_PARA_PISTA[1] ? partida.pistas.length < 2 : fallos(partida).length >= FALLOS_PARA_PISTA[0] ? partida.pistas.length < 1 : false;
+  const proximaPista = FALLOS_PARA_PISTA.find((n) => fallos(partida).length < n);
+  const filas = [...partida.filas].map((f, i) => ({ f, i })).reverse(); // la última arriba: en el celular se ve sin bajar
 
   return (
-    <section className="jg" aria-label={`${JUEGO_NOMBRE} #${hoy.numero}`}>
-      <p className="jg-estado">
-        <b>
-          {JUEGO_NOMBRE} #{partida.numero}
-        </b>
-        <b aria-live="polite">
-          Intento {Math.min(partida.filas.length + (fin ? 0 : 1), MAX_INTENTOS)} de {MAX_INTENTOS}
-        </b>
-        <span>
-          Racha {racha} · Máxima {stats?.maxima ?? 0}
-        </span>
-      </p>
+    <section className={`jg ${fin ? (gano ? "gano" : "perdio") : ""} ${finEnVivo ? "en-vivo" : ""}`} aria-label={`${JUEGO_NOMBRE} #${hoy.numero}`}>
+      <div className="jg-tablero">
+        <div className="jg-top">
+          <p className="jg-kicker">
+            <span>Piloto del día</span>
+            <b>#{partida.numero}</b>
+          </p>
+          <p className="jg-racha" aria-label={`Racha ${racha}, máxima ${stats?.maxima ?? 0}`}>
+            <b>{racha}</b>
+            <span>racha</span>
+            <b>{stats?.maxima ?? 0}</b>
+            <span>máx.</span>
+          </p>
+        </div>
 
-      {/* Arriba de los intentos: en el celular, con 8 filas, abajo de todo no se ve. */}
-      {fin && <Fin partida={partida} hoyJuego />}
-      {!fin && <Buscador pilotos={pilotos} usados={partida.filas.map((f) => f.slug)} deshabilitado={ocupado} onElegir={elegir} />}
-      {!fin && partida.filas.length === 0 && <p className="jg-msg">Elegí cualquier piloto argentino para empezar. Te quedan {quedan} intentos.</p>}
-      {error && (
-        <p className="jg-msg error" role="alert">
-          {error} {faltaAlgo && <button type="button" className="jg-boton sec" onClick={reintentar}>Reintentar</button>}
+        <Cartel texto={partida.respuesta?.nombre ?? ""} revelado={fin && !!partida.respuesta} animar={finEnVivo} />
+        <Luces usados={partida.filas.length} acerto={gano} />
+        <p className="jg-quedan" aria-live="polite">
+          {fin ? (gano ? "¡Adentro!" : "Sin intentos") : quedan === MAX_INTENTOS ? `${MAX_INTENTOS} intentos. Arrancá con cualquier piloto argentino.` : `Quedan ${quedan}${proximaPista ? ` · pista por radio en ${proximaPista - fallos(partida).length}` : ""}`}
         </p>
-      )}
-      {!error && faltaAlgo && (
-        <p className="jg-msg">
-          Falta traer {fin ? "al piloto del día" : "una pista"}. <button type="button" className="jg-boton sec" onClick={reintentar}>Reintentar</button>
-        </p>
-      )}
 
-      {partida.pistas.length > 0 && (
-        <ul className="jg-pistas" aria-label="Pistas">
-          {partida.pistas.map((p) => (
-            <li key={p.n} className="jg-pista">
-              <b>Pista {p.n}</b>
-              {p.texto}{" "}
-              <a href={p.fuente} target="_blank" rel="noreferrer">
-                Fuente
-              </a>
-            </li>
-          ))}
-        </ul>
-      )}
+        {fin ? (
+          <Fin partida={partida} animar={finEnVivo} racha={racha} />
+        ) : (
+          <div className={sacudir ? "jg-sacude" : ""} onAnimationEnd={(e) => e.target === e.currentTarget && setSacudir(false)}>
+            <Buscador pilotos={pilotos} usados={partida.filas.map((f) => f.slug)} deshabilitado={ocupado} onElegir={elegir} />
+          </div>
+        )}
 
-      {partida.filas.length > 0 && (
-        <ol className="jg-filas" aria-label="Tus intentos">
-          {partida.filas.map((f, i) => (
-            <li key={f.slug}>
-              <p className="jg-nombre">
-                {i + 1}. {f.nombre}
-              </p>
-              <div className="jg-celdas">
-                {ATRIBUTOS.map((a) => {
-                  const c = f.comparacion[a];
-                  return (
-                    <div key={a} className={`jg-celda ${c.estado}`}>
-                      <span className="jg-etq">{ETIQUETAS[a]}</span>
-                      <span className="jg-val">
-                        {valor(f, a)}
-                        {c.flecha && <span aria-hidden="true"> {c.flecha === "arriba" ? "↑" : "↓"}</span>}
-                      </span>
-                      <span className="jg-marca" aria-hidden="true">
-                        {MARCAS[c.estado]}
-                      </span>
-                      <span className="jg-sr">
-                        {`: ${EXPLICACION[c.estado]}${c.flecha ? `, ${textoFlecha(a, c.flecha)}` : ""}`}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            </li>
-          ))}
-        </ol>
-      )}
+        {error && !ocupado && (
+          <p className="jg-msg error" role="alert">
+            {error} {faltaAlgo && <button type="button" className="jg-boton sec" onClick={reintentar}>Reintentar</button>}
+          </p>
+        )}
+        {!error && !ocupado && faltaAlgo && (
+          <p className="jg-msg">
+            Falta traer {fin ? "al piloto del día" : "una pista"}. <button type="button" className="jg-boton sec" onClick={reintentar}>Reintentar</button>
+          </p>
+        )}
 
+        {partida.pistas.length > 0 && (
+          <ul className="jg-pistas" aria-label="Pistas">
+            {[...partida.pistas].reverse().map((p) => (
+              <li key={p.n} className={`jg-pista ${pistasNuevas.includes(p.n) ? "entra" : ""}`}>
+                <b>
+                  <span className="jg-onda" aria-hidden="true" /> Radio de boxes · pista {p.n}
+                </b>
+                <p>
+                  <Radio texto={p.texto} animar={pistasNuevas.includes(p.n)} />
+                </p>
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {filas.length > 0 && (
+          <ol className="jg-filas" aria-label="Tus intentos">
+            {filas.map(({ f, i }) => (
+              <li key={f.slug} className={`jg-fila ${f.acerto ? "acierto" : ""} ${filaNueva === f.slug ? "nueva" : ""}`} value={i + 1}>
+                <p className="jg-nombre">
+                  <span className="jg-num">{i + 1}</span>
+                  {f.nombre}
+                </p>
+                <div className="jg-celdas">
+                  {ATRIBUTOS.map((a, k) => {
+                    const c = f.comparacion[a];
+                    return (
+                      <div key={a} className={`jg-celda ${c.estado}`} style={{ "--d": `${k * 140}ms` } as CSSProperties}>
+                        <span className="jg-etq">{ETIQUETAS[a]}</span>
+                        <span className="jg-val">
+                          {valor(f, a)}
+                          {c.flecha && (
+                            <span className={`jg-flecha ${c.flecha}`} aria-hidden="true">
+                              {c.flecha === "arriba" ? "▲" : "▼"}
+                            </span>
+                          )}
+                        </span>
+                        <span className="jg-marca" aria-hidden="true">
+                          {MARCAS[c.estado]}
+                        </span>
+                        <span className="jg-sr">{`: ${EXPLICACION[c.estado]}${c.flecha ? `, ${textoFlecha(a, c.flecha)}` : ""}`}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </li>
+            ))}
+          </ol>
+        )}
+      </div>
     </section>
   );
 }

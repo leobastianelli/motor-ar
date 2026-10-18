@@ -16,7 +16,7 @@ Estado: en construcción (17/10/2026). El nombre del juego lo decide Leonel; mie
 | Corre en 2026 | igual | — | distinto | — |
 
 - Después del 3.º y del 6.º intento fallido se destapa una pista escrita (2 por piloto).
-- Fase 1 sin cuentas: el progreso, la racha y el "ya jugaste hoy" se guardan en el navegador. Al terminar se puede compartir un resultado con cuadraditos y sin el nombre.
+- Fase 1 sin cuentas: el progreso, la racha y el "ya jugaste hoy" se guardan en el navegador. Al terminar se puede compartir el resultado sin el nombre: una placa 1080×1350 dibujada en el navegador (src/components/juego-placa.ts) más el texto con cuadraditos. En el celular va al menú de compartir; en la computadora se descarga la imagen y se copia el texto.
 - Fase 2 (más adelante, si engancha): login y ranking en Neon.
 
 ## Regiones
@@ -106,5 +106,5 @@ Escrito a mano. Un piloto sólo puede ser el del día si tiene sus 2 pistas comp
 La respuesta del día vive sólo en el servidor (`src/lib/juego/servidor.ts`, `JUEGO_SEMILLA`). Los tres endpoints son `GET` y las respuestas correctas llevan `Cache-Control: public, s-maxage=<hasta las 00:00 argentinas>` (un día entero para días pasados), así la CDN absorbe casi todo. Aceptan la fecha de hoy o anteriores desde el lanzamiento (`JUEGO_INICIO` en `src/lib/juego/config.mjs`, o la variable de entorno del mismo nombre); una fecha futura da 400.
 
 - `/api/juego/intento?fecha=YYYY-MM-DD&slug=<piloto>` → `{ acerto, intento: {slug, nombre, nacio, provincia, categorias, titulos, corre2026}, comparacion: { nacio|provincia|categorias|titulos|corre2026: { estado: "verde"|"amarillo"|"gris", flecha: "arriba"|"abajo"|null } } }`. La flecha apunta al valor del piloto del día respecto del intento.
-- `/api/juego/pista?fecha=…&n=1|2&fallados=a,b,c` → `{ n, texto, fuente }`. 403 si hay menos de 3 (n=1) o 6 (n=2) pilotos distintos, o si la lista incluye al piloto del día.
+- `/api/juego/pista?fecha=…&n=1|2&fallados=a,b,c` → `{ n, texto }` (sin la fuente: casi siempre es el artículo del piloto y regalaría la respuesta; las fuentes se ven al terminar). 403 si hay menos de 3 (n=1) o 6 (n=2) pilotos distintos, o si la lista incluye al piloto del día.
 - `/api/juego/respuesta?fecha=…&intentos=a,b,c,…` → `{ acerto, piloto: {…datos y fuentes} }`. 403 salvo que la lista incluya al piloto del día o tenga 8 pilotos distintos.

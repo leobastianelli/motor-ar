@@ -24,8 +24,15 @@ export interface PistaJuego {
 }
 export type PistasJuego = Record<string, { desde: string; pistas: PistaJuego[] }>;
 
-/** Inicio del juego. Se puede adelantar o atrasar con la variable JUEGO_INICIO (útil para probar en una vista previa). */
-export const INICIO: string = fechaValida(process.env.JUEGO_INICIO) ? (process.env.JUEGO_INICIO as string) : JUEGO_INICIO;
+/**
+ * Modo prueba: en las vistas previas de Vercel (VERCEL_ENV=preview) el juego ya empezó y puede salir cualquier piloto con pistas,
+ * sin esperar su fecha `desde`. Producción nunca entra en este modo.
+ */
+export const MODO_PRUEBA = process.env.VERCEL_ENV === "preview";
+const INICIO_PRUEBA = "2026-10-01";
+
+/** Inicio del juego. Se puede adelantar o atrasar con la variable JUEGO_INICIO; en modo prueba, ya empezó. */
+export const INICIO: string = fechaValida(process.env.JUEGO_INICIO) ? (process.env.JUEGO_INICIO as string) : MODO_PRUEBA ? INICIO_PRUEBA : JUEGO_INICIO;
 
 let cacheBase: PilotoJuego[] | null = null;
 /** La base de pilotos (generada por `npm run sync:juego`). Se importa para que viaje con las funciones de /api/juego; vacía, el juego dice "Muy pronto". */
@@ -36,7 +43,9 @@ export function pilotosJuego(): PilotoJuego[] {
   return cacheBase;
 }
 
-export const pistasDelJuego = (): PistasJuego => pistasJson as unknown as PistasJuego;
+const PISTAS = pistasJson as unknown as PistasJuego;
+const PISTAS_PRUEBA: PistasJuego = Object.fromEntries(Object.entries(PISTAS).map(([slug, p]) => [slug, { ...p, desde: "2000-01-01" }]));
+export const pistasDelJuego = (): PistasJuego => (MODO_PRUEBA ? PISTAS_PRUEBA : PISTAS);
 
 let avisoSemilla = false;
 export function semilla(): string {

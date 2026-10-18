@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Juego } from "@/components/juego";
 import { breadcrumb, JsonLd } from "@/components/json-ld";
 import { FALLOS_PARA_PISTA, JUEGO_NOMBRE, MARGEN_NACIO, MAX_INTENTOS } from "@/lib/juego/config.mjs";
-import { INICIO, pilotosJuego } from "@/lib/juego/servidor";
+import { INICIO, MODO_PRUEBA, pilotosJuego } from "@/lib/juego/servidor";
 import { OG_DEFAULTS } from "@/lib/site";
 import "./juego.css";
 
@@ -37,55 +37,83 @@ export default function JuegoPage() {
           ],
         }}
       />
-      <section className="weekend-head">
-        <h1>{JUEGO_NOMBRE}</h1>
-        <p className="lede">
-          <span>Un piloto argentino por día, el mismo para todos</span>
-        </p>
-      </section>
+      <div className="jg-escena">
+        <header className="jg-cabeza">
+          <h1>{JUEGO_NOMBRE}</h1>
+          <p>Un piloto argentino por día. El mismo para todos.</p>
+          {MODO_PRUEBA && (
+            <p className="jg-prueba" role="note">
+              Vista previa en modo prueba: el juego ya arrancó y el piloto del día no es el de producción.
+            </p>
+          )}
+        </header>
+        <Juego pilotos={pilotos} inicio={INICIO} hayBase={pilotos.length > 0} />
 
-      <Juego pilotos={pilotos} inicio={INICIO} hayBase={pilotos.length > 0} />
-
-      <div className="jg-info">
-        <h2>Cómo se juega</h2>
-        <p>
-          Cada día hay un piloto argentino misterioso, el mismo para todos. Tenés {MAX_INTENTOS} intentos: escribí el nombre de un piloto y mirá
-          cuánto se parece al del día en cinco datos.
-        </p>
-        <ul>
-          <li>
-            <strong>Verde (✓)</strong>: el dato es igual. <strong>Amarillo (~)</strong>: está cerca. <strong>Gris (✗)</strong>: no coincide.
-          </li>
-          <li>
-            <strong>Nació</strong>: amarillo si es de hasta {MARGEN_NACIO} años de diferencia. La flecha ↑ dice que el del día nació después; ↓, que nació
-            antes.
-          </li>
-          <li>
-            <strong>Provincia</strong>: la de nacimiento. Amarillo si es de la misma región (Bonaerense, Centro, Cuyo, NOA, NEA o Patagonia).
-          </li>
-          <li>
-            <strong>Categorías</strong>: verde si corrió en las mismas; amarillo si comparten al menos una.
-          </li>
-          <li>
-            <strong>Títulos</strong>: cantidad de campeonatos. La flecha dice si el del día tiene más (↑) o menos (↓).
-          </li>
-          <li>
-            <strong>Corre 2026</strong>: si compite este año.
-          </li>
-        </ul>
-        <p>
-          Después del {FALLOS_PARA_PISTA[0]}.º y del {FALLOS_PARA_PISTA[1]}.º intento fallido se destapa una pista escrita. El juego cambia a las 00:00 hora
-          argentina. Tu progreso y tu racha se guardan sólo en este navegador.
-        </p>
-
-        <h2>De dónde salen los datos</h2>
-        <p>
-          Los datos de cada piloto salen de <a href="https://www.wikidata.org" target="_blank" rel="noreferrer">Wikidata</a> y de{" "}
-          <a href="https://es.wikipedia.org" target="_blank" rel="noreferrer">Wikipedia en español</a> (texto bajo licencia{" "}
-          <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>), de las listas de campeones de
-          cada categoría y de los datos de temporada de Fierros. Sólo entra un piloto cuando esas fuentes coinciden. Al terminar cada partida se
-          muestran los enlaces del piloto del día. Más detalle en <a href="/fuentes">Fuentes</a>.
-        </p>
+        <section className="jg-reglas" aria-labelledby="jg-reglas-t">
+          <h2 id="jg-reglas-t">Cómo se juega</h2>
+          <p className="jg-reglas-intro">
+            Un piloto argentino misterioso por día, el mismo para todos. Tenés {MAX_INTENTOS} intentos: escribí un piloto y mirá cuánto se parece al del
+            día en cinco datos.
+          </p>
+          <ul className="jg-leyenda" aria-label="Qué significa cada color">
+            <li className="verde">
+              <b aria-hidden="true">✓</b> Igual
+            </li>
+            <li className="amarillo">
+              <b aria-hidden="true">~</b> Cerca
+            </li>
+            <li className="gris">
+              <b aria-hidden="true">✗</b> No coincide
+            </li>
+            <li className="flecha">
+              <b aria-hidden="true">▲▼</b> El del día tiene más o menos
+            </li>
+          </ul>
+          <dl className="jg-datos">
+            <div>
+              <dt>Nació</dt>
+              <dd>Amarillo si es de hasta {MARGEN_NACIO} años de diferencia. ▲: el del día nació después.</dd>
+            </div>
+            <div>
+              <dt>Provincia</dt>
+              <dd>La de nacimiento. Amarillo si es de la misma región: Bonaerense, Centro, Cuyo, NOA, NEA o Patagonia.</dd>
+            </div>
+            <div>
+              <dt>Categorías</dt>
+              <dd>Verde si corrió en las mismas; amarillo si comparten al menos una.</dd>
+            </div>
+            <div>
+              <dt>Títulos</dt>
+              <dd>Cantidad de campeonatos. ▲: el del día tiene más.</dd>
+            </div>
+            <div>
+              <dt>Corre 2026</dt>
+              <dd>Si compite este año.</dd>
+            </div>
+          </dl>
+          <ul className="jg-extras">
+            <li>
+              <b>Radio de boxes</b>
+              Después del {FALLOS_PARA_PISTA[0]}.º y del {FALLOS_PARA_PISTA[1]}.º error te llega una pista.
+            </li>
+            <li>
+              <b>00:00</b>
+              Cambia el piloto, hora argentina.
+            </li>
+            <li>
+              <b>Racha</b>
+              Se guarda en este navegador.
+            </li>
+          </ul>
+          <h2>De dónde salen los datos</h2>
+          <p className="jg-reglas-fuentes">
+            De <a href="https://www.wikidata.org" target="_blank" rel="noreferrer">Wikidata</a> y{" "}
+            <a href="https://es.wikipedia.org" target="_blank" rel="noreferrer">Wikipedia en español</a> (texto bajo licencia{" "}
+            <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>), de las listas de campeones de
+            cada categoría y de los datos de temporada de Fierros. Un piloto entra sólo cuando esas fuentes coinciden. Al terminar cada partida se ven los
+            enlaces del piloto del día. Más detalle en <a href="/fuentes">Fuentes</a>.
+          </p>
+        </section>
       </div>
     </>
   );
