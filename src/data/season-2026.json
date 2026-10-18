@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T15:40:46.643Z",
+  "generatedAt": "2026-10-18T18:20:39.379Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -203987,7 +203987,118 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
               "start": "13:10"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "127",
+              "driver": "Nahuel Cordone",
+              "team": "Ford",
+              "gap": "26:16.447"
+            },
+            {
+              "pos": 2,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Toyota",
+              "gap": "+0.226"
+            },
+            {
+              "pos": 3,
+              "number": "10",
+              "driver": "Luis Catelli",
+              "team": "Toyota",
+              "gap": "+8.626"
+            },
+            {
+              "pos": 4,
+              "number": "107",
+              "driver": "Sganga Antonino",
+              "team": "Ford",
+              "gap": "+8.726"
+            },
+            {
+              "pos": 5,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Foton",
+              "gap": "+18.484"
+            },
+            {
+              "pos": 6,
+              "number": "15",
+              "driver": "Jose Alberto Goya",
+              "team": "Ford",
+              "gap": "+23.661"
+            },
+            {
+              "pos": 7,
+              "number": "132",
+              "driver": "Tomas Pellandino",
+              "team": "Ford",
+              "gap": "+28.940"
+            },
+            {
+              "pos": 8,
+              "number": "14",
+              "driver": "Nestor Omar Goya",
+              "team": "Ford",
+              "gap": "+38.769"
+            },
+            {
+              "pos": 9,
+              "number": "76",
+              "driver": "Juan José Suárez",
+              "team": "Ford",
+              "gap": "+50.502"
+            },
+            {
+              "pos": 10,
+              "number": "133",
+              "driver": "Juan Pablo Alberti",
+              "team": "Volkswagen",
+              "gap": "+5 vueltas"
+            },
+            {
+              "pos": 11,
+              "number": "66",
+              "driver": "Gonzalo Aramburu",
+              "team": "Toyota",
+              "gap": "+4 vueltas"
+            },
+            {
+              "pos": 12,
+              "number": "8",
+              "driver": "Juan Antonio Sandin",
+              "team": "Ford",
+              "gap": "+3 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1054/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1052/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "127",
+                  "driver": "Nahuel Cordone"
+                },
+                {
+                  "pos": 2,
+                  "number": "67",
+                  "driver": "Santiago Biagi"
+                },
+                {
+                  "pos": 3,
+                  "number": "10",
+                  "driver": "Luis Catelli"
+                }
+              ]
+            },
+            "note": "Oficial"
+          }
         }
       ],
       "source": "ACTC (calendario)"
@@ -204564,7 +204675,112 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
               "start": "14:10"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "Foton",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "68",
+              "driver": "Julián Santero",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "107",
+              "driver": "Tobías Martínez",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Ford",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 12,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": "+6 vueltas"
+            },
+            {
+              "pos": 13,
+              "number": "126",
+              "driver": "Thomas Ricciardi",
+              "team": "Ford",
+              "gap": "+15 vueltas"
+            },
+            {
+              "pos": 14,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
+              "gap": "+16 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1053/ver",
+            "status": "provisional"
+          }
         }
       ],
       "source": "ACTC (calendario)"
@@ -212072,8 +212288,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 849,
-      "pagesFetched": 132,
+      "documents": 852,
+      "pagesFetched": 133,
       "eventsWithResults": 62,
       "retagged": {
         "1003": {
@@ -212129,6 +212345,14 @@
           "to": "tc-pista-pick-up"
         },
         "1043": {
+          "from": "tc-mouras",
+          "to": "tc-pista-pick-up"
+        },
+        "1052": {
+          "from": "tc-mouras",
+          "to": "tc-pista-pick-up"
+        },
+        "1054": {
           "from": "tc-mouras",
           "to": "tc-pista-pick-up"
         }
@@ -212525,6 +212749,7 @@
     }
   },
   "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
