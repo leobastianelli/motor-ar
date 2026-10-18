@@ -42,3 +42,8 @@ export function initAnalytics(): Promise<void> {
 export function trackPageview(url: string) {
   posthogInstance?.capture("$pageview", { $current_url: url });
 }
+
+/** Evento de producto con nombre propio (juego_inicio, juego_fin, juego_compartir…). Sin consentimiento no hay PostHog y no hace nada. */
+export function trackEvent(name: string, properties?: Record<string, string | number | boolean>) {
+  posthogInstance?.capture(name, properties);
+}

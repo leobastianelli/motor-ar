@@ -42,6 +42,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Las de medios y las crónicas automáticas (una por fecha reciente).
     ...notes.map((n) => page(`/notas/${n.slug}`, "monthly", 0.5, new Date(`${n.publishedAt}T12:00:00-03:00`))),
     page("/historicos", "monthly", 0.5),
+    page("/juego", "monthly", 0.5),
     page("/fuentes", "monthly", 0.2),
     page("/acerca", "monthly", 0.3),
     page("/terminos", "monthly", 0.1),

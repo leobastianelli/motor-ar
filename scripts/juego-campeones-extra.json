@@ -1,0 +1,256 @@
+{
+  "comentario": "Campeones que faltan en src/data/history.json (que no se toca) o que no son de las listas de scripts/build-juego-pilotos.mjs. Cada fila tiene al menos dos fuentes que coinciden. El script los suma a los títulos.",
+  "campeones": [
+    {
+      "categoria": "TC",
+      "anio": 1980,
+      "nombre": "Francisco Espinosa",
+      "link": "Francisco César Espinosa",
+      "nota": "campeonato 1979-80 (history.json sólo toma años de 4 dígitos)",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Turismo_Carretera",
+        "https://en.wikipedia.org/wiki/Turismo_Carretera"
+      ]
+    },
+    {
+      "categoria": "TC",
+      "anio": 1981,
+      "nombre": "Antonio Aventín",
+      "link": "Antonio Aventín",
+      "nota": "campeonato 1980-81 (distinto del Torneo Lizeviche-Galíndez 1981 de Mouras)",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Turismo_Carretera",
+        "https://en.wikipedia.org/wiki/Turismo_Carretera"
+      ]
+    },
+    {
+      "categoria": "TC2000",
+      "anio": 2012,
+      "nombre": "José María López",
+      "link": "José María López",
+      "nota": "Súper TC2000 (era 2012-2021, que history.json no trae)",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+        "https://en.wikipedia.org/wiki/TC2000_Championship"
+      ]
+    },
+    {
+      "categoria": "TC2000",
+      "anio": 2013,
+      "nombre": "Matías Rossi",
+      "link": "Matías Rossi",
+      "nota": "Súper TC2000 (era 2012-2021, que history.json no trae)",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+        "https://en.wikipedia.org/wiki/TC2000_Championship"
+      ]
+    },
+    {
+      "categoria": "TC2000",
+      "anio": 2014,
+      "nombre": "Néstor Girolami",
+      "link": "Néstor Girolami",
+      "nota": "Súper TC2000 (era 2012-2021, que history.json no trae)",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+        "https://en.wikipedia.org/wiki/TC2000_Championship"
+      ]
+    },
+    {
+      "categoria": "TC2000",
+      "anio": 2015,
+      "nombre": "Néstor Girolami",
+      "link": "Néstor Girolami",
+      "nota": "Súper TC2000 (era 2012-2021, que history.json no trae)",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+        "https://en.wikipedia.org/wiki/TC2000_Championship"
+      ]
+    },
+    {
+      "categoria": "TC2000",
+      "anio": 2016,
+      "nombre": "Agustín Canapino",
+      "link": "Agustín Canapino",
+      "nota": "Súper TC2000 (era 2012-2021, que history.json no trae)",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+        "https://en.wikipedia.org/wiki/TC2000_Championship"
+      ]
+    },
+    {
+      "categoria": "TC2000",
+      "anio": 2017,
+      "nombre": "Facundo Ardusso",
+      "link": "Facundo Ardusso",
+      "nota": "Súper TC2000 (era 2012-2021, que history.json no trae)",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+        "https://en.wikipedia.org/wiki/TC2000_Championship"
+      ]
+    },
+    {
+      "categoria": "TC2000",
+      "anio": 2018,
+      "nombre": "Facundo Ardusso",
+      "link": "Facundo Ardusso",
+      "nota": "Súper TC2000 (era 2012-2021, que history.json no trae)",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+        "https://en.wikipedia.org/wiki/TC2000_Championship"
+      ]
+    },
+    {
+      "categoria": "TC2000",
+      "anio": 2019,
+      "nombre": "Leonel Pernía",
+      "link": "Leonel Pernía",
+      "nota": "Súper TC2000 (era 2012-2021, que history.json no trae)",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+        "https://en.wikipedia.org/wiki/TC2000_Championship"
+      ]
+    },
+    {
+      "categoria": "TC2000",
+      "anio": 2020,
+      "nombre": "Matías Rossi",
+      "link": "Matías Rossi",
+      "nota": "Súper TC2000 (era 2012-2021, que history.json no trae)",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+        "https://en.wikipedia.org/wiki/TC2000_Championship"
+      ]
+    },
+    {
+      "categoria": "TC2000",
+      "anio": 2021,
+      "nombre": "Agustín Canapino",
+      "link": "Agustín Canapino",
+      "nota": "Súper TC2000 (era 2012-2021, que history.json no trae)",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000",
+        "https://en.wikipedia.org/wiki/TC2000_Championship"
+      ]
+    },
+    {
+      "categoria": "Mundial de Turismos",
+      "anio": 2014,
+      "nombre": "José María López",
+      "link": "José María López",
+      "nota": "campeón de pilotos del WTCC",
+      "fuentes": [
+        "https://en.wikipedia.org/wiki/World_Touring_Car_Championship",
+        "https://es.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_L%C3%B3pez"
+      ]
+    },
+    {
+      "categoria": "Mundial de Turismos",
+      "anio": 2015,
+      "nombre": "José María López",
+      "link": "José María López",
+      "nota": "campeón de pilotos del WTCC",
+      "fuentes": [
+        "https://en.wikipedia.org/wiki/World_Touring_Car_Championship",
+        "https://es.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_L%C3%B3pez"
+      ]
+    },
+    {
+      "categoria": "Mundial de Turismos",
+      "anio": 2016,
+      "nombre": "José María López",
+      "link": "José María López",
+      "nota": "campeón de pilotos del WTCC",
+      "fuentes": [
+        "https://en.wikipedia.org/wiki/World_Touring_Car_Championship",
+        "https://es.wikipedia.org/wiki/Jos%C3%A9_Mar%C3%ADa_L%C3%B3pez"
+      ]
+    },
+    {
+      "categoria": "Resistencia",
+      "anio": 2020,
+      "nombre": "José María López",
+      "link": "José María López",
+      "nota": "campeón de pilotos del WEC 2019-20 (Toyota #7 con Conway y Kobayashi)",
+      "fuentes": [
+        "https://en.wikipedia.org/wiki/List_of_FIA_World_Endurance_champions",
+        "https://es.wikipedia.org/wiki/Campeonato_Mundial_de_Resistencia_de_la_FIA"
+      ]
+    },
+    {
+      "categoria": "Resistencia",
+      "anio": 2021,
+      "nombre": "José María López",
+      "link": "José María López",
+      "nota": "campeón mundial de pilotos de Hypercar 2021 (Toyota #7 con Conway y Kobayashi)",
+      "fuentes": [
+        "https://en.wikipedia.org/wiki/List_of_FIA_World_Endurance_champions",
+        "https://es.wikipedia.org/wiki/Campeonato_Mundial_de_Resistencia_de_la_FIA"
+      ]
+    },
+    {
+      "categoria": "Top Race",
+      "anio": 2010,
+      "nombre": "Guido Falaschi",
+      "link": "Guido Falaschi",
+      "nota": "TRV6 2010 se dividió en dos campeonatos: Copa América 2010 (Falaschi) y Torneo Clausura 2010 (Canapino); ambos figuran como títulos en la lista de campeones",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Top_Race",
+        "https://www.diariodecuyo.com.ar/noticias/falaschi-fue-campeon-de-la-copa-america-en-san-juan-887435.html"
+      ]
+    },
+    {
+      "categoria": "Top Race",
+      "anio": 2010,
+      "nombre": "Agustín Canapino",
+      "link": "Agustín Canapino",
+      "nota": "Torneo Clausura 2010 de la TRV6",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Top_Race",
+        "https://es.wikipedia.org/wiki/Agust%C3%ADn_Canapino"
+      ]
+    }
+  ],
+  "sinCampeonato": [
+    {
+      "categoria": "TC",
+      "anios": "1942",
+      "nota": "Desierto",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Turismo_Carretera",
+        "https://en.wikipedia.org/wiki/Turismo_Carretera"
+      ]
+    },
+    {
+      "categoria": "TC",
+      "anios": "1943-1946",
+      "nota": "No hubo campeonato (guerra): confirmado en es y en.wikipedia",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Turismo_Carretera",
+        "https://en.wikipedia.org/wiki/Turismo_Carretera"
+      ]
+    },
+    {
+      "categoria": "TC2000",
+      "anios": "2012-2021",
+      "nota": "history.json no tiene la era Súper TC2000; los campeones están arriba. El 'TC2000 (2012-)' de segunda división es otro campeonato y no se cuenta."
+    }
+  ],
+  "sinTitulosArgentinos": {
+    "IndyCar": "Ningún argentino ganó el campeonato de IndyCar/CART/Champ Car (se cuenta como categoría, no como título).",
+    "WTCR": "WTCR 2018-2019 (Tarquini, Michelisz) y TCR World Tour: sin campeones argentinos.",
+    "F1": "Cinco títulos de Fangio, ya en history.json."
+  },
+  "excluidos": [
+    {
+      "categoria": "TC",
+      "anio": 1981,
+      "nombre": "Roberto Mouras",
+      "motivo": "Torneo Lizeviche-Galíndez 1981: torneo especial de 5 fechas, 'no oficial' según la nota (23) de la tabla de campeones; el artículo de Mouras le cuenta tres campeonatos (1983, 1984, 1985).",
+      "fuentes": [
+        "https://es.wikipedia.org/wiki/Turismo_Carretera",
+        "https://es.wikipedia.org/wiki/Roberto_Mouras"
+      ]
+    }
+  ]
+}

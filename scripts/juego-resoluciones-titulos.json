@@ -1,0 +1,42 @@
+{
+  "gabriel-raies|Rally": {
+    "resolucion": "La ficha (16) cuenta también títulos de clase del Rally Argentino. La lista de es.wikipedia marca 19 apariciones suyas, 10 en negrita (campeón absoluto); contamos sólo los absolutos, como pide el diseño.",
+    "fuente": "https://es.wikipedia.org/wiki/Rally_Argentino"
+  },
+  "manuel-luque|TC2000": {
+    "resolucion": "El título 2017 es del 'TC2000 (2012-)', la segunda divisional con los autos viejos, que no es el Súper TC2000 ni el TC2000 original. El campeón del Súper TC2000 2017 fue Facundo Ardusso.",
+    "fuente": "https://en.wikipedia.org/wiki/TC2000_Championship"
+  },
+  "matias-milla|TC2000": {
+    "resolucion": "El título 2013 es de la segunda divisional 'TC2000 (2012-)'; el campeón del Súper TC2000 2013 fue Matías Rossi.",
+    "fuente": "https://en.wikipedia.org/wiki/TC2000_Championship"
+  },
+  "facundo-della-motta|TC2000": {
+    "resolucion": "El título 2014 es de la segunda divisional 'TC2000 (2012-)'; el campeón del Súper TC2000 2014 fue Néstor Girolami.",
+    "fuente": "https://en.wikipedia.org/wiki/TC2000_Championship"
+  },
+  "franco-girolami|TC2000": {
+    "resolucion": "El título 2012 es de la segunda divisional 'TC2000 (2012-)' (Fiat Linea, Pro Racing); el campeón del Súper TC2000 2012 fue José María López.",
+    "fuente": "https://en.wikipedia.org/wiki/TC2000_Championship"
+  },
+  "fabian-flaque|TC2000": {
+    "resolucion": "La ficha dice '1 (Pilotos Privados 2000)': es un título de la clase de pilotos privados, no del campeonato general; el campeón 2000 del TC2000 es otro piloto en history.json.",
+    "fuente": "https://es.wikipedia.org/wiki/Fabi%C3%A1n_Flaqu%C3%A9"
+  },
+  "agustin-canapino|TC2000": {
+    "resolucion": "A la lista le faltaba la era Súper TC2000: se sumaron 2016 y 2021 (es.wikipedia y en.wikipedia coinciden). Ahora coincide con la ficha (2).",
+    "fuente": "https://es.wikipedia.org/wiki/S%C3%BAper_TC2000"
+  },
+  "gabriel-ponce-de-leon|TC": {
+    "resolucion": "Error del parser, no de la lista: la ficha dice '2.º en 2010' (subcampeón), no 2 títulos. Corregido en el script.",
+    "fuente": "https://es.wikipedia.org/wiki/Gabriel_Ponce_de_Le%C3%B3n"
+  },
+  "jose-manuel-urcera|TC Pista": {
+    "resolucion": "Error del parser: la ficha dice '2.º en 2014' (subcampeón). Corregido.",
+    "fuente": "https://es.wikipedia.org/wiki/Jos%C3%A9_Manuel_Urcera"
+  },
+  "andres-jakos|TC Pista": {
+    "resolucion": "Error del parser: la ficha dice '2.º en 2021' (subcampeón). Corregido.",
+    "fuente": "https://es.wikipedia.org/wiki/Andr%C3%A9s_Jakos"
+  }
+}
