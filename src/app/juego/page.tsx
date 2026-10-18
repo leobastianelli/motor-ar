@@ -37,19 +37,18 @@ export default function JuegoPage() {
           ],
         }}
       />
-      <section className="weekend-head">
-        <h1>{JUEGO_NOMBRE}</h1>
-        <p className="lede">
-          <span>Un piloto argentino por día, el mismo para todos</span>
-        </p>
-      </section>
-
-      {MODO_PRUEBA && (
-        <p className="jg-prueba" role="note">
-          Vista previa en modo prueba: el juego ya arrancó y el piloto del día no es el de producción.
-        </p>
-      )}
-      <Juego pilotos={pilotos} inicio={INICIO} hayBase={pilotos.length > 0} />
+      <div className="jg-escena">
+        <header className="jg-cabeza">
+          <h1>{JUEGO_NOMBRE}</h1>
+          <p>Un piloto argentino por día. El mismo para todos.</p>
+          {MODO_PRUEBA && (
+            <p className="jg-prueba" role="note">
+              Vista previa en modo prueba: el juego ya arrancó y el piloto del día no es el de producción.
+            </p>
+          )}
+        </header>
+        <Juego pilotos={pilotos} inicio={INICIO} hayBase={pilotos.length > 0} />
+      </div>
 
       <div className="jg-info">
         <h2>Cómo se juega</h2>
