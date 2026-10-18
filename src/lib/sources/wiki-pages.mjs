@@ -2,6 +2,7 @@
 export const WIKI_PAGES = {
   "es-tc": ["es", "Turismo_Carretera"],
   "es-tc2000": ["es", "Turismo_Competición_2000"],
+  "es-stc2000": ["es", "Súper_TC2000"],
   "es-tn": ["es", "Turismo_Nacional"],
   "es-tc-2026": ["es", "Anexo:Temporada_2026_de_Turismo_Carretera"],
   "es-tc2000-2026": ["es", "Anexo:Temporada_2026_de_TC2000"],
