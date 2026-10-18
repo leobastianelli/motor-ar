@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T14:35:34.502Z",
+  "generatedAt": "2026-10-18T15:15:46.464Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -204387,55 +204387,75 @@
               "number": "3",
               "driver": "Mariano Werner",
               "team": "Foton",
-              "gap": ""
+              "gap": "7:33.519"
             },
             {
               "pos": 2,
               "number": "107",
               "driver": "Tobías Martínez",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "+2.392"
             },
             {
               "pos": 3,
-              "number": "119",
-              "driver": "Hernán Palazzo",
-              "team": "Toyota",
-              "gap": ""
-            },
-            {
-              "pos": 4,
               "number": "256",
               "driver": "Otto Fritzler",
               "team": "Ford",
-              "gap": ""
+              "gap": "+3.894"
+            },
+            {
+              "pos": 4,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": "+3.895"
             },
             {
               "pos": 5,
-              "number": "13",
-              "driver": "Diego De Carlo",
-              "team": "Volkswagen",
-              "gap": ""
-            },
-            {
-              "pos": 6,
               "number": "12",
               "driver": "Tomás Abdala",
               "team": "Ford",
-              "gap": ""
+              "gap": "+9.005"
+            },
+            {
+              "pos": 6,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
+              "gap": "+9.006"
             },
             {
               "pos": 7,
               "number": "147",
               "driver": "Marco Dianda",
               "team": "Volkswagen",
-              "gap": ""
+              "gap": "+9.563"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1047/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1049/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1047/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "3",
+                  "driver": "Mariano Werner"
+                },
+                {
+                  "pos": 2,
+                  "number": "107",
+                  "driver": "Tobías Martínez"
+                },
+                {
+                  "pos": 3,
+                  "number": "119",
+                  "driver": "Hernán Palazzo"
+                }
+              ]
+            },
+            "note": "Oficial: cambió el podio"
           }
         },
         {
@@ -204452,7 +204472,63 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
               "start": "11:35"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "68",
+              "driver": "Julián Santero",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "126",
+              "driver": "Thomas Ricciardi",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": "+2 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1048/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tcpk-2026-9-final-final",
@@ -211912,6 +211988,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -211960,8 +212052,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 845,
-      "pagesFetched": 132,
+      "documents": 847,
+      "pagesFetched": 131,
       "eventsWithResults": 62,
       "retagged": {
         "1003": {
@@ -212413,7 +212505,6 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }

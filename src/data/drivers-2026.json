@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T14:35:35.591Z",
+  "generatedAt": "2026-10-18T15:15:47.748Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -175,7 +175,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "agustin carbo",
@@ -2075,7 +2075,7 @@
         "tc-pista-pick-up": "Fiat"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "bernini diego",
@@ -4141,7 +4141,7 @@
         "tc-pista-pick-up": "Foton"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "gaston pasten",
@@ -4708,12 +4708,12 @@
         "tc-pista": "66"
       },
       "teams": {
-        "tc-pick-up": "Toyota",
+        "tc-pick-up": "Ford",
         "tc-pista-pick-up": "Ford",
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "gustavo vaschetti",
@@ -5000,7 +5000,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "grippo ignacio",
@@ -7148,7 +7148,7 @@
         "tcr-sa": "Honda Racing"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "julio olmedo",
@@ -12593,7 +12593,7 @@
         "tc-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "pernia tiago",
