@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T13:06:29.195Z",
+  "generatedAt": "2026-10-18T13:56:06.275Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -389,7 +389,7 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-07-25",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "alejandro cancio",
@@ -471,7 +471,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "alejandro minem",
@@ -595,7 +595,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "andres calderon",
@@ -2674,7 +2674,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "esteban mancuso",
@@ -2694,7 +2694,7 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "esteban postay",
@@ -2994,7 +2994,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "aldrighetti facundo",
@@ -3569,7 +3569,7 @@
         "tc-mouras": "Chevrolet"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "francisco nonnenmacher",
@@ -3589,7 +3589,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-09-26",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "francisco olmos",
@@ -6150,11 +6150,14 @@
     {
       "key": "antonio juan sandin",
       "keys": [
-        "antonio juan sandin"
+        "antonio juan sandin",
+        "antonio juan recargo sandin"
       ],
       "slug": "juan-antonio-sandin",
       "name": "Juan Antonio Sandin",
-      "aliases": [],
+      "aliases": [
+        "Juan Antonio Sandin Recargo"
+      ],
       "series": [
         "tc-pista-pick-up",
         "tc-pista",
@@ -7016,7 +7019,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "catalan juan magni tomas",
@@ -9221,7 +9224,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-04-25",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "jalaf matias",
@@ -10288,7 +10291,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "lombardi nicolas",
@@ -11718,7 +11721,7 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "ballesio santiago",
@@ -13052,7 +13055,7 @@
         "tc-mouras": "Dodge"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "cardoso valentino",
