@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T13:56:06.275Z",
+  "generatedAt": "2026-10-18T14:35:35.591Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -2164,7 +2164,7 @@
         "tc-pista-pick-up": "Volkswagen"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "diego farina",
@@ -4818,7 +4818,7 @@
         "tc-pista-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "hernan pastor",
@@ -6155,9 +6155,7 @@
       ],
       "slug": "juan-antonio-sandin",
       "name": "Juan Antonio Sandin",
-      "aliases": [
-        "Juan Antonio Sandin Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-pick-up",
         "tc-pista",
@@ -8381,7 +8379,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "castro marcos",
@@ -8644,7 +8642,7 @@
         "tc-pista-pick-up": "Foton"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "avincetta mario",
@@ -10629,7 +10627,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "alejandro ferace pablo",
@@ -12642,7 +12640,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "abdala tomas",
@@ -12668,7 +12666,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-17"
+      "lastSeen": "2026-10-18"
     },
     {
       "key": "dalmazzo tomas",

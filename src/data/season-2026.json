@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T13:56:04.198Z",
+  "generatedAt": "2026-10-18T14:35:34.502Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -204380,7 +204380,63 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-9-2026/",
               "start": "11:10"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "Foton",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "107",
+              "driver": "Tobías Martínez",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1047/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tcpk-2026-9-serie-serie2",
@@ -211856,22 +211912,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -211920,7 +211960,7 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 844,
+      "documents": 845,
       "pagesFetched": 132,
       "eventsWithResults": 62,
       "retagged": {
@@ -212373,6 +212413,7 @@
     }
   },
   "failures": [
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
