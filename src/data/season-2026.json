@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T18:20:39.379Z",
+  "generatedAt": "2026-10-18T19:00:32.883Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -204682,70 +204682,70 @@
               "number": "1",
               "driver": "Agustín Canapino",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "30:27.170"
             },
             {
               "pos": 2,
               "number": "3",
               "driver": "Mariano Werner",
               "team": "Foton",
-              "gap": ""
+              "gap": "+2.068"
             },
             {
               "pos": 3,
               "number": "256",
               "driver": "Otto Fritzler",
               "team": "Ford",
-              "gap": ""
+              "gap": "+3.095"
             },
             {
               "pos": 4,
               "number": "119",
               "driver": "Hernán Palazzo",
               "team": "Toyota",
-              "gap": ""
+              "gap": "+7.132"
             },
             {
               "pos": 5,
               "number": "11",
               "driver": "Gaston Mazzacane",
               "team": "Foton",
-              "gap": ""
+              "gap": "+11.901"
             },
             {
               "pos": 6,
               "number": "68",
               "driver": "Julián Santero",
               "team": "Ford",
-              "gap": ""
+              "gap": "+13.081"
             },
             {
               "pos": 7,
-              "number": "12",
-              "driver": "Tomás Abdala",
-              "team": "Ford",
-              "gap": ""
-            },
-            {
-              "pos": 8,
               "number": "107",
               "driver": "Tobías Martínez",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "+26.096"
             },
             {
-              "pos": 9,
+              "pos": 8,
               "number": "147",
               "driver": "Marco Dianda",
               "team": "Volkswagen",
-              "gap": ""
+              "gap": "+26.683"
             },
             {
-              "pos": 10,
+              "pos": 9,
               "number": "110",
               "driver": "Diego Azar",
               "team": "Toyota",
-              "gap": ""
+              "gap": "+51.197"
+            },
+            {
+              "pos": 10,
+              "number": "12",
+              "driver": "Tomas Abdala Recargo",
+              "team": "Ford",
+              "gap": "+51.198"
             },
             {
               "pos": 11,
@@ -204778,8 +204778,28 @@
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1053/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1055/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1053/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "1",
+                  "driver": "Agustín Canapino"
+                },
+                {
+                  "pos": 2,
+                  "number": "3",
+                  "driver": "Mariano Werner"
+                },
+                {
+                  "pos": 3,
+                  "number": "256",
+                  "driver": "Otto Fritzler"
+                }
+              ]
+            },
+            "note": "Oficial"
           }
         }
       ],
@@ -205651,7 +205671,90 @@
           "name": "Final",
           "start": "2026-10-18T12:00:00-03:00",
           "timeKnown": false,
-          "durationMin": 30
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "145",
+              "driver": "Arrias Iñlaki",
+              "team": "Ford",
+              "gap": "17:50.514"
+            },
+            {
+              "pos": 2,
+              "number": "199",
+              "driver": "Damián Pérez",
+              "team": "Dodge",
+              "gap": "+0.745"
+            },
+            {
+              "pos": 3,
+              "number": "44",
+              "driver": "Juan José Conde",
+              "team": "Chevrolet",
+              "gap": "+1.529"
+            },
+            {
+              "pos": 4,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": "+4.007"
+            },
+            {
+              "pos": 5,
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": "+9.952"
+            },
+            {
+              "pos": 6,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "+27.673"
+            },
+            {
+              "pos": 7,
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": "+29.466"
+            },
+            {
+              "pos": 8,
+              "number": "100",
+              "driver": "Leonardo Forte",
+              "team": "Ford",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 9,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": "+2 vueltas"
+            },
+            {
+              "pos": 10,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": "+10 vueltas"
+            },
+            {
+              "pos": 11,
+              "number": "148",
+              "driver": "Daniel Faggiano",
+              "team": "Dodge",
+              "gap": "+11 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1056/ver"
+          }
         }
       ],
       "source": "ACTC (calendario)"
@@ -212288,8 +212391,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 852,
-      "pagesFetched": 133,
+      "documents": 854,
+      "pagesFetched": 135,
       "eventsWithResults": 62,
       "retagged": {
         "1003": {

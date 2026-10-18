@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T15:40:48.828Z",
+  "generatedAt": "2026-10-18T19:00:33.601Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -12645,11 +12645,14 @@
     {
       "key": "abdala tomas",
       "keys": [
-        "abdala tomas"
+        "abdala tomas",
+        "abdala recargo tomas"
       ],
       "slug": "tomas-abdala",
       "name": "Tomás Abdala",
-      "aliases": [],
+      "aliases": [
+        "Tomas Abdala Recargo"
+      ],
       "series": [
         "tc",
         "tc-pick-up",
