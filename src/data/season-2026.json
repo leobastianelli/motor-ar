@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T15:15:46.464Z",
+  "generatedAt": "2026-10-18T15:40:46.643Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -204479,42 +204479,42 @@
               "number": "68",
               "driver": "Julián Santero",
               "team": "Ford",
-              "gap": ""
+              "gap": "7:38.560"
             },
             {
               "pos": 2,
               "number": "1",
               "driver": "Agustín Canapino",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "+0.191"
             },
             {
               "pos": 3,
               "number": "110",
               "driver": "Diego Azar",
               "team": "Toyota",
-              "gap": ""
+              "gap": "+0.521"
             },
             {
               "pos": 4,
               "number": "11",
               "driver": "Gaston Mazzacane",
               "team": "Foton",
-              "gap": ""
+              "gap": "+0.686"
             },
             {
               "pos": 5,
               "number": "126",
               "driver": "Thomas Ricciardi",
               "team": "Ford",
-              "gap": ""
+              "gap": "+1.450"
             },
             {
               "pos": 6,
               "number": "66",
               "driver": "Gustavo Tadei (h)",
               "team": "Ford",
-              "gap": ""
+              "gap": "+2.539"
             },
             {
               "pos": 7,
@@ -204526,8 +204526,28 @@
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1048/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1050/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1048/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "68",
+                  "driver": "Julián Santero"
+                },
+                {
+                  "pos": 2,
+                  "number": "1",
+                  "driver": "Agustín Canapino"
+                },
+                {
+                  "pos": 3,
+                  "number": "110",
+                  "driver": "Diego Azar"
+                }
+              ]
+            },
+            "note": "Oficial"
           }
         },
         {
@@ -212052,8 +212072,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 847,
-      "pagesFetched": 131,
+      "documents": 849,
+      "pagesFetched": 132,
       "eventsWithResults": 62,
       "retagged": {
         "1003": {
