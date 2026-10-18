@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T19:00:32.883Z",
+  "generatedAt": "2026-10-18T19:45:12.816Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -205240,7 +205240,91 @@
           "name": "Final",
           "start": "2026-10-18T12:00:00-03:00",
           "timeKnown": false,
-          "durationMin": 35
+          "durationMin": 35,
+          "results": [
+            {
+              "pos": 1,
+              "number": "118",
+              "driver": "Fabrizio Maggini",
+              "team": "Ford",
+              "gap": "20:38.183"
+            },
+            {
+              "pos": 2,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "+0.463"
+            },
+            {
+              "pos": 3,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "+3.905"
+            },
+            {
+              "pos": 4,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+26.758"
+            },
+            {
+              "pos": 5,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Dodge",
+              "gap": "+32.128"
+            },
+            {
+              "pos": 6,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Dodge",
+              "gap": "+36.584"
+            },
+            {
+              "pos": 7,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+70.592"
+            },
+            {
+              "pos": 8,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "+77.058"
+            },
+            {
+              "pos": 9,
+              "number": "121",
+              "driver": "Francisco Nonnenmacher",
+              "team": "Ford",
+              "gap": "+5 vueltas"
+            },
+            {
+              "pos": 10,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "+4 vueltas"
+            },
+            {
+              "pos": 11,
+              "number": "75",
+              "driver": "Matias Frano",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1058/ver"
+          }
         }
       ],
       "source": "ACTC (calendario)"
@@ -212327,22 +212411,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -212391,8 +212459,8 @@
       "eventsWithTimes": 40
     },
     "timing": {
-      "documents": 854,
-      "pagesFetched": 135,
+      "documents": 856,
+      "pagesFetched": 136,
       "eventsWithResults": 62,
       "retagged": {
         "1003": {
@@ -212853,6 +212921,7 @@
   },
   "failures": [
     "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
