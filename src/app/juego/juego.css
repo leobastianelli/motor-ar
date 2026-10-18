@@ -94,7 +94,7 @@
 .jg-celda.amarillo{background:var(--jg-amarillo);color:#141005}
 .jg-celda.gris{background:var(--jg-gris);color:var(--jg-texto)}
 .jg-etq{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;opacity:.8}
-.jg-val{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:16px;font-weight:850;overflow-wrap:anywhere;hyphens:auto;font-variant-numeric:tabular-nums}
+.jg-val{display:flex;align-items:center;flex-wrap:wrap;gap:4px;font-size:16px;font-weight:850;overflow-wrap:break-word;hyphens:manual;font-variant-numeric:tabular-nums}
 .jg-celda:nth-child(3) .jg-val{font-size:13.5px}
 .jg-marca{position:absolute;top:6px;right:8px;font-size:14px;font-weight:900;opacity:.75}
 .jg-flecha{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:4px;background:rgba(0,0,0,.22);font-size:11px}

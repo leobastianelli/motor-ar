@@ -24,7 +24,6 @@ interface Fila {
 interface Pista {
   n: number;
   texto: string;
-  fuente: string;
 }
 interface PilotoFinal {
   slug: string;
@@ -89,7 +88,7 @@ async function completar(p: Partida): Promise<Partida> {
     for (const n of [1, 2]) {
       if (fallos(p).length >= FALLOS_PARA_PISTA[n - 1] && !sig.pistas.some((x) => x.n === n)) {
         const r = await pedir<Pista>(`/api/juego/pista?fecha=${p.fecha}&n=${n}&fallados=${falladosSlugs}`);
-        sig = { ...sig, pistas: [...sig.pistas, { n, texto: r.texto, fuente: r.fuente }] };
+        sig = { ...sig, pistas: [...sig.pistas, { n, texto: r.texto }] };
       }
     }
   } else if (!sig.respuesta) {
@@ -477,9 +476,6 @@ export function Juego({ pilotos, inicio, hayBase }: { pilotos: PilotoLista[]; in
                 <p>
                   <Radio texto={p.texto} animar={pistasNuevas.includes(p.n)} />
                 </p>
-                <a href={p.fuente} target="_blank" rel="noreferrer">
-                  Fuente
-                </a>
               </li>
             ))}
           </ul>

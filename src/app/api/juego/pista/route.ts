@@ -16,5 +16,6 @@ export async function GET(request: Request) {
 
   const pista = pistasDelJuego()[ctx.respuesta.slug]?.pistas[n - 1];
   if (!pista) return json({ error: "sin pista" }, { status: 404 });
-  return json({ n, texto: pista.texto, fuente: pista.fuente }, { cache: cacheHastaFinDelDia(ctx.fecha, ctx.hoy) });
+  // Sin la fuente: casi siempre es el artículo del piloto y regalaría la respuesta. Las fuentes se ven al terminar.
+  return json({ n, texto: pista.texto }, { cache: cacheHastaFinDelDia(ctx.fecha, ctx.hoy) });
 }
