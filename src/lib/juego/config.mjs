@@ -1,7 +1,10 @@
 // Constantes del juego diario. Lo que el dueño puede querer cambiar está acá arriba, en un solo lugar.
 
-/** Nombre del juego en el menú, el título y lo compartido. Provisorio: lo decide el dueño. */
-export const JUEGO_NOMBRE = "Juego";
+/** Nombre del juego en el título, la página y lo compartido. Provisorio: lo decide el dueño. */
+export const JUEGO_NOMBRE = "Adiviná el piloto";
+
+/** Etiqueta corta del menú (el nombre largo no entra en la barra de escritorio). */
+export const JUEGO_MENU = "Juego";
 
 /** Día del lanzamiento (fecha argentina, YYYY-MM-DD): es el juego #1. Antes de ese día la página dice "Muy pronto". */
 export const JUEGO_INICIO = "2026-10-20";

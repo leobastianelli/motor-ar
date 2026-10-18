@@ -366,7 +366,7 @@ export function Juego({ pilotos, inicio, hayBase }: { pilotos: PilotoLista[]; in
         <div className="jg-pronto">
           <h2 id="jg-pronto-t">Muy pronto</h2>
           <p>
-            El {JUEGO_NOMBRE.toLowerCase()} del piloto argentino del día todavía no empezó. Cuando arranque, vas a tener {MAX_INTENTOS} intentos por día.
+            El juego del piloto argentino del día todavía no empezó. Cuando arranque, vas a tener {MAX_INTENTOS} intentos por día.
           </p>
         </div>
       </section>

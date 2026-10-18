@@ -20,9 +20,9 @@ const comp = (...e) => ({ nacio: { estado: e[0] }, provincia: { estado: e[1] }, 
 
 test("el texto compartido lleva cuadraditos y nunca el nombre", () => {
   const t = textoCompartir({ numero: 3, acerto: true, comparaciones: [comp("gris", "gris", "gris", "gris", "verde"), comp("verde", "verde", "verde", "verde", "verde")] });
-  assert.equal(t, "Fierros · Juego #3  2/8\n⬛⬛⬛⬛🟩\n🟩🟩🟩🟩🟩\nsomosfierros.ar/juego");
+  assert.equal(t, "Fierros · Adiviná el piloto #3  2/8\n⬛⬛⬛⬛🟩\n🟩🟩🟩🟩🟩\nsomosfierros.ar/juego");
   const perdio = textoCompartir({ numero: 4, acerto: false, comparaciones: [comp("amarillo", "gris", "amarillo", "gris", "gris")] });
-  assert.ok(perdio.startsWith("Fierros · Juego #4  X/8\n🟨⬛🟨⬛⬛"));
+  assert.ok(perdio.startsWith("Fierros · Adiviná el piloto #4  X/8\n🟨⬛🟨⬛⬛"));
 });
 
 test("la racha suma días seguidos, se corta si se pierde o se saltea un día y no cuenta dos veces", () => {

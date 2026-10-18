@@ -8,7 +8,7 @@ import "./juego.css";
 
 // La página es estática: lleva sólo los nombres para el buscador (nada de la respuesta). El día, el progreso y la comprobación de cada
 // intento se resuelven en el navegador y en /api/juego/*, que guarda la respuesta del día en el servidor.
-const title = `${JUEGO_NOMBRE}: adiviná el piloto argentino del día`;
+const title = `${JUEGO_NOMBRE}: el piloto argentino del día`;
 const description = `Un piloto argentino por día y ${MAX_INTENTOS} intentos. Comparás año de nacimiento, provincia, categorías, títulos y si corre en 2026.`;
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ export default function JuegoPage() {
       <section className="weekend-head">
         <h1>{JUEGO_NOMBRE}</h1>
         <p className="lede">
-          <span>Adiviná el piloto argentino del día</span>
+          <span>Un piloto argentino por día, el mismo para todos</span>
         </p>
       </section>
 
