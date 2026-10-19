@@ -12,6 +12,7 @@ import { fechasDeCategoria } from "@/lib/snapshot.mjs";
 import { driverKey } from "@/lib/sources/driver-index.mjs";
 import { allHorarioSlugs, horarioSeriesSlug, resolveHorario } from "@/lib/horarios";
 import { OG_DEFAULTS } from "@/lib/site";
+import { descripcionHorario, tituloHorario } from "@/lib/seo-titulos.mjs";
 
 // La respuesta de arriba ("la próxima sesión es…") y el cronograma con el estado de cada sesión se calculan en el navegador con la hora real:
 // la regeneración por tiempo puede ser lenta. Los datos nuevos invalidan la página por evento (/api/refresh). El título, la descripción y los
@@ -49,10 +50,21 @@ export async function generateMetadata(props: PageProps<"/horarios/[slug]">): Pr
   const data = await load(slug);
   if (!data) return { title: "Horarios" };
   const { series, driver, next, nextSession } = data;
-  const title = driver ? `A qué hora corre ${driver.name}: horario y dónde verlo` : `Horario de ${series.name}: a qué hora es y dónde verlo`;
-  const description = next && nextSession
-    ? `${driver ? `${driver.name} corre en ${series.name}. ` : ""}Próxima fecha: ${next.name}, ${fmtRange(next.sessions[0].start, next.sessions.at(-1)!.start)}. ${nextSession.name} el ${when(nextSession)}. Todas las sesiones y dónde verlo.`
-    : `Horarios de ${series.name} en hora argentina y dónde verlo.`;
+  const fallback = `Horarios de ${series.name} en hora argentina y dónde verlo.`;
+  let title: string;
+  let description: string;
+  if (driver) {
+    title = `A qué hora corre ${driver.name}: horario y dónde verlo`;
+    description = next && nextSession
+      ? `${driver.name} corre en ${series.name}. Próxima fecha: ${next.name}, ${fmtRange(next.sessions[0].start, next.sessions.at(-1)!.start)}. ${nextSession.name} el ${when(nextSession)}. Todas las sesiones y dónde verlo.`
+      : fallback;
+  } else {
+    // Título y descripción de la categoría salen del momento (src/lib/seo-titulos.mjs), igual que /categorias.
+    const momento = data.season.getMomentoCategoria(series.id, data.now);
+    const fecha = momento.fecha ? data.season.getEvent(momento.fecha.id) : undefined;
+    title = tituloHorario(series, momento, data.now);
+    description = descripcionHorario(series, momento, { broadcasts: fecha?.broadcasts, fallback });
+  }
   return { title, description, openGraph: { title, description, ...OG_DEFAULTS }, alternates: { canonical: `/horarios/${slug}` } };
 }
 

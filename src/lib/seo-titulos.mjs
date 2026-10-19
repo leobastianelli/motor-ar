@@ -117,6 +117,28 @@ export function tituloPiloto(name, year, m, now, corre) {
   return elegir([`${name}: cuándo corre, resultados y campeonato ${year}`, `${name}: cuándo corre, resultados y campeonato`, `${name}: cuándo corre y resultados ${year}`, `${name}: resultados ${year}`]);
 }
 
+/**
+ * La página de horarios de una categoría. La gente busca "horario f1", "horarios f1 argentina", "a qué hora es el gt world challenge":
+ * el título arranca con "Horario(s)", usa el nombre que se busca (la sigla si es corta: F1, F2, TC) y nombra la fecha. "hoy" sólo si hay sesión hoy.
+ * No promete ninguna hora: las horas van en la descripción, que dice "a confirmar" cuando no hay horario confirmado.
+ * @param {{ name: string, short?: string }} series
+ * @param {any} m momentoDeCategoria
+ * @param {string} now ISO
+ */
+export function tituloHorario(series, m, now) {
+  const buscado = series.short && series.short.length <= 3 ? [series.short, series.name] : [series.name];
+  const enCurso = (m.modo === "en-pista" || m.modo === "finde") && m.fecha;
+  const f = enCurso ? m.fecha : m.proximaFecha;
+  const l = f ? lugar({ name: f.name, city: f.city }) : undefined;
+  const donde = l?.gp ?? f?.city ?? undefined;
+  if (enCurso && donde) {
+    const hoy = hayHoy(m, now) ? " hoy" : "";
+    return elegir(combinar(buscado, [(n) => `Horario ${n}${hoy}: ${donde}, en hora argentina`, (n) => `Horario ${n}${hoy}: ${donde}`, (n) => `Horarios ${n}${hoy} en Argentina`]));
+  }
+  if (donde) return elegir(combinar(buscado, [(n) => `Horarios ${n} en Argentina: próxima fecha, ${donde}`, (n) => `Horarios ${n} en Argentina: ${donde}`, (n) => `Horarios ${n} en Argentina`]));
+  return elegir(combinar(buscado, [(n) => `Horarios ${n} en Argentina: cada sesión y dónde verla`, (n) => `Horarios ${n} en Argentina`]));
+}
+
 // ---- Descripciones ----
 
 /** Une oraciones mientras entren en el largo. La primera siempre va. */
@@ -210,4 +232,22 @@ export function descripcionPiloto(name, m, /** @type {{ broadcasts?: { name: str
     return juntar([`${name}: próxima fecha, ${fechaCorta(m.proximaFecha)}. ${carreraPendiente(m.proximaFecha) || `Empieza el ${cuando(m.proximaFecha.primeraSesion)}.`}`, ...fallback.split(/(?<=\.)\s+/)]);
   }
   return fallback;
+}
+
+/**
+ * Descripción de la página de horarios de una categoría. Las horas salen de la próxima carrera (o de la primera sesión) y llevan "(hora argentina)" sólo si están confirmadas.
+ * Si la fecha de este finde ya terminó y no hay otra cargada, no se inventa nada: queda el `fallback`.
+ */
+export function descripcionHorario(series, m, /** @type {{ broadcasts?: { name: string }[], fallback?: string }} */ { broadcasts = [], fallback = "" } = {}) {
+  const f = m.fecha;
+  const donde = dondeVerlo(broadcasts);
+  const enCurso = (m.modo === "en-pista" || m.modo === "finde") && f && !carreraTerminada(m);
+  let partes = [];
+  if (enCurso) {
+    partes = [`Horarios de ${series.name} en Argentina. ${fechaLarga(f, series)}${esGP(f.name) && f.city ? ` (${f.city})` : ""}: ${carreraPendiente(f) || "horarios de todas las sesiones."}`, donde, "Todas las sesiones en hora argentina."];
+  } else if (m.proximaFecha) {
+    const pf = m.proximaFecha;
+    partes = [`Horarios de ${series.name} en Argentina. Próxima fecha: ${fechaCorta(pf)}. ${carreraPendiente(pf) || `Empieza el ${cuando(pf.primeraSesion)}.`}`, "Todas las sesiones en hora argentina y dónde verlas."];
+  }
+  return juntar(partes.map((p) => (p ? cierre(p.replace(/\s+/g, " ").trim()) : ""))) || fallback;
 }
