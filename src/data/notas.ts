@@ -27,6 +27,21 @@ export interface Nota {
 
 export const notas: Nota[] = [
   {
+    slug: "colnaghi-pasa-a-campos-racing-para-la-f3-2027",
+    title: "Colnaghi pasa a Campos, el equipo campeón de la F3",
+    publishedAt: "2026-10-19",
+    source: {
+      medio: "Infobae",
+      url: "https://www.infobae.com/deportes/2026/10/19/el-argentino-mattia-colnaghi-correra-en-un-equipo-de-punta-en-la-formula-3-la-intervencion-clave-de-red-bull/",
+      headline: "El argentino Mattia Colnaghi correrá en un equipo de punta en la Fórmula 3: la intervención clave de Red Bull",
+      author: "Darío Coronel",
+    },
+    summary:
+      "Mattia Colnaghi deja MP Motorsport y correrá la Fórmula 3 2027 con Campos Racing, que ganó los títulos de pilotos y equipos este año. El cambio lo empujó Red Bull, que lo mantiene en su programa de juveniles. Cerró su temporada debut 13.º con 54 puntos; esta semana prueba en Jerez y el 26 y 27 de octubre en Barcelona.",
+    drivers: ["mattia-colnaghi"],
+    series: ["f3"],
+  },
+  {
     slug: "colapinto-larga-noveno-en-baku-por-la-sancion-a-sainz",
     title: "Colapinto larga noveno en Bakú por la sanción a Sainz",
     publishedAt: "2026-09-25",

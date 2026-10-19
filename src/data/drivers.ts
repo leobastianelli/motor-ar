@@ -196,11 +196,13 @@ export const drivers: Driver[] = [
     team: "MP Motorsport",
     hometown: "Monza, Italia · madre chubutense",
     born: "26/07/2008",
-    tagline: "Nacido en Italia de madre chubutense, junior de Red Bull y primer piloto con bandera argentina en la Fórmula 3.",
+    tagline: "Nacido en Italia de madre chubutense, junior de Red Bull y primer piloto con bandera argentina en la Fórmula 3; en 2027 pasa a Campos Racing.",
     career: [
       { year: "2024", series: "Fórmula 4 España", team: "MP Motorsport", highlight: "Campeón." },
       { year: "2025", series: "Eurocup-3", team: "MP Motorsport", highlight: "Campeón." },
-      { year: "2026", series: "FIA Fórmula 3", team: "MP Motorsport", highlight: "Debut en la F3 con el número 7, como junior de Red Bull y por primera vez con bandera argentina." },
+      { year: "2026", series: "FIA Fórmula 3", team: "MP Motorsport", highlight: "Debut en la F3 con el número 7, como junior de Red Bull y por primera vez con bandera argentina. Terminó 13.º con 54 puntos, sumando en seis de las últimas ocho carreras." },
+      { year: "2026", series: "Copa Mundial de Fórmula Regional · Macao", team: "MP Motorsport", highlight: "Confirmado para el Gran Premio de Macao, del 19 al 22 de noviembre en el circuito da Guia." },
+      { year: "2027", series: "FIA Fórmula 3", team: "Campos Racing", highlight: "Segunda temporada en la F3, con el equipo campeón de 2026 y sin salir del programa de Red Bull." },
     ].reverse(),
   },
   {
