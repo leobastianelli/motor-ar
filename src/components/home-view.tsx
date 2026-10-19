@@ -231,7 +231,7 @@ export function HomeView({
             <span className="home-eyebrow">Se ve por</span>
             <strong>{live.event.broadcasts.filter((b) => b.kind !== "timing").map((b) => b.name).join(" · ") || "Sin datos de transmisión"}</strong>
             {liveUrl && (
-              <a href={liveUrl} target="_blank" rel="noreferrer" className="home-btn">
+              <a href={liveUrl} target="_blank" rel="noreferrer" className="home-btn" data-evento="donde_ver" data-ev-lugar="home_en_vivo">
                 Abrir transmisión <span aria-hidden="true">↗</span>
               </a>
             )}

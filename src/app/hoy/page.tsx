@@ -36,7 +36,7 @@ export default async function HoyPage() {
         data={{
           "@context": "https://schema.org",
           "@graph": [
-            itemListJsonLd(dia.items.map((i) => sportsEventFromSession(i.session, i.event, i.series))),
+            itemListJsonLd(dia.items.map((i) => sportsEventFromSession(i.session, i.event, i.series, now))),
             breadcrumb([
               ["Inicio", "/"],
               ["Hoy", "/hoy"],

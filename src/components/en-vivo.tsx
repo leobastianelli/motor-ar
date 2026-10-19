@@ -304,7 +304,7 @@ export function HorarioProxima({ events, keys, seriesById, tiers, serverNow, sim
               {next.broadcasts.map((b) => (
                 <li key={b.name}>
                   {b.url ? (
-                    <a href={b.url} target="_blank" rel="noreferrer">
+                    <a href={b.url} target="_blank" rel="noreferrer" data-evento="donde_ver" data-ev-nombre={b.name} data-ev-lugar="horarios">
                       {b.name}
                     </a>
                   ) : (

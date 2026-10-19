@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { itemListData, seasonEventSummaryData, sportsEventData } from "./json-ld-core.mjs";
+import { itemListData, seasonEventSummaryData, sessionEventData, sportsEventData } from "./json-ld-core.mjs";
 
 const SITE = "https://www.somosfierros.ar";
 const series = { name: "Fórmula 1", org: "FIA", orgUrl: "https://fia.com" };
@@ -64,10 +64,41 @@ test("ItemList: posición 1-based y el item tal como se pasó", () => {
   assert.deepEqual(list.itemListElement[0].item, items[0]);
 });
 
-test("seasonEventSummaryData: nombre, enlace a la fecha y cuándo es", () => {
+// Lo que Search Console marca en "Eventos": `location` es obligatorio (sin él, el elemento no es válido);
+// `description`, `image` y `organizer` son recomendados. Valen para cada evento, también los anidados y los de una lista.
+const completo = (data, nombre) => {
+  assert.equal(data.location?.["@type"], "Place", `${nombre}: location`);
+  assert.equal(data.location.address["@type"], "PostalAddress", `${nombre}: dirección`);
+  assert.equal(data.location.address.addressCountry, circuit.country);
+  assert.ok(data.description, `${nombre}: description`);
+  assert.match(data.image, /^https:\/\/www\.somosfierros\.ar\/eventos\/.+\/opengraph-image$/, `${nombre}: image`);
+  assert.equal(data.organizer?.name, series.org, `${nombre}: organizer`);
+  assert.ok(data.startDate && data.eventStatus, `${nombre}: fecha y estado`);
+};
+
+test("seasonEventSummaryData: evento completo para la lista del calendario, con enlace a la fecha", () => {
   const e = event();
-  const data = seasonEventSummaryData(e, SITE);
-  assert.equal(data.name, e.name);
+  const data = seasonEventSummaryData(e, series, "2026-10-01T00:00:00Z", SITE);
+  assert.ok(data.name.includes(e.name) && data.name.includes(series.name));
   assert.equal(data.url, `${SITE}/eventos/${e.id}`);
   assert.equal(data.startDate, e.sessions[0].start);
+  assert.equal(data.eventStatus, "https://schema.org/EventScheduled");
+  completo(data, "resumen");
+  assert.equal(seasonEventSummaryData(e, series, "2026-10-05T00:00:00Z", SITE).eventStatus, "https://schema.org/EventCompleted");
+});
+
+test("cada subEvent y cada sesión suelta de /hoy es un evento completo", () => {
+  const e = event();
+  const data = sportsEventData(e, series, "d", "2026-10-01T00:00:00Z", SITE);
+  completo(data, "fecha");
+  for (const sub of data.subEvent) completo(sub, "subEvent");
+  const suelta = sessionEventData(e.sessions[0], e, series, "2026-10-01T00:00:00Z", SITE);
+  completo(suelta, "sesión de /hoy");
+  assert.equal(suelta.name, "Fórmula 1 · Clasificación");
+  assert.equal(suelta.url, `${SITE}/eventos/${e.id}`);
+});
+
+test("organizer sin web conocida: sólo el nombre", () => {
+  const data = sportsEventData(event(), { name: "Procar4000", org: "Zonal" }, "d", "2026-10-01T00:00:00Z", SITE);
+  assert.deepEqual(data.organizer, { "@type": "Organization", name: "Zonal" });
 });

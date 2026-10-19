@@ -206,7 +206,7 @@ export default async function SeriesPage(props: PageProps<"/categorias/[slug]">)
           "@context": "https://schema.org",
           "@graph": [
             { "@type": "SportsOrganization", name: series.name, sport: "Automovilismo", ...(series.founded ? { foundingDate: String(series.founded) } : {}), parentOrganization: { "@type": "Organization", name: series.org } },
-            ...(events.length > 0 ? [itemListJsonLd(events.map(seasonEventSummary))] : []),
+            ...(events.length > 0 ? [itemListJsonLd(events.map((e) => seasonEventSummary(e, series, now)))] : []),
             breadcrumb([
               ["Inicio", "/"],
               ["Categorías", "/categorias"],
