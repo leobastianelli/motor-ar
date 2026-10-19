@@ -16,6 +16,13 @@ export function cuando(s) {
   return s.timeKnown === false ? `${p.weekday} ${p.day}, horario a confirmar` : `${p.weekday} ${p.day} a las ${p.hour}:${p.minute}`;
 }
 
+/** Marcadores que la fuente pone donde falta el dato ("A CONFIRMAR"): nunca se muestran como si fueran un lugar. */
+const MARCADOR = /^\s*(a\s+(confirmar|definir)|por\s+(confirmar|definir)|sin\s+(confirmar|definir)|tb[ad]|n\/?a|[-–—?]*)\s*$/i;
+/** @param {string|undefined} c */
+export const ciudadValida = (c) => (c && !MARCADOR.test(c) && !/\b(a\s+confirmar|a\s+definir)\b/i.test(c) ? c.trim() : undefined);
+/** El nombre de una fecha ("Fecha 9 · A CONFIRMAR") sin marcadores: si lo trae, no se usa entero. */
+const nombreValido = (n) => (n && !/\b(a\s+confirmar|a\s+definir)\b/i.test(n) ? n : "");
+
 const esGP = (name) => /^(GP|Gran Premio)\b/i.test(name);
 const corto = (name) => name.replace(/^Gran Premio (de |del )?/i, "GP de ");
 const apellido = (name) => name.split(" / ").map((p) => p.trim().split(/\s+/).at(-1)).join(" / ");
@@ -39,8 +46,8 @@ const combinar = (names, plantillas) => plantillas.flatMap((f) => names.map(f));
 
 /** Cómo se nombra una fecha en un título: "GP de Azerbaiyán" en la F1; en el resto, el lugar ("en Calafate"). */
 function lugar(evento) {
-  const name = evento.name ?? "";
-  const ciudad = evento.city;
+  const name = nombreValido(evento.name);
+  const ciudad = ciudadValida(evento.city);
   return esGP(name) ? { gp: corto(name), en: ciudad ? `en ${ciudad}` : undefined } : { gp: undefined, en: ciudad ? `en ${ciudad}` : name ? `en ${name}` : undefined };
 }
 
@@ -117,25 +124,68 @@ export function tituloPiloto(name, year, m, now, corre) {
   return elegir([`${name}: cuándo corre, resultados y campeonato ${year}`, `${name}: cuándo corre, resultados y campeonato`, `${name}: cuándo corre y resultados ${year}`, `${name}: resultados ${year}`]);
 }
 
+const MES = (iso) => Number(dayOf(iso).slice(5, 7));
+const DIA = (iso) => Number(dayOf(iso).slice(8, 10));
+
 /**
- * La página de horarios de una categoría. La gente busca "horario f1", "horarios f1 argentina", "a qué hora es el gt world challenge":
- * el título arranca con "Horario(s)", usa el nombre que se busca (la sigla si es corta: F1, F2, TC) y nombra la fecha. "hoy" sólo si hay sesión hoy.
- * No promete ninguna hora: las horas van en la descripción, que dice "a confirmar" cuando no hay horario confirmado.
- * @param {{ name: string, short?: string }} series
- * @param {any} m momentoDeCategoria
- * @param {string} now ISO
+ * Los días de una fecha en formato argentino: "25/10", "24 y 25/10", "23 al 25/10", "30/10 al 2/11".
+ * @param {{ start: string, end?: string }} f
  */
-export function tituloHorario(series, m, now) {
-  const buscado = series.short && series.short.length <= 3 ? [series.short, series.name] : [series.name];
+export function diasDe(f) {
+  const fin = f.end && Date.parse(f.end) > Date.parse(f.start) ? new Date(Date.parse(f.end) - 90 * 60000).toISOString() : f.start; // una sesión que termina pasada la medianoche no suma un día
+  const [d1, d2, m1, m2] = [DIA(f.start), DIA(fin), MES(f.start), MES(fin)];
+  if (dayOf(fin) <= dayOf(f.start)) return `${d1}/${m1}`;
+  if (m1 !== m2) return `${d1}/${m1} al ${d2}/${m2}`;
+  return `${d1}${d2 === d1 + 1 ? " y " : " al "}${d2}/${m2}`;
+}
+
+const esNacional = (series) => series.scope !== "internacional";
+
+/** Cómo busca la gente cada categoría nacional: la sigla corta primero y el nombre largo si entra. */
+const NOMBRES_BUSQUEDA = {
+  tc: ["TC", "Turismo Carretera"],
+  "tc-pista": ["TC Pista"],
+  "tc-pick-up": ["TC Pick Up"],
+  "tc-pista-pick-up": ["TC Pista Pick Up"],
+  "tc-mouras": ["TC Mouras"],
+  "tc-pista-mouras": ["TC Pista Mouras"],
+  tc2000: ["TC2000"],
+  tn: ["Turismo Nacional", "TN"],
+  "rally-argentino": ["Rally Argentino"],
+  "nuevo-car-show": ["Nuevo Car Show"],
+  "cordoba-pista": ["Córdoba Pista"],
+};
+
+/**
+ * La página de horarios de una categoría. La gente busca "horario f1", "horarios tc rosario", "a qué hora es el gt world challenge".
+ * - Internacionales: "en Argentina" porque la promesa es la hora argentina (el GP, o el lugar, y los días).
+ * - Nacionales: sin "en Argentina" (ya corren acá): "Horarios TC en Rosario: 24 y 25/10", con el nombre largo si entra.
+ * - Un lugar que es un marcador ("A CONFIRMAR") o vacío no se nombra: queda la fecha en días o "próxima fecha".
+ * - Nada de "hoy" ni "este finde": la página se regenera cada 15 minutos (y puede servirse más vieja), así que sólo se dice lo que sigue siendo cierto: los días.
+ * No promete ninguna hora: las horas van en la descripción, que dice "a confirmar" cuando no hay horario confirmado.
+ * @param {{ id?: string, name: string, short?: string, scope?: string }} series
+ * @param {any} m momentoDeCategoria
+ */
+export function tituloHorario(series, m) {
   const enCurso = (m.modo === "en-pista" || m.modo === "finde") && m.fecha;
   const f = enCurso ? m.fecha : m.proximaFecha;
   const l = f ? lugar({ name: f.name, city: f.city }) : undefined;
-  const donde = l?.gp ?? f?.city ?? undefined;
-  if (enCurso && donde) {
-    const hoy = hayHoy(m, now) ? " hoy" : "";
-    return elegir(combinar(buscado, [(n) => `Horario ${n}${hoy}: ${donde}, en hora argentina`, (n) => `Horario ${n}${hoy}: ${donde}`, (n) => `Horarios ${n}${hoy} en Argentina`]));
+  const donde = l?.gp ?? ciudadValida(f?.city);
+  const dias = f ? diasDe(f) : undefined;
+  if (esNacional(series)) {
+    const [corto, largo] = NOMBRES_BUSQUEDA[series.id ?? ""] ?? [series.name];
+    const conLargo = largo ? `${largo} (${corto})` : corto;
+    const ronda = f && Number.isInteger(f.round) ? ` · Fecha ${f.round}` : "";
+    const en = donde ? ` en ${donde}` : "";
+    const sep = donde ? ": " : ": próxima fecha, ";
+    if (f && dias) return elegir([`Horarios ${conLargo}${en}${sep}${dias}`, `Horarios ${corto}${en}${sep}${dias}${ronda}`, `Horarios ${corto}${en}${sep}${dias}`, `Horarios ${corto}${en}`]);
+    return elegir([`Horarios ${conLargo}: calendario y dónde verlo`, `Horarios ${corto}: calendario y dónde verlo`, `Horarios ${corto}`]);
   }
-  if (donde) return elegir(combinar(buscado, [(n) => `Horarios ${n} en Argentina: próxima fecha, ${donde}`, (n) => `Horarios ${n} en Argentina: ${donde}`, (n) => `Horarios ${n} en Argentina`]));
+  const buscado = series.short && series.short.length <= 3 ? [series.short, series.name] : [series.name, series.short].filter(Boolean);
+  if (f && dias) {
+    const ref = donde ? `: ${donde}, ${dias}` : `: próxima fecha, ${dias}`;
+    return elegir(combinar(buscado, [(n) => `Horarios ${n} en Argentina${ref}`, (n) => `Horarios ${n} en Argentina${donde ? `: ${donde}` : ""}`, (n) => `Horarios ${n} en Argentina`]));
+  }
   return elegir(combinar(buscado, [(n) => `Horarios ${n} en Argentina: cada sesión y dónde verla`, (n) => `Horarios ${n} en Argentina`]));
 }
 
@@ -172,11 +222,17 @@ function filaDe(name, s) {
 }
 
 /** "GP de Azerbaiyán" en la F1; en el resto, el lugar ("San Luis"): los nombres de las fechas nacionales son "Fecha 11 · San Luis". */
-const fechaCorta = (f) => (esGP(f.name) ? f.name : (f.city ?? f.name));
+const fechaCorta = (f) => (esGP(f.name) ? f.name : (ciudadValida(f.city) ?? (nombreValido(f.name) || "fecha con lugar a confirmar")));
 /** Lo mismo con la categoría delante cuando el lugar solo no se entiende: "TC en San Luis". */
-const fechaLarga = (f, series) => (esGP(f.name) ? f.name : `${series.short ?? series.name} en ${f.city ?? f.name}`);
+const fechaLarga = (f, series) => (esGP(f.name) ? f.name : `${series.short ?? series.name}${ciudadValida(f.city) ? ` en ${ciudadValida(f.city)}` : ""}`);
 /** "el sábado 26 a las 08:00 (hora argentina)" o "en curso". */
-const cuandoLarga = (s) => (s.estado === "en-vivo" ? "en curso" : `el ${cuando(s)}${s.timeKnown === false ? "" : " (hora argentina)"}`);
+const DIAS = /\b(lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)\b/i;
+/** "el sábado 26 a las 08:00 (hora argentina)"; si el nombre de la sesión ya trae el día ("Series y finales (domingo)"), sólo "el 26 a las 08:00". */
+const cuandoLarga = (s) => {
+  if (s.estado === "en-vivo") return "en curso";
+  const c = DIAS.test(s.name ?? "") ? cuando(s).replace(DIAS, "").trim() : cuando(s);
+  return `el ${c}${s.timeKnown === false ? "" : " (hora argentina)"}`;
+};
 
 const carreraPendiente = (f) => (f?.carrera && f.carrera.estado !== "terminada" ? `${f.carrera.name} ${cuandoLarga(f.carrera)}.` : "");
 const ultimaTerminada = (sesiones) => [...sesiones].reverse().find((s) => s.estado === "terminada" && s.hasResults);
@@ -197,7 +253,7 @@ export function descripcionMomento(series, m, /** @type {{ broadcasts?: { name: 
     const gana = ganadorCarrera(f);
     partes = terminada
       ? [gana ? `${fechaLarga(f, series)}. ${gana}` : `${fechaLarga(f, series)}: resultados de todas las sesiones y campeonato.`, "Resultados de todas las sesiones y argentinos.", donde]
-      : [`${fechaLarga(f, series)}${esGP(f.name) && f.city ? ` (${f.city})` : ""}: ${carreraPendiente(f) || "horarios de todas las sesiones."}`, ult ? resultadoDe(ult) : "", donde, "Horarios en hora argentina."];
+      : [`${fechaLarga(f, series)}${esGP(f.name) && ciudadValida(f.city) ? ` (${f.city})` : ""}: ${carreraPendiente(f) || "horarios de todas las sesiones."}`, ult ? resultadoDe(ult) : "", donde, "Horarios en hora argentina."];
   } else if (m.modo === "resultados" && f) {
     partes = [ganadorCarrera(f) ? `${fechaLarga(f, series)}. ${ganadorCarrera(f)}` : `${fechaLarga(f, series)}: resultados de todas las sesiones.`, "Resultados, campeonato y próxima fecha.", donde];
     if (m.proximaFecha) partes.splice(2, 0, `Sigue ${fechaCorta(m.proximaFecha)}.`);
@@ -237,17 +293,24 @@ export function descripcionPiloto(name, m, /** @type {{ broadcasts?: { name: str
 /**
  * Descripción de la página de horarios de una categoría. Las horas salen de la próxima carrera (o de la primera sesión) y llevan "(hora argentina)" sólo si están confirmadas.
  * Si la fecha de este finde ya terminó y no hay otra cargada, no se inventa nada: queda el `fallback`.
+ * Las nacionales no dicen "en Argentina" ni "hora argentina" de relleno: ya corren acá.
  */
 export function descripcionHorario(series, m, /** @type {{ broadcasts?: { name: string }[], fallback?: string }} */ { broadcasts = [], fallback = "" } = {}) {
   const f = m.fecha;
   const donde = dondeVerlo(broadcasts);
+  const nac = esNacional(series);
+  const apertura = nac ? `Horarios de ${series.name}.` : `Horarios de ${series.name} en Argentina.`;
+  const cierreSesiones = nac ? "Todas las sesiones y dónde verlas." : "Todas las sesiones en hora argentina y dónde verlas.";
   const enCurso = (m.modo === "en-pista" || m.modo === "finde") && f && !carreraTerminada(m);
+  /** "Rosario, 24 y 25/10" o, sin lugar confirmado, "24 y 25/10". */
+  const fechaDe = (x) => [esGP(x.name) ? x.name : ciudadValida(x.city), diasDe(x)].filter(Boolean).join(", ");
   let partes = [];
   if (enCurso) {
-    partes = [`Horarios de ${series.name} en Argentina. ${fechaLarga(f, series)}${esGP(f.name) && f.city ? ` (${f.city})` : ""}: ${carreraPendiente(f) || "horarios de todas las sesiones."}`, donde, "Todas las sesiones en hora argentina."];
+    partes = [`${apertura} Esta fecha: ${fechaDe(f)}. ${carreraPendiente(f) || "Horarios de todas las sesiones."}`, donde, cierreSesiones];
   } else if (m.proximaFecha) {
     const pf = m.proximaFecha;
-    partes = [`Horarios de ${series.name} en Argentina. Próxima fecha: ${fechaCorta(pf)}. ${carreraPendiente(pf) || `Empieza el ${cuando(pf.primeraSesion)}.`}`, "Todas las sesiones en hora argentina y dónde verlas."];
+    partes = [`${apertura} Próxima fecha: ${fechaDe(pf)}. ${carreraPendiente(pf) || `Empieza el ${cuando(pf.primeraSesion)}.`}`, cierreSesiones];
   }
-  return juntar(partes.map((p) => (p ? cierre(p.replace(/\s+/g, " ").trim()) : ""))) || fallback;
+  const sinHora = (t) => (nac ? t.replace(/ \(hora argentina\)/g, "") : t);
+  return juntar(partes.map((p) => (p ? cierre(sinHora(p.replace(/\s+/g, " ")).trim()) : ""))) || fallback;
 }
