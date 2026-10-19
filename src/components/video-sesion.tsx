@@ -44,7 +44,7 @@ export function VideoSesion({ videoId, title, ariaLabel, duration, liveUrl }: { 
         {liveUrl && (
           <>
             {" · "}
-            <a href={liveUrl} target="_blank" rel="noreferrer">
+            <a href={liveUrl} target="_blank" rel="noreferrer" data-evento="donde_ver" data-ev-lugar="video_sesion">
               Transmisión completa
             </a>
           </>

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { getConsent } from "@/lib/analytics";
+import { getConsent, trackEvent } from "@/lib/analytics";
 
 // Chrome/Android disparan este evento cuando la página cumple los requisitos para poder instalarse; sin
 // guardarlo y usarlo después, el navegador no deja volver a pedirlo por código.
@@ -93,7 +93,10 @@ export function InstallPrompt() {
   const install = async () => {
     if (deferredPrompt) {
       await deferredPrompt.prompt();
-      await deferredPrompt.userChoice;
+      const { outcome } = await deferredPrompt.userChoice;
+      trackEvent("app_instalar", { plataforma: platform, resultado: outcome });
+    } else {
+      trackEvent("app_instalar", { plataforma: platform, resultado: "instrucciones" });
     }
     dismiss();
   };

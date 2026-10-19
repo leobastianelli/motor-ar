@@ -58,7 +58,7 @@ export function AgregarCalendario({ kind, id }: { kind: "categoria" | "piloto"; 
 
   return (
     <div className="add-calendar" ref={ref}>
-      <button type="button" className="add-calendar-toggle" aria-haspopup="menu" aria-expanded={open} aria-controls={menuId} onClick={() => setOpen((o) => !o)}>
+      <button type="button" className="add-calendar-toggle" data-evento="calendario_abrir" data-ev-tipo={kind} data-ev-id={id} aria-haspopup="menu" aria-expanded={open} aria-controls={menuId} onClick={() => setOpen((o) => !o)}>
         <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
           <path d="M7 3v3M17 3v3M4 9h16M5 6h14a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -66,13 +66,13 @@ export function AgregarCalendario({ kind, id }: { kind: "categoria" | "piloto"; 
       </button>
       {open && (
         <div id={menuId} role="menu" className="add-calendar-menu" aria-label="Agregar a mi calendario">
-          <a role="menuitem" href={googleUrl} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
+          <a role="menuitem" href={googleUrl} target="_blank" rel="noreferrer" onClick={() => setOpen(false)} data-evento="calendario_agregar" data-ev-via="google" data-ev-tipo={kind} data-ev-id={id}>
             Google Calendar
           </a>
-          <a role="menuitem" href={webcalUrl} onClick={() => setOpen(false)}>
+          <a role="menuitem" href={webcalUrl} onClick={() => setOpen(false)} data-evento="calendario_agregar" data-ev-via="webcal" data-ev-tipo={kind} data-ev-id={id}>
             iPhone / Mac
           </a>
-          <button type="button" role="menuitem" onClick={copiar}>
+          <button type="button" role="menuitem" onClick={copiar} data-evento="calendario_agregar" data-ev-via="copiar" data-ev-tipo={kind} data-ev-id={id}>
             {copiado ? "Enlace copiado" : "Copiar enlace"}
           </button>
         </div>

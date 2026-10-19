@@ -1,7 +1,6 @@
-import { itemListData, seasonEventSummaryData, sportsEventData } from "@/lib/json-ld-core.mjs";
+import { itemListData, seasonEventSummaryData, sessionEventData, sportsEventData } from "@/lib/json-ld-core.mjs";
 import { SITE_URL } from "@/lib/site";
 import type { RaceEvent, Series, Session } from "@/lib/types";
-import { dayKey } from "@/lib/format";
 
 /** Datos estructurados (schema.org) para buscadores. El contenido se escapa para que no pueda cerrar el script. */
 export function JsonLd({ data }: { data: object }) {
@@ -26,27 +25,14 @@ export function sportsEventJsonLd(event: RaceEvent, series: Pick<Series, "name" 
   return sportsEventData(event, series, description, now, SITE_URL);
 }
 
-/**
- * `SportsEvent` de una sola sesión, para `/hoy`: la lista mezcla sesiones de fechas distintas, así que no alcanza
- * con `sportsEventJsonLd` (que describe toda una fecha). Sin `image`/`competitor`: no hay una fecha propia de la
- * que sacarlos sin repetir trabajo, y no son obligatorios para `SportsEvent`.
- */
-export function sportsEventFromSession(session: Session, event: RaceEvent, series: Pick<Series, "name" | "org" | "orgUrl">) {
-  return {
-    "@type": "SportsEvent",
-    name: `${series.name} · ${session.name}`,
-    sport: "Automovilismo",
-    startDate: session.timeKnown === false ? dayKey(session.start) : session.start,
-    eventStatus: "https://schema.org/EventScheduled",
-    location: { "@type": "Place", name: event.circuit.name, address: [event.circuit.city, event.circuit.province, event.circuit.country].filter(Boolean).join(", ") },
-    organizer: { "@type": "Organization", name: series.org, ...(series.orgUrl ? { url: series.orgUrl } : {}) },
-    url: `${SITE_URL}/eventos/${event.id}`,
-  };
+/** `SportsEvent` de una sola sesión, para `/hoy`: la lista mezcla sesiones de fechas distintas. */
+export function sportsEventFromSession(session: Session, event: RaceEvent, series: Pick<Series, "name" | "org" | "orgUrl">, now: string) {
+  return sessionEventData(session, event, series, now, SITE_URL);
 }
 
-/** Resumen de una fecha para el `ItemList` del calendario de una categoría: nombre, enlace y cuándo es. */
-export function seasonEventSummary(event: RaceEvent) {
-  return seasonEventSummaryData(event, SITE_URL);
+/** Resumen de una fecha para el `ItemList` del calendario de una categoría. */
+export function seasonEventSummary(event: RaceEvent, series: Pick<Series, "name" | "org" | "orgUrl">, now: string) {
+  return seasonEventSummaryData(event, series, now, SITE_URL);
 }
 
 /** `ItemList` genérica de schema.org, en el orden dado (1-based). */
