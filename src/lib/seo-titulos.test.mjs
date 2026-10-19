@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { momentoDeCategoria, momentoDeEvento, momentoDePiloto } from "./momento.mjs";
-import { descripcionHorario, descripcionMomento, descripcionPiloto, DESCRIPCION_MAX, TITULO_MAX, tituloCategoria, tituloEvento, tituloHorario, tituloPiloto } from "./seo-titulos.mjs";
+import { descripcionHorario, descripcionMomento, descripcionPiloto, DESCRIPCION_MAX, TITULO_MAX, tituloCategoria, tituloEvento, diasDe, tituloHorario, tituloPiloto } from "./seo-titulos.mjs";
 import { driverKey } from "./sources/driver-index.mjs";
 
 const row = (pos, driver, extra = {}) => ({ pos, driver, team: "X", gap: "", ...extra });
@@ -31,8 +31,8 @@ const madrid = (results) => ({
   broadcasts: [],
   sessions: [ses("m-r", "Carrera", "carrera", "2026-09-13T13:00:00Z", { durationMin: 120, results })],
 });
-const F1 = { name: "Fórmula 1", short: "F1" };
-const TC = { name: "Turismo Carretera", short: "TC" };
+const F1 = { id: "f1", name: "Fórmula 1", short: "F1", scope: "internacional" };
+const TC = { id: "tc", name: "Turismo Carretera", short: "TC", scope: "nacional" };
 const opts = { argentineSlugs: ["franco-colapinto"] };
 const keys = [driverKey("Franco Colapinto")];
 const ganaAntonelli = [row(1, "Kimi Antonelli")];
@@ -147,56 +147,81 @@ test("descripción del piloto: su posición y lo que sigue", () => {
 
 // ---- Página de horarios ----
 
-test("horarios: responde la búsqueda con la sigla, la fecha y la hora argentina, y 'hoy' sólo si hay sesión hoy", () => {
-  assert.equal(tituloHorario(F1, cat(MIERCOLES), MIERCOLES), "Horario F1: GP de Azerbaiyán, en hora argentina");
-  assert.equal(tituloHorario(F1, cat(SABADO), SABADO), "Horario F1 hoy: GP de Azerbaiyán, en hora argentina");
-  assert.equal(tituloHorario(F1, cat(MARTES, [madrid(ganaAntonelli), baku()]), MARTES), "Horarios F1 en Argentina: GP de Azerbaiyán");
-  // Después de la carrera, el título mira la próxima fecha, no la que terminó.
-  const lunes = tituloHorario(F1, cat(LUNES, conCarrera), LUNES);
-  assert.doesNotMatch(lunes, /hoy|Azerbaiyán/);
-  assert.equal(lunes, "Horarios F1 en Argentina: cada sesión y dónde verla");
+const nacional = (id, name, city, sessions, round = 13) => ({ id, seriesId: id, name, round, circuit: { city }, broadcasts: [], sessions });
+const ahora = "2026-10-20T15:00:00Z";
+const horario = (series, events, now = ahora) => {
+  const m = momentoDeCategoria(events, now, opts);
+  return { titulo: tituloHorario(series, m), descripcion: descripcionHorario(series, m, { fallback: "FALLBACK" }) };
+};
+const rosario = nacional("tc", "Fecha 13 · Rosario", "Rosario", [ses("c", "Clasificación", "clasificacion", "2026-10-24T15:00:00Z"), ses("f", "Final", "final", "2026-10-25T18:00:00Z")]);
+const TCPK = { id: "tc-pick-up", name: "TC Pick Up", short: "TC Pick Up", scope: "nacional" };
+const TC2000 = { id: "tc2000", name: "TC2000", short: "TC2000", scope: "nacional" };
+const CBA = { id: "cordoba-pista", name: "Córdoba Pista", short: "Córdoba Pista", scope: "zonal" };
+
+test("días en formato argentino", () => {
+  assert.equal(diasDe({ start: "2026-10-25T18:00:00Z", end: "2026-10-25T19:00:00Z" }), "25/10");
+  assert.equal(diasDe({ start: "2026-10-24T15:00:00Z", end: "2026-10-25T19:00:00Z" }), "24 y 25/10");
+  assert.equal(diasDe({ start: "2026-10-23T14:00:00Z", end: "2026-10-25T19:00:00Z" }), "23 al 25/10");
+  assert.equal(diasDe({ start: "2026-10-30T14:00:00Z", end: "2026-11-02T14:00:00Z" }), "30/10 al 2/11");
+  // una sesión que termina pasada la medianoche no suma un día
+  assert.equal(diasDe({ start: "2026-10-24T15:00:00Z", end: "2026-10-25T03:20:00Z" }), "24/10");
 });
 
-test("horarios: nombre largo (GT World Challenge) entra en el largo y no cambia de categoría", () => {
-  const GT = { name: "GT World Challenge Europe", short: "GTWC" };
-  const m = cat(MIERCOLES);
-  const t = tituloHorario(GT, m, MIERCOLES);
-  assert.ok(t.length <= TITULO_MAX, t);
-  assert.match(t, /^Horarios? GT World Challenge Europe/);
+test("horarios, nacional con lugar: sin 'en Argentina', con el lugar, los días y el nombre largo si entra", () => {
+  const { titulo, descripcion } = horario(TC, [rosario]);
+  assert.equal(titulo, "Horarios Turismo Carretera (TC) en Rosario: 24 y 25/10");
+  assert.ok(titulo.length <= TITULO_MAX, titulo);
+  assert.doesNotMatch(titulo + descripcion, /en Argentina/);
+  assert.match(descripcion, /^Horarios de Turismo Carretera\. Próxima fecha: Rosario, 24 y 25\/10\. Final el domingo 25 a las 15:00/);
+  assert.doesNotMatch(descripcion, /hora argentina/);
 });
 
-test("horarios: ningún título pasa el largo en los cuatro momentos", () => {
+test('horarios, nacional con lugar "A CONFIRMAR": no se nombra, queda "próxima fecha" y los días', () => {
+  const pk = nacional("tc-pick-up", "Fecha 9 · A CONFIRMAR", "A CONFIRMAR", [ses("s", "Clasificación", "clasificacion", "2026-11-07T15:00:00Z", { timeKnown: false }), ses("f", "Final", "final", "2026-11-08T15:00:00Z", { timeKnown: false })], 9);
+  const { titulo, descripcion } = horario(TCPK, [pk]);
+  assert.equal(titulo, "Horarios TC Pick Up: próxima fecha, 7 y 8/11");
+  assert.doesNotMatch(titulo + descripcion, /CONFIRMAR/);
+  assert.match(descripcion, /Próxima fecha: 7 y 8\/11\. Final el domingo 8, horario a confirmar\./);
+  // lugar vacío: igual
+  pk.circuit.city = "";
+  pk.name = "Fecha 9";
+  assert.equal(horario(TCPK, [pk]).titulo, "Horarios TC Pick Up: próxima fecha, 7 y 8/11");
+});
+
+test("horarios, internacional: 'en Argentina', el GP y los días", () => {
+  const { titulo, descripcion } = horario(F1, [baku()], MIERCOLES);
+  assert.equal(titulo, "Horarios F1 en Argentina: GP de Azerbaiyán, 24 al 26/9");
+  assert.ok(titulo.length <= TITULO_MAX, titulo);
+  assert.match(descripcion, /^Horarios de Fórmula 1 en Argentina\./);
+  assert.match(descripcion, /Carrera el sábado 26 a las 08:00 \(hora argentina\)/);
+});
+
+test("horarios, sin próxima fecha: no inventa ninguna", () => {
+  const nac = horario(TC2000, [], ahora);
+  assert.equal(nac.titulo, "Horarios TC2000: calendario y dónde verlo");
+  assert.equal(nac.descripcion, "FALLBACK");
+  assert.equal(horario(F1, [madrid(ganaAntonelli)], LUNES).titulo, "Horarios F1 en Argentina: cada sesión y dónde verla");
+});
+
+test('horarios: nunca "hoy" ni "este finde" (la página puede servirse vieja)', () => {
+  const { titulo, descripcion } = horario(F1, [madrid(ganaAntonelli), baku(conP2)], SABADO);
+  assert.doesNotMatch(titulo + descripcion, /\bhoy\b|este finde|en vivo/i);
+  assert.equal(titulo, "Horarios F1 en Argentina: GP de Azerbaiyán, 24 al 26/9");
+});
+
+test("horarios: no repite el día cuando el nombre de la sesión ya lo dice", () => {
+  const cba = nacional("cordoba-pista", "Fecha 8 · Alta Gracia", "Alta Gracia", [ses("s", "Series y finales (domingo)", "final", "2026-10-25T15:00:00Z", { timeKnown: false })], 8);
+  const { titulo, descripcion } = horario(CBA, [cba]);
+  assert.equal(titulo, "Horarios Córdoba Pista en Alta Gracia: 25/10");
+  assert.match(descripcion, /Series y finales \(domingo\) el 25, horario a confirmar\./);
+  assert.doesNotMatch(descripcion, /domingo\)[^.]*domingo/);
+});
+
+test("horarios: ningún título pasa el largo", () => {
   for (const [now, ev] of [[MARTES, [madrid(ganaAntonelli), baku()]], [MIERCOLES], [SABADO], [LUNES, conCarrera]]) {
-    for (const s of [F1, TC, { name: "FIA WEC", short: "WEC" }, { name: "GT World Challenge Europe", short: "GTWC" }]) {
-      const t = tituloHorario(s, cat(now, ev), now);
+    for (const s of [F1, { id: "wec", name: "FIA WEC", short: "WEC", scope: "internacional" }, { id: "gt3", name: "GT World Challenge Europe", short: "GTWC", scope: "internacional" }, { id: "imsa", name: "IMSA WeatherTech SportsCar Championship", short: "IMSA", scope: "internacional" }]) {
+      const t = tituloHorario(s, momentoDeCategoria(ev ?? [madrid(ganaAntonelli), baku(conP2)], now, opts));
       assert.ok(t.length <= TITULO_MAX, t);
     }
   }
-});
-
-test("horarios: la descripción da la hora de la carrera en hora argentina, sin inventar", () => {
-  const d = descripcionHorario(F1, cat(MIERCOLES), { broadcasts: [{ name: "Fox Sports" }, { name: "Disney+" }] });
-  assert.match(d, /^Horarios de Fórmula 1 en Argentina\./);
-  assert.match(d, /Carrera el sábado 26 a las 08:00 \(hora argentina\)/);
-  assert.match(d, /Dónde verlo: Fox Sports, Disney\+/);
-  assert.ok(d.length <= DESCRIPCION_MAX, d);
-});
-
-test("horarios: sin horario confirmado dice 'a confirmar' y no pone hora", () => {
-  const sinHora = baku();
-  for (const s of sinHora.sessions) s.timeKnown = false;
-  const d = descripcionHorario(F1, cat(MIERCOLES, [madrid(ganaAntonelli), sinHora]));
-  assert.match(d, /horario a confirmar/);
-  assert.doesNotMatch(d, /\d\d:\d\d|hora argentina\)/);
-});
-
-test("horarios: sin nada por venir queda el texto de siempre", () => {
-  const m = cat(LUNES, [madrid(ganaAntonelli)]);
-  assert.equal(descripcionHorario(F1, m, { fallback: "FALLBACK" }), "FALLBACK");
-});
-
-test("horarios: fecha nacional sin GP nombra la ciudad, sin 'en' colgado", () => {
-  const tc = { id: "tc-1", seriesId: "tc", name: "Fecha 11 · Rosario", circuit: { city: "Rosario" }, broadcasts: [], sessions: [ses("f", "Final", "final", "2026-10-25T18:00:00Z")] };
-  const now = "2026-10-20T15:00:00Z";
-  assert.equal(tituloHorario(TC, momentoDeCategoria([tc], now, opts), now), "Horarios TC en Argentina: próxima fecha, Rosario");
 });

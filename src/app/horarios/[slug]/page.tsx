@@ -50,7 +50,7 @@ export async function generateMetadata(props: PageProps<"/horarios/[slug]">): Pr
   const data = await load(slug);
   if (!data) return { title: "Horarios" };
   const { series, driver, next, nextSession } = data;
-  const fallback = `Horarios de ${series.name} en hora argentina y dónde verlo.`;
+  const fallback = series.scope === "internacional" ? `Horarios de ${series.name} en hora argentina y dónde verlo.` : `Horarios de ${series.name}: calendario, sesiones y dónde verlo.`;
   let title: string;
   let description: string;
   if (driver) {
@@ -62,7 +62,7 @@ export async function generateMetadata(props: PageProps<"/horarios/[slug]">): Pr
     // Título y descripción de la categoría salen del momento (src/lib/seo-titulos.mjs), igual que /categorias.
     const momento = data.season.getMomentoCategoria(series.id, data.now);
     const fecha = momento.fecha ? data.season.getEvent(momento.fecha.id) : undefined;
-    title = tituloHorario(series, momento, data.now);
+    title = tituloHorario(series, momento);
     description = descripcionHorario(series, momento, { broadcasts: fecha?.broadcasts, fallback });
   }
   return { title, description, openGraph: { title, description, ...OG_DEFAULTS }, alternates: { canonical: `/horarios/${slug}` } };
