@@ -43,8 +43,8 @@ Cruce de tres fuentes. Las fechas 1 a 6 coinciden entre Speedhive (fecha de inic
 | 5 | 21-23/8 (con TCR South America) | Oscar Cabalén | corrida | Speedhive 3669552; FRAD |
 | 6 | 26-27/9 | Parque Ciudad, Río Cuarto | corrida | Speedhive 3727601; Puntal 27/9 |
 | 7 | 24-25/10 | Oscar Cabalén | **por correr** | FRAD 28/8/2026 |
-| 8 | 21-22/11 | Oscar Cabalén | **por correr** | FRAD 28/8/2026 |
-| 9 | 19-20/12 | Parque Ciudad, Río Cuarto | **por correr** | FRAD 28/8/2026 |
+| 8 | 24-25/10 (jornada doble con la 7) | Oscar Cabalén | **por correr** | APICER 9/10/2026 |
+| 9 | 12-13/12 | Parque Ciudad, Río Cuarto (nueva extensión de 600 m) | **por correr** | APICER 9/10/2026 |
 
 Importante: **el calendario original cambió**. La nota inicial de Solo Motores (abril) daba 4-5/4, 9-10/5, 6-7/6, 4-5/7, 22-23/8, 19-20/9, 10-11/10, 30/10-1/11 y 28-29/11, y la web oficial conserva las fechas de domingo de esa versión (5/4, 10/5, 7/6, 5/7, 23/8, 20/9, 11/10, 1/11, 29/11) con sede "A confirmar". Las fechas 6 a 9 se movieron (la 6 del 19-20/9 al 26-27/9; 7 a 9 reubicadas el 28/8 por los Turismo Nacional y Turismo Carretera en Río Cuarto). **Si se toma el calendario de la web oficial, tres de las cuatro fechas futuras salen mal.** La fecha 5 tiene dos horarios distintos en las fuentes (22-23/8 en la nota inicial y 21-23/8 en el programa); el programa del Cabalén incluye la actividad del jueves y viernes.
 
@@ -136,7 +136,7 @@ Lo que ya hay (leído en `src/lib/sources/season.mjs`, `speedhive-tn.mjs`, `apat
 **Etapa 2, una a dos semanas:** horarios previos y enriquecimiento.
 1. Detector de notas nuevas (API de WordPress `posts`) que avisa en `/sistema/tareas` cuando aparece el "Programa General" de la próxima fecha (24-25/10) para cargar los horarios a mano con `timeSources` de la nota.
 2. Marca y localidad: cruzar con la tabla del campeonato por número y categoría (sin PDF).
-3. Medir la latencia real de Speedhive contra las notas en las fechas 7 y 8 (24-25/10 y 21-22/11).
+3. Medir la latencia real de Speedhive contra las notas en las fechas 7 y 8 (jornada doble del 24-25/10).
 
 **Etapa 3, sólo si el dueño lo pide y hay tiempo:** PDF por coordenadas para penalizaciones y marca; campeonato calculado por reglamento (`https://cordobapista.com/reglamentos/`, que no pude leer: devolvió página vacía); fusionar FR Plus con su sitio. Nada de esto se puede prometer en días.
 
