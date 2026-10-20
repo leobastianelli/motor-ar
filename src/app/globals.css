@@ -211,6 +211,12 @@ button{color:inherit;font-family:inherit}
 .placa p{margin-top:14px}
 .placa-carrusel{display:flex;flex-wrap:wrap;gap:8px 24px}
 .placa-carrusel p{margin:0 0 16px;width:100%;max-width:540px}
+.weekend-head.placa-head h1{white-space:normal}
+.placa h2{margin:0 0 4px;font-size:28px}
+.placa-acciones{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:14px 0 18px}
+.placa-acciones button{border:0;background:var(--ink);color:#fff;padding:12px 20px;font-weight:800;cursor:pointer}
+.placa-acciones button.sec{background:transparent;color:var(--ink);border:2px solid var(--ink);padding:10px 18px}
+.placa-acciones span{font-size:14px;color:var(--muted)}
 /* Páginas legales y de fuentes */
 .legal{max-width:760px}
 .legal h2{font-size:22px;margin:32px 0 8px}

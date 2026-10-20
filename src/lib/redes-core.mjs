@@ -5,6 +5,7 @@
 import { esMulticlase, fraseEnClase } from "./clase.mjs";
 import { dateStatus, dayKey } from "./monitor/checks.mjs";
 import { nombreVisibleSesion } from "./momento.mjs";
+import { placaFinde } from "./placa-finde.mjs";
 import { PROVISIONAL, isProvisional } from "./provisorio.mjs";
 import { resumenFinde } from "./resumen-core.mjs";
 import { dayOnlyEnd } from "./session-status.mjs";
@@ -308,7 +309,10 @@ function agendaDraft({ events, now, catalog, enviados }) {
   let n = items.length;
   while (n > 0 && !fits(compose(n))) n--;
   if (n === 0) return null;
-  return { key, kind: "agenda", at: Date.parse(now), text: compose(n), link: url, image: `${BASE_URL}/placa/imagen` };
+  // La placa «Horarios del finde» (feed): una sola va como foto con el texto; si el finde no entra en una, van todas juntas como álbum.
+  const placas = placaFinde(events, now, { seriesById: byId, drivers: catalog.drivers }, "feed").placas.length;
+  const urls = Array.from({ length: placas }, (_, i) => `${BASE_URL}/placa/finde/feed/${i + 1}`);
+  return { key, kind: "agenda", at: Date.parse(now), text: compose(n), link: url, ...(urls.length > 1 ? { images: urls } : { image: urls[0] }) };
 }
 
 // ——— Así quedó el finde ———
