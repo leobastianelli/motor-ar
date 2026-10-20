@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { buildDriverIndex } from "./driver-index.mjs";
+import fs from "node:fs";
+import { buildDriverIndex, driverKey } from "./driver-index.mjs";
 
 const entry = (name, key, keys, slug, extra = {}) => ({ key, keys, slug, name, aliases: [], series: ["tn"], numbers: { tn: "79" }, teams: { tn: "Peugeot 208" }, firstSeen: "2026-02-07", lastSeen: "2026-08-30", ...extra });
 const season = (...drivers) => ({
@@ -69,4 +70,40 @@ test("las direcciones viejas se conservan en las corridas siguientes y nadie se 
   assert.deepEqual(bySlug(second).get("tomas-vitar").formerSlugs, ["toma-s-vitar"]);
   assert.equal(bySlug(second).get("ana-perez").formerSlugs, undefined);
   assert.ok(!JSON.stringify(second).includes("ã"));
+});
+
+const cordoba = (...rows) => ({ events: [{ seriesId: "cordoba-pista", sessions: [{ start: "2026-09-27T15:50:00-03:00", results: rows.map(([driver, number], i) => ({ pos: i + 1, driver, number, team: "" })) }] }], meta: {} });
+
+test("homónimos: Ricardo Vanini (h) y (p), los dos con el 17, son dos pilotos con su propia dirección", () => {
+  const index = buildDriverIndex(cordoba(["Ricardo Vanini (h)", "17"], ["Ricardo Vanini (p)", "17"], ["Ana Pérez", "5"]), undefined);
+  const m = bySlug(index);
+  assert.equal(m.get("ricardo-vanini-h")?.name, "Ricardo Vanini (h)");
+  assert.equal(m.get("ricardo-vanini-p")?.name, "Ricardo Vanini (p)");
+  assert.equal(index.drivers.length, 3);
+  assert.notDeepEqual(m.get("ricardo-vanini-h").keys, m.get("ricardo-vanini-p").keys);
+  assert.equal(driverKey("Ricardo Vanini (h)"), "ricardo vanini (h)");
+  assert.equal(driverKey("VANINI Ricardo (P) 1:23"), driverKey("Vanini Ricardo (p)"));
+  // Una segunda corrida no los vuelve a juntar.
+  assert.equal(buildDriverIndex(cordoba(["Ricardo Vanini (h)", "17"], ["Ricardo Vanini (p)", "17"]), index).drivers.length, 3);
+});
+
+test("homónimos: la dirección vieja 'ricardo-vanini' (que mezclaba a los dos) redirige con 301 al hijo vía formerSlugs", () => {
+  const previous = { drivers: [entry("Ricardo Vanini (h)", "ricardo vanini (h)", ["ricardo vanini (h)"], "ricardo-vanini", { series: ["cordoba-pista"], numbers: { "cordoba-pista": "17" } })] };
+  const m = bySlug(buildDriverIndex(cordoba(["Ricardo Vanini (h)", "17"], ["Ricardo Vanini (p)", "17"]), previous));
+  assert.deepEqual(m.get("ricardo-vanini-h").formerSlugs, ["ricardo-vanini"]);
+  assert.equal(m.get("ricardo-vanini-p").formerSlugs, undefined);
+  assert.equal(m.has("ricardo-vanini"), false);
+});
+
+test("el (h) de otros pilotos sigue siendo un agregado: 'Gustavo Tadei (h)' y 'Gustavo Tadei' son el mismo", () => {
+  assert.equal(driverKey("Gustavo Tadei (h)"), driverKey("Gustavo Tadei"));
+  assert.equal(buildDriverIndex(cordoba(["Gustavo Tadei (h)", "8"], ["Gustavo Tadei", "8"]), undefined).drivers.length, 1);
+});
+
+test("el índice publicado tiene a los dos Vanini y la dirección vieja redirige al hijo", () => {
+  const { drivers } = JSON.parse(fs.readFileSync(new URL("../../data/drivers-2026.json", import.meta.url), "utf8"));
+  const m = bySlug({ drivers });
+  assert.deepEqual(m.get("ricardo-vanini-h").formerSlugs, ["ricardo-vanini"]);
+  assert.equal(m.get("ricardo-vanini-p").name, "Ricardo Vanini (p)");
+  assert.equal(m.has("ricardo-vanini"), false);
 });

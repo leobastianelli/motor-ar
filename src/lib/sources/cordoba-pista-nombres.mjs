@@ -107,3 +107,18 @@ export function resolverNombres(items) {
   }
   return out;
 }
+
+/**
+ * Homónimos: dos personas con el mismo nombre en clases distintas, que la fuente distingue con (h) / (p) en la tabla del campeonato.
+ * claseId|nombre ya resuelto → nombre que se muestra. La marca hace falta porque el índice de pilotos junta por nombre.
+ * Ricardo Vanini, de Aimogasta, los dos con el 17: «Vanini Ricardo (h)» en TC 4000 (https://cordobapista.com/campeonato-tc-4000-2026/) y
+ * «Vanini Ricardo (p)» en TC Pista 4000 (https://cordobapista.com/campeonato-tc-pista-4000-2026/).
+ * Si se agrega uno, también va su nombre en HOMONIMOS de driver-index.mjs.
+ */
+export const HOMONIMOS_POR_CLASE = {
+  "tc4000|Ricardo Vanini": "Ricardo Vanini (h)",
+  "tcp4000|Ricardo Vanini": "Ricardo Vanini (p)",
+};
+
+/** El nombre a mostrar de `nombre` (ya resuelto) en la clase `classId`; el mismo si no es un homónimo conocido. */
+export const desambiguar = (classId, nombre) => HOMONIMOS_POR_CLASE[`${classId}|${nombre}`] ?? nombre;

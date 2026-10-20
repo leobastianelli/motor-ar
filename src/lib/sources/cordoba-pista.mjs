@@ -12,7 +12,7 @@
 import { repairMojibake } from "./common.mjs";
 import { CLASES, claseById, claseDeTexto, SERIES_ID } from "./cordoba-pista-clases.mjs";
 import { campeonatosDeCordobaPista } from "./cordoba-pista-campeonato.mjs";
-import { resolverNombres } from "./cordoba-pista-nombres.mjs";
+import { desambiguar, resolverNombres } from "./cordoba-pista-nombres.mjs";
 import { belongsToEvent } from "./plausible.mjs";
 
 const API = "https://eventresults-api.speedhive.com/api/v0.2.3/eventresults";
@@ -219,7 +219,7 @@ export async function cordobaPistaSeason(io, previous = { events: [], standings:
     for (const s of e.sessions) for (const row of s.results ?? []) if (s.classId) items[s.classId]?.push({ raw: row.driver, number: row.number, event: String(e.round), session: s.id, previo: true });
   }
   const nombres = Object.fromEntries(Object.entries(items).map(([id, it]) => [id, resolverNombres(it)]));
-  const nombreDe = (classId) => (raw) => nombres[classId].get(repairMojibake(raw)) ?? repairMojibake(raw);
+  const nombreDe = (classId) => (raw) => desambiguar(classId, nombres[classId].get(repairMojibake(raw)) ?? repairMojibake(raw));
 
   // 4. Los eventos.
   const eventos = [];
