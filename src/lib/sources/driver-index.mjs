@@ -39,8 +39,10 @@ const baseKey = (name) => fold(name).replace(/\([^)]*\)/g, " ").replace(/[^a-z\s
  * en otras partes "(h)" es un agregado sin importancia ("Gustavo Tadei (h)" es el mismo piloto con o sin él). Va el `driverKey` sin la marca.
  * Ricardo Vanini, de Aimogasta: el hijo corre el TC 4000 y el padre el TC Pista 4000, los dos con el 17
  * (https://cordobapista.com/campeonato-tc-4000-2026/ y https://cordobapista.com/campeonato-tc-pista-4000-2026/).
+ * El valor es a quién va la dirección del nombre sin marca, que antes mezclaba a los dos ("ricardo-vanini" → el hijo).
  */
-export const HOMONIMOS = new Set(["ricardo vanini"]);
+const HOMONIMOS_DESTINO = new Map([["ricardo vanini", "h"]]);
+export const HOMONIMOS = new Set(HOMONIMOS_DESTINO.keys());
 const MARCA = /\((h|p)\)/i;
 const marcaDe = (key) => /\((h|p)\)$/.exec(key)?.[1];
 
@@ -73,9 +75,17 @@ export function buildDriverIndex(season, previous) {
   // repara acá y entra también con la forma reparada: si esa forma ya es de otro piloto del índice, los dos se unifican.
   const sameAs = [];
   const repaired = [];
+  // Un homónimo guardado sin marca (de antes de separarlos) no vuelve a ser un piloto: sus direcciones pasan al que indica HOMONIMOS_DESTINO.
+  const heredadas = new Map();
   (previous?.drivers ?? []).forEach((d, group) => {
     const name = repairMojibake(d.name);
     const published = [d.slug, ...(d.formerSlugs ?? [])];
+    const destino = HOMONIMOS_DESTINO.get(d.key);
+    if (destino) {
+      const key = `${d.key} (${destino})`;
+      heredadas.set(key, [...(heredadas.get(key) ?? []), ...published]);
+      return;
+    }
     const copy = (key) => ({ ...d, name, key, keys: [key], group, published, repaired: name !== d.name, count: 0, series: [...d.series], numbers: { ...d.numbers }, teams: { ...d.teams } });
     for (const key of d.keys ?? [d.key]) byKey.set(key, copy(key));
     if (name !== d.name) repaired.push([driverKey(name), copy(driverKey(name)), (d.keys ?? [d.key])[0]]);
@@ -94,6 +104,7 @@ export function buildDriverIndex(season, previous) {
     const name = cleanDriverName(repairMojibake(rawName));
     const key = driverKey(name);
     if (key.split(" ").length < 2) return;
+    if (HOMONIMOS_DESTINO.has(key)) return; // homónimo sin marca: no se sabe cuál de los dos es (la fuente ya los separa con desambiguar)
     let d = byKey.get(key);
     if (!d) {
       d = { key, keys: [key], slug: slugify(name), name, count: 0, series: [], numbers: {}, teams: {}, firstSeen: day, lastSeen: day };
@@ -196,7 +207,7 @@ export function buildDriverIndex(season, previous) {
       teams: Object.assign({}, ...byRecent.map((d) => d.teams)),
       firstSeen: list.map((d) => d.firstSeen).sort()[0],
       lastSeen: list.map((d) => d.lastSeen).sort().at(-1),
-      formerSlugs: [...new Set(list.flatMap((d) => d.published ?? []))].filter((s) => s !== slug),
+      formerSlugs: [...new Set([...list.flatMap((d) => d.published ?? []), ...list.flatMap((d) => (d.keys ?? [d.key]).flatMap((k) => heredadas.get(k) ?? []))])].filter((s) => s !== slug),
     });
   }
   // Direcciones viejas: se conservan para redirigir (next.config.ts), salvo las que hoy son de otro piloto.

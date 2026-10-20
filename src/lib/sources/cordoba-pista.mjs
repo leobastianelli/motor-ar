@@ -279,7 +279,7 @@ export async function cordobaPistaSeason(io, previous = { events: [], standings:
   // 5. Fechas que no se volvieron a pedir (o que fallaron): lo de la versión anterior.
   const nuevos = new Map(eventos.map((e) => [e.speedhiveEventId, e]));
   const events = [];
-  for (const [speedhiveId, old] of previas) events.push(carryOver(nuevos.get(speedhiveId) ?? old, old));
+  for (const [speedhiveId, old] of previas) events.push(desambiguarEvento(carryOver(nuevos.get(speedhiveId) ?? old, old)));
   for (const e of eventos) if (!previas.has(e.speedhiveEventId)) events.push(e);
   events.sort((a, b) => a.round - b.round);
 
@@ -308,9 +308,28 @@ export function carryOver(event, old) {
   return { ...event, sessions: sessions.sort((a, b) => Date.parse(a.start) - Date.parse(b.start) || (CLASES_ORDEN[a.classId] ?? 0) - (CLASES_ORDEN[b.classId] ?? 0) || a.id.localeCompare(b.id)) };
 }
 
+/**
+ * Los homónimos (`desambiguar`) también en lo que se arrastra de la versión anterior: las fechas que no se vuelven a pedir conservan sus
+ * resultados tal como se guardaron, y sin esto un homónimo agregado después quedaría con el nombre viejo en esas fechas.
+ */
+export function desambiguarEvento(event) {
+  let cambio = false;
+  const sessions = event.sessions.map((s) => {
+    if (!s.classId || !s.results?.length) return s;
+    const results = s.results.map((r) => {
+      const driver = desambiguar(s.classId, r.driver);
+      if (driver === r.driver) return r;
+      cambio = true;
+      return { ...r, driver };
+    });
+    return cambio ? { ...s, results } : s;
+  });
+  return cambio ? { ...event, sessions } : event;
+}
+
 /** Si Speedhive falla por completo: se conserva lo de la versión anterior. */
 export function keepPreviousCordobaPista(events, previous) {
-  const old = (previous.events ?? []).filter((e) => e.seriesId === SERIES_ID);
+  const old = (previous.events ?? []).filter((e) => e.seriesId === SERIES_ID).map(desambiguarEvento);
   const have = new Set(events.map((e) => e.id));
   return [...events, ...old.filter((e) => !have.has(e.id))];
 }
