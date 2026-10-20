@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T16:05:33.103Z",
+  "generatedAt": "2026-10-20T14:02:37.001Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -195142,11 +195142,19 @@
               "driver": "Jorge Barrio",
               "team": "Chevrolet",
               "gap": "+1 vuelta"
+            },
+            {
+              "pos": 18,
+              "number": "114",
+              "driver": "Gastón Ferrante",
+              "team": "Ford",
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/993/ver",
+            "url": "https://tiempos.actc.org.ar/resultados/998/ver",
             "provisional": {
               "url": "https://tiempos.actc.org.ar/resultados/989/ver",
               "podium": [
