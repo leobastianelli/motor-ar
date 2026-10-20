@@ -196,7 +196,7 @@ test("agenda: sólo los viernes desde las 09:00, una línea por categoría con d
   const [a] = run([f1, tc, lejano], viernes9);
   assert.equal(a.key, "agenda:2026-10-02");
   assert.equal(a.text, "🗓️ El finde en el automovilismo argentino (hora argentina):\nDom 04:00 · F1 (Sepang)\nDom hora a confirmar · TC (San Nicolás)\nhttps://www.somosfierros.ar/");
-  assert.equal(a.image, "https://www.somosfierros.ar/placa/imagen");
+  assert.equal(a.image, "https://www.somosfierros.ar/placa/finde/feed/1");
   // Antes de las 09:00, otro día o ya enviada: nada.
   assert.equal(run([f1, tc], "2026-10-02T11:59:00Z").length, 0);
   assert.equal(run([f1, tc], "2026-10-03T12:00:00Z").filter((x) => x.kind === "agenda").length, 0);

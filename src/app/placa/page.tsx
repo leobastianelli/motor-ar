@@ -6,8 +6,10 @@ import { getNow } from "@/lib/data";
 import { visibleEvents } from "@/lib/monitor/checks.mjs";
 import { resumenReciente } from "@/lib/resumen-core.mjs";
 import { loadRawSeason } from "@/lib/season-data";
+import { CompartirPlaca } from "@/components/compartir-placa";
+import { datosPlaca } from "./finde/placa";
 
-export const metadata: Metadata = { title: "Placa del finde", robots: { index: false, follow: false } };
+export const metadata: Metadata = { title: "Placas del finde", robots: { index: false, follow: false } };
 export const revalidate = 1800;
 
 /** Placas del resumen del último finde con resultados (las que existen según los datos: 2 a 4). */
@@ -21,26 +23,44 @@ async function resumenPlacas() {
   return r && { fecha: r.fecha, urls: r.slides.map((_, i) => `/placa/resumen/${i + 1}?domingo=${r.sunday}`) };
 }
 
-/** Página interna para bajar la placa del finde y compartirla en redes. */
+const FORMATOS = [
+  { id: "feed", titulo: "Para el feed", texto: "1080 × 1350: Instagram, X y el canal de WhatsApp.", w: 1080, h: 1350 },
+  { id: "historia", titulo: "Para historias", texto: "1080 × 1920: historias de Instagram y estados de WhatsApp.", w: 1080, h: 1920 },
+] as const;
+
+/** Página interna para bajar las placas del finde y compartirlas en redes. */
 export default async function PlacaPage() {
-  const resumen = await resumenPlacas();
+  const [resumen, feed, historia] = await Promise.all([resumenPlacas(), datosPlaca("feed"), datosPlaca("historia")]);
+  const finde = [feed, historia];
   return (
     <>
-      <section className="weekend-head">
-        <h1>Placa del finde</h1>
+      <section className="weekend-head placa-head">
+        <h1>Horarios del finde</h1>
         <p className="lede">
-          <span>Se actualiza sola con lo que viene. En el celular, mantené apretada la imagen para guardarla.</span>
+          <span>{`${finde[0].rango}, en hora argentina. Se actualiza sola cuando cambia un horario. Si el finde no entra en una placa, se parte en varias: no se saca ninguna sesión.`}</span>
         </p>
       </section>
-      <section className="section-block placa">
-        {/* eslint-disable-next-line @next/next/no-img-element -- imagen generada; se muestra tal cual para guardarla */}
-        <img src="/placa/imagen" alt="Horarios del finde en hora argentina" width={1080} height={1350} />
-        <p>
-          <a href="/placa/imagen" target="_blank" rel="noreferrer">
-            Abrir la imagen en tamaño completo
-          </a>
-        </p>
-      </section>
+      {FORMATOS.map((f, k) => {
+        const urls = finde[k].placas.map((_, i) => `/placa/finde/${f.id}/${i + 1}`);
+        return (
+          <section key={f.id} className="section-block placa">
+            <h2>{f.titulo}</h2>
+            <p>{`${f.texto} ${urls.length > 1 ? `${urls.length} placas, en orden.` : "Una placa."}`}</p>
+            <CompartirPlaca urls={urls} nombre={`fierros-finde-${f.id}`} formato={f.id} />
+            <div className="placa-carrusel">
+              {urls.map((url, i) => (
+                <p key={url}>
+                  {/* eslint-disable-next-line @next/next/no-img-element -- imagen generada; se muestra tal cual para guardarla */}
+                  <img src={url} alt={`Horarios del finde, ${f.titulo.toLowerCase()}, placa ${i + 1} de ${urls.length}`} width={f.w} height={f.h} loading={i ? "lazy" : undefined} />
+                  <a href={url} target="_blank" rel="noreferrer">
+                    {urls.length > 1 ? `Abrir la placa ${i + 1} en tamaño completo` : "Abrir en tamaño completo"}
+                  </a>
+                </p>
+              ))}
+            </div>
+          </section>
+        );
+      })}
       {resumen && (
         <>
           <section className="weekend-head">
