@@ -19,6 +19,7 @@
 // fecha de menos de 8 autos, con puntaje al 50 %): no se muestran hasta entender la diferencia. Turismo Cordobés Histórico, Clase 3 y Fórmula
 // Renault Plus no están en el reglamento general y su puntaje no se pudo reproducir: "Sin campeonato publicado".
 import { CLASES, SERIES_ID } from "./cordoba-pista-clases.mjs";
+import { desambiguar } from "./cordoba-pista-nombres.mjs";
 
 export const REGLAMENTO = {
   name: "Reglamento General del Campeonato Córdoba Pista 2026 (FRAD)",
@@ -158,7 +159,9 @@ export function campeonatosDeCordobaPista(events, { previous = {}, totalFechas =
         ? { status: "sin-campeonato", reason: `Faltan los resultados de la final de la fecha ${faltan.join(", ")}: sin ellos la tabla estaría incompleta.` }
         : { status: "calculado", asOfRound: calc.asOfRound, validatedThrough: config.validadoHasta, rows: calc.rows };
     }
-    const before = previous?.[clase.id];
+    // Una fila guardada con el nombre viejo de un homónimo (de antes de separarlo con `desambiguar`) no cuenta: es la misma gente con otro nombre.
+    const guardada = previous?.[clase.id];
+    const before = guardada?.status === "calculado" ? { ...guardada, rows: guardada.rows.filter((r) => desambiguar(clase.id, r.driver) === r.driver) } : guardada;
     // Nunca se achica: una tabla calculada antes no se reemplaza por una con menos pilotos o que llega a una fecha anterior.
     if (before?.status === "calculado" && (result.status !== "calculado" || result.asOfRound < before.asOfRound || result.rows.length < before.rows.length)) result = before;
     out[clase.id] = result;

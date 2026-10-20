@@ -249,6 +249,20 @@ test("las fechas 7, 8 y 9 se cargan con fecha confirmada y horarios a confirmar,
   assert.equal(events.at(-1).id, "cordoba-pista-2026-6");
 });
 
+test("homónimos: las fechas guardadas con el nombre viejo que no se vuelven a pedir también quedan (h) y (p)", async () => {
+  // Lo que pasó en producción: la base tenía "Ricardo Vanini" en todas las fechas y la sincronización sólo vuelve a pedir las recientes.
+  const completa = await run();
+  const viejo = (e) => ({ ...e, sessions: e.sessions.map((s) => ({ ...s, results: s.results?.map((r) => ({ ...r, driver: r.driver.replace(/ \((h|p)\)$/, "") })) })) });
+  const guardada = { events: completa.events.map(viejo), standings: {}, meta: {} };
+  const corta = await cordobaPistaSeason(fakeIo(), guardada, { windowDays: 20, now: NOW });
+  const vanini = corta.events.flatMap((e) => e.sessions).flatMap((s) => (s.results ?? []).filter((r) => /Vanini/.test(r.driver)).map((r) => `${s.classId}: ${r.driver}`));
+  assert.ok(vanini.length > 20);
+  assert.deepEqual([...new Set(vanini)].sort(), ["tc4000: Ricardo Vanini (h)", "tcp4000: Ricardo Vanini (p)"]);
+  const puntos = (m) => m.meta["cordoba-pista"].clases.tc4000.rows.find((r) => r.driver === "Ricardo Vanini (h)")?.points;
+  assert.equal(puntos(corta), puntos(completa));
+  assert.equal(keepPreviousCordobaPista([], guardada).flatMap((e) => e.sessions).flatMap((s) => s.results ?? []).filter((r) => r.driver === "Ricardo Vanini").length, 0);
+});
+
 test("homónimos: Ricardo Vanini sale (h) en TC 4000 y (p) en TC Pista 4000 en todas las sesiones, también al volver a sincronizar con lo guardado", async () => {
   const primera = await run();
   const segunda = await run(fakeIo(), { events: primera.events, standings: {}, meta: primera.meta });

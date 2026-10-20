@@ -95,6 +95,17 @@ test("homónimos: la dirección vieja 'ricardo-vanini' (que mezclaba a los dos) 
   assert.equal(m.has("ricardo-vanini"), false);
 });
 
+test("homónimos: el piloto viejo sin marca (que mezclaba a los dos) no vuelve; su dirección pasa al hijo aunque la temporada guardada todavía lo nombre", () => {
+  const previous = { drivers: [
+    entry("Ricardo Vanini", "ricardo vanini", ["ricardo vanini"], "ricardo-vanini", { series: ["cordoba-pista"], numbers: { "cordoba-pista": "17" } }),
+    entry("Ricardo Vanini (h)", "ricardo vanini (h)", ["ricardo vanini (h)"], "ricardo-vanini-h", { series: ["cordoba-pista"], numbers: { "cordoba-pista": "17" } }),
+  ] };
+  const m = bySlug(buildDriverIndex(cordoba(["Ricardo Vanini", "17"], ["Ricardo Vanini (h)", "17"], ["Ricardo Vanini (p)", "17"]), previous));
+  assert.equal(m.has("ricardo-vanini"), false);
+  assert.deepEqual(m.get("ricardo-vanini-h").formerSlugs, ["ricardo-vanini"]);
+  assert.ok(m.has("ricardo-vanini-p"));
+});
+
 test("el (h) de otros pilotos sigue siendo un agregado: 'Gustavo Tadei (h)' y 'Gustavo Tadei' son el mismo", () => {
   assert.equal(driverKey("Gustavo Tadei (h)"), driverKey("Gustavo Tadei"));
   assert.equal(buildDriverIndex(cordoba(["Gustavo Tadei (h)", "8"], ["Gustavo Tadei", "8"]), undefined).drivers.length, 1);
