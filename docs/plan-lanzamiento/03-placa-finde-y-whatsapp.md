@@ -19,6 +19,8 @@ Variante elegida por Leonel el 20/10/2026: **cartel de fichas** (tablero oscuro 
 
 Los horarios del TC (series y entrenamientos) suelen publicarse entre el martes y el miércoles. El jueves a la tarde la placa ya debería tenerlos: mirarla antes de mandar y, si algo dice «a confirmar», esperar o avisarlo en el texto.
 
+El borrador automático por Telegram sigue saliendo el **viernes desde las 09:00** (el de X). Para el canal del jueves hay que entrar a `/placa`; si sirve, se puede sumar un aviso de Telegram el jueves a la tarde con las placas (pendiente de decidir con Leonel).
+
 ## Formato del posteo (el texto lo escribe Leonel)
 
 Canal de WhatsApp, jueves a la tarde:
