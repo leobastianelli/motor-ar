@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T19:45:13.482Z",
+  "generatedAt": "2026-10-20T21:02:49.293Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -11153,12 +11153,33 @@
       "lastSeen": "2026-10-04"
     },
     {
-      "key": "ricardo vanini",
+      "key": "ricardo vanini (h)",
       "keys": [
-        "ricardo vanini"
+        "ricardo vanini (h)"
       ],
-      "slug": "ricardo-vanini",
-      "name": "Ricardo Vanini",
+      "slug": "ricardo-vanini-h",
+      "name": "Ricardo Vanini (h)",
+      "aliases": [],
+      "series": [
+        "cordoba-pista"
+      ],
+      "numbers": {
+        "cordoba-pista": "17"
+      },
+      "teams": {},
+      "firstSeen": "2026-04-03",
+      "lastSeen": "2026-09-27",
+      "formerSlugs": [
+        "ricardo-vanini"
+      ]
+    },
+    {
+      "key": "ricardo vanini (p)",
+      "keys": [
+        "ricardo vanini (p)"
+      ],
+      "slug": "ricardo-vanini-p",
+      "name": "Ricardo Vanini (p)",
       "aliases": [],
       "series": [
         "cordoba-pista"

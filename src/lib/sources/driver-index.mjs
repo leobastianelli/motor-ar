@@ -13,6 +13,13 @@ const fold = (s) => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCa
  * y marcas pegadas ("Ttoyota"). Las iniciales ("Juan B. De Benedictis") se conservan.
  */
 export function cleanDriverName(name) {
+  const limpio = limpiar(name);
+  // Un homónimo conocido conserva su (h)/(p): sin eso el padre y el hijo son la misma persona para el índice.
+  const marca = HOMONIMOS.has(baseKey(limpio)) && MARCA.exec(String(name));
+  return marca ? `${limpio} (${marca[1].toLowerCase()})` : limpio;
+}
+
+function limpiar(name) {
   const words = String(name)
     .replace(/\([^)]*\)/g, " ")
     .split(/\s+/)
@@ -25,7 +32,24 @@ export function cleanDriverName(name) {
   return words.join(" ").trim();
 }
 
-export const driverKey = (name) => fold(cleanDriverName(name)).replace(/[^a-z\s]/g, " ").split(/\s+/).filter(Boolean).sort().join(" ");
+const baseKey = (name) => fold(name).replace(/\([^)]*\)/g, " ").replace(/[^a-z\s]/g, " ").split(/\s+/).filter(Boolean).sort().join(" ");
+
+/**
+ * Personas distintas con el mismo nombre, que las fuentes distinguen con "(h)" (hijo) o "(p)" (padre). Es una lista corta y explícita porque
+ * en otras partes "(h)" es un agregado sin importancia ("Gustavo Tadei (h)" es el mismo piloto con o sin él). Va el `driverKey` sin la marca.
+ * Ricardo Vanini, de Aimogasta: el hijo corre el TC 4000 y el padre el TC Pista 4000, los dos con el 17
+ * (https://cordobapista.com/campeonato-tc-4000-2026/ y https://cordobapista.com/campeonato-tc-pista-4000-2026/).
+ */
+export const HOMONIMOS = new Set(["ricardo vanini"]);
+const MARCA = /\((h|p)\)/i;
+const marcaDe = (key) => /\((h|p)\)$/.exec(key)?.[1];
+
+export const driverKey = (name) => {
+  const limpio = cleanDriverName(name);
+  const base = baseKey(limpio);
+  const marca = HOMONIMOS.has(base) && MARCA.exec(limpio);
+  return marca ? `${base} (${marca[1].toLowerCase()})` : base;
+};
 const letters = (key) => [...key.replace(/\s/g, "")].sort().join("");
 const slugify = (name) => fold(name).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const hasAccent = (s) => /[^\x00-\x7f]/.test(s);
@@ -124,7 +148,7 @@ export function buildDriverIndex(season, previous) {
   const byLetters = new Map();
   for (const d of entries) {
     const l = letters(d.key);
-    if (byLetters.has(l)) union(d.key, byLetters.get(l));
+    if (byLetters.has(l) && marcaDe(d.key) === marcaDe(byLetters.get(l))) union(d.key, byLetters.get(l));
     else byLetters.set(l, d.key);
   }
   const byNumber = new Map();
@@ -133,6 +157,7 @@ export function buildDriverIndex(season, previous) {
     for (let i = 0; i < group.length; i++) {
       for (let j = i + 1; j < group.length; j++) {
         const a = new Set(group[i].key.split(" ").filter((t) => t.length >= 4));
+        if (marcaDe(group[i].key) !== marcaDe(group[j].key)) continue; // padre e hijo con el mismo número no son la misma persona
         if (group[j].key.split(" ").some((t) => t.length >= 4 && a.has(t))) union(group[i].key, group[j].key);
       }
     }

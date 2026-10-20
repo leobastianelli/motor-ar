@@ -84,7 +84,9 @@ test("la final combinada de la fecha 5 ('FINAL TC PISTA 4000 Y TC 4000') se repa
   assert.equal(tc[0].results.length + tcp[0].results.length, 23);
   // Cada clase con sus pilotos (Ricardo Vanini, padre e hijo, corre en las dos con el número 17).
   const repetidos = tcp[0].results.filter((r) => tc[0].results.some((x) => x.driver === r.driver)).map((r) => r.driver);
-  assert.deepEqual(repetidos, ["Ricardo Vanini"]);
+  assert.deepEqual(repetidos, []);
+  assert.deepEqual(tc[0].results.filter((r) => /Vanini/.test(r.driver)).map((r) => r.driver), ["Ricardo Vanini (h)"]);
+  assert.deepEqual(tcp[0].results.filter((r) => /Vanini/.test(r.driver)).map((r) => r.driver), ["Ricardo Vanini (p)"]);
   assert.match(ganador(tc[0]), /Rasetto/);
 });
 
@@ -245,4 +247,19 @@ test("las fechas 7, 8 y 9 se cargan con fecha confirmada y horarios a confirmar,
   const { events } = await run();
   assert.ok(!events.some((e) => tentativas.some((t) => t.id === e.id)), "la fixture no tiene fechas 7 a 9");
   assert.equal(events.at(-1).id, "cordoba-pista-2026-6");
+});
+
+test("homónimos: Ricardo Vanini sale (h) en TC 4000 y (p) en TC Pista 4000 en todas las sesiones, también al volver a sincronizar con lo guardado", async () => {
+  const primera = await run();
+  const segunda = await run(fakeIo(), { events: primera.events, standings: {}, meta: primera.meta });
+  for (const { events } of [primera, segunda]) {
+    const vanini = events.flatMap((e) => e.sessions).flatMap((s) => (s.results ?? []).filter((r) => /Vanini/.test(r.driver)).map((r) => [s.classId, r.driver]));
+    assert.ok(vanini.length > 20);
+    assert.deepEqual([...new Set(vanini.map(([c, d]) => `${c}: ${d}`))].sort(), ["tc4000: Ricardo Vanini (h)", "tcp4000: Ricardo Vanini (p)"]);
+  }
+  // El campeonato calculado de cada clase tiene su Vanini, con los mismos puntos de antes.
+  const filas = (m, c) => m.meta["cordoba-pista"].clases[c].rows.filter((r) => /Vanini/.test(r.driver));
+  assert.deepEqual(filas(primera, "tc4000").map((r) => r.driver), ["Ricardo Vanini (h)"]);
+  assert.deepEqual(filas(segunda, "tc4000").map((r) => [r.driver, r.points]), filas(primera, "tc4000").map((r) => [r.driver, r.points]));
+  if (primera.meta["cordoba-pista"].clases.tcp4000.rows) assert.ok(filas(primera, "tcp4000").every((r) => r.driver === "Ricardo Vanini (p)"));
 });
