@@ -14,6 +14,7 @@ const SERIES_SLUGS: Record<string, string> = {
   tc2000: "tc2000",
   gt3: "gt-world-challenge",
   "tcr-sa": "tcr-south-america",
+  "f2-arg": "formula-2-argentina",
   "rally-argentino": "rally-argentino",
   "nuevo-car-show": "nuevo-car-show",
   "cordoba-pista": "cordoba-pista",

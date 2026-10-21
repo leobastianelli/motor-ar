@@ -45,7 +45,7 @@ const tierOf = (id) => (seriesById[id]?.scope !== "internacional" ? 1 : withArge
 const name = (id) => seriesById[id]?.name ?? id;
 
 // Categorías cuya fuente publica resultados sola: si pasan 36 h y no hay carrera, algo falló.
-const AUTO_RESULTS = new Set(["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "f1", "f2", "gt3", "tcr-sa", "nuevo-car-show", "formula-nacional"]); // el Rally lo avisa el vigilante (rallyPendiente en /api/salud): se carga desde una PC
+const AUTO_RESULTS = new Set(["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "f1", "f2", "gt3", "tcr-sa", "nuevo-car-show", "formula-nacional", "f2-arg"]); // el Rally lo avisa el vigilante (rallyPendiente en /api/salud): se carga desde una PC
 
 async function get(url, { json = false } = {}) {
   const res = await fetch(url, { headers: UA, signal: AbortSignal.timeout(20_000) });

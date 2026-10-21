@@ -154,6 +154,7 @@ const NOMBRES_BUSQUEDA = {
   "rally-argentino": ["Rally Argentino"],
   "nuevo-car-show": ["Nuevo Car Show"],
   "cordoba-pista": ["Córdoba Pista"],
+  "f2-arg": ["F2 Argentina", "Fórmula 2 Argentina"],
   "formula-nacional": ["Fórmula Nacional", "FNA"],
 };
 
