@@ -222,27 +222,45 @@ test("claseDeTexto reconoce los nombres que usó el cronometraje (con errores de
   for (const no of ["KARTING", "CLASE 1", "REGIONAL A", ""]) assert.equal(claseDeTexto(no), null, no);
 });
 
-// ——— Fechas 7 a 9: día y sede confirmados (APICER, 9/10/2026: la 7 y la 8 en jornada doble), horarios a confirmar hasta que aparezcan en Speedhive ———
+// ——— Fechas 7 a 9: día y sede confirmados (APICER, 9/10/2026: la 7 y la 8 en jornada doble); la 7 y la 8 con el cronograma de Puntal, la 9 sin horarios hasta Speedhive ———
 
-test("las fechas 7, 8 y 9 se cargan con fecha confirmada y horarios a confirmar, citando el comunicado de APICER", async () => {
+test("las fechas 7, 8 y 9 se cargan con fecha confirmada; la 7 y la 8 con horarios provisorios por clase, la 9 a confirmar", async () => {
   const { dateStatus } = await import("../monitor/checks.mjs");
   const manual = JSON.parse(fs.readFileSync(new URL("../../data/manual-overrides.json", import.meta.url), "utf8"));
   const tentativas = manual.newEvents.filter((e) => e.seriesId === "cordoba-pista");
   assert.deepEqual(tentativas.map((e) => e.id), ["cordoba-pista-2026-7", "cordoba-pista-2026-8", "cordoba-pista-2026-9"]);
-  const esperado = [["2026-10-24", "2026-10-25", "Alta Gracia"], ["2026-10-24", "2026-10-25", "Alta Gracia"], ["2026-12-12", "2026-12-13", "Río Cuarto"]];
+  // La 7 arranca el viernes 23 con los primeros entrenamientos (cronograma de Puntal, 20/10/2026).
+  const esperado = [["2026-10-23", "2026-10-24", "Alta Gracia"], ["2026-10-25", "2026-10-25", "Alta Gracia"], ["2026-12-12", "2026-12-13", "Río Cuarto"]];
   tentativas.forEach((e, i) => {
     assert.equal(e.round, 7 + i);
     assert.equal(dateStatus(e).status, "confirmed", e.id);
     assert.ok(e.dateConfirmed);
     assert.doesNotMatch(e.name, /confirmar/i);
     assert.deepEqual([e.sessions[0].start.slice(0, 10), e.sessions.at(-1).start.slice(0, 10), e.circuit.city], esperado[i]);
-    for (const s of e.sessions) {
-      assert.equal(s.timeKnown, false, `${s.id}: sin horario`);
-      assert.match(s.timeSources[0].url, /^https:\/\/cordobapista\.com\/se-definio-las-ultimas-fechas-de-la-temporada-2026/);
-      assert.equal(s.classId, undefined);
-    }
     assert.match(e.source, /confirmados por APICER el 9\/10\/2026.*Speedhive/);
   });
+  // Fechas 7 y 8: sesiones por clase con el id que les daría Speedhive (`<evento>-<clase>-<tipo>[n]`), provisorias y citando a Puntal.
+  const clases = ["tc4000", "tcp4000", "fiat", "fiat128", "tch", "clase3", "frplus"];
+  for (const e of tentativas.slice(0, 2)) {
+    assert.equal(new Set(e.sessions.map((s) => s.id)).size, e.sessions.length, `${e.id}: ids repetidos`);
+    assert.deepEqual([...new Set(e.sessions.map((s) => s.classId))].sort(), [...clases].sort(), `${e.id}: las siete clases`);
+    for (const c of clases) assert.ok(e.sessions.some((s) => s.classId === c && s.kind === "final"), `${e.id}: final de ${c}`);
+    for (const s of e.sessions) {
+      assert.match(s.id, new RegExp(`^${e.id}-(${clases.join("|")})-(practica|clasificacion|final)(-super)?[12]?$`), s.id);
+      assert.match(s.timeSources[0].url, /^https:\/\/www\.puntal\.com\.ar\/cordoba-pista\/el-oscar-cabalen-recibe-al-cordoba-pista/);
+      assert.equal(s.timeSources[0].start, s.start);
+      if (s.timeKnown) assert.equal(s.timeStatus, "tentative", s.id);
+    }
+    assert.equal(e.sessions.filter((s) => s.classId === "frplus" && s.kind === "final").length, e.id.endsWith("-7") ? 2 : 1);
+  }
+  // Puntal pone la final del Histórico y la del Fiat 128 del domingo a 5 minutos: una de las dos horas está mal, quedan sin horario.
+  const f8 = tentativas[1].sessions;
+  assert.deepEqual(f8.filter((s) => !s.timeKnown).map((s) => s.id), ["cordoba-pista-2026-8-tch-final", "cordoba-pista-2026-8-fiat128-final"]);
+  for (const s of tentativas[2].sessions) {
+    assert.equal(s.timeKnown, false, `${s.id}: sin horario`);
+    assert.match(s.timeSources[0].url, /^https:\/\/cordobapista\.com\/se-definio-las-ultimas-fechas-de-la-temporada-2026/);
+    assert.equal(s.classId, undefined);
+  }
   // Cuando Speedhive trae la fecha, gana la fuente: mismo id que la carga manual (createSeason en data.ts: "si una fuente trae el mismo id, gana la fuente").
   const { events } = await run();
   assert.ok(!events.some((e) => tentativas.some((t) => t.id === e.id)), "la fixture no tiene fechas 7 a 9");
