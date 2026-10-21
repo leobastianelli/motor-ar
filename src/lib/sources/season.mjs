@@ -20,6 +20,7 @@ import { applySchedules, buildConsensus, solotcNotes } from "./schedule-notes.mj
 import { protectSeason, protectStandings } from "./guard.mjs";
 import { tc2000Season } from "./tc2000.mjs";
 import { tcrSaSeason } from "./tcr-sa.mjs";
+import { formula2ArgSeason } from "./formula2-arg.mjs";
 import { rallyArgentinoSeason } from "./rally-argentino.mjs";
 import { carryRally } from "../rally-refresh-core.mjs";
 
@@ -34,6 +35,8 @@ const SOURCES = [
   // clase lo calcula Fierros con esos resultados (cordoba-pista-campeonato.mjs). Las fechas viejas no se vuelven a pedir (ventana).
   ["Córdoba Pista", ["cordoba-pista"], (io, previous) => cordobaPistaSeason(io, previous, { windowDays: io.timingWindowDays ?? 21, delayMs: io.cordobaDelayMs ?? 250 })],
   ["TCR South America", ["tcr-sa"], tcrSaSeason],
+  // Fórmula 2 Argentina (ACTC): calendario, resultados de cada sesión y campeonato desde formula2.com.ar. Las fechas viejas no se vuelven a pedir (ventana).
+  ["Fórmula 2 Argentina", ["f2-arg"], (io, previous) => formula2ArgSeason(io, previous, { windowDays: io.timingWindowDays ?? 21, delayMs: io.f2ArgDelayMs ?? 400 })],
   ["Rally Argentino", ["rally-argentino"], rallyArgentinoSeason],
   ["Nuevo Car Show", ["nuevo-car-show"], (io, previous) => nuevoCarShowSeason(io, previous, { windowDays: io.timingWindowDays ?? 21, delayMs: io.cordobaDelayMs ?? 250 })],
 ];
@@ -145,6 +148,7 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
     for (const error of meta.rallyArgentino?.errors ?? []) failures.push(`Rally Argentino: ${error}`);
   }
   for (const error of meta.nuevoCarShow?.errors ?? []) failures.push(`Nuevo Car Show: ${error}`);
+  for (const error of meta["f2-arg"]?.errors ?? []) failures.push(`Fórmula 2 Argentina: ${error}`);
 
   // Campeonato oficial de la ACTC para las categorías que no tienen otra tabla (el del TC sale de Wikipedia y la carga manual).
   const missingTables = ACTC_CATEGORIES.filter((c) => c.path !== "tc" && !standings[c.seriesId]?.length);

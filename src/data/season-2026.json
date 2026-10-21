@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T21:25:53.589Z",
+  "generatedAt": "2026-10-21T20:36:04.740Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -21105,6 +21105,332 @@
       "source": "TCR South America (API oficial) · Wikipedia (circuito)"
     },
     {
+      "id": "f2-arg-2026-1",
+      "seriesId": "f2-arg",
+      "round": 1,
+      "name": "Fecha 1 · Viedma",
+      "circuit": {
+        "name": "Ciudad de Viedma",
+        "city": "Viedma",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Río Negro"
+      },
+      "sessions": [
+        {
+          "id": "f2-arg-2026-1-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-03-08T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "1:33.189"
+            },
+            {
+              "pos": 2,
+              "number": "44",
+              "driver": "Sebastián Caram",
+              "team": "LR Team",
+              "gap": "+0.071"
+            },
+            {
+              "pos": 3,
+              "number": "58",
+              "driver": "Santino Dore",
+              "team": "Cepeda Racing",
+              "gap": "+0.104"
+            },
+            {
+              "pos": 4,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+0.163"
+            },
+            {
+              "pos": 5,
+              "number": "111",
+              "driver": "Tiago Chiriotti",
+              "team": "Cepeda Racing",
+              "gap": "+0.544"
+            },
+            {
+              "pos": 6,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+0.735"
+            },
+            {
+              "pos": 7,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+1.049"
+            },
+            {
+              "pos": 8,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+1.324"
+            },
+            {
+              "pos": 9,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+1.441"
+            },
+            {
+              "pos": 10,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+1.955"
+            },
+            {
+              "pos": 11,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+2.421"
+            },
+            {
+              "pos": 12,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+2.498"
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-1-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-1-serie",
+          "kind": "serie",
+          "name": "Carrera clasificatoria",
+          "start": "2026-03-08T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "44",
+              "driver": "Sebastián Caram",
+              "team": "LR Team",
+              "gap": "11:21.373",
+              "laps": 7
+            },
+            {
+              "pos": 2,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+1.820",
+              "laps": 7
+            },
+            {
+              "pos": 3,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+3.450",
+              "laps": 7
+            },
+            {
+              "pos": 4,
+              "number": "58",
+              "driver": "Santino Dore",
+              "team": "Cepeda Racing",
+              "gap": "+5.116",
+              "laps": 7
+            },
+            {
+              "pos": 5,
+              "number": "111",
+              "driver": "Tiago Chiriotti",
+              "team": "Cepeda Racing",
+              "gap": "+12.388",
+              "laps": 7
+            },
+            {
+              "pos": 6,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+15.368",
+              "laps": 7
+            },
+            {
+              "pos": 7,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+18.607",
+              "laps": 7
+            },
+            {
+              "pos": 8,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+21.354",
+              "laps": 7
+            },
+            {
+              "pos": 9,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+21.681",
+              "laps": 7
+            },
+            {
+              "pos": 10,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+5 vueltas",
+              "laps": 2
+            },
+            {
+              "pos": 11,
+              "status": "Sin vueltas",
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-1-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-1-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-03-08T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "18:58.599",
+              "laps": 12
+            },
+            {
+              "pos": 2,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+4.442",
+              "laps": 12
+            },
+            {
+              "pos": 3,
+              "number": "44",
+              "driver": "Sebastián Caram",
+              "team": "LR Team",
+              "gap": "+8.007",
+              "laps": 12
+            },
+            {
+              "pos": 4,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+12.336",
+              "laps": 12
+            },
+            {
+              "pos": 5,
+              "number": "111",
+              "driver": "Tiago Chiriotti",
+              "team": "Cepeda Racing",
+              "gap": "+13.423",
+              "laps": 12
+            },
+            {
+              "pos": 6,
+              "number": "58",
+              "driver": "Santino Dore",
+              "team": "Cepeda Racing",
+              "gap": "+13.583",
+              "laps": 12
+            },
+            {
+              "pos": 7,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+14.500",
+              "laps": 12
+            },
+            {
+              "pos": 8,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+15.867",
+              "laps": 12
+            },
+            {
+              "pos": 9,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+24.500",
+              "laps": 12
+            },
+            {
+              "pos": 10,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+39.569",
+              "laps": 12
+            },
+            {
+              "pos": 11,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+2 vueltas",
+              "laps": 10
+            },
+            {
+              "pos": 12,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+8 vueltas",
+              "laps": 4
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-1-2026/"
+          }
+        }
+      ],
+      "source": "Fórmula 2 Argentina (formula2.com.ar)"
+    },
+    {
       "id": "f1-2026-2",
       "seriesId": "f1",
       "round": 2,
@@ -31024,6 +31350,365 @@
         }
       ],
       "source": "TCR South America (API oficial) · Wikipedia (circuito)"
+    },
+    {
+      "id": "f2-arg-2026-2",
+      "seriesId": "f2-arg",
+      "round": 2,
+      "name": "Fecha 2 · Centenario",
+      "circuit": {
+        "name": "Parque Provincia del Neuquén",
+        "city": "Centenario",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Neuquén"
+      },
+      "sessions": [
+        {
+          "id": "f2-arg-2026-2-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-03-29T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "1:31.241"
+            },
+            {
+              "pos": 2,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+0.288"
+            },
+            {
+              "pos": 3,
+              "number": "44",
+              "driver": "Sebastián Caram",
+              "team": "LR Team",
+              "gap": "+0.586"
+            },
+            {
+              "pos": 4,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+0.611"
+            },
+            {
+              "pos": 5,
+              "number": "111",
+              "driver": "Tiago Chiriotti",
+              "team": "Cepeda Racing",
+              "gap": "+0.885"
+            },
+            {
+              "pos": 6,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+1.020"
+            },
+            {
+              "pos": 7,
+              "number": "58",
+              "driver": "Santino Dore",
+              "team": "Cepeda Racing",
+              "gap": "+1.448"
+            },
+            {
+              "pos": 8,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+1.567"
+            },
+            {
+              "pos": 9,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+1.812"
+            },
+            {
+              "pos": 10,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+2.316"
+            },
+            {
+              "pos": 11,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+5.070"
+            },
+            {
+              "pos": 12,
+              "status": "Sin tiempo",
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": ""
+            },
+            {
+              "pos": 13,
+              "status": "Sin tiempo",
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-2-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-2-serie",
+          "kind": "serie",
+          "name": "Carrera clasificatoria",
+          "start": "2026-03-29T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "10:45.488",
+              "laps": 7
+            },
+            {
+              "pos": 2,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+1.802",
+              "laps": 7
+            },
+            {
+              "pos": 3,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+8.382",
+              "laps": 7
+            },
+            {
+              "pos": 4,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+9.045",
+              "laps": 7
+            },
+            {
+              "pos": 5,
+              "number": "111",
+              "driver": "Tiago Chiriotti",
+              "team": "Cepeda Racing",
+              "gap": "+9.160",
+              "laps": 7
+            },
+            {
+              "pos": 6,
+              "number": "44",
+              "driver": "Sebastián Caram",
+              "team": "LR Team",
+              "gap": "+11.032",
+              "laps": 7
+            },
+            {
+              "pos": 7,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+12.027",
+              "laps": 7
+            },
+            {
+              "pos": 8,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+12.400",
+              "laps": 7
+            },
+            {
+              "pos": 9,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+13.422",
+              "laps": 7
+            },
+            {
+              "pos": 10,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+18.278",
+              "laps": 7
+            },
+            {
+              "pos": 11,
+              "number": "58",
+              "driver": "Santino Dore",
+              "team": "Cepeda Racing",
+              "gap": "+1:28.820",
+              "laps": 7
+            },
+            {
+              "pos": 12,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+1 vuelta",
+              "laps": 6
+            },
+            {
+              "pos": 13,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+6 vueltas",
+              "laps": 1
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-2-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-2-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-03-29T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "18:17.347",
+              "laps": 12
+            },
+            {
+              "pos": 2,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+3.455",
+              "laps": 12
+            },
+            {
+              "pos": 3,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+5.493",
+              "laps": 12
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Sebastián Caram",
+              "team": "LR Team",
+              "gap": "+6.358",
+              "laps": 12
+            },
+            {
+              "pos": 5,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+8.847",
+              "laps": 12
+            },
+            {
+              "pos": 6,
+              "number": "58",
+              "driver": "Santino Dore",
+              "team": "Cepeda Racing",
+              "gap": "+9.119",
+              "laps": 12
+            },
+            {
+              "pos": 7,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+22.235",
+              "laps": 12
+            },
+            {
+              "pos": 8,
+              "number": "111",
+              "driver": "Tiago Chiriotti",
+              "team": "Cepeda Racing",
+              "gap": "+22.545",
+              "laps": 12
+            },
+            {
+              "pos": 9,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+22.588",
+              "laps": 12
+            },
+            {
+              "pos": 10,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+29.702",
+              "laps": 12
+            },
+            {
+              "pos": 11,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+1:09.529",
+              "laps": 12
+            },
+            {
+              "pos": 12,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+1:10.539",
+              "laps": 12
+            },
+            {
+              "pos": 13,
+              "status": "Sin vueltas",
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-2-2026/"
+          }
+        }
+      ],
+      "source": "Fórmula 2 Argentina (formula2.com.ar)"
     },
     {
       "id": "cordoba-pista-2026-1",
@@ -49364,6 +50049,341 @@
       ]
     },
     {
+      "id": "f2-arg-2026-3",
+      "seriesId": "f2-arg",
+      "round": 3,
+      "name": "Fecha 3 · Concepción del Uruguay",
+      "circuit": {
+        "name": "Ciudad de Concepción del Uruguay",
+        "city": "Concepción del Uruguay",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Entre Ríos"
+      },
+      "sessions": [
+        {
+          "id": "f2-arg-2026-3-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-04-19T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "1:29.350"
+            },
+            {
+              "pos": 2,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+0.252"
+            },
+            {
+              "pos": 3,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+0.376"
+            },
+            {
+              "pos": 4,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+0.405"
+            },
+            {
+              "pos": 5,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+0.587"
+            },
+            {
+              "pos": 6,
+              "number": "44",
+              "driver": "Sebastián Caram",
+              "team": "LR Team",
+              "gap": "+0.649"
+            },
+            {
+              "pos": 7,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+0.787"
+            },
+            {
+              "pos": 8,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+0.799"
+            },
+            {
+              "pos": 9,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+0.833"
+            },
+            {
+              "pos": 10,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+0.980"
+            },
+            {
+              "pos": 11,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+1.931"
+            },
+            {
+              "pos": 12,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+2.543"
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-3-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-3-serie",
+          "kind": "serie",
+          "name": "Carrera clasificatoria",
+          "start": "2026-04-19T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "10:34.900",
+              "laps": 7
+            },
+            {
+              "pos": 2,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+1.954",
+              "laps": 7
+            },
+            {
+              "pos": 3,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+3.996",
+              "laps": 7
+            },
+            {
+              "pos": 4,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+5.683",
+              "laps": 7
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+7.324",
+              "laps": 7
+            },
+            {
+              "pos": 6,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+9.915",
+              "laps": 7
+            },
+            {
+              "pos": 7,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+18.799",
+              "laps": 7
+            },
+            {
+              "pos": 8,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+23.763",
+              "laps": 7
+            },
+            {
+              "pos": 9,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+41.517",
+              "laps": 7
+            },
+            {
+              "pos": 10,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+4 vueltas",
+              "laps": 3
+            },
+            {
+              "pos": 11,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+5 vueltas",
+              "laps": 2
+            },
+            {
+              "pos": 12,
+              "positionText": "EX",
+              "status": "Excluido",
+              "number": "44",
+              "driver": "Sebastián Caram",
+              "team": "LR Team",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-3-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-3-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-04-19T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "18:06.317",
+              "laps": 12
+            },
+            {
+              "pos": 2,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+0.847",
+              "laps": 12
+            },
+            {
+              "pos": 3,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+4.714",
+              "laps": 12
+            },
+            {
+              "pos": 4,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+11.344",
+              "laps": 12
+            },
+            {
+              "pos": 5,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+14.328",
+              "laps": 12
+            },
+            {
+              "pos": 6,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+21.661",
+              "laps": 12
+            },
+            {
+              "pos": 7,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+35.242",
+              "laps": 12
+            },
+            {
+              "pos": 8,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+1 vuelta",
+              "laps": 11
+            },
+            {
+              "pos": 9,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+1 vuelta",
+              "laps": 11
+            },
+            {
+              "pos": 10,
+              "number": "44",
+              "driver": "Sebastián Caram",
+              "team": "LR Team",
+              "gap": "+6 vueltas",
+              "laps": 6
+            },
+            {
+              "pos": 11,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+8 vueltas",
+              "laps": 4
+            },
+            {
+              "pos": 12,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+11 vueltas",
+              "laps": 1
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-3-2026/"
+          }
+        }
+      ],
+      "source": "Fórmula 2 Argentina (formula2.com.ar)"
+    },
+    {
       "id": "tcpk-2026-3",
       "seriesId": "tc-pick-up",
       "round": 3,
@@ -63381,6 +64401,318 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
+    },
+    {
+      "id": "f2-arg-2026-4",
+      "seriesId": "f2-arg",
+      "round": 4,
+      "name": "Fecha 4 · Termas de Río Hondo",
+      "circuit": {
+        "name": "Autódromo Internacional de Termas de Río Hondo",
+        "city": "Termas de Río Hondo",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Santiago del Estero"
+      },
+      "sessions": [
+        {
+          "id": "f2-arg-2026-4-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-05-10T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "1:50.047"
+            },
+            {
+              "pos": 2,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+1.054"
+            },
+            {
+              "pos": 3,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+1.112"
+            },
+            {
+              "pos": 4,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+1.223"
+            },
+            {
+              "pos": 5,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+1.526"
+            },
+            {
+              "pos": 6,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+1.758"
+            },
+            {
+              "pos": 7,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+1.932"
+            },
+            {
+              "pos": 8,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+2.471"
+            },
+            {
+              "pos": 9,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+2.682"
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+5.224"
+            },
+            {
+              "pos": 11,
+              "status": "Sin tiempo",
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-4-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-4-serie",
+          "kind": "serie",
+          "name": "Carrera clasificatoria",
+          "start": "2026-05-10T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "11:05.104",
+              "laps": 6
+            },
+            {
+              "pos": 2,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+2.771",
+              "laps": 6
+            },
+            {
+              "pos": 3,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+8.349",
+              "laps": 6
+            },
+            {
+              "pos": 4,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+8.441",
+              "laps": 6
+            },
+            {
+              "pos": 5,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+9.862",
+              "laps": 6
+            },
+            {
+              "pos": 6,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+11.932",
+              "laps": 6
+            },
+            {
+              "pos": 7,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+12.405",
+              "laps": 6
+            },
+            {
+              "pos": 8,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+12.879",
+              "laps": 6
+            },
+            {
+              "pos": 9,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+16.651",
+              "laps": 6
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+31.394",
+              "laps": 6
+            },
+            {
+              "pos": 11,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+5 vueltas",
+              "laps": 1
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-4-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-4-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-05-10T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "20:26.179",
+              "laps": 11
+            },
+            {
+              "pos": 2,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+1.328",
+              "laps": 11
+            },
+            {
+              "pos": 3,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+6.144",
+              "laps": 11
+            },
+            {
+              "pos": 4,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+11.405",
+              "laps": 11
+            },
+            {
+              "pos": 5,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+11.652",
+              "laps": 11
+            },
+            {
+              "pos": 6,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+11.881",
+              "laps": 11
+            },
+            {
+              "pos": 7,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+12.144",
+              "laps": 11
+            },
+            {
+              "pos": 8,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+21.818",
+              "laps": 11
+            },
+            {
+              "pos": 9,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+31.516",
+              "laps": 11
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+42.268",
+              "laps": 11
+            },
+            {
+              "pos": 11,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+10 vueltas",
+              "laps": 1
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-4-2026/"
+          }
+        }
+      ],
+      "source": "Fórmula 2 Argentina (formula2.com.ar)"
     },
     {
       "id": "nuevo-car-show-2026-3",
@@ -77818,6 +79150,317 @@
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
+    },
+    {
+      "id": "f2-arg-2026-5",
+      "seriesId": "f2-arg",
+      "round": 5,
+      "name": "Fecha 5 · Alta Gracia",
+      "circuit": {
+        "name": "Oscar Cabalén",
+        "city": "Alta Gracia",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Córdoba"
+      },
+      "sessions": [
+        {
+          "id": "f2-arg-2026-5-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-05-31T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "1:16.644"
+            },
+            {
+              "pos": 2,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+0.088"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+0.168"
+            },
+            {
+              "pos": 4,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+0.228"
+            },
+            {
+              "pos": 5,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+0.264"
+            },
+            {
+              "pos": 6,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+0.288"
+            },
+            {
+              "pos": 7,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+0.381"
+            },
+            {
+              "pos": 8,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+0.677"
+            },
+            {
+              "pos": 9,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+0.722"
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+0.998"
+            },
+            {
+              "pos": 11,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+1.251"
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-5-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-5-serie",
+          "kind": "serie",
+          "name": "Carrera clasificatoria",
+          "start": "2026-05-31T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "10:23.167",
+              "laps": 8
+            },
+            {
+              "pos": 2,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+3.486",
+              "laps": 8
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+3.808",
+              "laps": 8
+            },
+            {
+              "pos": 4,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+6.370",
+              "laps": 8
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+6.698",
+              "laps": 8
+            },
+            {
+              "pos": 6,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+7.697",
+              "laps": 8
+            },
+            {
+              "pos": 7,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+9.983",
+              "laps": 8
+            },
+            {
+              "pos": 8,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+12.265",
+              "laps": 8
+            },
+            {
+              "pos": 9,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+36.318",
+              "laps": 8
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+1:37.974",
+              "laps": 8
+            },
+            {
+              "pos": 11,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+4 vueltas",
+              "laps": 4
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-5-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-5-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-05-31T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "15:33.644",
+              "laps": 12
+            },
+            {
+              "pos": 2,
+              "number": "117",
+              "driver": "Joaquín Pagola",
+              "team": "ESG Formula",
+              "gap": "+0.232",
+              "laps": 12
+            },
+            {
+              "pos": 3,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+0.896",
+              "laps": 12
+            },
+            {
+              "pos": 4,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+1.161",
+              "laps": 12
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+1.494",
+              "laps": 12
+            },
+            {
+              "pos": 6,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+2.562",
+              "laps": 12
+            },
+            {
+              "pos": 7,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+3.607",
+              "laps": 12
+            },
+            {
+              "pos": 8,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+3.925",
+              "laps": 12
+            },
+            {
+              "pos": 9,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+4.330",
+              "laps": 12
+            },
+            {
+              "pos": 10,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+9.931",
+              "laps": 12
+            },
+            {
+              "pos": 11,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+9 vueltas",
+              "laps": 3
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-5-2026/"
+          }
+        }
+      ],
+      "source": "Fórmula 2 Argentina (formula2.com.ar)"
     },
     {
       "id": "f2-2026-4",
@@ -120789,6 +122432,294 @@
       "source": "ACTC (calendario) · Wikipedia (podios)"
     },
     {
+      "id": "f2-arg-2026-6",
+      "seriesId": "f2-arg",
+      "round": 6,
+      "name": "Fecha 6 · Posadas",
+      "circuit": {
+        "name": "Rosamonte",
+        "city": "Posadas",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Misiones"
+      },
+      "sessions": [
+        {
+          "id": "f2-arg-2026-6-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-07-12T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "1:36.951"
+            },
+            {
+              "pos": 2,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+0.122"
+            },
+            {
+              "pos": 3,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+0.325"
+            },
+            {
+              "pos": 4,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+0.633"
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+0.683"
+            },
+            {
+              "pos": 6,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+1.055"
+            },
+            {
+              "pos": 7,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+2.416"
+            },
+            {
+              "pos": 8,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+2.536"
+            },
+            {
+              "pos": 9,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+3.458"
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+3.941"
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-6-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-6-serie",
+          "kind": "serie",
+          "name": "Carrera clasificatoria",
+          "start": "2026-07-12T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "10:13.808",
+              "laps": 5
+            },
+            {
+              "pos": 2,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+1.655",
+              "laps": 5
+            },
+            {
+              "pos": 3,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+3.849",
+              "laps": 5
+            },
+            {
+              "pos": 4,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+5.702",
+              "laps": 5
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+10.359",
+              "laps": 5
+            },
+            {
+              "pos": 6,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+9.653",
+              "laps": 5
+            },
+            {
+              "pos": 7,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+11.987",
+              "laps": 5
+            },
+            {
+              "pos": 8,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+4 vueltas",
+              "laps": 1
+            },
+            {
+              "pos": 9,
+              "status": "Sin vueltas",
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+22.045",
+              "laps": 5
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-6-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-6-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-07-12T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "19:32.267",
+              "laps": 12
+            },
+            {
+              "pos": 2,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+0.029",
+              "laps": 12
+            },
+            {
+              "pos": 3,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+0.054",
+              "laps": 12
+            },
+            {
+              "pos": 4,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+11.015",
+              "laps": 12
+            },
+            {
+              "pos": 5,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+14.934",
+              "laps": 12
+            },
+            {
+              "pos": 6,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+24.007",
+              "laps": 12
+            },
+            {
+              "pos": 7,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+35.231",
+              "laps": 12
+            },
+            {
+              "pos": 8,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+56.514",
+              "laps": 12
+            },
+            {
+              "pos": 9,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+4 vueltas",
+              "laps": 8
+            },
+            {
+              "pos": 10,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+10 vueltas",
+              "laps": 2
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-6-2026/"
+          }
+        }
+      ],
+      "source": "Fórmula 2 Argentina (formula2.com.ar)"
+    },
+    {
       "id": "f2-2026-8",
       "seriesId": "f2",
       "round": 8,
@@ -135772,6 +137703,319 @@
           }
         }
       ]
+    },
+    {
+      "id": "f2-arg-2026-7",
+      "seriesId": "f2-arg",
+      "round": 7,
+      "name": "Fecha 7 · Albardón",
+      "circuit": {
+        "name": "San Juan Villicum",
+        "city": "Albardón",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "San Juan"
+      },
+      "sessions": [
+        {
+          "id": "f2-arg-2026-7-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-08-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "1:50.063"
+            },
+            {
+              "pos": 2,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+0.886"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+0.911"
+            },
+            {
+              "pos": 4,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+1.263"
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+1.354"
+            },
+            {
+              "pos": 6,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+2.149"
+            },
+            {
+              "pos": 7,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+2.432"
+            },
+            {
+              "pos": 8,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+2.641"
+            },
+            {
+              "pos": 9,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+3.341"
+            },
+            {
+              "pos": 10,
+              "status": "Sin tiempo",
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "status": "Sin tiempo",
+              "number": "44",
+              "driver": "Sebastián Caram",
+              "team": "LR Team",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-7-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-7-serie",
+          "kind": "serie",
+          "name": "Carrera clasificatoria",
+          "start": "2026-08-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "11:07.421",
+              "laps": 6
+            },
+            {
+              "pos": 2,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+1.084",
+              "laps": 6
+            },
+            {
+              "pos": 3,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+1.188",
+              "laps": 6
+            },
+            {
+              "pos": 4,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+4.528",
+              "laps": 6
+            },
+            {
+              "pos": 5,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+7.356",
+              "laps": 6
+            },
+            {
+              "pos": 6,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+7.780",
+              "laps": 6
+            },
+            {
+              "pos": 7,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+12.010",
+              "laps": 6
+            },
+            {
+              "pos": 8,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+12.322",
+              "laps": 6
+            },
+            {
+              "pos": 9,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+12.749",
+              "laps": 6
+            },
+            {
+              "pos": 10,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+20.675",
+              "laps": 6
+            },
+            {
+              "pos": 11,
+              "number": "44",
+              "driver": "Sebastián Caram",
+              "team": "LR Team",
+              "gap": "+1:33.782",
+              "laps": 6
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-7-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-7-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-08-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "18:30.718",
+              "laps": 10
+            },
+            {
+              "pos": 2,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+2.138",
+              "laps": 10
+            },
+            {
+              "pos": 3,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+4.899",
+              "laps": 10
+            },
+            {
+              "pos": 4,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+13.619",
+              "laps": 10
+            },
+            {
+              "pos": 5,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+14.357",
+              "laps": 10
+            },
+            {
+              "pos": 6,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+16.377",
+              "laps": 10
+            },
+            {
+              "pos": 7,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+19.562",
+              "laps": 10
+            },
+            {
+              "pos": 8,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+25.730",
+              "laps": 10
+            },
+            {
+              "pos": 9,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+52.151",
+              "laps": 10
+            },
+            {
+              "pos": 10,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+3 vueltas",
+              "laps": 7
+            },
+            {
+              "pos": 11,
+              "number": "44",
+              "driver": "Sebastián Caram",
+              "team": "LR Team",
+              "gap": "+5 vueltas",
+              "laps": 5
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-7-2026/"
+          }
+        }
+      ],
+      "source": "Fórmula 2 Argentina (formula2.com.ar)"
     },
     {
       "id": "tc2000-2026-6",
@@ -155602,6 +157846,311 @@
       "source": "TCR South America (API oficial) · Wikipedia (circuito)"
     },
     {
+      "id": "f2-arg-2026-8",
+      "seriesId": "f2-arg",
+      "round": 8,
+      "name": "Fecha 8 · Paraná",
+      "circuit": {
+        "name": "Ciudad de Paraná",
+        "city": "Paraná",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Entre Ríos"
+      },
+      "sessions": [
+        {
+          "id": "f2-arg-2026-8-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-08-23T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "1:28.732"
+            },
+            {
+              "pos": 2,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+0.154"
+            },
+            {
+              "pos": 3,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+0.392"
+            },
+            {
+              "pos": 4,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+0.754"
+            },
+            {
+              "pos": 5,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+0.858"
+            },
+            {
+              "pos": 6,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+0.921"
+            },
+            {
+              "pos": 7,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+2.534"
+            },
+            {
+              "pos": 8,
+              "number": "68",
+              "driver": "Iván Percara",
+              "team": "",
+              "gap": "+3.986"
+            },
+            {
+              "pos": 9,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+35.476"
+            },
+            {
+              "pos": 10,
+              "status": "Sin tiempo",
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-8-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-8-serie",
+          "kind": "serie",
+          "name": "Carrera clasificatoria",
+          "start": "2026-08-23T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "10:32.510",
+              "laps": 7
+            },
+            {
+              "pos": 2,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+1.952",
+              "laps": 7
+            },
+            {
+              "pos": 3,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+2.331",
+              "laps": 7
+            },
+            {
+              "pos": 4,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+2.725",
+              "laps": 7
+            },
+            {
+              "pos": 5,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+3.404",
+              "laps": 7
+            },
+            {
+              "pos": 6,
+              "number": "68",
+              "driver": "Iván Percara",
+              "team": "",
+              "gap": "+25.237",
+              "laps": 7
+            },
+            {
+              "pos": 7,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+1 vuelta",
+              "laps": 6
+            },
+            {
+              "pos": 8,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+4 vueltas",
+              "laps": 3
+            },
+            {
+              "pos": 9,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+5 vueltas",
+              "laps": 2
+            },
+            {
+              "pos": 10,
+              "status": "Sin vueltas",
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "status": "Sin vueltas",
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-8-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-8-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-08-23T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "18:13.220",
+              "laps": 12
+            },
+            {
+              "pos": 2,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+5.291",
+              "laps": 12
+            },
+            {
+              "pos": 3,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+5.631",
+              "laps": 12
+            },
+            {
+              "pos": 4,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+7.730",
+              "laps": 12
+            },
+            {
+              "pos": 5,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+9.501",
+              "laps": 12
+            },
+            {
+              "pos": 6,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+13.824",
+              "laps": 12
+            },
+            {
+              "pos": 7,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+22.760",
+              "laps": 12
+            },
+            {
+              "pos": 8,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+1 vuelta",
+              "laps": 11
+            },
+            {
+              "pos": 9,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+6 vueltas",
+              "laps": 6
+            },
+            {
+              "pos": 10,
+              "number": "68",
+              "driver": "Iván Percara",
+              "team": "",
+              "gap": "+10 vueltas",
+              "laps": 2
+            },
+            {
+              "pos": 11,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+11 vueltas",
+              "laps": 1
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-8-2026/"
+          }
+        }
+      ],
+      "source": "Fórmula 2 Argentina (formula2.com.ar)"
+    },
+    {
       "id": "gt3-2026-e4",
       "seriesId": "gt3",
       "round": 4,
@@ -172495,6 +175044,250 @@
         }
       ],
       "source": "TCR South America (API oficial) · Wikipedia (circuito)"
+    },
+    {
+      "id": "f2-arg-2026-9",
+      "seriesId": "f2-arg",
+      "round": 9,
+      "name": "Fecha 9 · San Luis",
+      "circuit": {
+        "name": "Rosendo Hernández",
+        "city": "San Luis",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "San Luis"
+      },
+      "sessions": [
+        {
+          "id": "f2-arg-2026-9-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-09-13T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20
+        },
+        {
+          "id": "f2-arg-2026-9-serie",
+          "kind": "serie",
+          "name": "Carrera clasificatoria",
+          "start": "2026-09-13T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "11:48.136",
+              "laps": 6
+            },
+            {
+              "pos": 2,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+3.491",
+              "laps": 6
+            },
+            {
+              "pos": 3,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+16.666",
+              "laps": 6
+            },
+            {
+              "pos": 4,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+24.179",
+              "laps": 6
+            },
+            {
+              "pos": 5,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+29.290",
+              "laps": 6
+            },
+            {
+              "pos": 6,
+              "number": "113",
+              "driver": "Facundo Gutiérrez",
+              "team": "",
+              "gap": "+37.034",
+              "laps": 6
+            },
+            {
+              "pos": 7,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+49.660",
+              "laps": 6
+            },
+            {
+              "pos": 8,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+50.421",
+              "laps": 6
+            },
+            {
+              "pos": 9,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+1:08.378",
+              "laps": 6
+            },
+            {
+              "pos": 10,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+1:09.549",
+              "laps": 6
+            },
+            {
+              "pos": 11,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+1:10.187",
+              "laps": 6
+            },
+            {
+              "pos": 12,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+2:08.576",
+              "laps": 6
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-9-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-9-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-09-13T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "18:55.167",
+              "laps": 12
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+3.009",
+              "laps": 12
+            },
+            {
+              "pos": 3,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+3.354",
+              "laps": 12
+            },
+            {
+              "pos": 4,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+7.265",
+              "laps": 12
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+7.353",
+              "laps": 12
+            },
+            {
+              "pos": 6,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+9.222",
+              "laps": 12
+            },
+            {
+              "pos": 7,
+              "number": "113",
+              "driver": "Facundo Gutiérrez",
+              "team": "",
+              "gap": "+10.257",
+              "laps": 12
+            },
+            {
+              "pos": 8,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+30.963",
+              "laps": 12
+            },
+            {
+              "pos": 9,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+31.289",
+              "laps": 12
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+37.319",
+              "laps": 12
+            },
+            {
+              "pos": 11,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+4 vueltas",
+              "laps": 8
+            },
+            {
+              "pos": 12,
+              "status": "Sin vueltas",
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-9-2026/"
+          }
+        }
+      ],
+      "source": "Fórmula 2 Argentina (formula2.com.ar)"
     },
     {
       "id": "gt3-2026-s4",
@@ -197478,6 +200271,317 @@
       ]
     },
     {
+      "id": "f2-arg-2026-10",
+      "seriesId": "f2-arg",
+      "round": 10,
+      "name": "Fecha 10 · San Nicolás",
+      "circuit": {
+        "name": "Ciudad San Nicolás",
+        "city": "San Nicolás",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "f2-arg-2026-10-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-10-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "1:31.340"
+            },
+            {
+              "pos": 2,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+0.606"
+            },
+            {
+              "pos": 3,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+0.999"
+            },
+            {
+              "pos": 4,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+1.234"
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+1.460"
+            },
+            {
+              "pos": 6,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+1.770"
+            },
+            {
+              "pos": 7,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+1.941"
+            },
+            {
+              "pos": 8,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+2.354"
+            },
+            {
+              "pos": 9,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+2.560"
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+4.769"
+            },
+            {
+              "pos": 11,
+              "status": "Sin tiempo",
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-10-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-10-serie",
+          "kind": "serie",
+          "name": "Carrera clasificatoria",
+          "start": "2026-10-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "10:44.293",
+              "laps": 6
+            },
+            {
+              "pos": 2,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "+4.679",
+              "laps": 6
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+12.425",
+              "laps": 6
+            },
+            {
+              "pos": 4,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+14.200",
+              "laps": 6
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+14.219",
+              "laps": 6
+            },
+            {
+              "pos": 6,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+14.470",
+              "laps": 6
+            },
+            {
+              "pos": 7,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+17.145",
+              "laps": 6
+            },
+            {
+              "pos": 8,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+26.426",
+              "laps": 6
+            },
+            {
+              "pos": 9,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+28.473",
+              "laps": 6
+            },
+            {
+              "pos": 10,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+2 vueltas",
+              "laps": 4
+            },
+            {
+              "pos": 11,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+6 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-10-2026/"
+          }
+        },
+        {
+          "id": "f2-arg-2026-10-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-10-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "18:24.331",
+              "laps": 12
+            },
+            {
+              "pos": 2,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+4.256",
+              "laps": 12
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+4.472",
+              "laps": 12
+            },
+            {
+              "pos": 4,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+5.710",
+              "laps": 12
+            },
+            {
+              "pos": 5,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+7.381",
+              "laps": 12
+            },
+            {
+              "pos": 6,
+              "number": "33",
+              "driver": "Salvador Audisio",
+              "team": "Werner Competición",
+              "gap": "+7.806",
+              "laps": 12
+            },
+            {
+              "pos": 7,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+16.100",
+              "laps": 12
+            },
+            {
+              "pos": 8,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+17.070",
+              "laps": 12
+            },
+            {
+              "pos": 9,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+21.237",
+              "laps": 12
+            },
+            {
+              "pos": 10,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+31.150",
+              "laps": 12
+            },
+            {
+              "pos": 11,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+38.032",
+              "laps": 12
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-10-2026/"
+          }
+        }
+      ],
+      "source": "Fórmula 2 Argentina (formula2.com.ar)"
+    },
+    {
       "id": "f1-2026-17",
       "seriesId": "f1",
       "round": 17,
@@ -205948,6 +209052,46 @@
       "source": "ACTC (calendario)"
     },
     {
+      "id": "f2-arg-2026-11",
+      "seriesId": "f2-arg",
+      "round": 11,
+      "name": "Fecha 11 · Rosario",
+      "circuit": {
+        "name": "Juan Manuel Fangio-ROSARIO",
+        "city": "Rosario",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Santa Fe"
+      },
+      "sessions": [
+        {
+          "id": "f2-arg-2026-11-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-10-25T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20
+        },
+        {
+          "id": "f2-arg-2026-11-serie",
+          "kind": "serie",
+          "name": "Carrera clasificatoria",
+          "start": "2026-10-25T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20
+        },
+        {
+          "id": "f2-arg-2026-11-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-10-25T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        }
+      ],
+      "source": "Fórmula 2 Argentina (formula2.com.ar)"
+    },
+    {
       "id": "f1-2026-19",
       "seriesId": "f1",
       "round": 19,
@@ -206803,6 +209947,46 @@
         }
       ],
       "source": "nuevocarshow.com.ar (calendario y planillas de cronometraje)"
+    },
+    {
+      "id": "f2-arg-2026-12",
+      "seriesId": "f2-arg",
+      "round": 12,
+      "name": "Fecha 12 · La Plata",
+      "circuit": {
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "f2-arg-2026-12-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-12-06T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20
+        },
+        {
+          "id": "f2-arg-2026-12-serie",
+          "kind": "serie",
+          "name": "Carrera clasificatoria",
+          "start": "2026-12-06T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20
+        },
+        {
+          "id": "f2-arg-2026-12-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-12-06T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        }
+      ],
+      "source": "Fórmula 2 Argentina (formula2.com.ar)"
     },
     {
       "id": "rally-argentino-2026-9",
@@ -208718,6 +211902,114 @@
         "team": "",
         "points": 82.5,
         "wins": 0
+      }
+    ],
+    "f2-arg": [
+      {
+        "pos": 1,
+        "driver": "Lautaro Videla",
+        "team": "Martinez Competicion",
+        "points": 415.5,
+        "wins": 4
+      },
+      {
+        "pos": 2,
+        "driver": "Franco Ledesma",
+        "team": "Werner Competición",
+        "points": 361.5,
+        "wins": 4
+      },
+      {
+        "pos": 3,
+        "driver": "Ignacio Monti",
+        "team": "Aimar Motorsport",
+        "points": 291.5
+      },
+      {
+        "pos": 4,
+        "driver": "Federico Piper",
+        "team": "Werner Competición",
+        "points": 271,
+        "wins": 1
+      },
+      {
+        "pos": 5,
+        "driver": "Juan Pablo Leonardelli",
+        "team": "Werner Competición",
+        "points": 252,
+        "wins": 1
+      },
+      {
+        "pos": 6,
+        "driver": "Valentino Alaux",
+        "team": "Werner Competición",
+        "points": 213
+      },
+      {
+        "pos": 7,
+        "driver": "Salvador Audisio",
+        "team": "Werner Competición",
+        "points": 204
+      },
+      {
+        "pos": 8,
+        "driver": "Ignacio Sachs",
+        "team": "Werner Competición",
+        "points": 166
+      },
+      {
+        "pos": 9,
+        "driver": "Thomas Ojeda",
+        "team": "ESG Formula",
+        "points": 127
+      },
+      {
+        "pos": 10,
+        "driver": "Joaquín Pagola",
+        "team": "ESG Formula",
+        "points": 121
+      },
+      {
+        "pos": 11,
+        "driver": "Delfina Villaberde",
+        "team": "Aimar Motorsport",
+        "points": 98
+      },
+      {
+        "pos": 12,
+        "driver": "Sebastián Caram",
+        "team": "LR Team",
+        "points": 89.5
+      },
+      {
+        "pos": 13,
+        "driver": "Morena Moix",
+        "team": "",
+        "points": 79
+      },
+      {
+        "pos": 14,
+        "driver": "Tiago Chiriotti",
+        "team": "Cepeda Racing",
+        "points": 56
+      },
+      {
+        "pos": 15,
+        "driver": "Santino Dore",
+        "team": "Cepeda Racing",
+        "points": 53
+      },
+      {
+        "pos": 16,
+        "driver": "Facundo Gutiérrez",
+        "team": "",
+        "points": 22
+      },
+      {
+        "pos": 17,
+        "driver": "Iván Percara",
+        "team": "",
+        "points": 10
       }
     ]
   },
@@ -212933,6 +216225,14 @@
       "realTimes": 10,
       "addedSessions": 0,
       "errors": []
+    },
+    "f2-arg": {
+      "standingsLabel": "Pilotos",
+      "notes": [
+        "El campeonato dice «(9/12)» pero suma 10 victorias: se toma como tabla tras la fecha 10"
+      ],
+      "errors": [],
+      "standingsAsOfRound": 10
     }
   },
   "failures": [

@@ -3,9 +3,11 @@
 import { repairMojibake } from "./common.mjs";
 
 /** Categorías nacionales: todos sus pilotos entran al índice. En las internacionales, sólo los marcados como argentinos. */
-export const NATIONAL_SERIES = new Set(["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "tc2000", "cordoba-pista", "rally-argentino", "nuevo-car-show"]);
+export const NATIONAL_SERIES = new Set(["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "tc2000", "cordoba-pista", "rally-argentino", "nuevo-car-show", "f2-arg"]);
 
 const MAKES = ["chevrolet", "chev", "ford", "mustang", "toyota", "torino", "dodge", "camaro", "challenger", "mercedes", "benz", "bmw", "fiat", "ram", "volkswagen", "vw", "peugeot", "honda", "renault"];
+/** Apellidos que terminan como una marca ("Caram" = "Ca" + "ram") y la limpieza de "Ttoyota" tomaría por una marca pegada. */
+const APELLIDOS = new Set(["caram"]);
 const fold = (s) => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
 
 /**
@@ -27,7 +29,7 @@ function limpiar(name) {
     .filter((w) => !(w.includes(".") && w.replace(/\./g, "").length >= 2))
     .filter((w) => {
       const f = fold(w).replace(/[^a-z]/g, "");
-      return !MAKES.some((m) => f === m || (f.length <= m.length + 2 && f.length > m.length && f.endsWith(m)));
+      return APELLIDOS.has(f) || !MAKES.some((m) => f === m || (f.length <= m.length + 2 && f.length > m.length && f.endsWith(m)));
     });
   return words.join(" ").trim();
 }

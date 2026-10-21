@@ -18,6 +18,8 @@ export const series: Series[] = [
   { id: "tn", name: "TN APAT", short: "TN", code: "TN", org: "APAT", orgUrl: "https://apat.org.ar", scope: "nacional", color: "#b47805", founded: 1961 },
   { id: "gt3", name: "GT World Challenge Europe", short: "GTWC", code: "GT3", org: "SRO", orgUrl: "https://www.gt-world-challenge-europe.com", scope: "internacional", color: "#6b3d83", founded: 2011 },
   { id: "tcr-sa", name: "TCR South America", short: "TCR SA", code: "TCR", org: "TCR South America", orgUrl: "https://southamerica.tcr-series.com", scope: "internacional", color: "#4338ca", founded: 2021 },
+  // Fórmula 2 Argentina (ACTC): no es la F2 de la FIA (`f2`). Verde oliva, que no usa ninguna otra categoría nacional.
+  { id: "f2-arg", name: "Fórmula 2 Argentina", short: "F2 Arg", code: "F2A", org: "ACTC", orgUrl: "https://formula2.com.ar", scope: "nacional", color: "#3b6d11" },
   // Sin fuente automática todavía (ver docs/fuentes-de-datos.md): calendario, horarios y resultados quedan
   // "sin datos" hasta que exista un adaptador, igual que Procar4000.
   { id: "wec", name: "FIA WEC", short: "WEC", code: "WEC", org: "FIA/ACO", orgUrl: "https://www.fiawec.com", scope: "internacional", color: "#8a3f1f", founded: 2012 },
