@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T22:15:21.899Z",
+  "generatedAt": "2026-10-21T22:25:31.248Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -39493,7 +39493,7 @@
               "driver": "Renzo Sabatini",
               "team": "Ferreira Motorsport",
               "number": "36",
-              "gap": "+2.493",
+              "gap": "+3.493",
               "laps": 8
             },
             {
@@ -39501,7 +39501,7 @@
               "driver": "Alejandro Guttlein",
               "team": "Giavedoni Motor Sport",
               "number": "33",
-              "gap": "+2.504",
+              "gap": "+3.504",
               "laps": 5
             },
             {
@@ -39509,7 +39509,7 @@
               "driver": "Luciano Vicino",
               "team": "MG Ramini",
               "number": "77",
-              "gap": "+15.469",
+              "gap": "+16.469",
               "laps": 1
             },
             {
@@ -39573,7 +39573,7 @@
               "driver": "Joaquín Dominguez",
               "team": "Guevara Competición",
               "number": "99",
-              "gap": "+1.728",
+              "gap": "+0.728",
               "laps": 6
             },
             {
@@ -39581,7 +39581,7 @@
               "driver": "Alejandro Guttlein",
               "team": "Giavedoni Motor Sport",
               "number": "33",
-              "gap": "+2.708",
+              "gap": "+1.708",
               "laps": 5
             },
             {
@@ -39629,7 +39629,7 @@
               "driver": "Renzo Sabatini",
               "team": "Ferreira Motorsport",
               "number": "36",
-              "gap": "+13:16.771",
+              "gap": "+13:15.771",
               "laps": 1
             }
           ],
@@ -39691,7 +39691,7 @@
               "driver": "Luciano Vicino",
               "team": "MG Ramini",
               "number": "77",
-              "gap": "+2.655",
+              "gap": "+1.655",
               "laps": 4
             },
             {
@@ -39699,7 +39699,7 @@
               "driver": "Santino Roberi",
               "team": "Buenos Aires Racing",
               "number": "95",
-              "gap": "+2.660",
+              "gap": "+1.660",
               "laps": 2
             },
             {
@@ -39761,7 +39761,7 @@
               "driver": "Luciano Vicino",
               "team": "MG Ramini",
               "number": "77",
-              "gap": "+1.617",
+              "gap": "+2.617",
               "laps": 8
             },
             {
@@ -39785,7 +39785,7 @@
               "driver": "Manuel Costan",
               "team": "Pieraligi Sprint",
               "number": "44",
-              "gap": "+2.660",
+              "gap": "+3.660",
               "laps": 8
             },
             {
@@ -55122,7 +55122,7 @@
               "driver": "Manuel Costan",
               "team": "Pieraligi Sprint",
               "number": "44",
-              "gap": "+1.543",
+              "gap": "+2.543",
               "laps": 12
             },
             {
@@ -55130,7 +55130,7 @@
               "driver": "Bautista Faccioli",
               "team": "MR Racing",
               "number": "46",
-              "gap": "+1.587",
+              "gap": "+2.587",
               "laps": 8
             },
             {
@@ -55138,7 +55138,7 @@
               "driver": "Tomás Campra",
               "team": "Giavedoni Motor Sport",
               "number": "2",
-              "gap": "+4.335",
+              "gap": "+5.335",
               "laps": 2
             }
           ],
@@ -55176,7 +55176,7 @@
               "driver": "Renzo Sabatini",
               "team": "Ferreira Motorsport",
               "number": "36",
-              "gap": "+0.592",
+              "gap": "+1.592",
               "laps": 19
             },
             {
@@ -55254,7 +55254,7 @@
               "driver": "Alejandro Guttlein",
               "team": "Giavedoni Motor Sport",
               "number": "33",
-              "gap": "+0.585",
+              "gap": "+1.585",
               "laps": 7
             },
             {
@@ -55262,7 +55262,7 @@
               "driver": "Manuel Costan",
               "team": "Pieraligi Sprint",
               "number": "44",
-              "gap": "+0.673",
+              "gap": "+1.673",
               "laps": 6
             },
             {
@@ -55270,7 +55270,7 @@
               "driver": "Bautista Faccioli",
               "team": "MR Racing",
               "number": "46",
-              "gap": "+0.940",
+              "gap": "+1.940",
               "laps": 7
             },
             {
@@ -55334,7 +55334,7 @@
               "driver": "Alejandro Guttlein",
               "team": "Giavedoni Motor Sport",
               "number": "33",
-              "gap": "+9.720",
+              "gap": "+10.720",
               "laps": 12,
               "grid": 4
             },
@@ -55370,7 +55370,7 @@
               "driver": "Genaro Bevilacqua",
               "team": "MG Ramini",
               "number": "37",
-              "gap": "+42.358",
+              "gap": "+43.358",
               "laps": 12,
               "grid": 1
             },
@@ -55420,7 +55420,7 @@
               "driver": "Renzo Sabatini",
               "team": "Ferreira Motorsport",
               "number": "36",
-              "gap": "+11.676",
+              "gap": "+10.676",
               "laps": 14,
               "grid": 2
             },
@@ -55429,7 +55429,7 @@
               "driver": "Manuel Costan",
               "team": "Pieraligi Sprint",
               "number": "44",
-              "gap": "+12.476",
+              "gap": "+11.476",
               "laps": 14,
               "grid": 4
             },
@@ -55438,7 +55438,7 @@
               "driver": "Bautista Faccioli",
               "team": "MR Racing",
               "number": "46",
-              "gap": "+16.744",
+              "gap": "+15.744",
               "laps": 14,
               "grid": 8
             },
@@ -84377,7 +84377,7 @@
               "driver": "Santino Roberi",
               "team": "Buenos Aires Racing",
               "number": "95",
-              "gap": "+1.681"
+              "gap": "+0.681"
             },
             {
               "pos": 7,
@@ -84405,7 +84405,7 @@
               "driver": "Manuel Costan",
               "team": "Pieraligi Sprint",
               "number": "44",
-              "gap": "+2.880"
+              "gap": "+1.880"
             },
             {
               "pos": 11,
@@ -84419,7 +84419,7 @@
               "driver": "Santiago Vidoret",
               "team": "Della Santina Competición",
               "number": "24",
-              "gap": "+17.477"
+              "gap": "+16.477"
             }
           ],
           "resultsSource": {
@@ -84448,7 +84448,7 @@
               "driver": "Tomás Campra",
               "team": "Giavedoni Motor Sport",
               "number": "2",
-              "gap": "+0.460",
+              "gap": "+1.460",
               "laps": 6
             },
             {
@@ -84456,7 +84456,7 @@
               "driver": "Fabricio Toselli",
               "team": "Pieraligi Sprint",
               "number": "83",
-              "gap": "+0.469",
+              "gap": "+1.469",
               "laps": 6
             },
             {
@@ -84472,7 +84472,7 @@
               "driver": "Bautista Faccioli",
               "team": "MR Racing",
               "number": "46",
-              "gap": "+1.480",
+              "gap": "+2.480",
               "laps": 6
             },
             {
@@ -84480,7 +84480,7 @@
               "driver": "Santino Roberi",
               "team": "Buenos Aires Racing",
               "number": "95",
-              "gap": "+1.839",
+              "gap": "+2.839",
               "laps": 7
             },
             {
@@ -84512,7 +84512,7 @@
               "driver": "Benjamín Squaglia",
               "team": "Fauro Sport",
               "number": "7",
-              "gap": "+3.748",
+              "gap": "+4.748",
               "laps": 5
             },
             {
@@ -84528,7 +84528,7 @@
               "driver": "Santiago Vidoret",
               "team": "Della Santina Competición",
               "number": "24",
-              "gap": "+18.683",
+              "gap": "+19.683",
               "laps": 4
             }
           ],
@@ -105988,7 +105988,7 @@
               "driver": "Santino Roberi",
               "team": "Buenos Aires Racing",
               "number": "95",
-              "gap": "+1.414",
+              "gap": "+0.414",
               "laps": 7
             },
             {
@@ -105996,7 +105996,7 @@
               "driver": "Luciano Vicino",
               "team": "MG Ramini",
               "number": "77",
-              "gap": "+1.466",
+              "gap": "+0.466",
               "laps": 6
             },
             {
@@ -106004,7 +106004,7 @@
               "driver": "Alfonso Grassi",
               "team": "Fauro Sport",
               "number": "23",
-              "gap": "+1.649",
+              "gap": "+0.649",
               "laps": 7
             },
             {
@@ -106028,7 +106028,7 @@
               "driver": "Milton Cudina",
               "team": "Cudina Competición",
               "number": "32",
-              "gap": "+2.349",
+              "gap": "+1.349",
               "laps": 7
             },
             {
@@ -106036,7 +106036,7 @@
               "driver": "Santiago Vidoret",
               "team": "Della Santina Competición",
               "number": "24",
-              "gap": "+3.272",
+              "gap": "+2.272",
               "laps": 7
             }
           ],
@@ -140814,7 +140814,7 @@
               "driver": "José Sanchez",
               "team": "Della Santina Competición",
               "number": "114",
-              "gap": "",
+              "gap": "+1.497",
               "laps": 21,
               "grid": 13
             },
@@ -205504,7 +205504,7 @@
               "driver": "Tomás Campra",
               "team": "Giavedoni Motor Sport",
               "number": "2",
-              "gap": "+5:49.000",
+              "gap": "+0.349",
               "laps": 10,
               "grid": 3
             },
@@ -205626,7 +205626,7 @@
               "driver": "Tomás Campra",
               "team": "Giavedoni Motor Sport",
               "number": "2",
-              "gap": "+4:26.000",
+              "gap": "+0.266",
               "laps": 18,
               "grid": 3
             },
@@ -205635,7 +205635,7 @@
               "driver": "Alejandro Guttlein",
               "team": "Giavedoni Motor Sport",
               "number": "33",
-              "gap": "+6:01.000",
+              "gap": "+0.361",
               "laps": 18,
               "grid": 8
             },
@@ -216795,16 +216795,16 @@
       },
       {
         "pos": 19,
-        "driver": "José Carlos Montanari",
-        "team": "",
-        "points": 89.5,
+        "driver": "Joaquín Rossotti",
+        "team": "—",
+        "points": 94,
         "wins": 0
       },
       {
         "pos": 20,
-        "driver": "Emiliano Simonetti",
+        "driver": "José Carlos Montanari",
         "team": "",
-        "points": 82.5,
+        "points": 89.5,
         "wins": 0
       }
     ]
@@ -220550,7 +220550,7 @@
       "events": 10,
       "errors": [],
       "pc": {
-        "at": "2026-10-21T22:10:38.884Z",
+        "at": "2026-10-21T22:20:50.204Z",
         "ok": true,
         "errors": []
       }
