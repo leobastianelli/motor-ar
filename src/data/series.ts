@@ -16,6 +16,8 @@ export const series: Series[] = [
   { id: "tc-pista-pick-up", name: "TC Pista Pick Up", short: "TCP Pick Up", code: "TCPPK", org: "ACTC", orgUrl: "https://actc.org.ar", scope: "nacional", color: "#4f6d7a" },
   { id: "tc2000", name: "TC2000", short: "TC2000", code: "TC2K", org: "CDA del ACA", orgUrl: "https://www.tc2000.com.ar", scope: "nacional", color: "#101213", founded: 1979 },
   { id: "tn", name: "TN APAT", short: "TN", code: "TN", org: "APAT", orgUrl: "https://apat.org.ar", scope: "nacional", color: "#b47805", founded: 1961 },
+  // Fórmula Nacional Argentina: monoplazas Renault 2.0, casi todas las fechas son teloneras del TC2000. Azul real: no choca con el azul profundo de F2/TC ni con el índigo del TCR.
+  { id: "formula-nacional", name: "Fórmula Nacional Argentina", short: "F. Nacional", code: "FNA", org: "CDA del ACA", orgUrl: "https://formulanacional.com.ar", scope: "nacional", color: "#2563eb" },
   { id: "gt3", name: "GT World Challenge Europe", short: "GTWC", code: "GT3", org: "SRO", orgUrl: "https://www.gt-world-challenge-europe.com", scope: "internacional", color: "#6b3d83", founded: 2011 },
   { id: "tcr-sa", name: "TCR South America", short: "TCR SA", code: "TCR", org: "TCR South America", orgUrl: "https://southamerica.tcr-series.com", scope: "internacional", color: "#4338ca", founded: 2021 },
   // Fórmula 2 Argentina (ACTC): no es la F2 de la FIA (`f2`). Verde oliva, que no usa ninguna otra categoría nacional.

@@ -18,6 +18,7 @@ const SERIES_SLUGS: Record<string, string> = {
   "rally-argentino": "rally-argentino",
   "nuevo-car-show": "nuevo-car-show",
   "cordoba-pista": "cordoba-pista",
+  "formula-nacional": "formula-nacional",
   wec: "wec",
   imsa: "imsa",
   f3: "formula-3",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T20:47:34.845Z",
+  "generatedAt": "2026-10-21T21:12:35.019Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -311,6 +311,26 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "agustin velazquez",
+      "keys": [
+        "agustin velazquez"
+      ],
+      "slug": "agustin-velazquez",
+      "name": "Agustin Velazquez",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "26"
+      },
+      "teams": {
+        "formula-nacional": "Giavedoni Motor Sport"
+      },
+      "firstSeen": "2026-06-05",
+      "lastSeen": "2026-08-09"
+    },
+    {
       "key": "alan cifre",
       "keys": [
         "alan cifre denis",
@@ -410,6 +430,26 @@
       },
       "firstSeen": "2026-05-24",
       "lastSeen": "2026-05-24"
+    },
+    {
+      "key": "alejandro guttlein",
+      "keys": [
+        "alejandro guttlein"
+      ],
+      "slug": "alejandro-guttlein",
+      "name": "Alejandro Guttlein",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "33"
+      },
+      "teams": {
+        "formula-nacional": "Giavedoni Motor Sport"
+      },
+      "firstSeen": "2026-04-10",
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "alejandro inella",
@@ -552,6 +592,26 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-10-11"
+    },
+    {
+      "key": "alfonso grassi",
+      "keys": [
+        "alfonso grassi"
+      ],
+      "slug": "alfonso-grassi",
+      "name": "Alfonso Grassi",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "23"
+      },
+      "teams": {
+        "formula-nacional": "Fauro Sport"
+      },
+      "firstSeen": "2026-06-26",
+      "lastSeen": "2026-08-09"
     },
     {
       "key": "alfredo esterkin geronimo",
@@ -996,14 +1056,38 @@
       "name": "Bautista Della Santina",
       "aliases": [],
       "series": [
-        "cordoba-pista"
+        "cordoba-pista",
+        "formula-nacional"
       ],
       "numbers": {
-        "cordoba-pista": "4"
+        "cordoba-pista": "4",
+        "formula-nacional": "118"
       },
-      "teams": {},
+      "teams": {
+        "formula-nacional": "Della Santina Competición"
+      },
       "firstSeen": "2026-04-03",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-10-11"
+    },
+    {
+      "key": "bautista faccioli",
+      "keys": [
+        "bautista faccioli"
+      ],
+      "slug": "bautista-faccioli",
+      "name": "Bautista Faccioli",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "46"
+      },
+      "teams": {
+        "formula-nacional": "MR Racing"
+      },
+      "firstSeen": "2026-05-01",
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "bautista roqueta",
@@ -1071,6 +1155,26 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "benjamin squaglia",
+      "keys": [
+        "benjamin squaglia"
+      ],
+      "slug": "benjamin-squaglia",
+      "name": "Benjamín Squaglia",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "7"
+      },
+      "teams": {
+        "formula-nacional": "Fauro Sport"
+      },
+      "firstSeen": "2026-04-10",
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "bernardo llaver",
@@ -1495,6 +1599,22 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "ciro di rosa",
+      "keys": [
+        "ciro di rosa"
+      ],
+      "slug": "ciro-di-rosa",
+      "name": "Ciro Di Rosa",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {},
+      "teams": {},
+      "firstSeen": "2026-04-10",
+      "lastSeen": "2026-04-10"
+    },
+    {
       "key": "buchholz claudio",
       "keys": [
         "buchholz claudio"
@@ -1719,6 +1839,26 @@
       "lastSeen": "2026-09-13"
     },
     {
+      "key": "damian sabbioni",
+      "keys": [
+        "damian sabbioni"
+      ],
+      "slug": "damian-sabbioni",
+      "name": "Damián Sabbioni",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "5"
+      },
+      "teams": {
+        "formula-nacional": "JD Sport Team"
+      },
+      "firstSeen": "2026-06-26",
+      "lastSeen": "2026-09-06"
+    },
+    {
       "key": "damian torresi",
       "keys": [
         "damian torresi"
@@ -1892,6 +2032,26 @@
       "teams": {},
       "firstSeen": "2026-04-03",
       "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "daniella ore",
+      "keys": [
+        "daniella ore"
+      ],
+      "slug": "daniella-ore",
+      "name": "Daniella Oré",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "17"
+      },
+      "teams": {
+        "formula-nacional": "Ferreira Motorsport"
+      },
+      "firstSeen": "2026-05-02",
+      "lastSeen": "2026-05-03"
     },
     {
       "key": "danilo gil",
@@ -2977,6 +3137,26 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "fabricio toselli",
+      "keys": [
+        "fabricio toselli"
+      ],
+      "slug": "fabricio-toselli",
+      "name": "Fabricio Toselli",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "83"
+      },
+      "teams": {
+        "formula-nacional": "Pieraligi Sprint"
+      },
+      "firstSeen": "2026-06-05",
+      "lastSeen": "2026-10-11"
+    },
+    {
       "key": "fabricio trotti",
       "keys": [
         "fabricio trotti"
@@ -3430,6 +3610,26 @@
       "lastSeen": "2026-04-05"
     },
     {
+      "key": "felipe saloj",
+      "keys": [
+        "felipe saloj"
+      ],
+      "slug": "felipe-saloj",
+      "name": "Felipe Saloj",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "16"
+      },
+      "teams": {
+        "formula-nacional": "MR Racing"
+      },
+      "firstSeen": "2026-05-01",
+      "lastSeen": "2026-05-03"
+    },
+    {
       "key": "fernandez pedro",
       "keys": [
         "fernandez pedro"
@@ -3824,6 +4024,26 @@
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "franco meschini",
+      "keys": [
+        "franco meschini"
+      ],
+      "slug": "franco-meschini",
+      "name": "Franco Meschini",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "11"
+      },
+      "teams": {
+        "formula-nacional": "MR Racing"
+      },
+      "firstSeen": "2026-08-07",
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "franco morillo",
@@ -4260,6 +4480,26 @@
       },
       "firstSeen": "2026-05-24",
       "lastSeen": "2026-05-24"
+    },
+    {
+      "key": "bevilacqua genaro",
+      "keys": [
+        "bevilacqua genaro"
+      ],
+      "slug": "genaro-bevilacqua",
+      "name": "Genaro Bevilacqua",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "37"
+      },
+      "teams": {
+        "formula-nacional": "MG Ramini"
+      },
+      "firstSeen": "2026-05-01",
+      "lastSeen": "2026-05-03"
     },
     {
       "key": "genaro gonzalez",
@@ -5657,6 +5897,26 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "dominguez joaquin",
+      "keys": [
+        "dominguez joaquin"
+      ],
+      "slug": "joaquin-dominguez",
+      "name": "Joaquín Dominguez",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "99"
+      },
+      "teams": {
+        "formula-nacional": "Guevara Competición"
+      },
+      "firstSeen": "2026-04-10",
+      "lastSeen": "2026-04-12"
+    },
+    {
       "key": "flores joaquin",
       "keys": [
         "flores joaquin"
@@ -6266,6 +6526,26 @@
       "lastSeen": "2026-06-21"
     },
     {
+      "key": "jose sanchez",
+      "keys": [
+        "jose sanchez"
+      ],
+      "slug": "jose-sanchez",
+      "name": "José Sanchez",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "114"
+      },
+      "teams": {
+        "formula-nacional": "Della Santina Competición"
+      },
+      "firstSeen": "2026-08-07",
+      "lastSeen": "2026-08-09"
+    },
+    {
       "key": "angel juan rosso",
       "keys": [
         "angel juan rosso"
@@ -6393,6 +6673,26 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-11"
+    },
+    {
+      "key": "cruz farias juan",
+      "keys": [
+        "cruz farias juan"
+      ],
+      "slug": "juan-cruz-farias",
+      "name": "Juan Cruz Farias",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "14"
+      },
+      "teams": {
+        "formula-nacional": "MR Racing"
+      },
+      "firstSeen": "2026-04-10",
+      "lastSeen": "2026-04-12"
     },
     {
       "key": "cruz di federici juan palma",
@@ -8194,6 +8494,26 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "luciano sobles",
+      "keys": [
+        "luciano sobles"
+      ],
+      "slug": "luciano-sobles",
+      "name": "Luciano Sobles",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "101"
+      },
+      "teams": {
+        "formula-nacional": "Alessandrini Motorsport"
+      },
+      "firstSeen": "2026-09-05",
+      "lastSeen": "2026-09-06"
+    },
+    {
       "key": "luciano toldo",
       "keys": [
         "luciano toldo"
@@ -8212,6 +8532,26 @@
       },
       "firstSeen": "2026-07-10",
       "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "luciano vicino",
+      "keys": [
+        "luciano vicino"
+      ],
+      "slug": "luciano-vicino",
+      "name": "Luciano Vicino",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "77"
+      },
+      "teams": {
+        "formula-nacional": "MG Ramini"
+      },
+      "firstSeen": "2026-04-10",
+      "lastSeen": "2026-08-08"
     },
     {
       "key": "lucio rodriguez",
@@ -8374,6 +8714,46 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "costan manuel",
+      "keys": [
+        "costan manuel"
+      ],
+      "slug": "manuel-costan",
+      "name": "Manuel Costan",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "44"
+      },
+      "teams": {
+        "formula-nacional": "Pieraligi Sprint"
+      },
+      "firstSeen": "2026-04-10",
+      "lastSeen": "2026-10-11"
+    },
+    {
+      "key": "duarte manuel",
+      "keys": [
+        "duarte manuel"
+      ],
+      "slug": "manuel-duarte",
+      "name": "Manuel Duarte",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "28"
+      },
+      "teams": {
+        "formula-nacional": "MR Racing"
+      },
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "agrelo marcelo",
@@ -9648,6 +10028,26 @@
       "lastSeen": "2026-07-12"
     },
     {
+      "key": "guastalla mauro",
+      "keys": [
+        "guastalla mauro"
+      ],
+      "slug": "mauro-guastalla",
+      "name": "Mauro Guastalla",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "60"
+      },
+      "teams": {
+        "formula-nacional": "Della Santina Competición"
+      },
+      "firstSeen": "2026-10-10",
+      "lastSeen": "2026-10-11"
+    },
+    {
       "key": "ivaldi mauro",
       "keys": [
         "ivaldi mauro"
@@ -9983,6 +10383,26 @@
       },
       "firstSeen": "2026-08-14",
       "lastSeen": "2026-08-16"
+    },
+    {
+      "key": "cudina milton",
+      "keys": [
+        "cudina milton"
+      ],
+      "slug": "milton-cudina",
+      "name": "Milton Cudina",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "32"
+      },
+      "teams": {
+        "formula-nacional": "Cudina Competición"
+      },
+      "firstSeen": "2026-06-05",
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "eddy mion",
@@ -11298,6 +11718,26 @@
       "lastSeen": "2026-09-20"
     },
     {
+      "key": "renzo sabatini",
+      "keys": [
+        "renzo sabatini"
+      ],
+      "slug": "renzo-sabatini",
+      "name": "Renzo Sabatini",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "36"
+      },
+      "teams": {
+        "formula-nacional": "Ferreira Motorsport"
+      },
+      "firstSeen": "2026-04-10",
+      "lastSeen": "2026-10-11"
+    },
+    {
       "key": "renzo testa",
       "keys": [
         "renzo testa"
@@ -12219,6 +12659,26 @@
       "lastSeen": "2026-06-21"
     },
     {
+      "key": "santiago vidoret",
+      "keys": [
+        "santiago vidoret"
+      ],
+      "slug": "santiago-vidoret",
+      "name": "Santiago Vidoret",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "24"
+      },
+      "teams": {
+        "formula-nacional": "Della Santina Competición"
+      },
+      "firstSeen": "2026-06-06",
+      "lastSeen": "2026-06-28"
+    },
+    {
       "key": "balerini santino",
       "keys": [
         "balerini santino"
@@ -12315,6 +12775,26 @@
       },
       "firstSeen": "2026-01-23",
       "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "roberi santino",
+      "keys": [
+        "roberi santino"
+      ],
+      "slug": "santino-roberi",
+      "name": "Santino Roberi",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "95"
+      },
+      "teams": {
+        "formula-nacional": "Buenos Aires Racing"
+      },
+      "firstSeen": "2026-04-10",
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "rossi santino",
@@ -13003,6 +13483,26 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-18"
+    },
+    {
+      "key": "campra tomas",
+      "keys": [
+        "campra tomas"
+      ],
+      "slug": "tomas-campra",
+      "name": "Tomás Campra",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "2"
+      },
+      "teams": {
+        "formula-nacional": "Giavedoni Motor Sport"
+      },
+      "firstSeen": "2026-04-10",
+      "lastSeen": "2026-10-11"
     },
     {
       "key": "dalmazzo tomas",

@@ -3,7 +3,7 @@
 import { repairMojibake } from "./common.mjs";
 
 /** Categorías nacionales: todos sus pilotos entran al índice. En las internacionales, sólo los marcados como argentinos. */
-export const NATIONAL_SERIES = new Set(["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "tc2000", "cordoba-pista", "rally-argentino", "nuevo-car-show", "f2-arg"]);
+export const NATIONAL_SERIES = new Set(["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "tc2000", "cordoba-pista", "rally-argentino", "nuevo-car-show", "formula-nacional", "f2-arg"]);
 
 const MAKES = ["chevrolet", "chev", "ford", "mustang", "toyota", "torino", "dodge", "camaro", "challenger", "mercedes", "benz", "bmw", "fiat", "ram", "volkswagen", "vw", "peugeot", "honda", "renault"];
 /** Apellidos que terminan como una marca ("Caram" = "Ca" + "ram") y la limpieza de "Ttoyota" tomaría por una marca pegada. */
