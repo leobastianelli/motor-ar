@@ -126,7 +126,8 @@ test("fecha 2 (Concordia): dos carreras, con hora, vueltas, diferencias y grilla
 
   const rows1 = resultRows(r1, pilots);
   assert.equal(rows1.length, 8);
-  assert.deepEqual(rows1.slice(0, 3).map((r) => [r.pos, r.driver, r.gap]), [[1, "Tomás Campra", "16:29.230"], [2, "Renzo Sabatini", "+0.233"], [3, "Alejandro Guttlein", "+9.720"]]);
+  // Guttlein: el sitio dice "9.720", pero 16:39.950 − 16:29.230 = 10.720 (Faccioli, en cambio, coincide: 21.832). Manda la resta.
+  assert.deepEqual(rows1.slice(0, 3).map((r) => [r.pos, r.driver, r.gap]), [[1, "Tomás Campra", "16:29.230"], [2, "Renzo Sabatini", "+0.233"], [3, "Alejandro Guttlein", "+10.720"]]);
   assert.equal(rows1[0].team, "Giavedoni Motor Sport");
   assert.equal(rows1[0].number, "2");
   assert.equal(rows1[0].grid, 6);
@@ -258,4 +259,22 @@ test("los pilotos de la Fórmula Nacional entran al índice con un perfil, y el 
   assert.equal(campra[0].teams["formula-nacional"], "Giavedoni Motor Sport");
   assert.equal(campra[0].name, "Tomás Campra");
   assert.ok(index.drivers.some((d) => d.name === "Renzo Sabatini" && d.series.includes("formula-nacional")));
+});
+
+test("la diferencia sale de los tiempos: la columna rota del sitio (Toay, fecha 7) no llega a la página", () => {
+  // Carrera 1 de la fecha 7 tal como la publica el sitio: Campra a "5:49.000" con 15:32.817 contra 15:32.468 de Toselli.
+  const session = {
+    kind: "carrera",
+    rows: [
+      { pos: 1, name: "Fabricio TOSELLI", laps: 10, time: "15:32.468", diff: "0.000" },
+      { pos: 2, name: "Tomás CAMPRA", laps: 10, time: "15:32.817", diff: "5:49.000" },
+      { pos: 3, name: "Santino ROBERI", laps: 10, time: "15:33.525", diff: "1.057" },
+      { pos: 4, name: "Lento SINTIEMPO", laps: 10, time: "", diff: "1:02.500" },
+      { pos: 5, name: "Atrás VUELTAS", laps: 8, time: "15:40.000", diff: "2 vueltas" },
+    ],
+  };
+  assert.deepEqual(
+    resultRows(session, new Map()).map((r) => r.gap),
+    ["15:32.468", "+0.349", "+1.057", "+1:02.500", "+2 vueltas"],
+  );
 });
