@@ -161,6 +161,17 @@ function classify(title) {
 
 const lapTime = (s) => plain(s);
 const isZero = (s) => !s || /^0*[.:]?0*$/.test(s.replace(/[:.]/g, ""));
+/** "15:32.817" / "1:16.250" / "59.123" → milésimas; null si no es un tiempo. */
+const millis = (s) => {
+  const m = String(s ?? "").match(/^(?:(\d+):)?(\d{1,2})\.(\d{1,3})$/);
+  return m ? (Number(m[1] ?? 0) * 60 + Number(m[2])) * 1000 + Number(m[3].padEnd(3, "0")) : null;
+};
+/** 349 → "0.349"; 65123 → "1:05.123". */
+const fmtGap = (ms) => {
+  const min = Math.floor(ms / 60000);
+  const sec = ((ms % 60000) / 1000).toFixed(3);
+  return min ? `${min}:${sec.padStart(6, "0")}` : sec;
+};
 
 /** Filas de una tabla de tiempos: Posición | Piloto | Marca | Vueltas | Tiempo | Diferencia. */
 function tableRows(body) {
@@ -243,7 +254,14 @@ export function resultRows(session, pilots) {
     let gap = "";
     if (i === 0) gap = r.time;
     else if (behind > 0) gap = `+${behind} ${behind === 1 ? "vuelta" : "vueltas"}`;
-    else if (!isZero(r.diff)) gap = `+${r.diff}`;
+    else {
+      // La diferencia sale de los tiempos (carrera: total; práctica y clasificación: mejor vuelta). La columna del sitio a veces viene rota
+      // (Toay, fecha 7, carrera 1: Campra a "5:49.000" con 15:32.817 contra 15:32.468): sólo se usa si no hay tiempos para restar.
+      const own = millis(r.time);
+      const first = millis(leader.time);
+      if (own !== null && first !== null && own >= first) gap = own > first ? `+${fmtGap(own - first)}` : "";
+      else if (!isZero(r.diff)) gap = `+${r.diff}`;
+    }
     const grid = session.grid?.get(nameKey(r.name));
     return {
       pos: r.pos,
