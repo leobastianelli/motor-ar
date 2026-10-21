@@ -115,7 +115,7 @@ export function saludFindings(salud, now, { staleMin = 10, pendingMin = 60, home
       level: 1,
       tier: 1,
       title: r.motivo === "sin-resultados" ? `Fórmula Nacional: falta cargar la fecha ${r.fecha} (${r.nombre})` : `Fórmula Nacional: la fecha ${r.fecha} sigue provisoria`,
-      body: `Fórmula Nacional: falta cargar desde la PC: npm run sync:fna (desde la carpeta del repo; formulanacional.com.ar bloquea a GitHub y a Vercel). Publica solo y avisa al sitio si hay CRON_SECRET.`,
+      body: `Fórmula Nacional: falta cargar desde la PC: npm run sync:fna (desde la carpeta del repo; formulanacional.com.ar bloquea a GitHub y a Vercel). Publica y actualiza el sitio solo: no hace falta nada más.`,
     });
   }
   for (const p of salud.pendientes ?? []) {

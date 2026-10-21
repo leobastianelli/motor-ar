@@ -1,11 +1,12 @@
 // Rally Argentino desde una PC: rallyargentino.com y su API (Cloudflare) contestan 403 a GitHub Actions y a Vercel (probado el 4/10/2026), así que
 // esta fuente no puede correr en la nube. Este script trae calendario, resultados y campeonato desde acá y publica una versión del almacén (Neon)
 // que toca sólo el Rally, con las mismas protecciones que la sincronización (nunca se achica). La sincronización de GitHub conserva lo que deja.
-// Uso: npm run sync:rally (después de cada fecha). Necesita DATABASE_URL en .env.local; con CRON_SECRET además invalida el sitio.
+// Uso: npm run sync:rally (después de cada fecha). Necesita DATABASE_URL en .env.local; con CRON_SECRET invalida el sitio; sin él dispara la sincronización de GitHub (scripts/avisar-sitio.mjs).
 import { mergeRally, RALLY } from "../src/lib/rally-refresh-core.mjs";
 import { readLatest, writeVersion } from "../src/lib/season-store-write.mjs";
 import { repairMojibake } from "../src/lib/sources/common.mjs";
 import { rallyArgentinoSeason } from "../src/lib/sources/rally-argentino.mjs";
+import { avisarSitio } from "./avisar-sitio.mjs";
 import { connect } from "./season-source.mjs";
 
 const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
@@ -62,12 +63,4 @@ const reconcile = (candidate, newer) =>
 const written = await writeVersion(sql, { raw: result.raw, parentId: latest.id, origin: "sync", reconcile });
 console.log(written.unchanged ? `Sin cambios: sigue vigente la versión ${written.id}.` : `Versión ${written.id} escrita en el almacén.`);
 
-const secret = process.env.CRON_SECRET;
-if (!written.unchanged) {
-  if (!secret) console.log('Sin CRON_SECRET: el sitio lo muestra cuando corra la próxima sincronización (o: gh workflow run "Sincronizar temporada").');
-  else {
-    const site = (process.env.SITE_URL ?? "https://www.somosfierros.ar").replace(/\/$/, "");
-    const res = await fetch(`${site}/api/refresh`, { headers: { authorization: `Bearer ${secret}` }, signal: AbortSignal.timeout(60_000) });
-    console.log(`Sitio invalidado (${site}/api/refresh → ${res.status}).`);
-  }
-}
+if (!written.unchanged) await avisarSitio();
