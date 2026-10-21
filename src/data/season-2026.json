@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T21:25:53.589Z",
+  "generatedAt": "2026-10-21T14:17:52.549Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -205900,30 +205900,6 @@
       "source": "Jolpica-F1"
     },
     {
-      "id": "tc-2026-13",
-      "seriesId": "tc",
-      "round": 13,
-      "name": "Fecha 13 · Rosario",
-      "circuit": {
-        "name": "Juan Manuel Fangio-ROSARIO",
-        "city": "Rosario",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Santa Fe"
-      },
-      "sessions": [
-        {
-          "id": "tc-2026-13-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-10-25T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45
-        }
-      ],
-      "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
       "id": "tcp-2026-13",
       "seriesId": "tc-pista",
       "round": 13,
@@ -205937,15 +205913,231 @@
       },
       "sessions": [
         {
-          "id": "tcp-2026-13-final",
+          "id": "tcp-2026-13-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-10-24T08:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "08:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-13-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-10-24T13:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "13:05"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-13-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-10-24T15:26:00-03:00",
+          "timeKnown": true,
+          "durationMin": 22,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "15:26"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-13-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-10-25T10:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "10:05"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-13-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-10-25T10:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "10:30"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-13-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-10-25T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
+          "start": "2026-10-25T12:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "12:55"
+            }
+          ]
         }
       ],
       "source": "ACTC (calendario)"
+    },
+    {
+      "id": "tc-2026-13",
+      "seriesId": "tc",
+      "round": 13,
+      "name": "Fecha 13 · Rosario",
+      "circuit": {
+        "name": "Juan Manuel Fangio-ROSARIO",
+        "city": "Rosario",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Santa Fe"
+      },
+      "sessions": [
+        {
+          "id": "tc-2026-13-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-10-24T10:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "10:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-13-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-10-24T12:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "12:00"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-13-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-10-24T15:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "15:55"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-13-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-10-25T10:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "10:55"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-13-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-10-25T11:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "11:20"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-13-serie-serie3",
+          "kind": "serie",
+          "name": "Serie 3",
+          "start": "2026-10-25T11:45:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "11:45"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-13-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-10-25T14:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 50,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
+              "start": "14:00"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario) · Wikipedia (podios)"
     },
     {
       "id": "f1-2026-19",
@@ -211473,7 +211665,7 @@
     },
     "cordobaPista": {
       "events": 6,
-      "filledResults": 36,
+      "filledResults": 0,
       "errors": [],
       "ignored": [
         "evento 3611013: sede desconocida «PEDRO DEVALLE»",
@@ -212411,22 +212603,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -212467,16 +212643,16 @@
       "standingsSource": "https://actc.org.ar/tcppk/campeonato"
     },
     "schedules": {
-      "notes": 22,
+      "notes": 23,
       "officialPdfs": 0,
-      "sessions": 273,
+      "sessions": 286,
       "confirmed": 0,
       "conflicts": 0,
-      "eventsWithTimes": 40
+      "eventsWithTimes": 42
     },
     "timing": {
       "documents": 856,
-      "pagesFetched": 113,
+      "pagesFetched": 112,
       "eventsWithResults": 62,
       "retagged": {
         "1003": {
@@ -212936,6 +213112,7 @@
     }
   },
   "failures": [
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
