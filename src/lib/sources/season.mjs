@@ -20,7 +20,7 @@ import { applySchedules, buildConsensus, solotcNotes } from "./schedule-notes.mj
 import { protectSeason, protectStandings } from "./guard.mjs";
 import { tc2000Season } from "./tc2000.mjs";
 import { tcrSaSeason } from "./tcr-sa.mjs";
-import { formula2ArgSeason } from "./formula2-arg.mjs";
+import { applyF2Schedule, formula2ArgSeason } from "./formula2-arg.mjs";
 import { rallyArgentinoSeason } from "./rally-argentino.mjs";
 import { carryRally } from "../rally-refresh-core.mjs";
 
@@ -74,7 +74,8 @@ async function withSchedules(io, events, previous, failures) {
     const { events: timed, applied } = applySchedules(national, consensus);
     const byId = new Map(timed.map((e) => [e.id, e]));
     return {
-      events: events.map((e) => byId.get(e.id) ?? e),
+      // La Fórmula 2 Argentina no se reemplaza entera (tiene resultados de sesiones que el cronograma no trae): sólo se le ponen las horas.
+      events: events.map((e) => byId.get(e.id) ?? (e.seriesId === "f2-arg" ? applyF2Schedule(e, consensus) : e)),
       meta: {
         notes: notes.length,
         officialPdfs: official.length,

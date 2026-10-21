@@ -3,8 +3,10 @@
 // La organiza y fiscaliza la ACTC y corre junto al TC en todas las fechas; no tiene nada que ver con la Fórmula 2 de la FIA (`f2`).
 //
 // Qué publica el sitio y qué no:
-// - Calendario (/calendario-2026/): un solo día por fecha, el de la final (el domingo). No publica horarios: las tres sesiones quedan en ese día,
-//   "a confirmar", y nunca se inventa una hora ni un día de sábado.
+// - Calendario (/calendario-2026/): un solo día por fecha, el de la final (el domingo). No publica horarios. Las horas salen de las notas de cronograma
+//   del TC en actc.org.ar (bloque "Todos los horarios", líneas "Fórmula 2"; ver `applyF2Schedule`, que season.mjs llama con el consenso de
+//   horarios). Mientras no hay nota, el formato fijo del finde con la hora "a confirmar": entrenamientos, clasificación y carrera clasificatoria
+//   el sábado (el día anterior al del calendario) y la final el domingo.
 // - Resultados (/fecha-N-2026/): una tabla por sesión, "APELLIDO NOMBRE", con vueltas, tiempo y diferencia. Una fecha sin página (404) todavía no se corrió.
 // - Campeonato (/campeonato-de-pilotos-2026/): la tabla con puntos y victorias. Dice "(9/12)" pero ya suma las 10 victorias de las 10 finales
 //   corridas; para no ocultar una tabla al día ni mostrar una atrasada, la fecha hasta la que llega se toma del mayor de los dos números.
@@ -203,15 +205,47 @@ export function filasDe(rows, kind, nombres, equipos) {
   });
 }
 
+// Formato fijo del finde (el mismo que publica la ACTC cada fecha): dos entrenamientos, la clasificación y la carrera clasificatoria el sábado, la final
+// el domingo. Los nombres son los que lee `parseSchedule` en las notas de cronograma del TC, para que la hora oficial caiga en la sesión que corresponde.
 const SESSIONS = [
-  { kind: "clasificacion", suffix: "clasificacion", name: "Clasificación", durationMin: 20 },
-  { kind: "serie", suffix: "serie", name: "Carrera clasificatoria", durationMin: 20 },
-  { kind: "final", suffix: "final", name: "Final", durationMin: 30 },
+  { kind: "practica", suffix: "practica1", name: "1° Entrenamiento", durationMin: 30, saturday: true },
+  { kind: "practica", suffix: "practica2", name: "2° Entrenamiento", durationMin: 30, saturday: true },
+  { kind: "clasificacion", suffix: "clasificacion", name: "Clasificación", durationMin: 10, saturday: true },
+  { kind: "serie", suffix: "serie", name: "Carrera clasificatoria", durationMin: 10, saturday: true },
+  { kind: "final", suffix: "final", name: "Final", durationMin: 20, saturday: false },
 ];
+
+const isoDay = (y, m, d) => new Date(Date.UTC(y, m - 1, d)).toISOString().slice(0, 10);
+const dayBefore = (c) => {
+  const [y, m, d] = isoDay(YEAR, c.month, c.day - 1).split("-").map(Number);
+  return { y, m, d };
+};
+
+/**
+ * Horas oficiales de una fecha: las sesiones de `consensus` (buildConsensus de las notas de cronograma de la ACTC, ya con la categoría `f2-arg`)
+ * que caen en el fin de semana de la fecha. Cada una pisa la hora "a confirmar" de la sesión del mismo nombre; las que la nota no trae quedan como estaban.
+ */
+export function applyF2Schedule(event, consensus) {
+  const finalDay = event.sessions.find((s) => s.kind === "final")?.start.slice(0, 10);
+  if (!finalDay) return event;
+  const [y, m, d] = finalDay.split("-").map(Number);
+  const from = isoDay(y, m, d - 3);
+  const found = consensus.filter((s) => s.seriesId === SERIES && s.date >= from && s.date <= finalDay);
+  if (!found.length) return event;
+  const sessions = event.sessions.map((s) => {
+    const hit = found.find((f) => f.name === s.name);
+    if (!hit) return s;
+    const start = `${hit.date}T${hit.start}:00-03:00`;
+    const minutes = hit.end ? Math.max(5, (Date.parse(`${hit.date}T${hit.end}:00-03:00`) - Date.parse(start)) / 60000) : s.durationMin;
+    return { ...s, start, timeKnown: true, durationMin: minutes, timeStatus: hit.status, timeSources: hit.sources };
+  });
+  return { ...event, sessions: sessions.sort((a, b) => Date.parse(a.start) - Date.parse(b.start)) };
+}
 
 function eventFor(c) {
   const id = `${SERIES}-${YEAR}-${c.round}`;
-  const start = dateOnly(YEAR, c.month, c.day);
+  const sunday = dateOnly(YEAR, c.month, c.day);
+  const saturday = (({ y, m, d }) => dateOnly(y, m, d))(dayBefore(c));
   const sede = sedeDe(c.venue);
   return {
     id,
@@ -219,7 +253,7 @@ function eventFor(c) {
     round: c.round,
     name: `Fecha ${c.round} · ${sede.city}`,
     circuit: sede,
-    sessions: SESSIONS.map((s) => ({ id: `${id}-${s.suffix}`, kind: s.kind, name: s.name, start, timeKnown: false, durationMin: s.durationMin })),
+    sessions: SESSIONS.map((s) => ({ id: `${id}-${s.suffix}`, kind: s.kind, name: s.name, start: s.saturday ? saturday : sunday, timeKnown: false, durationMin: s.durationMin })),
     source: SOURCE,
   };
 }
@@ -276,7 +310,8 @@ export async function formula2ArgSeason(io, previous = { events: [], standings: 
     const event = eventFor(c);
     const page = parsed.get(c.round);
     for (const section of page?.sections ?? []) {
-      const session = event.sessions.find((s) => s.kind === section.kind);
+      // El sitio no publica entrenamientos: si algún día lo hace, hay que decidir a cuál de los dos va cada tabla.
+      const session = section.kind === "practica" ? null : event.sessions.find((s) => s.kind === section.kind);
       if (!session) {
         notes.push(`Fecha ${c.round}: «${section.heading}» no tiene sesión en el modelo, no se carga`);
         continue;
@@ -286,8 +321,15 @@ export async function formula2ArgSeason(io, previous = { events: [], standings: 
       session.results = results;
       session.resultsSource = { name: "Fórmula 2 Argentina · resultados oficiales", url: `${SITE}/fecha-${c.round}-${YEAR}/` };
     }
+    // La hora oficial que ya teníamos (de las notas de cronograma de la ACTC, que sólo se leen mientras están recientes) no vuelve a "a confirmar".
+    const old = before.get(event.id);
+    for (const s of event.sessions) {
+      const was = old?.sessions.find((x) => x.id === s.id);
+      if (was?.timeKnown) Object.assign(s, { start: was.start, timeKnown: true, durationMin: was.durationMin, timeStatus: was.timeStatus, timeSources: was.timeSources });
+    }
+    event.sessions.sort((a, b) => Date.parse(a.start) - Date.parse(b.start));
     // Nada ya cargado se pierde porque el sitio de hoy no lo traiga (página caída, tabla vacía, fecha fuera de la ventana).
-    events.push(keepSessionData(event, before.get(event.id)).event);
+    events.push(keepSessionData(event, old).event);
   }
   // Una fecha que el calendario de hoy ya no trae se conserva (el sitio nunca achica la temporada).
   const lost = missingEvents(events, [...before.values()], [SERIES]);

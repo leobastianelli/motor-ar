@@ -30,6 +30,18 @@ export function nextWeekday(from, weekday) {
   return d.toISOString().slice(0, 10);
 }
 
+// Del más específico al más general. `null`: lo que no es una categoría (el show de la recta principal) no se atribuye a la anterior.
+const HEADINGS = [
+  [/^formula 2$/, "F2"],
+  [/^tc pista pick[ -]?up$/, "TCPPK"],
+  [/^tc pick[ -]?up$/, "TCPK"],
+  [/^tc pista mouras$/, "TCPM"],
+  [/^tc mouras$/, "TCM"],
+  [/^tc pista$/, "TCP"],
+  [/^turismo carretera$/, "TC"],
+  [/^espectaculo/, null],
+];
+
 const ORDINAL = { "1er": "1°", "2do": "2°", "3er": "3°", "4to": "4°", primer: "1°", primero: "1°", segundo: "2°", tercer: "3°", tercero: "3°" };
 
 /**
@@ -50,6 +62,12 @@ export function normalizeActcNote(text, publishedDay) {
       const name = line.replace(/[\s:.-]+$/, "").toLowerCase();
       out.push(`${name.charAt(0).toUpperCase()}${name.slice(1)} ${d} de ${MONTH_NAME[m - 1]} de ${y}`);
       category = null;
+      continue;
+    }
+    // Encabezado de grupo del bloque "Todos los horarios" ("Fórmula 2", "TC Pista", "Turismo Carretera", "Espectáculo"): cambia la categoría de las líneas que siguen.
+    const heading = HEADINGS.find(([re]) => re.test(plain(line).replace(/\s+/g, " ")));
+    if (heading) {
+      category = heading[1];
       continue;
     }
     // "TCPM" solo en una línea, o "TCPM | 10:40 a 11:00 Hs. …", o "TCPM| 13:08 …".
@@ -77,7 +95,7 @@ export function normalizeActcNote(text, publishedDay) {
 
 /** Día de publicación de una nota de la ACTC: la firma "Prensa ACTC · 14/08/2026" o, si no está, la primera fecha AAAA-MM-DD de la página. */
 export function publishedDay(html) {
-  const signed = String(html).match(/Prensa ACTC[^0-9]{0,12}(\d{1,2})\/(\d{1,2})\/(20\d\d)/);
+  const signed = String(html).match(/(?:Prensa|Redacci[oó]n) ACTC[^0-9]{0,12}(\d{1,2})\/(\d{1,2})\/(20\d\d)/);
   if (signed) return `${signed[3]}-${pad(Number(signed[2]))}-${pad(Number(signed[1]))}`;
   return String(html).match(/\b(20\d\d-\d\d-\d\d)\b/)?.[1] ?? null;
 }

@@ -105,10 +105,11 @@ test("campeonato: puntos con coma decimal, victorias y el rótulo (9/12)", () =>
 test("temporada: 12 fechas, tres sesiones por fecha, ganadores como en el sitio y lo que falta, sin datos", async () => {
   const season = await run();
   assert.equal(season.events.length, 12);
-  assert.ok(season.events.every((e) => e.seriesId === "f2-arg" && e.sessions.map((s) => s.kind).join() === "clasificacion,serie,final"));
+  assert.ok(season.events.every((e) => e.seriesId === "f2-arg" && e.sessions.map((s) => s.kind).join() === "practica,practica,clasificacion,serie,final"));
   const [f1, , f3, , , , , f8, f9, f10, f11] = season.events;
   assert.equal(f1.name, "Fecha 1 · Viedma");
-  assert.equal(f1.sessions[0].start, "2026-03-08T12:00:00-03:00");
+  // Sin nota de cronograma: entrenamientos, clasificación y clasificatoria el sábado (día anterior al del calendario), la final el domingo, todo "a confirmar".
+  assert.deepEqual(f1.sessions.map((s) => s.start.slice(0, 10)), ["2026-03-07", "2026-03-07", "2026-03-07", "2026-03-07", "2026-03-08"]);
   assert.equal(f1.sessions.every((s) => s.timeKnown === false), true);
   assert.equal(f3.circuit.city, "Concepción del Uruguay");
   assert.equal(season.events[1].circuit.city, "Centenario"); // Neuquén: la ACTC lo pone en Centenario, igual que el TC

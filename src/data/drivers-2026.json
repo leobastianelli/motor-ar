@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T21:16:32.946Z",
+  "generatedAt": "2026-10-21T20:47:34.845Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -2034,6 +2034,26 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "delfina villaberde",
+      "keys": [
+        "delfina villaberde"
+      ],
+      "slug": "delfina-villaberde",
+      "name": "Delfina Villaberde",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "88"
+      },
+      "teams": {
+        "f2-arg": "Aimar Motorsport"
+      },
+      "firstSeen": "2026-03-28",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "a diego martinez",
       "keys": [
         "a diego martinez"
@@ -3083,6 +3103,24 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "facundo gutierrez",
+      "keys": [
+        "facundo gutierrez"
+      ],
+      "slug": "facundo-gutierrez",
+      "name": "Facundo Gutiérrez",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "113"
+      },
+      "teams": {},
+      "firstSeen": "2026-09-12",
+      "lastSeen": "2026-09-13"
+    },
+    {
       "key": "facundo ledesma",
       "keys": [
         "facundo ledesma"
@@ -3249,6 +3287,26 @@
       },
       "teams": {
         "nuevo-car-show": "Fiat Uno"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "federico piper",
+      "keys": [
+        "federico piper"
+      ],
+      "slug": "federico-piper",
+      "name": "Federico Piper",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "8"
+      },
+      "teams": {
+        "f2-arg": "Werner Competición"
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-10-04"
@@ -3726,6 +3784,26 @@
       },
       "firstSeen": "2026-05-24",
       "lastSeen": "2026-05-24"
+    },
+    {
+      "key": "franco ledesma",
+      "keys": [
+        "franco ledesma"
+      ],
+      "slug": "franco-ledesma",
+      "name": "Franco Ledesma",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "6"
+      },
+      "teams": {
+        "f2-arg": "Werner Competición"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "franco melli",
@@ -5064,6 +5142,26 @@
       "lastSeen": "2026-10-17"
     },
     {
+      "key": "ignacio monti",
+      "keys": [
+        "ignacio monti"
+      ],
+      "slug": "ignacio-monti",
+      "name": "Ignacio Monti",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "5"
+      },
+      "teams": {
+        "f2-arg": "Aimar Motorsport"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "ignacio nieto",
       "keys": [
         "ignacio nieto"
@@ -5106,6 +5204,26 @@
       },
       "firstSeen": "2026-01-24",
       "lastSeen": "2026-10-18"
+    },
+    {
+      "key": "ignacio sachs",
+      "keys": [
+        "ignacio sachs"
+      ],
+      "slug": "ignacio-sachs",
+      "name": "Ignacio Sachs",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "36"
+      },
+      "teams": {
+        "f2-arg": "Werner Competición"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "ignacio vaira",
@@ -5289,6 +5407,24 @@
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-09-13"
+    },
+    {
+      "key": "ivan percara",
+      "keys": [
+        "ivan percara"
+      ],
+      "slug": "ivan-percara",
+      "name": "Iván Percara",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "68"
+      },
+      "teams": {},
+      "firstSeen": "2026-08-22",
+      "lastSeen": "2026-08-23"
     },
     {
       "key": "g j pedrotti schuck",
@@ -5563,6 +5699,26 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "joaquin pagola",
+      "keys": [
+        "joaquin pagola"
+      ],
+      "slug": "joaquin-pagola",
+      "name": "Joaquín Pagola",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "117"
+      },
+      "teams": {
+        "f2-arg": "ESG Formula"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-05-31"
     },
     {
       "key": "joaquin quinteros",
@@ -6863,6 +7019,26 @@
       "lastSeen": "2026-05-17"
     },
     {
+      "key": "juan leonardelli pablo",
+      "keys": [
+        "juan leonardelli pablo"
+      ],
+      "slug": "juan-pablo-leonardelli",
+      "name": "Juan Pablo Leonardelli",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "99"
+      },
+      "teams": {
+        "f2-arg": "Werner Competición"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "juan main pablo",
       "keys": [
         "juan main pablo"
@@ -7284,6 +7460,26 @@
       "teams": {},
       "firstSeen": "2026-08-22",
       "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "lautaro videla",
+      "keys": [
+        "lautaro videla"
+      ],
+      "slug": "lautaro-videla",
+      "name": "Lautaro Videla",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "7"
+      },
+      "teams": {
+        "f2-arg": "Martinez Competicion"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-10-04"
     },
     {
       "key": "bonnin leandro",
@@ -9809,6 +10005,24 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "moix morena",
+      "keys": [
+        "moix morena"
+      ],
+      "slug": "morena-moix",
+      "name": "Morena Moix",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "95"
+      },
+      "teams": {},
+      "firstSeen": "2026-07-11",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "cutro nadia",
       "keys": [
         "cutro nadia"
@@ -11657,6 +11871,26 @@
       "lastSeen": "2026-09-06"
     },
     {
+      "key": "audisio salvador",
+      "keys": [
+        "audisio salvador"
+      ],
+      "slug": "salvador-audisio",
+      "name": "Salvador Audisio",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "33"
+      },
+      "teams": {
+        "f2-arg": "Werner Competición"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "ferretti sandro",
       "keys": [
         "ferretti sandro"
@@ -12005,6 +12239,26 @@
       "lastSeen": "2026-10-11"
     },
     {
+      "key": "dore santino",
+      "keys": [
+        "dore santino"
+      ],
+      "slug": "santino-dore",
+      "name": "Santino Dore",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "58"
+      },
+      "teams": {
+        "f2-arg": "Cepeda Racing"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-03-29"
+    },
+    {
       "key": "estanguet santino",
       "keys": [
         "estanguet santino"
@@ -12121,6 +12375,26 @@
       },
       "firstSeen": "2026-05-30",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "caram sebastian",
+      "keys": [
+        "caram sebastian"
+      ],
+      "slug": "sebastian-caram",
+      "name": "Sebastián Caram",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "44"
+      },
+      "teams": {
+        "f2-arg": "LR Team"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-08-02"
     },
     {
       "key": "gomez sebastian",
@@ -12574,6 +12848,26 @@
       "lastSeen": "2026-10-10"
     },
     {
+      "key": "ojeda thomas",
+      "keys": [
+        "ojeda thomas"
+      ],
+      "slug": "thomas-ojeda",
+      "name": "Thomas Ojeda",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "51"
+      },
+      "teams": {
+        "f2-arg": "ESG Formula"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-10-04"
+    },
+    {
       "key": "pozner thomas",
       "keys": [
         "pozner thomas"
@@ -12615,6 +12909,26 @@
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-18"
+    },
+    {
+      "key": "chiriotti tiago",
+      "keys": [
+        "chiriotti tiago"
+      ],
+      "slug": "tiago-chiriotti",
+      "name": "Tiago Chiriotti",
+      "aliases": [],
+      "series": [
+        "f2-arg"
+      ],
+      "numbers": {
+        "f2-arg": "111"
+      },
+      "teams": {
+        "f2-arg": "Cepeda Racing"
+      },
+      "firstSeen": "2026-03-07",
+      "lastSeen": "2026-03-29"
     },
     {
       "key": "pernia tiago",
@@ -13066,13 +13380,16 @@
       "name": "Valentino Alaux",
       "aliases": [],
       "series": [
-        "tc-mouras"
+        "tc-mouras",
+        "f2-arg"
       ],
       "numbers": {
-        "tc-mouras": "26"
+        "tc-mouras": "26",
+        "f2-arg": "1"
       },
       "teams": {
-        "tc-mouras": "Dodge"
+        "tc-mouras": "Dodge",
+        "f2-arg": "Werner Competición"
       },
       "firstSeen": "2026-01-23",
       "lastSeen": "2026-10-18"

@@ -4,7 +4,9 @@
 // es la que escribe el almacén; ésta sirve para probar la fuente en local y para ver las páginas con `next dev`.
 // Uso: npm run sync:f2arg
 import fs from "node:fs";
-import { formula2ArgSeason } from "../src/lib/sources/formula2-arg.mjs";
+import { applyF2Schedule, formula2ArgSeason } from "../src/lib/sources/formula2-arg.mjs";
+import { actcNotes } from "../src/lib/sources/actc-site.mjs";
+import { buildConsensus } from "../src/lib/sources/schedule-notes.mjs";
 import { repairMojibake } from "../src/lib/sources/common.mjs";
 import { buildDriverIndex } from "../src/lib/sources/driver-index.mjs";
 import { protectSeason } from "../src/lib/sources/guard.mjs";
@@ -37,6 +39,13 @@ const io = { text, json: async (url, options) => JSON.parse(await text(url, opti
 const windowDays = Number(process.env.TIMING_DAYS ?? 400);
 
 const f2 = await formula2ArgSeason(io, season, { windowDays, delayMs: 400 });
+// Horas oficiales de las notas de cronograma de la ACTC (bloque "Todos los horarios" del TC, líneas "Fórmula 2"), como en la sincronización completa.
+try {
+  const consensus = buildConsensus(await actcNotes(io));
+  f2.events = f2.events.map((e) => applyF2Schedule(e, consensus));
+} catch (error) {
+  f2.meta["f2-arg"].errors.push(`Cronograma ACTC: ${error.message} (quedan las horas anteriores)`);
+}
 const others = season.events.filter((e) => e.seriesId !== "f2-arg");
 // Misma red de seguridad que la sincronización completa: nada de lo que ya estaba se pierde.
 const guarded = protectSeason([...others, ...f2.events], season);
