@@ -2,7 +2,7 @@
 // puede correr en la nube (desde una conexión hogareña, 200). Este script trae calendario, horarios, tiempos de cada sesión y campeonato desde acá y
 // publica una versión del almacén (Neon) que toca sólo la Fórmula Nacional, con las mismas protecciones que la sincronización (nunca se achica).
 // La sincronización de GitHub la saltea y conserva lo que deja. Es rápido (~1 minuto, con pausa entre pedidos).
-// Uso: npm run sync:fna (después de cada fecha). Necesita DATABASE_URL en .env.local; con CRON_SECRET además invalida el sitio.
+// Uso: npm run sync:fna (después de cada fecha). Necesita DATABASE_URL en .env.local; con CRON_SECRET invalida el sitio; sin él dispara la sincronización de GitHub (scripts/avisar-sitio.mjs).
 //      npm run sync:fna -- --json  sólo escribe src/data/season-2026.json y drivers-2026.json (sin Neon): para probar o si no hay almacén.
 import fs from "node:fs";
 import { FNA, fnaRefresh } from "../src/lib/fna-refresh-core.mjs";
@@ -11,6 +11,7 @@ import { repairMojibake } from "../src/lib/sources/common.mjs";
 import { buildDriverIndex } from "../src/lib/sources/driver-index.mjs";
 import { formulaNacionalSeason } from "../src/lib/sources/formula-nacional.mjs";
 import { protectSeason, protectStandings } from "../src/lib/sources/guard.mjs";
+import { avisarSitio } from "./avisar-sitio.mjs";
 import { connect } from "./season-source.mjs";
 
 const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
@@ -97,13 +98,7 @@ async function publish() {
   console.log(written.unchanged ? `Sin cambios: sigue vigente la versión ${written.id}.` : `Versión ${written.id} escrita en el almacén.`);
 
   if (written.unchanged) return;
-  const secret = process.env.CRON_SECRET;
-  if (!secret) console.log('Sin CRON_SECRET: el sitio lo muestra cuando corra la próxima sincronización (o: gh workflow run "Sincronizar temporada").');
-  else {
-    const site = (process.env.SITE_URL ?? "https://www.somosfierros.ar").replace(/\/$/, "");
-    const res = await fetch(`${site}/api/refresh`, { headers: { authorization: `Bearer ${secret}` }, signal: AbortSignal.timeout(60_000) });
-    console.log(`Sitio invalidado (${site}/api/refresh → ${res.status}).`);
-  }
+  await avisarSitio();
 }
 
 await (jsonOnly ? writeJson() : publish());
