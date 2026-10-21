@@ -23,7 +23,7 @@ import { tcrSaSeason } from "./tcr-sa.mjs";
 import { applyF2Schedule, formula2ArgSeason } from "./formula2-arg.mjs";
 import { formulaNacionalSeason } from "./formula-nacional.mjs";
 import { rallyArgentinoSeason } from "./rally-argentino.mjs";
-import { carryRally } from "../rally-refresh-core.mjs";
+import { PC_SERIES } from "../pc-series.mjs";
 
 const SOURCES = [
   ["F1", ["f1"], f1Season],
@@ -108,7 +108,7 @@ async function withSchedules(io, events, previous, failures) {
 
 /**
  * `skip`: rótulos de SOURCES que no se consultan en esta corrida. Su categoría pasa tal cual de la versión anterior, sin anotar una falla:
- * hoy sólo el Rally en GitHub Actions, donde rallyargentino.com contesta 403 y también a Vercel: lo publica `npm run sync:rally` desde una PC (scripts/sync-rally.mjs).
+ * hoy el Rally y la Fórmula Nacional en GitHub Actions (Cloudflare les contesta 403; ver pc-series.mjs): los publican `npm run sync:rally` y `npm run sync:fna` desde una PC.
  */
 export async function buildSeason(io, previous = { events: [], standings: {}, meta: {} }, log = () => {}, { skip = [] } = {}) {
   let events = [];
@@ -143,17 +143,20 @@ export async function buildSeason(io, previous = { events: [], standings: {}, me
 
   // Errores parciales de Córdoba Pista (una sesión o un evento que no se pudo leer; lo ya guardado se conserva).
   for (const error of meta.cordobaPista?.errors ?? []) failures.push(`Córdoba Pista: ${error}`);
-  if (skip.includes("Rally Argentino")) {
-    // Salteado: el Rally (incluidos `meta.rallyArgentino` y sus fallas, con el estado de Vercel) queda como estaba en la versión anterior.
-    const kept = carryRally({ events, standings, meta, failures }, previous);
-    meta.rallyArgentino = kept.meta.rallyArgentino;
-    failures.splice(0, failures.length, ...kept.failures);
-  } else {
-    for (const error of meta.rallyArgentino?.errors ?? []) failures.push(`Rally Argentino: ${error}`);
+  // Categorías que se cargan desde una PC (Rally, Fórmula Nacional). Salteadas: su categoría (incluidos `meta[sourceKey]` y sus fallas, con el estado de
+  // la PC) queda como estaba en la versión anterior. Si no, sus errores parciales son fallas de esta corrida.
+  for (const { label, refresh } of PC_SERIES) {
+    if (skip.includes(label)) {
+      const kept = refresh.carry({ events, standings, meta, failures }, previous);
+      if (kept.meta[refresh.sourceKey] === undefined) delete meta[refresh.sourceKey];
+      else meta[refresh.sourceKey] = kept.meta[refresh.sourceKey];
+      failures.splice(0, failures.length, ...kept.failures);
+    } else {
+      for (const error of meta[refresh.sourceKey]?.errors ?? []) failures.push(`${label}: ${error}`);
+    }
   }
   for (const error of meta.nuevoCarShow?.errors ?? []) failures.push(`Nuevo Car Show: ${error}`);
   for (const error of meta["f2-arg"]?.errors ?? []) failures.push(`Fórmula 2 Argentina: ${error}`);
-  for (const error of meta.formulaNacional?.errors ?? []) failures.push(`Fórmula Nacional: ${error}`);
 
   // Campeonato oficial de la ACTC para las categorías que no tienen otra tabla (el del TC sale de Wikipedia y la carga manual).
   const missingTables = ACTC_CATEGORIES.filter((c) => c.path !== "tc" && !standings[c.seriesId]?.length);

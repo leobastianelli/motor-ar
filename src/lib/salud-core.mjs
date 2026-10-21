@@ -2,12 +2,13 @@
 // La usan el <meta> del layout, los avisos visibles, /api/salud y el vigilante.
 const MIN = 60_000;
 
-/** Categorías con fuente automática (ver SOURCES en src/lib/sources/season.mjs). TC2000 y GT3 se cargan a mano y no cuentan. */
-export const AUTOMATIC_SERIES = new Set(["f1", "f2", "tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "cordoba-pista", "tcr-sa", "rally-argentino", "nuevo-car-show", "formula-nacional", "f2-arg"]);
+/** Categorías con fuente automática (ver SOURCES en src/lib/sources/season.mjs). TC2000 y GT3 se cargan a mano y no cuentan; tampoco la
+ * Fórmula Nacional, que se publica desde una PC (npm run sync:fna) y la avisa `fnaPendiente`: contarla acá daría "pendiente" en falso apenas termina cada sesión. */
+export const AUTOMATIC_SERIES = new Set(["f1", "f2", "tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up", "tn", "cordoba-pista", "tcr-sa", "rally-argentino", "nuevo-car-show", "f2-arg"]);
 
 // Cómo empieza el texto de una falla (`failures[]`) de cada fuente de resultados, por categoría. Los videos y cronogramas no son resultados.
 const ACTC = /^(ACTC|Tiempos ACTC|Campeonato ACTC)\b/;
-const FAILURE_OF = { f1: /^(F1|OpenF1|F1 oficial)\b/, f2: /^(F2|FIA F2)\b/, tn: /^(TN APAT|Speedhive TN)/, "rally-argentino": /^Rally Argentino/, "cordoba-pista": /^Córdoba Pista\b/, "nuevo-car-show": /^Nuevo Car Show\b/, "formula-nacional": /^Fórmula Nacional\b/, "f2-arg": /^Fórmula 2 Argentina/ };
+const FAILURE_OF = { f1: /^(F1|OpenF1|F1 oficial)\b/, f2: /^(F2|FIA F2)\b/, tn: /^(TN APAT|Speedhive TN)/, "rally-argentino": /^Rally Argentino/, "cordoba-pista": /^Córdoba Pista\b/, "nuevo-car-show": /^Nuevo Car Show\b/, "f2-arg": /^Fórmula 2 Argentina/ };
 for (const id of ["tc", "tc-pista", "tc-mouras", "tc-pista-mouras", "tc-pick-up", "tc-pista-pick-up"]) FAILURE_OF[id] = ACTC;
 
 /** Contenido de `<meta name="fierros-datos">`: `v=<id>;origen=<origen>;generado=<ISO>;servido=<de dónde>`. */
@@ -114,26 +115,33 @@ export function latestEventWithResults(events) {
 export const MENU_NOTES = 4;
 
 /**
- * Fechas del Rally Argentino que esperan `npm run sync:rally` desde una PC: Cloudflare de rallyargentino.com bloquea a GitHub Actions y a Vercel,
- * así que nadie en la nube puede traerlas. Una fecha terminada hace más de `after` horas sin resultados ("sin-resultados"), o con la clasificación
- * todavía provisoria después de `provisionalDays` días ("provisoria": la organización ya debería haberla pasado a su histórico). Hasta `withinDays`.
+ * Fechas de una categoría que se carga desde una PC (su fuente, detrás de Cloudflare, bloquea a GitHub Actions y a Vercel: nadie en la nube puede
+ * traerlas) y esperan el script. Una fecha terminada hace más de `after` horas sin resultados ("sin-resultados"), o con la clasificación todavía
+ * provisoria después de `provisionalDays` días ("provisoria": la organización ya debería haberla pasado a su histórico). Hasta `withinDays`.
+ * El fin de la fecha es el de su última sesión; si las sesiones van sin hora (`timeKnown: false`, mediodía) cuenta hasta el final del día.
  */
-export function rallyLocalSyncDue(events, now, { after = 12, provisionalDays = 3, withinDays = 21 } = {}) {
+export function pcSyncDue(events, now, seriesId, { after = 12, provisionalDays = 3, withinDays = 21 } = {}) {
   const nowMs = Date.parse(now);
   const out = [];
   for (const e of events) {
-    if (e.seriesId !== "rally-argentino" || !e.sessions?.length) continue;
-    const end = Math.max(...e.sessions.map((s) => Date.parse(s.start))) + 12 * 3600_000; // las sesiones van sin hora (mediodía): fin del día
+    if (e.seriesId !== seriesId || !e.sessions?.length) continue;
+    const end = Math.max(...e.sessions.map((s) => Date.parse(s.start) + (s.timeKnown === false ? 12 * 3600_000 : (s.durationMin ?? 60) * MIN)));
     const hours = (nowMs - end) / 3600_000;
     if (hours < after || hours > withinDays * 24) continue;
     const races = e.sessions.filter((s) => s.kind === "final" || s.kind === "carrera");
-    if (races.some((s) => s.resultsUnread)) continue; // la fuente no la publica (fecha 1): correr el script no la arregla
+    if (!races.length || races.some((s) => s.resultsUnread)) continue; // la fuente no la publica (fecha 1 del Rally): correr el script no la arregla
     const conResultados = races.filter((s) => s.results?.length);
     const motivo = !conResultados.length ? "sin-resultados" : conResultados.some((s) => s.resultsSource?.status === "provisional") && hours >= provisionalDays * 24 ? "provisoria" : null;
     if (motivo) out.push({ evento: e.id, fecha: e.round, nombre: e.name, motivo, terminoHaceHoras: Math.round(hours) });
   }
   return out;
 }
+
+/** Fechas del Rally Argentino que esperan `npm run sync:rally` desde una PC (rallyargentino.com bloquea a GitHub Actions y a Vercel). */
+export const rallyLocalSyncDue = (events, now, options) => pcSyncDue(events, now, "rally-argentino", options);
+
+/** Fechas de la Fórmula Nacional que esperan `npm run sync:fna` desde una PC (formulanacional.com.ar bloquea a GitHub Actions). */
+export const fnaLocalSyncDue = (events, now, options) => pcSyncDue(events, now, "formula-nacional", options);
 
 /**
  * Cuerpo de /api/salud. `stored` es la última fila del almacén leída sin caché ({ id, origin, createdAt }) o null si no se pudo.
@@ -150,6 +158,7 @@ export function healthReport({ source, stored, storeError, failures = [], events
     ganadoresRecientes: recentWinners(events, now),
     eventoReciente: latestEventWithResults(events),
     rallyPendiente: rallyLocalSyncDue(events, now),
+    fnaPendiente: fnaLocalSyncDue(events, now),
     cronicas: notes.flatMap((n, i) => (n.auto ? [{ slug: n.slug, title: n.title, enMenu: i < MENU_NOTES }] : [])),
   };
 }

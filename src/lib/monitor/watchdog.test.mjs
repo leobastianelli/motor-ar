@@ -113,3 +113,14 @@ test("salud: el Rally pendiente se avisa con la instrucción para correrlo desde
   assert.match(sin.body, /npm run sync:rally/);
   assert.equal(prov.severity, "info");
 });
+
+test("salud: la Fórmula Nacional pendiente se avisa con la instrucción para correrla desde la PC", () => {
+  const base = { sirviendo: { versionId: 1, servedFrom: "store" }, almacen: { ultimaVersion: 1, createdAt: "2026-11-02T14:00:00Z", origin: "sync" } };
+  const out = saludFindings({ ...base, fnaPendiente: [{ evento: "formula-nacional-2026-8", fecha: 8, nombre: "General Roca", motivo: "sin-resultados" }] }, "2026-11-02T15:00:00Z");
+  const fna = out.find((f) => f.key.startsWith("fna-sync:"));
+  assert.equal(fna.key, "fna-sync:formula-nacional-2026-8:sin-resultados");
+  assert.equal(fna.severity, "medium");
+  assert.match(fna.title, /Fórmula Nacional: falta cargar la fecha 8/);
+  assert.match(fna.body, /falta cargar desde la PC: npm run sync:fna/);
+  assert.ok(!out.some((f) => f.key.startsWith("rally-sync:")));
+});
