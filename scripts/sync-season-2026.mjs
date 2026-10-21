@@ -3,7 +3,8 @@
 // parte del archivo. En ambos casos regenera src/data/season-2026.json (respaldo y datos de compilación) y drivers-2026.json.
 // Uso: npm run sync:season
 import fs from "node:fs";
-import { carryRally, inActions, RALLY_LABEL } from "../src/lib/rally-refresh-core.mjs";
+import { inActions } from "../src/lib/pc-refresh-core.mjs";
+import { carryPcSeries, PC_LABELS } from "../src/lib/pc-series.mjs";
 import { parseDataMeta } from "../src/lib/salud-core.mjs";
 import { writeVersion } from "../src/lib/season-store-write.mjs";
 import { loadSeason } from "./season-source.mjs";
@@ -62,10 +63,11 @@ const start = await loadSeason(OUTPUT, { requireStore: true });
 const previous = start.raw;
 console.log(`Se parte de: ${start.label}`);
 
-// rallyargentino.com y su API (Cloudflare) contestan 403 a las IPs de GitHub Actions: ahí el Rally se saltea y se conserva lo que haya escrito el
-// script `npm run sync:rally` desde una PC (scripts/sync-rally.mjs; Vercel también recibe 403), sin anotar una falla que no es nuestra. Corriendo en otro lado (local) se consulta normal.
-const skipRally = inActions();
-if (skipRally) console.log("Rally Argentino: se saltea en GitHub Actions (lo publica npm run sync:rally desde una PC).");
+// rallyargentino.com (y su API) y formulanacional.com.ar están detrás de Cloudflare y contestan 403 a las IPs de GitHub Actions: ahí el Rally y la
+// Fórmula Nacional se saltean y se conserva lo que hayan escrito `npm run sync:rally` y `npm run sync:fna` desde una PC (scripts/sync-rally.mjs y
+// scripts/sync-formula-nacional.mjs), sin anotar una falla que no es nuestra. Corriendo en otro lado (local) se consultan normal.
+const skipPc = inActions() ? PC_LABELS : [];
+if (skipPc.length) console.log(`${skipPc.join(" y ")}: se saltean en GitHub Actions (los publican npm run sync:rally y npm run sync:fna desde una PC).`);
 const season = await buildSeason(
   io,
   previous,
@@ -75,7 +77,7 @@ const season = await buildSeason(
       `${label.padEnd(14)} ${String(part.events.length).padStart(3)} eventos · ${sessions.filter((s) => s.results?.length).length} con resultados · ${sessions.filter((s) => s.timeKnown).length} con horario`,
     );
   },
-  { skip: skipRally ? [RALLY_LABEL] : [] },
+  { skip: skipPc },
 );
 for (const failure of season.failures) console.error(`ERROR ${failure} (se conservan los datos anteriores)`);
 
@@ -85,8 +87,8 @@ let saved = season;
 let published = false;
 let vigente = null;
 if (start.sql) {
-  // Si Vercel escribió una versión mientras esta corrida trabajaba, el Rally que quede es el de esa versión, no el que esta corrida leyó al empezar.
-  const reconcile = skipRally ? (candidate, latest) => carryRally(mergeOnto(candidate, latest), latest) : mergeOnto;
+  // Si la PC escribió una versión mientras esta corrida trabajaba, el Rally y la Fórmula Nacional que queden son los de esa versión, no los que esta corrida leyó al empezar.
+  const reconcile = skipPc.length ? (candidate, latest) => carryPcSeries(mergeOnto(candidate, latest), latest) : mergeOnto;
   const written = await writeVersion(start.sql, { raw: season, parentId: start.versionId, origin: "sync", reconcile });
   saved = written.raw;
   published = !written.unchanged;
