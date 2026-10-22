@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T22:32:00.650Z",
+  "generatedAt": "2026-10-22T14:17:43.512Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -220803,22 +220803,22 @@
           {
             "pos": 1,
             "driver": "Ugo De Wilde / Jens Klingmann / Tim Tramnitz",
-            "points": 114
+            "points": 107
           },
           {
             "pos": 2,
-            "driver": "Benjamin Goethe / Louis Prette / Thomas Fleming",
-            "points": 86
+            "driver": "Frederik Schandorff / Simon Birch / Malte Ebdrup",
+            "points": 104
           },
           {
             "pos": 3,
-            "driver": "Simon Birch / Frederik Schandorff / Malte Ebdrup",
-            "points": 79
+            "driver": "Louis Prette / Benjamin Goethe / Thomas Fleming",
+            "points": 86
           },
           {
             "pos": 4,
             "driver": "Simon Gachet / James Kell",
-            "points": 74
+            "points": 72
           },
           {
             "pos": 5,
