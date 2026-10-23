@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T19:06:36.533Z",
+  "generatedAt": "2026-10-23T20:39:43.987Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -213312,7 +213312,13 @@
           "resultsSource": {
             "name": "OpenF1",
             "url": "https://api.openf1.org/v1/session_result?session_key=11389"
-          }
+          },
+          "videos": [
+            {
+              "id": "wOxOwnRkI0I",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-18-secondpractice",
@@ -220853,7 +220859,7 @@
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 10,
+      "sessions": 11,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
@@ -221232,6 +221238,7 @@
     }
   },
   "failures": [
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
