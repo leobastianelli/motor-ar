@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T18:54:57.901Z",
+  "generatedAt": "2026-10-23T19:06:36.533Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -213271,7 +213271,7 @@
             {
               "pos": 18,
               "number": "27",
-              "driver": "Nico Hülkenberg",
+              "driver": "Nico Hulkenberg",
               "code": "HUL",
               "team": "Audi",
               "gap": "+2.070"
@@ -213310,8 +213310,8 @@
             }
           ],
           "resultsSource": {
-            "name": "Fórmula 1 (oficial)",
-            "url": "https://www.formula1.com/en/results/2026/races/1297/united-states/practice/1"
+            "name": "OpenF1",
+            "url": "https://api.openf1.org/v1/session_result?session_key=11389"
           }
         },
         {
@@ -220698,6 +220698,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -220827,12 +220843,12 @@
     },
     "openf1": {
       "sessions": 131,
-      "requests": 10,
-      "sessionsWithResults": 45
+      "requests": 12,
+      "sessionsWithResults": 46
     },
     "f1Official": {
-      "requests": 1,
-      "sessionsWithResults": 1,
+      "requests": 0,
+      "sessionsWithResults": 0,
       "errors": []
     },
     "f1Youtube": {
@@ -221216,8 +221232,6 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
