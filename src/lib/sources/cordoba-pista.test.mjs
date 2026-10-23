@@ -241,21 +241,26 @@ test("las fechas 7, 8 y 9 se cargan con fecha confirmada; la 7 y la 8 con horari
   });
   // Fechas 7 y 8: sesiones por clase con el id que les daría Speedhive (`<evento>-<clase>-<tipo>[n]`), provisorias y citando a Puntal.
   const clases = ["tc4000", "tcp4000", "fiat", "fiat128", "tch", "clase3", "frplus"];
+  const corregidas = { "cordoba-pista-2026-8-tch-final": "12:15", "cordoba-pista-2026-8-fiat128-final": "12:50", "cordoba-pista-2026-8-tc4000-final": "13:25" };
   for (const e of tentativas.slice(0, 2)) {
     assert.equal(new Set(e.sessions.map((s) => s.id)).size, e.sessions.length, `${e.id}: ids repetidos`);
     assert.deepEqual([...new Set(e.sessions.map((s) => s.classId))].sort(), [...clases].sort(), `${e.id}: las siete clases`);
     for (const c of clases) assert.ok(e.sessions.some((s) => s.classId === c && s.kind === "final"), `${e.id}: final de ${c}`);
     for (const s of e.sessions) {
       assert.match(s.id, new RegExp(`^${e.id}-(${clases.join("|")})-(practica|clasificacion|final)(-super)?[12]?$`), s.id);
-      assert.match(s.timeSources[0].url, /^https:\/\/www\.puntal\.com\.ar\/cordoba-pista\/el-oscar-cabalen-recibe-al-cordoba-pista/);
+      // Las tres finales que Puntal tenía mal o en duda las corrige el cronograma oficial de Córdoba Pista en Instagram (22/10/2026).
+      const fuente = corregidas[s.id] ? /^https:\/\/www\.instagram\.com\/cordobapista\// : /^https:\/\/www\.puntal\.com\.ar\/cordoba-pista\/el-oscar-cabalen-recibe-al-cordoba-pista/;
+      assert.match(s.timeSources[0].url, fuente, s.id);
       assert.equal(s.timeSources[0].start, s.start);
       if (s.timeKnown) assert.equal(s.timeStatus, "tentative", s.id);
     }
     assert.equal(e.sessions.filter((s) => s.classId === "frplus" && s.kind === "final").length, e.id.endsWith("-7") ? 2 : 1);
   }
-  // Puntal pone la final del Histórico y la del Fiat 128 del domingo a 5 minutos: una de las dos horas está mal, quedan sin horario.
+  // Puntal ponía la final del Histórico y la del Fiat 128 del domingo a 5 minutos (12.15 y 12.20) y la del TC 4000 a la hora de la apertura de
+  // boxes (13.15): el cronograma oficial las corrige y el domingo queda entero con hora.
   const f8 = tentativas[1].sessions;
-  assert.deepEqual(f8.filter((s) => !s.timeKnown).map((s) => s.id), ["cordoba-pista-2026-8-tch-final", "cordoba-pista-2026-8-fiat128-final"]);
+  assert.deepEqual(f8.filter((s) => !s.timeKnown).map((s) => s.id), []);
+  for (const [id, hora] of Object.entries(corregidas)) assert.equal(f8.find((s) => s.id === id).start, `2026-10-25T${hora}:00-03:00`, id);
   for (const s of tentativas[2].sessions) {
     assert.equal(s.timeKnown, false, `${s.id}: sin horario`);
     assert.match(s.timeSources[0].url, /^https:\/\/cordobapista\.com\/se-definio-las-ultimas-fechas-de-la-temporada-2026/);
