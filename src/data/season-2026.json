@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-23T23:06:44.617Z",
+  "generatedAt": "2026-10-23T23:55:31.511Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -213508,7 +213508,13 @@
           "resultsSource": {
             "name": "OpenF1",
             "url": "https://api.openf1.org/v1/session_result?session_key=11390"
-          }
+          },
+          "videos": [
+            {
+              "id": "ZaP98lmzsfY",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-18-thirdpractice",
@@ -219619,7 +219625,7 @@
           ]
         }
       ],
-      "campeonesFeed": false,
+      "campeonesFeed": true,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -221041,7 +221047,7 @@
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 11,
+      "sessions": 12,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
