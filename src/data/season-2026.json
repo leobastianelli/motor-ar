@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T12:45:39.405Z",
+  "generatedAt": "2026-10-24T13:04:03.552Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -221426,7 +221426,6 @@
     }
   },
   "failures": [
-    "Fórmula 2 Argentina: No se pudo descargar https://formula2.com.ar/calendario-2026/: HTTP 403 (text/html)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
