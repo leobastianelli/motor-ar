@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T13:35:59.872Z",
+  "generatedAt": "2026-10-24T14:25:41.373Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -175,7 +175,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "agustin carbo",
@@ -724,7 +724,7 @@
         "tc-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "andres maugeri",
@@ -984,7 +984,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "agostini augusto d",
@@ -1578,7 +1578,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "christian rovira",
@@ -2255,7 +2255,7 @@
         "tc-pista-pick-up": "Fiat"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "bernini diego",
@@ -2344,7 +2344,7 @@
         "tc-pista-pick-up": "Volkswagen"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "diego farina",
@@ -2599,7 +2599,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "emanuel zarate",
@@ -2662,7 +2662,7 @@
         "tn": "Chevrolet Cruze"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "emiliano stang",
@@ -3237,7 +3237,7 @@
         "tc-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "chapur facundo",
@@ -3260,7 +3260,7 @@
         "tc": "Torino"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "facundo garcia",
@@ -4231,7 +4231,7 @@
         "tc": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "daniele gaston",
@@ -4656,7 +4656,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "german zafra",
@@ -5026,7 +5026,7 @@
         "tc-pista": "66"
       },
       "teams": {
-        "tc-pick-up": "Ford",
+        "tc-pick-up": "Toyota",
         "tc-pista-pick-up": "Ford",
         "tc-pista": "Chevrolet"
       },
@@ -5136,7 +5136,7 @@
         "tc-pista-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "hernan pastor",
@@ -5318,7 +5318,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "grippo ignacio",
@@ -5810,7 +5810,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "jeremias tieri",
@@ -5958,7 +5958,7 @@
         "tc-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "joaquin pagola",
@@ -6160,7 +6160,7 @@
         "tc": "Dodge"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "barrio jorge",
@@ -6184,7 +6184,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "jorge loizate",
@@ -6485,7 +6485,7 @@
         "tc": "Mercedes-Benz"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "jose margara",
@@ -6628,7 +6628,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "borgonovo juan",
@@ -6936,7 +6936,7 @@
         "tc-pista-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "eguia jose juan",
@@ -7197,7 +7197,7 @@
         "tc": "Dodge"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "juan marconi p",
@@ -7296,7 +7296,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "guiffrey juan pablo",
@@ -7512,10 +7512,10 @@
         "tc": "53"
       },
       "teams": {
-        "tc": "Toyota"
+        "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "celiz juane",
@@ -7624,7 +7624,7 @@
         "tcr-sa": "Honda Racing"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "julio olmedo",
@@ -7683,7 +7683,7 @@
         "tc": "BMW"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "angeloni lautaro",
@@ -8357,7 +8357,7 @@
         "tc-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "lucas vicino",
@@ -8634,7 +8634,7 @@
         "tc": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "luis pavon",
@@ -8773,7 +8773,7 @@
         "tc": "Torino"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "ballario marcelo",
@@ -8955,7 +8955,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "castro marcos",
@@ -9039,7 +9039,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "marcos martelotto",
@@ -9117,7 +9117,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "marcos siebert",
@@ -9218,7 +9218,7 @@
         "tc-pista-pick-up": "Foton"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "avincetta mario",
@@ -9591,7 +9591,7 @@
         "tc": "Dodge"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "carrera mateo",
@@ -9711,7 +9711,7 @@
         "tc": "Torino"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "castro matias",
@@ -9884,7 +9884,7 @@
         "tc": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "matias scaglia",
@@ -9987,7 +9987,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "longo mauricio",
@@ -10734,7 +10734,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "bonello nicolas",
@@ -10982,7 +10982,7 @@
         "tc": "Dodge"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "nicolas peiretti",
@@ -11119,7 +11119,7 @@
         "tn": "Toyota Corolla"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "nicolas villamayor",
@@ -11177,7 +11177,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "martinez omar",
@@ -11261,7 +11261,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "alejandro ferace pablo",
@@ -11804,7 +11804,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "ricardo vanini (h)",
@@ -12098,7 +12098,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "nardelli rodrigo",
@@ -12389,7 +12389,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "arrigoni santiago",
@@ -12540,7 +12540,7 @@
         "tc-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "migliore santiago",
@@ -12854,7 +12854,7 @@
         "tc": "Toyota"
       },
       "firstSeen": "2026-05-30",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "caram sebastian",
@@ -13455,7 +13455,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "abdala tomas",
@@ -13750,7 +13750,7 @@
         "tn": "Toyota Corolla"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-10-24"
     },
     {
       "key": "balestrini valentin",
