@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T13:04:03.552Z",
+  "generatedAt": "2026-10-24T13:35:57.838Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -213671,7 +213671,132 @@
               "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rosario",
               "start": "08:55"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": "1:37.161"
+            },
+            {
+              "pos": 2,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": "+0.453"
+            },
+            {
+              "pos": 3,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Ford",
+              "gap": "+0.490"
+            },
+            {
+              "pos": 4,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Ford",
+              "gap": "+0.804"
+            },
+            {
+              "pos": 5,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+0.813"
+            },
+            {
+              "pos": 6,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": "+1.038"
+            },
+            {
+              "pos": 7,
+              "number": "168",
+              "driver": "Juan Sebastian Gallo",
+              "team": "Ford",
+              "gap": "+1.109"
+            },
+            {
+              "pos": 8,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": "+1.205"
+            },
+            {
+              "pos": 9,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+1.346"
+            },
+            {
+              "pos": 10,
+              "number": "19",
+              "driver": "Luciano Cotignola",
+              "team": "Toyota",
+              "gap": "+1.496"
+            },
+            {
+              "pos": 11,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "+1.875"
+            },
+            {
+              "pos": 12,
+              "number": "100",
+              "driver": "Reutemann Ian",
+              "team": "Dodge",
+              "gap": "+1.956"
+            },
+            {
+              "pos": 13,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Chevrolet",
+              "gap": "+2.073"
+            },
+            {
+              "pos": 14,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+2.210"
+            },
+            {
+              "pos": 15,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "+2.603"
+            },
+            {
+              "pos": 16,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": "+2.631"
+            },
+            {
+              "pos": 17,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Toyota",
+              "gap": "+2.666"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1060/ver"
+          }
         },
         {
           "id": "tcp-2026-13-practica-2entrenamiento",
@@ -220965,9 +221090,9 @@
       "eventsWithTimes": 44
     },
     "timing": {
-      "documents": 856,
-      "pagesFetched": 113,
-      "eventsWithResults": 62,
+      "documents": 858,
+      "pagesFetched": 115,
+      "eventsWithResults": 63,
       "retagged": {
         "1003": {
           "from": "tc-mouras",
