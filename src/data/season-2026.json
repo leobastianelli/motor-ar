@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T20:20:08.355Z",
+  "generatedAt": "2026-10-24T20:35:32.908Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -222638,6 +222638,7 @@
     }
   },
   "failures": [
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
