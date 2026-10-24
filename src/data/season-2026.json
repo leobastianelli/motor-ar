@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T16:55:23.774Z",
+  "generatedAt": "2026-10-24T17:30:13.760Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -213817,7 +213817,132 @@
               "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rosario",
               "start": "13:05"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": "1:36.947"
+            },
+            {
+              "pos": 2,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": "+0.044"
+            },
+            {
+              "pos": 3,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Ford",
+              "gap": "+0.135"
+            },
+            {
+              "pos": 4,
+              "number": "100",
+              "driver": "Reutemann Ian",
+              "team": "Dodge",
+              "gap": "+0.140"
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": "+0.162"
+            },
+            {
+              "pos": 6,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+0.240"
+            },
+            {
+              "pos": 7,
+              "number": "168",
+              "driver": "Juan Sebastian Gallo",
+              "team": "Ford",
+              "gap": "+0.308"
+            },
+            {
+              "pos": 8,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Ford",
+              "gap": "+0.393"
+            },
+            {
+              "pos": 9,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+0.677"
+            },
+            {
+              "pos": 10,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "+0.758"
+            },
+            {
+              "pos": 11,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+0.823"
+            },
+            {
+              "pos": 12,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": "+0.945"
+            },
+            {
+              "pos": 13,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": "+0.967"
+            },
+            {
+              "pos": 14,
+              "number": "19",
+              "driver": "Luciano Cotignola",
+              "team": "Toyota",
+              "gap": "+1.120"
+            },
+            {
+              "pos": 15,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira",
+              "team": "Ford",
+              "gap": "+1.775"
+            },
+            {
+              "pos": 16,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Chevrolet",
+              "gap": "+2.526"
+            },
+            {
+              "pos": 17,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "+14.216"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1066/ver"
+          }
         },
         {
           "id": "tcp-2026-13-clasificacion-clasificacion",
@@ -221788,8 +221913,8 @@
       "eventsWithTimes": 44
     },
     "timing": {
-      "documents": 862,
-      "pagesFetched": 118,
+      "documents": 864,
+      "pagesFetched": 119,
       "eventsWithResults": 64,
       "retagged": {
         "1003": {
@@ -222249,6 +222374,7 @@
     }
   },
   "failures": [
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
