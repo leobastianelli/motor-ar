@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T18:15:01.989Z",
+  "generatedAt": "2026-10-24T19:06:26.934Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -213522,7 +213522,189 @@
           "name": "Práctica 3",
           "start": "2026-10-24T17:30:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "1:34.893"
+            },
+            {
+              "pos": 2,
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "+0.168"
+            },
+            {
+              "pos": 3,
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "+0.234"
+            },
+            {
+              "pos": 4,
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+0.303"
+            },
+            {
+              "pos": 5,
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "+0.488"
+            },
+            {
+              "pos": 6,
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+0.638"
+            },
+            {
+              "pos": 7,
+              "number": "27",
+              "driver": "Nico Hulkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+0.698"
+            },
+            {
+              "pos": 8,
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "+0.813"
+            },
+            {
+              "pos": 9,
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "+1.011"
+            },
+            {
+              "pos": 10,
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "+1.037"
+            },
+            {
+              "pos": 11,
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "+1.038"
+            },
+            {
+              "pos": 12,
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+1.188"
+            },
+            {
+              "pos": 13,
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "+1.283"
+            },
+            {
+              "pos": 14,
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+1.342"
+            },
+            {
+              "pos": 15,
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "+1.358"
+            },
+            {
+              "pos": 16,
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+1.562"
+            },
+            {
+              "pos": 17,
+              "number": "31",
+              "driver": "Esteban Ocon",
+              "code": "OCO",
+              "team": "Haas F1 Team",
+              "gap": "+1.849"
+            },
+            {
+              "pos": 18,
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "+2.238"
+            },
+            {
+              "pos": 19,
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "+2.775"
+            },
+            {
+              "pos": 20,
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+2.818"
+            },
+            {
+              "pos": 21,
+              "number": "11",
+              "driver": "Sergio Perez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "+2.991"
+            },
+            {
+              "pos": 22,
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "+3.872"
+            }
+          ],
+          "resultsSource": {
+            "name": "OpenF1",
+            "url": "https://api.openf1.org/v1/session_result?session_key=11391"
+          }
         },
         {
           "id": "f1-2026-18-qualifying",
@@ -213659,16 +213841,11 @@
           "start": "2026-10-24T08:55:00-03:00",
           "timeKnown": true,
           "durationMin": 65,
-          "timeStatus": "confirmed",
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
-              "start": "08:55"
-            },
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rosario",
               "start": "08:55"
             }
           ],
@@ -213805,16 +213982,11 @@
           "start": "2026-10-24T13:05:00-03:00",
           "timeKnown": true,
           "durationMin": 65,
-          "timeStatus": "confirmed",
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
-              "start": "13:05"
-            },
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rosario",
               "start": "13:05"
             }
           ],
@@ -213951,19 +214123,140 @@
           "start": "2026-10-24T15:26:00-03:00",
           "timeKnown": true,
           "durationMin": 22,
-          "timeStatus": "confirmed",
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
               "start": "15:26"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "168",
+              "driver": "Juan Sebastian Gallo",
+              "team": "Ford",
+              "gap": "1:36.921"
             },
             {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rosario",
-              "start": "15:26"
+              "pos": 2,
+              "number": "100",
+              "driver": "Reutemann Ian",
+              "team": "Dodge",
+              "gap": "+0.047"
+            },
+            {
+              "pos": 3,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Ford",
+              "gap": "+0.076"
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": "+0.141"
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": "+0.325"
+            },
+            {
+              "pos": 6,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+0.352"
+            },
+            {
+              "pos": 7,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Ford",
+              "gap": "+0.375"
+            },
+            {
+              "pos": 8,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": "+0.496"
+            },
+            {
+              "pos": 9,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "+0.510"
+            },
+            {
+              "pos": 10,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": "+0.579"
+            },
+            {
+              "pos": 11,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+0.596"
+            },
+            {
+              "pos": 12,
+              "number": "19",
+              "driver": "Luciano Cotignola",
+              "team": "Toyota",
+              "gap": "+0.724"
+            },
+            {
+              "pos": 13,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": "+0.822"
+            },
+            {
+              "pos": 14,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": "+1.032"
+            },
+            {
+              "pos": 15,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": "+1.093"
+            },
+            {
+              "pos": 16,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Chevrolet",
+              "gap": "+1.404"
+            },
+            {
+              "pos": 17,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Toyota",
+              "gap": "+1.704"
             }
-          ]
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1067/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tcp-2026-13-serie-serie1",
@@ -213971,17 +214264,12 @@
           "name": "Serie 1",
           "start": "2026-10-25T10:05:00-03:00",
           "timeKnown": true,
-          "durationMin": 20,
-          "timeStatus": "confirmed",
+          "durationMin": 10,
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
-              "start": "10:05"
-            },
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rosario",
               "start": "10:05"
             }
           ]
@@ -214009,16 +214297,11 @@
           "start": "2026-10-25T12:55:00-03:00",
           "timeKnown": true,
           "durationMin": 40,
-          "timeStatus": "confirmed",
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
-              "start": "12:55"
-            },
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rosario",
               "start": "12:55"
             }
           ]
@@ -214046,16 +214329,11 @@
           "start": "2026-10-24T10:05:00-03:00",
           "timeKnown": true,
           "durationMin": 65,
-          "timeStatus": "confirmed",
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
-              "start": "10:05"
-            },
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rosario",
               "start": "10:05"
             }
           ],
@@ -214416,16 +214694,11 @@
           "start": "2026-10-24T12:00:00-03:00",
           "timeKnown": true,
           "durationMin": 45,
-          "timeStatus": "confirmed",
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
-              "start": "12:00"
-            },
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rosario",
               "start": "12:00"
             }
           ],
@@ -214786,16 +215059,11 @@
           "start": "2026-10-24T15:55:00-03:00",
           "timeKnown": true,
           "durationMin": 50,
-          "timeStatus": "confirmed",
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
-              "start": "15:55"
-            },
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rosario",
               "start": "15:55"
             }
           ]
@@ -214806,17 +215074,12 @@
           "name": "Serie 1",
           "start": "2026-10-25T10:55:00-03:00",
           "timeKnown": true,
-          "durationMin": 20,
-          "timeStatus": "confirmed",
+          "durationMin": 10,
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
-              "start": "10:55"
-            },
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rosario",
               "start": "10:55"
             }
           ]
@@ -214860,16 +215123,11 @@
           "start": "2026-10-25T14:00:00-03:00",
           "timeKnown": true,
           "durationMin": 50,
-          "timeStatus": "confirmed",
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
-              "start": "14:00"
-            },
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rosario",
               "start": "14:00"
             }
           ]
@@ -221840,6 +222098,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -221889,15 +222163,15 @@
       "standingsSource": "https://actc.org.ar/tcppk/campeonato"
     },
     "schedules": {
-      "notes": 28,
+      "notes": 27,
       "officialPdfs": 0,
-      "sessions": 300,
-      "confirmed": 24,
+      "sessions": 295,
+      "confirmed": 9,
       "conflicts": 0,
       "eventsWithTimes": 44
     },
     "timing": {
-      "documents": 864,
+      "documents": 865,
       "pagesFetched": 119,
       "eventsWithResults": 64,
       "retagged": {
@@ -221969,8 +222243,8 @@
     },
     "openf1": {
       "sessions": 131,
-      "requests": 14,
-      "sessionsWithResults": 47
+      "requests": 16,
+      "sessionsWithResults": 48
     },
     "f1Official": {
       "requests": 0,
@@ -222358,8 +222632,6 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
