@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T20:50:21.047Z",
+  "generatedAt": "2026-10-24T22:06:03.263Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -222602,9 +222602,11 @@
       "sessionsWithResults": 48
     },
     "f1Official": {
-      "requests": 0,
+      "requests": 1,
       "sessionsWithResults": 0,
-      "errors": []
+      "errors": [
+        "GP de Estados Unidos · Clasificación: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -222988,6 +222990,7 @@
   },
   "failures": [
     "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de Estados Unidos · Clasificación: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
