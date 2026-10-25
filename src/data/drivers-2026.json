@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T14:55:50.690Z",
+  "generatedAt": "2026-10-25T15:05:59.877Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -1032,9 +1032,7 @@
       ],
       "slug": "bautista-damiani",
       "name": "Bautista Damiani",
-      "aliases": [
-        "Bautista Damiani Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tn",
         "tc-pista"
@@ -7515,7 +7513,7 @@
         "tc": "53"
       },
       "teams": {
-        "tc": "Chevrolet"
+        "tc": "Toyota"
       },
       "firstSeen": "2026-02-14",
       "lastSeen": "2026-10-25"
