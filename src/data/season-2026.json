@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T16:55:16.819Z",
+  "generatedAt": "2026-10-25T17:46:14.967Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -219667,7 +219667,7 @@
   },
   "meta": {
     "f1": {
-      "standingsAsOfRound": 17,
+      "standingsAsOfRound": 18,
       "progression": [
         {
           "round": 1,
@@ -223372,22 +223372,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -223906,6 +223890,7 @@
     }
   },
   "failures": [
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
