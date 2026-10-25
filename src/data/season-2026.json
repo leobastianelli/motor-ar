@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T01:25:53.902Z",
+  "generatedAt": "2026-10-25T02:15:29.134Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -222790,8 +222790,8 @@
       "sessionsWithResults": 48
     },
     "f1Official": {
-      "requests": 0,
-      "sessionsWithResults": 0,
+      "requests": 1,
+      "sessionsWithResults": 1,
       "errors": []
     },
     "f1Youtube": {
@@ -223175,7 +223175,6 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
