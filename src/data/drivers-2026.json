@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T13:35:52.341Z",
+  "generatedAt": "2026-10-25T13:49:57.756Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -511,7 +511,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "alejandro minem",
@@ -1134,7 +1134,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "benjamin ochoa",
@@ -3391,7 +3391,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "antunez federico",
@@ -3567,7 +3567,7 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "culasso felipe",
@@ -5026,12 +5026,12 @@
         "tc-pista": "66"
       },
       "teams": {
-        "tc-pick-up": "Toyota",
+        "tc-pick-up": "Ford",
         "tc-pista-pick-up": "Ford",
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "gustavo vaschetti",
@@ -6868,7 +6868,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "ignacio juan vidal",
@@ -8435,7 +8435,7 @@
         "tc-pista": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "dalmasso luciano",
@@ -11781,7 +11781,7 @@
         "tc-pista": "Dodge"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "ricardo risatti",
@@ -13365,7 +13365,7 @@
         "tc-pista": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "ricciardi thomas",
