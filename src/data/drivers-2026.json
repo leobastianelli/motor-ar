@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T16:06:55.261Z",
+  "generatedAt": "2026-10-25T16:30:24.387Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -2329,9 +2329,7 @@
       ],
       "slug": "diego-de-carlo",
       "name": "Diego De Carlo",
-      "aliases": [
-        "Diego De Carlo Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tc-pick-up",
         "tc",
