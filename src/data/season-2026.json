@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T15:05:58.913Z",
+  "generatedAt": "2026-10-25T15:20:22.114Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -216075,7 +216075,126 @@
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
               "start": "11:45"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Mercedes-Benz",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Mercedes-Benz",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "4",
+              "driver": "Germán Todino",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "231",
+              "driver": "José Manuel Urcera",
+              "team": "Mercedes-Benz",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "27",
+              "driver": "Emiliano Spataro",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "7",
+              "driver": "Santiago Mangoni",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "63",
+              "driver": "Nicolás Bonelli",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "137",
+              "driver": "Jeremías Scialchi",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "112",
+              "driver": "Lucas Valle",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "number": "116",
+              "driver": "Kevin Candela",
+              "team": "BMW",
+              "gap": ""
+            },
+            {
+              "pos": 12,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Torino",
+              "gap": ""
+            },
+            {
+              "pos": 13,
+              "number": "88",
+              "driver": "Nicolás Trosset",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 14,
+              "number": "172",
+              "driver": "Santiago Alvarez",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 15,
+              "number": "71",
+              "driver": "Sebastian Abella",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 16,
+              "number": "57",
+              "driver": "Juan Pablo Gianini",
+              "team": "Ford",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1081/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tc-2026-13-final-final",
@@ -223132,8 +223251,8 @@
       "eventsWithTimes": 44
     },
     "timing": {
-      "documents": 878,
-      "pagesFetched": 124,
+      "documents": 879,
+      "pagesFetched": 125,
       "eventsWithResults": 64,
       "retagged": {
         "1003": {
@@ -223208,8 +223327,8 @@
       "sessionsWithResults": 48
     },
     "f1Official": {
-      "requests": 0,
-      "sessionsWithResults": 0,
+      "requests": 1,
+      "sessionsWithResults": 1,
       "errors": []
     },
     "f1Youtube": {
@@ -223593,7 +223712,6 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
