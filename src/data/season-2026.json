@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T02:15:29.134Z",
+  "generatedAt": "2026-10-25T03:06:09.316Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223175,6 +223175,7 @@
     }
   },
   "failures": [
+    "YouTube F1: No se pudo descargar https://www.youtube.com/feeds/videos.xml?channel_id=UCB_qr75-ydFVKSF9Dmo6izg: HTTP 404 (text/html; charset=UTF-8) (se conservan los videos anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
