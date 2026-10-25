@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:35:48.297Z",
+  "generatedAt": "2026-10-25T18:50:13.634Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -10660,9 +10660,7 @@
       ],
       "slug": "nicanor-santilli-pazos",
       "name": "Nicanor Santilli Pazos",
-      "aliases": [
-        "Santilli Pazos Nicanor Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista",
         "tc-pista-pick-up",

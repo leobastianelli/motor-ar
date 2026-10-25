@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:35:46.753Z",
+  "generatedAt": "2026-10-25T18:50:12.917Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -214705,24 +214705,24 @@
             },
             {
               "pos": 8,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": "+11.990"
+            },
+            {
+              "pos": 9,
               "number": "105",
               "driver": "Manuel Borgert",
               "team": "Ford",
               "gap": "+13.287"
             },
             {
-              "pos": 9,
+              "pos": 10,
               "number": "43",
               "driver": "Benjamin Anton",
               "team": "Ford",
               "gap": "+13.704"
-            },
-            {
-              "pos": 10,
-              "number": "66",
-              "driver": "Gustavo Tadei (h) Recargo",
-              "team": "Chevrolet",
-              "gap": "+13.705"
             },
             {
               "pos": 11,
@@ -214783,7 +214783,7 @@
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1088/ver",
+            "url": "https://tiempos.actc.org.ar/resultados/1089/ver",
             "provisional": {
               "url": "https://tiempos.actc.org.ar/resultados/1086/ver",
               "podium": [
@@ -219289,78 +219289,78 @@
         "pos": 1,
         "driver": "Bautista Damiani",
         "team": "",
-        "points": 424.5,
+        "points": 466,
         "wins": 2
       },
       {
         "pos": 2,
         "driver": "Gabriel Gandulia",
         "team": "",
-        "points": 394.5,
+        "points": 424.5,
         "wins": 1
       },
       {
         "pos": 3,
         "driver": "Nicanor Santilli Pazos",
         "team": "",
-        "points": 387.5,
+        "points": 414,
         "wins": 1
       },
       {
         "pos": 4,
         "driver": "Benjamín Antón",
         "team": "",
-        "points": 385,
+        "points": 413,
         "wins": 2
       },
       {
         "pos": 5,
-        "driver": "Felipe Bernasconi",
-        "team": "",
-        "points": 369,
-        "wins": 1
-      },
-      {
-        "pos": 6,
         "driver": "Benjamin Ochoa",
         "team": "",
-        "points": 367,
+        "points": 401.5,
         "wins": 0
       },
       {
-        "pos": 7,
+        "pos": 6,
         "driver": "Santiago Biagi",
         "team": "",
-        "points": 360,
+        "points": 393,
         "wins": 2
+      },
+      {
+        "pos": 7,
+        "driver": "Felipe Bernasconi",
+        "team": "",
+        "points": 392.5,
+        "wins": 1
       },
       {
         "pos": 8,
         "driver": "Thomas Pozner",
         "team": "",
-        "points": 357.5,
+        "points": 387,
         "wins": 1
       },
       {
         "pos": 9,
         "driver": "Manuel Borgert",
         "team": "",
-        "points": 355,
+        "points": 383,
         "wins": 0
       },
       {
         "pos": 10,
-        "driver": "Faustino Cifre",
+        "driver": "Juan Sebastian Gallo",
         "team": "",
-        "points": 338.5,
-        "wins": 0
+        "points": 382.5,
+        "wins": 2
       },
       {
         "pos": 11,
-        "driver": "Juan Sebastian Gallo",
+        "driver": "Faustino Cifre",
         "team": "",
-        "points": 337.5,
-        "wins": 2
+        "points": 364,
+        "wins": 0
       },
       {
         "pos": 12,
@@ -219373,21 +219373,21 @@
         "pos": 13,
         "driver": "Gustavo (h) Tadei",
         "team": "",
-        "points": 282,
+        "points": 311.5,
         "wins": 0
       },
       {
         "pos": 14,
         "driver": "Juan Ignacio Maceira",
         "team": "",
-        "points": 275,
+        "points": 298,
         "wins": 0
       },
       {
         "pos": 15,
         "driver": "Luciano Cotignola",
         "team": "",
-        "points": 226.5,
+        "points": 264.5,
         "wins": 0
       },
       {
@@ -219413,16 +219413,16 @@
       },
       {
         "pos": 19,
-        "driver": "Braian Quevedo",
+        "driver": "Jaime Nicolas",
         "team": "",
-        "points": 76,
+        "points": 97.5,
         "wins": 0
       },
       {
         "pos": 20,
-        "driver": "Jaime Nicolas",
+        "driver": "Martinez Alejandro",
         "team": "",
-        "points": 73.5,
+        "points": 92,
         "wins": 0
       }
     ],
@@ -223754,7 +223754,7 @@
       "eventsWithTimes": 44
     },
     "timing": {
-      "documents": 886,
+      "documents": 887,
       "pagesFetched": 126,
       "eventsWithResults": 64,
       "retagged": {
