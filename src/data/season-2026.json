@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T16:06:53.632Z",
+  "generatedAt": "2026-10-25T16:55:16.819Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -214678,7 +214678,140 @@
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
               "start": "12:55"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "168",
+              "driver": "Juan Sebastian Gallo",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "19",
+              "driver": "Luciano Cotignola",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 12,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 13,
+              "number": "144",
+              "driver": "Faustino Cifre",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 14,
+              "number": "59",
+              "driver": "Juan Ignacio Maceira",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 15,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Ford",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 16,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+4 vueltas"
+            },
+            {
+              "pos": 17,
+              "number": "100",
+              "driver": "Reutemann Ian",
+              "team": "Dodge",
+              "gap": "+4 vueltas"
+            },
+            {
+              "pos": 18,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Toyota",
+              "gap": "+14 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1086/ver",
+            "status": "provisional"
+          }
         }
       ],
       "source": "ACTC (calendario)"
@@ -221972,7 +222105,7 @@
           ]
         }
       ],
-      "campeonesFeed": false,
+      "campeonesFeed": true,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -223312,7 +223445,7 @@
       "eventsWithTimes": 44
     },
     "timing": {
-      "documents": 883,
+      "documents": 884,
       "pagesFetched": 125,
       "eventsWithResults": 64,
       "retagged": {
@@ -223404,8 +223537,8 @@
     },
     "gtwcOfficial": {
       "meetings": 10,
-      "sessions": 9,
-      "withResults": 9,
+      "sessions": 4,
+      "withResults": 4,
       "errors": []
     },
     "gt3Clases": [
