@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T22:25:17.207Z",
+  "generatedAt": "2026-10-25T23:14:59.600Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -121377,6 +121377,15 @@
           }
         },
         {
+          "id": "nuevo-car-show-2026-5-tc4000-final",
+          "classId": "tc4000",
+          "kind": "final",
+          "name": "Final TC 4000",
+          "start": "2026-07-12T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        },
+        {
           "id": "nuevo-car-show-2026-5-clase1-final",
           "classId": "clase1",
           "kind": "final",
@@ -148850,6 +148859,15 @@
             "name": "Nuevo Car Show · planillas de cronometraje",
             "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/09/TC4000-SERIE-2.pdf"
           }
+        },
+        {
+          "id": "nuevo-car-show-2026-6-fiat600-final",
+          "classId": "fiat600",
+          "kind": "final",
+          "name": "Final Fiat 600",
+          "start": "2026-08-16T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
         },
         {
           "id": "nuevo-car-show-2026-6-clase1-final",
@@ -213893,231 +213911,233 @@
             {
               "pos": 1,
               "positionText": "1",
-              "number": "12",
-              "driver": "Kimi Antonelli",
+              "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
               "gap": "1:35:16.650",
-              "points": 25
+              "points": 25,
+              "grid": 1
             },
             {
               "pos": 2,
               "positionText": "2",
-              "number": "16",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
               "gap": "+13.078",
-              "points": 18
+              "points": 18,
+              "grid": 4
             },
             {
               "pos": 3,
               "positionText": "3",
-              "number": "3",
               "driver": "Max Verstappen",
               "code": "VER",
-              "team": "Red Bull Racing",
+              "team": "Red Bull",
               "gap": "+17.485",
-              "points": 15
+              "points": 15,
+              "grid": 2
             },
             {
               "pos": 4,
               "positionText": "4",
-              "number": "44",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
               "gap": "+18.515",
-              "points": 12
+              "points": 12,
+              "grid": 5
             },
             {
               "pos": 5,
               "positionText": "5",
-              "number": "1",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
               "gap": "+30.521",
-              "points": 10
+              "points": 10,
+              "grid": 8
             },
             {
               "pos": 6,
               "positionText": "6",
-              "number": "6",
               "driver": "Isack Hadjar",
               "code": "HAD",
-              "team": "Red Bull Racing",
+              "team": "Red Bull",
               "gap": "+34.373",
-              "points": 8
+              "points": 8,
+              "grid": 3
             },
             {
               "pos": 7,
               "positionText": "7",
-              "number": "81",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
               "gap": "+52.674",
-              "points": 6
+              "points": 6,
+              "grid": 7
             },
             {
               "pos": 8,
               "positionText": "8",
-              "number": "63",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
               "gap": "+54.303",
-              "points": 4
+              "points": 4,
+              "grid": 6
             },
             {
               "pos": 9,
               "positionText": "9",
-              "number": "30",
               "driver": "Liam Lawson",
               "code": "LAW",
-              "team": "Racing Bulls",
-              "gap": "+79.183",
-              "points": 2
+              "team": "RB F1 Team",
+              "gap": "+1:19.183",
+              "points": 2,
+              "grid": 9
             },
             {
               "pos": 10,
               "positionText": "10",
-              "number": "10",
               "driver": "Pierre Gasly",
               "code": "GAS",
-              "team": "Alpine",
-              "gap": "+87.516",
-              "points": 1
+              "team": "Alpine F1 Team",
+              "gap": "+1:27.516",
+              "points": 1,
+              "grid": 10
             },
             {
               "pos": 11,
               "positionText": "11",
-              "number": "27",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
-              "gap": "+94.945",
-              "points": 0
+              "gap": "+1:34.945",
+              "points": 0,
+              "grid": 11
             },
             {
               "pos": 12,
               "positionText": "12",
-              "number": "41",
               "driver": "Arvid Lindblad",
               "code": "LIN",
-              "team": "Racing Bulls",
-              "gap": "+1 vuelta",
-              "points": 0
+              "team": "RB F1 Team",
+              "gap": "+6.344",
+              "points": 0,
+              "grid": 14
             },
             {
               "pos": 13,
               "positionText": "13",
-              "number": "5",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
-              "gap": "+1 vuelta",
-              "points": 0
+              "gap": "+14.197",
+              "points": 0,
+              "grid": 21
             },
             {
               "pos": 14,
               "positionText": "14",
-              "number": "31",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
-              "gap": "+1 vuelta",
-              "points": 0
+              "gap": "+21.042",
+              "points": 0,
+              "grid": 15
             },
             {
               "pos": 15,
               "positionText": "15",
-              "number": "18",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
-              "gap": "+1 vuelta",
-              "points": 0
+              "gap": "+49.418",
+              "points": 0,
+              "grid": 22
             },
             {
               "pos": 16,
               "positionText": "16",
-              "number": "14",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
-              "gap": "+1 vuelta",
-              "points": 0
+              "gap": "+1:00.668",
+              "points": 0,
+              "grid": 12
             },
             {
               "pos": 17,
               "positionText": "17",
-              "number": "23",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
-              "gap": "+1 vuelta",
-              "points": 0
+              "gap": "+1:02.176",
+              "points": 0,
+              "grid": 17
             },
             {
               "pos": 18,
               "positionText": "18",
-              "number": "55",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
-              "gap": "+1 vuelta",
-              "points": 0
+              "gap": "+1:02.835",
+              "points": 0,
+              "grid": 16
             },
             {
               "pos": 19,
               "positionText": "19",
-              "number": "11",
               "driver": "Sergio Pérez",
               "code": "PER",
-              "team": "Cadillac",
-              "gap": "+1 vuelta",
-              "points": 0
+              "team": "Cadillac F1 Team",
+              "gap": "+1:22.809",
+              "points": 0,
+              "grid": 18
             },
             {
               "pos": 20,
-              "positionText": "NC",
-              "number": "77",
+              "positionText": "R",
+              "status": "Abandonó",
               "driver": "Valtteri Bottas",
               "code": "BOT",
-              "team": "Cadillac",
+              "team": "Cadillac F1 Team",
               "gap": "",
               "points": 0,
-              "status": "Abandonó"
+              "grid": 19
             },
             {
               "pos": 21,
-              "positionText": "NC",
-              "number": "43",
+              "positionText": "R",
+              "status": "Abandonó",
               "driver": "Franco Colapinto",
               "code": "COL",
-              "team": "Alpine",
+              "team": "Alpine F1 Team",
               "gap": "",
               "points": 0,
-              "status": "Abandonó"
+              "grid": 20
             },
             {
               "pos": 22,
-              "positionText": "NC",
-              "number": "87",
+              "positionText": "R",
+              "status": "Abandonó",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
               "gap": "",
               "points": 0,
-              "status": "Abandonó"
+              "grid": 13
             }
           ],
-          "resultsSource": {
-            "name": "Fórmula 1 (oficial)",
-            "url": "https://www.formula1.com/en/results/2026/races/1297/united-states/race-result"
-          }
+          "videos": [
+            {
+              "id": "srLm23RUAH0",
+              "kind": "highlights"
+            }
+          ]
         }
       ],
       "source": "Jolpica-F1"
@@ -218223,70 +218243,70 @@
         "pos": 1,
         "driver": "Andrea Kimi Antonelli",
         "team": "Mercedes",
-        "points": 340,
-        "wins": 8
+        "points": 365,
+        "wins": 9
       },
       {
         "pos": 2,
         "driver": "George Russell",
         "team": "Mercedes",
-        "points": 238,
+        "points": 242,
         "wins": 3
       },
       {
         "pos": 3,
         "driver": "Lewis Hamilton",
         "team": "Ferrari",
-        "points": 229,
+        "points": 241,
         "wins": 1
       },
       {
         "pos": 4,
         "driver": "Max Verstappen",
         "team": "Red Bull",
-        "points": 221,
+        "points": 236,
         "wins": 2
       },
       {
         "pos": 5,
         "driver": "Charles Leclerc",
         "team": "Ferrari",
-        "points": 215,
+        "points": 233,
         "wins": 1
       },
       {
         "pos": 6,
         "driver": "Lando Norris",
         "team": "McLaren",
-        "points": 201,
+        "points": 211,
         "wins": 2
       },
       {
         "pos": 7,
         "driver": "Oscar Piastri",
         "team": "McLaren",
-        "points": 138,
+        "points": 144,
         "wins": 0
       },
       {
         "pos": 8,
         "driver": "Isack Hadjar",
         "team": "Red Bull",
-        "points": 97,
+        "points": 105,
         "wins": 0
       },
       {
         "pos": 9,
         "driver": "Liam Lawson",
         "team": "Red Bull",
-        "points": 75,
+        "points": 77,
         "wins": 0
       },
       {
         "pos": 10,
         "driver": "Pierre Gasly",
         "team": "Alpine F1 Team",
-        "points": 41,
+        "points": 42,
         "wins": 0
       },
       {
@@ -222243,6 +222263,126 @@
               "points": 0
             }
           ]
+        },
+        {
+          "round": 18,
+          "standings": [
+            {
+              "driver": "Andrea Kimi Antonelli",
+              "pos": 1,
+              "points": 365
+            },
+            {
+              "driver": "George Russell",
+              "pos": 2,
+              "points": 242
+            },
+            {
+              "driver": "Lewis Hamilton",
+              "pos": 3,
+              "points": 241
+            },
+            {
+              "driver": "Max Verstappen",
+              "pos": 4,
+              "points": 236
+            },
+            {
+              "driver": "Charles Leclerc",
+              "pos": 5,
+              "points": 233
+            },
+            {
+              "driver": "Lando Norris",
+              "pos": 6,
+              "points": 211
+            },
+            {
+              "driver": "Oscar Piastri",
+              "pos": 7,
+              "points": 144
+            },
+            {
+              "driver": "Isack Hadjar",
+              "pos": 8,
+              "points": 105
+            },
+            {
+              "driver": "Liam Lawson",
+              "pos": 9,
+              "points": 77
+            },
+            {
+              "driver": "Pierre Gasly",
+              "pos": 10,
+              "points": 42
+            },
+            {
+              "driver": "Arvid Lindblad",
+              "pos": 11,
+              "points": 38
+            },
+            {
+              "driver": "Franco Colapinto",
+              "pos": 12,
+              "points": 27
+            },
+            {
+              "driver": "Oliver Bearman",
+              "pos": 13,
+              "points": 23
+            },
+            {
+              "driver": "Nico Hülkenberg",
+              "pos": 14,
+              "points": 13
+            },
+            {
+              "driver": "Gabriel Bortoleto",
+              "pos": 15,
+              "points": 10
+            },
+            {
+              "driver": "Esteban Ocon",
+              "pos": 16,
+              "points": 7
+            },
+            {
+              "driver": "Fernando Alonso",
+              "pos": 17,
+              "points": 7
+            },
+            {
+              "driver": "Carlos Sainz",
+              "pos": 18,
+              "points": 7
+            },
+            {
+              "driver": "Alexander Albon",
+              "pos": 19,
+              "points": 5
+            },
+            {
+              "driver": "Yuki Tsunoda",
+              "pos": 20,
+              "points": 1
+            },
+            {
+              "driver": "Lance Stroll",
+              "pos": 21,
+              "points": 0
+            },
+            {
+              "driver": "Valtteri Bottas",
+              "pos": 22,
+              "points": 0
+            },
+            {
+              "driver": "Sergio Pérez",
+              "pos": 23,
+              "points": 0
+            }
+          ]
         }
       ]
     },
@@ -223942,23 +224082,23 @@
       "clases": {
         "clase1": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 8 de las 8 fechas que ésta cubre (por ejemplo, el auto 172 de la fecha 1: 6 contra 0 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
         },
         "clase2": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 8 de las 8 fechas que ésta cubre (por ejemplo, el auto 28 de la fecha 1: 9 contra 1,5 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
         },
         "clase3": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 5 de las 8 fechas que ésta cubre (por ejemplo, el auto 69 de la fecha 2: 0 contra 2 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
         },
         "tc4000": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 7 de las 8 fechas que ésta cubre (por ejemplo, el auto 6 de la fecha 2: 0 contra 1 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
         },
         "fiat600": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 6 de las 8 fechas que ésta cubre (por ejemplo, el auto 8 de la fecha 1: 1,5 contra 1,13 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
         }
       }
     },
@@ -223966,17 +224106,19 @@
       "events": 10,
       "pdfs": 0,
       "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
+      "rounds": [],
+      "errors": [
+        "resultados Clase 1: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "resultados Clase 2: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "resultados Clase 3: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "resultados TC 4000: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "resultados Fiat 600: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "tabla oficial Clase 1: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "tabla oficial Clase 2: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "tabla oficial Clase 3: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "tabla oficial TC 4000: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+        "tabla oficial Fiat 600: Unexpected token '<', \"<html><hea\"... is not valid JSON"
+      ]
     },
     "rallyArgentino": {
       "events": 9,
@@ -224111,13 +224253,13 @@
       "sessionsWithResults": 48
     },
     "f1Official": {
-      "requests": 1,
-      "sessionsWithResults": 1,
+      "requests": 0,
+      "sessionsWithResults": 0,
       "errors": []
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 14,
+      "sessions": 15,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
@@ -224496,7 +224638,16 @@
     }
   },
   "failures": [
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "Nuevo Car Show: resultados Clase 1: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: resultados Clase 2: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: resultados Clase 3: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: resultados TC 4000: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: resultados Fiat 600: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: tabla oficial Clase 1: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: tabla oficial Clase 2: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: tabla oficial Clase 3: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: tabla oficial TC 4000: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: tabla oficial Fiat 600: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
