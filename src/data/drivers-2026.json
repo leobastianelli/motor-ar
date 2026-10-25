@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T15:20:23.222Z",
+  "generatedAt": "2026-10-25T16:06:55.261Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -2324,11 +2324,14 @@
     {
       "key": "carlo de diego",
       "keys": [
-        "carlo de diego"
+        "carlo de diego",
+        "carlo de diego recargo"
       ],
       "slug": "diego-de-carlo",
       "name": "Diego De Carlo",
-      "aliases": [],
+      "aliases": [
+        "Diego De Carlo Recargo"
+      ],
       "series": [
         "tc-pick-up",
         "tc",
@@ -9118,7 +9121,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-24"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "marcos siebert",
