@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:20:24.019Z",
+  "generatedAt": "2026-10-25T18:35:46.753Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -214659,98 +214659,98 @@
               "number": "168",
               "driver": "Juan Sebastian Gallo",
               "team": "Ford",
-              "gap": ""
+              "gap": "34:33.789"
             },
             {
               "pos": 2,
               "number": "99",
               "driver": "Bautista Damiani",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "+2.387"
             },
             {
               "pos": 3,
               "number": "19",
               "driver": "Luciano Cotignola",
               "team": "Toyota",
-              "gap": ""
+              "gap": "+5.349"
             },
             {
               "pos": 4,
               "number": "111",
               "driver": "Benjamin Ochoa",
               "team": "Ford",
-              "gap": ""
+              "gap": "+6.521"
             },
             {
               "pos": 5,
               "number": "67",
               "driver": "Santiago Biagi",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+7.115"
             },
             {
               "pos": 6,
               "number": "10",
               "driver": "Gabriel Gandulia",
               "team": "Ford",
-              "gap": ""
+              "gap": "+8.729"
             },
             {
               "pos": 7,
               "number": "44",
               "driver": "Thomas Pozner",
               "team": "Ford",
-              "gap": ""
+              "gap": "+11.263"
             },
             {
               "pos": 8,
-              "number": "66",
-              "driver": "Gustavo Tadei (h)",
-              "team": "Chevrolet",
-              "gap": ""
-            },
-            {
-              "pos": 9,
               "number": "105",
               "driver": "Manuel Borgert",
               "team": "Ford",
-              "gap": ""
+              "gap": "+13.287"
             },
             {
-              "pos": 10,
+              "pos": 9,
               "number": "43",
               "driver": "Benjamin Anton",
               "team": "Ford",
-              "gap": ""
+              "gap": "+13.704"
+            },
+            {
+              "pos": 10,
+              "number": "66",
+              "driver": "Gustavo Tadei (h) Recargo",
+              "team": "Chevrolet",
+              "gap": "+13.705"
             },
             {
               "pos": 11,
-              "number": "123",
-              "driver": "Nicanor Santilli Pazos",
-              "team": "Ford",
-              "gap": ""
-            },
-            {
-              "pos": 12,
               "number": "23",
               "driver": "Alejandro Martínez",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "+32.546"
+            },
+            {
+              "pos": 12,
+              "number": "123",
+              "driver": "Santilli Pazos Nicanor Recargo",
+              "team": "Ford",
+              "gap": "+32.547"
             },
             {
               "pos": 13,
               "number": "144",
               "driver": "Faustino Cifre",
               "team": "Ford",
-              "gap": ""
+              "gap": "+59.904"
             },
             {
               "pos": 14,
               "number": "59",
               "driver": "Juan Ignacio Maceira",
               "team": "Ford",
-              "gap": ""
+              "gap": "+74.803"
             },
             {
               "pos": 15,
@@ -214783,8 +214783,28 @@
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1086/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1088/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1086/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "168",
+                  "driver": "Juan Sebastian Gallo"
+                },
+                {
+                  "pos": 2,
+                  "number": "99",
+                  "driver": "Bautista Damiani"
+                },
+                {
+                  "pos": 3,
+                  "number": "19",
+                  "driver": "Luciano Cotignola"
+                }
+              ]
+            },
+            "note": "Oficial"
           }
         }
       ],
@@ -223734,8 +223754,8 @@
       "eventsWithTimes": 44
     },
     "timing": {
-      "documents": 885,
-      "pagesFetched": 125,
+      "documents": 886,
+      "pagesFetched": 126,
       "eventsWithResults": 64,
       "retagged": {
         "1003": {
