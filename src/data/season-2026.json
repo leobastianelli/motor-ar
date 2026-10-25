@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T17:46:14.967Z",
+  "generatedAt": "2026-10-25T18:20:24.019Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -213722,31 +213722,27 @@
           "results": [
             {
               "pos": 1,
-              "number": "12",
-              "driver": "Kimi Antonelli",
+              "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
               "gap": "1:34.035"
             },
             {
               "pos": 2,
-              "number": "3",
               "driver": "Max Verstappen",
               "code": "VER",
-              "team": "Red Bull Racing",
+              "team": "Red Bull",
               "gap": "1:34.214"
             },
             {
               "pos": 3,
-              "number": "6",
               "driver": "Isack Hadjar",
               "code": "HAD",
-              "team": "Red Bull Racing",
+              "team": "Red Bull",
               "gap": "1:34.250"
             },
             {
               "pos": 4,
-              "number": "16",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
@@ -213754,7 +213750,6 @@
             },
             {
               "pos": 5,
-              "number": "44",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
@@ -213762,7 +213757,6 @@
             },
             {
               "pos": 6,
-              "number": "63",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
@@ -213770,7 +213764,6 @@
             },
             {
               "pos": 7,
-              "number": "81",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
@@ -213778,7 +213771,6 @@
             },
             {
               "pos": 8,
-              "number": "1",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
@@ -213786,31 +213778,27 @@
             },
             {
               "pos": 9,
-              "number": "41",
               "driver": "Arvid Lindblad",
               "code": "LIN",
-              "team": "Racing Bulls",
+              "team": "RB F1 Team",
               "gap": "1:36.049"
             },
             {
               "pos": 10,
-              "number": "30",
               "driver": "Liam Lawson",
               "code": "LAW",
-              "team": "Racing Bulls",
+              "team": "RB F1 Team",
               "gap": "1:35.058"
             },
             {
               "pos": 11,
-              "number": "10",
               "driver": "Pierre Gasly",
               "code": "GAS",
-              "team": "Alpine",
+              "team": "Alpine F1 Team",
               "gap": "1:35.080"
             },
             {
               "pos": 12,
-              "number": "27",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -213818,7 +213806,6 @@
             },
             {
               "pos": 13,
-              "number": "5",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
@@ -213826,15 +213813,13 @@
             },
             {
               "pos": 14,
-              "number": "43",
               "driver": "Franco Colapinto",
               "code": "COL",
-              "team": "Alpine",
+              "team": "Alpine F1 Team",
               "gap": "1:35.722"
             },
             {
               "pos": 15,
-              "number": "14",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
@@ -213842,7 +213827,6 @@
             },
             {
               "pos": 16,
-              "number": "87",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
@@ -213850,7 +213834,6 @@
             },
             {
               "pos": 17,
-              "number": "31",
               "driver": "Esteban Ocon",
               "code": "OCO",
               "team": "Haas F1 Team",
@@ -213858,7 +213841,6 @@
             },
             {
               "pos": 18,
-              "number": "18",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
@@ -213866,7 +213848,6 @@
             },
             {
               "pos": 19,
-              "number": "55",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -213874,7 +213855,6 @@
             },
             {
               "pos": 20,
-              "number": "23",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -213882,25 +213862,19 @@
             },
             {
               "pos": 21,
-              "number": "11",
               "driver": "Sergio Pérez",
               "code": "PER",
-              "team": "Cadillac",
+              "team": "Cadillac F1 Team",
               "gap": "1:37.433"
             },
             {
               "pos": 22,
-              "number": "77",
               "driver": "Valtteri Bottas",
               "code": "BOT",
-              "team": "Cadillac",
+              "team": "Cadillac F1 Team",
               "gap": "1:37.523"
             }
           ],
-          "resultsSource": {
-            "name": "Fórmula 1 (oficial)",
-            "url": "https://www.formula1.com/en/results/2026/races/1297/united-states/qualifying"
-          },
           "videos": [
             {
               "id": "EQ74or790IM",
@@ -216404,7 +216378,322 @@
               "url": "https://www.solotc.com.ar/tc-rosario-horarios-tv-cronograma-fecha-13-2026/",
               "start": "14:00"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Mauricio Lambiris",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "117",
+              "driver": "Matías Rossi",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "11",
+              "driver": "Mariano Werner",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "68",
+              "driver": "Julián Santero",
+              "team": "BMW",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "95",
+              "driver": "Marcos Landa",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Mercedes-Benz",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "15",
+              "driver": "Juan José Ebarlín",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "29",
+              "driver": "Elio Craparo",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "number": "231",
+              "driver": "José Manuel Urcera",
+              "team": "Mercedes-Benz",
+              "gap": ""
+            },
+            {
+              "pos": 12,
+              "number": "7",
+              "driver": "Santiago Mangoni",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 13,
+              "number": "107",
+              "driver": "Tobías Martínez",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 14,
+              "number": "53",
+              "driver": "Juan Tomás Catalán Magni",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 15,
+              "number": "137",
+              "driver": "Jeremías Scialchi",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 16,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 17,
+              "number": "79",
+              "driver": "Facundo Chapur",
+              "team": "Torino",
+              "gap": ""
+            },
+            {
+              "pos": 18,
+              "number": "88",
+              "driver": "Nicolás Trosset",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 19,
+              "number": "141",
+              "driver": "Jorge Barrio",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 20,
+              "number": "14",
+              "driver": "Christian Ledesma",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 21,
+              "number": "24",
+              "driver": "Luis José Di Palma",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 22,
+              "number": "63",
+              "driver": "Nicolás Bonelli",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 23,
+              "number": "85",
+              "driver": "Ricardo Risatti",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 24,
+              "number": "32",
+              "driver": "Matías Canapino",
+              "team": "Torino",
+              "gap": ""
+            },
+            {
+              "pos": 25,
+              "number": "101",
+              "driver": "Jonatan Castellano",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 26,
+              "number": "83",
+              "driver": "Facundo Ardusso",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 27,
+              "number": "133",
+              "driver": "Valentín Aguirre",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 28,
+              "number": "197",
+              "driver": "Marcos Quijada",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 29,
+              "number": "57",
+              "driver": "Juan Pablo Gianini",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 30,
+              "number": "122",
+              "driver": "Andrés Jakos",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 31,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Torino",
+              "gap": ""
+            },
+            {
+              "pos": 32,
+              "number": "157",
+              "driver": "Juan B De Benedictis",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 33,
+              "number": "4",
+              "driver": "Germán Todino",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 34,
+              "number": "37",
+              "driver": "Norberto Fontana",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 35,
+              "number": "115",
+              "driver": "Diego De Carlo",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 36,
+              "number": "77",
+              "driver": "Augusto Carinelli",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 37,
+              "number": "154",
+              "driver": "Joaquín Ochoa",
+              "team": "Toyota",
+              "gap": "+6 vueltas"
+            },
+            {
+              "pos": 38,
+              "number": "113",
+              "driver": "Rodrigo Lugón",
+              "team": "Ford",
+              "gap": "+7 vueltas"
+            },
+            {
+              "pos": 39,
+              "number": "27",
+              "driver": "Emiliano Spataro",
+              "team": "Ford",
+              "gap": "+9 vueltas"
+            },
+            {
+              "pos": 40,
+              "number": "123",
+              "driver": "Martín Vázquez",
+              "team": "Dodge",
+              "gap": "+11 vueltas"
+            },
+            {
+              "pos": 41,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Mercedes-Benz",
+              "gap": "+13 vueltas"
+            },
+            {
+              "pos": 42,
+              "number": "112",
+              "driver": "Lucas Valle",
+              "team": "Chevrolet",
+              "gap": "+16 vueltas"
+            },
+            {
+              "pos": 43,
+              "number": "71",
+              "driver": "Sebastian Abella",
+              "team": "Toyota",
+              "gap": "+16 vueltas"
+            },
+            {
+              "pos": 44,
+              "number": "6",
+              "driver": "Juan Martín Trucco",
+              "team": "Dodge",
+              "gap": "+19 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1087/ver",
+            "status": "provisional"
+          }
         }
       ],
       "source": "ACTC (calendario) · Wikipedia (podios)"
@@ -223372,6 +223661,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -223429,7 +223734,7 @@
       "eventsWithTimes": 44
     },
     "timing": {
-      "documents": 884,
+      "documents": 885,
       "pagesFetched": 125,
       "eventsWithResults": 64,
       "retagged": {
@@ -223505,8 +223810,8 @@
       "sessionsWithResults": 48
     },
     "f1Official": {
-      "requests": 1,
-      "sessionsWithResults": 1,
+      "requests": 0,
+      "sessionsWithResults": 0,
       "errors": []
     },
     "f1Youtube": {
@@ -223890,7 +224195,6 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
