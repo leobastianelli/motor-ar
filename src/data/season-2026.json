@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T00:05:54.345Z",
+  "generatedAt": "2026-10-26T00:54:54.914Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -224620,6 +224620,7 @@
     }
   },
   "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/11/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "YouTube F1: No se pudo descargar https://www.youtube.com/feeds/videos.xml?channel_id=UCB_qr75-ydFVKSF9Dmo6izg: HTTP 404 (text/html; charset=UTF-8) (se conservan los videos anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
