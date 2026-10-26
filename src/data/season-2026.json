@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T23:14:59.600Z",
+  "generatedAt": "2026-10-26T00:05:54.345Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -224102,24 +224102,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [],
-      "errors": [
-        "resultados Clase 1: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-        "resultados Clase 2: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-        "resultados Clase 3: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-        "resultados TC 4000: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-        "resultados Fiat 600: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-        "tabla oficial Clase 1: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-        "tabla oficial Clase 2: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-        "tabla oficial Clase 3: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-        "tabla oficial TC 4000: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-        "tabla oficial Fiat 600: Unexpected token '<', \"<html><hea\"... is not valid JSON"
-      ]
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -224638,16 +224620,8 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: resultados Clase 1: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "Nuevo Car Show: resultados Clase 2: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "Nuevo Car Show: resultados Clase 3: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "Nuevo Car Show: resultados TC 4000: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "Nuevo Car Show: resultados Fiat 600: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "Nuevo Car Show: tabla oficial Clase 1: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "Nuevo Car Show: tabla oficial Clase 2: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "Nuevo Car Show: tabla oficial Clase 3: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "Nuevo Car Show: tabla oficial TC 4000: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "Nuevo Car Show: tabla oficial Fiat 600: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "YouTube F1: No se pudo descargar https://www.youtube.com/feeds/videos.xml?channel_id=UCB_qr75-ydFVKSF9Dmo6izg: HTTP 404 (text/html; charset=UTF-8) (se conservan los videos anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
