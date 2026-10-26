@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T00:54:54.914Z",
+  "generatedAt": "2026-10-26T11:51:37.073Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -121377,15 +121377,6 @@
           }
         },
         {
-          "id": "nuevo-car-show-2026-5-tc4000-final",
-          "classId": "tc4000",
-          "kind": "final",
-          "name": "Final TC 4000",
-          "start": "2026-07-12T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
-        },
-        {
           "id": "nuevo-car-show-2026-5-clase1-final",
           "classId": "clase1",
           "kind": "final",
@@ -148859,15 +148850,6 @@
             "name": "Nuevo Car Show · planillas de cronometraje",
             "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/09/TC4000-SERIE-2.pdf"
           }
-        },
-        {
-          "id": "nuevo-car-show-2026-6-fiat600-final",
-          "classId": "fiat600",
-          "kind": "final",
-          "name": "Final Fiat 600",
-          "start": "2026-08-16T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
         },
         {
           "id": "nuevo-car-show-2026-6-clase1-final",
@@ -224082,25 +224064,41 @@
       "clases": {
         "clase1": {
           "status": "sin-campeonato",
-          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
+          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 8 de las 8 fechas que ésta cubre (por ejemplo, el auto 172 de la fecha 1: 6 contra 0 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
         },
         "clase2": {
           "status": "sin-campeonato",
-          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
+          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 8 de las 8 fechas que ésta cubre (por ejemplo, el auto 28 de la fecha 1: 9 contra 1,5 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
         },
         "clase3": {
           "status": "sin-campeonato",
-          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
+          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 5 de las 8 fechas que ésta cubre (por ejemplo, el auto 69 de la fecha 2: 0 contra 2 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
         },
         "tc4000": {
           "status": "sin-campeonato",
-          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
+          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 7 de las 8 fechas que ésta cubre (por ejemplo, el auto 6 de la fecha 2: 0 contra 1 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
         },
         "fiat600": {
           "status": "sin-campeonato",
-          "reason": "No pudimos leer la tabla oficial para verificar el cálculo, y no publicamos un campeonato sin verificarlo."
+          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 6 de las 8 fechas que ésta cubre (por ejemplo, el auto 8 de la fecha 1: 1,5 contra 1,13 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
         }
       }
+    },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
     },
     "rallyArgentino": {
       "events": 9,
@@ -224160,7 +224158,7 @@
     },
     "timing": {
       "documents": 889,
-      "pagesFetched": 127,
+      "pagesFetched": 120,
       "eventsWithResults": 64,
       "retagged": {
         "1003": {
@@ -224620,9 +224618,6 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/11/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "YouTube F1: No se pudo descargar https://www.youtube.com/feeds/videos.xml?channel_id=UCB_qr75-ydFVKSF9Dmo6izg: HTTP 404 (text/html; charset=UTF-8) (se conservan los videos anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
