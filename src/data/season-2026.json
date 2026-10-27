@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T11:51:37.073Z",
+  "generatedAt": "2026-10-27T15:05:47.977Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -214176,6 +214176,97 @@
           "start": "2026-10-24T12:50:00-03:00",
           "timeKnown": true,
           "durationMin": 10,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "1:38.617"
+            },
+            {
+              "pos": 2,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+0.411"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+0.706"
+            },
+            {
+              "pos": 4,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+0.767"
+            },
+            {
+              "pos": 5,
+              "number": "33",
+              "driver": "Audisio Salvador",
+              "team": "Werner Competición",
+              "gap": "+1.154"
+            },
+            {
+              "pos": 6,
+              "number": "116",
+              "driver": "Volpi Simon",
+              "team": "",
+              "gap": "+1.264"
+            },
+            {
+              "pos": 7,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+1.370"
+            },
+            {
+              "pos": 8,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+1.515"
+            },
+            {
+              "pos": 9,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+1.887"
+            },
+            {
+              "pos": 10,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+2.600"
+            },
+            {
+              "pos": 11,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+3.834"
+            },
+            {
+              "pos": 12,
+              "status": "Sin tiempo",
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-11-2026/"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -214192,6 +214283,108 @@
           "start": "2026-10-24T15:10:00-03:00",
           "timeKnown": true,
           "durationMin": 10,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "11:39.815",
+              "laps": 7
+            },
+            {
+              "pos": 2,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+2.587",
+              "laps": 7
+            },
+            {
+              "pos": 3,
+              "number": "33",
+              "driver": "Audisio Salvador",
+              "team": "Werner Competición",
+              "gap": "+8.419",
+              "laps": 7
+            },
+            {
+              "pos": 4,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+9.100",
+              "laps": 7
+            },
+            {
+              "pos": 5,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+9.420",
+              "laps": 7
+            },
+            {
+              "pos": 6,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+9.954",
+              "laps": 7
+            },
+            {
+              "pos": 7,
+              "number": "116",
+              "driver": "Volpi Simon",
+              "team": "",
+              "gap": "+10.296",
+              "laps": 7
+            },
+            {
+              "pos": 8,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+17.871",
+              "laps": 7
+            },
+            {
+              "pos": 9,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+23.998",
+              "laps": 7
+            },
+            {
+              "pos": 10,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+3 vueltas",
+              "laps": 4
+            },
+            {
+              "pos": 11,
+              "status": "Sin vueltas",
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": ""
+            },
+            {
+              "pos": 12,
+              "status": "Sin vueltas",
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-11-2026/"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -214208,6 +214401,108 @@
           "start": "2026-10-25T12:10:00-03:00",
           "timeKnown": true,
           "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Franco Ledesma",
+              "team": "Werner Competición",
+              "gap": "20:02.331",
+              "laps": 12
+            },
+            {
+              "pos": 2,
+              "number": "99",
+              "driver": "Juan Pablo Leonardelli",
+              "team": "Werner Competición",
+              "gap": "+2.960",
+              "laps": 12
+            },
+            {
+              "pos": 3,
+              "number": "5",
+              "driver": "Ignacio Monti",
+              "team": "Aimar Motorsport",
+              "gap": "+4.587",
+              "laps": 12
+            },
+            {
+              "pos": 4,
+              "number": "7",
+              "driver": "Lautaro Videla",
+              "team": "Martinez Competicion",
+              "gap": "+8.551",
+              "laps": 12
+            },
+            {
+              "pos": 5,
+              "number": "36",
+              "driver": "Ignacio Sachs",
+              "team": "Werner Competición",
+              "gap": "+12.880",
+              "laps": 12
+            },
+            {
+              "pos": 6,
+              "number": "51",
+              "driver": "Thomas Ojeda",
+              "team": "ESG Formula",
+              "gap": "+18.671",
+              "laps": 12
+            },
+            {
+              "pos": 7,
+              "number": "95",
+              "driver": "Morena Moix",
+              "team": "",
+              "gap": "+21.479",
+              "laps": 12
+            },
+            {
+              "pos": 8,
+              "number": "116",
+              "driver": "Volpi Simon",
+              "team": "",
+              "gap": "+22.133",
+              "laps": 12
+            },
+            {
+              "pos": 9,
+              "number": "1",
+              "driver": "Valentino Alaux",
+              "team": "Werner Competición",
+              "gap": "+25.055",
+              "laps": 12
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Delfina Villaberde",
+              "team": "Aimar Motorsport",
+              "gap": "+1:34.057",
+              "laps": 12
+            },
+            {
+              "pos": 11,
+              "number": "8",
+              "driver": "Federico Piper",
+              "team": "Werner Competición",
+              "gap": "+5 vueltas",
+              "laps": 7
+            },
+            {
+              "pos": 12,
+              "number": "33",
+              "driver": "Audisio Salvador",
+              "team": "Werner Competición",
+              "gap": "+10 vueltas",
+              "laps": 2
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula 2 Argentina · resultados oficiales",
+            "url": "https://formula2.com.ar/fecha-11-2026/"
+          },
           "timeStatus": "confirmed",
           "timeSources": [
             {
@@ -219572,7 +219867,7 @@
         "pos": 1,
         "driver": "Bautista Damiani",
         "team": "",
-        "points": 466,
+        "points": 465.5,
         "wins": 2
       },
       {
@@ -219584,17 +219879,17 @@
       },
       {
         "pos": 3,
-        "driver": "Nicanor Santilli Pazos",
+        "driver": "Benjamín Antón",
         "team": "",
-        "points": 414,
-        "wins": 1
+        "points": 413.5,
+        "wins": 2
       },
       {
         "pos": 4,
-        "driver": "Benjamín Antón",
+        "driver": "Nicanor Santilli Pazos",
         "team": "",
         "points": 413,
-        "wins": 2
+        "wins": 1
       },
       {
         "pos": 5,
@@ -219642,7 +219937,7 @@
         "pos": 11,
         "driver": "Faustino Cifre",
         "team": "",
-        "points": 364,
+        "points": 363,
         "wins": 0
       },
       {
@@ -219656,7 +219951,7 @@
         "pos": 13,
         "driver": "Gustavo (h) Tadei",
         "team": "",
-        "points": 311.5,
+        "points": 312,
         "wins": 0
       },
       {
@@ -219698,14 +219993,14 @@
         "pos": 19,
         "driver": "Jaime Nicolas",
         "team": "",
-        "points": 97.5,
+        "points": 98,
         "wins": 0
       },
       {
         "pos": 20,
         "driver": "Martinez Alejandro",
         "team": "",
-        "points": 92,
+        "points": 93,
         "wins": 0
       }
     ],
@@ -219803,23 +220098,23 @@
       },
       {
         "pos": 14,
-        "driver": "Matías Frano",
-        "team": "",
-        "points": 78.5,
-        "wins": 0
-      },
-      {
-        "pos": 15,
         "driver": "Alan Denis Cifre",
         "team": "",
         "points": 59,
         "wins": 0
       },
       {
-        "pos": 16,
+        "pos": 15,
         "driver": "Ramiro De Bonis",
         "team": "",
         "points": 55,
+        "wins": 0
+      },
+      {
+        "pos": 16,
+        "driver": "Matías Frano",
+        "team": "",
+        "points": 54.5,
         "wins": 0
       },
       {
@@ -219977,7 +220272,7 @@
         "pos": 1,
         "driver": "Otto Fritzler",
         "team": "",
-        "points": 336.5,
+        "points": 337,
         "wins": 1
       },
       {
@@ -219998,7 +220293,7 @@
         "pos": 4,
         "driver": "Hernán Palazzo",
         "team": "",
-        "points": 304,
+        "points": 303.5,
         "wins": 1
       },
       {
@@ -220012,49 +220307,49 @@
         "pos": 6,
         "driver": "Diego Azar",
         "team": "",
-        "points": 283.5,
+        "points": 286.5,
         "wins": 1
       },
       {
         "pos": 7,
         "driver": "Marco Dianda",
         "team": "",
-        "points": 281,
+        "points": 282,
         "wins": 1
       },
       {
         "pos": 8,
         "driver": "Ignacio Faín",
         "team": "",
-        "points": 274,
+        "points": 274.5,
         "wins": 0
       },
       {
         "pos": 9,
-        "driver": "Diego De Carlo",
+        "driver": "Tobias Martinez",
         "team": "",
-        "points": 254,
-        "wins": 0
+        "points": 254.5,
+        "wins": 1
       },
       {
         "pos": 10,
-        "driver": "Tobias Martinez",
+        "driver": "Diego De Carlo",
         "team": "",
-        "points": 253.5,
-        "wins": 1
+        "points": 254.5,
+        "wins": 0
       },
       {
         "pos": 11,
         "driver": "Tomás Abdala",
         "team": "",
-        "points": 237,
+        "points": 234.5,
         "wins": 0
       },
       {
         "pos": 12,
         "driver": "Gustavo (h) Tadei",
         "team": "",
-        "points": 178.5,
+        "points": 179,
         "wins": 0
       },
       {
@@ -220119,7 +220414,7 @@
         "pos": 1,
         "driver": "Santiago Biagi",
         "team": "",
-        "points": 361.5,
+        "points": 361,
         "wins": 3
       },
       {
@@ -220131,37 +220426,37 @@
       },
       {
         "pos": 3,
-        "driver": "Faustino Cifre",
-        "team": "",
-        "points": 319.5,
-        "wins": 1
-      },
-      {
-        "pos": 4,
         "driver": "Antonino Sganga",
         "team": "",
         "points": 302,
         "wins": 1
       },
       {
+        "pos": 4,
+        "driver": "Faustino Cifre",
+        "team": "",
+        "points": 289.5,
+        "wins": 1
+      },
+      {
         "pos": 5,
         "driver": "Luis Catelli",
         "team": "",
-        "points": 277.5,
+        "points": 278,
         "wins": 0
       },
       {
         "pos": 6,
         "driver": "Nicanor Santilli Pazos",
         "team": "",
-        "points": 273.5,
+        "points": 274,
         "wins": 0
       },
       {
         "pos": 7,
         "driver": "Nahuel Cordone",
         "team": "",
-        "points": 270.5,
+        "points": 271,
         "wins": 1
       },
       {
@@ -220175,7 +220470,7 @@
         "pos": 9,
         "driver": "Juan Pablo Alberti",
         "team": "",
-        "points": 221.5,
+        "points": 223,
         "wins": 1
       },
       {
@@ -220203,7 +220498,7 @@
         "pos": 13,
         "driver": "Gonzalo Aramburu",
         "team": "",
-        "points": 167.5,
+        "points": 168.5,
         "wins": 0
       },
       {
@@ -220217,7 +220512,7 @@
         "pos": 15,
         "driver": "Juan Antonio Sandin",
         "team": "",
-        "points": 132,
+        "points": 132.5,
         "wins": 0
       },
       {
@@ -224467,28 +224762,28 @@
         "rows": [
           {
             "pos": 1,
-            "driver": "Dennis Marschall",
-            "points": 112
-          },
-          {
-            "pos": 2,
-            "driver": "Dustin Blattner",
+            "driver": "Dustin Blattner / Dennis Marschall",
             "points": 97
           },
           {
-            "pos": 3,
+            "pos": 2,
             "driver": "Darren Leung / James Kellett",
             "points": 84
           },
           {
-            "pos": 4,
+            "pos": 3,
             "driver": "Reece Barr / Kiern Jewiss / Charles Dawson",
             "points": 82
           },
           {
-            "pos": 5,
+            "pos": 4,
             "driver": "Gabriele Piana / Rinat Salikhov / Marvin Dienst",
             "points": 76
+          },
+          {
+            "pos": 5,
+            "driver": "Lorenzo Patrese",
+            "points": 62
           }
         ]
       },

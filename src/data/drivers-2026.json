@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T18:50:13.634Z",
+  "generatedAt": "2026-10-27T15:05:49.315Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -2212,7 +2212,7 @@
         "f2-arg": "Aimar Motorsport"
       },
       "firstSeen": "2026-03-28",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "a diego martinez",
@@ -3491,7 +3491,7 @@
         "f2-arg": "Werner Competición"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "federico saba",
@@ -4005,7 +4005,7 @@
         "f2-arg": "Werner Competición"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "franco melli",
@@ -5401,7 +5401,7 @@
         "f2-arg": "Aimar Motorsport"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "ignacio nieto",
@@ -5465,7 +5465,7 @@
         "f2-arg": "Werner Competición"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "ignacio vaira",
@@ -7338,7 +7338,7 @@
         "f2-arg": "Werner Competición"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "juan main pablo",
@@ -7781,7 +7781,7 @@
         "f2-arg": "Martinez Competicion"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "bonnin leandro",
@@ -10442,7 +10442,7 @@
       },
       "teams": {},
       "firstSeen": "2026-07-11",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "cutro nadia",
@@ -12331,7 +12331,7 @@
         "f2-arg": "Werner Competición"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "ferretti sandro",
@@ -13348,7 +13348,7 @@
         "f2-arg": "ESG Formula"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "pozner thomas",
@@ -13895,7 +13895,7 @@
         "f2-arg": "Werner Competición"
       },
       "firstSeen": "2026-01-23",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "cardoso valentino",
@@ -14024,16 +14024,18 @@
       "name": "Volpi Simon",
       "aliases": [],
       "series": [
-        "tc-mouras"
+        "tc-mouras",
+        "f2-arg"
       ],
       "numbers": {
-        "tc-mouras": "124"
+        "tc-mouras": "124",
+        "f2-arg": "116"
       },
       "teams": {
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-28",
-      "lastSeen": "2026-04-26"
+      "lastSeen": "2026-10-25"
     },
     {
       "key": "belich walter",
