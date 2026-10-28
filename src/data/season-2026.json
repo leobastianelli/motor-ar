@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T15:05:47.977Z",
+  "generatedAt": "2026-10-28T15:43:08.388Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -218921,7 +218921,7 @@
       {
         "pos": 2,
         "driver": "Julian Santero",
-        "team": "Ambrogio Racing",
+        "team": "auxilio24.com Sport",
         "points": 256
       },
       {
@@ -219607,59 +219607,59 @@
         "pos": 1,
         "driver": "Lautaro Videla",
         "team": "Martinez Competicion",
-        "points": 415.5,
+        "points": 450.5,
         "wins": 4
       },
       {
         "pos": 2,
         "driver": "Franco Ledesma",
         "team": "Werner Competición",
-        "points": 361.5,
-        "wins": 4
+        "points": 409.5,
+        "wins": 5
       },
       {
         "pos": 3,
         "driver": "Ignacio Monti",
         "team": "Aimar Motorsport",
-        "points": 291.5
+        "points": 317.5
       },
       {
         "pos": 4,
-        "driver": "Federico Piper",
+        "driver": "Juan Pablo Leonardelli",
         "team": "Werner Competición",
-        "points": 271,
+        "points": 286,
         "wins": 1
       },
       {
         "pos": 5,
-        "driver": "Juan Pablo Leonardelli",
+        "driver": "Federico Piper",
         "team": "Werner Competición",
-        "points": 252,
+        "points": 284,
         "wins": 1
       },
       {
         "pos": 6,
         "driver": "Valentino Alaux",
         "team": "Werner Competición",
-        "points": 213
+        "points": 226
       },
       {
         "pos": 7,
         "driver": "Audisio Salvador",
         "team": "Werner Competición",
-        "points": 204
+        "points": 219
       },
       {
         "pos": 8,
         "driver": "Ignacio Sachs",
         "team": "Werner Competición",
-        "points": 166
+        "points": 192
       },
       {
         "pos": 9,
         "driver": "Thomas Ojeda",
         "team": "ESG Formula",
-        "points": 127
+        "points": 149
       },
       {
         "pos": 10,
@@ -219671,19 +219671,19 @@
         "pos": 11,
         "driver": "Delfina Villaberde",
         "team": "Aimar Motorsport",
-        "points": 98
+        "points": 109
       },
       {
         "pos": 12,
-        "driver": "Sebastián Caram",
-        "team": "LR Team",
-        "points": 89.5
+        "driver": "Morena Moix",
+        "team": "",
+        "points": 98
       },
       {
         "pos": 13,
-        "driver": "Morena Moix",
-        "team": "",
-        "points": 79
+        "driver": "Sebastián Caram",
+        "team": "LR Team",
+        "points": 89.5
       },
       {
         "pos": 14,
@@ -219705,6 +219705,12 @@
       },
       {
         "pos": 17,
+        "driver": "Volpi Simon",
+        "team": "",
+        "points": 19
+      },
+      {
+        "pos": 18,
         "driver": "Percara Iván",
         "team": "",
         "points": 10
@@ -223463,10 +223469,10 @@
     "f2-arg": {
       "standingsLabel": "Pilotos",
       "notes": [
-        "El campeonato dice «(9/12)» pero suma 10 victorias: se toma como tabla tras la fecha 10"
+        "El campeonato dice «(9/12)» pero suma 11 victorias: se toma como tabla tras la fecha 11"
       ],
       "errors": [],
-      "standingsAsOfRound": 10
+      "standingsAsOfRound": 11
     },
     "formula-nacional": {
       "standingsLabel": "Pilotos",
