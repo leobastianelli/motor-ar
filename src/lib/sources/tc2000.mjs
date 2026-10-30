@@ -117,6 +117,26 @@ export function applyCampeones(events, weekends) {
     }
     event.sessions[raceIndex] = race;
 
+    // Cronograma de la nota de horarios: cada sesión con su hora y la nota como fuente. La carrera ya existe (se le pone la hora de la tabla,
+    // más precisa que la leída en el texto); el resto se agrega o, si ya estaba sin hora, se completa. Una sesión con resultados no se toca.
+    for (const s of w.schedule ?? []) {
+      const timed = { start: s.start, timeKnown: true, timeStatus: "tentative", durationMin: s.durationMin, timeSources: [{ name: CAMPEONES, url: s.url, start: s.start }] };
+      const i = event.sessions.findIndex((x) => x.kind === s.kind && (s.kind === "carrera" || x.name === s.name));
+      if (i >= 0) {
+        if (!event.sessions[i].results?.length) event.sessions[i] = { ...event.sessions[i], ...timed };
+      } else {
+        const slug = s.name.toLowerCase().normalize("NFD").replace(/\p{M}/gu, "").replace(/[^a-z0-9]+/g, "-");
+        event.sessions.push({ id: `${event.id}-${slug}`, kind: s.kind, name: s.name, ...timed });
+      }
+    }
+    // Ordenadas por hora: la carrera tiene que quedar última (el emparejamiento por calendario de arriba lee `sessions.at(-1)`).
+    if (w.schedule?.length) event.sessions.sort((a, b) => Date.parse(a.start) - Date.parse(b.start));
+
+    // Con cronograma la clasificación ya existe (con hora): la «pole» va ahí.
+    const qualy = event.sessions.findIndex((s) => s.kind === "clasificacion");
+    if (w.pole && qualy >= 0 && !event.sessions[qualy].results?.length && w.schedule?.length) {
+      event.sessions[qualy] = { ...event.sessions[qualy], results: [{ pos: 1, driver: w.pole, team: "", gap: "" }], resultsSource: { name: CAMPEONES, url: w.sources?.[0] ?? source.url } };
+    }
     if (w.pole && !event.sessions.some((s) => s.kind === "clasificacion")) {
       const day = shiftDay(dayOf(race.start), -1);
       event.sessions.unshift({
