@@ -311,7 +311,9 @@ function agendaDraft({ events, now, catalog, enviados }) {
   if (n === 0) return null;
   // La placa «Horarios del finde» (feed): una sola va como foto con el texto; si el finde no entra en una, van todas juntas como álbum.
   const placas = placaFinde(events, now, { seriesById: byId, drivers: catalog.drivers }, "feed").placas.length;
-  const urls = Array.from({ length: placas }, (_, i) => `${BASE_URL}/placa/finde/feed/${i + 1}`);
+  // `?finde=` no lo usa la ruta, pero hace única la dirección de cada semana: Telegram guarda las fotos por dirección y, con la misma de
+  // siempre, el viernes 30/10/2026 devolvió la placa del finde anterior.
+  const urls = Array.from({ length: placas }, (_, i) => `${BASE_URL}/placa/finde/feed/${i + 1}?finde=${days[0]}`);
   return { key, kind: "agenda", at: Date.parse(now), text: compose(n), link: url, ...(urls.length > 1 ? { images: urls } : { image: urls[0] }) };
 }
 
