@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T15:30:15.510Z",
+  "generatedAt": "2026-10-30T23:46:28.140Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -217315,7 +217315,195 @@
           "name": "Práctica 1",
           "start": "2026-10-30T18:30:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "1:18.128"
+            },
+            {
+              "pos": 2,
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+0.659"
+            },
+            {
+              "pos": 3,
+              "number": "72",
+              "driver": "Frederik Vesti",
+              "code": "VES",
+              "team": "Mercedes",
+              "gap": "+0.733"
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+0.738"
+            },
+            {
+              "pos": 5,
+              "number": "36",
+              "driver": "Ayumu Iwasa",
+              "code": "IWA",
+              "team": "Red Bull Racing",
+              "gap": "+0.985"
+            },
+            {
+              "pos": 6,
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "+1.082"
+            },
+            {
+              "pos": 7,
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+1.229"
+            },
+            {
+              "pos": 8,
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+1.248"
+            },
+            {
+              "pos": 9,
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+1.284"
+            },
+            {
+              "pos": 10,
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+1.350"
+            },
+            {
+              "pos": 11,
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "+1.417"
+            },
+            {
+              "pos": 12,
+              "number": "91",
+              "driver": "Nikola Tsolov",
+              "code": "TSO",
+              "team": "Racing Bulls",
+              "gap": "+1.476"
+            },
+            {
+              "pos": 13,
+              "number": "27",
+              "driver": "Nico Hulkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+1.480"
+            },
+            {
+              "pos": 14,
+              "number": "62",
+              "driver": "Gabriele Mini",
+              "code": "MIN",
+              "team": "Alpine",
+              "gap": "+1.818"
+            },
+            {
+              "pos": 15,
+              "number": "50",
+              "driver": "Ryo Hirakawa",
+              "code": "HIR",
+              "team": "Haas F1 Team",
+              "gap": "+1.854"
+            },
+            {
+              "pos": 16,
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+1.878"
+            },
+            {
+              "pos": 17,
+              "number": "67",
+              "driver": "Leonardo Fornaroli",
+              "code": "FOR",
+              "team": "McLaren",
+              "gap": "+2.107"
+            },
+            {
+              "pos": 18,
+              "number": "11",
+              "driver": "Sergio Perez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "+2.267"
+            },
+            {
+              "pos": 19,
+              "number": "34",
+              "driver": "Jak Crawford",
+              "code": "CRA",
+              "team": "Aston Martin",
+              "gap": "+2.675"
+            },
+            {
+              "pos": 20,
+              "number": "46",
+              "driver": "Luke Browning",
+              "code": "BRO",
+              "team": "Williams",
+              "gap": "+2.741"
+            },
+            {
+              "pos": 21,
+              "number": "98",
+              "driver": "Freddie Slater",
+              "code": "SLA",
+              "team": "Audi",
+              "gap": "+2.817"
+            },
+            {
+              "pos": 22,
+              "number": "25",
+              "driver": "Colton Herta",
+              "code": "HER",
+              "team": "Cadillac",
+              "gap": "+3.237"
+            }
+          ],
+          "resultsSource": {
+            "name": "OpenF1",
+            "url": "https://api.openf1.org/v1/session_result?session_key=11397"
+          },
+          "videos": [
+            {
+              "id": "zM4cNh5YRek",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-19-secondpractice",
@@ -217323,7 +217511,189 @@
           "name": "Práctica 2",
           "start": "2026-10-30T22:00:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "1:17.827"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "+0.103"
+            },
+            {
+              "pos": 3,
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "+0.106"
+            },
+            {
+              "pos": 4,
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+0.217"
+            },
+            {
+              "pos": 5,
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "+0.311"
+            },
+            {
+              "pos": 6,
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "+0.410"
+            },
+            {
+              "pos": 7,
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+0.562"
+            },
+            {
+              "pos": 8,
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "+0.580"
+            },
+            {
+              "pos": 9,
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "+0.628"
+            },
+            {
+              "pos": 10,
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+0.642"
+            },
+            {
+              "pos": 11,
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+0.685"
+            },
+            {
+              "pos": 12,
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+0.769"
+            },
+            {
+              "pos": 13,
+              "number": "31",
+              "driver": "Esteban Ocon",
+              "code": "OCO",
+              "team": "Haas F1 Team",
+              "gap": "+0.947"
+            },
+            {
+              "pos": 14,
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+1.022"
+            },
+            {
+              "pos": 15,
+              "number": "27",
+              "driver": "Nico Hulkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+1.196"
+            },
+            {
+              "pos": 16,
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "+1.305"
+            },
+            {
+              "pos": 17,
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+1.421"
+            },
+            {
+              "pos": 18,
+              "number": "11",
+              "driver": "Sergio Perez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "+1.579"
+            },
+            {
+              "pos": 19,
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "+1.751"
+            },
+            {
+              "pos": 20,
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "+1.804"
+            },
+            {
+              "pos": 21,
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "+2.338"
+            },
+            {
+              "pos": 22,
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "+2.347"
+            }
+          ],
+          "resultsSource": {
+            "name": "OpenF1",
+            "url": "https://api.openf1.org/v1/session_result?session_key=11398"
+          }
         },
         {
           "id": "f1-2026-19-thirdpractice",
@@ -217351,6 +217721,118 @@
         }
       ],
       "source": "Jolpica-F1"
+    },
+    {
+      "id": "tc2000-2026-10",
+      "seriesId": "tc2000",
+      "round": 10,
+      "name": "Fecha 10 · General Roca",
+      "circuit": {
+        "name": "Autódromo Parque Ciudad de General Roca",
+        "city": "General Roca",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Río Negro"
+      },
+      "sessions": [
+        {
+          "id": "tc2000-2026-10-shakedown",
+          "kind": "practica",
+          "name": "Shakedown",
+          "start": "2026-10-31T08:30:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "tentative",
+          "durationMin": 10,
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+              "start": "2026-10-31T08:30:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tc2000-2026-10-practica-oficial-1",
+          "kind": "practica",
+          "name": "Práctica oficial 1",
+          "start": "2026-10-31T10:35:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "tentative",
+          "durationMin": 45,
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+              "start": "2026-10-31T10:35:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tc2000-2026-10-practica-oficial-2",
+          "kind": "practica",
+          "name": "Práctica oficial 2",
+          "start": "2026-10-31T13:15:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "tentative",
+          "durationMin": 45,
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+              "start": "2026-10-31T13:15:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tc2000-2026-10-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-10-31T15:40:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "tentative",
+          "durationMin": 35,
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+              "start": "2026-10-31T15:40:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tc2000-2026-10-warm-up",
+          "kind": "practica",
+          "name": "Warm-up",
+          "start": "2026-11-01T09:45:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "tentative",
+          "durationMin": 10,
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+              "start": "2026-11-01T09:45:00-03:00"
+            }
+          ]
+        },
+        {
+          "id": "tc2000-2026-10-race",
+          "kind": "carrera",
+          "name": "Carrera",
+          "start": "2026-11-01T13:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 40,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "Campeones",
+              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+              "start": "2026-11-01T13:05:00-03:00"
+            }
+          ]
+        }
+      ],
+      "source": "Campeones"
     },
     {
       "id": "formula-nacional-2026-8",
@@ -217581,13 +218063,13 @@
       "id": "tcm-2026-11",
       "seriesId": "tc-mouras",
       "round": 11,
-      "name": "Fecha 11 · ",
+      "name": "Fecha 11 · La Plata",
       "circuit": {
-        "name": "A CONFIRMAR",
-        "city": "A CONFIRMAR",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -217605,13 +218087,13 @@
       "id": "tcpm-2026-11",
       "seriesId": "tc-pista-mouras",
       "round": 11,
-      "name": "Fecha 11 · ",
+      "name": "Fecha 11 · La Plata",
       "circuit": {
-        "name": "A CONFIRMAR",
-        "city": "A CONFIRMAR",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -217629,13 +218111,13 @@
       "id": "tcpk-2026-10",
       "seriesId": "tc-pick-up",
       "round": 10,
-      "name": "Fecha 10 · ",
+      "name": "Fecha 10 · La Plata",
       "circuit": {
-        "name": "A CONFIRMAR",
-        "city": "A CONFIRMAR",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -217653,13 +218135,13 @@
       "id": "tcppk-2026-10",
       "seriesId": "tc-pista-pick-up",
       "round": 10,
-      "name": "Fecha 10 · ",
+      "name": "Fecha 10 · La Plata",
       "circuit": {
-        "name": "A CONFIRMAR",
-        "city": "A CONFIRMAR",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -218321,6 +218803,48 @@
       "source": "nuevocarshow.com.ar (calendario y planillas de cronometraje)"
     },
     {
+      "id": "rally-argentino-2026-9",
+      "seriesId": "rally-argentino",
+      "round": 9,
+      "name": "Gran Premio Rally de San Luis",
+      "officialName": "Gran Premio Rally de San Luis",
+      "circuit": {
+        "name": "San Luis",
+        "city": "San Luis",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "San Luis"
+      },
+      "source": "rallyargentino.com (calendario y tiempos oficiales)",
+      "rallyId": 216,
+      "sessions": [
+        {
+          "id": "rally-argentino-2026-9-etapa1",
+          "kind": "carrera",
+          "name": "Etapa 1",
+          "start": "2026-12-12T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 600
+        },
+        {
+          "id": "rally-argentino-2026-9-etapa2",
+          "kind": "carrera",
+          "name": "Etapa 2",
+          "start": "2026-12-13T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 480
+        },
+        {
+          "id": "rally-argentino-2026-9-general",
+          "kind": "carrera",
+          "name": "Clasificación general",
+          "start": "2026-12-13T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        }
+      ]
+    },
+    {
       "id": "formula-nacional-2026-10",
       "seriesId": "formula-nacional",
       "round": 10,
@@ -218376,58 +218900,16 @@
       "source": "Fórmula Nacional Argentina (sitio oficial)"
     },
     {
-      "id": "rally-argentino-2026-9",
-      "seriesId": "rally-argentino",
-      "round": 9,
-      "name": "Gran Premio Rally de San Luis",
-      "officialName": "Gran Premio Rally de San Luis",
-      "circuit": {
-        "name": "San Luis",
-        "city": "San Luis",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "San Luis"
-      },
-      "source": "rallyargentino.com (calendario y tiempos oficiales)",
-      "rallyId": 216,
-      "sessions": [
-        {
-          "id": "rally-argentino-2026-9-etapa1",
-          "kind": "carrera",
-          "name": "Etapa 1",
-          "start": "2026-12-12T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 600
-        },
-        {
-          "id": "rally-argentino-2026-9-etapa2",
-          "kind": "carrera",
-          "name": "Etapa 2",
-          "start": "2026-12-13T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 480
-        },
-        {
-          "id": "rally-argentino-2026-9-general",
-          "kind": "carrera",
-          "name": "Clasificación general",
-          "start": "2026-12-13T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
-        }
-      ]
-    },
-    {
       "id": "tcm-2026-12",
       "seriesId": "tc-mouras",
       "round": 12,
-      "name": "Fecha 12 · ",
+      "name": "Fecha 12 · La Plata",
       "circuit": {
-        "name": "A CONFIRMAR",
-        "city": "A CONFIRMAR",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -218445,13 +218927,13 @@
       "id": "tcpm-2026-12",
       "seriesId": "tc-pista-mouras",
       "round": 12,
-      "name": "Fecha 12 · ",
+      "name": "Fecha 12 · La Plata",
       "circuit": {
-        "name": "A CONFIRMAR",
-        "city": "A CONFIRMAR",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -218469,13 +218951,13 @@
       "id": "tcpk-2026-11",
       "seriesId": "tc-pick-up",
       "round": 11,
-      "name": "Fecha 11 · ",
+      "name": "Fecha 11 · La Plata",
       "circuit": {
-        "name": "A CONFIRMAR",
-        "city": "A CONFIRMAR",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -218493,13 +218975,13 @@
       "id": "tcppk-2026-11",
       "seriesId": "tc-pista-pick-up",
       "round": 11,
-      "name": "Fecha 11 · ",
+      "name": "Fecha 11 · La Plata",
       "circuit": {
-        "name": "A CONFIRMAR",
-        "city": "A CONFIRMAR",
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
         "country": "Argentina",
         "flag": "AR",
-        "province": ""
+        "province": "Buenos Aires"
       },
       "sessions": [
         {
@@ -223116,6 +223598,64 @@
             "https://campeones.com.ar/emiliano-stang-comenzo-arriba-en-la-primera-practica-de-tc2000/",
             "https://campeones.com.ar/vivian-y-su-panorama-en-tc2000-los-milagros-ocurrieron-pero-soy-mas-terrenal/"
           ]
+        },
+        {
+          "raceDay": "2026-11-01",
+          "round": 1,
+          "city": "General Roca",
+          "circuit": "Autódromo Parque Ciudad de General Roca",
+          "province": "Río Negro",
+          "raceTime": "13:05",
+          "schedule": [
+            {
+              "kind": "practica",
+              "name": "Shakedown",
+              "start": "2026-10-31T08:30:00-03:00",
+              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+              "durationMin": 10
+            },
+            {
+              "kind": "practica",
+              "name": "Práctica oficial 1",
+              "start": "2026-10-31T10:35:00-03:00",
+              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+              "durationMin": 45
+            },
+            {
+              "kind": "practica",
+              "name": "Práctica oficial 2",
+              "start": "2026-10-31T13:15:00-03:00",
+              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+              "durationMin": 45
+            },
+            {
+              "kind": "clasificacion",
+              "name": "Clasificación",
+              "start": "2026-10-31T15:40:00-03:00",
+              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+              "durationMin": 35
+            },
+            {
+              "kind": "practica",
+              "name": "Warm-up",
+              "start": "2026-11-01T09:45:00-03:00",
+              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+              "durationMin": 10
+            },
+            {
+              "kind": "carrera",
+              "name": "Carrera",
+              "start": "2026-11-01T13:05:00-03:00",
+              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+              "durationMin": 40
+            }
+          ],
+          "sources": [
+            "https://campeones.com.ar/tc2000-federico-iribarne-se-suma-a-lincoln-motorsport/",
+            "https://campeones.com.ar/toyota-el-reglamento-y-la-actualidad-del-tc2000-2/",
+            "https://campeones.com.ar/la-nissan-kicks-vuelve-a-la-accion-en-general-roca/",
+            "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/"
+          ]
         }
       ],
       "campeonesFeed": true,
@@ -224528,8 +225068,8 @@
     },
     "openf1": {
       "sessions": 131,
-      "requests": 10,
-      "sessionsWithResults": 48
+      "requests": 14,
+      "sessionsWithResults": 50
     },
     "f1Official": {
       "requests": 0,
@@ -224538,7 +225078,7 @@
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 15,
+      "sessions": 16,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
