@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T15:43:08.388Z",
+  "generatedAt": "2026-10-30T15:30:15.510Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223468,9 +223468,7 @@
     },
     "f2-arg": {
       "standingsLabel": "Pilotos",
-      "notes": [
-        "El campeonato dice «(9/12)» pero suma 11 victorias: se toma como tabla tras la fecha 11"
-      ],
+      "notes": [],
       "errors": [],
       "standingsAsOfRound": 11
     },
