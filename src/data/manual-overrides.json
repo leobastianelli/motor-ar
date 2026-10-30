@@ -1,6 +1,34 @@
 {
   "_ayuda": "Carga manual. Pisa o completa lo que traen las fuentes automáticas. En 'events', la clave es el id de la fecha (se ve en la URL: /eventos/tc-2026-11). Cada sesión se reconoce por 'kind' + 'name' (p. ej. practica + '1° Entrenamiento', clasificacion + 'Clasificación', serie + 'Serie 1', final + 'Final'): si existe se actualizan sólo los campos que pongas; si no existe, se agrega. 'broadcasts' reemplaza la lista de dónde verlo. Horarios en ISO con -03:00. Ver docs/fuentes-de-datos.md.",
   "events": {
+    "tn-2026-11": {
+      "sessions": [
+        { "kind": "practica", "name": "1° Entrenamiento Clase 2", "start": "2026-10-31T08:40:00-03:00", "timeKnown": true, "durationMin": 65, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-10-31T08:40:00-03:00"}] },
+        { "kind": "practica", "name": "1° Entrenamiento Clase 3", "start": "2026-10-31T09:50:00-03:00", "timeKnown": true, "durationMin": 65, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-10-31T09:50:00-03:00"}] },
+        { "kind": "practica", "name": "2° Entrenamiento Clase 2", "start": "2026-10-31T11:00:00-03:00", "timeKnown": true, "durationMin": 55, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-10-31T11:00:00-03:00"}] },
+        { "kind": "practica", "name": "2° Entrenamiento Clase 3", "start": "2026-10-31T12:00:00-03:00", "timeKnown": true, "durationMin": 55, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-10-31T12:00:00-03:00"}] },
+        { "kind": "clasificacion", "name": "Clasificación 1 Clase 2", "start": "2026-10-31T15:10:00-03:00", "timeKnown": true, "durationMin": 40, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-10-31T15:10:00-03:00"}] },
+        { "kind": "clasificacion", "name": "Clasificación Clase 3", "start": "2026-10-31T16:00:00-03:00", "timeKnown": true, "durationMin": 40, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-10-31T16:00:00-03:00"}] },
+        { "kind": "clasificacion", "name": "Clasificación 2 Clase 2", "start": "2026-10-31T17:20:00-03:00", "timeKnown": true, "durationMin": 40, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-10-31T17:20:00-03:00"}] },
+        { "kind": "serie", "name": "Serie 1 Clase 2", "start": "2026-11-01T10:05:00-03:00", "timeKnown": true, "durationMin": 15, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-11-01T10:05:00-03:00"}] },
+        { "kind": "serie", "name": "Serie 2 Clase 2", "start": "2026-11-01T10:30:00-03:00", "timeKnown": true, "durationMin": 15, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-11-01T10:30:00-03:00"}] },
+        { "kind": "serie", "name": "Serie 3 Clase 2", "start": "2026-11-01T10:55:00-03:00", "timeKnown": true, "durationMin": 15, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-11-01T10:55:00-03:00"}] },
+        { "kind": "serie", "name": "Serie 1 Clase 3", "start": "2026-11-01T11:20:00-03:00", "timeKnown": true, "durationMin": 15, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-11-01T11:20:00-03:00"}] },
+        { "kind": "serie", "name": "Serie 2 Clase 3", "start": "2026-11-01T11:45:00-03:00", "timeKnown": true, "durationMin": 15, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-11-01T11:45:00-03:00"}] },
+        { "kind": "serie", "name": "Serie 3 Clase 3", "start": "2026-11-01T12:10:00-03:00", "timeKnown": true, "durationMin": 15, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-11-01T12:10:00-03:00"}] },
+        { "kind": "final", "name": "Final Clase 2", "start": "2026-11-01T13:10:00-03:00", "timeKnown": true, "durationMin": 35, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-11-01T13:10:00-03:00"}] },
+        { "kind": "final", "name": "Final Clase 3", "start": "2026-11-01T14:10:00-03:00", "timeKnown": true, "durationMin": 40, "timeSources": [{"name": "APAT (cronograma oficial, 27/10)", "url": "https://www.apat.org.ar/noticias/detalle/cronograma-de-actividades-undecima-fecha", "start": "2026-11-01T14:10:00-03:00"}] }
+      ]
+    },
+    "formula-nacional-2026-8": {
+      "sessions": [
+        { "kind": "practica", "name": "Práctica oficial 1", "start": "2026-10-31T09:40:00-03:00", "timeKnown": true, "durationMin": 20, "timeSources": [{"name": "Campeones (cronograma de General Roca)", "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca", "start": "2026-10-31T09:40:00-03:00"}] },
+        { "kind": "practica", "name": "Práctica oficial 2", "start": "2026-10-31T12:20:00-03:00", "timeKnown": true, "durationMin": 20, "timeSources": [{"name": "Campeones (cronograma de General Roca)", "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca", "start": "2026-10-31T12:20:00-03:00"}] },
+        { "kind": "clasificacion", "name": "Clasificación", "start": "2026-10-31T15:00:00-03:00", "timeKnown": true, "durationMin": 15, "timeSources": [{"name": "Campeones (cronograma de General Roca)", "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca", "start": "2026-10-31T15:00:00-03:00"}] },
+        { "kind": "carrera", "name": "Carrera 1", "start": "2026-10-31T17:15:00-03:00", "timeKnown": true, "durationMin": 20, "timeSources": [{"name": "Campeones (cronograma de General Roca)", "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca", "start": "2026-10-31T17:15:00-03:00"}] },
+        { "kind": "carrera", "name": "Carrera 2", "start": "2026-11-01T11:05:00-03:00", "timeKnown": true, "durationMin": 25, "timeSources": [{"name": "Campeones (cronograma de General Roca)", "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca", "start": "2026-11-01T11:05:00-03:00"}] }
+      ]
+    },
     "tc2000-2026-3": {
       "sessions": [
         {
@@ -270,6 +298,23 @@
         { "id": "tc2000-2026-9-carrera", "kind": "carrera", "name": "Carrera", "start": "2026-10-11T13:00:00-03:00", "timeKnown": true, "timeStatus": "confirmed", "durationMin": 40, "timeSources": [{"name": "TC2000 oficial · cronograma de actividades", "url": "https://tc2000.com.ar/", "start": "2026-10-11T13:00:00-03:00"}] }
       ],
       "source": "Carga manual · cronograma oficial de TC2000 (sábado 10: shakedown 08.35, práctica 1 09.35, práctica 2 11.20, Q1 15.47, Q2 con los 10 mejores 16.10; domingo 11: warm up 10.35, final 13.00 a 35 minutos + 1 vuelta), Autódromo Provincia de La Pampa, Toay"
+    },
+    {
+      "id": "tc2000-2026-10",
+      "seriesId": "tc2000",
+      "round": 10,
+      "dateConfirmed": true,
+      "name": "Fecha 10 · General Roca",
+      "circuit": { "name": "Autódromo Parque Ciudad de General Roca", "city": "General Roca", "country": "Argentina", "flag": "AR", "province": "Río Negro" },
+      "sessions": [
+        { "id": "tc2000-2026-10-shakedown", "kind": "practica", "name": "Shakedown", "start": "2026-10-31T08:30:00-03:00", "timeKnown": true, "durationMin": 10, "timeSources": [{"name": "Campeones (cronograma de General Roca)", "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca", "start": "2026-10-31T08:30:00-03:00"}] },
+        { "id": "tc2000-2026-10-practica-1", "kind": "practica", "name": "Práctica oficial 1", "start": "2026-10-31T10:35:00-03:00", "timeKnown": true, "durationMin": 45, "timeSources": [{"name": "Campeones (cronograma de General Roca)", "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca", "start": "2026-10-31T10:35:00-03:00"}] },
+        { "id": "tc2000-2026-10-practica-2", "kind": "practica", "name": "Práctica oficial 2", "start": "2026-10-31T13:15:00-03:00", "timeKnown": true, "durationMin": 45, "timeSources": [{"name": "Campeones (cronograma de General Roca)", "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca", "start": "2026-10-31T13:15:00-03:00"}] },
+        { "id": "tc2000-2026-10-clasificacion", "kind": "clasificacion", "name": "Clasificación", "start": "2026-10-31T15:40:00-03:00", "timeKnown": true, "durationMin": 35, "timeSources": [{"name": "Campeones (cronograma de General Roca)", "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca", "start": "2026-10-31T15:40:00-03:00"}] },
+        { "id": "tc2000-2026-10-warmup", "kind": "practica", "name": "Warm-up", "start": "2026-11-01T09:45:00-03:00", "timeKnown": true, "durationMin": 10, "timeSources": [{"name": "Campeones (cronograma de General Roca)", "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca", "start": "2026-11-01T09:45:00-03:00"}] },
+        { "id": "tc2000-2026-10-final", "kind": "final", "name": "Final", "start": "2026-11-01T13:05:00-03:00", "timeKnown": true, "durationMin": 40, "timeSources": [{"name": "Campeones (cronograma de General Roca)", "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca", "start": "2026-11-01T13:05:00-03:00"}] }
+      ],
+      "source": "Carga manual · horarios de Campeones (28/10), confirmados por AN Roca: sábado 31 shakedown 08.30, práctica 1 10.35, práctica 2 13.15, clasificación 15.40; domingo 1 warm-up 09.45, final 13.05 (35 min + 1 vuelta). Autódromo Parque Ciudad de General Roca"
     },
     {
       "id": "ligier-jfc-2026-1",
