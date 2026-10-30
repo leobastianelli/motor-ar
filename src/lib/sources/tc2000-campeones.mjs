@@ -25,6 +25,11 @@ const VENUES = [
   ["roberto mouras|la plata", "La Plata", "Autódromo Roberto Mouras", "Buenos Aires"],
   ["potrero de los funes", "San Luis", "Circuito Rosendo Hernández", "San Luis"],
   ["mendoza", "Mendoza", "Autódromo San Martín", "Mendoza"],
+  ["general roca", "General Roca", "Autódromo Parque Ciudad de General Roca", "Río Negro"],
+  ["viedma", "Viedma", "Autódromo Ciudad de Viedma", "Río Negro"],
+  ["oscar y juan gálvez|oscar y juan galvez|autódromo de buenos aires", "Buenos Aires", "Autódromo Oscar y Juan Gálvez", "Buenos Aires"],
+  ["san jorge", "San Jorge", "Autódromo Ciudad de San Jorge", "Santa Fe"],
+  ["río cuarto|rio cuarto", "Río Cuarto", "Autódromo Ciudad de Río Cuarto", "Córdoba"],
 ].map(([words, city, circuit, province]) => ({ re: new RegExp(`(?<!\\p{L})(?:${words})(?!\\p{L})`, "giu"), city, circuit, province }));
 
 const ORDINALS = { primera: 1, segunda: 2, tercera: 3, cuarta: 4, quinta: 5, sexta: 6, "séptima": 7, septima: 7, octava: 8, novena: 9, "décima": 10, decima: 10, "undécima": 11, undecima: 11, "duodécima": 12, duodecima: 12 };
@@ -113,6 +118,55 @@ function raceTimeOf(posts) {
   return [...votes.entries()].sort((a, b) => b[1].n - a[1].n || b[1].latest.localeCompare(a[1].latest))[0]?.[0];
 }
 
+/** Sesión del TC2000 para una actividad de la tabla del cronograma; lo que no es pista (parque cerrado, podio) queda afuera. */
+function scheduleSession(activity) {
+  const a = activity.toLowerCase();
+  if (/parque cerrado|podio|conferencia/.test(a)) return undefined;
+  if (/shakedown/.test(a)) return { kind: "practica", name: "Shakedown" };
+  if (/warm.?up/.test(a)) return { kind: "practica", name: "Warm-up" };
+  const practica = a.match(/pr[aá]ctica\s+(oficial\s+)?(\d)/);
+  if (practica) return { kind: "practica", name: `Práctica ${practica[1] ? "oficial " : ""}${practica[2]}` };
+  if (/clasificaci[oó]n/.test(a)) return { kind: "clasificacion", name: "Clasificación" };
+  if (/carrera|final/.test(a)) return { kind: "carrera", name: "Carrera" };
+  return undefined;
+}
+
+/**
+ * Cronograma del finde desde la tabla «Horario | Categoría | Actividad» de la nota de horarios (Campeones la publica unos días antes, con
+ * todas las categorías del autódromo). Se toman sólo las filas del TC2000; las de una misma actividad partida en grupos se juntan en una sesión
+ * (del primer inicio al último final). Si hay varias notas con tabla, vale la más nueva: el cronograma puede cambiar en la semana.
+ */
+function scheduleOf(posts, sunday) {
+  const ROW = /(viernes|s[aá]bado|domingo)\s+(\d{1,2})\/(\d{1,2})\/(\d{4})|(\d{1,2})[:.](\d{2})\s*[–-]\s*(\d{1,2})[:.](\d{2})\s*\n\s*([^\n]+?)\s*\n\s*([^\n]+?)\s*\n/giu;
+  const first = Date.parse(`${sunday}T00:00:00-03:00`) - 2 * DAY;
+  for (const p of [...posts].sort((a, b) => b.date.localeCompare(a.date))) {
+    const byName = new Map();
+    let day;
+    for (const m of p.text.matchAll(ROW)) {
+      if (m[1]) {
+        const ms = Date.parse(`${m[4]}-${m[3].padStart(2, "0")}-${m[2].padStart(2, "0")}T00:00:00-03:00`);
+        day = ms >= first && ms <= first + 2 * DAY ? ymd(ms) : undefined;
+        continue;
+      }
+      if (!day || !/^tc ?2000$/i.test(m[9].trim())) continue;
+      const s = scheduleSession(m[10]);
+      if (!s) continue;
+      const at = (h, min) => `${day}T${h.padStart(2, "0")}:${min}:00-03:00`;
+      const start = at(m[5], m[6]);
+      const end = at(m[7], m[8]);
+      const key = `${s.kind}|${s.name}`;
+      const prev = byName.get(key);
+      byName.set(key, prev ? { ...prev, start: start < prev.start ? start : prev.start, end: end > prev.end ? end : prev.end } : { ...s, start, end, url: p.link });
+    }
+    if (byName.size) {
+      return [...byName.values()]
+        .sort((a, b) => a.start.localeCompare(b.start))
+        .map(({ end, ...s }) => ({ ...s, durationMin: Math.max(5, Math.round((Date.parse(end) - Date.parse(s.start)) / 60000)) }));
+    }
+  }
+  return [];
+}
+
 function poleOf(posts, known) {
   const found = [];
   for (const p of posts) {
@@ -155,9 +209,11 @@ export function parseWeekends(posts, known = []) {
     if (!venue) continue;
     const winner = winnerOf(list, known);
     const pole = poleOf(list, known);
-    const raceTime = raceTimeOf(list);
+    const schedule = scheduleOf(list, sunday);
+    // La hora de la tabla del cronograma manda sobre la que se lee en el texto.
+    const raceTime = schedule.find((s) => s.kind === "carrera")?.start.slice(11, 16) ?? raceTimeOf(list);
     // Una nota suelta sin datos del finde (previa, color, entrevista) no es una fecha.
-    if (!winner && !pole && !raceTime) continue;
+    if (!winner && !pole && !raceTime && !schedule.length) continue;
     weekends.push({
       raceDay: sunday,
       round: roundOf(list),
@@ -165,6 +221,7 @@ export function parseWeekends(posts, known = []) {
       circuit: venue.circuit,
       province: venue.province,
       raceTime,
+      ...(schedule.length ? { schedule } : {}),
       pole,
       winner: winner?.name,
       winnerUrl: winner?.url,
