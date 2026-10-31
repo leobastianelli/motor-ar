@@ -23,8 +23,8 @@ import type { CSSProperties } from "react";
 
 // Lo que depende de la hora (el momento, el estado de cada sesión, cuántas fechas van, la próxima) se dibuja en el navegador con la hora real
 // (src/components/en-vivo.tsx): la regeneración por tiempo puede ser lenta. Los datos nuevos invalidan la página por evento (/api/refresh).
-// El título y la descripción para buscadores salen del momento a la hora de la última regeneración: pueden tener hasta 15 minutos de atraso.
-export const revalidate = 900;
+// El título y la descripción para buscadores salen del momento a la hora de la última regeneración: pueden tener hasta 6 horas de atraso.
+export const revalidate = 21600;
 
 export function generateStaticParams() {
   return getAllSeries().map((s) => ({ slug: s.id }));

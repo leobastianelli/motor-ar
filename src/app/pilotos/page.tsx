@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 // El estado de cada piloto destacado ("En pista", "Próxima", "Final") se calcula en el navegador con la hora real: la regeneración por tiempo puede
 // ser lenta. Los datos nuevos invalidan la página por evento (/api/refresh).
-export const revalidate = 900;
+export const revalidate = 3600;
 
 export default async function DriversPage() {
   const now = getNow();

@@ -13,7 +13,7 @@ import { fechasDeCategoria, fechasDeLosPilotos } from "@/lib/snapshot.mjs";
 
 // El estado de los pilotos y la próxima fecha de cada categoría (el costado "En Fierros") se calculan en el navegador con la hora real: la
 // regeneración por tiempo puede ser lenta. Los datos nuevos invalidan la página por evento (/api/refresh).
-export const revalidate = 900;
+export const revalidate = 21600;
 
 export function generateStaticParams() {
   return notas.map((n) => ({ slug: n.slug }));
