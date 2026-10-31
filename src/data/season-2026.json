@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T23:46:28.140Z",
+  "generatedAt": "2026-10-31T13:00:56.985Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -217693,7 +217693,13 @@
           "resultsSource": {
             "name": "OpenF1",
             "url": "https://api.openf1.org/v1/session_result?session_key=11398"
-          }
+          },
+          "videos": [
+            {
+              "id": "tEEGnZna3Gc",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-19-thirdpractice",
@@ -218803,48 +218809,6 @@
       "source": "nuevocarshow.com.ar (calendario y planillas de cronometraje)"
     },
     {
-      "id": "rally-argentino-2026-9",
-      "seriesId": "rally-argentino",
-      "round": 9,
-      "name": "Gran Premio Rally de San Luis",
-      "officialName": "Gran Premio Rally de San Luis",
-      "circuit": {
-        "name": "San Luis",
-        "city": "San Luis",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "San Luis"
-      },
-      "source": "rallyargentino.com (calendario y tiempos oficiales)",
-      "rallyId": 216,
-      "sessions": [
-        {
-          "id": "rally-argentino-2026-9-etapa1",
-          "kind": "carrera",
-          "name": "Etapa 1",
-          "start": "2026-12-12T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 600
-        },
-        {
-          "id": "rally-argentino-2026-9-etapa2",
-          "kind": "carrera",
-          "name": "Etapa 2",
-          "start": "2026-12-13T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 480
-        },
-        {
-          "id": "rally-argentino-2026-9-general",
-          "kind": "carrera",
-          "name": "Clasificación general",
-          "start": "2026-12-13T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
-        }
-      ]
-    },
-    {
       "id": "formula-nacional-2026-10",
       "seriesId": "formula-nacional",
       "round": 10,
@@ -218898,6 +218862,48 @@
         }
       ],
       "source": "Fórmula Nacional Argentina (sitio oficial)"
+    },
+    {
+      "id": "rally-argentino-2026-9",
+      "seriesId": "rally-argentino",
+      "round": 9,
+      "name": "Gran Premio Rally de San Luis",
+      "officialName": "Gran Premio Rally de San Luis",
+      "circuit": {
+        "name": "San Luis",
+        "city": "San Luis",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "San Luis"
+      },
+      "source": "rallyargentino.com (calendario y tiempos oficiales)",
+      "rallyId": 216,
+      "sessions": [
+        {
+          "id": "rally-argentino-2026-9-etapa1",
+          "kind": "carrera",
+          "name": "Etapa 1",
+          "start": "2026-12-12T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 600
+        },
+        {
+          "id": "rally-argentino-2026-9-etapa2",
+          "kind": "carrera",
+          "name": "Etapa 2",
+          "start": "2026-12-13T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 480
+        },
+        {
+          "id": "rally-argentino-2026-9-general",
+          "kind": "carrera",
+          "name": "Clasificación general",
+          "start": "2026-12-13T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 30
+        }
+      ]
     },
     {
       "id": "tcm-2026-12",
@@ -223601,7 +223607,7 @@
         },
         {
           "raceDay": "2026-11-01",
-          "round": 1,
+          "round": 10,
           "city": "General Roca",
           "circuit": "Autódromo Parque Ciudad de General Roca",
           "province": "Río Negro",
@@ -223654,7 +223660,8 @@
             "https://campeones.com.ar/tc2000-federico-iribarne-se-suma-a-lincoln-motorsport/",
             "https://campeones.com.ar/toyota-el-reglamento-y-la-actualidad-del-tc2000-2/",
             "https://campeones.com.ar/la-nissan-kicks-vuelve-a-la-accion-en-general-roca/",
-            "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/"
+            "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
+            "https://campeones.com.ar/tc2000-en-general-roca-rossi-fue-el-mejor-del-shakedown/"
           ]
         }
       ],
@@ -225078,7 +225085,7 @@
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 16,
+      "sessions": 17,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
