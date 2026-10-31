@@ -8,8 +8,8 @@ import { fechasDeHoy } from "@/lib/snapshot.mjs";
 
 // El día, lo que está en vivo y el estado de cada sesión se dibujan en el navegador con la hora real (<HoyView>): a medianoche la página cambia
 // de día sola. La regeneración por tiempo puede ser lenta; los datos nuevos invalidan la página por evento (/api/refresh). El título, la descripción
-// y los datos estructurados para buscadores salen del día a la hora de la última regeneración: pueden tener hasta 15 minutos de atraso.
-export const revalidate = 900;
+// y los datos estructurados para buscadores salen del día a la hora de la última regeneración: pueden tener hasta 1 hora de atraso.
+export const revalidate = 3600;
 
 async function load() {
   const now = getNow();

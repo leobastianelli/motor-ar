@@ -16,8 +16,8 @@ import { descripcionHorario, tituloHorario } from "@/lib/seo-titulos.mjs";
 
 // La respuesta de arriba ("la próxima sesión es…") y el cronograma con el estado de cada sesión se calculan en el navegador con la hora real:
 // la regeneración por tiempo puede ser lenta. Los datos nuevos invalidan la página por evento (/api/refresh). El título, la descripción y los
-// datos estructurados para buscadores salen de la próxima sesión a la hora de la última regeneración: pueden tener hasta 15 minutos de atraso.
-export const revalidate = 900;
+// datos estructurados para buscadores salen de la próxima sesión a la hora de la última regeneración: pueden tener hasta 6 horas de atraso.
+export const revalidate = 21600;
 
 export function generateStaticParams() {
   return allHorarioSlugs().map((slug) => ({ slug }));

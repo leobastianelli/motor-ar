@@ -25,8 +25,8 @@ import type { Broadcast, ResultRow, Session } from "@/lib/types";
 // Lo que depende de la hora (el momento, el cronograma, cuál es "el último resultado" y cuáles las "sesiones anteriores", las otras categorías del
 // finde) se decide en el navegador con la hora real (src/components/evento-vivo.tsx): la regeneración por tiempo puede ser lenta. Los datos nuevos
 // (resultados, horarios) invalidan la página por evento (/api/refresh). El título, la descripción y los datos estructurados para buscadores salen
-// del momento a la hora de la última regeneración: pueden tener hasta 15 minutos de atraso.
-export const revalidate = 900;
+// del momento a la hora de la última regeneración: pueden tener hasta 6 horas de atraso.
+export const revalidate = 21600;
 
 export async function generateStaticParams() {
   return (await getSeason()).getAllEvents().map((e) => ({ id: e.id }));

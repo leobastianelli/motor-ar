@@ -12,8 +12,8 @@ export const metadata: Metadata = { alternates: { canonical: "/" } };
 // La home es lo que la gente mira mientras pasa la carrera, pero lo que depende de la hora (qué está en vivo, el orden de las secciones, "Recién
 // terminó", la agenda, el estado de cada piloto) ya NO se dibuja acá: el servidor manda el recorte de la temporada que hace falta
 // (src/lib/snapshot.mjs) y <HomeView> lo decide en el navegador con la hora real (useNow) y se actualiza solo. Por eso la regeneración por tiempo
-// puede ser lenta: 900 s. Los datos nuevos (resultados, horarios) la invalidan por evento (revalidateTag("season") desde /api/refresh).
-export const revalidate = 900;
+// puede ser lenta: 1 hora. Los datos nuevos (resultados, horarios) la invalidan por evento (revalidateTag("season") desde /api/refresh).
+export const revalidate = 3600;
 
 // Acceso directo a cada categoría: mucha gente entra buscando una en particular. Primero las más buscadas.
 const JUMP = ["f1", "tc", "tc2000", "tn", "tc-pista", "f2", "gt3", "tc-mouras", "tc-pick-up"];
