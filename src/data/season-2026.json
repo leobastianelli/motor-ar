@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T19:36:05.367Z",
+  "generatedAt": "2026-10-31T20:26:01.849Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -217890,7 +217890,13 @@
           "resultsSource": {
             "name": "OpenF1",
             "url": "https://api.openf1.org/v1/session_result?session_key=11399"
-          }
+          },
+          "videos": [
+            {
+              "id": "BH33XWkjtBI",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-19-qualifying",
@@ -225271,7 +225277,7 @@
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 17,
+      "sessions": 18,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
