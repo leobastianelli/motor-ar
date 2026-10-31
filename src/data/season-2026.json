@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-31T17:57:50.256Z",
+  "generatedAt": "2026-10-31T18:45:37.812Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -225081,9 +225081,11 @@
       "sessionsWithResults": 50
     },
     "f1Official": {
-      "requests": 0,
+      "requests": 1,
       "sessionsWithResults": 0,
-      "errors": []
+      "errors": [
+        "GP de la Ciudad de México · Práctica 3: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -225467,6 +225469,7 @@
   },
   "failures": [
     "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de la Ciudad de México · Práctica 3: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
