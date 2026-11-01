@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T02:17:06.308Z",
+  "generatedAt": "2026-11-01T13:36:12.627Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -217957,6 +217957,13 @@
             },
             {
               "pos": 8,
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "RB F1 Team",
+              "gap": "1:17.117"
+            },
+            {
+              "pos": 8,
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
@@ -217964,96 +217971,89 @@
             },
             {
               "pos": 9,
-              "driver": "Arvid Lindblad",
-              "code": "LIN",
-              "team": "RB F1 Team",
-              "gap": "1:17.117"
-            },
-            {
-              "pos": 10,
               "driver": "Pierre Gasly",
               "code": "GAS",
               "team": "Alpine F1 Team",
               "gap": "1:17.153"
             },
             {
-              "pos": 11,
+              "pos": 10,
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
               "gap": "1:17.306"
             },
             {
-              "pos": 12,
+              "pos": 11,
               "driver": "Franco Colapinto",
               "code": "COL",
               "team": "Alpine F1 Team",
               "gap": "1:17.640"
             },
             {
-              "pos": 13,
+              "pos": 12,
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
               "gap": "1:17.646"
             },
             {
-              "pos": 14,
+              "pos": 13,
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
               "gap": "1:17.680"
             },
             {
-              "pos": 15,
+              "pos": 14,
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
               "gap": "1:18.083"
             },
             {
-              "pos": 16,
+              "pos": 15,
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
               "gap": "1:18.885"
             },
             {
-              "pos": 17,
+              "pos": 16,
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
               "gap": "1:18.630"
             },
             {
-              "pos": 18,
+              "pos": 17,
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
               "gap": "1:18.908"
             },
             {
-              "pos": 19,
+              "pos": 18,
               "driver": "Ryo Hirakawa",
               "team": "Haas F1 Team",
               "gap": "1:18.958"
             },
             {
-              "pos": 20,
+              "pos": 19,
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
               "gap": "1:19.072"
             },
             {
-              "pos": 21,
+              "pos": 20,
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
               "gap": "1:19.105"
             },
             {
-              "pos": 22,
+              "pos": 21,
               "driver": "Valtteri Bottas",
               "code": "BOT",
               "team": "Cadillac F1 Team",
@@ -224021,11 +224021,12 @@
             "https://campeones.com.ar/tc2000-en-general-roca-rossi-fue-el-mejor-del-shakedown/",
             "https://campeones.com.ar/rossi-mantuvo-la-vanguardia-en-el-primer-entrenamiento-roquense-de-tc2000/",
             "https://campeones.com.ar/tc2000-yankelevich-sorprende-en-el-cierre-de-los-ensayos-oficiales-de-general-roca/",
-            "https://campeones.com.ar/la-clasificacion-de-tc2000-en-general-roca-la-encabezo-franco-vivian/"
+            "https://campeones.com.ar/la-clasificacion-de-tc2000-en-general-roca-la-encabezo-franco-vivian/",
+            "https://campeones.com.ar/stang-lidero-el-1-2-3-de-toyota-gazoo-racing-en-los-tanques-llenos-de-tc2000-en-general-roca/"
           ]
         }
       ],
-      "campeonesFeed": false,
+      "campeonesFeed": true,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -225435,7 +225436,7 @@
     },
     "openf1": {
       "sessions": 131,
-      "requests": 16,
+      "requests": 12,
       "sessionsWithResults": 51
     },
     "f1Official": {
@@ -225824,7 +225825,6 @@
     }
   },
   "failures": [
-    "YouTube F1: No se pudo descargar https://www.youtube.com/feeds/videos.xml?channel_id=UCB_qr75-ydFVKSF9Dmo6izg: HTTP 404 (text/html; charset=UTF-8) (se conservan los videos anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
