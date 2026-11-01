@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T22:45:57.149Z",
+  "generatedAt": "2026-11-01T23:36:17.863Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -218305,7 +218305,13 @@
           "resultsSource": {
             "name": "Fórmula 1 (oficial)",
             "url": "https://www.formula1.com/en/results/2026/races/1298/mexico/race-result"
-          }
+          },
+          "videos": [
+            {
+              "id": "tIiRK7hKScU",
+              "kind": "highlights"
+            }
+          ]
         }
       ],
       "source": "Jolpica-F1"
@@ -225694,7 +225700,7 @@
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 19,
+      "sessions": 20,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
@@ -226072,7 +226078,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
-  ]
+  "failures": []
 }
