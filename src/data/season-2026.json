@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T15:15:41.034Z",
+  "generatedAt": "2026-11-01T16:55:49.777Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -218035,6 +218035,7 @@
             {
               "pos": 18,
               "driver": "Ryo Hirakawa",
+              "code": "HIR",
               "team": "Haas F1 Team",
               "gap": "1:18.958"
             },
