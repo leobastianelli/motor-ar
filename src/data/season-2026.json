@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T14:25:56.212Z",
+  "generatedAt": "2026-11-01T15:15:41.034Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -225820,12 +225820,10 @@
     },
     "speedhiveTn": {
       "filledResults": 0,
-      "realTimes": 10,
+      "realTimes": 0,
       "addedSessions": 0,
       "errors": []
     }
   },
-  "failures": [
-    "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
-  ]
+  "failures": []
 }
