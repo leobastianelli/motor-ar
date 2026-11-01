@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T17:45:51.055Z",
+  "generatedAt": "2026-11-01T19:25:21.465Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -225308,22 +225308,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -225841,5 +225825,8 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/8/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON"
+  ]
 }
