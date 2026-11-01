@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T01:25:45.542Z",
+  "generatedAt": "2026-11-01T02:17:06.308Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -224025,7 +224025,7 @@
           ]
         }
       ],
-      "campeonesFeed": true,
+      "campeonesFeed": false,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -225290,6 +225290,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -225808,7 +225824,6 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "YouTube F1: No se pudo descargar https://www.youtube.com/feeds/videos.xml?channel_id=UCB_qr75-ydFVKSF9Dmo6izg: HTTP 404 (text/html; charset=UTF-8) (se conservan los videos anteriores)",
     "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
