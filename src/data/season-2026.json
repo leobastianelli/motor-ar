@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T16:55:49.777Z",
+  "generatedAt": "2026-11-01T17:45:51.055Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -218178,15 +218178,27 @@
           "name": "Carrera",
           "start": "2026-11-01T13:05:00-03:00",
           "timeKnown": true,
-          "durationMin": 40,
+          "durationMin": 50,
           "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "Campeones",
-              "url": "https://campeones.com.ar/tc2000-horarios-para-una-nueva-fecha-en-general-roca/",
-              "start": "2026-11-01T13:05:00-03:00"
+              "url": "https://campeones.com.ar/tc2000-federico-iribarne-se-suma-a-lincoln-motorsport/",
+              "start": "13:05"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Valentín Yankelevich",
+              "team": "",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Campeones",
+            "url": "https://campeones.com.ar/yankelevich-festejo-su-primer-triunfo-en-tc2000-en-el-1-2-3-de-toyota-gazoo-racing/"
+          }
         }
       ],
       "source": "Campeones"
@@ -224024,8 +224036,11 @@
             "https://campeones.com.ar/tc2000-yankelevich-sorprende-en-el-cierre-de-los-ensayos-oficiales-de-general-roca/",
             "https://campeones.com.ar/la-clasificacion-de-tc2000-en-general-roca-la-encabezo-franco-vivian/",
             "https://campeones.com.ar/stang-lidero-el-1-2-3-de-toyota-gazoo-racing-en-los-tanques-llenos-de-tc2000-en-general-roca/",
-            "https://campeones.com.ar/la-grilla-de-largada-de-tc2000-en-general-roca/"
-          ]
+            "https://campeones.com.ar/la-grilla-de-largada-de-tc2000-en-general-roca/",
+            "https://campeones.com.ar/yankelevich-festejo-su-primer-triunfo-en-tc2000-en-el-1-2-3-de-toyota-gazoo-racing/"
+          ],
+          "winner": "Valentín Yankelevich",
+          "winnerUrl": "https://campeones.com.ar/yankelevich-festejo-su-primer-triunfo-en-tc2000-en-el-1-2-3-de-toyota-gazoo-racing/"
         }
       ],
       "campeonesFeed": true,
