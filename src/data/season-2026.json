@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T20:15:47.203Z",
+  "generatedAt": "2026-11-01T21:06:05.067Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -219774,127 +219774,127 @@
         "pos": 1,
         "driver": "Agustin Canapino",
         "team": "Salvita Racing",
-        "points": 299
+        "points": 320
       },
       {
         "pos": 2,
         "driver": "Julian Santero",
         "team": "auxilio24.com Sport",
-        "points": 256
+        "points": 298
       },
       {
         "pos": 3,
+        "driver": "Mauricio Lambiris",
+        "team": "MG-C Pergamino",
+        "points": 249
+      },
+      {
+        "pos": 4,
         "driver": "Facundo Chapur",
         "team": "Larrauri Racing",
         "points": 232
       },
       {
-        "pos": 4,
-        "driver": "Mauricio Lambiris",
-        "team": "MG-C Pergamino",
-        "points": 224
-      },
-      {
         "pos": 5,
         "driver": "Jorge Barrio",
         "team": "Febase Performance",
-        "points": 214
+        "points": 221
       },
       {
         "pos": 6,
         "driver": "Bautista Damiani",
         "team": "Saturni Racing",
-        "points": 177
+        "points": 212
       },
       {
         "pos": 7,
         "driver": "Sebastian Gomez",
         "team": "Martos Competicion",
-        "points": 166
+        "points": 172
       },
       {
         "pos": 8,
         "driver": "Facundo Ardusso",
         "team": "Ale Bucci Racing",
-        "points": 164
+        "points": 166
       },
       {
         "pos": 9,
-        "driver": "Lucas Vicino",
-        "team": "Escuderia Vicino",
-        "points": 161
+        "driver": "Leonel Pernia",
+        "team": "MG-C Pergamino",
+        "points": 166
       },
       {
         "pos": 10,
-        "driver": "Leonel Pernia",
-        "team": "MG-C Pergamino",
-        "points": 159
+        "driver": "Lucas Vicino",
+        "team": "Escuderia Vicino",
+        "points": 165
       },
       {
         "pos": 11,
         "driver": "Jose Manuel Urcera",
         "team": "GR Competicion",
-        "points": 153
+        "points": 160
       },
       {
         "pos": 12,
         "driver": "Jonatan Castellano",
         "team": "Jorge Piedra Competicion",
-        "points": 133
+        "points": 141
       },
       {
         "pos": 13,
+        "driver": "Thiago Martinez",
+        "team": "Crucianelli GC Competicion",
+        "points": 135
+      },
+      {
+        "pos": 14,
+        "driver": "Ever Franetovich",
+        "team": "Crucianelli GC Competicion",
+        "points": 133
+      },
+      {
+        "pos": 15,
         "driver": "Alfonso Domenech",
         "team": "MG-C Pergamino",
         "points": 127
       },
       {
-        "pos": 14,
+        "pos": 16,
+        "driver": "Fabian Yannantuoni",
+        "team": "Paladini Racing",
+        "points": 118
+      },
+      {
+        "pos": 17,
+        "driver": "Facundo Marques",
+        "team": "Paladini Racing",
+        "points": 113
+      },
+      {
+        "pos": 18,
+        "driver": "Jeremias Olmedo",
+        "team": "Salvita Racing",
+        "points": 109
+      },
+      {
+        "pos": 19,
         "driver": "Javier Merlo",
         "team": "Scuderia Prema",
         "points": 109
       },
       {
-        "pos": 15,
-        "driver": "Facundo Marques",
-        "team": "Paladini Racing",
-        "points": 108
-      },
-      {
-        "pos": 16,
-        "driver": "Ever Franetovich",
-        "team": "Crucianelli GC Competicion",
-        "points": 104
-      },
-      {
-        "pos": 17,
-        "driver": "Thiago Martinez",
-        "team": "Crucianelli GC Competicion",
-        "points": 103
-      },
-      {
-        "pos": 18,
-        "driver": "Fabian Yannantuoni",
-        "team": "Paladini Racing",
-        "points": 91
-      },
-      {
-        "pos": 19,
-        "driver": "Jeremias Olmedo",
-        "team": "Salvita Racing",
-        "points": 90
-      },
-      {
         "pos": 20,
         "driver": "Joel Gassmann",
         "team": "Scuderia Philagro JT",
-        "points": 88
+        "points": 101
       },
       {
         "pos": 21,
         "driver": "Leandro Gonzalez",
         "team": "MG-C Pergamino",
-        "points": 79
+        "points": 80
       },
       {
         "pos": 22,
@@ -219918,79 +219918,79 @@
         "pos": 25,
         "driver": "Ramiro Cano",
         "team": "Crucianelli GC Competicion",
-        "points": 45
+        "points": 48
       },
       {
         "pos": 26,
+        "driver": "Leonel Larrauri",
+        "team": "Larrauri Racing",
+        "points": 39
+      },
+      {
+        "pos": 27,
         "driver": "Gonzalo Antolin",
         "team": "Escuderia Vicino",
         "points": 37
       },
       {
-        "pos": 27,
-        "driver": "Leonel Larrauri",
-        "team": "Larrauri Racing",
-        "points": 34
-      },
-      {
         "pos": 28,
-        "driver": "Miguel Ciaurro",
-        "team": "Giacone Competicion",
-        "points": 31
+        "driver": "Lucas Tedeschi",
+        "team": "Tedeschi Motorsport",
+        "points": 36
       },
       {
         "pos": 29,
+        "driver": "Miguel Ciaurro",
+        "team": "Giacone Competicion",
+        "points": 33
+      },
+      {
+        "pos": 30,
+        "driver": "Matias Cohen",
+        "team": "Scuderia Prema",
+        "points": 32
+      },
+      {
+        "pos": 31,
+        "driver": "Adrian Percaz",
+        "team": "Percaz Competicion",
+        "points": 32
+      },
+      {
+        "pos": 32,
+        "driver": "Valentin Aguirre",
+        "team": "Ale Bucci Racing",
+        "points": 31
+      },
+      {
+        "pos": 33,
+        "driver": "Braian Quevedo",
+        "team": "Scuderia Philagro JT",
+        "points": 26
+      },
+      {
+        "pos": 34,
         "driver": "Jeronimo Teti",
         "team": "Scuderia Philagro JT",
         "points": 22
       },
       {
-        "pos": 30,
-        "driver": "Adrian Percaz",
-        "team": "Percaz Competicion",
-        "points": 20
-      },
-      {
-        "pos": 31,
-        "driver": "Lucas Tedeschi",
-        "team": "Tedeschi Motorsport",
-        "points": 19
-      },
-      {
-        "pos": 32,
+        "pos": 35,
         "driver": "Nicolas Moscardini",
         "team": "GR Competicion",
         "points": 19
       },
       {
-        "pos": 33,
+        "pos": 36,
         "driver": "Juan Cruz Benvenuti",
         "team": "Salvita Racing",
         "points": 18
       },
       {
-        "pos": 34,
-        "driver": "Matias Cohen",
-        "team": "Scuderia Prema",
-        "points": 17
-      },
-      {
-        "pos": 35,
-        "driver": "Valentin Aguirre",
-        "team": "Ale Bucci Racing",
-        "points": 16
-      },
-      {
-        "pos": 36,
+        "pos": 37,
         "driver": "Carlos Okulovich",
         "team": "Febase Performance",
         "points": 14
-      },
-      {
-        "pos": 37,
-        "driver": "Braian Quevedo",
-        "team": "Scuderia Philagro JT",
-        "points": 9
       },
       {
         "pos": 38,
@@ -220000,21 +220000,21 @@
       },
       {
         "pos": 39,
+        "driver": "Emiliano Spataro",
+        "team": "Monti Motorsport",
+        "points": 5
+      },
+      {
+        "pos": 40,
         "driver": "Blas Sefchek",
         "team": "Mumu Racing",
         "points": 4
       },
       {
-        "pos": 40,
+        "pos": 41,
         "driver": "Nicolás Jaime",
         "team": "GR Competicion",
         "points": 2
-      },
-      {
-        "pos": 41,
-        "driver": "Emiliano Spataro",
-        "team": "Monti Motorsport",
-        "points": 1
       }
     ],
     "tc2000": [],
@@ -223543,207 +223543,207 @@
       "clase2": [
         {
           "pos": 1,
-          "driver": "Exequiel Bastidas",
-          "team": "Ale Bucci Racing",
-          "points": 291
+          "driver": "Tomas Vitar",
+          "team": "GR Competicion",
+          "points": 316
         },
         {
           "pos": 2,
-          "driver": "Francisco Coltrinari",
-          "team": "Saturni Racing",
-          "points": 280
+          "driver": "Exequiel Bastidas",
+          "team": "Ale Bucci Racing",
+          "points": 315
         },
         {
           "pos": 3,
-          "driver": "Tomas Vitar",
-          "team": "GR Competicion",
-          "points": 277
+          "driver": "Francisco Coltrinari",
+          "team": "Saturni Racing",
+          "points": 289
         },
         {
           "pos": 4,
-          "driver": "Juan Ignacio Canela",
-          "team": "Alquat Motorsport",
-          "points": 212
+          "driver": "Martin Leston",
+          "team": "Antolin Competicion",
+          "points": 220
         },
         {
           "pos": 5,
-          "driver": "Martin Leston",
-          "team": "Antolin Competicion",
-          "points": 189
+          "driver": "Juan Ignacio Canela",
+          "team": "Alquat Motorsport",
+          "points": 220
         },
         {
           "pos": 6,
+          "driver": "Santino Balerini",
+          "team": "Saturni Racing",
+          "points": 169
+        },
+        {
+          "pos": 7,
           "driver": "Maximiliano Bestani",
           "team": "JPM Racing",
           "points": 153
         },
         {
-          "pos": 7,
+          "pos": 8,
+          "driver": "Valentino Quattrocchi",
+          "team": "Alquat Motorsport",
+          "points": 149
+        },
+        {
+          "pos": 9,
           "driver": "Pedro Grippo",
           "team": "GR Competicion",
           "points": 146
         },
         {
-          "pos": 8,
-          "driver": "Santino Balerini",
-          "team": "Saturni Racing",
+          "pos": 10,
+          "driver": "Renzo Blotta",
+          "team": "Ale Bucci Racing",
           "points": 144
         },
         {
-          "pos": 9,
-          "driver": "Valentino Quattrocchi",
-          "team": "Alquat Motorsport",
-          "points": 140
-        },
-        {
-          "pos": 10,
+          "pos": 11,
           "driver": "Andres Calderon",
           "team": "GR Competicion",
-          "points": 139
-        },
-        {
-          "pos": 11,
-          "driver": "Renzo Blotta",
-          "team": "Ale Bucci Racing",
-          "points": 136
+          "points": 143
         },
         {
           "pos": 12,
           "driver": "Juan Martin Eluchans",
           "team": "Alquat Motorsport",
-          "points": 116
+          "points": 127
         },
         {
           "pos": 13,
+          "driver": "Juan Eduardo Kreitz",
+          "team": "Antolin Competicion",
+          "points": 120
+        },
+        {
+          "pos": 14,
+          "driver": "Braian Reinoso",
+          "team": "JPM Racing",
+          "points": 117
+        },
+        {
+          "pos": 15,
           "driver": "Lucas Petracchini",
           "team": "JPM Racing",
           "points": 114
         },
         {
-          "pos": 14,
-          "driver": "Juan Eduardo Kreitz",
-          "team": "Antolin Competicion",
-          "points": 103
-        },
-        {
-          "pos": 15,
+          "pos": 16,
           "driver": "Thomas Marchesin",
           "team": "Lizarraga Competición",
-          "points": 102
+          "points": 109
         },
         {
-          "pos": 16,
+          "pos": 17,
+          "driver": "Santiago Robledo",
+          "team": "Robledo Competicion",
+          "points": 101
+        },
+        {
+          "pos": 18,
+          "driver": "Thiago Ferrari",
+          "team": "Ale Bucci Racing",
+          "points": 90
+        },
+        {
+          "pos": 19,
           "driver": "Nicolas Posco",
           "team": "Ale Bucci Racing",
           "points": 88
         },
         {
-          "pos": 17,
-          "driver": "Braian Reinoso",
-          "team": "Giacone Competicion",
-          "points": 88
-        },
-        {
-          "pos": 18,
-          "driver": "Santiago Robledo",
-          "team": "Robledo Competicion",
-          "points": 81
-        },
-        {
-          "pos": 19,
-          "driver": "Thiago Ferrari",
-          "team": "Ale Bucci Racing",
-          "points": 68
-        },
-        {
           "pos": 20,
+          "driver": "Gaston Iansa",
+          "team": "JPM Racing",
+          "points": 87
+        },
+        {
+          "pos": 21,
           "driver": "Martin Blasig",
           "team": "GR Competicion",
           "points": 66
         },
         {
-          "pos": 21,
+          "pos": 22,
+          "driver": "Franco Bodrato Mionetto",
+          "team": "BM Motorsport",
+          "points": 65
+        },
+        {
+          "pos": 23,
+          "driver": "Pablo Collazo",
+          "team": "Ale Bucci Racing",
+          "points": 63
+        },
+        {
+          "pos": 24,
+          "driver": "Marcelo Guevara",
+          "team": "GR Competicion",
+          "points": 60
+        },
+        {
+          "pos": 25,
           "driver": "Juan Pablo Pastori",
           "team": "GR Competicion",
           "points": 56
         },
         {
-          "pos": 22,
-          "driver": "Franco Bodrato Mionetto",
-          "team": "BM Motorsport",
-          "points": 56
-        },
-        {
-          "pos": 23,
+          "pos": 26,
           "driver": "Diego Casais",
           "team": "Scuderia Philagro JT",
           "points": 54
         },
         {
-          "pos": 24,
-          "driver": "Gaston Iansa",
-          "team": "JPM Racing",
-          "points": 54
-        },
-        {
-          "pos": 25,
-          "driver": "Marcelo Guevara",
-          "team": "GR Competicion",
-          "points": 54
-        },
-        {
-          "pos": 26,
-          "driver": "Pablo Collazo",
-          "team": "Ale Bucci Racing",
-          "points": 50
-        },
-        {
           "pos": 27,
           "driver": "Horacio Evolo",
           "team": "Evolo Motorsport",
-          "points": 39
+          "points": 50
         },
         {
           "pos": 28,
-          "driver": "Bautista Roqueta",
-          "team": "Salvita Racing",
-          "points": 38
+          "driver": "Bruno Pace",
+          "team": "Tunka Competicion",
+          "points": 44
         },
         {
           "pos": 29,
-          "driver": "Sergio Fernandez",
-          "team": "JF Racing",
-          "points": 34
+          "driver": "Franco Romano",
+          "team": "Alquat Motorsport",
+          "points": 42
         },
         {
           "pos": 30,
+          "driver": "Bautista Roqueta",
+          "team": "Salvita Racing",
+          "points": 40
+        },
+        {
+          "pos": 31,
+          "driver": "Sergio Fernandez",
+          "team": "JF Racing",
+          "points": 37
+        },
+        {
+          "pos": 32,
+          "driver": "Martin Mura",
+          "team": "GR Competicion",
+          "points": 37
+        },
+        {
+          "pos": 33,
           "driver": "Felipe Martini",
           "team": "Giacone Competicion",
           "points": 34
         },
         {
-          "pos": 31,
-          "driver": "Martin Mura",
-          "team": "GR Competicion",
-          "points": 32
-        },
-        {
-          "pos": 32,
+          "pos": 34,
           "driver": "Marcos Fernandez",
           "team": "JF Racing",
           "points": 31
-        },
-        {
-          "pos": 33,
-          "driver": "Franco Romano",
-          "team": "Alquat Motorsport",
-          "points": 30
-        },
-        {
-          "pos": 34,
-          "driver": "Bruno Pace",
-          "team": "Tunka Competicion",
-          "points": 27
         },
         {
           "pos": 35,
@@ -223761,7 +223761,7 @@
           "pos": 37,
           "driver": "Agustin Bonomo",
           "team": "Bonomo Motorsport",
-          "points": 13
+          "points": 15
         },
         {
           "pos": 38,
@@ -223777,33 +223777,33 @@
         },
         {
           "pos": 40,
+          "driver": "Nahuel Della Santina",
+          "team": "Giacone Competicion",
+          "points": 10
+        },
+        {
+          "pos": 41,
           "driver": "Maximo Donzino",
           "team": "Monti Motorsport",
           "points": 9
         },
         {
-          "pos": 41,
+          "pos": 42,
+          "driver": "Gaston Martinez Minetti",
+          "team": "GM Racing Team",
+          "points": 7
+        },
+        {
+          "pos": 43,
           "driver": "Jose Luis Arrate",
           "team": "Jorge Piedra Competicion",
           "points": 6
         },
         {
-          "pos": 42,
+          "pos": 44,
           "driver": "Diego Farina",
           "team": "Guindani Racing",
           "points": 6
-        },
-        {
-          "pos": 43,
-          "driver": "Nahuel Della Santina",
-          "team": "Giacone Competicion",
-          "points": 5
-        },
-        {
-          "pos": 44,
-          "driver": "Gaston Martinez Minetti",
-          "team": "GM Racing Team",
-          "points": 5
         },
         {
           "pos": 45,
