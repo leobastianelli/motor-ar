@@ -3,6 +3,7 @@
 // durante un fin de semana con fechas de la ACTC el pulso mira el listado de resultados del portal de tiempos: si hay un documento que todavía
 // no está en la temporada guardada, pide la sincronización con un candado corto. No depende de que las sesiones tengan hora (caso Mouras).
 // Todo es inyectable (red, base, GitHub) para que npm test lo cubra sin red; el cableado real está en src/app/api/pulso/route.ts.
+import { apatUnread, apatWeekendEvents } from "./sources/apat-evidence.mjs";
 import { chooseDocs, parseListing, TIMING_SERIES, TIMING_SOURCE } from "./sources/actc-timing.mjs";
 import { pendingForDispatch, DISPATCH_LOCK_MINUTES } from "./pulso-core.mjs";
 
@@ -96,11 +97,12 @@ export function decideDispatch({ pendientes = [], nuevos = [], previo = null }) 
 /**
  * Paso de sincronización del pulso, con todo lo externo inyectado:
  * - `events`: sesiones visibles (con cargas manuales); `rawEvents`: la temporada guardada tal cual.
- * - `fetchListing()`: HTML del listado de la ACTC. `readPrevious()`: { doc, tries } | null. `claim(lockMinutes)`: boolean.
+ * - `fetchListing()`: HTML del listado de la ACTC. `fetchApat(url)`: HTML de una página de resultados de APAT (fin de semana del TN).
+ *   `readPrevious()`: { doc, tries } | null. `claim(lockMinutes)`: boolean.
  *   `record({ doc, tries })`: guarda el documento que motivó el disparo. `dispatch()`: pide el workflow; { ok, status }.
  * Un fallo al leer el listado o al guardar la evidencia se informa y no frena lo demás.
  */
-export async function syncStep({ events, rawEvents, now, fetchListing, readPrevious, claim, record, dispatch }) {
+export async function syncStep({ events, rawEvents, now, fetchListing, fetchApat, readPrevious, claim, record, dispatch }) {
   const pendientes = pendingForDispatch(events, now);
 
   let evidencia = { status: "fuera de fin de semana ACTC" };
@@ -117,6 +119,17 @@ export async function syncStep({ events, rawEvents, now, fetchListing, readPrevi
     }
   }
 
+  let evidenciaTn = { status: "fuera de fin de semana del TN" };
+  if (fetchApat && apatWeekendEvents(rawEvents, now).length) {
+    try {
+      const sinLeer = await apatUnread(rawEvents, now, fetchApat);
+      nuevos = [...nuevos, ...sinLeer];
+      evidenciaTn = { status: "ok", sesionesNuevas: sinLeer.map((d) => d.key) };
+    } catch (error) {
+      evidenciaTn = { status: "error", error: error instanceof Error ? error.message : String(error) };
+    }
+  }
+
   let previo = null;
   if (nuevos.length) {
     try {
@@ -127,7 +140,7 @@ export async function syncStep({ events, rawEvents, now, fetchListing, readPrevi
   }
 
   const decision = decideDispatch({ pendientes, nuevos, previo });
-  const base = { pendientes: pendientes.length, evidencia };
+  const base = { pendientes: pendientes.length, evidencia, evidenciaTn };
   if (!decision) {
     const agotado = nuevos.length ? " (el documento nuevo ya motivó sus intentos)" : "";
     return { status: "skipped", reason: `nada pendiente${agotado}`, ...base };

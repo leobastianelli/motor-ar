@@ -204,8 +204,9 @@ export function carryOver(event, old) {
     if (!s.results?.length && prev.resultsSource?.name === SPEEDHIVE_SOURCE) Object.assign(out, { results: prev.results, resultsSource: prev.resultsSource });
     return out;
   });
-  const have = new Set(sessions.map((s) => s.id));
-  for (const o of old.sessions) if (!have.has(o.id) && o.resultsSource?.name === SPEEDHIVE_SOURCE && belongsToEvent(event, o)) sessions.push(o);
+  // Por id y por nombre: si APAT ya trae esa sesión con otro id, la de Speedhive sobra.
+  const have = new Set(sessions.flatMap((s) => [s.id, `${s.kind}|${s.name}`]));
+  for (const o of old.sessions) if (!have.has(o.id) && !have.has(`${o.kind}|${o.name}`) && o.resultsSource?.name === SPEEDHIVE_SOURCE && belongsToEvent(event, o)) sessions.push(o);
   return { ...event, sessions: sessions.sort((a, b) => Date.parse(a.start) - Date.parse(b.start)) };
 }
 

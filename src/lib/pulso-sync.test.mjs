@@ -194,3 +194,24 @@ test("fin de semana ACTC: de viernes a lunes, del día anterior al primer día h
   assert.equal(at("2026-09-24T15:00:00Z"), 0, "jueves");
   assert.equal(at("2026-09-29T15:00:00Z"), 0, "martes");
 });
+
+// Sábado 31/10/2026 13:00 AR, fecha del TN de Concordia: APAT publicó una sesión y la temporada guardada no la tiene.
+const SABADO_TN = "2026-10-31T16:00:00Z";
+const concordia = { id: "tn-2026-11", seriesId: "tn", name: "Fecha 11 · Concordia", sessions: [{ id: "f", kind: "final", name: "Final Clase 2", start: "2026-11-01T12:00:00-03:00", timeKnown: false }] };
+const apatPage = "<h3>1º ENTRENAMIENTO C2</h3><table><tbody><tr><td>1</td><td>7</td><td><strong>PEREZ JUAN</strong></td><td>Equipo</td><td></td><td>1:30.000</td><td></td></tr></tbody></table>";
+
+test("TN: APAT publicó una sesión que no tenemos, aunque no tenga hora conocida: dispara con candado corto", async () => {
+  const { args, calls } = deps({ rawEvents: [concordia], now: SABADO_TN, fetchApat: async (url) => (url.includes("/c2/") ? apatPage : "") });
+  const res = await syncStep(args);
+  assert.equal(res.status, "disparada");
+  assert.equal(res.documento, "tn:tn-2026-11:1° Entrenamiento Clase 2");
+  assert.deepEqual(calls.claim, [EVIDENCE_LOCK_MINUTES]);
+});
+
+test("TN: si APAT falla no frena el resto y se informa", async () => {
+  const { args, calls } = deps({ rawEvents: [concordia], now: SABADO_TN, fetchApat: async () => { throw new Error("caído"); } });
+  const res = await syncStep(args);
+  assert.equal(res.status, "skipped");
+  assert.equal(res.evidenciaTn.error, "caído");
+  assert.equal(calls.dispatch, 0);
+});
