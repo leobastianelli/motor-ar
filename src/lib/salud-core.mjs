@@ -146,15 +146,17 @@ export const fnaLocalSyncDue = (events, now, options) => pcSyncDue(events, now, 
 /**
  * Cuerpo de /api/salud. `stored` es la última fila del almacén leída sin caché ({ id, origin, createdAt }) o null si no se pudo.
  * `notes` son todas las notas en el orden del menú y de /notas ([{ slug, title, auto }]).
- * @param {{ source: any, stored: any, storeError?: string, failures?: string[], events?: any[], notes?: { slug: string, title: string, auto?: unknown }[], now: string }} args
+ * `tnSinLeer` son las sesiones que APAT ya publicó y la temporada no tiene (src/lib/sources/apat-evidence.mjs).
+ * @param {{ source: any, stored: any, storeError?: string, failures?: string[], events?: any[], notes?: { slug: string, title: string, auto?: unknown }[], now: string, tnSinLeer?: { title: string, id: string }[] }} args
  */
-export function healthReport({ source, stored, storeError, failures = [], events = [], notes = [], now }) {
+export function healthReport({ source, stored, storeError, failures = [], events = [], notes = [], now, tnSinLeer = [] }) {
   return {
     sirviendo: { versionId: source.versionId, origin: source.origin, generatedAt: source.generatedAt, createdAt: source.createdAt, servedFrom: source.servedFrom },
     almacen: stored ? { ultimaVersion: stored.id, createdAt: stored.createdAt, origin: stored.origin } : { ultimaVersion: null, createdAt: null, origin: null, error: storeError ?? "sin datos" },
     edadMin: ageMin(source, now),
     fallas: failures,
     pendientes: pendingSessions(events, now),
+    tnSinLeer,
     ganadoresRecientes: recentWinners(events, now),
     eventoReciente: latestEventWithResults(events),
     rallyPendiente: rallyLocalSyncDue(events, now),

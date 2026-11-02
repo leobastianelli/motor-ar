@@ -124,3 +124,11 @@ test("salud: la Fórmula Nacional pendiente se avisa con la instrucción para co
   assert.match(fna.body, /falta cargar desde la PC: npm run sync:fna/);
   assert.ok(!out.some((f) => f.key.startsWith("rally-sync:")));
 });
+
+test("TN: lo que APAT publicó y no tenemos avisa con prioridad y recién a la segunda corrida seguida", () => {
+  const [hallazgo] = saludFindings({ sirviendo: { servedFrom: "store" }, almacen: {}, pendientes: [], tnSinLeer: [{ id: "tn-2026-11", title: "Fecha 11 · Concordia · Final Clase 3" }] }, "2026-11-01T20:00:00Z");
+  assert.equal(hallazgo.key, "salud:tn-sin-leer");
+  assert.equal(hallazgo.severity, "high");
+  assert.equal(hallazgo.consecutive, 2);
+  assert.match(hallazgo.body, /Final Clase 3/);
+});

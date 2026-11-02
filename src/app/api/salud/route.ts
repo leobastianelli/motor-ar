@@ -5,6 +5,8 @@ import { visibleEvents } from "@/lib/monitor/checks.mjs";
 import { getAllNotes } from "@/lib/notas";
 import { healthReport } from "@/lib/salud-core.mjs";
 import { loadRawSeason } from "@/lib/season-data";
+import { APAT_REVALIDATE, apatUnread } from "@/lib/sources/apat-evidence.mjs";
+import { nextIo } from "@/lib/sources/io-next";
 
 // Salud de los datos: qué versión sirve el sitio, cuál es la última del almacén y qué resultados faltan. Público y sin datos sensibles.
 // Sin caché a propósito: si `sirviendo` y `almacen` difieren, la invalidación de las páginas no funcionó.
@@ -23,6 +25,13 @@ export async function GET() {
   }
   const events = visibleEvents(raw.events as never, manual);
   const notes = (await getAllNotes()).map((n) => ({ slug: n.slug, title: n.title, auto: n.auto }));
-  const body = healthReport({ source: raw.source!, stored, storeError, failures: raw.failures ?? [], events, notes, now });
+  // Fuera de un fin de semana del TN no se pide nada a APAT. Si falla, no se sabe qué hay publicado: no es un hallazgo.
+  let tnSinLeer: { title: string; id: string }[] = [];
+  try {
+    tnSinLeer = await apatUnread(raw.events as never, now, (url: string) => nextIo.text(url, { revalidate: APAT_REVALIDATE }));
+  } catch {
+    tnSinLeer = [];
+  }
+  const body = healthReport({ source: raw.source!, stored, storeError, failures: raw.failures ?? [], events, notes, now, tnSinLeer });
   return Response.json(body, { headers: { "Cache-Control": "no-store" } });
 }

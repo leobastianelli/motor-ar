@@ -118,6 +118,19 @@ export function saludFindings(salud, now, { staleMin = 10, pendingMin = 60, home
       body: `Fórmula Nacional: falta cargar desde la PC: npm run sync:fna (desde la carpeta del repo; formulanacional.com.ar bloquea a GitHub y a Vercel). Publica y actualiza el sitio solo: no hace falta nada más.`,
     });
   }
+  // A diferencia de "Sin resultados", acá se sabe que la fuente los tiene y nosotros no. Dos corridas seguidas (30 min): le da tiempo a la sincronización que pide el pulso.
+  const tnSinLeer = salud.tnSinLeer ?? [];
+  if (tnSinLeer.length) {
+    out.push({
+      key: "salud:tn-sin-leer",
+      severity: "high",
+      level: 1,
+      tier: 1,
+      consecutive: 2,
+      title: `APAT ya publicó ${tnSinLeer.length === 1 ? "una sesión" : `${tnSinLeer.length} sesiones`} del TN y el sitio no las tiene`,
+      body: `${tnSinLeer.map((s) => s.title).join(", ")}. La sincronización no las está tomando: revisarla o correr gh workflow run "Sincronizar temporada".`,
+    });
+  }
   for (const p of salud.pendientes ?? []) {
     if (p.terminoHaceMin <= pendingMin) continue;
     if (p.tablaIncompleta) {

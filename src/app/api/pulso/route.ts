@@ -8,6 +8,7 @@ import { hotPending, runHotRefresh } from "@/lib/hot-refresh";
 import { visibleEvents } from "@/lib/monitor/checks.mjs";
 import { claimDispatch, readEvidence, recordEvidence } from "@/lib/pulso-dispatch.mjs";
 import { LISTING_REVALIDATE, syncStep } from "@/lib/pulso-sync.mjs";
+import { APAT_REVALIDATE } from "@/lib/sources/apat-evidence.mjs";
 import { nextIo } from "@/lib/sources/io-next";
 import { LISTING_URL } from "@/lib/sources/actc-timing.mjs";
 import { enviarBorradores as enviarBorradoresRaw } from "@/lib/redes-envio.mjs";
@@ -31,7 +32,7 @@ const enviarBorradores = enviarBorradoresRaw as unknown as (args: EnviarBorrador
 // programadas (ver docs/plan-lanzamiento/01-borradores-para-redes.md, "Disparo con cron-job.org"). Hace, en orden y cada uno con su propio
 // try/catch (si uno falla, los otros igual corren): 1) el refresco caliente, si hace falta; 2) los borradores para redes; 3) disparar la
 // sincronización completa por la API de GitHub, si hay sesiones sin resultados y no se disparó hace poco (candado de 45 min), o si en un fin de
-// semana con fechas de la ACTC el listado de su portal trae un documento que la temporada no tiene (candado de 10 min; src/lib/pulso-sync.mjs). No toca páginas ni su `revalidate`
+// semana con fechas de la ACTC el listado de su portal trae un documento que la temporada no tiene, o en uno del TN APAT publicó una sesión que no tiene (candado de 10 min; src/lib/pulso-sync.mjs). No toca páginas ni su `revalidate`
 // (eso lo hace runHotRefresh cuando corresponde); no consulta Neon en un paso sin nada que hacer.
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
@@ -66,6 +67,7 @@ async function pasoSincronizacion(events: unknown[], rawEvents: unknown[], now: 
       rawEvents,
       now,
       fetchListing: () => nextIo.text(LISTING_URL, { revalidate: LISTING_REVALIDATE }),
+      fetchApat: (url: string) => nextIo.text(url, { revalidate: APAT_REVALIDATE }),
       readPrevious: () => readEvidence(db()),
       claim: (lockMinutes: number) => claimDispatch(db(), now, { lockMinutes }),
       record: (evidence: { doc: string; tries: number }) => recordEvidence(db(), now, evidence),

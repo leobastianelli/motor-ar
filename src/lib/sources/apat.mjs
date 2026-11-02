@@ -55,6 +55,9 @@ const HEADINGS = [
   [/^SEGUNDA\s+SERIE/i, "serie", "Serie 2"],
   [/^TERCERA\s+SERIE/i, "serie", "Serie 3"],
   [/^CUARTA\s+SERIE/i, "serie", "Serie 4"],
+  // Clase 2 corre dos clasificaciones; "General" (o la única, en Clase 3) sólo vale si no están numeradas: repite lo mismo.
+  [/^(?:1|PRIMER[AO]?)\s*[º°O]?\s*CLASIFICACI/i, "clasificacion", "Clasificación 1"],
+  [/^(?:2|SEGUND[AO])\s*[º°O]?\s*CLASIFICACI/i, "clasificacion", "Clasificación 2"],
   [/CLASIFICACI/i, "clasificacion", "Clasificación"],
   [/^(?:1|PRIMER)\s*[º°O]?\s*ENTRENAMIENTO/i, "practica", "1° Entrenamiento"],
   [/^(?:2|SEGUNDO)\s*[º°O]?\s*ENTRENAMIENTO/i, "practica", "2° Entrenamiento"],
@@ -62,10 +65,17 @@ const HEADINGS = [
 ];
 const ORDER = { practica: 0, clasificacion: 1, serie: 2, final: 3 };
 
-/** Todas las sesiones de una clase en una fecha: entrenamientos, clasificación, series y final, con la tabla completa. */
-async function sessionResults(io, klass, isoDay, knownNames, revalidate) {
-  const url = `${BASE}/resultados/${klass}/${isoDay}`;
-  const html = await io.text(url, { revalidate });
+export const resultsUrl = (klass, isoDay) => `${BASE}/resultados/${klass}/${isoDay}`;
+
+/** Días antes del domingo (la fecha del calendario de APAT) en los que ya puede haber resultados: APAT publica cada sesión a medida que se corre. */
+const WEEKEND_DAYS_BEFORE = 2;
+
+/** ¿Ya puede haber resultados de esta fecha? Desde el viernes, no recién cuando terminó el domingo. */
+export const resultsOpen = (isoDay, now) => now.getTime() >= Date.parse(`${isoDay}T00:00:00-03:00`) - WEEKEND_DAYS_BEFORE * 86400000;
+
+/** Todas las sesiones de una clase en la página de una fecha: entrenamientos, clasificaciones, series y final, con la tabla completa. */
+export function parseResultSessions(html, klass, isoDay, knownNames = new Map()) {
+  const url = resultsUrl(klass, isoDay);
   const label = klass === "c2" ? "Clase 2" : "Clase 3";
   const found = new Map();
   for (const m of html.matchAll(/<h[23][^>]*>\s*([^<]{3,80}?)\s*<\/h[23]>/g)) {
@@ -94,11 +104,15 @@ async function sessionResults(io, klass, isoDay, knownNames, revalidate) {
     const day = after ? `${after[3]}-${after[2]}-${after[1]}` : isoDay;
     if (results.length) found.set(rule[2], { kind: rule[1], name: `${rule[2]} ${label}`, day: day > isoDay ? isoDay : day, results, url });
   }
+  if (found.has("Clasificación 1") || found.has("Clasificación 2")) found.delete("Clasificación");
   return [...found.values()];
 }
 
-export async function apatSeason(io) {
-  const today = new Date();
+/** La primera clasificación conserva el id de cuando era la única que se leía: si cambiara, la protección contra pérdida de datos la devolvería como sesión aparte. */
+const sessionSlug = (name) => name.replace(/^Clasificación 1\b/, "Clasificación").toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+export async function apatSeason(io, _previous, { now = new Date() } = {}) {
+  const today = now;
   const calendarHtml = await io.text(`${BASE}/carreras/calendario`, { revalidate: 3600 });
   const c2 = await ranking(io, "c2");
   const c3 = await ranking(io, "c3");
@@ -117,20 +131,20 @@ export async function apatSeason(io) {
     const city = circuit.match(/Ciudad de\s+(.+)$/i)?.[1]?.trim() ?? slugCity;
     const isoDay = `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
     const raceDay = new Date(`${isoDay}T23:59:00-03:00`);
-    const played = raceDay < today;
+    const open = resultsOpen(isoDay, today);
     // Resultados viejos casi no cambian: se piden de nuevo una vez por mes.
     const revalidate = today - raceDay < 3 * 86400000 ? 3600 : 30 * 86400;
 
     const sessions = [];
     for (const [klass, label] of [["c2", "Final Clase 2"], ["c3", "Final Clase 3"]]) {
-      const found = played ? await sessionResults(io, klass, isoDay, known, revalidate) : [];
+      const found = open ? parseResultSessions(await io.text(resultsUrl(klass, isoDay), { revalidate }), klass, isoDay, known) : [];
       if (!found.some((s) => s.kind === "final")) {
         sessions.push({ id: `tn-2026-${round}-${klass}`, kind: "final", name: label, start: dateOnly(y, m, d), timeKnown: false, durationMin: 35 });
       }
       for (const s of found) {
         const [sy, sm, sd] = s.day.split("-").map(Number);
         sessions.push({
-          id: s.kind === "final" ? `tn-2026-${round}-${klass}` : `tn-2026-${round}-${klass}-${s.name.toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
+          id: s.kind === "final" ? `tn-2026-${round}-${klass}` : `tn-2026-${round}-${klass}-${sessionSlug(s.name)}`,
           kind: s.kind,
           name: s.name,
           start: dateOnly(sy, sm, sd),
@@ -140,7 +154,7 @@ export async function apatSeason(io) {
           resultsSource: { name: "APAT · resultados oficiales", url: s.url },
         });
       }
-      if (played) await io.sleep(300);
+      if (open) await io.sleep(300);
     }
     sessions.sort((a, b) => a.start.localeCompare(b.start) || ORDER[a.kind] - ORDER[b.kind] || a.name.localeCompare(b.name));
 
