@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T19:03:28.079Z",
+  "generatedAt": "2026-11-02T20:05:19.644Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -1935,7 +1935,7 @@
         {
           "id": "tn-2026-1-c2-clasificacio-n-clase-2",
           "kind": "clasificacion",
-          "name": "Clasificación Clase 2",
+          "name": "Clasificación 1 Clase 2",
           "start": "2026-02-07T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 25,
@@ -2163,6 +2163,244 @@
               "driver": "Marcos Fernandez",
               "team": "208",
               "gap": "1.817"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-02-08"
+          }
+        },
+        {
+          "id": "tn-2026-1-c2-clasificacio-n-2-clase-2",
+          "kind": "clasificacion",
+          "name": "Clasificación 2 Clase 2",
+          "start": "2026-02-07T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "161",
+              "driver": "Lucas Petracchini",
+              "team": "YARIS",
+              "gap": "01;35.324"
+            },
+            {
+              "pos": 2,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "208",
+              "gap": "+0.002"
+            },
+            {
+              "pos": 3,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "YARIS",
+              "gap": "+0.035"
+            },
+            {
+              "pos": 4,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "MARCH",
+              "gap": "+0.110"
+            },
+            {
+              "pos": 5,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "YARIS",
+              "gap": "+0.368"
+            },
+            {
+              "pos": 6,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "208",
+              "gap": "+0.378"
+            },
+            {
+              "pos": 7,
+              "number": "19",
+              "driver": "Maximiliano Bestani",
+              "team": "ONIX",
+              "gap": "+0.581"
+            },
+            {
+              "pos": 8,
+              "number": "11",
+              "driver": "Pedro Grippo",
+              "team": "YARIS",
+              "gap": "+0.593"
+            },
+            {
+              "pos": 9,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "208",
+              "gap": "+0.646"
+            },
+            {
+              "pos": 10,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "YARIS",
+              "gap": "+0.782"
+            },
+            {
+              "pos": 11,
+              "number": "5",
+              "driver": "Juan Pablo Pastori",
+              "team": "ONIX",
+              "gap": "+0.783"
+            },
+            {
+              "pos": 12,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "YARIS",
+              "gap": "+0.790"
+            },
+            {
+              "pos": 13,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "ONIX",
+              "gap": "+0.932"
+            },
+            {
+              "pos": 14,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "208",
+              "gap": "+0.956"
+            },
+            {
+              "pos": 15,
+              "number": "76",
+              "driver": "Felipe Martini",
+              "team": "GOL",
+              "gap": "+0.978"
+            },
+            {
+              "pos": 16,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "208",
+              "gap": "+1.003"
+            },
+            {
+              "pos": 17,
+              "number": "28",
+              "driver": "Damian Kirstein",
+              "team": "ETIOS",
+              "gap": "+1.123"
+            },
+            {
+              "pos": 18,
+              "number": "87",
+              "driver": "Daniel Costa Sanchez",
+              "team": "FIESTA",
+              "gap": "+1.224"
+            },
+            {
+              "pos": 19,
+              "number": "100",
+              "driver": "Marcos Fernandez",
+              "team": "208",
+              "gap": "+1.384"
+            },
+            {
+              "pos": 20,
+              "number": "132",
+              "driver": "Diego Casais",
+              "team": "208",
+              "gap": "+1.430"
+            },
+            {
+              "pos": 21,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "YARIS",
+              "gap": "+1.558"
+            },
+            {
+              "pos": 22,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "YARIS",
+              "gap": "+1.560"
+            },
+            {
+              "pos": 23,
+              "number": "131",
+              "driver": "Franco Bodrato Mionetto",
+              "team": "208",
+              "gap": "+1.662"
+            },
+            {
+              "pos": 24,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "208",
+              "gap": "+1.716"
+            },
+            {
+              "pos": 25,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "ETIOS",
+              "gap": "+1.719"
+            },
+            {
+              "pos": 26,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "ETIOS",
+              "gap": "+1.724"
+            },
+            {
+              "pos": 27,
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "208",
+              "gap": "+3.235"
+            },
+            {
+              "pos": 28,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "ONIX",
+              "gap": "+3.633"
+            },
+            {
+              "pos": 29,
+              "number": "73",
+              "driver": "Jose Luis Arrate",
+              "team": "AUDI A1",
+              "gap": "+4.970"
+            },
+            {
+              "pos": 30,
+              "number": "74",
+              "driver": "Bautista Roqueta",
+              "team": "YARIS",
+              "gap": "+5.924"
+            },
+            {
+              "pos": 31,
+              "number": "3",
+              "driver": "Renzo Blotta",
+              "team": "208",
+              "gap": "+38.344"
+            },
+            {
+              "pos": 32,
+              "number": "121",
+              "driver": "Nicolas Posco",
+              "team": "FIESTA",
+              "gap": "+&quot;1;19.447&quot;"
             }
           ],
           "resultsSource": {
@@ -22881,6 +23119,216 @@
           }
         },
         {
+          "id": "tn-2026-2-c2-clasificacio-n-2-clase-2",
+          "kind": "clasificacion",
+          "name": "Clasificación 2 Clase 2",
+          "start": "2026-03-14T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "1:41.277"
+            },
+            {
+              "pos": 2,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+0.257"
+            },
+            {
+              "pos": 3,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "+0.466"
+            },
+            {
+              "pos": 4,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Etios",
+              "gap": "+0.713"
+            },
+            {
+              "pos": 5,
+              "number": "3",
+              "driver": "Renzo Blotta",
+              "team": "Peugeot 208",
+              "gap": "+0.752"
+            },
+            {
+              "pos": 6,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+0.864"
+            },
+            {
+              "pos": 7,
+              "number": "11",
+              "driver": "Pedro Grippo",
+              "team": "Toyota Yaris",
+              "gap": "+0.948"
+            },
+            {
+              "pos": 9,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+1.002"
+            },
+            {
+              "pos": 10,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+1.017"
+            },
+            {
+              "pos": 11,
+              "number": "19",
+              "driver": "Maximiliano Bestani",
+              "team": "Chevrolet Onix",
+              "gap": "+1.148"
+            },
+            {
+              "pos": 12,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+1.169"
+            },
+            {
+              "pos": 13,
+              "number": "131",
+              "driver": "Franco Bodrato Mionetto",
+              "team": "Peugeot 208",
+              "gap": "+1.186"
+            },
+            {
+              "pos": 14,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+1.324"
+            },
+            {
+              "pos": 15,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+1.326"
+            },
+            {
+              "pos": 16,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+1.351"
+            },
+            {
+              "pos": 17,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "+1.425"
+            },
+            {
+              "pos": 19,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yars",
+              "gap": "+1.566"
+            },
+            {
+              "pos": 20,
+              "number": "100",
+              "driver": "Marcos Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+1.605"
+            },
+            {
+              "pos": 21,
+              "number": "5",
+              "driver": "Juan Pablo Pastori",
+              "team": "Chevrolet Onix",
+              "gap": "+1.733"
+            },
+            {
+              "pos": 22,
+              "number": "84",
+              "driver": "Gaston Martinez Minetti",
+              "team": "Toyota Etios",
+              "gap": "+1.894"
+            },
+            {
+              "pos": 23,
+              "number": "161",
+              "driver": "Lucas Petracchini",
+              "team": "Toyota Yaris",
+              "gap": "+1.973"
+            },
+            {
+              "pos": 24,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+2.192"
+            },
+            {
+              "pos": 25,
+              "number": "28",
+              "driver": "Damian Kirstein",
+              "team": "Toyota Etios",
+              "gap": "+2.939"
+            },
+            {
+              "pos": 26,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+3.293"
+            },
+            {
+              "pos": 28,
+              "number": "74",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+6.698"
+            },
+            {
+              "pos": 29,
+              "number": "76",
+              "driver": "Felipe Martini",
+              "team": "VW Gol Trend",
+              "gap": "+9.227"
+            },
+            {
+              "pos": 30,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+12.020"
+            },
+            {
+              "pos": 31,
+              "number": "132",
+              "driver": "Diego Casais",
+              "team": "Peugeot 208",
+              "gap": "1:43.405"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-03-15"
+          }
+        },
+        {
           "id": "tn-2026-2-c3-clasificacio-n-clase-3",
           "kind": "clasificacion",
           "name": "Clasificación Clase 3",
@@ -23352,7 +23800,7 @@
         {
           "id": "tn-2026-2-c2-clasificacio-n-clase-2",
           "kind": "clasificacion",
-          "name": "Clasificación Clase 2",
+          "name": "Clasificación 1 Clase 2",
           "start": "2026-03-15T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 25,
@@ -36622,7 +37070,7 @@
         {
           "id": "tn-2026-3-c2-clasificacio-n-clase-2",
           "kind": "clasificacion",
-          "name": "Clasificación Clase 2",
+          "name": "Clasificación 1 Clase 2",
           "start": "2026-04-04T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 25,
@@ -36857,6 +37305,259 @@
               "driver": "Thiago Ferrari",
               "team": "VW Gol Trend",
               "gap": "1:48.295"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-04-05"
+          }
+        },
+        {
+          "id": "tn-2026-3-c2-clasificacio-n-2-clase-2",
+          "kind": "clasificacion",
+          "name": "Clasificación 2 Clase 2",
+          "start": "2026-04-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "1:45.938"
+            },
+            {
+              "pos": 2,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+0.279"
+            },
+            {
+              "pos": 3,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+0.619"
+            },
+            {
+              "pos": 4,
+              "number": "3",
+              "driver": "Renzo Blotta",
+              "team": "Peugeot 208",
+              "gap": "+0.630"
+            },
+            {
+              "pos": 5,
+              "number": "5",
+              "driver": "Juan Pablo Pastori",
+              "team": "Chevrolet Onix",
+              "gap": "+0.647"
+            },
+            {
+              "pos": 6,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "+0.981"
+            },
+            {
+              "pos": 7,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+1.152"
+            },
+            {
+              "pos": 8,
+              "number": "11",
+              "driver": "Pedro Grippo",
+              "team": "Toyota Yaris",
+              "gap": "+1.157"
+            },
+            {
+              "pos": 9,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+1.163"
+            },
+            {
+              "pos": 10,
+              "number": "76",
+              "driver": "Felipe Martini",
+              "team": "VW Gol Trend",
+              "gap": "+1.203"
+            },
+            {
+              "pos": 11,
+              "number": "19",
+              "driver": "Maximiliano Bestani",
+              "team": "Chevrolet Onix",
+              "gap": "+1.247"
+            },
+            {
+              "pos": 12,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "VW Gol Trend",
+              "gap": "+1.316"
+            },
+            {
+              "pos": 13,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+1.336"
+            },
+            {
+              "pos": 14,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+1.375"
+            },
+            {
+              "pos": 15,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+1.399"
+            },
+            {
+              "pos": 16,
+              "number": "100",
+              "driver": "Marcos Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+1.403"
+            },
+            {
+              "pos": 17,
+              "number": "161",
+              "driver": "Lucas Petracchini",
+              "team": "Toyota Yaris",
+              "gap": "+1.564"
+            },
+            {
+              "pos": 18,
+              "number": "131",
+              "driver": "Franco Bodrato Mionetto",
+              "team": "Peugeot 208",
+              "gap": "+1.651"
+            },
+            {
+              "pos": 19,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+1.682"
+            },
+            {
+              "pos": 20,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+1.731"
+            },
+            {
+              "pos": 21,
+              "number": "121",
+              "driver": "Nicolas Posco",
+              "team": "Ford Kinetic",
+              "gap": "+1.942"
+            },
+            {
+              "pos": 22,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+1.998"
+            },
+            {
+              "pos": 23,
+              "number": "28",
+              "driver": "Damian Kirstein",
+              "team": "Toyota Etios",
+              "gap": "+2.134"
+            },
+            {
+              "pos": 24,
+              "number": "132",
+              "driver": "Diego Casais",
+              "team": "Peugeot 208",
+              "gap": "+2.172"
+            },
+            {
+              "pos": 25,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+2.398"
+            },
+            {
+              "pos": 26,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+2.511"
+            },
+            {
+              "pos": 27,
+              "number": "87",
+              "driver": "Daniel Costa Sanchez",
+              "team": "Ford Kinetic",
+              "gap": "+2.609"
+            },
+            {
+              "pos": 28,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yars",
+              "gap": "+2.835"
+            },
+            {
+              "pos": 29,
+              "number": "116",
+              "driver": "Diego Farina",
+              "team": "VW Gol Trend",
+              "gap": "+2.900"
+            },
+            {
+              "pos": 30,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Etios",
+              "gap": "+3.012"
+            },
+            {
+              "pos": 31,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+3.051"
+            },
+            {
+              "pos": 32,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+4.660"
+            },
+            {
+              "pos": 33,
+              "number": "71",
+              "driver": "Maximo Donzino",
+              "team": "Ford Kinetic",
+              "gap": "+5.159"
+            },
+            {
+              "pos": 34,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
@@ -58260,7 +58961,7 @@
         {
           "id": "tn-2026-4-c2-clasificacio-n-clase-2",
           "kind": "clasificacion",
-          "name": "Clasificación Clase 2",
+          "name": "Clasificación 1 Clase 2",
           "start": "2026-05-02T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 25,
@@ -58502,6 +59203,259 @@
               "driver": "Juan Martin Eluchans",
               "team": "Toyota Yaris",
               "gap": "+1:15.877"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-05-03"
+          }
+        },
+        {
+          "id": "tn-2026-4-c2-clasificacio-n-2-clase-2",
+          "kind": "clasificacion",
+          "name": "Clasificación 2 Clase 2",
+          "start": "2026-05-02T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "131",
+              "driver": "Franco Bodrato Mionetto",
+              "team": "Peugeot 208",
+              "gap": "1:52.663"
+            },
+            {
+              "pos": 2,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+0.166"
+            },
+            {
+              "pos": 3,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+0.197"
+            },
+            {
+              "pos": 4,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+0.275"
+            },
+            {
+              "pos": 5,
+              "number": "19",
+              "driver": "Maximiliano Bestani",
+              "team": "Chevrolet Onix",
+              "gap": "+0.525"
+            },
+            {
+              "pos": 6,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+0.574"
+            },
+            {
+              "pos": 7,
+              "number": "3",
+              "driver": "Renzo Blotta",
+              "team": "Peugeot 208",
+              "gap": "+0.575"
+            },
+            {
+              "pos": 8,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+0.600"
+            },
+            {
+              "pos": 9,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "+0.721"
+            },
+            {
+              "pos": 10,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+0.721"
+            },
+            {
+              "pos": 11,
+              "number": "100",
+              "driver": "Marcos Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+0.756"
+            },
+            {
+              "pos": 12,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+0.763"
+            },
+            {
+              "pos": 13,
+              "number": "53",
+              "driver": "Federico Luques",
+              "team": "Toyota Yaris",
+              "gap": "+0.808"
+            },
+            {
+              "pos": 14,
+              "number": "121",
+              "driver": "Nicolas Posco",
+              "team": "Ford F Kinetic",
+              "gap": "+0.890"
+            },
+            {
+              "pos": 15,
+              "number": "161",
+              "driver": "Lucas Petracchini",
+              "team": "Toyota Yaris",
+              "gap": "+0.896"
+            },
+            {
+              "pos": 16,
+              "number": "132",
+              "driver": "Diego Casais",
+              "team": "Peugeot 208",
+              "gap": "+0.985"
+            },
+            {
+              "pos": 17,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+1.163"
+            },
+            {
+              "pos": 18,
+              "number": "78",
+              "driver": "Ignacio Grippo",
+              "team": "Toyota Etios",
+              "gap": "+1.185"
+            },
+            {
+              "pos": 19,
+              "number": "92",
+              "driver": "Thomas Marchesin",
+              "team": "Toyota Etios",
+              "gap": "+1.202"
+            },
+            {
+              "pos": 20,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+1.358"
+            },
+            {
+              "pos": 21,
+              "number": "36",
+              "driver": "Cristian Vaira",
+              "team": "VW Gol Trend",
+              "gap": "+1.383"
+            },
+            {
+              "pos": 22,
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "Peugeot 208",
+              "gap": "+1.463"
+            },
+            {
+              "pos": 23,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "VW Gol Trend",
+              "gap": "+1.638"
+            },
+            {
+              "pos": 24,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+2.216"
+            },
+            {
+              "pos": 25,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+2.289"
+            },
+            {
+              "pos": 26,
+              "number": "87",
+              "driver": "Daniel Costa Sanchez",
+              "team": "Ford F Kinetic",
+              "gap": "+2.342"
+            },
+            {
+              "pos": 27,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "+2.574"
+            },
+            {
+              "pos": 28,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+2.602"
+            },
+            {
+              "pos": 29,
+              "number": "116",
+              "driver": "Diego Farina",
+              "team": "VW Gol Trend",
+              "gap": "+3.083"
+            },
+            {
+              "pos": 30,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Etios",
+              "gap": "+3.740"
+            },
+            {
+              "pos": 31,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+5.026"
+            },
+            {
+              "pos": 32,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+18.072"
+            },
+            {
+              "pos": 33,
+              "number": "11",
+              "driver": "Pedro Grippo",
+              "team": "Toyota Yaris",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 34,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "1:53.140"
             }
           ],
           "resultsSource": {
@@ -82212,7 +83166,7 @@
         {
           "id": "tn-2026-5-c2-clasificacio-n-clase-2",
           "kind": "clasificacion",
-          "name": "Clasificación Clase 2",
+          "name": "Clasificación 1 Clase 2",
           "start": "2026-06-05T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 25,
@@ -110808,7 +111762,7 @@
         {
           "id": "tn-2026-6-c2-clasificacio-n-clase-2",
           "kind": "clasificacion",
-          "name": "Clasificación Clase 2",
+          "name": "Clasificación 1 Clase 2",
           "start": "2026-07-04T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 25,
@@ -111040,6 +111994,223 @@
               "team": "Peugeot 208",
               "gap": "",
               "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-07-05"
+          }
+        },
+        {
+          "id": "tn-2026-6-c2-clasificacio-n-2-clase-2",
+          "kind": "clasificacion",
+          "name": "Clasificación 2 Clase 2",
+          "start": "2026-07-04T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "2:10.073"
+            },
+            {
+              "pos": 2,
+              "number": "78",
+              "driver": "Ignacio Grippo",
+              "team": "Toyota Etios",
+              "gap": "+0.483"
+            },
+            {
+              "pos": 3,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+0.577"
+            },
+            {
+              "pos": 4,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+1.133"
+            },
+            {
+              "pos": 5,
+              "number": "87",
+              "driver": "Daniel Costa Sanchez",
+              "team": "Peugeot 208",
+              "gap": "+1.232"
+            },
+            {
+              "pos": 6,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "+1.465"
+            },
+            {
+              "pos": 7,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+1.488"
+            },
+            {
+              "pos": 8,
+              "number": "131",
+              "driver": "Franco Bodrato Mionetto",
+              "team": "Peugeot 208",
+              "gap": "+1.616"
+            },
+            {
+              "pos": 9,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+1.619"
+            },
+            {
+              "pos": 10,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+1.635"
+            },
+            {
+              "pos": 11,
+              "number": "29",
+              "driver": "Horacio Evolo",
+              "team": "Toyota Etios",
+              "gap": "+1.738"
+            },
+            {
+              "pos": 12,
+              "number": "19",
+              "driver": "Maximiliano Bestani",
+              "team": "Chevrolet Onix",
+              "gap": "+2.078"
+            },
+            {
+              "pos": 13,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+2.191"
+            },
+            {
+              "pos": 14,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "VW Gol Trend",
+              "gap": "+2.412"
+            },
+            {
+              "pos": 15,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+2.819"
+            },
+            {
+              "pos": 16,
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "Peugeot 208",
+              "gap": "+2.872"
+            },
+            {
+              "pos": 17,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+2.932"
+            },
+            {
+              "pos": 18,
+              "number": "11",
+              "driver": "Pedro Grippo",
+              "team": "Toyota Yaris",
+              "gap": "+2.949"
+            },
+            {
+              "pos": 19,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "+2.951"
+            },
+            {
+              "pos": 20,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Etios",
+              "gap": "+3.035"
+            },
+            {
+              "pos": 21,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+3.320"
+            },
+            {
+              "pos": 22,
+              "number": "92",
+              "driver": "Thomas Marchesin",
+              "team": "Toyota Etios",
+              "gap": "+3.382"
+            },
+            {
+              "pos": 23,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+3.619"
+            },
+            {
+              "pos": 24,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+3.752"
+            },
+            {
+              "pos": 25,
+              "number": "71",
+              "driver": "Maximo Donzino",
+              "team": "Ford F. Kinetic",
+              "gap": "+3.795"
+            },
+            {
+              "pos": 26,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+4.785"
+            },
+            {
+              "pos": 27,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+4.810"
+            },
+            {
+              "pos": 28,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "+4.830"
+            },
+            {
+              "pos": 29,
+              "number": "161",
+              "driver": "Lucas Petracchini",
+              "team": "Chevrolet Onix",
+              "gap": "+5.824"
             }
           ],
           "resultsSource": {
@@ -135816,7 +136987,7 @@
         {
           "id": "tn-2026-7-c2-clasificacio-n-clase-2",
           "kind": "clasificacion",
-          "name": "Clasificación Clase 2",
+          "name": "Clasificación 1 Clase 2",
           "start": "2026-07-31T15:30:00-03:00",
           "timeKnown": true,
           "durationMin": 25,
@@ -163783,7 +164954,7 @@
         {
           "id": "tn-2026-8-c2-clasificacio-n-clase-2",
           "kind": "clasificacion",
-          "name": "Clasificación Clase 2",
+          "name": "Clasificación 1 Clase 2",
           "start": "2026-08-29T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 25,
@@ -163989,6 +165160,225 @@
               "number": "131",
               "driver": "Franco Bodrato Mionetto",
               "team": "Peugeot 208",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-08-30"
+          }
+        },
+        {
+          "id": "tn-2026-8-c2-clasificacio-n-2-clase-2",
+          "kind": "clasificacion",
+          "name": "Clasificación 2 Clase 2",
+          "start": "2026-08-29T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "1:58.739"
+            },
+            {
+              "pos": 2,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+0.053"
+            },
+            {
+              "pos": 3,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+0.266"
+            },
+            {
+              "pos": 4,
+              "number": "92",
+              "driver": "Thomas Marchesin",
+              "team": "Toyota Etios",
+              "gap": "+0.357"
+            },
+            {
+              "pos": 5,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+0.392"
+            },
+            {
+              "pos": 6,
+              "number": "161",
+              "driver": "Lucas Petracchini",
+              "team": "Chevrolet Onix",
+              "gap": "+0.399"
+            },
+            {
+              "pos": 7,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "+0.491"
+            },
+            {
+              "pos": 8,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+0.511"
+            },
+            {
+              "pos": 9,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+0.592"
+            },
+            {
+              "pos": 10,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+0.674"
+            },
+            {
+              "pos": 11,
+              "number": "19",
+              "driver": "Maximiliano Bestani",
+              "team": "Chevrolet Onix",
+              "gap": "+0.682"
+            },
+            {
+              "pos": 12,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "+0.694"
+            },
+            {
+              "pos": 13,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+0.826"
+            },
+            {
+              "pos": 14,
+              "number": "11",
+              "driver": "Pedro Grippo",
+              "team": "Toyota Yaris",
+              "gap": "+0.834"
+            },
+            {
+              "pos": 15,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+0.916"
+            },
+            {
+              "pos": 16,
+              "number": "132",
+              "driver": "Diego Casais",
+              "team": "Peugeot 208",
+              "gap": "+0.940"
+            },
+            {
+              "pos": 17,
+              "number": "5",
+              "driver": "Juan Pablo Pastori",
+              "team": "Toyota Etios",
+              "gap": "+1.140"
+            },
+            {
+              "pos": 18,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+1.251"
+            },
+            {
+              "pos": 19,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+1.301"
+            },
+            {
+              "pos": 20,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "Ford F. Kinetic",
+              "gap": "+1.455"
+            },
+            {
+              "pos": 21,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+1.933"
+            },
+            {
+              "pos": 22,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+2.003"
+            },
+            {
+              "pos": 23,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+2.166"
+            },
+            {
+              "pos": 24,
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "Toyota Etios",
+              "gap": "+2.303"
+            },
+            {
+              "pos": 25,
+              "number": "131",
+              "driver": "Franco Bodrato Mionetto",
+              "team": "Peugeot 208",
+              "gap": "+2.642"
+            },
+            {
+              "pos": 26,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Yaris",
+              "gap": "+3.498"
+            },
+            {
+              "pos": 27,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "+4.180"
+            },
+            {
+              "pos": 28,
+              "number": "3",
+              "driver": "Renzo Blotta",
+              "team": "Peugeot 208",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 29,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
               "gap": "",
               "status": "Sin tiempo"
             }
@@ -182020,7 +183410,7 @@
         {
           "id": "tn-2026-9-c2-clasificacio-n-clase-2",
           "kind": "clasificacion",
-          "name": "Clasificación Clase 2",
+          "name": "Clasificación 1 Clase 2",
           "start": "2026-09-19T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 25,
@@ -182234,6 +183624,234 @@
               "number": "97",
               "driver": "Bruno Pace",
               "team": "Toyota Etios",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-09-20"
+          }
+        },
+        {
+          "id": "tn-2026-9-c2-clasificacio-n-2-clase-2",
+          "kind": "clasificacion",
+          "name": "Clasificación 2 Clase 2",
+          "start": "2026-09-19T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "1:13.229"
+            },
+            {
+              "pos": 2,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+0.017"
+            },
+            {
+              "pos": 3,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+0.342"
+            },
+            {
+              "pos": 4,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+0.380"
+            },
+            {
+              "pos": 5,
+              "number": "155",
+              "driver": "Gaston Iansa",
+              "team": "Chev. Onix",
+              "gap": "+0.429"
+            },
+            {
+              "pos": 6,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+0.554"
+            },
+            {
+              "pos": 7,
+              "number": "131",
+              "driver": "Franco Bodrato Mionetto",
+              "team": "Peugeot 208",
+              "gap": "+0.568"
+            },
+            {
+              "pos": 8,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+0.572"
+            },
+            {
+              "pos": 9,
+              "number": "92",
+              "driver": "Thomas Marchesin",
+              "team": "Toyota Etios",
+              "gap": "+0.645"
+            },
+            {
+              "pos": 10,
+              "number": "3",
+              "driver": "Renzo Blotta",
+              "team": "Peugeot 208",
+              "gap": "+0.652"
+            },
+            {
+              "pos": 11,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+0.695"
+            },
+            {
+              "pos": 12,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+0.732"
+            },
+            {
+              "pos": 13,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "+0.791"
+            },
+            {
+              "pos": 14,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chev. Onix",
+              "gap": "+0.800"
+            },
+            {
+              "pos": 15,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+0.828"
+            },
+            {
+              "pos": 16,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+0.925"
+            },
+            {
+              "pos": 17,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+0.939"
+            },
+            {
+              "pos": 18,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "+1.033"
+            },
+            {
+              "pos": 19,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "+1.131"
+            },
+            {
+              "pos": 20,
+              "number": "132",
+              "driver": "Diego Casais",
+              "team": "Peugeot 208",
+              "gap": "+1.358"
+            },
+            {
+              "pos": 21,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Yaris",
+              "gap": "+1.362"
+            },
+            {
+              "pos": 22,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+1.416"
+            },
+            {
+              "pos": 23,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+1.496"
+            },
+            {
+              "pos": 24,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chev. Onix",
+              "gap": "+1.613"
+            },
+            {
+              "pos": 25,
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "Toyota Etios",
+              "gap": "+1.860"
+            },
+            {
+              "pos": 26,
+              "number": "71",
+              "driver": "Maximo Donzino",
+              "team": "Ford F. Kinetic",
+              "gap": "+2.349"
+            },
+            {
+              "pos": 27,
+              "number": "84",
+              "driver": "Gaston Martinez Minetti",
+              "team": "Toyota Etios",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 28,
+              "number": "116",
+              "driver": "Diego Farina",
+              "team": "VW Gol Trend",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 29,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "",
+              "status": "Sin tiempo"
+            },
+            {
+              "pos": 30,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "Ford F. Kinetic",
               "gap": "",
               "status": "Sin tiempo"
             }
@@ -206392,7 +208010,7 @@
         {
           "id": "tn-2026-10-c2-clasificacio-n-clase-2",
           "kind": "clasificacion",
-          "name": "Clasificación Clase 2",
+          "name": "Clasificación 1 Clase 2",
           "start": "2026-10-10T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 25,
@@ -206571,6 +208189,181 @@
               "driver": "Martin Mura",
               "team": "Chevrolet Onix",
               "gap": "+4.192"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-10-11"
+          }
+        },
+        {
+          "id": "tn-2026-10-c2-clasificacio-n-2-clase-2",
+          "kind": "clasificacion",
+          "name": "Clasificación 2 Clase 2",
+          "start": "2026-10-10T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "1:38.026"
+            },
+            {
+              "pos": 2,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "+0.242"
+            },
+            {
+              "pos": 3,
+              "number": "44",
+              "driver": "Julián Modica",
+              "team": "Toyota Etios",
+              "gap": "+0.606"
+            },
+            {
+              "pos": 4,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+0.667"
+            },
+            {
+              "pos": 5,
+              "number": "232",
+              "driver": "Martín Tomás",
+              "team": "Chevrolet Onix",
+              "gap": "+0.798"
+            },
+            {
+              "pos": 6,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+0.836"
+            },
+            {
+              "pos": 7,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "Ford F. Kinetic",
+              "gap": "+0.995"
+            },
+            {
+              "pos": 8,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+1.030"
+            },
+            {
+              "pos": 9,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Yaris",
+              "gap": "+1.200"
+            },
+            {
+              "pos": 10,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "+1.228"
+            },
+            {
+              "pos": 11,
+              "number": "79",
+              "driver": "Andres Calderon",
+              "team": "Peugeot 208",
+              "gap": "+1.641"
+            },
+            {
+              "pos": 12,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+1.649"
+            },
+            {
+              "pos": 13,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Toyota Yaris",
+              "gap": "+1.704"
+            },
+            {
+              "pos": 14,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+1.762"
+            },
+            {
+              "pos": 15,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "+1.826"
+            },
+            {
+              "pos": 16,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+1.911"
+            },
+            {
+              "pos": 17,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+2.050"
+            },
+            {
+              "pos": 18,
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "DS 3",
+              "gap": "+2.243"
+            },
+            {
+              "pos": 19,
+              "number": "155",
+              "driver": "Gaston Iansa",
+              "team": "Peugeot 208",
+              "gap": "+2.581"
+            },
+            {
+              "pos": 20,
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "Toyota Etios",
+              "gap": "+2.629"
+            },
+            {
+              "pos": 21,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+3.442"
+            },
+            {
+              "pos": 22,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+3.601"
+            },
+            {
+              "pos": 23,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+5:44.659"
             }
           ],
           "resultsSource": {
@@ -206832,203 +208625,6 @@
           ]
         },
         {
-          "id": "tn-2026-10-c2-clasificacion1",
-          "kind": "clasificacion",
-          "name": "Clasificación 1 Clase 2",
-          "start": "2026-10-10T15:10:00-03:00",
-          "timeKnown": true,
-          "timeStatus": "confirmed",
-          "timeSources": [
-            {
-              "name": "Speedhive (cronometraje)",
-              "url": "https://speedhive.mylaps.com/events/3744743",
-              "start": "2026-10-10T15:10:00-03:00"
-            }
-          ],
-          "durationMin": 40,
-          "results": [
-            {
-              "pos": 1,
-              "number": "177",
-              "driver": "Tomas Vitar",
-              "team": "",
-              "gap": "1:38.398"
-            },
-            {
-              "pos": 2,
-              "number": "151",
-              "driver": "Exequiel Bastidas",
-              "team": "",
-              "gap": "+0.008"
-            },
-            {
-              "pos": 3,
-              "number": "221",
-              "driver": "Thiago Ferrari",
-              "team": "",
-              "gap": "+0.231"
-            },
-            {
-              "pos": 4,
-              "number": "2",
-              "driver": "Francisco Coltrinari",
-              "team": "",
-              "gap": "+0.280"
-            },
-            {
-              "pos": 5,
-              "number": "44",
-              "driver": "Julián Módica",
-              "team": "",
-              "gap": "+0.397"
-            },
-            {
-              "pos": 6,
-              "number": "89",
-              "driver": "Valentino Quattrocchi",
-              "team": "",
-              "gap": "+0.607"
-            },
-            {
-              "pos": 7,
-              "number": "86",
-              "driver": "Martin Leston",
-              "team": "",
-              "gap": "+0.691"
-            },
-            {
-              "pos": 8,
-              "number": "117",
-              "driver": "Pablo Collazo",
-              "team": "",
-              "gap": "+0.840"
-            },
-            {
-              "pos": 9,
-              "number": "95",
-              "driver": "Santino Balerini",
-              "team": "",
-              "gap": "+0.843"
-            },
-            {
-              "pos": 10,
-              "number": "232",
-              "driver": "Tomás Martín",
-              "team": "",
-              "gap": "+0.878"
-            },
-            {
-              "pos": 11,
-              "number": "14",
-              "driver": "Juan Eduardo Kreitz",
-              "team": "",
-              "gap": "+0.898"
-            },
-            {
-              "pos": 12,
-              "number": "70",
-              "driver": "Juan Ignacio Canela",
-              "team": "",
-              "gap": "+0.927"
-            },
-            {
-              "pos": 13,
-              "number": "97",
-              "driver": "Bruno Pace",
-              "team": "",
-              "gap": "+1.106"
-            },
-            {
-              "pos": 14,
-              "number": "79",
-              "driver": "Andres Calderon",
-              "team": "",
-              "gap": "+1.244"
-            },
-            {
-              "pos": 15,
-              "number": "192",
-              "driver": "Martin Blasig",
-              "team": "",
-              "gap": "+1.249"
-            },
-            {
-              "pos": 16,
-              "number": "150",
-              "driver": "Juan Martin Eluchans",
-              "team": "",
-              "gap": "+1.408"
-            },
-            {
-              "pos": 17,
-              "number": "25",
-              "driver": "Santiago Robledo",
-              "team": "",
-              "gap": "+1.561"
-            },
-            {
-              "pos": 18,
-              "number": "98",
-              "driver": "Braian Reinoso",
-              "team": "",
-              "gap": "+1.651"
-            },
-            {
-              "pos": 19,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "",
-              "gap": "+2.165"
-            },
-            {
-              "pos": 20,
-              "number": "193",
-              "driver": "Franco Romano",
-              "team": "",
-              "gap": "+2.198"
-            },
-            {
-              "pos": 21,
-              "number": "56",
-              "driver": "Agustin Bonomo",
-              "team": "",
-              "gap": "+2.391"
-            },
-            {
-              "pos": 22,
-              "number": "174",
-              "driver": "Sergio Fernandez",
-              "team": "",
-              "gap": "+2.624"
-            },
-            {
-              "pos": 23,
-              "number": "119",
-              "driver": "Nahuel Della Santina",
-              "team": "",
-              "gap": "+2.651"
-            },
-            {
-              "pos": 24,
-              "number": "43",
-              "driver": "Marcelo Guevara",
-              "team": "",
-              "gap": "+2.668"
-            },
-            {
-              "pos": 25,
-              "number": "93",
-              "driver": "Martin Mura",
-              "team": "",
-              "gap": "+4.192"
-            }
-          ],
-          "resultsSource": {
-            "name": "Speedhive · cronometraje (provisorio)",
-            "url": "https://speedhive.mylaps.com/sessions/12958643"
-          }
-        },
-        {
           "id": "tn-2026-10-c3-clasificacio-n-clase-3",
           "kind": "clasificacion",
           "name": "Clasificación Clase 3",
@@ -207281,210 +208877,6 @@
               "start": "2026-10-10T16:00:00-03:00"
             }
           ]
-        },
-        {
-          "id": "tn-2026-10-c2-clasificacion2",
-          "kind": "clasificacion",
-          "name": "Clasificación 2 Clase 2",
-          "start": "2026-10-10T17:15:00-03:00",
-          "timeKnown": true,
-          "timeStatus": "confirmed",
-          "timeSources": [
-            {
-              "name": "Speedhive (cronometraje)",
-              "url": "https://speedhive.mylaps.com/events/3744743",
-              "start": "2026-10-10T17:15:00-03:00"
-            }
-          ],
-          "durationMin": 40,
-          "results": [
-            {
-              "pos": 1,
-              "number": "177",
-              "driver": "Tomas Vitar",
-              "team": "",
-              "gap": "1:38.026"
-            },
-            {
-              "pos": 2,
-              "number": "151",
-              "driver": "Exequiel Bastidas",
-              "team": "",
-              "gap": "+0.242"
-            },
-            {
-              "pos": 3,
-              "number": "44",
-              "driver": "Julián Módica",
-              "team": "",
-              "gap": "+0.606"
-            },
-            {
-              "pos": 4,
-              "number": "89",
-              "driver": "Valentino Quattrocchi",
-              "team": "",
-              "gap": "+0.667"
-            },
-            {
-              "pos": 5,
-              "number": "232",
-              "driver": "Tomás Martín",
-              "team": "",
-              "gap": "+0.798"
-            },
-            {
-              "pos": 6,
-              "number": "2",
-              "driver": "Francisco Coltrinari",
-              "team": "",
-              "gap": "+0.836"
-            },
-            {
-              "pos": 7,
-              "number": "221",
-              "driver": "Thiago Ferrari",
-              "team": "",
-              "gap": "+0.995"
-            },
-            {
-              "pos": 8,
-              "number": "86",
-              "driver": "Martin Leston",
-              "team": "",
-              "gap": "+1.030"
-            },
-            {
-              "pos": 9,
-              "number": "117",
-              "driver": "Pablo Collazo",
-              "team": "",
-              "gap": "+1.200"
-            },
-            {
-              "pos": 10,
-              "number": "97",
-              "driver": "Bruno Pace",
-              "team": "",
-              "gap": "+1.228"
-            },
-            {
-              "pos": 11,
-              "number": "79",
-              "driver": "Andres Calderon",
-              "team": "",
-              "gap": "+1.641"
-            },
-            {
-              "pos": 12,
-              "number": "14",
-              "driver": "Juan Eduardo Kreitz",
-              "team": "",
-              "gap": "+1.649"
-            },
-            {
-              "pos": 13,
-              "number": "98",
-              "driver": "Braian Reinoso",
-              "team": "",
-              "gap": "+1.704"
-            },
-            {
-              "pos": 14,
-              "number": "25",
-              "driver": "Santiago Robledo",
-              "team": "",
-              "gap": "+1.762"
-            },
-            {
-              "pos": 15,
-              "number": "193",
-              "driver": "Franco Romano",
-              "team": "",
-              "gap": "+1.826"
-            },
-            {
-              "pos": 16,
-              "number": "43",
-              "driver": "Marcelo Guevara",
-              "team": "",
-              "gap": "+1.911"
-            },
-            {
-              "pos": 17,
-              "number": "47",
-              "driver": "Bautista Roqueta",
-              "team": "",
-              "gap": "+2.050"
-            },
-            {
-              "pos": 18,
-              "number": "56",
-              "driver": "Agustin Bonomo",
-              "team": "",
-              "gap": "+2.243"
-            },
-            {
-              "pos": 19,
-              "number": "155",
-              "driver": "Gaston Iansa",
-              "team": "",
-              "gap": "+2.581"
-            },
-            {
-              "pos": 20,
-              "number": "119",
-              "driver": "Nahuel Della Santina",
-              "team": "",
-              "gap": "+2.629"
-            },
-            {
-              "pos": 21,
-              "number": "93",
-              "driver": "Martin Mura",
-              "team": "",
-              "gap": "+3.442"
-            },
-            {
-              "pos": 22,
-              "number": "174",
-              "driver": "Sergio Fernandez",
-              "team": "",
-              "gap": "+3.601"
-            },
-            {
-              "pos": 23,
-              "number": "95",
-              "driver": "Santino Balerini",
-              "team": "",
-              "gap": "+5:44.659"
-            },
-            {
-              "pos": 24,
-              "number": "192",
-              "driver": "Martin Blasig",
-              "team": "",
-              "gap": "+11:21.139"
-            },
-            {
-              "pos": 25,
-              "number": "70",
-              "driver": "Juan Ignacio Canela",
-              "team": "",
-              "gap": ""
-            },
-            {
-              "pos": 26,
-              "number": "150",
-              "driver": "Juan Martin Eluchans",
-              "team": "",
-              "gap": ""
-            }
-          ],
-          "resultsSource": {
-            "name": "Speedhive · cronometraje (provisorio)",
-            "url": "https://speedhive.mylaps.com/sessions/12959684"
-          }
         },
         {
           "id": "tn-2026-10-c2-serie-1-clase-2",
@@ -219404,7 +220796,7 @@
         {
           "id": "tn-2026-11-c2-clasificacio-n-clase-2",
           "kind": "clasificacion",
-          "name": "Clasificación Clase 2",
+          "name": "Clasificación 1 Clase 2",
           "start": "2026-10-31T12:00:00-03:00",
           "timeKnown": false,
           "durationMin": 25,
@@ -219616,6 +221008,238 @@
               "pos": 31,
               "number": "3",
               "driver": "Renzo Blotta",
+              "team": "Peugeot 208",
+              "gap": "",
+              "status": "Sin tiempo"
+            }
+          ],
+          "resultsSource": {
+            "name": "APAT · resultados oficiales",
+            "url": "https://apat.org.ar/resultados/c2/2026-11-01"
+          }
+        },
+        {
+          "id": "tn-2026-11-c2-clasificacio-n-2-clase-2",
+          "kind": "clasificacion",
+          "name": "Clasificación 2 Clase 2",
+          "start": "2026-10-31T12:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 25,
+          "results": [
+            {
+              "pos": 1,
+              "number": "151",
+              "driver": "Exequiel Bastidas",
+              "team": "Toyota Yaris",
+              "gap": "1:52.029"
+            },
+            {
+              "pos": 2,
+              "number": "89",
+              "driver": "Valentino Quattrocchi",
+              "team": "Toyota Yaris",
+              "gap": "+0.112"
+            },
+            {
+              "pos": 3,
+              "number": "2",
+              "driver": "Francisco Coltrinari",
+              "team": "Peugeot 208",
+              "gap": "+0.182"
+            },
+            {
+              "pos": 4,
+              "number": "177",
+              "driver": "Tomas Vitar",
+              "team": "Nissan March",
+              "gap": "+0.554"
+            },
+            {
+              "pos": 5,
+              "number": "70",
+              "driver": "Juan Ignacio Canela",
+              "team": "Toyota Yaris",
+              "gap": "+0.774"
+            },
+            {
+              "pos": 6,
+              "number": "3",
+              "driver": "Renzo Blotta",
+              "team": "Peugeot 208",
+              "gap": "+0.869"
+            },
+            {
+              "pos": 7,
+              "number": "95",
+              "driver": "Santino Balerini",
+              "team": "Peugeot 208",
+              "gap": "+0.881"
+            },
+            {
+              "pos": 8,
+              "number": "86",
+              "driver": "Martin Leston",
+              "team": "Peugeot 208",
+              "gap": "+0.937"
+            },
+            {
+              "pos": 9,
+              "number": "155",
+              "driver": "Gaston Iansa",
+              "team": "Peugeot 208",
+              "gap": "+0.970"
+            },
+            {
+              "pos": 10,
+              "number": "92",
+              "driver": "Thomas Marchesin",
+              "team": "Toyota Etios",
+              "gap": "+0.999"
+            },
+            {
+              "pos": 11,
+              "number": "14",
+              "driver": "Juan Eduardo Kreitz",
+              "team": "Peugeot 208",
+              "gap": "+1.091"
+            },
+            {
+              "pos": 12,
+              "number": "150",
+              "driver": "Juan Martin Eluchans",
+              "team": "Toyota Yaris",
+              "gap": "+1.167"
+            },
+            {
+              "pos": 13,
+              "number": "117",
+              "driver": "Pablo Collazo",
+              "team": "Toyota Yaris",
+              "gap": "+1.204"
+            },
+            {
+              "pos": 14,
+              "number": "98",
+              "driver": "Braian Reinoso",
+              "team": "Chevrolet Onix",
+              "gap": "+1.206"
+            },
+            {
+              "pos": 15,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Toyota Yaris",
+              "gap": "+1.237"
+            },
+            {
+              "pos": 16,
+              "number": "25",
+              "driver": "Santiago Robledo",
+              "team": "Toyota Yaris",
+              "gap": "+1.294"
+            },
+            {
+              "pos": 17,
+              "number": "221",
+              "driver": "Thiago Ferrari",
+              "team": "Ford F. Kinetic",
+              "gap": "+1.327"
+            },
+            {
+              "pos": 18,
+              "number": "97",
+              "driver": "Bruno Pace",
+              "team": "Toyota Etios",
+              "gap": "+1.327"
+            },
+            {
+              "pos": 19,
+              "number": "131",
+              "driver": "Franco Bodrato Mionetto",
+              "team": "Peugeot 208",
+              "gap": "+1.516"
+            },
+            {
+              "pos": 20,
+              "number": "43",
+              "driver": "Marcelo Guevara",
+              "team": "Chevrolet Onix",
+              "gap": "+1.551"
+            },
+            {
+              "pos": 21,
+              "number": "193",
+              "driver": "Franco Romano",
+              "team": "Toyota Yaris",
+              "gap": "+1.587"
+            },
+            {
+              "pos": 22,
+              "number": "192",
+              "driver": "Martin Blasig",
+              "team": "Peugeot 208",
+              "gap": "+1.974"
+            },
+            {
+              "pos": 23,
+              "number": "29",
+              "driver": "Horacio Evolo",
+              "team": "Toyota Etios",
+              "gap": "+2.060"
+            },
+            {
+              "pos": 24,
+              "number": "119",
+              "driver": "Nahuel Della Santina",
+              "team": "Toyota Yaris",
+              "gap": "+2.391"
+            },
+            {
+              "pos": 25,
+              "number": "174",
+              "driver": "Sergio Fernandez",
+              "team": "Peugeot 208",
+              "gap": "+2.438"
+            },
+            {
+              "pos": 26,
+              "number": "84",
+              "driver": "Gaston Martinez Minetti",
+              "team": "Toyota Etios",
+              "gap": "+2.540"
+            },
+            {
+              "pos": 27,
+              "number": "56",
+              "driver": "Agustin Bonomo",
+              "team": "Peugeot 208",
+              "gap": "+2.864"
+            },
+            {
+              "pos": 28,
+              "number": "93",
+              "driver": "Martin Mura",
+              "team": "Chevrolet Onix",
+              "gap": "+3.036"
+            },
+            {
+              "pos": 29,
+              "number": "67",
+              "driver": "Juan Pablo Pastori",
+              "team": "Toyota Yaris",
+              "gap": "+3.123"
+            },
+            {
+              "pos": 30,
+              "number": "71",
+              "driver": "Maximo Donzino",
+              "team": "Ford F. Kinetic",
+              "gap": "+4.062"
+            },
+            {
+              "pos": 31,
+              "number": "79",
+              "driver": "Andres Calderon",
               "team": "Peugeot 208",
               "gap": "",
               "status": "Sin tiempo"
@@ -228603,5 +230227,7 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)"
+  ]
 }
