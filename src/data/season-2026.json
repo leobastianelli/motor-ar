@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T20:05:19.644Z",
+  "generatedAt": "2026-11-02T20:10:21.511Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -219531,76 +219531,46 @@
             {
               "pos": 7,
               "positionText": "7",
-              "driver": "Oscar Piastri",
-              "code": "PIA",
-              "team": "McLaren",
-              "gap": "+19.475",
-              "points": 6,
-              "grid": 12
-            },
-            {
-              "pos": 8,
-              "positionText": "8",
-              "driver": "Franco Colapinto",
-              "code": "COL",
-              "team": "Alpine F1 Team",
-              "gap": "+20.204",
-              "points": 4,
-              "grid": 11
-            },
-            {
-              "pos": 9,
-              "positionText": "9",
               "driver": "Liam Lawson",
               "code": "LAW",
               "team": "RB F1 Team",
               "gap": "+20.899",
-              "points": 2,
+              "points": 6,
               "grid": 22
             },
             {
-              "pos": 10,
-              "positionText": "10",
-              "driver": "Pierre Gasly",
-              "code": "GAS",
-              "team": "Alpine F1 Team",
-              "gap": "+21.483",
-              "points": 1,
-              "grid": 9
-            },
-            {
-              "pos": 11,
-              "positionText": "11",
+              "pos": 8,
+              "positionText": "8",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
               "gap": "+22.041",
-              "points": 0,
+              "points": 4,
               "grid": 13
             },
             {
-              "pos": 12,
-              "positionText": "12",
+              "pos": 9,
+              "positionText": "9",
               "driver": "Isack Hadjar",
               "code": "HAD",
               "team": "Red Bull",
               "gap": "+22.503",
-              "points": 0,
+              "points": 2,
               "grid": 7
             },
             {
-              "pos": 13,
-              "positionText": "13",
+              "pos": 10,
+              "positionText": "10",
               "driver": "Ryo Hirakawa",
               "code": "HIR",
               "team": "Haas F1 Team",
               "gap": "+25.373",
-              "points": 0,
+              "points": 1,
               "grid": 18
             },
             {
-              "pos": 14,
-              "positionText": "14",
+              "pos": 11,
+              "positionText": "11",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
@@ -219609,8 +219579,8 @@
               "grid": 16
             },
             {
-              "pos": 15,
-              "positionText": "15",
+              "pos": 12,
+              "positionText": "12",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
@@ -219619,8 +219589,18 @@
               "grid": 15
             },
             {
-              "pos": 16,
-              "positionText": "16",
+              "pos": 13,
+              "positionText": "13",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+29.475",
+              "points": 0,
+              "grid": 12
+            },
+            {
+              "pos": 14,
+              "positionText": "14",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
@@ -219629,14 +219609,34 @@
               "grid": 10
             },
             {
-              "pos": 17,
-              "positionText": "17",
+              "pos": 15,
+              "positionText": "15",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine F1 Team",
+              "gap": "+30.204",
+              "points": 0,
+              "grid": 11
+            },
+            {
+              "pos": 16,
+              "positionText": "16",
               "driver": "Sergio Pérez",
               "code": "PER",
               "team": "Cadillac F1 Team",
               "gap": "+30.695",
               "points": 0,
               "grid": 20
+            },
+            {
+              "pos": 17,
+              "positionText": "17",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine F1 Team",
+              "gap": "+51.483",
+              "points": 0,
+              "grid": 9
             },
             {
               "pos": 18,
@@ -227822,22 +227822,22 @@
             {
               "driver": "Oscar Piastri",
               "pos": 7,
-              "points": 150
+              "points": 144
             },
             {
               "driver": "Isack Hadjar",
               "pos": 8,
-              "points": 105
+              "points": 107
             },
             {
               "driver": "Liam Lawson",
               "pos": 9,
-              "points": 79
+              "points": 83
             },
             {
               "driver": "Pierre Gasly",
               "pos": 10,
-              "points": 43
+              "points": 42
             },
             {
               "driver": "Arvid Lindblad",
@@ -227847,7 +227847,7 @@
             {
               "driver": "Franco Colapinto",
               "pos": 12,
-              "points": 31
+              "points": 27
             },
             {
               "driver": "Oliver Bearman",
@@ -227855,14 +227855,14 @@
               "points": 23
             },
             {
-              "driver": "Nico Hülkenberg",
+              "driver": "Gabriel Bortoleto",
               "pos": 14,
-              "points": 13
+              "points": 14
             },
             {
-              "driver": "Gabriel Bortoleto",
+              "driver": "Nico Hülkenberg",
               "pos": 15,
-              "points": 10
+              "points": 13
             },
             {
               "driver": "Esteban Ocon",
@@ -227890,17 +227890,17 @@
               "points": 1
             },
             {
-              "driver": "Lance Stroll",
+              "driver": "Ryo Hirakawa",
               "pos": 21,
-              "points": 0
+              "points": 1
             },
             {
-              "driver": "Valtteri Bottas",
+              "driver": "Lance Stroll",
               "pos": 22,
               "points": 0
             },
             {
-              "driver": "Ryo Hirakawa",
+              "driver": "Valtteri Bottas",
               "pos": 23,
               "points": 0
             },
