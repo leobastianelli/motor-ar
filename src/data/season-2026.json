@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T20:10:21.511Z",
+  "generatedAt": "2026-11-03T16:48:31.902Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223674,28 +223674,28 @@
         "pos": 7,
         "driver": "Oscar Piastri",
         "team": "McLaren",
-        "points": 150,
+        "points": 144,
         "wins": 0
       },
       {
         "pos": 8,
         "driver": "Isack Hadjar",
         "team": "Red Bull",
-        "points": 105,
+        "points": 107,
         "wins": 0
       },
       {
         "pos": 9,
         "driver": "Liam Lawson",
         "team": "Red Bull",
-        "points": 79,
+        "points": 83,
         "wins": 0
       },
       {
         "pos": 10,
         "driver": "Pierre Gasly",
         "team": "Alpine F1 Team",
-        "points": 43,
+        "points": 42,
         "wins": 0
       },
       {
@@ -223709,7 +223709,7 @@
         "pos": 12,
         "driver": "Franco Colapinto",
         "team": "Alpine F1 Team",
-        "points": 31,
+        "points": 27,
         "wins": 0
       },
       {
@@ -223721,16 +223721,16 @@
       },
       {
         "pos": 14,
-        "driver": "Nico Hülkenberg",
+        "driver": "Gabriel Bortoleto",
         "team": "Audi",
-        "points": 13,
+        "points": 14,
         "wins": 0
       },
       {
         "pos": 15,
-        "driver": "Gabriel Bortoleto",
+        "driver": "Nico Hülkenberg",
         "team": "Audi",
-        "points": 10,
+        "points": 13,
         "wins": 0
       },
       {
@@ -223770,22 +223770,22 @@
       },
       {
         "pos": 21,
+        "driver": "Ryo Hirakawa",
+        "team": "Haas F1 Team",
+        "points": 1,
+        "wins": 0
+      },
+      {
+        "pos": 22,
         "driver": "Lance Stroll",
         "team": "Aston Martin",
         "points": 0,
         "wins": 0
       },
       {
-        "pos": 22,
+        "pos": 23,
         "driver": "Valtteri Bottas",
         "team": "Cadillac F1 Team",
-        "points": 0,
-        "wins": 0
-      },
-      {
-        "pos": 23,
-        "driver": "Ryo Hirakawa",
-        "team": "Haas F1 Team",
         "points": 0,
         "wins": 0
       },
@@ -230227,7 +230227,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)"
-  ]
+  "failures": []
 }
