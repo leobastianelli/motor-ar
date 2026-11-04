@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-13T21:20:08.164Z",
+  "generatedAt": "2026-10-18T00:22:44.652Z",
   "series": {
     "tc": {
       "source": {
@@ -243,8 +243,16 @@
           "make": "Ford"
         },
         {
+          "year": 1980,
+          "label": "1979-80",
+          "driver": "Francisco Espinosa",
+          "detail": "Chevrolet Chevy",
+          "make": "Chevrolet"
+        },
+        {
           "year": 1981,
-          "driver": "Roberto Mouras",
+          "label": "1980-81",
+          "driver": "Antonio Aventín",
           "detail": "Dodge GTX",
           "make": "Dodge"
         },
@@ -537,8 +545,8 @@
       ],
       "firstYear": 1937,
       "lastYear": 2025,
-      "seasons": 83,
-      "distinctChampions": 41,
+      "seasons": 84,
+      "distinctChampions": 43,
       "topChampions": [
         {
           "driver": "Juan Gálvez",
@@ -621,7 +629,7 @@
         },
         {
           "name": "Chevrolet",
-          "titles": 21
+          "titles": 22
         },
         {
           "name": "Dodge",
@@ -847,6 +855,66 @@
           "make": "Toyota"
         },
         {
+          "year": 2012,
+          "driver": "José María López",
+          "detail": "Ford Focus II · PSG-16 Team",
+          "make": "Ford"
+        },
+        {
+          "year": 2013,
+          "driver": "Matías Rossi",
+          "detail": "Toyota Corolla · Toyota Team Argentina",
+          "make": "Toyota"
+        },
+        {
+          "year": 2014,
+          "driver": "Néstor Girolami",
+          "detail": "Peugeot 408 · Peugeot Lo Jack Team",
+          "make": "Peugeot"
+        },
+        {
+          "year": 2015,
+          "driver": "Néstor Girolami",
+          "detail": "Peugeot 408 · Team Peugeot Total Argentina",
+          "make": "Peugeot"
+        },
+        {
+          "year": 2016,
+          "driver": "Agustín Canapino",
+          "detail": "Chevrolet Cruze I y II · Equipo Chevrolet YPF",
+          "make": "Chevrolet"
+        },
+        {
+          "year": 2017,
+          "driver": "Facundo Ardusso",
+          "detail": "Renault Fluence · Renault Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 2018,
+          "driver": "Facundo Ardusso",
+          "detail": "Renault Fluence · Renault Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 2019,
+          "driver": "Leonel Pernía",
+          "detail": "Renault Fluence · Renault Sport",
+          "make": "Renault"
+        },
+        {
+          "year": 2020,
+          "driver": "Matías Rossi",
+          "detail": "Toyota Corolla · Toyota Gazoo Racing YPF Infinia",
+          "make": "Toyota"
+        },
+        {
+          "year": 2021,
+          "driver": "Agustín Canapino",
+          "detail": "Chevrolet Cruze II · Chevrolet YPF",
+          "make": "Chevrolet"
+        },
+        {
           "year": 2022,
           "driver": "Leonel Pernía",
           "detail": "Renault Fluence GT · Axion Energy Sport",
@@ -873,8 +941,8 @@
       ],
       "firstYear": 1979,
       "lastYear": 2025,
-      "seasons": 37,
-      "distinctChampions": 20,
+      "seasons": 47,
+      "distinctChampions": 23,
       "topChampions": [
         {
           "driver": "Juan María Traverso",
@@ -891,12 +959,24 @@
         },
         {
           "driver": "Matías Rossi",
-          "titles": 4,
+          "titles": 6,
           "years": [
             2006,
             2007,
             2011,
+            2013,
+            2020,
             2025
+          ]
+        },
+        {
+          "driver": "Leonel Pernía",
+          "titles": 4,
+          "years": [
+            2019,
+            2022,
+            2023,
+            2024
           ]
         },
         {
@@ -918,20 +998,12 @@
           ]
         },
         {
-          "driver": "Leonel Pernía",
+          "driver": "José María López",
           "titles": 3,
           "years": [
-            2022,
-            2023,
-            2024
-          ]
-        },
-        {
-          "driver": "Norberto Fontana",
-          "titles": 2,
-          "years": [
-            2002,
-            2010
+            2008,
+            2009,
+            2012
           ]
         }
       ],
@@ -939,27 +1011,27 @@
       "topMakes": [
         {
           "name": "Renault",
-          "titles": 11
+          "titles": 14
         },
         {
           "name": "Ford",
-          "titles": 9
+          "titles": 10
+        },
+        {
+          "name": "Toyota",
+          "titles": 5
+        },
+        {
+          "name": "Chevrolet",
+          "titles": 5
+        },
+        {
+          "name": "Peugeot",
+          "titles": 4
         },
         {
           "name": "Honda",
           "titles": 4
-        },
-        {
-          "name": "Dodge",
-          "titles": 3
-        },
-        {
-          "name": "Toyota",
-          "titles": 3
-        },
-        {
-          "name": "Chevrolet",
-          "titles": 3
         }
       ]
     },

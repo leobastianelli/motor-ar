@@ -7,7 +7,7 @@ import { wikiRawUrl } from "../src/lib/sources/wiki-pages.mjs";
 import { clean, flagOf, intOf, section, tables, texts } from "../src/lib/sources/wikitext.mjs";
 
 const pages = {};
-for (const key of ["es-tc", "es-tc2000", "es-tn", "en-f2"]) {
+for (const key of ["es-tc", "es-tc2000", "es-stc2000", "es-tn", "en-f2"]) {
   const res = await fetch(wikiRawUrl(key), { headers: { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" } });
   if (!res.ok) throw new Error(`No se pudo descargar ${key}: ${res.status}`);
   pages[key] = await res.text();
@@ -41,13 +41,26 @@ function summarize(champions, makeLabel) {
   };
 }
 
+// Campeonatos que cruzan dos años ("1979-80") entran con el año en que terminan y el rótulo original.
+function seasonYear(cell) {
+  const m = /^(\d{4})(?:-(\d{2}))?$/.exec(cell);
+  if (!m) return null;
+  if (!m[2]) return { year: Number(m[1]) };
+  const end = Math.floor(Number(m[1]) / 100) * 100 + Number(m[2]);
+  return { year: end >= Number(m[1]) ? end : end + 100, label: cell };
+}
+
 function tc() {
-  const table = tables(section(wiki("es-tc"), "Campeones"))[0];
+  const page = section(wiki("es-tc"), "Campeones");
+  const table = tables(page)[0];
+  // Notas de la tabla marcadas "(no oficial)": ese torneo no cuenta como campeonato (p. ej. Lizeviche-Galíndez 1981).
+  const unofficial = new Set([...page.matchAll(/^\((\d+)\):.*no oficial/gim)].map((m) => m[1]));
   const champions = table.rows
     .filter(isData)
+    .filter((r) => ![...(r.cells[3]?.raw ?? "").matchAll(/\((\d+)\)/g)].some((m) => unofficial.has(m[1])))
     .map(texts)
-    .filter((c) => /^\d{4}$/.test(c[0]) && c[1])
-    .map((c) => ({ year: Number(c[0]), driver: c[1], detail: c[2], make: brand(c[2]) }));
+    .filter((c) => seasonYear(c[0]) && c[1])
+    .map((c) => ({ ...seasonYear(c[0]), driver: c[1], detail: c[2], make: brand(c[2]) }));
   const winsLeaders = section(wiki("es-tc"), "Pilotos con más carreras ganadas")
     .split("\n")
     .filter((l) => l.startsWith("*"))
@@ -66,10 +79,21 @@ function tc() {
 
 function tc2000() {
   const table = tables(section(wiki("es-tc2000"), "Campeones"))[0];
-  const champions = table.rows
+  const own = table.rows
     .map(texts)
     .filter((c) => /^\d{4}$/.test(c[0]) && c[1])
     .map((c) => ({ year: Number(c[0]), driver: c[1], detail: [c[2], c[3]].filter(Boolean).join(" · "), make: brand(c[2]) }));
+  // 2012-2021 se corrió como Súper TC2000, con su propia página: columnas Año, Piloto, Automóvil, Equipo, Marca.
+  const superTable = tables(section(wiki("es-stc2000"), "Campeones"))[0];
+  const superEra = superTable.rows
+    .map(texts)
+    .filter((c) => /^\d{4}$/.test(c[0]) && c[1] && c[2] && c[3])
+    .map((c) => ({ year: Number(c[0]), driver: c[1], detail: [c[2], c[3]].join(" · "), make: brand(c[2]) }));
+  if (superEra.length !== 10) throw new Error(`Súper TC2000: se esperaban 10 campeones (2012-2021) y salieron ${superEra.length}`);
+  const champions = [...own, ...superEra].sort((a, b) => a.year - b.year);
+  for (let i = 1; i < champions.length; i++) {
+    if (champions[i].year === champions[i - 1].year) throw new Error(`TC2000: año repetido ${champions[i].year}`);
+  }
   return {
     source: { label: "Wikipedia · Turismo Competición 2000", url: url("es", "Turismo_Competición_2000"), license: WIKI_LICENSE },
     champions,
