@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T16:48:31.902Z",
+  "generatedAt": "2026-11-04T16:45:55.199Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -213417,7 +213417,7 @@
           "timeSources": [
             {
               "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana",
+              "url": "https://actc.org.ar/tcpm/noticias/horarios-para-el-fin-de-semana",
               "start": "11:35"
             }
           ],
@@ -213516,7 +213516,7 @@
           "timeSources": [
             {
               "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana",
+              "url": "https://actc.org.ar/tcpm/noticias/horarios-para-el-fin-de-semana",
               "start": "14:56"
             }
           ],
@@ -213615,7 +213615,7 @@
           "timeSources": [
             {
               "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana",
+              "url": "https://actc.org.ar/tcpm/noticias/horarios-para-el-fin-de-semana",
               "start": "17:08"
             }
           ],
@@ -213848,7 +213848,7 @@
           "timeSources": [
             {
               "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana",
+              "url": "https://actc.org.ar/tcpm/noticias/horarios-para-el-fin-de-semana",
               "start": "15:30"
             }
           ],
@@ -213963,7 +213963,7 @@
           "timeSources": [
             {
               "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana",
+              "url": "https://actc.org.ar/tcpm/noticias/horarios-para-el-fin-de-semana",
               "start": "12:00"
             }
           ],
@@ -214069,7 +214069,7 @@
           "timeSources": [
             {
               "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana",
+              "url": "https://actc.org.ar/tcpm/noticias/horarios-para-el-fin-de-semana",
               "start": "15:20"
             }
           ],
@@ -214175,7 +214175,7 @@
           "timeSources": [
             {
               "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana",
+              "url": "https://actc.org.ar/tcpm/noticias/horarios-para-el-fin-de-semana",
               "start": "17:19"
             }
           ],
@@ -214304,7 +214304,7 @@
           "timeSources": [
             {
               "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana",
+              "url": "https://actc.org.ar/tcpm/noticias/horarios-para-el-fin-de-semana",
               "start": "10:13"
             }
           ],
@@ -214411,7 +214411,7 @@
           "timeSources": [
             {
               "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana",
+              "url": "https://actc.org.ar/tcpm/noticias/horarios-para-el-fin-de-semana",
               "start": "15:45"
             }
           ],
@@ -219168,8 +219168,9 @@
             {
               "pos": 9,
               "number": "30",
-              "driver": "#30",
-              "team": "",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
               "gap": "+0.513"
             },
             {
@@ -225230,27 +225231,34 @@
       },
       {
         "pos": 15,
-        "driver": "Ramiro De Bonis",
+        "driver": "Francisco Nonnenmacher",
         "team": "",
         "points": 55,
         "wins": 0
       },
       {
         "pos": 16,
+        "driver": "Ramiro De Bonis",
+        "team": "",
+        "points": 55,
+        "wins": 0
+      },
+      {
+        "pos": 17,
         "driver": "Matías Frano",
         "team": "",
         "points": 54.5,
         "wins": 0
       },
       {
-        "pos": 17,
+        "pos": 18,
         "driver": "Nicolás Villamayor",
         "team": "",
         "points": 52.5,
         "wins": 0
       },
       {
-        "pos": 18,
+        "pos": 19,
         "driver": "Simon Volpi",
         "team": "",
         "points": 51,
@@ -229759,7 +229767,7 @@
       "standingsSource": "https://actc.org.ar/tcppk/campeonato"
     },
     "schedules": {
-      "notes": 27,
+      "notes": 26,
       "officialPdfs": 0,
       "sessions": 295,
       "confirmed": 9,
