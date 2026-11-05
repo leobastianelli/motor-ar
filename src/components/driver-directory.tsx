@@ -11,8 +11,8 @@ export interface DirectoryEntry {
   team?: string;
   standing?: string;
   wins: number;
-  races: number;
-  series: { id: string; name: string; code: string; color: string };
+  /** Sólo el id: los datos de la categoría viajan una vez en `groups`, no repetidos en cada piloto (eran ~70 KB del HTML de /pilotos). */
+  seriesId: string;
 }
 
 const fold = (s: string) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
@@ -23,7 +23,7 @@ export function DriverDirectory({ entries, groups }: { entries: DirectoryEntry[]
   const [only, setOnly] = useState<string | null>(null);
   const filtered = useMemo(() => {
     const q = fold(query.trim());
-    return entries.filter((e) => (!only || e.series.id === only) && (!q || fold(`${e.name} ${e.number ?? ""} ${e.team ?? ""}`).includes(q)));
+    return entries.filter((e) => (!only || e.seriesId === only) && (!q || fold(`${e.name} ${e.number ?? ""} ${e.team ?? ""}`).includes(q)));
   }, [entries, query, only]);
 
   return (
@@ -43,7 +43,7 @@ export function DriverDirectory({ entries, groups }: { entries: DirectoryEntry[]
       </div>
 
       {groups.map((g) => {
-        const list = filtered.filter((e) => e.series.id === g.id);
+        const list = filtered.filter((e) => e.seriesId === g.id);
         if (!list.length) return null;
         return (
           <section key={g.id} className="directory-group" style={{ "--cat": g.color } as CSSProperties}>
