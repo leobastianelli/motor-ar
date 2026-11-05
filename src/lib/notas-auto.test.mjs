@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { autoNotes } from "./notas-auto.ts";
+import { autoNotes, trimDescription } from "./notas-auto.ts";
 
 const row = (pos, driver, gap, extra = {}) => ({ pos, driver, team: "", gap, ...extra });
 const session = (id, kind, name, start, results) => ({ id, kind, name, start, durationMin: 60, ...(results ? { results } : {}) });
@@ -85,6 +85,46 @@ test("dos carreras principales en la misma fecha (F2): la crónica distingue la 
   const eventoCompleto = { ...baku, id: "f2-2026-15", seriesId: "f2", sessions: [r1, r2] };
   const [n] = autoNotes([eventoCompleto], { ...opts, now: "2026-09-27T15:00:00Z" });
   assert.match(n.title, /carrera principal 2/);
+});
+
+test("la crónica de una fecha vieja existe con scope 'all' pero no figura entre las recientes", () => {
+  const old = { ...baku, id: "f1-2026-1", sessions: [session("x", "carrera", "Carrera", "2026-09-01T12:00:00Z", [row(1, "A", "1:00")])] };
+  assert.deepEqual(autoNotes([old], opts), []);
+  const all = autoNotes([old, baku], { ...opts, scope: "all" });
+  assert.deepEqual(all.map((x) => x.slug), ["f1-2026-15-cronica", "f1-2026-1-cronica"]);
+  assert.equal(all[1].publishedAt, "2026-09-01");
+  assert.deepEqual(autoNotes([old, baku], opts).map((x) => x.slug), ["f1-2026-15-cronica"]);
+  // Las fechas futuras nunca tienen crónica.
+  const future = { ...baku, id: "f1-2026-30", sessions: [session("z", "carrera", "Carrera", "2026-10-30T12:00:00Z", [row(1, "A", "1:00")])] };
+  assert.equal(autoNotes([future], { ...opts, scope: "all" }).length, 0);
+});
+
+test("la description arranca por el ganador de la carrera principal, no por una serie, y no pasa de 160 caracteres sin cortar palabras", () => {
+  const rows = (w) => [row(1, w, ""), row(2, "Segundo Piloto Largo", "+1.234"), row(3, "Tercer Piloto Largo", "+2.345")];
+  const ev = {
+    ...baku,
+    id: "tc2000-2026-9",
+    seriesId: "tc2000",
+    name: "Fecha 9 · Rio Cuarto",
+    sessions: [
+      session("s1", "serie", "Serie 3 Clase 3", "2026-09-24T10:00:00Z", rows("Ganador De Serie")),
+      session("s2", "serie", "Serie 4 Clase 3", "2026-09-24T11:00:00Z", rows("Otro De Serie")),
+      session("f", "final", "Final", "2026-09-24T12:00:00Z", rows("Ganador De Final")),
+    ],
+  };
+  const [n] = autoNotes([ev], opts);
+  assert.match(n.title, /Ganador De Final ganó la final/);
+  assert.match(n.summary, /^Serie 3/);
+  assert.match(n.description, /^Final: 1\.º Ganador De Final/);
+  assert.ok(n.description.length <= 160);
+  assert.ok(n.description.endsWith("…"));
+  assert.doesNotMatch(n.description, /\s…$/);
+  // Cada palabra del recorte existe entera en el resumen.
+  for (const w of n.description.replace(/…$/, "").split(" ")) assert.ok(n.summary.includes(w));
+});
+
+test("trimDescription no toca los textos cortos", () => {
+  assert.equal(trimDescription("Corto."), "Corto.");
 });
 
 test("crónica nacional: el lugar, sin el número de fecha", () => {

@@ -25,8 +25,8 @@ export async function generateMetadata(props: PageProps<"/notas/[slug]">): Promi
   const title = nota.seoTitle ?? nota.title;
   return {
     title,
-    description: nota.summary,
-    openGraph: { title, description: nota.summary, type: "article", ...OG_DEFAULTS },
+    description: nota.description ?? nota.summary,
+    openGraph: { title, description: nota.description ?? nota.summary, type: "article", ...OG_DEFAULTS },
     alternates: { canonical: `/notas/${nota.slug}` },
   };
 }

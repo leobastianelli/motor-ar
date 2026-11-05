@@ -15,6 +15,8 @@ export interface Nota {
   publishedAt: string;
   source: { medio: string; url: string; headline: string; author?: string };
   summary: string;
+  /** Meta description, si conviene una distinta del resumen (las crónicas: arranca por el ganador de la carrera principal, ≤ 160 caracteres). */
+  description?: string;
   quote?: string;
   drivers?: string[];
   series?: string[];

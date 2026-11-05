@@ -68,9 +68,10 @@ export const getNotes = (): Nota[] => [...notas].sort(byDate);
 
 /**
  * Todas las notas: las de medios y las crónicas automáticas de las fechas de estos días (una por fecha, se arman con los resultados
- * apenas entran). A igual día, las de medios primero; las crónicas ya vienen ordenadas por prioridad de categoría.
+ * apenas entran). `scope: "all"` suma las crónicas de todas las fechas terminadas (mapa del sitio y página de cada nota); por defecto sólo las
+ * recientes, que son las que se listan. A igual día, las de medios primero; las crónicas ya vienen ordenadas por prioridad de categoría.
  */
-export async function getAllNotes(): Promise<Nota[]> {
+export async function getAllNotes(scope: "fresh" | "all" = "fresh"): Promise<Nota[]> {
   const season = await getSeason();
   const seriesOf = new Map(series.map((s) => [s.id, s]));
   const auto = autoNotes(season.getAllEvents(), {
@@ -78,12 +79,14 @@ export async function getAllNotes(): Promise<Nota[]> {
     argentines: new Set(drivers.map((d) => d.slug)),
     tierOf: (id) => (seriesOf.get(id) ? seriesTier(seriesOf.get(id)!) : 3),
     seriesName: (id) => seriesOf.get(id),
+    scope,
   });
   const rank = new Map(auto.map((n, i) => [n.slug, i]));
   return [...notas, ...auto].sort((a, b) => byDate(a, b) || Number(!!a.auto) - Number(!!b.auto) || (rank.get(a.slug) ?? 0) - (rank.get(b.slug) ?? 0));
 }
 
-export const getNote = async (slug: string) => (await getAllNotes()).find((n) => n.slug === slug);
+/** Una nota por slug. Busca entre todas: la crónica de una fecha vieja sigue existiendo (aunque ya no figure entre las recientes). */
+export const getNote = async (slug: string) => (await getAllNotes("all")).find((n) => n.slug === slug);
 export const notesForDriver = async (slug: string) => (await getAllNotes()).filter((n) => related(n).drivers.includes(slug));
 export const notesForSeries = async (id: string) => (await getAllNotes()).filter((n) => related(n).series.includes(id));
 export const notesForEvent = async (id: string) => (await getAllNotes()).filter((n) => n.events?.includes(id));
