@@ -73,8 +73,24 @@ export function seoHeadline(seriesName: string, eventName: string, title: string
   return `${seriesName} en ${place}${title.startsWith(eventName) ? title.slice(eventName.length) : `: ${title}`}`;
 }
 
+/** Largo máximo de la meta description. */
+const DESCRIPTION_MAX = 160;
+
+/** Recorta en el último espacio que entre en `max` caracteres (sin cortar palabras) y agrega "…" si hubo recorte. */
+export function trimDescription(text: string, max = DESCRIPTION_MAX): string {
+  if (text.length <= max) return text;
+  const cut = text.slice(0, max - 1);
+  const space = cut.lastIndexOf(" ");
+  return `${(space > 0 ? cut.slice(0, space) : cut).replace(/[\s,;:.\-–(]+$/, "")}…`;
+}
+
 interface Options {
   now: string;
+  /**
+   * "fresh" (por defecto): sólo las crónicas de los últimos FRESH_DAYS días, con tope; es lo que se lista (/notas, portada, menú).
+   * "all": la crónica de toda fecha terminada con resultados, para que su página exista siempre y el mapa del sitio las incluya.
+   */
+  scope?: "fresh" | "all";
   /** Slugs de los pilotos argentinos con ficha, para destacar cómo les fue. */
   argentines: Set<string>;
   /** Prioridad de la categoría (1 = argentina, 2 = internacional con argentinos, 3 = el resto). */
@@ -82,7 +98,7 @@ interface Options {
   seriesName: (seriesId: string) => { name: string; short: string } | undefined;
 }
 
-export function autoNotes(events: RaceEvent[], { now, argentines, tierOf, seriesName }: Options): (Nota & { tier: number })[] {
+export function autoNotes(events: RaceEvent[], { now, argentines, tierOf, seriesName, scope = "fresh" }: Options): (Nota & { tier: number })[] {
   const nowMs = Date.parse(now);
   const out: (Nota & { tier: number })[] = [];
 
@@ -90,7 +106,7 @@ export function autoNotes(events: RaceEvent[], { now, argentines, tierOf, series
     const done = event.sessions.filter(withResults).sort((a, b) => Date.parse(a.start) - Date.parse(b.start));
     if (!done.length) continue;
     const lastStart = Date.parse(done.at(-1)!.start);
-    if (lastStart > nowMs || nowMs - lastStart > FRESH_DAYS * 86400000) continue;
+    if (lastStart > nowMs || (scope === "fresh" && nowMs - lastStart > FRESH_DAYS * 86400000)) continue;
     const series = seriesName(event.seriesId);
     if (!series) continue;
 
@@ -131,6 +147,10 @@ export function autoNotes(events: RaceEvent[], { now, argentines, tierOf, series
     }
 
     const summary = [...lead.map((s) => line(s, event.sessions)).filter(Boolean), ...(home.length ? [`${home.slice(0, 3).join("; ")}.`] : [])].join(" ");
+    // Para buscadores: arranca por la carrera principal (la del titular), sigue con el resto del resumen y no pasa de 160 caracteres.
+    const description = trimDescription(
+      [line(main, event.sessions), ...lead.filter((s) => s !== main).map((s) => line(s, event.sessions)), ...(home.length ? [`${home.slice(0, 3).join("; ")}.`] : [])].filter(Boolean).join(" "),
+    );
     const details = ordered
       .slice(1)
       .map(([day, list]) => `${capitalize(dayName(new Date(`${day}T12:00:00-03:00`)))}: ${pick(list).map((s) => line(s, event.sessions)).filter(Boolean).join(" ")}`);
@@ -150,6 +170,7 @@ export function autoNotes(events: RaceEvent[], { now, argentines, tierOf, series
       publishedAt: latestDay,
       source: { medio: `Fierros · ${series.short}`, url: `/eventos/${event.id}`, headline: event.name },
       summary,
+      ...(description ? { description } : {}),
       details,
       auto: { sources },
       events: [event.id],
@@ -158,7 +179,8 @@ export function autoNotes(events: RaceEvent[], { now, argentines, tierOf, series
     });
   }
 
-  return out.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.tier - b.tier).slice(0, MAX_AUTO);
+  const sorted = out.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt) || a.tier - b.tier);
+  return scope === "all" ? sorted : sorted.slice(0, MAX_AUTO);
 }
 
 const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);

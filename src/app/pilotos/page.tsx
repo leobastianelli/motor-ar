@@ -38,8 +38,7 @@ export default async function DriversPage() {
         team: d.team,
         standing: standing ? `${standing.position}.º en ${standing.clase ? `la ${standing.clase}` : "el campeonato"}` : undefined,
         wins: stats?.wins ?? 0,
-        races: stats?.races ?? 0,
-        series: { id: series.id, name: series.name, code: series.code, color: series.color },
+        seriesId: series.id,
       },
     ];
   });
@@ -59,8 +58,7 @@ export default async function DriversPage() {
         team: d.teams[main],
         standing: standing ? `${standing.pos}.º en ${standing.clase ? `la ${standing.clase}` : "el campeonato"}` : undefined,
         wins: stats.bySeries[main]?.wins ?? 0,
-        races: stats.bySeries[main]?.races ?? 0,
-        series: { id: series.id, name: series.name, code: series.code, color: series.color },
+        seriesId: series.id,
       },
     ];
   });
@@ -69,7 +67,7 @@ export default async function DriversPage() {
   const rank = (e: DirectoryEntry) => Number.parseInt(e.standing ?? "", 10) || 999;
   entries.sort((a, b) => rank(a) - rank(b) || b.wins - a.wins || a.name.localeCompare(b.name, "es"));
   const groups = getAllSeries()
-    .filter((s) => entries.some((e) => e.series.id === s.id))
+    .filter((s) => entries.some((e) => e.seriesId === s.id))
     .map((s) => ({ id: s.id, name: s.name, code: s.code, color: s.color }));
 
   return (

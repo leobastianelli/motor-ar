@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllDrivers, getAllSeries, getIndexedDrivers, getSeason } from "@/lib/data";
+import { driverModified, latestDone } from "@/lib/lastmod.mjs";
+import { driverKey } from "@/lib/sources/driver-index.mjs";
 import { legends } from "@/data/legends";
 import { allHorarioSlugs } from "@/lib/horarios";
 import { getAllNotes } from "@/lib/notas";
@@ -20,7 +22,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date().toISOString();
   // Las páginas que dependen de la temporada cambian cuando cambia la versión vigente de los datos, no "ahora": si no, Google aprende a ignorar la fecha.
   const seasonDate = new Date(season.source?.createdAt ?? season.source?.generatedAt ?? season.updatedAt);
-  const notes = await getAllNotes();
+  // Todas las crónicas (no sólo las recientes): la de una fecha vieja sigue existiendo y se queda en el mapa con su fecha de publicación.
+  const notes = await getAllNotes("all");
   const newestNote = notes.length ? new Date(`${notes[0].publishedAt}T12:00:00-03:00`) : seasonDate;
   const page = (path: string, changeFrequency: "hourly" | "daily" | "weekly" | "monthly", priority: number, lastModified?: Date) => ({
     url: `${SITE_URL}${path}`,
@@ -29,7 +32,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority,
   });
 
-  const drivers = new Set([...getAllDrivers().map((d) => d.slug), ...getIndexedDrivers().map((d) => d.slug)]);
+  const seasonMs = seasonDate.getTime();
+  // Cuándo cambió por última vez lo que muestra cada categoría y cada piloto: cuando terminó su última sesión (con tope en la versión de los datos).
+  const eventsBySeries = new Map<string, RaceEvent[]>();
+  for (const e of season.getAllEvents()) eventsBySeries.set(e.seriesId, [...(eventsBySeries.get(e.seriesId) ?? []), e]);
+  const seriesModified = (id: string) => latestDone(eventsBySeries.get(id) ?? [], now, seasonMs) ?? undefined;
+  const drivers = new Map<string, Date | undefined>();
+  for (const d of getAllDrivers()) {
+    const keys = [d.name, ...(d.aliases ?? [])].map((n) => driverKey(n));
+    drivers.set(d.slug, driverModified(season.getDriverSeason({ key: "", keys }), now, seasonMs) ?? undefined);
+  }
+  for (const d of getIndexedDrivers()) {
+    if (drivers.has(d.slug)) continue;
+    const seen = Date.parse(d.lastSeen);
+    // Sin resultados en la temporada: la fecha del índice de pilotos (cuándo lo vimos por última vez), si es válida.
+    drivers.set(d.slug, driverModified(season.getDriverSeason(d), now, seasonMs) ?? (Number.isNaN(seen) ? undefined : new Date(Math.min(seen, seasonMs))));
+  }
   return [
     page("/", "hourly", 1, seasonDate),
     page("/hoy", "hourly", 0.9, seasonDate),
@@ -47,11 +65,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     page("/acerca", "monthly", 0.3),
     page("/terminos", "monthly", 0.1),
     page("/privacidad", "monthly", 0.1),
-    ...getAllSeries().map((s) => page(`/categorias/${s.id}`, "weekly", 0.7, seasonDate)),
+    ...getAllSeries().map((s) => page(`/categorias/${s.id}`, "weekly", 0.7, seriesModified(s.id))),
     // Las clases de las categorías que las tienen (Córdoba Pista).
-    ...getAllSeries().flatMap((s) => (s.classes ?? []).map((c) => page(`/categorias/${s.id}/${c.id}`, "weekly", 0.6, seasonDate))),
+    ...getAllSeries().flatMap((s) => (s.classes ?? []).map((c) => page(`/categorias/${s.id}/${c.id}`, "weekly", 0.6, seriesModified(s.id)))),
     ...season.getAllEvents().map((e) => page(`/eventos/${e.id}`, "daily", 0.8, eventModified(e, seasonDate, now))),
-    ...[...drivers].map((slug) => page(`/pilotos/${slug}`, "weekly", 0.6, seasonDate)),
+    ...[...drivers].map(([slug, modified]) => page(`/pilotos/${slug}`, "weekly", 0.6, modified)),
     ...legends.map((l) => page(`/historicos/${l.slug}`, "monthly", 0.5)),
   ];
 }
