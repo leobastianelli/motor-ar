@@ -24,7 +24,7 @@ import {
   visibleEvents,
   withConflicts,
 } from "../src/lib/monitor/checks.mjs";
-import { renderAlerts, sendTelegram } from "../src/lib/monitor/telegram.mjs";
+import { renderAlerts, sendTelegramConReintentos } from "../src/lib/monitor/telegram.mjs";
 import { loadSeason } from "./season-source.mjs";
 
 const DRY = process.argv.includes("--dry");
@@ -135,15 +135,21 @@ if (DRY) {
 }
 
 const creds = { token: process.env.TELEGRAM_BOT_TOKEN, chatId: process.env.TELEGRAM_CHAT_ID };
-try {
-  if (alertText) await sendTelegram(alertText, creds);
-  if (daily) {
-    await sendTelegram(summary(), creds);
-    next.lastSummary = NOW;
+// Que Telegram no responda no es un error de datos: se reintenta y, si sigue caído, queda un ::warning:: y el proceso termina bien
+// (la corrida de "Sincronizar temporada" no debe figurar como fallida por eso). Cualquier otro error sigue siendo fatal.
+let alertsFailed = false;
+if (alertText) {
+  const r = await sendTelegramConReintentos(alertText, creds);
+  if (r.failed) {
+    alertsFailed = true;
+    console.log(`::warning::No se pudo enviar el aviso a Telegram (${r.error}); se reintenta en la próxima corrida.`);
   }
-} catch (error) {
-  // Si el aviso no salió, no se guarda el estado: la próxima corrida lo vuelve a intentar.
-  console.error(`No se pudo enviar el aviso: ${error.message}`);
-  process.exit(1);
 }
-fs.writeFileSync(STATE_PATH, JSON.stringify(next, null, 2));
+if (daily) {
+  const r = await sendTelegramConReintentos(summary(), creds);
+  if (r.failed) console.log(`::warning::No se pudo enviar el resumen diario a Telegram (${r.error}); se reintenta en la próxima corrida.`);
+  else next.lastSummary = NOW;
+}
+// Si los avisos no salieron, el estado de avisos no se actualiza (quedan como no enviados y la próxima corrida los vuelve a intentar);
+// sólo se conserva la marca del resumen diario, para que no se mande dos veces.
+fs.writeFileSync(STATE_PATH, JSON.stringify(alertsFailed ? { ...state, lastSummary: next.lastSummary } : next, null, 2));
