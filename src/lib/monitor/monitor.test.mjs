@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import { dedupeFindings, emptyState, evaluate, summaryDue } from "./alerts.mjs";
 import { compareStandings, dateIssues, tnDateConflicts, withConflicts, dateStatus, manualDiscarded, manualExpired, parseTc2000Home, pendingHours, failureLabel, resultsOverdue, sessionResultsMissing, sourceFailures, weekendWithoutAnyHour, staleStandings, visibleEvents } from "./checks.mjs";
-import { chunk, renderAlerts, sendTelegram, sendTelegramMediaGroup, sendTelegramPhoto } from "./telegram.mjs";
+import { chunk, renderAlerts, sendTelegram, sendTelegramConReintentos, sendTelegramMediaGroup, sendTelegramPhoto } from "./telegram.mjs";
 
 // Domingo 27/09/2026 (Balcarce, TC Pick Up): la carrera no tiene hora.
 const sunday = (over = {}) => ({
@@ -381,6 +381,28 @@ test("sin token no falla (queda simulado) y con token manda; el token nunca apar
   assert.deepEqual(llamadas[1][1].reply_markup, teclado);
   await assert.rejects(sendTelegram("hola", { token: "SECRETO", chatId: "42", fetchImpl: async () => ({ ok: false, status: 401 }) }), (e) => !/SECRETO/.test(e.message) && /401/.test(e.message));
   await assert.rejects(sendTelegram("hola", { token: "SECRETO", chatId: "42", fetchImpl: async () => { throw new Error("fetch failed https://api.telegram.org/botSECRETO/sendMessage"); } }), (e) => !/SECRETO/.test(e.message));
+});
+
+test("sendTelegramConReintentos: reintenta y se recupera; si sigue caído no tira, avisa failed y no filtra el token", async () => {
+  const esperas = [];
+  const sleep = async (ms) => void esperas.push(ms);
+  let n = 0;
+  const flaky = async () => {
+    if (++n < 3) throw new Error("fetch failed");
+    return { ok: true };
+  };
+  const ok = await sendTelegramConReintentos("hola", { token: "SECRETO", chatId: "42", fetchImpl: flaky, sleep, esperaMs: 10 });
+  assert.equal(ok.sent, 1);
+  assert.equal(ok.failed, undefined);
+  assert.deepEqual(esperas, [10, 10]);
+
+  let llamadas = 0;
+  const caido = await sendTelegramConReintentos("hola", { token: "SECRETO", chatId: "42", sleep, reintentos: 2, fetchImpl: async () => (llamadas++, Promise.reject(new Error("boom https://api.telegram.org/botSECRETO"))) });
+  assert.equal(caido.failed, true);
+  assert.equal(caido.sent, 0);
+  assert.equal(llamadas, 3);
+  assert.doesNotMatch(caido.error, /SECRETO/);
+  assert.match(caido.error, /no se pudo conectar con Telegram/);
 });
 
 test("sendTelegramPhoto: manda la foto con sendPhoto y el mismo botón; sin token, simula", async () => {

@@ -83,6 +83,24 @@ export async function sendTelegram(text, { token, chatId, fetchImpl = fetch, rep
 }
 
 /**
+ * Como `sendTelegram`, pero un fallo de red o de Telegram se reintenta (hasta `reintentos` veces, con `esperaMs` de espera entre intentos).
+ * Si sigue fallando NO tira: devuelve `{ sent: 0, failed: true, error }` para que quien llama decida (el guardián deja un ::warning:: y no
+ * marca el aviso como enviado). Sólo cubre el envío a Telegram: cualquier otro error del proceso sigue siendo fatal.
+ */
+export async function sendTelegramConReintentos(text, { reintentos = 2, esperaMs = 3000, sleep = (ms) => new Promise((r) => setTimeout(r, ms)), ...creds } = {}) {
+  let error;
+  for (let intento = 0; intento <= reintentos; intento++) {
+    if (intento > 0) await sleep(esperaMs);
+    try {
+      return await sendTelegram(text, creds);
+    } catch (e) {
+      error = e;
+    }
+  }
+  return { sent: 0, failed: true, error: error instanceof Error ? error.message : String(error) };
+}
+
+/**
  * Manda una foto a Telegram (la placa del viernes) con el mismo botón "Publicar en X" en el pie. `photoUrl` tiene que
  * ser pública: Telegram la descarga sola, no hace falta subir el archivo. `caption` admite hasta 1024 caracteres
  * (los borradores del sitio entran de sobra). Si `sendPhoto` falla (Telegram no pudo bajar la imagen, error de red),
