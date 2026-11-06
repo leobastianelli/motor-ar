@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T16:33:22.327Z",
+  "generatedAt": "2026-11-06T16:45:42.735Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -229918,6 +229918,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -230051,9 +230067,11 @@
       "sessionsWithResults": 51
     },
     "f1Official": {
-      "requests": 0,
+      "requests": 1,
       "sessionsWithResults": 0,
-      "errors": []
+      "errors": [
+        "GP de Brasil · Práctica 1: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/practice/1 no es de Brazilian Grand Prix"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -230436,7 +230454,7 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de Brasil · Práctica 1: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/practice/1 no es de Brazilian Grand Prix"
   ]
 }
