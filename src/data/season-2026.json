@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T16:45:42.735Z",
+  "generatedAt": "2026-11-06T17:36:06.010Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -222500,7 +222500,189 @@
           "name": "Práctica 1",
           "start": "2026-11-06T15:30:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "1:11.717"
+            },
+            {
+              "pos": 2,
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+0.082"
+            },
+            {
+              "pos": 3,
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "+0.236"
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+0.324"
+            },
+            {
+              "pos": 5,
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "+0.386"
+            },
+            {
+              "pos": 6,
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "+0.439"
+            },
+            {
+              "pos": 7,
+              "number": "62",
+              "driver": "Gabriele Mini",
+              "code": "MIN",
+              "team": "Alpine",
+              "gap": "+0.852"
+            },
+            {
+              "pos": 8,
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "+0.897"
+            },
+            {
+              "pos": 9,
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "+0.937"
+            },
+            {
+              "pos": 10,
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "+0.998"
+            },
+            {
+              "pos": 11,
+              "number": "67",
+              "driver": "Leonardo Fornaroli",
+              "code": "FOR",
+              "team": "McLaren",
+              "gap": "+1.116"
+            },
+            {
+              "pos": 12,
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+1.120"
+            },
+            {
+              "pos": 13,
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+1.300"
+            },
+            {
+              "pos": 14,
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+1.321"
+            },
+            {
+              "pos": 15,
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "+1.654"
+            },
+            {
+              "pos": 16,
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "+1.794"
+            },
+            {
+              "pos": 17,
+              "number": "46",
+              "driver": "Luke Browning",
+              "code": "BRO",
+              "team": "Williams",
+              "gap": "+1.874"
+            },
+            {
+              "pos": 18,
+              "number": "51",
+              "driver": "Rafael Camara",
+              "code": "CAM",
+              "team": "Haas F1 Team",
+              "gap": "+1.979"
+            },
+            {
+              "pos": 19,
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "+2.043"
+            },
+            {
+              "pos": 20,
+              "number": "25",
+              "driver": "Colton Herta",
+              "code": "HER",
+              "team": "Cadillac",
+              "gap": "+2.558"
+            },
+            {
+              "pos": 21,
+              "number": "38",
+              "driver": "Dino Beganovic",
+              "code": "BEG",
+              "team": "Ferrari",
+              "gap": "+2.640"
+            },
+            {
+              "pos": 22,
+              "number": "98",
+              "driver": "Freddie Slater",
+              "code": "SLA",
+              "team": "Audi",
+              "gap": "+3.249"
+            }
+          ],
+          "resultsSource": {
+            "name": "OpenF1",
+            "url": "https://api.openf1.org/v1/session_result?session_key=11405"
+          }
         },
         {
           "id": "f1-2026-20-secondpractice",
@@ -230063,15 +230245,13 @@
     },
     "openf1": {
       "sessions": 131,
-      "requests": 12,
-      "sessionsWithResults": 51
+      "requests": 14,
+      "sessionsWithResults": 52
     },
     "f1Official": {
-      "requests": 1,
+      "requests": 0,
       "sessionsWithResults": 0,
-      "errors": [
-        "GP de Brasil · Práctica 1: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/practice/1 no es de Brazilian Grand Prix"
-      ]
+      "errors": []
     },
     "f1Youtube": {
       "scanned": 15,
@@ -230454,7 +230634,6 @@
     }
   },
   "failures": [
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
-    "F1 oficial: GP de Brasil · Práctica 1: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/practice/1 no es de Brazilian Grand Prix"
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/7/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)"
   ]
 }
