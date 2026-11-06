@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T17:03:11.107Z",
+  "generatedAt": "2026-11-06T16:33:22.327Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -222730,6 +222730,198 @@
       "source": "ACTC (calendario)"
     },
     {
+      "id": "tcpm-2026-11",
+      "seriesId": "tc-pista-mouras",
+      "round": 11,
+      "name": "Fecha 11 · La Plata",
+      "circuit": {
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcpm-2026-11-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-11-07T11:15:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
+              "start": "11:15"
+            }
+          ]
+        },
+        {
+          "id": "tcpm-2026-11-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-11-07T13:36:00-03:00",
+          "timeKnown": true,
+          "durationMin": 30,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
+              "start": "13:36"
+            }
+          ]
+        },
+        {
+          "id": "tcpm-2026-11-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-11-07T17:08:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
+              "start": "17:08"
+            }
+          ]
+        },
+        {
+          "id": "tcpm-2026-11-serie-serieunica",
+          "kind": "serie",
+          "name": "Serie única",
+          "start": "2026-11-08T09:25:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
+              "start": "09:25"
+            }
+          ]
+        },
+        {
+          "id": "tcpm-2026-11-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-11-08T14:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
+              "start": "14:10"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
+      "id": "tcm-2026-11",
+      "seriesId": "tc-mouras",
+      "round": 11,
+      "name": "Fecha 11 · La Plata",
+      "circuit": {
+        "name": "Roberto José Mouras",
+        "city": "La Plata",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Buenos Aires"
+      },
+      "sessions": [
+        {
+          "id": "tcm-2026-11-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-11-07T11:40:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
+              "start": "11:40"
+            }
+          ]
+        },
+        {
+          "id": "tcm-2026-11-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-11-07T13:40:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
+              "start": "13:40"
+            }
+          ]
+        },
+        {
+          "id": "tcm-2026-11-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-11-07T17:12:00-03:00",
+          "timeKnown": true,
+          "durationMin": 8,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
+              "start": "17:12"
+            }
+          ]
+        },
+        {
+          "id": "tcm-2026-11-serie-serieunica",
+          "kind": "serie",
+          "name": "Serie única",
+          "start": "2026-11-08T09:50:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
+              "start": "09:50"
+            }
+          ]
+        },
+        {
+          "id": "tcm-2026-11-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-11-08T14:45:00-03:00",
+          "timeKnown": true,
+          "durationMin": 25,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
+              "start": "14:45"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario)"
+    },
+    {
       "id": "tcr-sa-2026-9",
       "seriesId": "tcr-sa",
       "round": 9,
@@ -222809,54 +223001,6 @@
           "durationMin": 30
         }
       ]
-    },
-    {
-      "id": "tcm-2026-11",
-      "seriesId": "tc-mouras",
-      "round": 11,
-      "name": "Fecha 11 · La Plata",
-      "circuit": {
-        "name": "Roberto José Mouras",
-        "city": "La Plata",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcm-2026-11-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-11-08T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 35
-        }
-      ],
-      "source": "ACTC (calendario)"
-    },
-    {
-      "id": "tcpm-2026-11",
-      "seriesId": "tc-pista-mouras",
-      "round": 11,
-      "name": "Fecha 11 · La Plata",
-      "circuit": {
-        "name": "Roberto José Mouras",
-        "city": "La Plata",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Buenos Aires"
-      },
-      "sessions": [
-        {
-          "id": "tcpm-2026-11-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-11-08T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
-        }
-      ],
-      "source": "ACTC (calendario)"
     },
     {
       "id": "nuevo-car-show-2026-9",
@@ -228509,7 +228653,7 @@
           "winnerUrl": "https://campeones.com.ar/yankelevich-festejo-su-primer-triunfo-en-tc2000-en-el-1-2-3-de-toyota-gazoo-racing/"
         }
       ],
-      "campeonesFeed": false,
+      "campeonesFeed": true,
       "standingsAsOfRound": 1,
       "standingsHidden": true
     },
@@ -229774,22 +229918,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -229839,12 +229967,12 @@
       "standingsSource": "https://actc.org.ar/tcppk/campeonato"
     },
     "schedules": {
-      "notes": 26,
+      "notes": 28,
       "officialPdfs": 0,
-      "sessions": 296,
-      "confirmed": 0,
+      "sessions": 306,
+      "confirmed": 10,
       "conflicts": 0,
-      "eventsWithTimes": 44
+      "eventsWithTimes": 46
     },
     "timing": {
       "documents": 889,
@@ -230307,5 +230435,8 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
+  ]
 }
