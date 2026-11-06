@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T19:15:50.689Z",
+  "generatedAt": "2026-11-06T20:06:23.935Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -230249,9 +230249,11 @@
       "sessionsWithResults": 52
     },
     "f1Official": {
-      "requests": 0,
+      "requests": 1,
       "sessionsWithResults": 0,
-      "errors": []
+      "errors": [
+        "GP de Brasil · Práctica 2: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/practice/2 no es de Brazilian Grand Prix"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -230634,6 +230636,7 @@
     }
   },
   "failures": [
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de Brasil · Práctica 2: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/practice/2 no es de Brazilian Grand Prix"
   ]
 }
