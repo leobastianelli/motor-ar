@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T18:25:14.666Z",
+  "generatedAt": "2026-11-06T19:15:50.689Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -230100,6 +230100,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -230158,7 +230174,7 @@
     },
     "timing": {
       "documents": 889,
-      "pagesFetched": 119,
+      "pagesFetched": 120,
       "eventsWithResults": 64,
       "retagged": {
         "1003": {
@@ -230618,6 +230634,6 @@
     }
   },
   "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON"
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
   ]
 }
