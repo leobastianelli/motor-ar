@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T20:56:38.674Z",
+  "generatedAt": "2026-11-06T21:46:02.017Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -230274,6 +230274,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -230791,7 +230807,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON"
-  ]
+  "failures": []
 }
