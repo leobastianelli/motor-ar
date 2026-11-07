@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T21:06:54.785Z",
+  "generatedAt": "2026-11-07T21:55:33.311Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -232016,7 +232016,6 @@
     }
   },
   "failures": [
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
     "F1 oficial: GP de Brasil · Clasificación: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/qualifying no es de Brazilian Grand Prix"
   ]
 }
