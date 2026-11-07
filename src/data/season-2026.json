@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T15:50:31.272Z",
+  "generatedAt": "2026-11-07T16:35:51.616Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -222872,7 +222872,189 @@
           "name": "Práctica 3",
           "start": "2026-11-07T14:30:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "1:11.622"
+            },
+            {
+              "pos": 2,
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+0.025"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "+0.131"
+            },
+            {
+              "pos": 4,
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "+0.184"
+            },
+            {
+              "pos": 5,
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "+0.274"
+            },
+            {
+              "pos": 6,
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+0.313"
+            },
+            {
+              "pos": 7,
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+0.438"
+            },
+            {
+              "pos": 8,
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "+0.549"
+            },
+            {
+              "pos": 9,
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "+0.591"
+            },
+            {
+              "pos": 10,
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "+1.022"
+            },
+            {
+              "pos": 11,
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "+1.022"
+            },
+            {
+              "pos": 12,
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+1.211"
+            },
+            {
+              "pos": 13,
+              "number": "27",
+              "driver": "Nico Hulkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+1.243"
+            },
+            {
+              "pos": 14,
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "+1.303"
+            },
+            {
+              "pos": 15,
+              "number": "51",
+              "driver": "Rafael Camara",
+              "code": "CAM",
+              "team": "Haas F1 Team",
+              "gap": "+1.359"
+            },
+            {
+              "pos": 16,
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+1.487"
+            },
+            {
+              "pos": 17,
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "+1.525"
+            },
+            {
+              "pos": 18,
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+1.549"
+            },
+            {
+              "pos": 19,
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+1.681"
+            },
+            {
+              "pos": 20,
+              "number": "11",
+              "driver": "Sergio Perez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "+1.951"
+            },
+            {
+              "pos": 21,
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "+2.100"
+            },
+            {
+              "pos": 22,
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "+3.144"
+            }
+          ],
+          "resultsSource": {
+            "name": "OpenF1",
+            "url": "https://api.openf1.org/v1/session_result?session_key=11407"
+          }
         },
         {
           "id": "f1-2026-20-qualifying",
@@ -223101,7 +223283,7 @@
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1102/ver"
+            "url": "https://tiempos.actc.org.ar/resultados/1105/ver"
           }
         },
         {
@@ -223281,7 +223463,90 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-10-2026/",
               "start": "12:35"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Ford",
+              "gap": "1:28.736"
+            },
+            {
+              "pos": 2,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
+              "gap": "+0.662"
+            },
+            {
+              "pos": 3,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
+              "gap": "+0.663"
+            },
+            {
+              "pos": 4,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
+              "gap": "+1.023"
+            },
+            {
+              "pos": 5,
+              "number": "126",
+              "driver": "Thomas Ricciardi",
+              "team": "Ford",
+              "gap": "+1.213"
+            },
+            {
+              "pos": 6,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": "+1.250"
+            },
+            {
+              "pos": 7,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Toyota",
+              "gap": "+2.110"
+            },
+            {
+              "pos": 8,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": "+2.351"
+            },
+            {
+              "pos": 9,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": "+4.537"
+            },
+            {
+              "pos": 10,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": "+5.906"
+            },
+            {
+              "pos": 11,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "Foton",
+              "gap": "+7.961"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1107/ver"
+          }
         },
         {
           "id": "tcpk-2026-10-clasificacion-clasificacion",
@@ -230695,8 +230960,8 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 900,
-      "pagesFetched": 128,
+      "documents": 902,
+      "pagesFetched": 129,
       "eventsWithResults": 67,
       "retagged": {
         "1003": {
@@ -230771,15 +231036,13 @@
     },
     "openf1": {
       "sessions": 131,
-      "requests": 16,
-      "sessionsWithResults": 53
+      "requests": 18,
+      "sessionsWithResults": 54
     },
     "f1Official": {
-      "requests": 1,
+      "requests": 0,
       "sessionsWithResults": 0,
-      "errors": [
-        "GP de Brasil · Práctica 3: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/practice/3 no es de Brazilian Grand Prix"
-      ]
+      "errors": []
     },
     "f1Youtube": {
       "scanned": 15,
@@ -230793,8 +231056,8 @@
     },
     "gtwcOfficial": {
       "meetings": 10,
-      "sessions": 4,
-      "withResults": 4,
+      "sessions": 0,
+      "withResults": 0,
       "errors": []
     },
     "gt3Clases": [
@@ -231161,8 +231424,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
-    "F1 oficial: GP de Brasil · Práctica 3: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/practice/3 no es de Brazilian Grand Prix"
-  ]
+  "failures": []
 }
