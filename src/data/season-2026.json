@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T21:55:33.311Z",
+  "generatedAt": "2026-11-07T22:45:55.693Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -226935,8 +226935,8 @@
         "pos": 5,
         "driver": "Santiago Arrigoni",
         "team": "",
-        "points": 309.5,
-        "wins": 0
+        "points": 311.5,
+        "wins": 1
       },
       {
         "pos": 6,
@@ -227063,8 +227063,8 @@
         "pos": 4,
         "driver": "Ignacio Vilas",
         "team": "",
-        "points": 333,
-        "wins": 1
+        "points": 335,
+        "wins": 2
       },
       {
         "pos": 5,
@@ -227184,8 +227184,8 @@
         "pos": 2,
         "driver": "Agustín Canapino",
         "team": "",
-        "points": 331.5,
-        "wins": 2
+        "points": 333.5,
+        "wins": 3
       },
       {
         "pos": 3,
@@ -227317,17 +227317,17 @@
     "tc-pista-pick-up": [
       {
         "pos": 1,
-        "driver": "Santiago Biagi",
+        "driver": "Tomás Pellandino",
         "team": "",
-        "points": 361,
+        "points": 361.5,
         "wins": 3
       },
       {
         "pos": 2,
-        "driver": "Tomás Pellandino",
+        "driver": "Santiago Biagi",
         "team": "",
-        "points": 359.5,
-        "wins": 2
+        "points": 361,
+        "wins": 3
       },
       {
         "pos": 3,
@@ -231522,22 +231522,22 @@
     },
     "tc-mouras": {
       "standingsLabel": "Tabla oficial de la ACTC",
-      "standingsAsOfRound": 10,
+      "standingsAsOfRound": 11,
       "standingsSource": "https://actc.org.ar/tcm/campeonato"
     },
     "tc-pista-mouras": {
       "standingsLabel": "Tabla oficial de la ACTC",
-      "standingsAsOfRound": 10,
+      "standingsAsOfRound": 11,
       "standingsSource": "https://actc.org.ar/tcpm/campeonato"
     },
     "tc-pick-up": {
       "standingsLabel": "Tabla oficial de la ACTC",
-      "standingsAsOfRound": 9,
+      "standingsAsOfRound": 10,
       "standingsSource": "https://actc.org.ar/tcpk/campeonato"
     },
     "tc-pista-pick-up": {
       "standingsLabel": "Tabla oficial de la ACTC",
-      "standingsAsOfRound": 9,
+      "standingsAsOfRound": 10,
       "standingsSource": "https://actc.org.ar/tcppk/campeonato"
     },
     "schedules": {
