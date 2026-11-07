@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T18:09:21.482Z",
+  "generatedAt": "2026-11-07T19:15:35.547Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -231088,22 +231088,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -231161,7 +231145,7 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 906,
+      "documents": 909,
       "pagesFetched": 131,
       "eventsWithResults": 68,
       "retagged": {
@@ -231241,9 +231225,11 @@
       "sessionsWithResults": 54
     },
     "f1Official": {
-      "requests": 0,
+      "requests": 1,
       "sessionsWithResults": 0,
-      "errors": []
+      "errors": [
+        "GP de Brasil · Clasificación: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/qualifying no es de Brazilian Grand Prix"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -231626,6 +231612,10 @@
     }
   },
   "failures": [
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/12/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
+    "Fórmula 2 Argentina: No se pudo descargar https://formula2.com.ar/calendario-2026/: fetch failed",
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de Brasil · Clasificación: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/qualifying no es de Brazilian Grand Prix"
   ]
 }
