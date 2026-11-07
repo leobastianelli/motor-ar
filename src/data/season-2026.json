@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T20:35:59.385Z",
+  "generatedAt": "2026-11-07T20:50:42.599Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223645,7 +223645,90 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-10-2026/",
               "start": "16:12"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": "1:27.640"
+            },
+            {
+              "pos": 2,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": "+0.147"
+            },
+            {
+              "pos": 3,
+              "number": "126",
+              "driver": "Thomas Ricciardi",
+              "team": "Ford",
+              "gap": "+0.830"
+            },
+            {
+              "pos": 4,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Ford",
+              "gap": "+0.921"
+            },
+            {
+              "pos": 5,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "Foton",
+              "gap": "+0.949"
+            },
+            {
+              "pos": 6,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
+              "gap": "+1.037"
+            },
+            {
+              "pos": 7,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": "+1.101"
+            },
+            {
+              "pos": 8,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
+              "gap": "+1.976"
+            },
+            {
+              "pos": 9,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Toyota",
+              "gap": "+1.218"
+            },
+            {
+              "pos": 10,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": "+1.365"
+            },
+            {
+              "pos": 11,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
+              "gap": "+1.631"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1122/ver"
+          }
         },
         {
           "id": "tcpk-2026-10-serie-serieunica",
@@ -223948,8 +224031,28 @@
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1120/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1124/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1120/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "77",
+                  "driver": "Ignacio Vilas"
+                },
+                {
+                  "pos": 2,
+                  "number": "199",
+                  "driver": "Damián Pérez"
+                },
+                {
+                  "pos": 3,
+                  "number": "145",
+                  "driver": "Arrias Iñlaki"
+                }
+              ]
+            },
+            "note": "Oficial"
           }
         },
         {
@@ -231349,8 +231452,8 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 916,
-      "pagesFetched": 132,
+      "documents": 919,
+      "pagesFetched": 134,
       "eventsWithResults": 68,
       "retagged": {
         "1003": {
