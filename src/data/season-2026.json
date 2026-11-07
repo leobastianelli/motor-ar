@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T15:21:22.446Z",
+  "generatedAt": "2026-11-07T15:50:31.272Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223019,7 +223019,90 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-10-2026/",
               "start": "12:05"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Toyota",
+              "gap": "1:30.382"
+            },
+            {
+              "pos": 2,
+              "number": "132",
+              "driver": "Tomas Pellandino",
+              "team": "Ford",
+              "gap": "+0.082"
+            },
+            {
+              "pos": 3,
+              "number": "129",
+              "driver": "Bruno Boccanera",
+              "team": "Ford",
+              "gap": "+0.287"
+            },
+            {
+              "pos": 4,
+              "number": "127",
+              "driver": "Nahuel Cordone",
+              "team": "Ford",
+              "gap": "+0.389"
+            },
+            {
+              "pos": 5,
+              "number": "107",
+              "driver": "Sganga Antonino",
+              "team": "Ford",
+              "gap": "+0.817"
+            },
+            {
+              "pos": 6,
+              "number": "99",
+              "driver": "Salerno Alessandro",
+              "team": "RAM",
+              "gap": "+1.147"
+            },
+            {
+              "pos": 7,
+              "number": "88",
+              "driver": "Alvaro Oroza",
+              "team": "Ford",
+              "gap": "+1.186"
+            },
+            {
+              "pos": 8,
+              "number": "10",
+              "driver": "Luis Catelli",
+              "team": "Toyota",
+              "gap": "+1.793"
+            },
+            {
+              "pos": 9,
+              "number": "14",
+              "driver": "Nestor Omar Goya",
+              "team": "Ford",
+              "gap": "+1.795"
+            },
+            {
+              "pos": 10,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Foton",
+              "gap": "+3.238"
+            },
+            {
+              "pos": 11,
+              "number": "15",
+              "driver": "Jose Alberto Goya",
+              "team": "Ford",
+              "gap": "+4.062"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1102/ver"
+          }
         },
         {
           "id": "tcppk-2026-10-clasificacion-clasificacion",
@@ -230612,8 +230695,8 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 898,
-      "pagesFetched": 127,
+      "documents": 900,
+      "pagesFetched": 128,
       "eventsWithResults": 67,
       "retagged": {
         "1003": {
@@ -230692,9 +230775,11 @@
       "sessionsWithResults": 53
     },
     "f1Official": {
-      "requests": 0,
+      "requests": 1,
       "sessionsWithResults": 0,
-      "errors": []
+      "errors": [
+        "GP de Brasil · Práctica 3: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/practice/3 no es de Brazilian Grand Prix"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -231077,6 +231162,7 @@
     }
   },
   "failures": [
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de Brasil · Práctica 3: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/practice/3 no es de Brazilian Grand Prix"
   ]
 }
