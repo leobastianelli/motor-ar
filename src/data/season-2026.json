@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T13:50:33.000Z",
+  "generatedAt": "2026-11-07T14:30:26.290Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223099,7 +223099,90 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-10-2026/",
               "start": "10:40"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": "1:28.727"
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": "+0.166"
+            },
+            {
+              "pos": 3,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
+              "gap": "+0.867"
+            },
+            {
+              "pos": 4,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
+              "gap": "+0.948"
+            },
+            {
+              "pos": 5,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Ford",
+              "gap": "+0.959"
+            },
+            {
+              "pos": 6,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
+              "gap": "+1.169"
+            },
+            {
+              "pos": 7,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": "+1.214"
+            },
+            {
+              "pos": 8,
+              "number": "126",
+              "driver": "Thomas Ricciardi",
+              "team": "Ford",
+              "gap": "+1.231"
+            },
+            {
+              "pos": 9,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": "+2.024"
+            },
+            {
+              "pos": 10,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Toyota",
+              "gap": "+2.088"
+            },
+            {
+              "pos": 11,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "Foton",
+              "gap": "+10.566"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1095/ver"
+          }
         },
         {
           "id": "tcpk-2026-10-practica-2entrenamiento",
@@ -230432,9 +230515,9 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 891,
-      "pagesFetched": 122,
-      "eventsWithResults": 65,
+      "documents": 893,
+      "pagesFetched": 124,
+      "eventsWithResults": 66,
       "retagged": {
         "1003": {
           "from": "tc-mouras",
@@ -230896,5 +230979,7 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
+  ]
 }

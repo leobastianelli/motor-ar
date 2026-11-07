@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T13:50:34.368Z",
+  "generatedAt": "2026-11-07T14:30:27.092Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -175,7 +175,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "agustin carbo",
@@ -2256,7 +2256,7 @@
         "tc-pista-pick-up": "Fiat"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "bernini diego",
@@ -2346,7 +2346,7 @@
         "tc-pista-pick-up": "Volkswagen"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "diego farina",
@@ -4441,7 +4441,7 @@
         "tc-pista-pick-up": "Foton"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "gaston pasten",
@@ -5138,7 +5138,7 @@
         "tc-pista-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "hernan pastor",
@@ -5320,7 +5320,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "grippo ignacio",
@@ -8957,7 +8957,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "castro marcos",
@@ -9220,7 +9220,7 @@
         "tc-pista-pick-up": "Foton"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "avincetta mario",
@@ -11264,7 +11264,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "alejandro ferace pablo",
@@ -13411,7 +13411,7 @@
         "tc-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "chiriotti tiago",
@@ -13505,7 +13505,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "campra tomas",
