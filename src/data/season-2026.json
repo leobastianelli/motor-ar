@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T22:45:55.693Z",
+  "generatedAt": "2026-11-07T23:36:16.232Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -226245,13 +226245,13 @@
         "pos": 1,
         "driver": "Leonel Pernía",
         "team": "Honda Racing",
-        "points": 435
+        "points": 440
       },
       {
         "pos": 2,
         "driver": "Néstor Girolami",
         "team": "Hyundai MSA",
-        "points": 377
+        "points": 387
       },
       {
         "pos": 3,
@@ -226263,31 +226263,31 @@
         "pos": 4,
         "driver": "Tiago Pernía",
         "team": "Honda Racing",
-        "points": 304
+        "points": 308
       },
       {
         "pos": 5,
         "driver": "Juan Ángel Rosso",
         "team": "Paladini Racing",
-        "points": 268
+        "points": 269
       },
       {
         "pos": 6,
         "driver": "Camilo Trappa",
         "team": "Hyundai MSA",
-        "points": 252
+        "points": 254
       },
       {
         "pos": 7,
         "driver": "Joaquín Cafaro",
         "team": "Uruguay Racing Team",
-        "points": 242
+        "points": 249
       },
       {
         "pos": 8,
         "driver": "Nelson Piquet Jr.",
         "team": "Honda Racing",
-        "points": 213
+        "points": 216
       },
       {
         "pos": 9,
@@ -230531,7 +230531,7 @@
     },
     "tcr-sa": {
       "standingsLabel": "Pilotos",
-      "standingsAsOfRound": 8,
+      "standingsAsOfRound": 9,
       "argentines": [
         "Leonel Pernía",
         "Tiago Pernía",
@@ -232016,6 +232016,7 @@
     }
   },
   "failures": [
-    "F1 oficial: GP de Brasil · Clasificación: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/qualifying no es de Brazilian Grand Prix"
+    "F1 oficial: GP de Brasil · Clasificación: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/qualifying no es de Brazilian Grand Prix",
+    "YouTube F1: No se pudo descargar https://www.youtube.com/feeds/videos.xml?channel_id=UCB_qr75-ydFVKSF9Dmo6izg: HTTP 404 (text/html; charset=UTF-8) (se conservan los videos anteriores)"
   ]
 }
