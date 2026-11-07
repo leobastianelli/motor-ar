@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T14:30:26.290Z",
+  "generatedAt": "2026-11-07T15:15:32.389Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223374,7 +223374,104 @@
               "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
               "start": "11:40"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "1:26.125"
+            },
+            {
+              "pos": 2,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "+0.163"
+            },
+            {
+              "pos": 3,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "+0.197"
+            },
+            {
+              "pos": 4,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+0.582"
+            },
+            {
+              "pos": 5,
+              "number": "118",
+              "driver": "Fabrizio Maggini",
+              "team": "Ford",
+              "gap": "+0.619"
+            },
+            {
+              "pos": 6,
+              "number": "75",
+              "driver": "Matias Frano",
+              "team": "Ford",
+              "gap": "+0.738"
+            },
+            {
+              "pos": 7,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+1.108"
+            },
+            {
+              "pos": 8,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "+1.227"
+            },
+            {
+              "pos": 9,
+              "number": "121",
+              "driver": "Francisco Nonnenmacher",
+              "team": "Ford",
+              "gap": "+1.401"
+            },
+            {
+              "pos": 10,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+1.444"
+            },
+            {
+              "pos": 11,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Dodge",
+              "gap": "+1.472"
+            },
+            {
+              "pos": 12,
+              "number": "222",
+              "driver": "Marcelo Beraldi",
+              "team": "Ford",
+              "gap": "+1.919"
+            },
+            {
+              "pos": 13,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Dodge",
+              "gap": "+2.794"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1100/ver"
+          }
         },
         {
           "id": "tcm-2026-11-practica-2entrenamiento",
@@ -230442,22 +230539,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -230515,9 +230596,9 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 893,
-      "pagesFetched": 124,
-      "eventsWithResults": 66,
+      "documents": 898,
+      "pagesFetched": 127,
+      "eventsWithResults": 67,
       "retagged": {
         "1003": {
           "from": "tc-mouras",
@@ -230980,6 +231061,7 @@
     }
   },
   "failures": [
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
   ]
 }
