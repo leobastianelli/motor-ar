@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T16:50:42.635Z",
+  "generatedAt": "2026-11-07T17:35:38.131Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -9976,9 +9976,7 @@
       ],
       "slug": "mauricio-etcheberry",
       "name": "Mauricio Etcheberry",
-      "aliases": [
-        "Mauricio Etcheverry"
-      ],
+      "aliases": [],
       "series": [
         "tc-pista-mouras"
       ],

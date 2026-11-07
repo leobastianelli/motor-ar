@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T16:50:41.612Z",
+  "generatedAt": "2026-11-07T17:35:37.373Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223939,7 +223939,104 @@
               "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
               "start": "13:40"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "75",
+              "driver": "Matias Frano",
+              "team": "Ford",
+              "gap": "1:26.191"
+            },
+            {
+              "pos": 2,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "+0.022"
+            },
+            {
+              "pos": 3,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "+0.098"
+            },
+            {
+              "pos": 4,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "+0.310"
+            },
+            {
+              "pos": 5,
+              "number": "118",
+              "driver": "Fabrizio Maggini",
+              "team": "Ford",
+              "gap": "+0.357"
+            },
+            {
+              "pos": 6,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "+0.403"
+            },
+            {
+              "pos": 7,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+0.790"
+            },
+            {
+              "pos": 8,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+0.962"
+            },
+            {
+              "pos": 9,
+              "number": "121",
+              "driver": "Francisco Nonnenmacher",
+              "team": "Ford",
+              "gap": "+1.222"
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Dodge",
+              "gap": "+1.462"
+            },
+            {
+              "pos": 11,
+              "number": "222",
+              "driver": "Marcelo Beraldi",
+              "team": "Ford",
+              "gap": "+2.040"
+            },
+            {
+              "pos": 12,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+2.070"
+            },
+            {
+              "pos": 13,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Dodge",
+              "gap": "+49.428"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1110/ver"
+          }
         },
         {
           "id": "tcm-2026-11-clasificacion-clasificacion",
@@ -230991,22 +231088,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -231064,8 +231145,8 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 904,
-      "pagesFetched": 130,
+      "documents": 906,
+      "pagesFetched": 131,
       "eventsWithResults": 68,
       "retagged": {
         "1003": {
@@ -231528,5 +231609,9 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/10/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
+  ]
 }
