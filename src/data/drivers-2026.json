@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T15:15:34.207Z",
+  "generatedAt": "2026-11-07T16:50:42.635Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -1115,7 +1115,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-11-01"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "anton benjamin",
@@ -1817,7 +1817,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "damian romero",
@@ -1994,7 +1994,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-02-27",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "daniel lapalma",
@@ -2134,7 +2134,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "dario giudice",
@@ -3346,7 +3346,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "facundo marques",
@@ -5297,6 +5297,26 @@
       "lastSeen": "2026-09-06"
     },
     {
+      "key": "diaz ignacio",
+      "keys": [
+        "diaz ignacio"
+      ],
+      "slug": "ignacio-diaz",
+      "name": "Ignacio Diaz",
+      "aliases": [],
+      "series": [
+        "tc-pista-mouras"
+      ],
+      "numbers": {
+        "tc-pista-mouras": "72"
+      },
+      "teams": {
+        "tc-pista-mouras": "Dodge"
+      },
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07"
+    },
+    {
       "key": "fain ignacio",
       "keys": [
         "fain ignacio"
@@ -5363,7 +5383,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "ignacio montenegro",
@@ -5445,7 +5465,7 @@
         "tc-pista-pick-up": "Torino"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "ignacio sachs",
@@ -5508,7 +5528,7 @@
         "tc-pista-pick-up": "Dodge"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "ignacio villa",
@@ -5552,7 +5572,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-28",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "inaki zugasti",
@@ -6912,7 +6932,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "ebarlin jose juan",
@@ -7988,7 +8008,7 @@
         "tc-pista-pick-up": "Volkswagen"
       },
       "firstSeen": "2026-01-24",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "giovacchini leonel",
@@ -9571,7 +9591,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-02-27",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "martin vazquez",
@@ -9951,11 +9971,14 @@
     {
       "key": "etcheberry mauricio",
       "keys": [
-        "etcheberry mauricio"
+        "etcheberry mauricio",
+        "etcheverry mauricio"
       ],
       "slug": "mauricio-etcheberry",
       "name": "Mauricio Etcheberry",
-      "aliases": [],
+      "aliases": [
+        "Mauricio Etcheverry"
+      ],
       "series": [
         "tc-pista-mouras"
       ],
@@ -9966,7 +9989,7 @@
         "tc-pista-mouras": "Chevrolet"
       },
       "firstSeen": "2026-09-26",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "lambiris mauricio",

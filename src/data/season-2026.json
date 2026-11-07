@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T16:35:51.616Z",
+  "generatedAt": "2026-11-07T16:50:41.612Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223642,7 +223642,111 @@
               "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
               "start": "13:36"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": "1:27.107"
+            },
+            {
+              "pos": 2,
+              "number": "199",
+              "driver": "Damián Pérez",
+              "team": "Dodge",
+              "gap": "+0.087"
+            },
+            {
+              "pos": 3,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": "+0.139"
+            },
+            {
+              "pos": 4,
+              "number": "145",
+              "driver": "Arrias Iñlaki",
+              "team": "Ford",
+              "gap": "+0.476"
+            },
+            {
+              "pos": 5,
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": "+0.789"
+            },
+            {
+              "pos": 6,
+              "number": "72",
+              "driver": "Ignacio Diaz",
+              "team": "Dodge",
+              "gap": "+0.844"
+            },
+            {
+              "pos": 7,
+              "number": "44",
+              "driver": "Juan José Conde",
+              "team": "Chevrolet",
+              "gap": "+0.994"
+            },
+            {
+              "pos": 8,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": "+1.454"
+            },
+            {
+              "pos": 9,
+              "number": "122",
+              "driver": "Dante Rubiera Hainze",
+              "team": "Ford",
+              "gap": "+1.466"
+            },
+            {
+              "pos": 10,
+              "number": "148",
+              "driver": "Daniel Faggiano",
+              "team": "Dodge",
+              "gap": "+3.292"
+            },
+            {
+              "pos": 11,
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": "+3.347"
+            },
+            {
+              "pos": 12,
+              "number": "48",
+              "driver": "Mauricio Etcheverry",
+              "team": "Chevrolet",
+              "gap": "+3.451"
+            },
+            {
+              "pos": 13,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": "+4.236"
+            },
+            {
+              "pos": 14,
+              "number": "100",
+              "driver": "Leonardo Forte",
+              "team": "Ford",
+              "gap": "+21.097"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1109/ver"
+          }
         },
         {
           "id": "tcpm-2026-11-clasificacion-clasificacion",
@@ -230960,9 +231064,9 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 902,
-      "pagesFetched": 129,
-      "eventsWithResults": 67,
+      "documents": 904,
+      "pagesFetched": 130,
+      "eventsWithResults": 68,
       "retagged": {
         "1003": {
           "from": "tc-mouras",
