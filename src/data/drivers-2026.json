@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T17:35:38.131Z",
+  "generatedAt": "2026-11-07T21:06:56.608Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -493,11 +493,14 @@
       "key": "alejandro martinez",
       "keys": [
         "alejandro martinez",
-        "alejandro martinez v"
+        "alejandro martinez v",
+        "alejandro martinez recargo"
       ],
       "slug": "alejandro-martinez",
       "name": "Alejandro Martínez",
-      "aliases": [],
+      "aliases": [
+        "Alejandro Martinez Recargo"
+      ],
       "series": [
         "tc-mouras",
         "tc-pista"

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T20:50:42.599Z",
+  "generatedAt": "2026-11-07T21:06:54.785Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -224343,7 +224343,104 @@
               "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
               "start": "17:12"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": "1:25.625"
+            },
+            {
+              "pos": 2,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": "+0.012"
+            },
+            {
+              "pos": 3,
+              "number": "75",
+              "driver": "Matias Frano",
+              "team": "Ford",
+              "gap": "+0.147"
+            },
+            {
+              "pos": 4,
+              "number": "118",
+              "driver": "Fabrizio Maggini",
+              "team": "Ford",
+              "gap": "+0.660"
+            },
+            {
+              "pos": 5,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "+0.661"
+            },
+            {
+              "pos": 6,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": "+0.823"
+            },
+            {
+              "pos": 7,
+              "number": "222",
+              "driver": "Marcelo Beraldi",
+              "team": "Ford",
+              "gap": "+0.925"
+            },
+            {
+              "pos": 8,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Dodge",
+              "gap": "+0.935"
+            },
+            {
+              "pos": 9,
+              "number": "121",
+              "driver": "Francisco Nonnenmacher",
+              "team": "Ford",
+              "gap": "+1.190"
+            },
+            {
+              "pos": 10,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": "+1.417"
+            },
+            {
+              "pos": 11,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": "+1.642"
+            },
+            {
+              "pos": 12,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+1.849"
+            },
+            {
+              "pos": 13,
+              "number": "23",
+              "driver": "Alejandro Martinez Recargo",
+              "team": "Dodge",
+              "gap": "+2.204"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1126/ver"
+          }
         },
         {
           "id": "tcm-2026-11-serie-serieunica",
@@ -231452,8 +231549,8 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 919,
-      "pagesFetched": 134,
+      "documents": 922,
+      "pagesFetched": 135,
       "eventsWithResults": 68,
       "retagged": {
         "1003": {
