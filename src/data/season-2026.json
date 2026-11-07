@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T02:45:20.201Z",
+  "generatedAt": "2026-11-07T13:50:33.000Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -222920,7 +222920,90 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-10-2026/",
               "start": "10:05"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "129",
+              "driver": "Bruno Boccanera",
+              "team": "Ford",
+              "gap": "1:30.957"
+            },
+            {
+              "pos": 2,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Toyota",
+              "gap": "+0.083"
+            },
+            {
+              "pos": 3,
+              "number": "127",
+              "driver": "Nahuel Cordone",
+              "team": "Ford",
+              "gap": "+0.143"
+            },
+            {
+              "pos": 4,
+              "number": "107",
+              "driver": "Sganga Antonino",
+              "team": "Ford",
+              "gap": "+0.206"
+            },
+            {
+              "pos": 5,
+              "number": "132",
+              "driver": "Tomas Pellandino",
+              "team": "Ford",
+              "gap": "+0.477"
+            },
+            {
+              "pos": 6,
+              "number": "10",
+              "driver": "Luis Catelli",
+              "team": "Toyota",
+              "gap": "+0.924"
+            },
+            {
+              "pos": 7,
+              "number": "88",
+              "driver": "Alvaro Oroza",
+              "team": "Ford",
+              "gap": "+1.324"
+            },
+            {
+              "pos": 8,
+              "number": "14",
+              "driver": "Nestor Omar Goya",
+              "team": "Ford",
+              "gap": "+1.989"
+            },
+            {
+              "pos": 9,
+              "number": "99",
+              "driver": "Salerno Alessandro",
+              "team": "RAM",
+              "gap": "+2.373"
+            },
+            {
+              "pos": 10,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Foton",
+              "gap": "+3.018"
+            },
+            {
+              "pos": 11,
+              "number": "15",
+              "driver": "Jose Alberto Goya",
+              "team": "Ford",
+              "gap": "+3.272"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1093/ver"
+          }
         },
         {
           "id": "tcppk-2026-10-practica-2entrenamiento",
@@ -229351,7 +229434,9 @@
         "Gastón Iansa",
         "Mariano Pernía",
         "Sebastián Quirno",
-        "Carlos Okulovich"
+        "Carlos Okulovich",
+        "Lucas Carabajal",
+        "Javier Jacobson"
       ],
       "discrepancies": [
         "Puntos hasta la fecha 8 distintos: Carlos Javier Merlo 22 (Wikipedia) y 0 (API); Alberto Cattucci 6 (Wikipedia) y 0 (API)"
@@ -230274,6 +230359,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -230331,9 +230432,9 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 889,
-      "pagesFetched": 120,
-      "eventsWithResults": 64,
+      "documents": 891,
+      "pagesFetched": 122,
+      "eventsWithResults": 65,
       "retagged": {
         "1003": {
           "from": "tc-mouras",
@@ -230397,6 +230498,10 @@
         },
         "1054": {
           "from": "tc-mouras",
+          "to": "tc-pista-pick-up"
+        },
+        "1093": {
+          "from": "tc-pick-up",
           "to": "tc-pista-pick-up"
         }
       }
@@ -230791,8 +230896,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
-    "YouTube F1: No se pudo descargar https://www.youtube.com/feeds/videos.xml?channel_id=UCB_qr75-ydFVKSF9Dmo6izg: HTTP 404 (text/html; charset=UTF-8) (se conservan los videos anteriores)"
-  ]
+  "failures": []
 }

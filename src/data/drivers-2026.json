@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T20:10:22.671Z",
+  "generatedAt": "2026-11-07T13:50:34.368Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -655,7 +655,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "andres calderon",
@@ -1318,7 +1318,7 @@
         "tc-pista-pick-up": "Ford"
       },
       "firstSeen": "2026-09-26",
-      "lastSeen": "2026-09-26"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "bruno capriotti",
@@ -6267,7 +6267,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "carlos jose montanari",
@@ -8616,7 +8616,7 @@
         "tc-mouras": "Toyota"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "di jose luis palma",
@@ -10485,7 +10485,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "della nahuel santina",
@@ -10649,7 +10649,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "nicanor pazos santilli",
@@ -10677,7 +10677,7 @@
         "tc-mouras": "Foton"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "nico varrone",
@@ -12276,6 +12276,26 @@
       "lastSeen": "2026-10-04"
     },
     {
+      "key": "alessandro salerno",
+      "keys": [
+        "alessandro salerno"
+      ],
+      "slug": "salerno-alessandro",
+      "name": "Salerno Alessandro",
+      "aliases": [],
+      "series": [
+        "tc-pista-pick-up"
+      ],
+      "numbers": {
+        "tc-pista-pick-up": "99"
+      },
+      "teams": {
+        "tc-pista-pick-up": "RAM"
+      },
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-07"
+    },
+    {
       "key": "gonzalo salis",
       "keys": [
         "gonzalo salis"
@@ -12481,7 +12501,7 @@
         "tc-mouras": "Toyota"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-10-25"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "cistola santiago",
@@ -13185,7 +13205,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "micol simon",
@@ -13592,7 +13612,7 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-18"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "perotti tomas",
