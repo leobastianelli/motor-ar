@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T19:15:35.547Z",
+  "generatedAt": "2026-11-07T20:06:34.594Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223300,7 +223300,90 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-10-2026/",
               "start": "15:29"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "132",
+              "driver": "Tomas Pellandino",
+              "team": "Ford",
+              "gap": "1:29.892"
+            },
+            {
+              "pos": 2,
+              "number": "129",
+              "driver": "Bruno Boccanera",
+              "team": "Ford",
+              "gap": "+0.360"
+            },
+            {
+              "pos": 3,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Foton",
+              "gap": "+0.495"
+            },
+            {
+              "pos": 4,
+              "number": "107",
+              "driver": "Sganga Antonino",
+              "team": "Ford",
+              "gap": "+0.894"
+            },
+            {
+              "pos": 5,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Toyota",
+              "gap": "+1.031"
+            },
+            {
+              "pos": 6,
+              "number": "99",
+              "driver": "Salerno Alessandro",
+              "team": "RAM",
+              "gap": "+1.286"
+            },
+            {
+              "pos": 7,
+              "number": "127",
+              "driver": "Nahuel Cordone",
+              "team": "Ford",
+              "gap": "+0.588"
+            },
+            {
+              "pos": 8,
+              "number": "10",
+              "driver": "Luis Catelli",
+              "team": "Toyota",
+              "gap": "+1.393"
+            },
+            {
+              "pos": 9,
+              "number": "14",
+              "driver": "Nestor Omar Goya",
+              "team": "Ford",
+              "gap": "+2.441"
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Alvaro Oroza",
+              "team": "Ford",
+              "gap": "+2.631"
+            },
+            {
+              "pos": 11,
+              "number": "15",
+              "driver": "Jose Alberto Goya",
+              "team": "Ford",
+              "gap": "+4.283"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1118/ver"
+          }
         },
         {
           "id": "tcppk-2026-10-serie-serieunica",
@@ -231088,6 +231171,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -231145,8 +231244,8 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 909,
-      "pagesFetched": 131,
+      "documents": 914,
+      "pagesFetched": 132,
       "eventsWithResults": 68,
       "retagged": {
         "1003": {
@@ -231612,9 +231711,6 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/12/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
-    "Fórmula 2 Argentina: No se pudo descargar https://formula2.com.ar/calendario-2026/: fetch failed",
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
     "F1 oficial: GP de Brasil · Clasificación: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/qualifying no es de Brazilian Grand Prix"
   ]
