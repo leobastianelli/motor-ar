@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T15:15:57.962Z",
+  "generatedAt": "2026-11-08T15:45:03.945Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -225231,7 +225231,7 @@
           ],
           "resultsSource": {
             "name": "TCR South America · puntos del campeonato",
-            "url": "https://southamerica.tcr-series.com/resultados",
+            "url": "https://apisa.tcr-series.com/1794150939808_1RA_FINAL_TCR_SA__2_.pdf",
             "note": "Sólo los 15 que sumaron puntos; la clasificación completa está en el PDF oficial."
           }
         },
@@ -232756,7 +232756,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/8/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)"
-  ]
+  "failures": []
 }
