@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T13:45:39.665Z",
+  "generatedAt": "2026-11-08T13:55:49.177Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223561,83 +223561,103 @@
               "number": "132",
               "driver": "Tomas Pellandino",
               "team": "Ford",
-              "gap": ""
+              "gap": "7:37.313"
             },
             {
               "pos": 2,
               "number": "129",
               "driver": "Bruno Boccanera",
               "team": "Ford",
-              "gap": ""
+              "gap": "+3.024"
             },
             {
               "pos": 3,
               "number": "123",
               "driver": "Nicanor Santilli Pazos",
               "team": "Foton",
-              "gap": ""
+              "gap": "+3.414"
             },
             {
               "pos": 4,
               "number": "67",
               "driver": "Santiago Biagi",
               "team": "Toyota",
-              "gap": ""
+              "gap": "+3.898"
             },
             {
               "pos": 5,
               "number": "107",
               "driver": "Sganga Antonino",
               "team": "Ford",
-              "gap": ""
+              "gap": "+7.463"
             },
             {
               "pos": 6,
               "number": "99",
               "driver": "Salerno Alessandro",
               "team": "RAM",
-              "gap": ""
+              "gap": "+8.753"
             },
             {
               "pos": 7,
               "number": "127",
               "driver": "Nahuel Cordone",
               "team": "Ford",
-              "gap": ""
+              "gap": "+11.879"
             },
             {
               "pos": 8,
               "number": "14",
               "driver": "Nestor Omar Goya",
               "team": "Ford",
-              "gap": ""
+              "gap": "+12.341"
             },
             {
               "pos": 9,
               "number": "10",
               "driver": "Luis Catelli",
               "team": "Toyota",
-              "gap": ""
+              "gap": "+14.511"
             },
             {
               "pos": 10,
               "number": "15",
               "driver": "Jose Alberto Goya",
               "team": "Ford",
-              "gap": ""
+              "gap": "+16.577"
             },
             {
               "pos": 11,
               "number": "88",
               "driver": "Alvaro Oroza",
               "team": "Ford",
-              "gap": ""
+              "gap": "+43.964"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1130/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1135/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1130/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "132",
+                  "driver": "Tomas Pellandino"
+                },
+                {
+                  "pos": 2,
+                  "number": "129",
+                  "driver": "Bruno Boccanera"
+                },
+                {
+                  "pos": 3,
+                  "number": "123",
+                  "driver": "Nicanor Santilli Pazos"
+                }
+              ]
+            },
+            "note": "Oficial"
           }
         },
         {
@@ -223983,7 +224003,84 @@
               "url": "https://www.solotc.com.ar/tc-pick-up-la-plata-horarios-tv-cronograma-fecha-10-2026/",
               "start": "10:40"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "1",
+              "driver": "Agustín Canapino",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "256",
+              "driver": "Otto Fritzler",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "126",
+              "driver": "Thomas Ricciardi",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "3",
+              "driver": "Mariano Werner",
+              "team": "Foton",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "147",
+              "driver": "Marco Dianda",
+              "team": "Volkswagen",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "86",
+              "driver": "Ignacio Faín",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "11",
+              "driver": "Gaston Mazzacane",
+              "team": "Foton",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "110",
+              "driver": "Diego Azar",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "12",
+              "driver": "Tomás Abdala",
+              "team": "Ford",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1137/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tcpk-2026-10-final-final",
@@ -232042,8 +232139,8 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 928,
-      "pagesFetched": 137,
+      "documents": 932,
+      "pagesFetched": 138,
       "eventsWithResults": 68,
       "retagged": {
         "1003": {
