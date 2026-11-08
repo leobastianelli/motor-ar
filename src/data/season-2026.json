@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T00:26:08.051Z",
+  "generatedAt": "2026-11-08T01:16:12.947Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223062,7 +223062,162 @@
           "name": "Clasificación",
           "start": "2026-11-07T18:00:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "driver": "Andrea Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "RB F1 Team",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "driver": "Nico Hülkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": ""
+            },
+            {
+              "pos": 12,
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": ""
+            },
+            {
+              "pos": 13,
+              "driver": "Rafael Camara",
+              "team": "Haas F1 Team",
+              "gap": ""
+            },
+            {
+              "pos": 14,
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "RB F1 Team",
+              "gap": ""
+            },
+            {
+              "pos": 15,
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": ""
+            },
+            {
+              "pos": 16,
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull",
+              "gap": ""
+            },
+            {
+              "pos": 17,
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine F1 Team",
+              "gap": ""
+            },
+            {
+              "pos": 18,
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine F1 Team",
+              "gap": ""
+            },
+            {
+              "pos": 19,
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": ""
+            },
+            {
+              "pos": 20,
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac F1 Team",
+              "gap": ""
+            },
+            {
+              "pos": 21,
+              "driver": "Sergio Pérez",
+              "code": "PER",
+              "team": "Cadillac F1 Team",
+              "gap": ""
+            },
+            {
+              "pos": 22,
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": ""
+            }
+          ]
         },
         {
           "id": "f1-2026-20-race",
@@ -225568,6 +225723,13 @@
         "team": "Cadillac F1 Team",
         "points": 0,
         "wins": 0
+      },
+      {
+        "pos": 25,
+        "driver": "Rafael Camara",
+        "team": "Haas F1 Team",
+        "points": 0,
+        "wins": 0
       }
     ],
     "f2": [
@@ -227459,7 +227621,7 @@
   },
   "meta": {
     "f1": {
-      "standingsAsOfRound": 19,
+      "standingsAsOfRound": 20,
       "progression": [
         {
           "round": 1,
@@ -231629,11 +231791,9 @@
       "sessionsWithResults": 54
     },
     "f1Official": {
-      "requests": 1,
+      "requests": 0,
       "sessionsWithResults": 0,
-      "errors": [
-        "GP de Brasil · Clasificación: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/qualifying no es de Brazilian Grand Prix"
-      ]
+      "errors": []
     },
     "f1Youtube": {
       "scanned": 15,
@@ -232015,9 +232175,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/7/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
-    "F1 oficial: GP de Brasil · Clasificación: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/qualifying no es de Brazilian Grand Prix",
-    "YouTube F1: No se pudo descargar https://www.youtube.com/feeds/videos.xml?channel_id=UCB_qr75-ydFVKSF9Dmo6izg: HTTP 404 (text/html; charset=UTF-8) (se conservan los videos anteriores)"
-  ]
+  "failures": []
 }
