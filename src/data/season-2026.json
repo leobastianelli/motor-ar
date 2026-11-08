@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T13:00:42.894Z",
+  "generatedAt": "2026-11-08T13:31:09.725Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -224709,7 +224709,84 @@
               "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
               "start": "09:50"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "75",
+              "driver": "Matias Frano",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "121",
+              "driver": "Francisco Nonnenmacher",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Dodge",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1129/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tcm-2026-11-final-final",
@@ -231809,7 +231886,7 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 923,
+      "documents": 924,
       "pagesFetched": 135,
       "eventsWithResults": 68,
       "retagged": {
