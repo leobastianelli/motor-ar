@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T17:51:11.549Z",
+  "generatedAt": "2026-11-08T18:36:28.097Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -225377,7 +225377,91 @@
               "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
               "start": "14:45"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "26",
+              "driver": "Valentino Alaux",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "23",
+              "driver": "Alejandro Martínez",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "58",
+              "driver": "Aldo Ortiz",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "222",
+              "driver": "Marcelo Beraldi",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "25",
+              "driver": "Juan Tartaglino",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "221",
+              "driver": "Esteban Luna",
+              "team": "Ford",
+              "gap": "+1 vuelta"
+            },
+            {
+              "pos": 9,
+              "number": "121",
+              "driver": "Francisco Nonnenmacher",
+              "team": "Ford",
+              "gap": "+7 vueltas"
+            },
+            {
+              "pos": 10,
+              "number": "88",
+              "driver": "Esteban Mancuso",
+              "team": "Dodge",
+              "gap": "+8 vueltas"
+            },
+            {
+              "pos": 11,
+              "number": "141",
+              "driver": "Francisco Luengo",
+              "team": "Chevrolet",
+              "gap": "+11 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1145/ver",
+            "status": "provisional"
+          }
         }
       ],
       "source": "ACTC (calendario)"
@@ -232586,7 +232670,7 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 939,
+      "documents": 940,
       "pagesFetched": 138,
       "eventsWithResults": 68,
       "retagged": {
@@ -232666,9 +232750,11 @@
       "sessionsWithResults": 54
     },
     "f1Official": {
-      "requests": 0,
+      "requests": 1,
       "sessionsWithResults": 0,
-      "errors": []
+      "errors": [
+        "GP de Brasil · Carrera: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/race-result no es de Brazilian Grand Prix"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -233051,6 +233137,7 @@
     }
   },
   "failures": [
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de Brasil · Carrera: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/race-result no es de Brazilian Grand Prix"
   ]
 }
