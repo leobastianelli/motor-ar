@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T01:16:12.947Z",
+  "generatedAt": "2026-11-08T13:00:42.894Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -224224,7 +224224,105 @@
               "url": "https://actc.org.ar/tcm/noticias/horarios-para-el-fin-de-semana-en-la-plata",
               "start": "09:25"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "199",
+              "driver": "Damián Pérez",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "77",
+              "driver": "Ignacio Vilas",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "63",
+              "driver": "Ignacio Lovich",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "145",
+              "driver": "Arrias Iñlaki",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "47",
+              "driver": "Bautista Roqueta",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "44",
+              "driver": "Juan José Conde",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "122",
+              "driver": "Dante Rubiera Hainze",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "111",
+              "driver": "Ignacio Quintana",
+              "team": "Torino",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "74",
+              "driver": "Facundo Ludueña",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "144",
+              "driver": "Martin Taha",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "number": "48",
+              "driver": "Mauricio Etcheverry",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 12,
+              "number": "100",
+              "driver": "Leonardo Forte",
+              "team": "Ford",
+              "gap": "+2 vueltas"
+            },
+            {
+              "pos": 13,
+              "number": "148",
+              "driver": "Daniel Faggiano",
+              "team": "Dodge",
+              "gap": "+2 vueltas"
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1128/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tcpm-2026-11-final-final",
@@ -231711,7 +231809,7 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 922,
+      "documents": 923,
       "pagesFetched": 135,
       "eventsWithResults": 68,
       "retagged": {
