@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T18:36:28.097Z",
+  "generatedAt": "2026-11-08T19:25:52.512Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223225,7 +223225,230 @@
           "name": "Carrera",
           "start": "2026-11-08T17:00:00Z",
           "timeKnown": true,
-          "durationMin": 120
+          "durationMin": 120,
+          "results": [
+            {
+              "pos": 1,
+              "positionText": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "1:35:23.504",
+              "points": 25,
+              "grid": 0
+            },
+            {
+              "pos": 2,
+              "positionText": "2",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull",
+              "gap": "+14.602",
+              "points": 18,
+              "grid": 0
+            },
+            {
+              "pos": 3,
+              "positionText": "3",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull",
+              "gap": "+24.485",
+              "points": 15,
+              "grid": 0
+            },
+            {
+              "pos": 4,
+              "positionText": "4",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "+33.991",
+              "points": 12,
+              "grid": 0
+            },
+            {
+              "pos": 5,
+              "positionText": "5",
+              "driver": "Andrea Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "+36.017",
+              "points": 10,
+              "grid": 0
+            },
+            {
+              "pos": 6,
+              "positionText": "6",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+56.475",
+              "points": 8,
+              "grid": 0
+            },
+            {
+              "pos": 7,
+              "positionText": "7",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "+1:13.586",
+              "points": 6,
+              "grid": 0
+            },
+            {
+              "pos": 8,
+              "positionText": "8",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "RB F1 Team",
+              "gap": "+1:15.402",
+              "points": 4,
+              "grid": 0
+            },
+            {
+              "pos": 9,
+              "positionText": "9",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+4.427",
+              "points": 2,
+              "grid": 0
+            },
+            {
+              "pos": 10,
+              "positionText": "10",
+              "driver": "Nico Hülkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+17.105",
+              "points": 1,
+              "grid": 0
+            },
+            {
+              "pos": 11,
+              "positionText": "11",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "RB F1 Team",
+              "gap": "+19.130",
+              "points": 0,
+              "grid": 0
+            },
+            {
+              "pos": 12,
+              "positionText": "12",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+36.856",
+              "points": 0,
+              "grid": 0
+            },
+            {
+              "pos": 13,
+              "positionText": "13",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine F1 Team",
+              "gap": "+50.488",
+              "points": 0,
+              "grid": 0
+            },
+            {
+              "pos": 14,
+              "positionText": "14",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine F1 Team",
+              "gap": "+58.677",
+              "points": 0,
+              "grid": 0
+            },
+            {
+              "pos": 15,
+              "positionText": "15",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "+1:04.101",
+              "points": 0,
+              "grid": 0
+            },
+            {
+              "pos": 16,
+              "positionText": "16",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "+1:16.420",
+              "points": 0,
+              "grid": 0
+            },
+            {
+              "pos": 17,
+              "positionText": "17",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+1:26.711",
+              "points": 0,
+              "grid": 0
+            },
+            {
+              "pos": 18,
+              "positionText": "18",
+              "driver": "Sergio Pérez",
+              "code": "PER",
+              "team": "Cadillac F1 Team",
+              "gap": "+27.120",
+              "points": 0,
+              "grid": 0
+            },
+            {
+              "pos": 19,
+              "positionText": "19",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+32.463",
+              "points": 0,
+              "grid": 0
+            },
+            {
+              "pos": 20,
+              "positionText": "20",
+              "driver": "Rafael Camara",
+              "team": "Haas F1 Team",
+              "gap": "+51.715",
+              "points": 0,
+              "grid": 0
+            },
+            {
+              "pos": 21,
+              "positionText": "R",
+              "status": "Abandonó",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "",
+              "points": 0,
+              "grid": 0
+            },
+            {
+              "pos": 22,
+              "positionText": "W",
+              "status": "No largó",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac F1 Team",
+              "gap": "",
+              "points": 0,
+              "grid": 0
+            }
+          ]
         }
       ],
       "source": "Jolpica-F1"
@@ -224771,84 +224994,84 @@
               "number": "77",
               "driver": "Ignacio Vilas",
               "team": "Dodge",
-              "gap": ""
+              "gap": "17:41.457"
             },
             {
               "pos": 2,
               "number": "199",
               "driver": "Damián Pérez",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+2.182"
             },
             {
               "pos": 3,
               "number": "63",
               "driver": "Ignacio Lovich",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+4.126"
             },
             {
               "pos": 4,
               "number": "145",
               "driver": "Arrias Iñlaki",
               "team": "Ford",
-              "gap": ""
+              "gap": "+4.510"
             },
             {
               "pos": 5,
               "number": "44",
               "driver": "Juan José Conde",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "+5.441"
             },
             {
               "pos": 6,
               "number": "47",
               "driver": "Bautista Roqueta",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+6.549"
             },
             {
               "pos": 7,
               "number": "111",
               "driver": "Ignacio Quintana",
               "team": "Torino",
-              "gap": ""
+              "gap": "+9.331"
             },
             {
               "pos": 8,
               "number": "122",
               "driver": "Dante Rubiera Hainze",
               "team": "Ford",
-              "gap": ""
+              "gap": "+9.564"
             },
             {
               "pos": 9,
               "number": "74",
               "driver": "Facundo Ludueña",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "+31.507"
             },
             {
               "pos": 10,
               "number": "148",
               "driver": "Daniel Faggiano",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+31.841"
             },
             {
               "pos": 11,
               "number": "144",
               "driver": "Martin Taha",
               "team": "Ford",
-              "gap": ""
+              "gap": "+32.009"
             },
             {
               "pos": 12,
               "number": "100",
               "driver": "Leonardo Forte",
               "team": "Ford",
-              "gap": ""
+              "gap": "+39.365"
             },
             {
               "pos": 13,
@@ -224867,8 +225090,28 @@
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1144/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1147/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1144/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "77",
+                  "driver": "Ignacio Vilas"
+                },
+                {
+                  "pos": 2,
+                  "number": "199",
+                  "driver": "Damián Pérez"
+                },
+                {
+                  "pos": 3,
+                  "number": "63",
+                  "driver": "Ignacio Lovich"
+                }
+              ]
+            },
+            "note": "Oficial"
           }
         }
       ],
@@ -225384,49 +225627,49 @@
               "number": "139",
               "driver": "Santiago Arrigoni",
               "team": "Dodge",
-              "gap": ""
+              "gap": "20:46.601"
             },
             {
               "pos": 2,
               "number": "176",
               "driver": "Nicolás Jaime",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+4.453"
             },
             {
               "pos": 3,
               "number": "26",
               "driver": "Valentino Alaux",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+14.376"
             },
             {
               "pos": 4,
               "number": "23",
               "driver": "Alejandro Martínez",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+15.522"
             },
             {
               "pos": 5,
               "number": "58",
               "driver": "Aldo Ortiz",
               "team": "Dodge",
-              "gap": ""
+              "gap": "+15.948"
             },
             {
               "pos": 6,
               "number": "222",
               "driver": "Marcelo Beraldi",
               "team": "Ford",
-              "gap": ""
+              "gap": "+19.898"
             },
             {
               "pos": 7,
               "number": "25",
               "driver": "Juan Tartaglino",
               "team": "Ford",
-              "gap": ""
+              "gap": "+30.449"
             },
             {
               "pos": 8,
@@ -225455,12 +225698,39 @@
               "driver": "Francisco Luengo",
               "team": "Chevrolet",
               "gap": "+11 vueltas"
+            },
+            {
+              "pos": 12,
+              "number": "75",
+              "driver": "Matias Frano",
+              "team": "Ford",
+              "gap": "+13 vueltas"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1145/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1146/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1145/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "139",
+                  "driver": "Santiago Arrigoni"
+                },
+                {
+                  "pos": 2,
+                  "number": "176",
+                  "driver": "Nicolás Jaime"
+                },
+                {
+                  "pos": 3,
+                  "number": "26",
+                  "driver": "Valentino Alaux"
+                }
+              ]
+            },
+            "note": "Oficial"
           }
         }
       ],
@@ -226513,63 +226783,63 @@
         "pos": 1,
         "driver": "Andrea Kimi Antonelli",
         "team": "Mercedes",
-        "points": 380,
+        "points": 390,
         "wins": 9
       },
       {
         "pos": 2,
         "driver": "Max Verstappen",
         "team": "Red Bull",
-        "points": 261,
+        "points": 279,
         "wins": 3
       },
       {
         "pos": 3,
-        "driver": "Lewis Hamilton",
-        "team": "Ferrari",
-        "points": 259,
-        "wins": 1
+        "driver": "George Russell",
+        "team": "Mercedes",
+        "points": 262,
+        "wins": 3
       },
       {
         "pos": 4,
-        "driver": "George Russell",
-        "team": "Mercedes",
-        "points": 250,
-        "wins": 3
+        "driver": "Lewis Hamilton",
+        "team": "Ferrari",
+        "points": 261,
+        "wins": 1
       },
       {
         "pos": 5,
         "driver": "Charles Leclerc",
         "team": "Ferrari",
-        "points": 245,
+        "points": 251,
         "wins": 1
       },
       {
         "pos": 6,
         "driver": "Lando Norris",
         "team": "McLaren",
-        "points": 221,
-        "wins": 2
+        "points": 246,
+        "wins": 3
       },
       {
         "pos": 7,
         "driver": "Oscar Piastri",
         "team": "McLaren",
-        "points": 144,
+        "points": 152,
         "wins": 0
       },
       {
         "pos": 8,
         "driver": "Isack Hadjar",
         "team": "Red Bull",
-        "points": 107,
+        "points": 122,
         "wins": 0
       },
       {
         "pos": 9,
         "driver": "Liam Lawson",
         "team": "Red Bull",
-        "points": 83,
+        "points": 87,
         "wins": 0
       },
       {
@@ -226611,7 +226881,7 @@
         "pos": 15,
         "driver": "Nico Hülkenberg",
         "team": "Audi",
-        "points": 13,
+        "points": 14,
         "wins": 0
       },
       {
@@ -228028,70 +228298,70 @@
         "pos": 1,
         "driver": "Nicolás Jaime",
         "team": "",
-        "points": 404.5,
+        "points": 446,
         "wins": 4
       },
       {
         "pos": 2,
         "driver": "Francisco Luengo",
         "team": "",
-        "points": 388.5,
+        "points": 416,
         "wins": 2
       },
       {
         "pos": 3,
+        "driver": "Valentino Alaux",
+        "team": "",
+        "points": 362,
+        "wins": 1
+      },
+      {
+        "pos": 4,
+        "driver": "Santiago Arrigoni",
+        "team": "",
+        "points": 356.5,
+        "wins": 1
+      },
+      {
+        "pos": 5,
         "driver": "Fabrizio Maggini",
         "team": "",
         "points": 325.5,
         "wins": 2
       },
       {
-        "pos": 4,
-        "driver": "Valentino Alaux",
-        "team": "",
-        "points": 325,
-        "wins": 1
-      },
-      {
-        "pos": 5,
-        "driver": "Santiago Arrigoni",
-        "team": "",
-        "points": 311.5,
-        "wins": 1
-      },
-      {
         "pos": 6,
         "driver": "Juan Tartaglino",
         "team": "",
-        "points": 278,
+        "points": 306,
         "wins": 0
       },
       {
         "pos": 7,
         "driver": "Alejandro Martínez",
         "team": "",
-        "points": 251.5,
+        "points": 285,
         "wins": 0
       },
       {
         "pos": 8,
         "driver": "Esteban Mancuso",
         "team": "",
-        "points": 243.5,
+        "points": 269,
         "wins": 0
       },
       {
         "pos": 9,
         "driver": "Esteban Luna",
         "team": "",
-        "points": 235,
+        "points": 263.5,
         "wins": 0
       },
       {
         "pos": 10,
         "driver": "Marcelo Beraldi",
         "team": "",
-        "points": 215.5,
+        "points": 244.5,
         "wins": 0
       },
       {
@@ -228112,35 +228382,35 @@
         "pos": 13,
         "driver": "Aldo Ortiz",
         "team": "",
-        "points": 121.5,
+        "points": 153.5,
         "wins": 0
       },
       {
         "pos": 14,
+        "driver": "Matías Frano",
+        "team": "",
+        "points": 81.5,
+        "wins": 0
+      },
+      {
+        "pos": 15,
         "driver": "Alan Denis Cifre",
         "team": "",
         "points": 59,
         "wins": 0
       },
       {
-        "pos": 15,
+        "pos": 16,
         "driver": "Francisco Nonnenmacher",
         "team": "",
         "points": 55,
         "wins": 0
       },
       {
-        "pos": 16,
+        "pos": 17,
         "driver": "Ramiro De Bonis",
         "team": "",
         "points": 55,
-        "wins": 0
-      },
-      {
-        "pos": 17,
-        "driver": "Matías Frano",
-        "team": "",
-        "points": 54.5,
         "wins": 0
       },
       {
@@ -228163,77 +228433,77 @@
         "pos": 1,
         "driver": "Iñaki Arrias",
         "team": "",
-        "points": 386,
+        "points": 420.5,
         "wins": 6
       },
       {
         "pos": 2,
         "driver": "Ignacio Lovich",
         "team": "",
-        "points": 363.5,
+        "points": 401.5,
         "wins": 1
       },
       {
         "pos": 3,
-        "driver": "Damian Pérez",
+        "driver": "Ignacio Vilas",
         "team": "",
-        "points": 336,
-        "wins": 1
+        "points": 379.5,
+        "wins": 2
       },
       {
         "pos": 4,
-        "driver": "Ignacio Vilas",
+        "driver": "Damian Pérez",
         "team": "",
-        "points": 335,
-        "wins": 2
+        "points": 378,
+        "wins": 1
       },
       {
         "pos": 5,
         "driver": "Bautista Roqueta",
         "team": "",
-        "points": 332,
+        "points": 364,
         "wins": 1
       },
       {
         "pos": 6,
         "driver": "Juan Conde",
         "team": "",
-        "points": 314.5,
+        "points": 347,
         "wins": 0
       },
       {
         "pos": 7,
         "driver": "Ignacio Quintana",
         "team": "",
-        "points": 314.5,
+        "points": 344,
         "wins": 0
       },
       {
         "pos": 8,
         "driver": "Hainze Dante Rubiera",
         "team": "",
-        "points": 229.5,
+        "points": 258.5,
         "wins": 0
       },
       {
         "pos": 9,
         "driver": "Facundo Ludueña",
         "team": "",
-        "points": 221.5,
+        "points": 248.5,
         "wins": 0
       },
       {
         "pos": 10,
         "driver": "Martín Taha",
         "team": "",
-        "points": 199,
+        "points": 223.5,
         "wins": 0
       },
       {
         "pos": 11,
         "driver": "Leonardo Forte",
         "team": "",
-        "points": 170.5,
+        "points": 193.5,
         "wins": 0
       },
       {
@@ -228247,7 +228517,7 @@
         "pos": 13,
         "driver": "Daniel Faggiano",
         "team": "",
-        "points": 75.5,
+        "points": 100.5,
         "wins": 0
       },
       {
@@ -228259,30 +228529,30 @@
       },
       {
         "pos": 15,
+        "driver": "Etcheberry Mauricio",
+        "team": "—",
+        "points": 48,
+        "wins": 0
+      },
+      {
+        "pos": 16,
         "driver": "Luca De Carlo",
         "team": "",
         "points": 35.5,
         "wins": 0
       },
       {
-        "pos": 16,
+        "pos": 17,
         "driver": "Lautaro Dominguez",
         "team": "",
         "points": 31,
         "wins": 0
       },
       {
-        "pos": 17,
+        "pos": 18,
         "driver": "Gabriel Villalba",
         "team": "",
         "points": 29,
-        "wins": 0
-      },
-      {
-        "pos": 18,
-        "driver": "Etcheberry Mauricio",
-        "team": "—",
-        "points": 27,
         "wins": 0
       },
       {
@@ -228296,80 +228566,80 @@
     "tc-pick-up": [
       {
         "pos": 1,
-        "driver": "Otto Fritzler",
+        "driver": "Agustín Canapino",
         "team": "",
-        "points": 337,
-        "wins": 1
+        "points": 378.5,
+        "wins": 3
       },
       {
         "pos": 2,
-        "driver": "Agustín Canapino",
+        "driver": "Otto Fritzler",
         "team": "",
-        "points": 333.5,
-        "wins": 3
+        "points": 375,
+        "wins": 1
       },
       {
         "pos": 3,
         "driver": "Mariano Werner",
         "team": "",
-        "points": 312,
+        "points": 346,
         "wins": 2
       },
       {
         "pos": 4,
         "driver": "Hernán Palazzo",
         "team": "",
-        "points": 303.5,
+        "points": 345,
         "wins": 1
       },
       {
         "pos": 5,
         "driver": "Gastón Mazzacane",
         "team": "",
-        "points": 292,
+        "points": 317.5,
         "wins": 0
       },
       {
         "pos": 6,
         "driver": "Diego Azar",
         "team": "",
-        "points": 286.5,
+        "points": 314.5,
         "wins": 1
       },
       {
         "pos": 7,
         "driver": "Marco Dianda",
         "team": "",
-        "points": 282,
+        "points": 310.5,
         "wins": 1
       },
       {
         "pos": 8,
         "driver": "Ignacio Faín",
         "team": "",
-        "points": 274.5,
+        "points": 305.5,
         "wins": 0
       },
       {
         "pos": 9,
-        "driver": "Tobias Martinez",
+        "driver": "Diego De Carlo",
         "team": "",
-        "points": 254.5,
-        "wins": 1
+        "points": 279.5,
+        "wins": 0
       },
       {
         "pos": 10,
-        "driver": "Diego De Carlo",
+        "driver": "Tomás Abdala",
         "team": "",
-        "points": 254.5,
+        "points": 265,
         "wins": 0
       },
       {
         "pos": 11,
-        "driver": "Tomás Abdala",
+        "driver": "Tobias Martinez",
         "team": "",
-        "points": 234.5,
-        "wins": 0
+        "points": 254.5,
+        "wins": 1
       },
       {
         "pos": 12,
@@ -228440,77 +228710,77 @@
         "pos": 1,
         "driver": "Tomás Pellandino",
         "team": "",
-        "points": 361.5,
+        "points": 406.5,
         "wins": 3
       },
       {
         "pos": 2,
         "driver": "Santiago Biagi",
         "team": "",
-        "points": 361,
+        "points": 401.5,
         "wins": 3
       },
       {
         "pos": 3,
         "driver": "Antonino Sganga",
         "team": "",
-        "points": 302,
+        "points": 335,
         "wins": 1
       },
       {
         "pos": 4,
+        "driver": "Nicanor Santilli Pazos",
+        "team": "",
+        "points": 309,
+        "wins": 0
+      },
+      {
+        "pos": 5,
+        "driver": "Nahuel Cordone",
+        "team": "",
+        "points": 307,
+        "wins": 1
+      },
+      {
+        "pos": 6,
+        "driver": "Luis Catelli",
+        "team": "",
+        "points": 305,
+        "wins": 0
+      },
+      {
+        "pos": 7,
         "driver": "Faustino Cifre",
         "team": "",
         "points": 289.5,
         "wins": 1
       },
       {
-        "pos": 5,
-        "driver": "Luis Catelli",
-        "team": "",
-        "points": 278,
-        "wins": 0
-      },
-      {
-        "pos": 6,
-        "driver": "Nicanor Santilli Pazos",
-        "team": "",
-        "points": 274,
-        "wins": 0
-      },
-      {
-        "pos": 7,
-        "driver": "Nahuel Cordone",
-        "team": "",
-        "points": 271,
-        "wins": 1
-      },
-      {
         "pos": 8,
         "driver": "Néstor Omar Goya",
         "team": "",
-        "points": 233.5,
+        "points": 262,
         "wins": 0
       },
       {
         "pos": 9,
+        "driver": "José Alberto Goya",
+        "team": "",
+        "points": 238,
+        "wins": 0
+      },
+      {
+        "pos": 10,
         "driver": "Juan Pablo Alberti",
         "team": "",
         "points": 223,
         "wins": 1
       },
       {
-        "pos": 10,
-        "driver": "José Alberto Goya",
-        "team": "",
-        "points": 213.5,
-        "wins": 0
-      },
-      {
         "pos": 11,
         "driver": "Alvaro Oroza",
         "team": "",
-        "points": 186,
+        "points": 211,
         "wins": 0
       },
       {
@@ -230811,6 +231081,136 @@
               "points": 0
             }
           ]
+        },
+        {
+          "round": 20,
+          "standings": [
+            {
+              "driver": "Andrea Kimi Antonelli",
+              "pos": 1,
+              "points": 390
+            },
+            {
+              "driver": "Max Verstappen",
+              "pos": 2,
+              "points": 279
+            },
+            {
+              "driver": "George Russell",
+              "pos": 3,
+              "points": 262
+            },
+            {
+              "driver": "Lewis Hamilton",
+              "pos": 4,
+              "points": 261
+            },
+            {
+              "driver": "Charles Leclerc",
+              "pos": 5,
+              "points": 251
+            },
+            {
+              "driver": "Lando Norris",
+              "pos": 6,
+              "points": 246
+            },
+            {
+              "driver": "Oscar Piastri",
+              "pos": 7,
+              "points": 152
+            },
+            {
+              "driver": "Isack Hadjar",
+              "pos": 8,
+              "points": 122
+            },
+            {
+              "driver": "Liam Lawson",
+              "pos": 9,
+              "points": 87
+            },
+            {
+              "driver": "Pierre Gasly",
+              "pos": 10,
+              "points": 42
+            },
+            {
+              "driver": "Arvid Lindblad",
+              "pos": 11,
+              "points": 38
+            },
+            {
+              "driver": "Franco Colapinto",
+              "pos": 12,
+              "points": 27
+            },
+            {
+              "driver": "Oliver Bearman",
+              "pos": 13,
+              "points": 23
+            },
+            {
+              "driver": "Gabriel Bortoleto",
+              "pos": 14,
+              "points": 14
+            },
+            {
+              "driver": "Nico Hülkenberg",
+              "pos": 15,
+              "points": 14
+            },
+            {
+              "driver": "Esteban Ocon",
+              "pos": 16,
+              "points": 7
+            },
+            {
+              "driver": "Fernando Alonso",
+              "pos": 17,
+              "points": 7
+            },
+            {
+              "driver": "Carlos Sainz",
+              "pos": 18,
+              "points": 7
+            },
+            {
+              "driver": "Alexander Albon",
+              "pos": 19,
+              "points": 5
+            },
+            {
+              "driver": "Yuki Tsunoda",
+              "pos": 20,
+              "points": 1
+            },
+            {
+              "driver": "Ryo Hirakawa",
+              "pos": 21,
+              "points": 1
+            },
+            {
+              "driver": "Lance Stroll",
+              "pos": 22,
+              "points": 0
+            },
+            {
+              "driver": "Valtteri Bottas",
+              "pos": 23,
+              "points": 0
+            },
+            {
+              "driver": "Sergio Pérez",
+              "pos": 24,
+              "points": 0
+            },
+            {
+              "driver": "Rafael Camara",
+              "pos": 25,
+              "points": 0
+            }
+          ]
         }
       ]
     },
@@ -232670,8 +233070,8 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 940,
-      "pagesFetched": 138,
+      "documents": 942,
+      "pagesFetched": 140,
       "eventsWithResults": 68,
       "retagged": {
         "1003": {
@@ -232750,11 +233150,9 @@
       "sessionsWithResults": 54
     },
     "f1Official": {
-      "requests": 1,
+      "requests": 0,
       "sessionsWithResults": 0,
-      "errors": [
-        "GP de Brasil · Carrera: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/race-result no es de Brazilian Grand Prix"
-      ]
+      "errors": []
     },
     "f1Youtube": {
       "scanned": 15,
@@ -233137,7 +233535,6 @@
     }
   },
   "failures": [
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
-    "F1 oficial: GP de Brasil · Carrera: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/race-result no es de Brazilian Grand Prix"
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)"
   ]
 }
