@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T20:15:57.327Z",
+  "generatedAt": "2026-11-08T21:55:51.299Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -225889,7 +225889,110 @@
           "name": "Carrera 2",
           "start": "2026-11-08T12:00:00-03:00",
           "timeKnown": false,
-          "durationMin": 35
+          "durationMin": 35,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Leonel Pernía",
+              "team": "Honda Racing",
+              "number": "1",
+              "gap": "",
+              "points": 35
+            },
+            {
+              "pos": 2,
+              "driver": "Fabricio Pezzini",
+              "team": "Paladini Racing",
+              "number": "9",
+              "gap": "",
+              "points": 30
+            },
+            {
+              "pos": 3,
+              "driver": "Nicolás Fuca",
+              "team": "Paladini Racing",
+              "number": "3",
+              "gap": "",
+              "points": 27
+            },
+            {
+              "pos": 4,
+              "driver": "Enzo Gianfratti",
+              "team": "G Racing Motorsport",
+              "number": "19",
+              "gap": "",
+              "points": 24
+            },
+            {
+              "pos": 5,
+              "driver": "Juan Ángel Rosso",
+              "team": "Paladini Racing",
+              "number": "16",
+              "gap": "",
+              "points": 21
+            },
+            {
+              "pos": 6,
+              "driver": "Bruno Massa",
+              "team": "G Racing Motorsport",
+              "number": "20",
+              "gap": "",
+              "points": 18
+            },
+            {
+              "pos": 7,
+              "driver": "Raphael Reis",
+              "team": "W2 Pro GP",
+              "number": "77",
+              "gap": "",
+              "points": 15
+            },
+            {
+              "pos": 8,
+              "driver": "Gabriel Moura",
+              "team": "Cobra Racing Team",
+              "number": "86",
+              "gap": "",
+              "points": 13
+            },
+            {
+              "pos": 9,
+              "driver": "Adrián Chiriano",
+              "team": "Honda Racing",
+              "number": "88",
+              "gap": "",
+              "points": 11
+            },
+            {
+              "pos": 10,
+              "driver": "Javier Jacobson",
+              "team": "Scuderia URT",
+              "number": "13",
+              "gap": "",
+              "points": 9
+            },
+            {
+              "pos": 11,
+              "driver": "Fabián Yannantuoni",
+              "team": "Paladini Racing",
+              "number": "5",
+              "gap": "",
+              "points": 7
+            },
+            {
+              "pos": 12,
+              "driver": "Enrique Maglione",
+              "team": "Uruguay Racing Team",
+              "number": "15",
+              "gap": "",
+              "points": 5
+            }
+          ],
+          "resultsSource": {
+            "name": "TCR South America · puntos del campeonato",
+            "url": "https://apisa.tcr-series.com/1794164477242_2DA_FINAL_TCR_SA__3_.pdf",
+            "note": "Sólo los 15 que sumaron puntos; la clasificación completa está en el PDF oficial."
+          }
         }
       ],
       "source": "TCR South America (API oficial) · Wikipedia (circuito)"
@@ -227630,7 +227733,7 @@
         "pos": 1,
         "driver": "Leonel Pernía",
         "team": "Honda Racing",
-        "points": 475
+        "points": 510
       },
       {
         "pos": 2,
@@ -227642,7 +227745,7 @@
         "pos": 3,
         "driver": "Raphael Reis",
         "team": "W2 Pro GP",
-        "points": 372
+        "points": 387
       },
       {
         "pos": 4,
@@ -227654,7 +227757,7 @@
         "pos": 5,
         "driver": "Juan Ángel Rosso",
         "team": "Paladini Racing",
-        "points": 293
+        "points": 314
       },
       {
         "pos": 6,
@@ -227670,39 +227773,39 @@
       },
       {
         "pos": 8,
+        "driver": "Enzo Gianfratti",
+        "team": "G Racing Motorsport",
+        "points": 239
+      },
+      {
+        "pos": 9,
         "driver": "Nelson Piquet Jr.",
         "team": "Honda Racing",
         "points": 237
       },
       {
-        "pos": 9,
-        "driver": "Enzo Gianfratti",
-        "team": "G Racing Motorsport",
-        "points": 215
-      },
-      {
         "pos": 10,
-        "driver": "Pedro Cardoso",
-        "team": "G Racing Motorsport",
-        "points": 194
+        "driver": "Fabricio Pezzini",
+        "team": "Paladini Racing",
+        "points": 224
       },
       {
         "pos": 11,
-        "driver": "Fabricio Pezzini",
-        "team": "Paladini Racing",
+        "driver": "Pedro Cardoso",
+        "team": "G Racing Motorsport",
         "points": 194
       },
       {
         "pos": 12,
         "driver": "Fabián Yannantuoni",
         "team": "Paladini Racing",
-        "points": 161
+        "points": 168
       },
       {
         "pos": 13,
         "driver": "Nicolás Fuca",
         "team": "Paladini Racing",
-        "points": 134
+        "points": 161
       },
       {
         "pos": 14,
@@ -227714,19 +227817,19 @@
         "pos": 15,
         "driver": "Gabriel Moura",
         "team": "Cobra Racing Team",
-        "points": 88
+        "points": 101
       },
       {
         "pos": 16,
-        "driver": "Erick Schotten",
-        "team": "W2 Pro GP",
-        "points": 80
+        "driver": "Adrián Chiriano",
+        "team": "Honda Racing",
+        "points": 88
       },
       {
         "pos": 17,
-        "driver": "Adrián Chiriano",
-        "team": "Honda Racing",
-        "points": 77
+        "driver": "Erick Schotten",
+        "team": "W2 Pro GP",
+        "points": 80
       },
       {
         "pos": 18,
@@ -227736,27 +227839,27 @@
       },
       {
         "pos": 19,
+        "driver": "Bruno Massa",
+        "team": "G Racing Motorsport",
+        "points": 71
+      },
+      {
+        "pos": 20,
         "driver": "Felipe Fraga",
         "team": "W2 Pro GP",
         "points": 60
       },
       {
-        "pos": 20,
+        "pos": 21,
         "driver": "Diego Ciantini",
         "team": "Hyundai MSA",
         "points": 55
       },
       {
-        "pos": 21,
+        "pos": 22,
         "driver": "Gabryel Romano",
         "team": "Hyundai MSA",
         "points": 55
-      },
-      {
-        "pos": 22,
-        "driver": "Bruno Massa",
-        "team": "G Racing Motorsport",
-        "points": 53
       },
       {
         "pos": 23,
@@ -227778,15 +227881,15 @@
       },
       {
         "pos": 26,
-        "driver": "Esteban Guerrieri",
-        "team": "Honda Racing",
-        "points": 28
+        "driver": "Enrique Maglione",
+        "team": "Uruguay Racing Team",
+        "points": 31
       },
       {
         "pos": 27,
-        "driver": "Enrique Maglione",
-        "team": "Uruguay Racing Team",
-        "points": 26
+        "driver": "Esteban Guerrieri",
+        "team": "Honda Racing",
+        "points": 28
       },
       {
         "pos": 28,
@@ -227844,42 +227947,48 @@
       },
       {
         "pos": 37,
+        "driver": "Javier Jacobson",
+        "team": "Scuderia URT",
+        "points": 9
+      },
+      {
+        "pos": 38,
         "driver": "Alberto Catucci",
         "team": "Hyundai MSA",
         "points": 6
       },
       {
-        "pos": 38,
+        "pos": 39,
         "driver": "Fabio Casagrande",
         "team": "Honda Racing",
         "points": 4
       },
       {
-        "pos": 39,
+        "pos": 40,
         "driver": "Gaetano Di Mauro",
         "team": "Hyundai MSA",
         "points": 4
       },
       {
-        "pos": 40,
+        "pos": 41,
         "driver": "Jorge Martelli",
         "team": "Cobra Racing Team",
         "points": 4
       },
       {
-        "pos": 41,
+        "pos": 42,
         "driver": "Nicolás Ambiado",
         "team": "Scuderia URT",
         "points": 3
       },
       {
-        "pos": 42,
+        "pos": 43,
         "driver": "Galid Osman",
         "team": "Uruguay Racing Team",
         "points": 2
       },
       {
-        "pos": 43,
+        "pos": 44,
         "driver": "Fernando Croce",
         "team": "Honda Racing",
         "points": 1

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T15:15:58.997Z",
+  "generatedAt": "2026-11-08T21:55:52.194Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -5708,6 +5708,26 @@
       },
       "firstSeen": "2026-03-06",
       "lastSeen": "2026-03-08"
+    },
+    {
+      "key": "jacobson javier",
+      "keys": [
+        "jacobson javier"
+      ],
+      "slug": "javier-jacobson",
+      "name": "Javier Jacobson",
+      "aliases": [],
+      "series": [
+        "tcr-sa"
+      ],
+      "numbers": {
+        "tcr-sa": "13"
+      },
+      "teams": {
+        "tcr-sa": "Scuderia URT"
+      },
+      "firstSeen": "2026-11-08",
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "javier merlo",
