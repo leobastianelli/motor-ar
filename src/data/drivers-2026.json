@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T14:31:02.655Z",
+  "generatedAt": "2026-11-08T15:15:58.997Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -57,7 +57,7 @@
         "tcr-sa": "Honda Racing"
       },
       "firstSeen": "2026-03-08",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "adrian cima",
@@ -1379,7 +1379,7 @@
         "tcr-sa": "Hyundai MSA"
       },
       "firstSeen": "2026-03-08",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "bello carlos",
@@ -3093,7 +3093,7 @@
         "tcr-sa": "Paladini Racing"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01",
+      "lastSeen": "2026-11-08",
       "formerSlugs": [
         "fabia-n-yannantuoni"
       ]
@@ -3137,7 +3137,7 @@
         "tcr-sa": "Paladini Racing"
       },
       "firstSeen": "2026-03-08",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "fabricio toselli",
@@ -6586,7 +6586,7 @@
         "tcr-sa": "Paladini Racing"
       },
       "firstSeen": "2026-03-08",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "angiorama juan",
@@ -8073,7 +8073,7 @@
         "tcr-sa": "Honda Racing"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01",
+      "lastSeen": "2026-11-08",
       "formerSlugs": [
         "leonel-perna-a"
       ]
@@ -8227,16 +8227,19 @@
       "aliases": [],
       "series": [
         "tc",
-        "tc2000"
+        "tc2000",
+        "tcr-sa"
       ],
       "numbers": {
-        "tc": "81"
+        "tc": "81",
+        "tcr-sa": "81"
       },
       "teams": {
-        "tc": "Ford"
+        "tc": "Ford",
+        "tcr-sa": "Scuderia URT"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-09-27"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "dalmazzo lucas",
@@ -10630,7 +10633,7 @@
         "tcr-sa": "Hyundai MSA"
       },
       "firstSeen": "2026-03-08",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "nestor ochetti",
@@ -10857,7 +10860,7 @@
         "tcr-sa": "Paladini Racing"
       },
       "firstSeen": "2026-03-08",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "gonzalez nicolas",
@@ -13473,7 +13476,7 @@
         "tcr-sa": "Honda Racing"
       },
       "firstSeen": "2026-03-08",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "martinez tobias",

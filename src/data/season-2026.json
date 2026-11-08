@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T14:31:01.678Z",
+  "generatedAt": "2026-11-08T15:15:57.962Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -225114,7 +225114,126 @@
           "name": "Carrera 1",
           "start": "2026-11-08T12:00:00-03:00",
           "timeKnown": false,
-          "durationMin": 35
+          "durationMin": 35,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Néstor Girolami",
+              "team": "Hyundai MSA",
+              "number": "29",
+              "gap": "",
+              "points": 40
+            },
+            {
+              "pos": 2,
+              "driver": "Leonel Pernía",
+              "team": "Honda Racing",
+              "number": "1",
+              "gap": "",
+              "points": 35
+            },
+            {
+              "pos": 3,
+              "driver": "Tiago Pernía",
+              "team": "Honda Racing",
+              "number": "85",
+              "gap": "",
+              "points": 30
+            },
+            {
+              "pos": 4,
+              "driver": "Fabián Yannantuoni",
+              "team": "Paladini Racing",
+              "number": "5",
+              "gap": "",
+              "points": 27
+            },
+            {
+              "pos": 5,
+              "driver": "Juan Ángel Rosso",
+              "team": "Paladini Racing",
+              "number": "16",
+              "gap": "",
+              "points": 24
+            },
+            {
+              "pos": 6,
+              "driver": "Nelson Piquet Jr.",
+              "team": "Honda Racing",
+              "number": "33",
+              "gap": "",
+              "points": 21
+            },
+            {
+              "pos": 7,
+              "driver": "Camilo Trappa",
+              "team": "Hyundai MSA",
+              "number": "27",
+              "gap": "",
+              "points": 18
+            },
+            {
+              "pos": 8,
+              "driver": "Fabricio Pezzini",
+              "team": "Paladini Racing",
+              "number": "9",
+              "gap": "",
+              "points": 15
+            },
+            {
+              "pos": 9,
+              "driver": "Lucas Carabajal",
+              "team": "Scuderia URT",
+              "number": "81",
+              "gap": "",
+              "points": 13
+            },
+            {
+              "pos": 11,
+              "driver": "Nicolás Fuca",
+              "team": "Paladini Racing",
+              "number": "3",
+              "gap": "",
+              "points": 9
+            },
+            {
+              "pos": 12,
+              "driver": "Adrián Chiriano",
+              "team": "Honda Racing",
+              "number": "88",
+              "gap": "",
+              "points": 7
+            },
+            {
+              "pos": 13,
+              "driver": "Juan Manuel Casella",
+              "team": "Uruguay Racing Team",
+              "number": "60",
+              "gap": "",
+              "points": 5
+            },
+            {
+              "pos": 14,
+              "driver": "Enzo Gianfratti",
+              "team": "G Racing Motorsport",
+              "number": "19",
+              "gap": "",
+              "points": 3
+            },
+            {
+              "pos": 15,
+              "driver": "Bruno Massa",
+              "team": "G Racing Motorsport",
+              "number": "20",
+              "gap": "",
+              "points": 1
+            }
+          ],
+          "resultsSource": {
+            "name": "TCR South America · puntos del campeonato",
+            "url": "https://southamerica.tcr-series.com/resultados",
+            "note": "Sólo los 15 que sumaron puntos; la clasificación completa está en el PDF oficial."
+          }
         },
         {
           "id": "tcr-sa-2026-9-r2",
@@ -226863,13 +226982,13 @@
         "pos": 1,
         "driver": "Leonel Pernía",
         "team": "Honda Racing",
-        "points": 440
+        "points": 475
       },
       {
         "pos": 2,
         "driver": "Néstor Girolami",
         "team": "Hyundai MSA",
-        "points": 387
+        "points": 427
       },
       {
         "pos": 3,
@@ -226881,19 +227000,19 @@
         "pos": 4,
         "driver": "Tiago Pernía",
         "team": "Honda Racing",
-        "points": 308
+        "points": 338
       },
       {
         "pos": 5,
         "driver": "Juan Ángel Rosso",
         "team": "Paladini Racing",
-        "points": 269
+        "points": 293
       },
       {
         "pos": 6,
         "driver": "Camilo Trappa",
         "team": "Hyundai MSA",
-        "points": 254
+        "points": 272
       },
       {
         "pos": 7,
@@ -226905,13 +227024,13 @@
         "pos": 8,
         "driver": "Nelson Piquet Jr.",
         "team": "Honda Racing",
-        "points": 216
+        "points": 237
       },
       {
         "pos": 9,
         "driver": "Enzo Gianfratti",
         "team": "G Racing Motorsport",
-        "points": 212
+        "points": 215
       },
       {
         "pos": 10,
@@ -226923,25 +227042,25 @@
         "pos": 11,
         "driver": "Fabricio Pezzini",
         "team": "Paladini Racing",
-        "points": 179
+        "points": 194
       },
       {
         "pos": 12,
         "driver": "Fabián Yannantuoni",
         "team": "Paladini Racing",
-        "points": 134
+        "points": 161
       },
       {
         "pos": 13,
         "driver": "Nicolás Fuca",
         "team": "Paladini Racing",
-        "points": 125
+        "points": 134
       },
       {
         "pos": 14,
         "driver": "Juan Manuel Casella",
         "team": "Uruguay Racing Team",
-        "points": 108
+        "points": 113
       },
       {
         "pos": 15,
@@ -226957,15 +227076,15 @@
       },
       {
         "pos": 17,
-        "driver": "Celso Neto",
-        "team": "W2 Pro GP",
-        "points": 76
+        "driver": "Adrián Chiriano",
+        "team": "Honda Racing",
+        "points": 77
       },
       {
         "pos": 18,
-        "driver": "Adrián Chiriano",
-        "team": "Honda Racing",
-        "points": 70
+        "driver": "Celso Neto",
+        "team": "W2 Pro GP",
+        "points": 76
       },
       {
         "pos": 19,
@@ -226989,7 +227108,7 @@
         "pos": 22,
         "driver": "Bruno Massa",
         "team": "G Racing Motorsport",
-        "points": 52
+        "points": 53
       },
       {
         "pos": 23,
@@ -227059,54 +227178,60 @@
       },
       {
         "pos": 34,
+        "driver": "Lucas Carabajal",
+        "team": "Scuderia URT",
+        "points": 13
+      },
+      {
+        "pos": 35,
         "driver": "Beto Monteiro",
         "team": "Paladini Racing",
         "points": 11
       },
       {
-        "pos": 35,
+        "pos": 36,
         "driver": "Sebastián Quirno",
         "team": "Scuderia URT",
         "points": 10
       },
       {
-        "pos": 36,
+        "pos": 37,
         "driver": "Alberto Catucci",
         "team": "Hyundai MSA",
         "points": 6
       },
       {
-        "pos": 37,
+        "pos": 38,
         "driver": "Fabio Casagrande",
         "team": "Honda Racing",
         "points": 4
       },
       {
-        "pos": 38,
+        "pos": 39,
         "driver": "Gaetano Di Mauro",
         "team": "Hyundai MSA",
         "points": 4
       },
       {
-        "pos": 39,
+        "pos": 40,
         "driver": "Jorge Martelli",
         "team": "Cobra Racing Team",
         "points": 4
       },
       {
-        "pos": 40,
+        "pos": 41,
         "driver": "Nicolás Ambiado",
         "team": "Scuderia URT",
         "points": 3
       },
       {
-        "pos": 41,
+        "pos": 42,
         "driver": "Galid Osman",
         "team": "Uruguay Racing Team",
         "points": 2
       },
       {
-        "pos": 42,
+        "pos": 43,
         "driver": "Fernando Croce",
         "team": "Honda Racing",
         "points": 1
@@ -232168,7 +232293,7 @@
     },
     "timing": {
       "documents": 934,
-      "pagesFetched": 139,
+      "pagesFetched": 136,
       "eventsWithResults": 68,
       "retagged": {
         "1003": {
@@ -232631,5 +232756,7 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/8/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)"
+  ]
 }
