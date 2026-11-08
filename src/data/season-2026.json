@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T23:36:16.232Z",
+  "generatedAt": "2026-11-08T00:26:08.051Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -232016,6 +232016,7 @@
     }
   },
   "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/7/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "F1 oficial: GP de Brasil · Clasificación: la página de https://www.formula1.com/en/results/2026/races/1299/brazil/qualifying no es de Brazilian Grand Prix",
     "YouTube F1: No se pudo descargar https://www.youtube.com/feeds/videos.xml?channel_id=UCB_qr75-ydFVKSF9Dmo6izg: HTTP 404 (text/html; charset=UTF-8) (se conservan los videos anteriores)"
   ]
