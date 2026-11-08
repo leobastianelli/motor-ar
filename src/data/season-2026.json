@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T21:55:51.299Z",
+  "generatedAt": "2026-11-08T22:38:16.633Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -228496,23 +228496,23 @@
       },
       {
         "pos": 14,
+        "driver": "Francisco Nonnenmacher",
+        "team": "",
+        "points": 82,
+        "wins": 0
+      },
+      {
+        "pos": 15,
         "driver": "Matías Frano",
         "team": "",
         "points": 81.5,
         "wins": 0
       },
       {
-        "pos": 15,
+        "pos": 16,
         "driver": "Alan Denis Cifre",
         "team": "",
         "points": 59,
-        "wins": 0
-      },
-      {
-        "pos": 16,
-        "driver": "Francisco Nonnenmacher",
-        "team": "",
-        "points": 55,
         "wins": 0
       },
       {
@@ -228669,6 +228669,13 @@
         "driver": "Dino Di Palma",
         "team": "",
         "points": 23,
+        "wins": 0
+      },
+      {
+        "pos": 20,
+        "driver": "Ignacio Diaz",
+        "team": "",
+        "points": 22,
         "wins": 0
       }
     ],
