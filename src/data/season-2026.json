@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T13:55:49.177Z",
+  "generatedAt": "2026-11-08T14:31:01.678Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -224010,76 +224010,104 @@
               "number": "1",
               "driver": "Agustín Canapino",
               "team": "Chevrolet",
-              "gap": ""
+              "gap": "7:31.148"
             },
             {
               "pos": 2,
               "number": "119",
               "driver": "Hernán Palazzo",
               "team": "Toyota",
-              "gap": ""
+              "gap": "+0.469"
             },
             {
               "pos": 3,
               "number": "256",
               "driver": "Otto Fritzler",
               "team": "Ford",
-              "gap": ""
+              "gap": "+0.803"
             },
             {
               "pos": 4,
               "number": "126",
               "driver": "Thomas Ricciardi",
               "team": "Ford",
-              "gap": ""
+              "gap": "+3.973"
             },
             {
               "pos": 5,
               "number": "3",
               "driver": "Mariano Werner",
               "team": "Foton",
-              "gap": ""
+              "gap": "+4.129"
             },
             {
               "pos": 6,
               "number": "147",
               "driver": "Marco Dianda",
               "team": "Volkswagen",
-              "gap": ""
+              "gap": "+4.313"
             },
             {
               "pos": 7,
               "number": "86",
               "driver": "Ignacio Faín",
               "team": "Ford",
-              "gap": ""
+              "gap": "+4.458"
             },
             {
               "pos": 8,
               "number": "11",
               "driver": "Gaston Mazzacane",
               "team": "Foton",
-              "gap": ""
+              "gap": "+6.804"
             },
             {
               "pos": 9,
               "number": "110",
               "driver": "Diego Azar",
               "team": "Toyota",
-              "gap": ""
+              "gap": "+9.035"
             },
             {
               "pos": 10,
               "number": "12",
               "driver": "Tomás Abdala",
               "team": "Ford",
-              "gap": ""
+              "gap": "+33.668"
+            },
+            {
+              "pos": 11,
+              "number": "13",
+              "driver": "Diego De Carlo",
+              "team": "Volkswagen",
+              "gap": "",
+              "status": "Sin tiempo"
             }
           ],
           "resultsSource": {
             "name": "ACTC · tiempos oficiales",
-            "url": "https://tiempos.actc.org.ar/resultados/1137/ver",
-            "status": "provisional"
+            "url": "https://tiempos.actc.org.ar/resultados/1139/ver",
+            "provisional": {
+              "url": "https://tiempos.actc.org.ar/resultados/1137/ver",
+              "podium": [
+                {
+                  "pos": 1,
+                  "number": "1",
+                  "driver": "Agustín Canapino"
+                },
+                {
+                  "pos": 2,
+                  "number": "119",
+                  "driver": "Hernán Palazzo"
+                },
+                {
+                  "pos": 3,
+                  "number": "256",
+                  "driver": "Otto Fritzler"
+                }
+              ]
+            },
+            "note": "Oficial"
           }
         },
         {
@@ -232139,8 +232167,8 @@
       "eventsWithTimes": 46
     },
     "timing": {
-      "documents": 932,
-      "pagesFetched": 138,
+      "documents": 934,
+      "pagesFetched": 139,
       "eventsWithResults": 68,
       "retagged": {
         "1003": {
