@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T19:24:32.299Z",
+  "generatedAt": "2026-11-10T16:45:37.885Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223143,6 +223143,7 @@
             {
               "pos": 13,
               "driver": "Rafael Camara",
+              "code": "CAM",
               "team": "Haas F1 Team",
               "gap": "1:31.515"
             },
@@ -223413,6 +223414,7 @@
               "pos": 20,
               "positionText": "20",
               "driver": "Rafael Camara",
+              "code": "CAM",
               "team": "Haas F1 Team",
               "gap": "+51.715",
               "points": 0,
@@ -233113,6 +233115,22 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -233634,7 +233652,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON"
-  ]
+  "failures": []
 }
