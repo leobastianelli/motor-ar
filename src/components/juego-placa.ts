@@ -82,7 +82,9 @@ export async function dibujarPlaca(d: DatosPlaca): Promise<Blob> {
   } catch {
     // Si no se puede esperar a las fuentes, se dibuja igual con la de respaldo.
   }
-  const familia = getComputedStyle(document.body).fontFamily || "Arial, sans-serif";
+  // El cuerpo ahora usa Geist: la placa sigue con Archivo, que es la letra de titulares.
+  const archivo = getComputedStyle(document.documentElement).getPropertyValue("--font-archivo").trim();
+  const familia = archivo ? `${archivo}, Arial, sans-serif` : getComputedStyle(document.body).fontFamily || "Arial, sans-serif";
   const fuente = (peso: number, px: number) => `${peso} ${px}px ${familia}`;
   const condensada = (on: boolean) => {
     if ("fontStretch" in ctx) (ctx as CanvasRenderingContext2D & { fontStretch: string }).fontStretch = on ? "condensed" : "normal";

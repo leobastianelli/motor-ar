@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { Archivo } from "next/font/google";
+import { Archivo, Geist, Geist_Mono } from "next/font/google";
 import { after } from "next/server";
 import { CookieBanner } from "@/components/cookie-banner";
 import { Footer } from "@/components/footer";
@@ -15,11 +15,17 @@ import { getAllNotes } from "@/lib/notas";
 import { loadRawSeason } from "@/lib/season-data";
 import { dataMetaContent, isFallback } from "@/lib/salud-core.mjs";
 import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
+import "./tokens.css";
 import "./globals.css";
 import "./clases.css";
+import "./chrome.css";
+import "./sitio.css";
 
-// Una sola familia: Archivo variable, con eje de ancho para titulares condensados.
-const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], axes: ["wdth"], display: "swap" });
+// Archivo (estudio argentino Omnibus-Type) para titulares, con su eje de ancho y cursiva; Geist para leer; Geist Mono para tiempos y vueltas.
+// Las tres quedan como variables CSS; tokens.css arma con ellas --font-display, --font-body y --font-num.
+const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], axes: ["wdth"], style: ["normal", "italic"], display: "swap" });
+const geist = Geist({ variable: "--font-geist", subsets: ["latin"], display: "swap" });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"], display: "swap" });
 
 const description = "Horarios en hora argentina, dónde ver y resultados de F1, F2, Turismo Carretera, TC Pista, TN y más. Todos los pilotos argentinos, fecha por fecha.";
 
@@ -50,7 +56,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
     after(() => runHotRefresh());
   }
   return (
-    <html lang="es-AR" className={archivo.variable}>
+    <html lang="es-AR" className={`${archivo.variable} ${geist.variable} ${geistMono.variable}`}>
       <body>
         {stale && (
           <p className="stale-notice" role="status">

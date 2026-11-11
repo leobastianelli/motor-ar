@@ -1,10 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Fragment, useMemo, type CSSProperties, type ReactNode } from "react";
 import { Agenda } from "@/components/agenda";
 import { AutoRefresh, MinutesLeft, useNow } from "@/components/live-clock";
 import { HCode, HLabel, HState, HTitle } from "@/components/home-parts";
+import { PhotoCredit } from "@/components/pista";
+import type { Photo } from "@/lib/photos";
 import { ResultsStatus } from "@/components/results-status";
 import { puestoEnClase } from "@/lib/clase.mjs";
 import { provisionalSuffix } from "@/lib/provisorio.mjs";
@@ -53,6 +56,7 @@ export function HomeView({
   tiers,
   driversAbroad,
   standings,
+  photos = {},
   serverNow,
   simulated,
   jump,
@@ -64,6 +68,8 @@ export function HomeView({
   tiers: Record<string, 1 | 2 | 3>;
   driversAbroad: PortadaDriver[];
   standings: Record<string, { position: number; points: number; clase?: string } | null>;
+  /** Foto de portada por categoría (Wikimedia Commons, con crédito). */
+  photos?: Record<string, Photo>;
   serverNow: string;
   simulated: boolean;
   /** El acceso directo a cada categoría (no depende de la hora: se dibuja en el servidor). */
@@ -181,6 +187,10 @@ export function HomeView({
     range = rangeOf(days);
     moment = [upcomingRow, mode === "midweek" ? latestRow : undefined, nextArgRow];
   }
+
+  // La foto de la portada: la categoría de lo que está en vivo, si no la de lo que sigue, si no la del último resultado.
+  const heroSeries = live?.series ?? first?.series ?? latest?.series;
+  const hero = heroSeries ? photos[heroSeries.id] : undefined;
 
   // Un piloto con algo para mostrar pesa como tarjeta; uno sin actividad, como una fila de una línea (mismo orden que antes).
   const active = runners.filter((r) => r.status.state !== "no-data");
@@ -510,7 +520,15 @@ export function HomeView({
   return (
     <div className="home">
       <AutoRefresh />
-      <section className={`home-head mode-${mode}`}>
+      <section className={`home-head mode-${mode}${hero ? " has-photo" : ""}`}>
+        {hero && (
+          <>
+            <div className="home-hero-media">
+              <Image key={hero.src} src={hero.src} alt={hero.alt} fill priority sizes="100vw" />
+            </div>
+            <PhotoCredit photo={hero} />
+          </>
+        )}
         <div className="home-wrap home-head-grid">
           <h1>
             {title}
