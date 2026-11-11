@@ -37,6 +37,12 @@
   --warn-wash: #fff3cd;
   --on-warn: #3d2e00;
   --ok: #287e58;
+  /* Juego: acierto, cerca y no coincide. Verde y amarillo llevan texto tinta; el gris, texto claro. */
+  --hit: #3ccf7f;
+  --on-hit: #06120b;
+  --near: #f5c640;
+  --on-near: #141005;
+  --miss: #22313f;
   --scrim: linear-gradient(180deg, rgba(6, 14, 22, 0.15) 0%, rgba(6, 14, 22, 0.35) 45%, rgba(6, 14, 22, 0.92) 100%);
 
   /* ---- Tipo ---- */
