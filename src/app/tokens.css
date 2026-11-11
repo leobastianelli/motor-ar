@@ -43,6 +43,9 @@
   --near: #f5c640;
   --on-near: #141005;
   --miss: #22313f;
+  /* Tratamiento de fotos: todas pasan por el mismo "revelado" para que fotos de autores distintos se lean como una serie. */
+  --photo-grade: saturate(0.55) contrast(1.12) brightness(0.9);
+  --photo-tint: rgba(10, 22, 34, 0.25);
   --scrim: linear-gradient(180deg, rgba(6, 14, 22, 0.15) 0%, rgba(6, 14, 22, 0.35) 45%, rgba(6, 14, 22, 0.92) 100%);
 
   /* ---- Tipo ---- */
