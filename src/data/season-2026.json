@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T16:45:37.885Z",
+  "generatedAt": "2026-11-11T16:50:21.296Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -226103,30 +226103,6 @@
       "source": "nuevocarshow.com.ar (calendario y planillas de cronometraje)"
     },
     {
-      "id": "tc-2026-14",
-      "seriesId": "tc",
-      "round": 14,
-      "name": "Fecha 14 · Río Cuarto",
-      "circuit": {
-        "name": "Parque Ciudad de Río Cuarto",
-        "city": "Río Cuarto",
-        "country": "Argentina",
-        "flag": "AR",
-        "province": "Cordoba"
-      },
-      "sessions": [
-        {
-          "id": "tc-2026-14-final",
-          "kind": "final",
-          "name": "Final",
-          "start": "2026-11-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 45
-        }
-      ],
-      "source": "ACTC (calendario) · Wikipedia (podios)"
-    },
-    {
       "id": "tcp-2026-14",
       "seriesId": "tc-pista",
       "round": 14,
@@ -226140,15 +226116,347 @@
       },
       "sessions": [
         {
-          "id": "tcp-2026-14-final",
+          "id": "tcp-2026-14-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-11-14T09:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "09:00"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-14-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-11-14T13:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "13:35"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-14-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-11-14T15:36:00-03:00",
+          "timeKnown": true,
+          "durationMin": 21,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "15:36"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-14-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-11-15T09:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
+              "start": "09:00"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-14-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-11-15T10:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "10:05"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
+              "start": "10:05"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-14-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-11-15T10:30:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "10:30"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-14-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-11-15T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 40
+          "start": "2026-11-15T12:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 155,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "12:55"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
+              "start": "12:55"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-14-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-11-15T13:35:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
+              "start": "13:35"
+            }
+          ]
+        },
+        {
+          "id": "tcp-2026-14-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-11-15T15:36:00-03:00",
+          "timeKnown": true,
+          "durationMin": 21,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
+              "start": "15:36"
+            }
+          ]
         }
       ],
       "source": "ACTC (calendario)"
+    },
+    {
+      "id": "tc-2026-14",
+      "seriesId": "tc",
+      "round": 14,
+      "name": "Fecha 14 · Río Cuarto",
+      "circuit": {
+        "name": "Parque Ciudad de Río Cuarto",
+        "city": "Río Cuarto",
+        "country": "Argentina",
+        "flag": "AR",
+        "province": "Cordoba"
+      },
+      "sessions": [
+        {
+          "id": "tc-2026-14-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-11-14T10:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "10:10"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-14-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-11-14T12:05:00-03:00",
+          "timeKnown": true,
+          "durationMin": 45,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "12:05"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-14-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-11-14T16:03:00-03:00",
+          "timeKnown": true,
+          "durationMin": 47,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "16:03"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-14-practica-1entrenamiento",
+          "kind": "practica",
+          "name": "1° Entrenamiento",
+          "start": "2026-11-15T10:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 65,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
+              "start": "10:10"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-14-serie-serie1",
+          "kind": "serie",
+          "name": "Serie 1",
+          "start": "2026-11-15T10:55:00-03:00",
+          "timeKnown": true,
+          "durationMin": 20,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "10:55"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
+              "start": "10:55"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-14-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-11-15T11:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 90,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
+              "start": "11:20"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-14-serie-serie2",
+          "kind": "serie",
+          "name": "Serie 2",
+          "start": "2026-11-15T11:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "11:20"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-14-serie-serie3",
+          "kind": "serie",
+          "name": "Serie 3",
+          "start": "2026-11-15T11:45:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "timeStatus": "tentative",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "11:45"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-14-final-final",
+          "kind": "final",
+          "name": "Final",
+          "start": "2026-11-15T12:10:00-03:00",
+          "timeKnown": true,
+          "durationMin": 160,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "SoloTC",
+              "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
+              "start": "14:00"
+            },
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
+              "start": "12:10"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-14-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-11-15T13:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 230,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
+              "start": "13:00"
+            }
+          ]
+        }
+      ],
+      "source": "ACTC (calendario) · Wikipedia (podios)"
     },
     {
       "id": "f1-2026-21",
@@ -233095,23 +233403,23 @@
       "clases": {
         "clase1": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 8 de las 8 fechas que ésta cubre (por ejemplo, el auto 172 de la fecha 1: 6 contra 0 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "Faltan los resultados de la final de la fecha 9 (se corrió el 08/11): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
         },
         "clase2": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 8 de las 8 fechas que ésta cubre (por ejemplo, el auto 28 de la fecha 1: 9 contra 1,5 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "Faltan los resultados de la final de la fecha 9 (se corrió el 08/11): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
         },
         "clase3": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 5 de las 8 fechas que ésta cubre (por ejemplo, el auto 69 de la fecha 2: 0 contra 2 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "Faltan los resultados de la final de la fecha 9 (se corrió el 08/11): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
         },
         "tc4000": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 7 de las 8 fechas que ésta cubre (por ejemplo, el auto 6 de la fecha 2: 0 contra 1 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "Faltan los resultados de la final de la fecha 9 (se corrió el 08/11): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
         },
         "fiat600": {
           "status": "sin-campeonato",
-          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 6 de las 8 fechas que ésta cubre (por ejemplo, el auto 8 de la fecha 1: 1,5 contra 1,13 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
+          "reason": "Faltan los resultados de la final de la fecha 9 (se corrió el 08/11): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
         }
       }
     },
@@ -233180,12 +233488,12 @@
       "standingsSource": "https://actc.org.ar/tcppk/campeonato"
     },
     "schedules": {
-      "notes": 28,
+      "notes": 30,
       "officialPdfs": 0,
-      "sessions": 306,
-      "confirmed": 10,
-      "conflicts": 0,
-      "eventsWithTimes": 46
+      "sessions": 325,
+      "confirmed": 20,
+      "conflicts": 1,
+      "eventsWithTimes": 48
     },
     "timing": {
       "documents": 942,
