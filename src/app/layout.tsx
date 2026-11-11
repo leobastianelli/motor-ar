@@ -18,6 +18,7 @@ import { SITE_NAME, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 import "./tokens.css";
 import "./globals.css";
 import "./clases.css";
+import "./chrome.css";
 
 // Archivo (estudio argentino Omnibus-Type) para titulares, con su eje de ancho y cursiva; Geist para leer; Geist Mono para tiempos y vueltas.
 // Las tres quedan como variables CSS; tokens.css arma con ellas --font-display, --font-body y --font-num.
