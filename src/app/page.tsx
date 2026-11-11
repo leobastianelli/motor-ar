@@ -6,6 +6,7 @@ import { noteDate } from "@/components/notas";
 import { HCode, HTitle } from "@/components/home-parts";
 import { getAllSeries, getDriversAbroad, getNow, getSeason, getSeries, isSimulatedNow, seriesParaElNavegador, seriesTier } from "@/lib/data";
 import { getAllNotes } from "@/lib/notas";
+import { getPhoto, type Photo } from "@/lib/photos";
 import { fechasDeLaPortada } from "@/lib/snapshot.mjs";
 
 export const metadata: Metadata = { alternates: { canonical: "/" } };
@@ -35,6 +36,13 @@ export default async function Home() {
     }),
   );
   const latestNotes = (await getAllNotes()).slice(0, 3);
+  // Foto de cada categoría que puede encabezar la portada (la elige <HomeView> según qué está en vivo o qué sigue).
+  const photos = Object.fromEntries(
+    Object.keys(seriesById).flatMap((id) => {
+      const p = getPhoto(`series-${id}`);
+      return p ? [[id, p] as [string, Photo]] : [];
+    }),
+  );
 
   return (
     <HomeView
@@ -43,6 +51,7 @@ export default async function Home() {
       tiers={tiers}
       driversAbroad={driversAbroad}
       standings={standings}
+      photos={photos}
       serverNow={now}
       simulated={isSimulatedNow()}
       jump={
