@@ -1297,6 +1297,15 @@ main .calendar-tape summary h2 span {
 main .calendar-tape li {
   border-top: 1px solid var(--line);
 }
+main > .add-calendar {
+  display: block;
+  max-width: calc(var(--container) + 2 * var(--gutter));
+  margin: var(--s-5) auto 0;
+  padding-inline: var(--gutter);
+}
+main > .add-calendar .add-calendar-menu {
+  left: var(--gutter);
+}
 main .add-calendar-toggle {
   min-height: 44px;
   padding: 0 var(--s-4);
@@ -1332,6 +1341,375 @@ main .calendar-subscribe-links code {
   padding: 2px 6px;
   background: var(--raise);
   font: 500 var(--fs-13) var(--font-num);
+}
+
+/* ================= Categoría, piloto, notas e historias ================= */
+
+/* Portada de categoría: foto a sangre con velo, sello grande y título ancho */
+main .category-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s-5);
+  align-items: end;
+  min-height: 0;
+  margin: 0;
+  padding: clamp(180px, 36vw, 280px) max(var(--gutter), calc((100vw - var(--container)) / 2)) var(--s-6);
+  border: 0;
+  box-shadow: none;
+  background: var(--panel);
+  color: var(--on-panel);
+}
+main .category-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  background: var(--scrim);
+}
+main .category-hero > img {
+  position: absolute;
+  inset: 0;
+  top: 0;
+  bottom: auto;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 45%;
+  filter: none;
+  animation: sitio-settle 2.4s var(--ease-out) both;
+}
+main .category-hero > .photo-credit {
+  top: var(--s-3);
+  right: var(--s-3);
+  bottom: auto;
+}
+main .category-hero > div:nth-child(2) {
+  z-index: 2;
+}
+main .category-hero .cat-poster {
+  position: static;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-width: 96px;
+  padding: var(--s-2) var(--s-3);
+  justify-self: start;
+  border-width: 2px;
+  border-style: solid;
+  background: rgba(10, 22, 34, 0.6);
+  transform: skewX(var(--skew));
+}
+main .category-hero .cat-poster span {
+  font: italic 900 40px / 1 var(--font-display);
+  font-stretch: var(--wider);
+  filter: brightness(1.6) saturate(0.9);
+}
+main .category-hero .cat-poster b {
+  font: 600 var(--fs-16) var(--font-num);
+  color: var(--on-panel);
+}
+main .category-hero .cat-poster small {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--on-panel-muted);
+}
+main .category-hero .kicker {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  margin: 0 0 var(--s-3);
+  font-size: var(--fs-13);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--on-panel-muted);
+}
+main .category-hero .kicker::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--accent);
+}
+main .category-hero h1 {
+  margin: 0;
+  padding-bottom: 4px;
+  font: italic 900 clamp(42px, 8vw, 92px) / 1.02 var(--font-display);
+  font-stretch: var(--wider);
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+  animation: sitio-rise var(--t-slow) var(--ease-out) both;
+}
+main .category-hero .lede {
+  margin: var(--s-3) 0 0;
+  color: var(--on-panel-muted);
+}
+@media (min-width: 801px) {
+  main .category-hero {
+    grid-template-columns: auto minmax(0, 1fr);
+    column-gap: var(--s-6);
+    min-height: 500px;
+    padding-top: var(--s-9);
+    padding-bottom: var(--s-7);
+  }
+  main .category-hero .cat-poster {
+    align-self: end;
+    margin-bottom: var(--s-2);
+  }
+}
+
+/* Franja de cifras de la temporada */
+main .season-ribbon {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  max-width: calc(var(--container) + 2 * var(--gutter));
+  margin: var(--s-6) auto 0;
+  padding: 0 var(--gutter);
+  border: 0;
+  background: none;
+}
+main .season-ribbon > div,
+main .season-ribbon > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--s-4) var(--s-5);
+  border: 0;
+  background: var(--surface);
+}
+main .season-ribbon span {
+  font-size: var(--fs-12);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+main .season-ribbon strong {
+  font: 800 clamp(28px, 4vw, 40px) / 1.05 var(--font-display);
+  font-stretch: var(--wide);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+main .season-ribbon small {
+  font-size: var(--fs-13);
+  color: var(--fg-muted);
+}
+
+/* Tabla de campeonato */
+main .champ-row {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto 72px;
+  align-items: center;
+  gap: var(--s-3);
+  min-height: 56px;
+  padding: var(--s-2) var(--s-3);
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+}
+main .champ-row > b {
+  font: 800 var(--fs-22) / 1 var(--font-display);
+  font-stretch: var(--wide);
+  text-align: right;
+}
+main .champ-row div {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+main .champ-row strong {
+  font-size: var(--fs-16);
+  font-weight: 600;
+}
+main .champ-row strong a {
+  color: inherit;
+  text-decoration: none;
+}
+main .champ-row strong a:hover,
+main a.champ-row:hover strong {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+main .champ-row div span {
+  font-size: var(--fs-13);
+  color: var(--fg-muted);
+}
+main .champ-row em {
+  font-size: var(--fs-13);
+  font-style: normal;
+  color: var(--fg-muted);
+}
+main .champ-row time {
+  font: 600 var(--fs-18) var(--font-num);
+  text-align: right;
+}
+main .champ-row.leader {
+  border-top: 0;
+  background: var(--accent-wash);
+  box-shadow: inset 3px 0 0 var(--accent);
+  color: inherit;
+}
+main .champ-row.leader > b {
+  color: var(--accent-ink);
+}
+@media (max-width: 520px) {
+  main .champ-row {
+    grid-template-columns: 30px minmax(0, 1fr) 64px;
+    padding-inline: var(--s-2);
+  }
+  main .champ-row em {
+    display: none;
+  }
+}
+
+/* Ficha de piloto */
+main .driver-hero {
+  background: var(--panel);
+  color: var(--on-panel);
+}
+main .driver-title h1 {
+  font: italic 900 clamp(44px, 7vw, 96px) / 1.02 var(--font-display);
+  font-stretch: var(--wider);
+  letter-spacing: -0.025em;
+  animation: sitio-rise var(--t-slow) var(--ease-out) both;
+}
+main .driver-title .kicker {
+  color: var(--on-panel-muted);
+}
+main .mega-number {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 900;
+  font-stretch: var(--wider);
+  -webkit-text-stroke-color: var(--accent);
+  opacity: 0.6;
+}
+main .next-race {
+  border-top: 0;
+  background: var(--accent);
+  color: var(--on-accent);
+  clip-path: var(--cut-corner);
+}
+main .next-race > strong {
+  font: 800 var(--fs-22) / 1.15 var(--font-display);
+  font-stretch: var(--wide);
+}
+main .next-race time {
+  font: 600 var(--fs-18) var(--font-num);
+}
+main .next-race a {
+  color: inherit;
+  font-weight: 600;
+  border-top-color: rgba(10, 22, 34, 0.3);
+}
+
+/* Notas */
+main .nota-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--s-4);
+}
+main .nota-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-5);
+  border: 0;
+  border-radius: 0;
+  background: var(--surface);
+  box-shadow: inset 0 2px 0 var(--fg);
+  clip-path: var(--cut-corner);
+  transition: transform var(--t-med) var(--ease-out);
+}
+main .nota-card:hover {
+  transform: translateY(-2px);
+}
+main .nota-card h3 {
+  margin: 0;
+  font: 800 var(--fs-20) / 1.2 var(--font-display);
+  font-stretch: var(--wide);
+  letter-spacing: -0.01em;
+}
+main .nota-meta {
+  font-size: var(--fs-13);
+  color: var(--fg-muted);
+}
+main .nota-meta b {
+  color: var(--fg);
+  font-weight: 600;
+}
+main .nota-summary {
+  font-size: var(--fs-14);
+  line-height: 1.5;
+  color: var(--fg-muted);
+}
+main .notas-search {
+  font-size: var(--fs-13);
+  font-weight: 600;
+}
+main .notas-search input,
+main .directory-tools input {
+  min-height: 48px;
+  padding: 0 var(--s-4);
+  border: 1px solid var(--line-strong);
+  border-radius: 0;
+  background: var(--surface);
+  color: var(--fg);
+  font: 400 var(--fs-16) var(--font-body);
+  transition: border-color var(--t-fast);
+}
+main .notas-search input:focus,
+main .directory-tools input:focus {
+  border-color: var(--accent-ink);
+  outline: none;
+}
+main .notas-chips button {
+  min-height: 40px;
+  padding: 0 var(--s-4);
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--fg);
+  font: 500 var(--fs-14) var(--font-body);
+  transition: background-color var(--t-fast), border-color var(--t-fast), color var(--t-fast);
+}
+main .notas-chips button:hover:not(.is-selected) {
+  border-color: var(--line-strong);
+}
+main .notas-chips button.is-selected {
+  border-color: var(--fg);
+  background: var(--fg);
+  color: var(--surface);
+}
+main .notas-count {
+  font: 500 var(--fs-13) var(--font-num);
+}
+
+/* Historias */
+main .story-title h1 {
+  font-size: clamp(56px, 16vw, 220px);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 900;
+  font-stretch: var(--wider);
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+main .story-title h2 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 /* ================= Movimiento ================= */
