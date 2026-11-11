@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { ComponentProps, CSSProperties } from "react";
@@ -9,7 +10,7 @@ import { LiveTimingEmbed } from "@/components/live-timing-embed";
 import { Argentinos } from "@/components/momento";
 import { ResultsStatus } from "@/components/results-status";
 import { VideoSesion } from "@/components/video-sesion";
-import { CategoryLabel, ClassSeal, SectionTitle } from "@/components/pista";
+import { CategoryLabel, ClassSeal, PhotoCredit, SectionTitle } from "@/components/pista";
 import { broadcastsBySeries } from "@/data/broadcasts";
 import { drivers } from "@/data/drivers";
 import { getNow, getSeason, getSeries, isSimulatedNow } from "@/lib/data";
@@ -17,6 +18,7 @@ import { nombreVisibleSesion } from "@/lib/momento.mjs";
 import { provisionalSuffix } from "@/lib/provisorio.mjs";
 import { driverCode, fmtDayShort, fmtRange, raceWinner } from "@/lib/format";
 import { descripcionMomento, tituloEvento } from "@/lib/seo-titulos.mjs";
+import { getPhoto } from "@/lib/photos";
 import { OG_DEFAULTS } from "@/lib/site";
 import { recortarFecha } from "@/lib/snapshot.mjs";
 import { sessionDoneAt } from "@/lib/tiempo.mjs";
@@ -115,6 +117,7 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
   const nowMs = Date.parse(now);
   const simulated = isSimulatedNow();
   const series = getSeries(event.seriesId)!;
+  const heroPhoto = getPhoto(`series-${series.id}`);
   const siblings = season.getSiblingEvents(event);
   // Categoría con clases (Córdoba Pista): cada sesión lleva el sello de su clase y arriba van las finales de todas las clases.
   const clases = series.classes ?? [];
@@ -357,7 +360,15 @@ export default async function EventPage(props: PageProps<"/eventos/[id]">) {
           ],
         }}
       />
-      <section className="event-hero" style={{ "--cat": series.color } as CSSProperties}>
+      <section className={`event-hero${heroPhoto ? " has-photo" : ""}`} style={{ "--cat": series.color } as CSSProperties}>
+        {heroPhoto && (
+          <>
+            <div className="hero-media">
+              <Image src={heroPhoto.src} alt={heroPhoto.alt} fill priority sizes="100vw" />
+            </div>
+            <PhotoCredit photo={heroPhoto} />
+          </>
+        )}
         <div className="event-id">
           <CategoryLabel series={series} detail={`Fecha ${event.round}`} href={`/categorias/${series.id}`} />
         </div>
