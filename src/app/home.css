@@ -1342,7 +1342,7 @@ a.home-highlight:hover {
   .home > .home-band > .home-wrap {
     animation: home-rise linear both;
     animation-timeline: view();
-    animation-range: entry 0% entry 60%;
+    animation-range: entry 0px entry 160px;
   }
 }
 
