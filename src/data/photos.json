@@ -72,22 +72,22 @@
   "series-tc": {
     "src": "/img/commons/series-tc.jpg",
     "width": 1920,
-    "height": 997,
-    "alt": "Un auto de Turismo Carretera en clasificación, Gran Premio Coronación 2025",
+    "height": 901,
+    "alt": "Un Chevrolet de Turismo Carretera en el Gran Premio Coronación 2025",
     "author": "Just a Man",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TC_Gran_Premio_Coronaci%C3%B3n_2025._S%C3%A1bado,_Clasificaci%C3%B3n_-_06.jpg"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TC_Gran_Premio_Coronaci%C3%B3n_2025._Domingo,_Carrera_-_Ceremonia_y_Grilla_-_13.jpg"
   },
   "series-f1": {
     "src": "/img/commons/series-f1.jpg",
     "width": 1920,
-    "height": 1277,
-    "alt": "Largada del Gran Premio de Canadá de Fórmula 1, 2025",
-    "author": "Bassfish22",
+    "height": 1280,
+    "alt": "El Alpine A526 de Franco Colapinto",
+    "author": "Yu Chu Chin",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Opening_lap_of_the_2025_Canadian_Grand_Prix_(cropped).jpg"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Alpine_A526_of_Franco_Colapinto_(028A8049).jpg"
   },
   "series-f2": {
     "src": "/img/commons/series-f2.jpg",
@@ -122,12 +122,12 @@
   "series-tc2000": {
     "src": "/img/commons/series-tc2000.jpg",
     "width": 1920,
-    "height": 1440,
-    "alt": "Autos en pit lane antes de la Carrera Sprint de invitados, 200 km de Buenos Aires 2023",
-    "author": "Maxi-Napo-99",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:200_km_de_Buenos_Aires_2023,_Carrera_Sprint_de_invitados,_s%C3%A1bado_7_octubre.jpg"
+    "height": 1080,
+    "alt": "Un auto de TC2000 en una curva, pruebas de pretemporada 2025",
+    "author": "Just a Man",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TC2000_2025,_April_pre-season_tests_-_05.jpg"
   },
   "series-tc-pista": {
     "src": "/img/commons/series-tc-pista.jpg",
@@ -143,11 +143,11 @@
     "src": "/img/commons/series-tc-mouras.jpg",
     "width": 1920,
     "height": 1080,
-    "alt": "TC Mouras en carrera, Fecha 5 de 2026",
+    "alt": "TC Mouras en la serie clasificatoria, Fecha 5 de 2026",
     "author": "Just a Man",
     "license": "CC BY 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TC_Mouras_2026,_Fecha_5._Domingo,_Carrera_-_05.jpg"
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:TC_Mouras_2026,_Fecha_5,_Domingo._Serie_Clasificatoria_-_01.jpg"
   },
   "series-tc-pista-mouras": {
     "src": "/img/commons/series-tc-pista-mouras.jpg",
@@ -232,11 +232,11 @@
   "series-rally-argentino": {
     "src": "/img/commons/series-rally-argentino.jpg",
     "width": 1920,
-    "height": 1440,
-    "alt": "El Škoda Fabia RS Rally2 Nº3 de Federico Villagra, visto desde atrás, en el Rally del Jaaukanigás 2026 del Rally Argentino",
+    "height": 1280,
+    "alt": "El Škoda de Baldoni en el Rally del Jaaukanigás 2023 del Rally Argentino",
     "author": "Nordschleife 00",
-    "license": "CC BY 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2026_Rally_del_Jaaukanig%C3%A1s,_Villagra.jpg"
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2023_Rally_del_Jaaukanig%C3%A1s,_Baldoni.jpg"
   }
 }
