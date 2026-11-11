@@ -1,0 +1,128 @@
+/*
+ * Design tokens de Fierros. Toda decisión de color, tipo, espacio, forma y movimiento sale de acá.
+ * Los componentes usan estas variables; no llevan colores ni tamaños sueltos.
+ *
+ * Dirección: fotos reales de pista, letra ancha (Archivo, eje wdth) para titulares, Geist para leer,
+ * Geist Mono para tiempos. Celeste como único acento (lo argentino y lo próximo), rojo sólo para "en vivo".
+ * Cantos rectos con un corte en diagonal (--cut) como firma.
+ *
+ * Las variables heredadas (--ink, --paper, --blue…) quedan como alias de los tokens nuevos
+ * para que el CSS que todavía no se migró siga funcionando con la paleta nueva.
+ */
+:root {
+  /* ---- Color: base ---- */
+  --bg: #eef1f4;            /* fondo de página */
+  --surface: #fbfcfd;       /* tarjetas, torres, paneles sobre el fondo */
+  --raise: #e3e8ed;         /* relleno de controles, placeholders de imagen */
+  --fg: #0a1622;            /* texto principal */
+  --fg-muted: #55616d;      /* texto secundario (5.6:1 sobre --bg) */
+  --line: rgba(10, 22, 34, 0.12);
+  --line-strong: rgba(10, 22, 34, 0.24);
+
+  /* ---- Color: panel oscuro (cabecera, pie, banda de resultados, juego) ---- */
+  --panel: #0a1622;
+  --panel-raise: #162433;
+  --on-panel: #eef3f7;
+  --on-panel-muted: #9fb0bf;
+  --line-on-panel: rgba(238, 243, 247, 0.12);
+
+  /* ---- Color: acento y estados ---- */
+  --accent: #74acdf;        /* celeste bandera: rellenos, barras, lo argentino */
+  --accent-ink: #1d679f;    /* celeste para texto y enlaces sobre claro (5.4:1) */
+  --accent-wash: rgba(116, 172, 223, 0.2);
+  --on-accent: #0a1622;
+  --live: #e0362c;          /* sólo "en vivo" */
+  --live-wash: rgba(224, 54, 44, 0.12);
+  --warn: #f5c640;
+  --warn-wash: #fff3cd;
+  --on-warn: #3d2e00;
+  --ok: #287e58;
+  --scrim: linear-gradient(180deg, rgba(6, 14, 22, 0.15) 0%, rgba(6, 14, 22, 0.35) 45%, rgba(6, 14, 22, 0.92) 100%);
+
+  /* ---- Tipo ---- */
+  --font-display: var(--font-archivo), "Arial Black", Arial, sans-serif;
+  --font-body: var(--font-geist), system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-num: var(--font-geist-mono), ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --wide: 112%;             /* ancho de titulares (eje wdth de Archivo) */
+  --wider: 118%;            /* portadas */
+
+  --fs-12: 12px;
+  --fs-13: 13px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-22: 22px;
+  --fs-26: 26px;
+  --fs-h2: clamp(30px, 5vw, 44px);
+  --fs-h1: clamp(42px, 8.6vw, 92px);
+
+  /* ---- Espacio (múltiplos de 4) ---- */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+  --s-8: 72px;
+  --s-9: 112px;
+  --gutter: 16px;
+  --container: 1240px;
+
+  /* ---- Forma ---- */
+  --radius: 0;              /* todo recto; los círculos (luces, avatar) son la única excepción */
+  --cut: 14px;              /* corte en diagonal de botones, fotos y paneles */
+  --cut-btn: polygon(0 0, 100% 0, calc(100% - var(--cut)) 100%, 0 100%);
+  --cut-corner: polygon(0 0, 100% 0, 100% calc(100% - var(--cut)), calc(100% - var(--cut)) 100%, 0 100%);
+  --skew: -10deg;           /* sellos de categoría */
+
+  /* ---- Elevación (sólo lo que flota) ---- */
+  --shadow-1: 0 2px 8px rgba(6, 14, 22, 0.12);
+  --shadow-2: 0 16px 40px rgba(6, 14, 22, 0.22);
+
+  /* ---- Movimiento ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --t-fast: 0.2s;
+  --t-med: 0.45s;
+  --t-slow: 0.9s;
+
+  /* ---- Capas ---- */
+  --z-sticky: 20;
+  --z-overlay: 40;
+  --z-banner: 50;
+
+  /* ---- Alias heredados ---- */
+  --ink: var(--fg);
+  --paper: var(--bg);
+  --white: var(--surface);
+  --blue: var(--accent);
+  --blue-deep: var(--accent-ink);
+  --red: var(--live);
+  --yellow: var(--warn);
+  --green: var(--ok);
+  --muted: var(--fg-muted);
+  --space-1: var(--s-1);
+  --space-2: var(--s-2);
+  --space-3: var(--s-3);
+  --space-4: var(--s-4);
+  --space-5: var(--s-5);
+  --space-6: var(--s-6);
+  --space-7: var(--s-7);
+  --space-8: var(--s-8);
+  --space-9: var(--s-9);
+}
+
+@media (min-width: 801px) {
+  :root {
+    --gutter: 28px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-fast: 0s;
+    --t-med: 0s;
+    --t-slow: 0s;
+  }
+}
