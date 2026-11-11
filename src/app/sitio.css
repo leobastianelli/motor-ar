@@ -953,6 +953,387 @@ main .clase-ganadores small {
   color: var(--fg-muted);
 }
 
+/* ================= Agenda: cabecera de página, filtros, filas por hora, horarios ================= */
+
+/* Cabecera de las páginas internas: panel oscuro con el título en Archivo ancho e itálico. */
+main .weekend-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: start;
+  align-items: start;
+  gap: var(--s-3);
+  min-height: 0;
+  margin: 0;
+  padding: var(--s-7) max(var(--gutter), calc((100vw - var(--container)) / 2)) var(--s-6);
+  border: 0;
+  box-shadow: none;
+  background: var(--panel);
+  color: var(--on-panel);
+}
+@media (min-width: 801px) {
+  main .weekend-head {
+    padding-top: var(--s-8);
+    padding-bottom: var(--s-7);
+  }
+}
+main .weekend-head h1 {
+  margin: 0;
+  padding-bottom: 4px;
+  max-width: 22ch;
+  font: italic 900 clamp(40px, 7vw, 76px) / 1.02 var(--font-display);
+  font-stretch: var(--wider);
+  letter-spacing: -0.025em;
+  white-space: normal;
+  text-wrap: balance;
+  animation: sitio-rise var(--t-slow) var(--ease-out) both;
+}
+main .weekend-head .hero-date {
+  display: inline;
+  margin-left: var(--s-2);
+  font: 500 0.36em var(--font-num);
+  font-style: normal;
+  font-stretch: 100%;
+  letter-spacing: 0;
+  color: var(--on-panel-muted);
+}
+main .weekend-head .lede {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--s-1) 0;
+  max-width: 70ch;
+  margin: 0;
+  font: 400 var(--fs-16) / 1.5 var(--font-body);
+  color: var(--on-panel-muted);
+}
+main .weekend-head .lede > span + span::before {
+  content: "·";
+  margin: 0 10px;
+  color: var(--on-panel-muted);
+}
+main .weekend-head .lede b {
+  font-weight: 600;
+  color: var(--on-panel);
+}
+main .weekend-head a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+main .weekend-head + .section-block,
+main .weekend-head + .live-callout + .section-block {
+  margin-top: var(--s-7);
+  padding-top: 0;
+}
+main .horario-head {
+  box-shadow: inset 0 -3px 0 var(--cat, var(--accent));
+}
+main .horario-head h1 {
+  margin-top: var(--s-2);
+}
+main .horario-answer {
+  max-width: 60ch;
+  margin: 0;
+  font: 500 var(--fs-18) / 1.5 var(--font-body);
+  color: var(--on-panel);
+}
+
+/* Filtros */
+main .filters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--s-2);
+  margin: 0 0 var(--s-4);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+main .filters::-webkit-scrollbar {
+  display: none;
+}
+main .filters a {
+  display: flex;
+  text-decoration: none;
+}
+main .filters button,
+main .filters a:last-child button {
+  flex: none;
+  min-height: 40px;
+  padding: 0 var(--s-4);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  color: var(--fg);
+  font: 500 var(--fs-14) var(--font-body);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color var(--t-fast), border-color var(--t-fast), color var(--t-fast);
+}
+main .filters button:hover:not(.is-selected) {
+  border-color: var(--line-strong);
+}
+main .filters button.is-selected,
+main .filters a:last-child button.is-selected {
+  border-color: var(--fg);
+  background: var(--fg);
+  color: var(--surface);
+}
+
+/* Filas por hora (Hoy y otras listas de sesiones) */
+main .schedule-row,
+main .schedule-row.agenda-row {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--s-4);
+  min-height: 64px;
+  padding: var(--s-3) 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  color: inherit;
+  text-decoration: none;
+}
+@media (min-width: 801px) {
+  main .schedule-row,
+  main .schedule-row.agenda-row {
+    grid-template-columns: 90px minmax(0, 1fr) auto;
+  }
+}
+main .schedule-row::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(-1 * var(--s-3));
+  z-index: -1;
+  background: var(--surface);
+  opacity: 0;
+  transition: opacity var(--t-fast);
+}
+main .schedule-row:hover::before {
+  opacity: 1;
+}
+main .schedule-row > time {
+  font: 600 var(--fs-20) / 1.1 var(--font-num);
+  letter-spacing: -0.02em;
+}
+main .schedule-row.current,
+main .schedule-row.agenda-row.current {
+  padding-left: 0;
+  border-left: 0;
+}
+main .schedule-row.current::before {
+  opacity: 1;
+  box-shadow: inset 3px 0 0 var(--live);
+}
+main .agenda-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-1);
+  min-width: 0;
+}
+main .agenda-main strong {
+  font-size: var(--fs-16);
+  font-weight: 600;
+  line-height: 1.25;
+}
+main .agenda-row .agenda-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: var(--fs-14);
+  color: var(--fg-muted);
+}
+main .agenda-row .agenda-meta .code {
+  height: 18px;
+  min-width: 32px;
+  padding: 0 6px;
+  font-size: 10px;
+}
+main .agenda-row .agenda-overlap {
+  font-size: var(--fs-13);
+  font-weight: 500;
+  color: var(--fg-muted);
+}
+main .agenda-pending {
+  margin: var(--s-5) 0 var(--s-1);
+  padding-bottom: var(--s-2);
+  border-bottom: 1px solid var(--line);
+  font-size: var(--fs-12);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+}
+
+/* En vivo ahora (Hoy) */
+main .live-callout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-3) var(--s-4);
+  max-width: var(--container);
+  margin: var(--s-6) auto 0;
+  padding: var(--s-4) var(--s-5);
+  background: var(--panel);
+  color: var(--on-panel);
+  box-shadow: inset 3px 0 0 var(--live);
+  clip-path: var(--cut-corner);
+}
+main .live-callout .pulse {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--live);
+  animation: sitio-pulse 1.6s ease-in-out infinite;
+}
+main .live-callout strong {
+  display: block;
+  font: 800 var(--fs-20) / 1.15 var(--font-display);
+  font-stretch: var(--wide);
+}
+main .live-callout a {
+  margin-left: auto;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+main .live-callout a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 800px) {
+  main .live-callout {
+    margin: var(--s-4) var(--gutter) 0;
+  }
+  main .live-callout a {
+    margin-left: 0;
+  }
+}
+
+/* Horario de una categoría */
+main .horario-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--s-7);
+}
+@media (min-width: 961px) {
+  main .horario-grid {
+    grid-template-columns: minmax(0, 1fr) 340px;
+    align-items: start;
+  }
+}
+main .horario-day {
+  margin-bottom: var(--s-5);
+}
+main .horario-day h3 {
+  margin: 0;
+  padding-bottom: var(--s-2);
+  border-bottom: 2px solid var(--cat, var(--fg));
+  font: 800 var(--fs-20) / 1.1 var(--font-display);
+  font-stretch: var(--wide);
+}
+main .horario-day li {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--s-4);
+  min-height: 60px;
+  padding: var(--s-3) 0;
+  border-bottom: 1px solid var(--line);
+}
+@media (min-width: 801px) {
+  main .horario-day li {
+    grid-template-columns: 90px minmax(0, 1fr) auto;
+  }
+}
+main .horario-day time {
+  font: 600 var(--fs-20) / 1.1 var(--font-num);
+  letter-spacing: -0.02em;
+}
+main .horario-day strong {
+  font-size: var(--fs-16);
+  font-weight: 600;
+}
+main .horario-watch {
+  padding: var(--s-5);
+  border-top: 3px solid var(--accent);
+  background: var(--surface);
+  color: var(--fg);
+  clip-path: var(--cut-corner);
+}
+main .horario-watch h3 {
+  margin: 0 0 var(--s-3);
+  font: 800 var(--fs-22) / 1.1 var(--font-display);
+  font-stretch: var(--wide);
+}
+main .horario-watch li {
+  padding: var(--s-2) 0;
+  border-top: 1px solid var(--line);
+  font-weight: 600;
+}
+main .horario-watch p {
+  font-size: var(--fs-13);
+  color: var(--fg-muted);
+}
+
+/* Calendario completo (plegable) y suscripción */
+main .calendar-tape {
+  margin-top: var(--s-7);
+  padding-top: var(--s-3);
+  border-top: 2px solid var(--fg);
+}
+main .calendar-tape summary h2 {
+  font: 800 var(--fs-h2) / 1 var(--font-display);
+  font-stretch: var(--wide);
+  letter-spacing: -0.02em;
+}
+main .calendar-tape summary h2 span {
+  font: 500 var(--fs-14) var(--font-num);
+  letter-spacing: 0;
+  color: var(--fg-muted);
+}
+main .calendar-tape li {
+  border-top: 1px solid var(--line);
+}
+main .add-calendar-toggle {
+  min-height: 44px;
+  padding: 0 var(--s-4);
+  border: 1px solid var(--line-strong);
+  border-radius: 0;
+  background: transparent;
+  color: var(--fg);
+  font: 600 var(--fs-14) var(--font-body);
+  transition: background-color var(--t-fast), color var(--t-fast), border-color var(--t-fast);
+}
+main .add-calendar-toggle:hover {
+  border-color: var(--fg);
+  background: var(--fg);
+  color: var(--surface);
+}
+main .add-calendar-menu {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  box-shadow: var(--shadow-2);
+  animation: sitio-rise var(--t-med) var(--ease-out);
+}
+main .add-calendar-menu a,
+main .add-calendar-menu button {
+  min-height: 44px;
+  border-bottom: 1px solid var(--line);
+  color: var(--fg);
+}
+main .add-calendar-menu a:hover,
+main .add-calendar-menu button:hover {
+  background: var(--raise);
+}
+main .calendar-subscribe-links code {
+  padding: 2px 6px;
+  background: var(--raise);
+  font: 500 var(--fs-13) var(--font-num);
+}
+
 /* ================= Movimiento ================= */
 @keyframes sitio-settle {
   from { transform: scale(1.08); }
