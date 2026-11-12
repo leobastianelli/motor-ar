@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T16:50:21.296Z",
+  "generatedAt": "2026-11-12T17:19:08.176Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -232502,9 +232502,7 @@
         "Lucas Carabajal",
         "Javier Jacobson"
       ],
-      "discrepancies": [
-        "Puntos hasta la fecha 8 distintos: Leonel Pernía 435 (Wikipedia) y 434 (API); Carlos Javier Merlo 22 (Wikipedia) y 0 (API); Alberto Cattucci 6 (Wikipedia) y 0 (API)"
-      ]
+      "discrepancies": []
     },
     "f2-arg": {
       "standingsLabel": "Pilotos",
@@ -233960,5 +233958,7 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/13/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)"
+  ]
 }
