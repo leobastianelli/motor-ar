@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T17:19:08.176Z",
+  "generatedAt": "2026-11-12T21:28:40.829Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -219276,13 +219276,6 @@
               "gap": "1:17.117"
             },
             {
-              "pos": 8,
-              "driver": "Liam Lawson",
-              "code": "LAW",
-              "team": "RB F1 Team",
-              "gap": "1:17.029"
-            },
-            {
               "pos": 9,
               "driver": "Pierre Gasly",
               "code": "GAS",
@@ -219372,6 +219365,13 @@
               "code": "BOT",
               "team": "Cadillac F1 Team",
               "gap": "1:19.852"
+            },
+            {
+              "pos": 22,
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "RB F1 Team",
+              "gap": ""
             }
           ],
           "videos": [
@@ -233958,7 +233958,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/13/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)"
-  ]
+  "failures": []
 }
