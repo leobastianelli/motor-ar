@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T13:20:37.075Z",
+  "generatedAt": "2026-11-14T14:31:06.358Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -5029,7 +5029,7 @@
         "tc-pista": "66"
       },
       "teams": {
-        "tc-pick-up": "Ford",
+        "tc-pick-up": "Toyota",
         "tc-pista-pick-up": "Ford",
         "tc-pista": "Chevrolet"
       },
