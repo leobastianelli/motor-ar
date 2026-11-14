@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T16:25:38.186Z",
+  "generatedAt": "2026-11-14T20:51:09.207Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -6510,11 +6510,14 @@
     {
       "key": "jose manuel urcera",
       "keys": [
-        "jose manuel urcera"
+        "jose manuel urcera",
+        "jose manuel recargo urcera"
       ],
       "slug": "jose-manuel-urcera",
       "name": "José Manuel Urcera",
-      "aliases": [],
+      "aliases": [
+        "Jose Manuel Urcera Recargo"
+      ],
       "series": [
         "tn",
         "tc"
@@ -8665,11 +8668,14 @@
     {
       "key": "di jose luis palma",
       "keys": [
-        "di jose luis palma"
+        "di jose luis palma",
+        "di jose luis palma recargo"
       ],
       "slug": "luis-jose-di-palma",
       "name": "Luis José Di Palma",
-      "aliases": [],
+      "aliases": [
+        "Luis Jose Di Palma Recargo"
+      ],
       "series": [
         "tc"
       ],
@@ -9243,11 +9249,14 @@
       "key": "mariano werner",
       "keys": [
         "mariano werner",
-        "foton mariano werner"
+        "foton mariano werner",
+        "mariano recargo werner"
       ],
       "slug": "mariano-werner",
       "name": "Mariano Werner",
-      "aliases": [],
+      "aliases": [
+        "Mariano Werner Recargo"
+      ],
       "series": [
         "tc",
         "tc-pick-up",
@@ -10928,11 +10937,14 @@
     {
       "key": "impiombato nicolas",
       "keys": [
-        "impiombato nicolas"
+        "impiombato nicolas",
+        "impiombato nicolas recargo"
       ],
       "slug": "nicolas-impiombato",
       "name": "Nicolas Impiombato",
-      "aliases": [],
+      "aliases": [
+        "Nicolas Impiombato Recargo"
+      ],
       "series": [
         "tc"
       ],
