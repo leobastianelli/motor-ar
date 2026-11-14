@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T20:06:37.286Z",
+  "generatedAt": "2026-11-14T20:21:05.761Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -234561,8 +234561,8 @@
       "eventsWithTimes": 48
     },
     "timing": {
-      "documents": 952,
-      "pagesFetched": 124,
+      "documents": 954,
+      "pagesFetched": 125,
       "eventsWithResults": 70,
       "retagged": {
         "1003": {
@@ -235026,7 +235026,6 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/8/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Se conservaron resultados de 5 sesiones que las fuentes dejaron de traer"
   ]
 }
