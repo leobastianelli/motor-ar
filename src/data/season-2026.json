@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T20:21:05.761Z",
+  "generatedAt": "2026-11-14T20:36:16.947Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -229698,8 +229698,8 @@
         "pos": 9,
         "driver": "Manuel Borgert",
         "team": "",
-        "points": 383,
-        "wins": 0
+        "points": 385,
+        "wins": 1
       },
       {
         "pos": 10,
@@ -234488,22 +234488,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -234529,7 +234513,7 @@
     },
     "tc-pista": {
       "standingsLabel": "Tabla oficial de la ACTC",
-      "standingsAsOfRound": 13,
+      "standingsAsOfRound": 14,
       "standingsSource": "https://actc.org.ar/tcp/campeonato"
     },
     "tc-mouras": {
@@ -235026,6 +235010,7 @@
     }
   },
   "failures": [
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Se conservaron resultados de 5 sesiones que las fuentes dejaron de traer"
   ]
 }
