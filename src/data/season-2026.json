@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T14:40:56.630Z",
+  "generatedAt": "2026-11-14T15:29:53.446Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -226831,38 +226831,6 @@
           ]
         },
         {
-          "id": "tc-2026-14-practica-2entrenamiento",
-          "kind": "practica",
-          "name": "2° Entrenamiento",
-          "start": "2026-11-15T11:20:00-03:00",
-          "timeKnown": true,
-          "durationMin": 90,
-          "timeStatus": "confirmed",
-          "timeSources": [
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
-              "start": "11:20"
-            }
-          ]
-        },
-        {
-          "id": "tc-2026-14-clasificacion-clasificacion",
-          "kind": "clasificacion",
-          "name": "Clasificación",
-          "start": "2026-11-15T13:00:00-03:00",
-          "timeKnown": true,
-          "durationMin": 230,
-          "timeStatus": "confirmed",
-          "timeSources": [
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
-              "start": "13:00"
-            }
-          ]
-        },
-        {
           "id": "tc-2026-14-serie-serie1",
           "kind": "serie",
           "name": "Serie 1",
@@ -226880,6 +226848,22 @@
               "name": "ACTC (cronograma oficial)",
               "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
               "start": "10:55"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-14-practica-2entrenamiento",
+          "kind": "practica",
+          "name": "2° Entrenamiento",
+          "start": "2026-11-15T11:20:00-03:00",
+          "timeKnown": true,
+          "durationMin": 90,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
+              "start": "11:20"
             }
           ]
         },
@@ -226933,6 +226917,22 @@
               "name": "ACTC (cronograma oficial)",
               "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
               "start": "12:10"
+            }
+          ]
+        },
+        {
+          "id": "tc-2026-14-clasificacion-clasificacion",
+          "kind": "clasificacion",
+          "name": "Clasificación",
+          "start": "2026-11-15T13:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 230,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "ACTC (cronograma oficial)",
+              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
+              "start": "13:00"
             }
           ]
         }
@@ -234440,6 +234440,6 @@
     }
   },
   "failures": [
-    "Se conservaron resultados de 1 sesiones que las fuentes dejaron de traer"
+    "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
   ]
 }
