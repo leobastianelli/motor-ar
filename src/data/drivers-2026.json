@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T15:29:54.813Z",
+  "generatedAt": "2026-11-14T16:25:38.186Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -10940,7 +10940,7 @@
         "tc": "87"
       },
       "teams": {
-        "tc": "Torino"
+        "tc": "Chevrolet"
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-11-14"
@@ -13452,7 +13452,7 @@
         "tc-pick-up": "126"
       },
       "teams": {
-        "tc": "Toyota",
+        "tc": "Dodge",
         "tc-pick-up": "Ford"
       },
       "firstSeen": "2026-02-14",
