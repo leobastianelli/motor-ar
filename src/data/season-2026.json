@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T16:25:36.639Z",
+  "generatedAt": "2026-11-14T17:55:50.534Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -234338,7 +234338,7 @@
       "eventsWithTimes": 48
     },
     "timing": {
-      "documents": 948,
+      "documents": 949,
       "pagesFetched": 123,
       "eventsWithResults": 70,
       "retagged": {
@@ -234803,6 +234803,6 @@
     }
   },
   "failures": [
-    "Se conservaron resultados de 2 sesiones que las fuentes dejaron de traer"
+    "Se conservaron resultados de 3 sesiones que las fuentes dejaron de traer"
   ]
 }
