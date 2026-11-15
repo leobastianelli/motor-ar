@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T19:55:41.789Z",
+  "generatedAt": "2026-11-15T20:06:18.516Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -241029,7 +241029,7 @@
     },
     "openf1": {
       "sessions": 131,
-      "requests": 18,
+      "requests": 12,
       "sessionsWithResults": 54
     },
     "f1Official": {
@@ -241417,5 +241417,7 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/10/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)"
+  ]
 }
