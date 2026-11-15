@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T16:15:52.197Z",
+  "generatedAt": "2026-11-15T17:06:20.012Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -231545,38 +231545,17 @@
           }
         },
         {
-          "id": "tcp-2026-14-practica-1entrenamiento",
-          "kind": "practica",
-          "name": "1° Entrenamiento",
-          "start": "2026-11-15T09:00:00-03:00",
-          "timeKnown": true,
-          "durationMin": 65,
-          "timeStatus": "confirmed",
-          "timeSources": [
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
-              "start": "09:00"
-            }
-          ]
-        },
-        {
           "id": "tcp-2026-14-serie-serie1",
           "kind": "serie",
           "name": "Serie 1",
           "start": "2026-11-15T10:05:00-03:00",
           "timeKnown": true,
-          "durationMin": 20,
-          "timeStatus": "confirmed",
+          "durationMin": 10,
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
-              "start": "10:05"
-            },
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
               "start": "10:05"
             }
           ],
@@ -231769,52 +231748,134 @@
           "name": "Final",
           "start": "2026-11-15T12:55:00-03:00",
           "timeKnown": true,
-          "durationMin": 155,
-          "timeStatus": "confirmed",
+          "durationMin": 40,
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
               "start": "12:55"
+            }
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "99",
+              "driver": "Bautista Damiani",
+              "team": "Chevrolet",
+              "gap": ""
             },
             {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
-              "start": "12:55"
-            }
-          ]
-        },
-        {
-          "id": "tcp-2026-14-practica-2entrenamiento",
-          "kind": "practica",
-          "name": "2° Entrenamiento",
-          "start": "2026-11-15T13:35:00-03:00",
-          "timeKnown": true,
-          "durationMin": 65,
-          "timeStatus": "confirmed",
-          "timeSources": [
+              "pos": 2,
+              "number": "176",
+              "driver": "Nicolás Jaime",
+              "team": "Ford",
+              "gap": ""
+            },
             {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
-              "start": "13:35"
-            }
-          ]
-        },
-        {
-          "id": "tcp-2026-14-clasificacion-clasificacion",
-          "kind": "clasificacion",
-          "name": "Clasificación",
-          "start": "2026-11-15T15:36:00-03:00",
-          "timeKnown": true,
-          "durationMin": 21,
-          "timeStatus": "confirmed",
-          "timeSources": [
+              "pos": 3,
+              "number": "53",
+              "driver": "Eugenio Provens",
+              "team": "Dodge",
+              "gap": ""
+            },
             {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
-              "start": "15:36"
+              "pos": 4,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "168",
+              "driver": "Juan Sebastian Gallo",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "139",
+              "driver": "Santiago Arrigoni",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "43",
+              "driver": "Benjamin Anton",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "67",
+              "driver": "Santiago Biagi",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 12,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": "+6 vueltas"
+            },
+            {
+              "pos": 13,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": "+7 vueltas"
+            },
+            {
+              "pos": 14,
+              "number": "123",
+              "driver": "Nicanor Santilli Pazos",
+              "team": "Ford",
+              "gap": "+11 vueltas"
+            },
+            {
+              "pos": 15,
+              "number": "32",
+              "driver": "Juan Antonio Sandin",
+              "team": "Ford",
+              "gap": "+20 vueltas"
+            },
+            {
+              "pos": 16,
+              "number": "100",
+              "driver": "Reutemann Ian",
+              "team": "Dodge",
+              "gap": "+20 vueltas"
             }
-          ]
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1174/ver",
+            "status": "provisional"
+          }
         }
       ],
       "source": "ACTC (calendario)"
@@ -232974,38 +233035,17 @@
           }
         },
         {
-          "id": "tc-2026-14-practica-1entrenamiento",
-          "kind": "practica",
-          "name": "1° Entrenamiento",
-          "start": "2026-11-15T10:10:00-03:00",
-          "timeKnown": true,
-          "durationMin": 65,
-          "timeStatus": "confirmed",
-          "timeSources": [
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
-              "start": "10:10"
-            }
-          ]
-        },
-        {
           "id": "tc-2026-14-serie-serie1",
           "kind": "serie",
           "name": "Serie 1",
           "start": "2026-11-15T10:55:00-03:00",
           "timeKnown": true,
-          "durationMin": 20,
-          "timeStatus": "confirmed",
+          "durationMin": 10,
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
-              "start": "10:55"
-            },
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
               "start": "10:55"
             }
           ],
@@ -233155,22 +233195,6 @@
             },
             "note": "Oficial"
           }
-        },
-        {
-          "id": "tc-2026-14-practica-2entrenamiento",
-          "kind": "practica",
-          "name": "2° Entrenamiento",
-          "start": "2026-11-15T11:20:00-03:00",
-          "timeKnown": true,
-          "durationMin": 90,
-          "timeStatus": "confirmed",
-          "timeSources": [
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
-              "start": "11:20"
-            }
-          ]
         },
         {
           "id": "tc-2026-14-serie-serie2",
@@ -233500,36 +233524,15 @@
           "id": "tc-2026-14-final-final",
           "kind": "final",
           "name": "Final",
-          "start": "2026-11-15T12:10:00-03:00",
+          "start": "2026-11-15T14:00:00-03:00",
           "timeKnown": true,
-          "durationMin": 160,
-          "timeStatus": "confirmed",
+          "durationMin": 50,
+          "timeStatus": "tentative",
           "timeSources": [
             {
               "name": "SoloTC",
               "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
               "start": "14:00"
-            },
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
-              "start": "12:10"
-            }
-          ]
-        },
-        {
-          "id": "tc-2026-14-clasificacion-clasificacion",
-          "kind": "clasificacion",
-          "name": "Clasificación",
-          "start": "2026-11-15T13:00:00-03:00",
-          "timeKnown": true,
-          "durationMin": 230,
-          "timeStatus": "confirmed",
-          "timeSources": [
-            {
-              "name": "ACTC (cronograma oficial)",
-              "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
-              "start": "13:00"
             }
           ]
         }
@@ -235653,91 +235656,91 @@
         "pos": 1,
         "driver": "Bautista Damiani",
         "team": "",
-        "points": 465.5,
-        "wins": 2
+        "points": 510.5,
+        "wins": 3
       },
       {
         "pos": 2,
         "driver": "Gabriel Gandulia",
         "team": "",
-        "points": 424.5,
+        "points": 460,
         "wins": 1
       },
       {
         "pos": 3,
         "driver": "Benjamín Antón",
         "team": "",
-        "points": 413.5,
+        "points": 442.5,
         "wins": 2
       },
       {
         "pos": 4,
         "driver": "Nicanor Santilli Pazos",
         "team": "",
-        "points": 413,
+        "points": 437.5,
         "wins": 1
       },
       {
         "pos": 5,
         "driver": "Benjamin Ochoa",
         "team": "",
-        "points": 401.5,
+        "points": 428,
         "wins": 0
       },
       {
         "pos": 6,
-        "driver": "Santiago Biagi",
+        "driver": "Thomas Pozner",
         "team": "",
-        "points": 393,
-        "wins": 2
-      },
-      {
-        "pos": 7,
-        "driver": "Felipe Bernasconi",
-        "team": "",
-        "points": 392.5,
+        "points": 419.5,
         "wins": 1
       },
       {
-        "pos": 8,
-        "driver": "Thomas Pozner",
+        "pos": 7,
+        "driver": "Santiago Biagi",
         "team": "",
-        "points": 387,
+        "points": 419.5,
+        "wins": 2
+      },
+      {
+        "pos": 8,
+        "driver": "Felipe Bernasconi",
+        "team": "",
+        "points": 417.5,
         "wins": 1
       },
       {
         "pos": 9,
-        "driver": "Manuel Borgert",
-        "team": "",
-        "points": 385,
-        "wins": 1
-      },
-      {
-        "pos": 10,
         "driver": "Juan Sebastian Gallo",
         "team": "",
-        "points": 382.5,
+        "points": 416.5,
         "wins": 2
       },
       {
+        "pos": 10,
+        "driver": "Manuel Borgert",
+        "team": "",
+        "points": 412,
+        "wins": 0
+      },
+      {
         "pos": 11,
+        "driver": "Eugenio Provens",
+        "team": "",
+        "points": 374.5,
+        "wins": 1
+      },
+      {
+        "pos": 12,
         "driver": "Faustino Cifre",
         "team": "",
         "points": 363,
         "wins": 0
       },
       {
-        "pos": 12,
-        "driver": "Eugenio Provens",
-        "team": "",
-        "points": 336.5,
-        "wins": 1
-      },
-      {
         "pos": 13,
         "driver": "Gustavo (h) Tadei",
         "team": "",
-        "points": 312,
+        "points": 342,
         "wins": 0
       },
       {
@@ -235765,28 +235768,28 @@
         "pos": 17,
         "driver": "Juan Antonio Sandin",
         "team": "",
-        "points": 126,
+        "points": 147.5,
         "wins": 0
       },
       {
         "pos": 18,
-        "driver": "Facundo Ledesma",
+        "driver": "Jaime Nicolas",
         "team": "",
-        "points": 108,
+        "points": 139.5,
         "wins": 0
       },
       {
         "pos": 19,
-        "driver": "Jaime Nicolas",
+        "driver": "Arrigoni Santiago",
         "team": "",
-        "points": 98,
+        "points": 112.5,
         "wins": 0
       },
       {
         "pos": 20,
-        "driver": "Martinez Alejandro",
+        "driver": "Facundo Ledesma",
         "team": "",
-        "points": 93,
+        "points": 108,
         "wins": 0
       }
     ],
@@ -240565,16 +240568,16 @@
       "standingsSource": "https://actc.org.ar/tcppk/campeonato"
     },
     "schedules": {
-      "notes": 30,
+      "notes": 29,
       "officialPdfs": 0,
-      "sessions": 325,
-      "confirmed": 20,
-      "conflicts": 1,
+      "sessions": 319,
+      "confirmed": 10,
+      "conflicts": 0,
       "eventsWithTimes": 48
     },
     "timing": {
-      "documents": 967,
-      "pagesFetched": 129,
+      "documents": 970,
+      "pagesFetched": 130,
       "eventsWithResults": 70,
       "retagged": {
         "1003": {
@@ -241037,7 +241040,5 @@
       "errors": []
     }
   },
-  "failures": [
-    "Se conservaron resultados de 6 sesiones que las fuentes dejaron de traer"
-  ]
+  "failures": []
 }
