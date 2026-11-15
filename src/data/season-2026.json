@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T20:51:07.322Z",
+  "generatedAt": "2026-11-15T13:21:13.521Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -235393,6 +235393,6 @@
     }
   },
   "failures": [
-    "Se conservaron resultados de 5 sesiones que las fuentes dejaron de traer"
+    "Se conservaron resultados de 6 sesiones que las fuentes dejaron de traer"
   ]
 }
