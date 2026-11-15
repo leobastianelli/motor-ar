@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T13:21:13.521Z",
+  "generatedAt": "2026-11-15T13:35:54.606Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -226539,7 +226539,70 @@
               "url": "https://actc.org.ar/tc/noticias/los-horarios-del-tc-para-rio-cuarto",
               "start": "10:05"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "105",
+              "driver": "Manuel Borgert",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "10",
+              "driver": "Gabriel Gandulia",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "168",
+              "driver": "Juan Sebastian Gallo",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "44",
+              "driver": "Thomas Pozner",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "66",
+              "driver": "Gustavo Tadei (h)",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "111",
+              "driver": "Benjamin Ochoa",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "133",
+              "driver": "Felipe Bernasconi",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "32",
+              "driver": "Juan Antonio Sandin",
+              "team": "Ford",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1162/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tcp-2026-14-serie-serie2",
@@ -234928,7 +234991,7 @@
       "eventsWithTimes": 48
     },
     "timing": {
-      "documents": 956,
+      "documents": 957,
       "pagesFetched": 126,
       "eventsWithResults": 70,
       "retagged": {
