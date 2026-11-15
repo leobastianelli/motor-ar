@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T20:51:09.207Z",
+  "generatedAt": "2026-11-15T10:17:38.753Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -6515,9 +6515,7 @@
       ],
       "slug": "jose-manuel-urcera",
       "name": "José Manuel Urcera",
-      "aliases": [
-        "Jose Manuel Urcera Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tn",
         "tc"
@@ -8673,9 +8671,7 @@
       ],
       "slug": "luis-jose-di-palma",
       "name": "Luis José Di Palma",
-      "aliases": [
-        "Luis Jose Di Palma Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tc"
       ],
@@ -9254,9 +9250,7 @@
       ],
       "slug": "mariano-werner",
       "name": "Mariano Werner",
-      "aliases": [
-        "Mariano Werner Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tc",
         "tc-pick-up",
@@ -10942,9 +10936,7 @@
       ],
       "slug": "nicolas-impiombato",
       "name": "Nicolas Impiombato",
-      "aliases": [
-        "Nicolas Impiombato Recargo"
-      ],
+      "aliases": [],
       "series": [
         "tc"
       ],
