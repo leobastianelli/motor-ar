@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T14:36:33.124Z",
+  "generatedAt": "2026-11-15T15:26:20.963Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -223615,6 +223615,107 @@
           }
         },
         {
+          "id": "nuevo-car-show-2026-9-tc4000-ent1",
+          "classId": "tc4000",
+          "kind": "practica",
+          "name": "1° Entrenamiento TC 4000",
+          "start": "2026-11-07T09:30:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-ENT1.pdf",
+              "start": "2026-11-07T09:30:00-03:00"
+            }
+          ],
+          "durationMin": 10,
+          "results": [
+            {
+              "pos": 1,
+              "number": "20",
+              "driver": "Juan Manuel Farabello",
+              "team": "Ford Falcon",
+              "gap": "1:57.929"
+            },
+            {
+              "pos": 2,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Chevrolet Chevy",
+              "gap": "+1.418"
+            },
+            {
+              "pos": 3,
+              "number": "12",
+              "driver": "Walter Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+2.013"
+            },
+            {
+              "pos": 4,
+              "number": "14",
+              "driver": "Fernando Villa",
+              "team": "Ford Falcon",
+              "gap": "+3.261"
+            },
+            {
+              "pos": 5,
+              "number": "79",
+              "driver": "Fabio Canciani",
+              "team": "Chevrolet Chevy",
+              "gap": "+6.292"
+            },
+            {
+              "pos": 6,
+              "number": "9",
+              "driver": "Juan Pablo Main",
+              "team": "Ford Falcon",
+              "gap": "+7.618"
+            },
+            {
+              "pos": 7,
+              "number": "115",
+              "driver": "Eduardo Segorich",
+              "team": "Chevrolet Chevy",
+              "gap": "+13.431"
+            },
+            {
+              "pos": 8,
+              "number": "99",
+              "driver": "Juan José Eguia",
+              "team": "Ford Falcon",
+              "gap": "+14.236"
+            },
+            {
+              "pos": 9,
+              "number": "59",
+              "driver": "Joaquín Del Pino",
+              "team": "Chevrolet Chevy",
+              "gap": "+16.912"
+            },
+            {
+              "pos": 10,
+              "number": "40",
+              "driver": "Marcelo Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+23.465"
+            },
+            {
+              "pos": 11,
+              "status": "Sin tiempo",
+              "number": "74",
+              "driver": "Valentin Toldo",
+              "team": "Chevrolet Chevy",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-ENT1.pdf"
+          }
+        },
+        {
           "id": "nuevo-car-show-2026-9-clase1-ent2",
           "classId": "clase1",
           "kind": "practica",
@@ -223789,6 +223890,71 @@
           "resultsSource": {
             "name": "Nuevo Car Show · planillas de cronometraje",
             "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/C1-ENT2.pdf"
+          }
+        },
+        {
+          "id": "nuevo-car-show-2026-9-fiat600-ent1",
+          "classId": "fiat600",
+          "kind": "practica",
+          "name": "1° Entrenamiento Fiat 600",
+          "start": "2026-11-07T10:15:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-ENT1.pdf",
+              "start": "2026-11-07T10:15:00-03:00"
+            }
+          ],
+          "durationMin": 10,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Alejandro Saucedo",
+              "team": "Fiat 600",
+              "gap": "1:29.841"
+            },
+            {
+              "pos": 2,
+              "number": "2",
+              "driver": "Santiago Ballesio",
+              "team": "Fiat 600",
+              "gap": "+0.846"
+            },
+            {
+              "pos": 3,
+              "number": "14",
+              "driver": "Joaquín Del Pino",
+              "team": "Fiat 600",
+              "gap": "+3.111"
+            },
+            {
+              "pos": 4,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Fiat 600",
+              "gap": "+3.269"
+            },
+            {
+              "pos": 5,
+              "number": "71",
+              "driver": "Leonardo Arévalo",
+              "team": "Fiat 600",
+              "gap": "+4.458"
+            },
+            {
+              "pos": 6,
+              "number": "54",
+              "driver": "Juan Emilio Guazzeroni",
+              "team": "Fiat 600",
+              "gap": "+4.801"
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-ENT1.pdf"
           }
         },
         {
@@ -224050,6 +224216,134 @@
           }
         },
         {
+          "id": "nuevo-car-show-2026-9-tc4000-ent2",
+          "classId": "tc4000",
+          "kind": "practica",
+          "name": "2° Entrenamiento TC 4000",
+          "start": "2026-11-07T11:15:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-ENT2.pdf",
+              "start": "2026-11-07T11:15:00-03:00"
+            }
+          ],
+          "durationMin": 10,
+          "results": [
+            {
+              "pos": 1,
+              "number": "151",
+              "driver": "Agustín Arinci",
+              "team": "Chevrolet Chevy",
+              "gap": "1:55.796"
+            },
+            {
+              "pos": 2,
+              "number": "3",
+              "driver": "Mauricio Chiaverano",
+              "team": "Chevrolet Chevy",
+              "gap": "+0.099"
+            },
+            {
+              "pos": 3,
+              "number": "79",
+              "driver": "Fabio Canciani",
+              "team": "Chevrolet Chevy",
+              "gap": "+0.305"
+            },
+            {
+              "pos": 4,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Chevrolet Chevy",
+              "gap": "+1.555"
+            },
+            {
+              "pos": 5,
+              "number": "98",
+              "driver": "Juan Cruz Federici Di Palma",
+              "team": "Ford Falcon",
+              "gap": "+1.821"
+            },
+            {
+              "pos": 6,
+              "number": "20",
+              "driver": "Juan Manuel Farabello",
+              "team": "Ford Falcon",
+              "gap": "+1.870"
+            },
+            {
+              "pos": 7,
+              "number": "12",
+              "driver": "Walter Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+1.874"
+            },
+            {
+              "pos": 8,
+              "number": "9",
+              "driver": "Juan Pablo Main",
+              "team": "Ford Falcon",
+              "gap": "+2.082"
+            },
+            {
+              "pos": 9,
+              "number": "91",
+              "driver": "Mauro Perassi",
+              "team": "Ford Fairlane",
+              "gap": "+2.156"
+            },
+            {
+              "pos": 10,
+              "number": "74",
+              "driver": "Valentin Toldo",
+              "team": "Chevrolet Chevy",
+              "gap": "+2.730"
+            },
+            {
+              "pos": 11,
+              "number": "14",
+              "driver": "Fernando Villa",
+              "team": "Ford Falcon",
+              "gap": "+2.803"
+            },
+            {
+              "pos": 12,
+              "number": "40",
+              "driver": "Marcelo Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+3.701"
+            },
+            {
+              "pos": 13,
+              "number": "99",
+              "driver": "Juan José Eguia",
+              "team": "Ford Falcon",
+              "gap": "+5.857"
+            },
+            {
+              "pos": 14,
+              "number": "115",
+              "driver": "Eduardo Segorich",
+              "team": "Chevrolet Chevy",
+              "gap": "+8.005"
+            },
+            {
+              "pos": 15,
+              "number": "59",
+              "driver": "Joaquín Del Pino",
+              "team": "Chevrolet Chevy",
+              "gap": "+9.208"
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-ENT2.pdf"
+          }
+        },
+        {
           "id": "nuevo-car-show-2026-9-clase1-clasi1",
           "classId": "clase1",
           "kind": "clasificacion",
@@ -224226,6 +224520,72 @@
           "resultsSource": {
             "name": "Nuevo Car Show · planillas de cronometraje",
             "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/C1-CLASIFICACION-1.pdf"
+          }
+        },
+        {
+          "id": "nuevo-car-show-2026-9-fiat600-ent2",
+          "classId": "fiat600",
+          "kind": "practica",
+          "name": "2° Entrenamiento Fiat 600",
+          "start": "2026-11-07T12:00:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-ENT2.pdf",
+              "start": "2026-11-07T12:00:00-03:00"
+            }
+          ],
+          "durationMin": 10,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Alejandro Saucedo",
+              "team": "Fiat 600",
+              "gap": "1:30.421"
+            },
+            {
+              "pos": 2,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Fiat 600",
+              "gap": "+1.392"
+            },
+            {
+              "pos": 3,
+              "number": "54",
+              "driver": "Juan Emilio Guazzeroni",
+              "team": "Fiat 600",
+              "gap": "+1.837"
+            },
+            {
+              "pos": 4,
+              "number": "4",
+              "driver": "Pablo Tedeschi",
+              "team": "Fiat 600",
+              "gap": "+2.205"
+            },
+            {
+              "pos": 5,
+              "number": "71",
+              "driver": "Leonardo Arévalo",
+              "team": "Fiat 600",
+              "gap": "+4.547"
+            },
+            {
+              "pos": 6,
+              "status": "Sin tiempo",
+              "number": "14",
+              "driver": "Joaquín Del Pino",
+              "team": "Fiat 600",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-ENT2.pdf"
           }
         },
         {
@@ -224483,6 +224843,144 @@
           "resultsSource": {
             "name": "Nuevo Car Show · planillas de cronometraje",
             "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/C3-CLASIFICACION-1-RECTIFICADA.pdf"
+          }
+        },
+        {
+          "id": "nuevo-car-show-2026-9-tc4000-clasi1",
+          "classId": "tc4000",
+          "kind": "clasificacion",
+          "name": "1ª Clasificación TC 4000",
+          "start": "2026-11-07T13:15:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-CLASIFICACION-1.pdf",
+              "start": "2026-11-07T13:15:00-03:00"
+            }
+          ],
+          "durationMin": 10,
+          "results": [
+            {
+              "pos": 1,
+              "number": "79",
+              "driver": "Nicolás Gonzalez",
+              "team": "Chevrolet Chevy",
+              "gap": "1:55.495"
+            },
+            {
+              "pos": 2,
+              "number": "151",
+              "driver": "Agustín Arinci",
+              "team": "Chevrolet Chevy",
+              "gap": "+0.506"
+            },
+            {
+              "pos": 3,
+              "number": "98",
+              "driver": "Juan Cruz Federici Di Palma",
+              "team": "Ford Falcon",
+              "gap": "+0.990"
+            },
+            {
+              "pos": 4,
+              "number": "12",
+              "driver": "Walter Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+1.477"
+            },
+            {
+              "pos": 5,
+              "number": "91",
+              "driver": "Mauro Perassi",
+              "team": "Ford Fairlane",
+              "gap": "+2.100"
+            },
+            {
+              "pos": 6,
+              "number": "74",
+              "driver": "Valentin Toldo",
+              "team": "Chevrolet Chevy",
+              "gap": "+2.490"
+            },
+            {
+              "pos": 7,
+              "number": "9",
+              "driver": "Juan Pablo Main",
+              "team": "Ford Falcon",
+              "gap": "+2.634"
+            },
+            {
+              "pos": 8,
+              "number": "20",
+              "driver": "Juan Manuel Farabello",
+              "team": "Ford Falcon",
+              "gap": "+2.678"
+            },
+            {
+              "pos": 9,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Chevrolet Chevy",
+              "gap": "+3.324"
+            },
+            {
+              "pos": 10,
+              "number": "40",
+              "driver": "Marcelo Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+3.383"
+            },
+            {
+              "pos": 11,
+              "number": "14",
+              "driver": "Fernando Villa",
+              "team": "Ford Falcon",
+              "gap": "+3.926"
+            },
+            {
+              "pos": 12,
+              "number": "99",
+              "driver": "Juan José Eguia",
+              "team": "Ford Falcon",
+              "gap": "+7.133"
+            },
+            {
+              "pos": 13,
+              "number": "115",
+              "driver": "Eduardo Segorich",
+              "team": "Chevrolet Chevy",
+              "gap": "+7.219"
+            },
+            {
+              "pos": 14,
+              "number": "59",
+              "driver": "Joaquín Del Pino",
+              "team": "Chevrolet Chevy",
+              "gap": "+8.251"
+            },
+            {
+              "pos": 15,
+              "status": "Sin tiempo",
+              "number": "3",
+              "driver": "Mauricio Chiaverano",
+              "team": "Chevrolet Chevy",
+              "gap": ""
+            },
+            {
+              "pos": 16,
+              "positionText": "NE",
+              "status": "No largó",
+              "number": "77",
+              "driver": "Mario Baldo",
+              "team": "Torino",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-CLASIFICACION-1.pdf"
           }
         },
         {
@@ -224860,6 +225358,78 @@
           "resultsSource": {
             "name": "Nuevo Car Show · planillas de cronometraje",
             "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/C1-CLASIFICACION-GRAL.pdf"
+          }
+        },
+        {
+          "id": "nuevo-car-show-2026-9-fiat600-clasi1",
+          "classId": "fiat600",
+          "kind": "clasificacion",
+          "name": "1ª Clasificación Fiat 600",
+          "start": "2026-11-07T14:15:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-CLASIFICACION-1.pdf",
+              "start": "2026-11-07T14:15:00-03:00"
+            }
+          ],
+          "durationMin": 10,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Alejandro Saucedo",
+              "team": "Fiat 600",
+              "gap": "1:28.772"
+            },
+            {
+              "pos": 2,
+              "number": "2",
+              "driver": "Santiago Ballesio",
+              "team": "Fiat 600",
+              "gap": "+0.945"
+            },
+            {
+              "pos": 3,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Fiat 600",
+              "gap": "+1.706"
+            },
+            {
+              "pos": 4,
+              "number": "4",
+              "driver": "Pablo Tedeschi",
+              "team": "Fiat 600",
+              "gap": "+1.950"
+            },
+            {
+              "pos": 5,
+              "number": "54",
+              "driver": "Juan Emilio Guazzeroni",
+              "team": "Fiat 600",
+              "gap": "+2.006"
+            },
+            {
+              "pos": 6,
+              "number": "14",
+              "driver": "Joaquín Del Pino",
+              "team": "Fiat 600",
+              "gap": "+3.786"
+            },
+            {
+              "pos": 7,
+              "number": "71",
+              "driver": "Leonardo Arévalo",
+              "team": "Fiat 600",
+              "gap": "+3.962"
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-CLASIFICACION-1.pdf"
           }
         },
         {
@@ -225445,6 +226015,300 @@
           }
         },
         {
+          "id": "nuevo-car-show-2026-9-tc4000-clasi2",
+          "classId": "tc4000",
+          "kind": "clasificacion",
+          "name": "2ª Clasificación TC 4000",
+          "start": "2026-11-07T15:30:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-CLASIFICACION-2.pdf",
+              "start": "2026-11-07T15:30:00-03:00"
+            }
+          ],
+          "durationMin": 10,
+          "results": [
+            {
+              "pos": 1,
+              "number": "151",
+              "driver": "Agustín Arinci",
+              "team": "Chevrolet Chevy",
+              "gap": "1:55.858"
+            },
+            {
+              "pos": 2,
+              "number": "79",
+              "driver": "Nicolás Gonzalez",
+              "team": "Chevrolet Chevy",
+              "gap": "+0.663"
+            },
+            {
+              "pos": 3,
+              "number": "98",
+              "driver": "Juan Cruz Federici Di Palma",
+              "team": "Ford Falcon",
+              "gap": "+0.904"
+            },
+            {
+              "pos": 4,
+              "number": "9",
+              "driver": "Juan Pablo Main",
+              "team": "Ford Falcon",
+              "gap": "+1.601"
+            },
+            {
+              "pos": 5,
+              "number": "12",
+              "driver": "Walter Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+1.779"
+            },
+            {
+              "pos": 6,
+              "number": "20",
+              "driver": "Juan Manuel Farabello",
+              "team": "Ford Falcon",
+              "gap": "+2.062"
+            },
+            {
+              "pos": 7,
+              "number": "74",
+              "driver": "Valentin Toldo",
+              "team": "Chevrolet Chevy",
+              "gap": "+2.516"
+            },
+            {
+              "pos": 8,
+              "number": "40",
+              "driver": "Marcelo Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+2.573"
+            },
+            {
+              "pos": 9,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Chevrolet Chevy",
+              "gap": "+3.825"
+            },
+            {
+              "pos": 10,
+              "number": "14",
+              "driver": "Fernando Villa",
+              "team": "Ford Falcon",
+              "gap": "+3.955"
+            },
+            {
+              "pos": 11,
+              "number": "115",
+              "driver": "Eduardo Segorich",
+              "team": "Chevrolet Chevy",
+              "gap": "+6.420"
+            },
+            {
+              "pos": 12,
+              "number": "59",
+              "driver": "Joaquín Del Pino",
+              "team": "Chevrolet Chevy",
+              "gap": "+6.983"
+            },
+            {
+              "pos": 13,
+              "number": "91",
+              "driver": "Mauro Perassi",
+              "team": "Ford Fairlane",
+              "gap": "+20.624"
+            },
+            {
+              "pos": 14,
+              "status": "Sin tiempo",
+              "number": "3",
+              "driver": "Mauricio Chiaverano",
+              "team": "Chevrolet Chevy",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-CLASIFICACION-2.pdf"
+          }
+        },
+        {
+          "id": "nuevo-car-show-2026-9-tc4000-clasi-general",
+          "classId": "tc4000",
+          "kind": "clasificacion",
+          "name": "Clasificación general TC 4000",
+          "start": "2026-11-07T15:30:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "79",
+              "driver": "Nicolás Gonzalez",
+              "team": "Chevrolet Chevy",
+              "gap": "1:55.495"
+            },
+            {
+              "pos": 2,
+              "number": "151",
+              "driver": "Agustín Arinci",
+              "team": "Chevrolet Chevy",
+              "gap": "+0.363"
+            },
+            {
+              "pos": 3,
+              "number": "98",
+              "driver": "Juan Cruz Federici Di Palma",
+              "team": "Ford Falcon",
+              "gap": "+0.990"
+            },
+            {
+              "pos": 4,
+              "number": "55",
+              "driver": "Marcos Karlen",
+              "team": "Ford Falcon",
+              "gap": "+1.118"
+            },
+            {
+              "pos": 5,
+              "number": "1",
+              "driver": "Brian Yacob",
+              "team": "Ford Falcon",
+              "gap": "+1.358"
+            },
+            {
+              "pos": 6,
+              "number": "12",
+              "driver": "Walter Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+1.477"
+            },
+            {
+              "pos": 7,
+              "number": "5",
+              "driver": "Roberto Carlos Main",
+              "team": "Chevrolet Chevy",
+              "gap": "+1.651"
+            },
+            {
+              "pos": 8,
+              "number": "9",
+              "driver": "Juan Pablo Main",
+              "team": "Ford Falcon",
+              "gap": "+1.964"
+            },
+            {
+              "pos": 9,
+              "number": "33",
+              "driver": "Nahuel Pizzi",
+              "team": "Ford Falcon",
+              "gap": "+2.052"
+            },
+            {
+              "pos": 10,
+              "number": "91",
+              "driver": "Mauro Perassi",
+              "team": "Ford Fairlane",
+              "gap": "+2.100"
+            },
+            {
+              "pos": 11,
+              "number": "20",
+              "driver": "Juan Manuel Farabello",
+              "team": "Ford Falcon",
+              "gap": "+2.425"
+            },
+            {
+              "pos": 12,
+              "number": "74",
+              "driver": "Valentin Toldo",
+              "team": "Chevrolet Chevy",
+              "gap": "+2.490"
+            },
+            {
+              "pos": 13,
+              "number": "57",
+              "driver": "Carlos Morier",
+              "team": "Ford Falcon",
+              "gap": "+2.817"
+            },
+            {
+              "pos": 14,
+              "number": "40",
+              "driver": "Marcelo Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+2.936"
+            },
+            {
+              "pos": 15,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Chevrolet Chevy",
+              "gap": "+3.324"
+            },
+            {
+              "pos": 16,
+              "number": "14",
+              "driver": "Fernando Villa",
+              "team": "Ford Falcon",
+              "gap": "+3.926"
+            },
+            {
+              "pos": 17,
+              "number": "115",
+              "driver": "Eduardo Segorich",
+              "team": "Chevrolet Chevy",
+              "gap": "+6.783"
+            },
+            {
+              "pos": 18,
+              "number": "27",
+              "driver": "Gerardo Fuhr",
+              "team": "Torino",
+              "gap": "+6.931"
+            },
+            {
+              "pos": 19,
+              "number": "99",
+              "driver": "Juan José Eguia",
+              "team": "Ford Falcon",
+              "gap": "+7.133"
+            },
+            {
+              "pos": 20,
+              "number": "59",
+              "driver": "Joaquín Del Pino",
+              "team": "Chevrolet Chevy",
+              "gap": "+7.346"
+            },
+            {
+              "pos": 21,
+              "status": "Sin tiempo",
+              "number": "3",
+              "driver": "Mauricio Chiaverano",
+              "team": "Chevrolet Chevy",
+              "gap": ""
+            },
+            {
+              "pos": 22,
+              "positionText": "NE",
+              "status": "No largó",
+              "number": "77",
+              "driver": "Mario Baldo",
+              "team": "Torino",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-CLASIFICACION-GRAL.pdf"
+          }
+        },
+        {
           "id": "nuevo-car-show-2026-9-clase1-serie1",
           "classId": "clase1",
           "kind": "serie",
@@ -225701,6 +226565,525 @@
           "resultsSource": {
             "name": "Nuevo Car Show · planillas de cronometraje",
             "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/C1-SERIE-2.pdf"
+          }
+        },
+        {
+          "id": "nuevo-car-show-2026-9-tc4000-serie1",
+          "classId": "tc4000",
+          "kind": "serie",
+          "name": "1ª Serie TC 4000",
+          "start": "2026-11-07T17:00:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-SERIE-1.pdf",
+              "start": "2026-11-07T17:00:00-03:00"
+            }
+          ],
+          "durationMin": 15,
+          "results": [
+            {
+              "pos": 1,
+              "number": "79",
+              "driver": "N. Gonzalez / F. Canciani",
+              "team": "Chevrolet Chevy",
+              "gap": "9:47.277",
+              "laps": 5
+            },
+            {
+              "pos": 2,
+              "number": "1",
+              "driver": "Brian Yacob",
+              "team": "Ford Falcon",
+              "gap": "+3.181",
+              "laps": 5
+            },
+            {
+              "pos": 3,
+              "number": "98",
+              "driver": "Juan Cruz Federici Di Palma",
+              "team": "Ford Falcon",
+              "gap": "+3.513",
+              "laps": 5
+            },
+            {
+              "pos": 4,
+              "number": "5",
+              "driver": "Roberto Carlos Main",
+              "team": "Chevrolet Chevy",
+              "gap": "+3.925",
+              "laps": 5
+            },
+            {
+              "pos": 5,
+              "number": "3",
+              "driver": "Mauricio Chiaverano",
+              "team": "Chevrolet Chevy",
+              "gap": "+4.844",
+              "laps": 5
+            },
+            {
+              "pos": 6,
+              "number": "57",
+              "driver": "Carlos Morier",
+              "team": "Ford Falcon",
+              "gap": "+14.617",
+              "laps": 5
+            },
+            {
+              "pos": 7,
+              "number": "33",
+              "driver": "Nahuel Pizzi",
+              "team": "Ford Falcon",
+              "gap": "+15.052",
+              "laps": 5
+            },
+            {
+              "pos": 8,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Chevrolet Chevy",
+              "gap": "+33.889",
+              "laps": 5
+            },
+            {
+              "pos": 9,
+              "number": "115",
+              "driver": "Eduardo Segorich",
+              "team": "Chevrolet Chevy",
+              "gap": "+59.940",
+              "laps": 5
+            },
+            {
+              "pos": 10,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "20",
+              "driver": "Juan Manuel Farabello",
+              "team": "Ford Falcon",
+              "gap": "+5 vueltas"
+            },
+            {
+              "pos": 11,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "99",
+              "driver": "Juan José Eguia",
+              "team": "Ford Falcon",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-SERIE-1.pdf"
+          }
+        },
+        {
+          "id": "nuevo-car-show-2026-9-tc4000-serie2",
+          "classId": "tc4000",
+          "kind": "serie",
+          "name": "2ª Serie TC 4000",
+          "start": "2026-11-07T17:30:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-SERIE-2.pdf",
+              "start": "2026-11-07T17:30:00-03:00"
+            }
+          ],
+          "durationMin": 15,
+          "results": [
+            {
+              "pos": 1,
+              "number": "151",
+              "driver": "Agustín Arinci",
+              "team": "Chevrolet Chevy",
+              "gap": "9:46.041",
+              "laps": 5
+            },
+            {
+              "pos": 2,
+              "number": "55",
+              "driver": "Marcos Karlen",
+              "team": "Ford Falcon",
+              "gap": "+2.638",
+              "laps": 5
+            },
+            {
+              "pos": 3,
+              "number": "9",
+              "driver": "Juan Pablo Main",
+              "team": "Ford Falcon",
+              "gap": "+7.359",
+              "laps": 5
+            },
+            {
+              "pos": 4,
+              "number": "91",
+              "driver": "Mauro Perassi",
+              "team": "Ford Fairlane",
+              "gap": "+8.701",
+              "laps": 5
+            },
+            {
+              "pos": 5,
+              "number": "74",
+              "driver": "Valentin Toldo",
+              "team": "Chevrolet Chevy",
+              "gap": "+13.711",
+              "laps": 5
+            },
+            {
+              "pos": 6,
+              "number": "40",
+              "driver": "Marcelo Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+17.648",
+              "laps": 5
+            },
+            {
+              "pos": 7,
+              "number": "14",
+              "driver": "Fernando Villa",
+              "team": "Ford Falcon",
+              "gap": "+29.844",
+              "laps": 5
+            },
+            {
+              "pos": 8,
+              "number": "27",
+              "driver": "Gerardo Fuhr",
+              "team": "Torino",
+              "gap": "+30.575",
+              "laps": 5
+            },
+            {
+              "pos": 9,
+              "number": "59",
+              "driver": "Joaquín Del Pino",
+              "team": "Chevrolet Chevy",
+              "gap": "+43.739",
+              "laps": 5
+            },
+            {
+              "pos": 10,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "12",
+              "driver": "Walter Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+3 vueltas",
+              "laps": 2
+            },
+            {
+              "pos": 11,
+              "positionText": "NE",
+              "status": "No largó",
+              "number": "77",
+              "driver": "Mario Baldo",
+              "team": "Torino",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-SERIE-2.pdf"
+          }
+        },
+        {
+          "id": "nuevo-car-show-2026-9-fiat600-clasi2",
+          "classId": "fiat600",
+          "kind": "clasificacion",
+          "name": "2ª Clasificación Fiat 600",
+          "start": "2026-11-07T18:00:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-CLASIFICACION-2.pdf",
+              "start": "2026-11-07T18:00:00-03:00"
+            }
+          ],
+          "durationMin": 10,
+          "results": [
+            {
+              "pos": 1,
+              "number": "6",
+              "driver": "Alejandro Saucedo",
+              "team": "Fiat 600",
+              "gap": "1:28.795"
+            },
+            {
+              "pos": 2,
+              "number": "2",
+              "driver": "Santiago Ballesio",
+              "team": "Fiat 600",
+              "gap": "+0.853"
+            },
+            {
+              "pos": 3,
+              "number": "54",
+              "driver": "Juan Emilio Guazzeroni",
+              "team": "Fiat 600",
+              "gap": "+0.864"
+            },
+            {
+              "pos": 4,
+              "number": "4",
+              "driver": "Pablo Tedeschi",
+              "team": "Fiat 600",
+              "gap": "+1.652"
+            },
+            {
+              "pos": 5,
+              "number": "14",
+              "driver": "Joaquín Del Pino",
+              "team": "Fiat 600",
+              "gap": "+1.916"
+            },
+            {
+              "pos": 6,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Fiat 600",
+              "gap": "+1.954"
+            },
+            {
+              "pos": 7,
+              "number": "71",
+              "driver": "Leonardo Arévalo",
+              "team": "Fiat 600",
+              "gap": "+4.259"
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-CLASIFICACION-2.pdf"
+          }
+        },
+        {
+          "id": "nuevo-car-show-2026-9-fiat600-clasi-general",
+          "classId": "fiat600",
+          "kind": "clasificacion",
+          "name": "Clasificación general Fiat 600",
+          "start": "2026-11-07T18:00:00-03:00",
+          "timeKnown": false,
+          "durationMin": 20,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Pablo Gieco",
+              "team": "Fiat 600",
+              "gap": "1:28.351"
+            },
+            {
+              "pos": 2,
+              "number": "3",
+              "driver": "Alex Diego Weppler",
+              "team": "Fiat 600",
+              "gap": "+0.134"
+            },
+            {
+              "pos": 3,
+              "number": "6",
+              "driver": "Alejandro Saucedo",
+              "team": "Fiat 600",
+              "gap": "+0.421"
+            },
+            {
+              "pos": 4,
+              "number": "2",
+              "driver": "Santiago Ballesio",
+              "team": "Fiat 600",
+              "gap": "+0.853"
+            },
+            {
+              "pos": 5,
+              "number": "54",
+              "driver": "Juan Emilio Guazzeroni",
+              "team": "Fiat 600",
+              "gap": "+0.864"
+            },
+            {
+              "pos": 6,
+              "number": "4",
+              "driver": "Pablo Tedeschi",
+              "team": "Fiat 600",
+              "gap": "+1.652"
+            },
+            {
+              "pos": 7,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Fiat 600",
+              "gap": "+1.812"
+            },
+            {
+              "pos": 8,
+              "number": "14",
+              "driver": "Joaquín Del Pino",
+              "team": "Fiat 600",
+              "gap": "+1.916"
+            },
+            {
+              "pos": 9,
+              "number": "8",
+              "driver": "Dante Dotti",
+              "team": "Fiat 600",
+              "gap": "+2.502"
+            },
+            {
+              "pos": 10,
+              "number": "32",
+              "driver": "Amilcar Sigot",
+              "team": "Fiat 600",
+              "gap": "+3.387"
+            },
+            {
+              "pos": 11,
+              "number": "71",
+              "driver": "Leonardo Arévalo",
+              "team": "Fiat 600",
+              "gap": "+4.068"
+            },
+            {
+              "pos": 12,
+              "number": "39",
+              "driver": "Diego Bernini",
+              "team": "Fiat 600",
+              "gap": "+35.824"
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-CLASIFICACION-GRAL.pdf"
+          }
+        },
+        {
+          "id": "nuevo-car-show-2026-9-fiat600-serie1",
+          "classId": "fiat600",
+          "kind": "serie",
+          "name": "Serie Fiat 600",
+          "start": "2026-11-08T08:00:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-SERIE.pdf",
+              "start": "2026-11-08T08:00:00-03:00"
+            }
+          ],
+          "durationMin": 15,
+          "results": [
+            {
+              "pos": 1,
+              "number": "7",
+              "driver": "Pablo Gieco",
+              "team": "Fiat 600",
+              "gap": "7:23.739",
+              "laps": 5
+            },
+            {
+              "pos": 2,
+              "number": "6",
+              "driver": "Alejandro Saucedo",
+              "team": "Fiat 600",
+              "gap": "+0.061",
+              "laps": 5
+            },
+            {
+              "pos": 3,
+              "number": "3",
+              "driver": "Alex Diego Weppler",
+              "team": "Fiat 600",
+              "gap": "+0.631",
+              "laps": 5
+            },
+            {
+              "pos": 4,
+              "number": "2",
+              "driver": "Santiago Ballesio",
+              "team": "Fiat 600",
+              "gap": "+2.545",
+              "laps": 5
+            },
+            {
+              "pos": 5,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Fiat 600",
+              "gap": "+6.044",
+              "laps": 5
+            },
+            {
+              "pos": 6,
+              "number": "54",
+              "driver": "Juan Emilio Guazzeroni",
+              "team": "Fiat 600",
+              "gap": "+6.207",
+              "laps": 5
+            },
+            {
+              "pos": 7,
+              "number": "4",
+              "driver": "Pablo Tedeschi",
+              "team": "Fiat 600",
+              "gap": "+7.377",
+              "laps": 5
+            },
+            {
+              "pos": 8,
+              "number": "32",
+              "driver": "Amilcar Sigot",
+              "team": "Fiat 600",
+              "gap": "+10.123",
+              "laps": 5
+            },
+            {
+              "pos": 9,
+              "number": "71",
+              "driver": "Leonardo Arévalo",
+              "team": "Fiat 600",
+              "gap": "+21.379",
+              "laps": 5
+            },
+            {
+              "pos": 10,
+              "number": "14",
+              "driver": "Joaquín Del Pino",
+              "team": "Fiat 600",
+              "gap": "+1 vuelta",
+              "laps": 4
+            },
+            {
+              "pos": 11,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "39",
+              "driver": "Diego Bernini",
+              "team": "Fiat 600",
+              "gap": ""
+            },
+            {
+              "pos": 12,
+              "positionText": "NE",
+              "status": "No largó",
+              "number": "8",
+              "driver": "Dante Dotti",
+              "team": "Fiat 600",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-SERIE.pdf"
           }
         },
         {
@@ -226390,18 +227773,202 @@
           "classId": "tc4000",
           "kind": "final",
           "name": "Final TC 4000",
-          "start": "2026-11-08T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
-        },
-        {
-          "id": "nuevo-car-show-2026-9-fiat600-final",
-          "classId": "fiat600",
-          "kind": "final",
-          "name": "Final Fiat 600",
-          "start": "2026-11-08T12:00:00-03:00",
-          "timeKnown": false,
-          "durationMin": 30
+          "start": "2026-11-08T11:15:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-FINAL.pdf",
+              "start": "2026-11-08T11:15:00-03:00"
+            }
+          ],
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "151",
+              "driver": "Agustín Arinci",
+              "team": "Chevrolet Chevy",
+              "gap": "23:23.726",
+              "laps": 12
+            },
+            {
+              "pos": 2,
+              "number": "9",
+              "driver": "Juan Pablo Main",
+              "team": "Ford Falcon",
+              "gap": "+9.794",
+              "laps": 12
+            },
+            {
+              "pos": 3,
+              "number": "79",
+              "driver": "N. Gonzalez / F. Canciani",
+              "team": "Chevrolet Chevy",
+              "gap": "+9.795",
+              "laps": 12
+            },
+            {
+              "pos": 4,
+              "number": "3",
+              "driver": "Mauricio Chiaverano",
+              "team": "Chevrolet Chevy",
+              "gap": "+15.119",
+              "laps": 12
+            },
+            {
+              "pos": 5,
+              "number": "1",
+              "driver": "Brian Yacob",
+              "team": "Ford Falcon",
+              "gap": "+21.278",
+              "laps": 12
+            },
+            {
+              "pos": 6,
+              "number": "91",
+              "driver": "Mauro Perassi",
+              "team": "Ford Fairlane",
+              "gap": "+27.228",
+              "laps": 12
+            },
+            {
+              "pos": 7,
+              "number": "98",
+              "driver": "Juan Cruz Federici Di Palma",
+              "team": "Ford Falcon",
+              "gap": "+28.067",
+              "laps": 12
+            },
+            {
+              "pos": 8,
+              "number": "55",
+              "driver": "Marcos Karlen",
+              "team": "Ford Falcon",
+              "gap": "+28.590",
+              "laps": 12
+            },
+            {
+              "pos": 9,
+              "number": "20",
+              "driver": "Juan Manuel Farabello",
+              "team": "Ford Falcon",
+              "gap": "+33.147",
+              "laps": 12
+            },
+            {
+              "pos": 10,
+              "number": "74",
+              "driver": "Valentin Toldo",
+              "team": "Chevrolet Chevy",
+              "gap": "+37.723",
+              "laps": 12
+            },
+            {
+              "pos": 11,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Chevrolet Chevy",
+              "gap": "+54.006",
+              "laps": 12
+            },
+            {
+              "pos": 12,
+              "number": "40",
+              "driver": "Marcelo Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+54.269",
+              "laps": 12
+            },
+            {
+              "pos": 13,
+              "number": "27",
+              "driver": "Gerardo Fuhr",
+              "team": "Torino",
+              "gap": "+1:29.814",
+              "laps": 12
+            },
+            {
+              "pos": 14,
+              "number": "99",
+              "driver": "Juan José Eguia",
+              "team": "Ford Falcon",
+              "gap": "+1:33.308",
+              "laps": 12
+            },
+            {
+              "pos": 15,
+              "number": "59",
+              "driver": "Joaquín Del Pino",
+              "team": "Chevrolet Chevy",
+              "gap": "+1:47.721",
+              "laps": 12
+            },
+            {
+              "pos": 16,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "115",
+              "driver": "Eduardo Segorich",
+              "team": "Chevrolet Chevy",
+              "gap": "+6 vueltas",
+              "laps": 6
+            },
+            {
+              "pos": 17,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "5",
+              "driver": "Roberto Carlos Main",
+              "team": "Chevrolet Chevy",
+              "gap": "+6 vueltas",
+              "laps": 6
+            },
+            {
+              "pos": 18,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "33",
+              "driver": "Nahuel Pizzi",
+              "team": "Ford Falcon",
+              "gap": "+7 vueltas",
+              "laps": 5
+            },
+            {
+              "pos": 19,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "12",
+              "driver": "Walter Belich",
+              "team": "Chevrolet Chevy",
+              "gap": "+7 vueltas",
+              "laps": 5
+            },
+            {
+              "pos": 20,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "57",
+              "driver": "Carlos Morier",
+              "team": "Ford Falcon",
+              "gap": "+10 vueltas",
+              "laps": 2
+            },
+            {
+              "pos": 21,
+              "positionText": "NE",
+              "status": "No largó",
+              "number": "14",
+              "driver": "Fernando Villa",
+              "team": "Ford Falcon",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/4000-FINAL.pdf"
+          }
         },
         {
           "id": "nuevo-car-show-2026-9-clase3-final",
@@ -226823,6 +228390,131 @@
           "resultsSource": {
             "name": "Nuevo Car Show · planillas de cronometraje",
             "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/C2-FINAL-RECTIFICADA.pdf"
+          }
+        },
+        {
+          "id": "nuevo-car-show-2026-9-fiat600-final",
+          "classId": "fiat600",
+          "kind": "final",
+          "name": "Final Fiat 600",
+          "start": "2026-11-08T14:10:00-03:00",
+          "timeKnown": true,
+          "timeStatus": "confirmed",
+          "timeSources": [
+            {
+              "name": "Nuevo Car Show (planilla de tiempos oficial)",
+              "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-FINAL.pdf",
+              "start": "2026-11-08T14:10:00-03:00"
+            }
+          ],
+          "durationMin": 30,
+          "results": [
+            {
+              "pos": 1,
+              "number": "2",
+              "driver": "Santiago Ballesio",
+              "team": "Fiat 600",
+              "gap": "17:54.335",
+              "laps": 12
+            },
+            {
+              "pos": 2,
+              "number": "7",
+              "driver": "Pablo Gieco",
+              "team": "Fiat 600",
+              "gap": "+0.291",
+              "laps": 12
+            },
+            {
+              "pos": 3,
+              "number": "6",
+              "driver": "Alejandro Saucedo",
+              "team": "Fiat 600",
+              "gap": "+2.402",
+              "laps": 12
+            },
+            {
+              "pos": 4,
+              "number": "56",
+              "driver": "Sebastián Grosso",
+              "team": "Fiat 600",
+              "gap": "+4.585",
+              "laps": 12
+            },
+            {
+              "pos": 5,
+              "number": "54",
+              "driver": "Juan Emilio Guazzeroni",
+              "team": "Fiat 600",
+              "gap": "+24.148",
+              "laps": 12
+            },
+            {
+              "pos": 6,
+              "number": "4",
+              "driver": "Pablo Tedeschi",
+              "team": "Fiat 600",
+              "gap": "+26.862",
+              "laps": 12
+            },
+            {
+              "pos": 7,
+              "number": "39",
+              "driver": "Diego Bernini",
+              "team": "Fiat 600",
+              "gap": "+30.265",
+              "laps": 12
+            },
+            {
+              "pos": 8,
+              "number": "14",
+              "driver": "Joaquín Del Pino",
+              "team": "Fiat 600",
+              "gap": "+36.149",
+              "laps": 12
+            },
+            {
+              "pos": 9,
+              "number": "32",
+              "driver": "Amilcar Sigot",
+              "team": "Fiat 600",
+              "gap": "+1 vuelta",
+              "laps": 11
+            },
+            {
+              "pos": 10,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "71",
+              "driver": "Leonardo Arévalo",
+              "team": "Fiat 600",
+              "gap": "+6 vueltas",
+              "laps": 6
+            },
+            {
+              "pos": 11,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "8",
+              "driver": "Dante Dotti",
+              "team": "Fiat 600",
+              "gap": "+7 vueltas",
+              "laps": 5
+            },
+            {
+              "pos": 12,
+              "positionText": "NC",
+              "status": "No clasificado",
+              "number": "3",
+              "driver": "Alex Diego Weppler",
+              "team": "Fiat 600",
+              "gap": "+7 vueltas",
+              "laps": 5
+            }
+          ],
+          "resultsSource": {
+            "name": "Nuevo Car Show · planillas de cronometraje",
+            "url": "https://nuevocarshow.com.ar/wp-content/uploads/2026/11/600-FINAL.pdf"
           }
         }
       ],
@@ -231616,7 +233308,133 @@
               "url": "https://www.solotc.com.ar/tc-rio-cuarto-horarios-tv-cronograma-fecha-14-2026/",
               "start": "11:45"
             }
-          ]
+          ],
+          "results": [
+            {
+              "pos": 1,
+              "number": "117",
+              "driver": "Matías Rossi",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 2,
+              "number": "95",
+              "driver": "Marcos Landa",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 3,
+              "number": "83",
+              "driver": "Facundo Ardusso",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 4,
+              "number": "79",
+              "driver": "Facundo Chapur",
+              "team": "Torino",
+              "gap": ""
+            },
+            {
+              "pos": 5,
+              "number": "157",
+              "driver": "Juan B De Benedictis",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 6,
+              "number": "63",
+              "driver": "Nicolás Bonelli",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 7,
+              "number": "7",
+              "driver": "Santiago Mangoni",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 8,
+              "number": "119",
+              "driver": "Hernán Palazzo",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 9,
+              "number": "88",
+              "driver": "Nicolás Trosset",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "number": "29",
+              "driver": "Elio Craparo",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "number": "114",
+              "driver": "Gastón Ferrante",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 12,
+              "number": "53",
+              "driver": "Juan Tomás Catalán Magni",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 13,
+              "number": "123",
+              "driver": "Martín Vázquez",
+              "team": "Dodge",
+              "gap": ""
+            },
+            {
+              "pos": 14,
+              "number": "115",
+              "driver": "Diego De Carlo",
+              "team": "Chevrolet",
+              "gap": ""
+            },
+            {
+              "pos": 15,
+              "number": "77",
+              "driver": "Augusto Carinelli",
+              "team": "Ford",
+              "gap": ""
+            },
+            {
+              "pos": 16,
+              "number": "154",
+              "driver": "Joaquín Ochoa",
+              "team": "Toyota",
+              "gap": ""
+            },
+            {
+              "pos": 17,
+              "number": "141",
+              "driver": "Jorge Barrio",
+              "team": "Chevrolet",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "ACTC · tiempos oficiales",
+            "url": "https://tiempos.actc.org.ar/resultados/1169/ver",
+            "status": "provisional"
+          }
         },
         {
           "id": "tc-2026-14-final-final",
@@ -238613,17 +240431,17 @@
         },
         "tc4000": {
           "status": "sin-campeonato",
-          "reason": "Faltan los resultados de la final de la fecha 9 (se corrió el 08/11): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
+          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 7 de las 8 fechas que ésta cubre (por ejemplo, el auto 6 de la fecha 2: 0 contra 1 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
         },
         "fiat600": {
           "status": "sin-campeonato",
-          "reason": "Faltan los resultados de la final de la fecha 9 (se corrió el 08/11): el sitio oficial todavía no los publicó y sin ellos la tabla estaría atrasada."
+          "reason": "Nuestro cálculo con el reglamento no coincide con la tabla oficial en 6 de las 8 fechas que ésta cubre (por ejemplo, el auto 8 de la fecha 1: 1,5 contra 1,13 puntos). La tabla oficial incluye ajustes que no figuran en las planillas, como invitados que no suman o exclusiones anunciadas aparte."
         }
       }
     },
     "nuevoCarShow": {
       "events": 10,
-      "pdfs": 24,
+      "pdfs": 15,
       "calendarioEstatico": false,
       "rounds": [
         1,
@@ -238695,8 +240513,8 @@
       "eventsWithTimes": 48
     },
     "timing": {
-      "documents": 963,
-      "pagesFetched": 129,
+      "documents": 964,
+      "pagesFetched": 128,
       "eventsWithResults": 70,
       "retagged": {
         "1003": {
@@ -239160,7 +240978,6 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/7/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "Se conservaron resultados de 6 sesiones que las fuentes dejaron de traer"
   ]
 }

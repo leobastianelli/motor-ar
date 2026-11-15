@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T14:36:34.108Z",
+  "generatedAt": "2026-11-15T15:26:23.075Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -121,7 +121,7 @@
         "nuevo-car-show": "Chevrolet Chevy"
       },
       "firstSeen": "2026-03-06",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "agustin bonomo",
@@ -552,7 +552,7 @@
         "nuevo-car-show": "Fiat 600"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "alex diego weppler",
@@ -572,7 +572,7 @@
         "nuevo-car-show": "Fiat 600"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "alfonso domenech",
@@ -656,6 +656,26 @@
         "tc-mouras": "Ford"
       },
       "firstSeen": "2026-02-21",
+      "lastSeen": "2026-11-08"
+    },
+    {
+      "key": "amilcar sigot",
+      "keys": [
+        "amilcar sigot"
+      ],
+      "slug": "amilcar-sigot",
+      "name": "Amilcar Sigot",
+      "aliases": [],
+      "series": [
+        "nuevo-car-show"
+      ],
+      "numbers": {
+        "nuevo-car-show": "32"
+      },
+      "teams": {
+        "nuevo-car-show": "Fiat 600"
+      },
+      "firstSeen": "2026-11-07",
       "lastSeen": "2026-11-08"
     },
     {
@@ -1319,7 +1339,7 @@
         "nuevo-car-show": "Ford Falcon"
       },
       "firstSeen": "2026-03-06",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "boccanera bruno",
@@ -1498,6 +1518,26 @@
       },
       "firstSeen": "2026-10-03",
       "lastSeen": "2026-10-04"
+    },
+    {
+      "key": "carlos morier",
+      "keys": [
+        "carlos morier"
+      ],
+      "slug": "carlos-morier",
+      "name": "Carlos Morier",
+      "aliases": [],
+      "series": [
+        "nuevo-car-show"
+      ],
+      "numbers": {
+        "nuevo-car-show": "57"
+      },
+      "teams": {
+        "nuevo-car-show": "Ford Falcon"
+      },
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "carlos okulovich",
@@ -2131,7 +2171,7 @@
         "nuevo-car-show": "Fiat 600"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "dante hainze rubiera",
@@ -2297,7 +2337,7 @@
         "nuevo-car-show": "Fiat 600"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "casais diego",
@@ -2602,7 +2642,7 @@
         "nuevo-car-show": "Chevrolet Chevy"
       },
       "firstSeen": "2026-06-20",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "craparo elio",
@@ -3157,7 +3197,7 @@
         "nuevo-car-show": "Chevrolet Chevy"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "fabricio pezzini",
@@ -3789,7 +3829,7 @@
         "nuevo-car-show": "Ford Falcon"
       },
       "firstSeen": "2026-03-06",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "fernando zerbonia",
@@ -4600,7 +4640,7 @@
         "nuevo-car-show": "Torino"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "gerardo ontivero",
@@ -5977,7 +6017,7 @@
         "nuevo-car-show": "Fiat 600"
       },
       "firstSeen": "2026-06-20",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "dominguez joaquin",
@@ -6796,7 +6836,7 @@
         "nuevo-car-show": "Ford Falcon"
       },
       "firstSeen": "2026-04-18",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "cruz juan talamona",
@@ -6853,10 +6893,10 @@
         "nuevo-car-show": "54"
       },
       "teams": {
-        "nuevo-car-show": "VW Gol Trend"
+        "nuevo-car-show": "Fiat 600"
       },
       "firstSeen": "2026-08-14",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "gianre juan",
@@ -7040,7 +7080,7 @@
         "nuevo-car-show": "Ford Falcon"
       },
       "firstSeen": "2026-07-10",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "jose juan palermo",
@@ -7162,6 +7202,26 @@
       "teams": {},
       "firstSeen": "2026-06-06",
       "lastSeen": "2026-08-23"
+    },
+    {
+      "key": "farabello juan manuel",
+      "keys": [
+        "farabello juan manuel"
+      ],
+      "slug": "juan-manuel-farabello",
+      "name": "Juan Manuel Farabello",
+      "aliases": [],
+      "series": [
+        "nuevo-car-show"
+      ],
+      "numbers": {
+        "nuevo-car-show": "20"
+      },
+      "teams": {
+        "nuevo-car-show": "Ford Falcon"
+      },
+      "firstSeen": "2026-11-07",
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "frua juan manuel",
@@ -7440,7 +7500,7 @@
         "nuevo-car-show": "Ford Falcon"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "juan martinbianco pablo",
@@ -7473,10 +7533,10 @@
         "nuevo-car-show"
       ],
       "numbers": {
-        "nuevo-car-show": "60"
+        "nuevo-car-show": "33"
       },
       "teams": {
-        "nuevo-car-show": "VW Up"
+        "nuevo-car-show": "Chevrolet Corsa"
       },
       "firstSeen": "2026-03-07",
       "lastSeen": "2026-11-08"
@@ -8047,7 +8107,7 @@
         "nuevo-car-show": "Fiat 600"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "forte leonardo",
@@ -8899,7 +8959,7 @@
         "nuevo-car-show": "Chevrolet Chevy"
       },
       "firstSeen": "2026-04-18",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "beraldi marcelo",
@@ -9127,7 +9187,7 @@
         "nuevo-car-show": "Ford Falcon"
       },
       "firstSeen": "2026-03-06",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "landa marcos",
@@ -9368,7 +9428,7 @@
         "nuevo-car-show": "Torino"
       },
       "firstSeen": "2026-02-21",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-07"
     },
     {
       "key": "espina mario",
@@ -10053,7 +10113,7 @@
         "nuevo-car-show": "Chevrolet Chevy"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "etcheberry mauricio",
@@ -10195,7 +10255,7 @@
         "nuevo-car-show": "Ford Fairlane"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "arnaiz maximiliano",
@@ -10636,7 +10696,7 @@
         "nuevo-car-show": "Ford Falcon"
       },
       "firstSeen": "2026-03-06",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "iglesias nazareno",
@@ -11532,7 +11592,7 @@
         "nuevo-car-show": "Fiat 600"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "lonati pablo",
@@ -11650,7 +11710,7 @@
         "nuevo-car-show": "Fiat 600"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "pablo vendrame",
@@ -12014,7 +12074,7 @@
         "nuevo-car-show": "Chevrolet Chevy"
       },
       "firstSeen": "2026-03-07",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "forzani roberto",
@@ -12586,7 +12646,7 @@
         "nuevo-car-show": "Fiat 600"
       },
       "firstSeen": "2026-04-18",
-      "lastSeen": "2026-08-16"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "barovero santiago",
@@ -13070,10 +13130,10 @@
         "nuevo-car-show": "56"
       },
       "teams": {
-        "nuevo-car-show": "Chevrolet Chevy"
+        "nuevo-car-show": "Fiat 600"
       },
       "firstSeen": "2026-04-03",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "landa sebastian",
@@ -13982,7 +14042,7 @@
         "nuevo-car-show": "Chevrolet Chevy"
       },
       "firstSeen": "2026-03-06",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "tomasini valentin",
@@ -14220,7 +14280,7 @@
         "nuevo-car-show": "Chevrolet Chevy"
       },
       "firstSeen": "2026-04-18",
-      "lastSeen": "2026-10-04"
+      "lastSeen": "2026-11-08"
     },
     {
       "key": "agostini d walter",
