@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T15:26:23.075Z",
+  "generatedAt": "2026-11-15T16:15:53.080Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -1010,11 +1010,14 @@
     {
       "key": "augusto carinelli",
       "keys": [
-        "augusto carinelli"
+        "augusto carinelli",
+        "augusto carinelli recargo"
       ],
       "slug": "augusto-carinelli",
       "name": "Augusto Carinelli",
-      "aliases": [],
+      "aliases": [
+        "Augusto Carinelli Recargo"
+      ],
       "series": [
         "tc"
       ],
@@ -7326,11 +7329,14 @@
     {
       "key": "juan martin trucco",
       "keys": [
-        "juan martin trucco"
+        "juan martin trucco",
+        "juan martin recargo trucco"
       ],
       "slug": "juan-martin-trucco",
       "name": "Juan Martín Trucco",
-      "aliases": [],
+      "aliases": [
+        "Juan Martin Trucco Recargo"
+      ],
       "series": [
         "tc"
       ],
