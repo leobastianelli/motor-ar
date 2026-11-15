@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T15:26:20.963Z",
+  "generatedAt": "2026-11-15T16:02:57.130Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -240441,7 +240441,7 @@
     },
     "nuevoCarShow": {
       "events": 10,
-      "pdfs": 15,
+      "pdfs": 0,
       "calendarioEstatico": false,
       "rounds": [
         1,
