@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T17:06:20.919Z",
+  "generatedAt": "2026-11-16T14:16:49.817Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -6978,11 +6978,14 @@
     {
       "key": "ignacio juan maceira",
       "keys": [
-        "ignacio juan maceira"
+        "ignacio juan maceira",
+        "ignacio juan maceira recargo"
       ],
       "slug": "juan-ignacio-maceira",
       "name": "Juan Ignacio Maceira",
-      "aliases": [],
+      "aliases": [
+        "Juan Ignacio Maceira Recargo"
+      ],
       "series": [
         "tc-pista"
       ],
@@ -10637,11 +10640,14 @@
     {
       "key": "cordone nahuel",
       "keys": [
-        "cordone nahuel"
+        "cordone nahuel",
+        "cordone nahuel recargo"
       ],
       "slug": "nahuel-cordone",
       "name": "Nahuel Cordone",
-      "aliases": [],
+      "aliases": [
+        "Nahuel Cordone Recargo"
+      ],
       "series": [
         "tc-pista-pick-up",
         "tc-mouras"
