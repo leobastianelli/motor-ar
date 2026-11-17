@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T19:08:30.715Z",
+  "generatedAt": "2026-11-17T18:04:32.512Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -236410,7 +236410,7 @@
         "pos": 8,
         "driver": "Esteban Mancuso",
         "team": "",
-        "points": 269,
+        "points": 269.5,
         "wins": 0
       },
       {
@@ -236450,14 +236450,14 @@
       },
       {
         "pos": 14,
-        "driver": "Francisco Nonnenmacher",
+        "driver": "Matías Frano",
         "team": "",
-        "points": 82,
+        "points": 81.5,
         "wins": 0
       },
       {
         "pos": 15,
-        "driver": "Matías Frano",
+        "driver": "Francisco Nonnenmacher",
         "team": "",
         "points": 81.5,
         "wins": 0
@@ -241140,7 +241140,7 @@
     },
     "timing": {
       "documents": 972,
-      "pagesFetched": 108,
+      "pagesFetched": 109,
       "eventsWithResults": 70,
       "retagged": {
         "1003": {
