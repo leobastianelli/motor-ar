@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T18:04:32.512Z",
+  "generatedAt": "2026-11-18T17:45:32.823Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -241603,5 +241603,7 @@
       "errors": []
     }
   },
-  "failures": []
+  "failures": [
+    "F2: Sección no encontrada: Race calendar"
+  ]
 }
