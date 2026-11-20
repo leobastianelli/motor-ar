@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T17:55:03.299Z",
+  "generatedAt": "2026-11-20T01:45:26.313Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -241065,23 +241065,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -241219,9 +241202,11 @@
       "sessionsWithResults": 54
     },
     "f1Official": {
-      "requests": 0,
+      "requests": 1,
       "sessionsWithResults": 0,
-      "errors": []
+      "errors": [
+        "GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+      ]
     },
     "f1Youtube": {
       "scanned": 15,
@@ -241604,6 +241589,9 @@
     }
   },
   "failures": [
-    "F2: Sección no encontrada: Race calendar"
+    "F2: Sección no encontrada: Race calendar",
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "F1 oficial: GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
   ]
 }
