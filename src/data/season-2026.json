@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T02:36:45.270Z",
+  "generatedAt": "2026-11-20T03:26:01.687Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -234121,7 +234121,13 @@
           "name": "Práctica 1",
           "start": "2026-11-20T00:30:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "videos": [
+            {
+              "id": "WLs_o7ClyM8",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-21-secondpractice",
@@ -241227,7 +241233,7 @@
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 20,
+      "sessions": 21,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
