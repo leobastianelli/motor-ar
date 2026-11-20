@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T05:55:25.766Z",
+  "generatedAt": "2026-11-20T06:45:48.767Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -234317,7 +234317,13 @@
           "resultsSource": {
             "name": "OpenF1",
             "url": "https://api.openf1.org/v1/session_result?session_key=11414"
-          }
+          },
+          "videos": [
+            {
+              "id": "sKe57Zn66FU",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-21-thirdpractice",
@@ -241253,6 +241259,23 @@
         }
       }
     },
+    "nuevoCarShow": {
+      "events": 10,
+      "pdfs": 0,
+      "calendarioEstatico": false,
+      "rounds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "errors": []
+    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -241398,7 +241421,7 @@
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 21,
+      "sessions": 22,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
@@ -241778,7 +241801,6 @@
   },
   "failures": [
     "F2: Sección no encontrada: Race calendar",
-    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "F1 oficial: GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
   ]
 }
