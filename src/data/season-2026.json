@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T06:15:46.704Z",
+  "generatedAt": "2026-11-22T16:51:45.459Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -234702,232 +234702,234 @@
             {
               "pos": 1,
               "positionText": "1",
-              "number": "3",
               "driver": "Max Verstappen",
               "code": "VER",
-              "team": "Red Bull Racing",
+              "team": "Red Bull",
               "gap": "1:27:39.624",
-              "points": 0
+              "points": 25,
+              "grid": 1
             },
             {
               "pos": 2,
               "positionText": "2",
-              "number": "1",
               "driver": "Lando Norris",
               "code": "NOR",
               "team": "McLaren",
               "gap": "+0.639",
-              "points": 0
+              "points": 18,
+              "grid": 3
             },
             {
               "pos": 3,
               "positionText": "3",
-              "number": "81",
               "driver": "Oscar Piastri",
               "code": "PIA",
               "team": "McLaren",
               "gap": "+1.529",
-              "points": 0
+              "points": 15,
+              "grid": 17
             },
             {
               "pos": 4,
               "positionText": "4",
-              "number": "12",
-              "driver": "Kimi Antonelli",
+              "driver": "Andrea Kimi Antonelli",
               "code": "ANT",
               "team": "Mercedes",
               "gap": "+2.574",
-              "points": 0
+              "points": 12,
+              "grid": 6
             },
             {
               "pos": 5,
               "positionText": "5",
-              "number": "10",
               "driver": "Pierre Gasly",
               "code": "GAS",
-              "team": "Alpine",
+              "team": "Alpine F1 Team",
               "gap": "+2.927",
-              "points": 0
+              "points": 10,
+              "grid": 8
             },
             {
               "pos": 6,
               "positionText": "6",
-              "number": "43",
               "driver": "Franco Colapinto",
               "code": "COL",
-              "team": "Alpine",
+              "team": "Alpine F1 Team",
               "gap": "+7.955",
-              "points": 0
+              "points": 8,
+              "grid": 9
             },
             {
               "pos": 7,
               "positionText": "7",
-              "number": "44",
               "driver": "Lewis Hamilton",
               "code": "HAM",
               "team": "Ferrari",
               "gap": "+12.795",
-              "points": 0
+              "points": 6,
+              "grid": 11
             },
             {
               "pos": 8,
               "positionText": "8",
-              "number": "55",
               "driver": "Carlos Sainz",
               "code": "SAI",
               "team": "Williams",
               "gap": "+12.938",
-              "points": 0
+              "points": 4,
+              "grid": 20
             },
             {
               "pos": 9,
               "positionText": "9",
-              "number": "63",
               "driver": "George Russell",
               "code": "RUS",
               "team": "Mercedes",
               "gap": "+13.192",
-              "points": 0
+              "points": 2,
+              "grid": 2
             },
             {
               "pos": 10,
               "positionText": "10",
-              "number": "16",
               "driver": "Charles Leclerc",
               "code": "LEC",
               "team": "Ferrari",
               "gap": "+17.554",
-              "points": 0
+              "points": 1,
+              "grid": 10
             },
             {
               "pos": 11,
               "positionText": "11",
-              "number": "27",
               "driver": "Nico Hülkenberg",
               "code": "HUL",
               "team": "Audi",
               "gap": "+22.720",
-              "points": 0
+              "points": 0,
+              "grid": 12
             },
             {
               "pos": 12,
               "positionText": "12",
-              "number": "5",
               "driver": "Gabriel Bortoleto",
               "code": "BOR",
               "team": "Audi",
               "gap": "+28.602",
-              "points": 0
+              "points": 0,
+              "grid": 13
             },
             {
               "pos": 13,
               "positionText": "13",
-              "number": "87",
               "driver": "Oliver Bearman",
               "code": "BEA",
               "team": "Haas F1 Team",
               "gap": "+28.843",
-              "points": 0
+              "points": 0,
+              "grid": 22
             },
             {
               "pos": 14,
               "positionText": "14",
-              "number": "6",
-              "driver": "Isack Hadjar",
-              "code": "HAD",
-              "team": "Red Bull Racing",
-              "gap": "+36.488",
-              "points": 0
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "RB F1 Team",
+              "gap": "+36.588",
+              "points": 0,
+              "grid": 7
             },
             {
               "pos": 15,
               "positionText": "15",
-              "number": "30",
-              "driver": "Liam Lawson",
-              "code": "LAW",
-              "team": "Racing Bulls",
-              "gap": "+36.588",
-              "points": 0
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull",
+              "gap": "+46.488",
+              "points": 0,
+              "grid": 4
             },
             {
               "pos": 16,
               "positionText": "16",
-              "number": "51",
               "driver": "Rafael Camara",
               "code": "CAM",
               "team": "Haas F1 Team",
               "gap": "+47.814",
-              "points": 0
+              "points": 0,
+              "grid": 15
             },
             {
               "pos": 17,
               "positionText": "17",
-              "number": "18",
               "driver": "Lance Stroll",
               "code": "STR",
               "team": "Aston Martin",
-              "gap": "+68.353",
-              "points": 0
+              "gap": "+1:08.353",
+              "points": 0,
+              "grid": 21
             },
             {
               "pos": 18,
               "positionText": "18",
-              "number": "77",
               "driver": "Valtteri Bottas",
               "code": "BOT",
-              "team": "Cadillac",
-              "gap": "+71.673",
-              "points": 0
+              "team": "Cadillac F1 Team",
+              "gap": "+1:11.673",
+              "points": 0,
+              "grid": 19
             },
             {
               "pos": 19,
               "positionText": "19",
-              "number": "14",
+              "status": "Abandonó",
               "driver": "Fernando Alonso",
               "code": "ALO",
               "team": "Aston Martin",
               "gap": "",
               "points": 0,
-              "status": "Abandonó"
+              "grid": 18
             },
             {
               "pos": 20,
-              "positionText": "NC",
-              "number": "41",
+              "positionText": "R",
+              "status": "Abandonó",
               "driver": "Arvid Lindblad",
               "code": "LIN",
-              "team": "Racing Bulls",
+              "team": "RB F1 Team",
               "gap": "",
               "points": 0,
-              "status": "Abandonó"
+              "grid": 5
             },
             {
               "pos": 21,
-              "positionText": "NC",
-              "number": "11",
+              "positionText": "R",
+              "status": "Abandonó",
               "driver": "Sergio Pérez",
               "code": "PER",
-              "team": "Cadillac",
+              "team": "Cadillac F1 Team",
               "gap": "",
               "points": 0,
-              "status": "Abandonó"
+              "grid": 16
             },
             {
               "pos": 22,
-              "positionText": "NC",
-              "number": "23",
+              "positionText": "W",
+              "status": "No largó",
               "driver": "Alexander Albon",
               "code": "ALB",
               "team": "Williams",
               "gap": "",
               "points": 0,
-              "status": "No largó"
+              "grid": 14
             }
           ],
-          "resultsSource": {
-            "name": "Fórmula 1 (oficial)",
-            "url": "https://www.formula1.com/en/results/2026/races/1300/las-vegas/race-result"
-          }
+          "videos": [
+            {
+              "id": "Vyk_6bNm7lo",
+              "kind": "highlights"
+            }
+          ]
         }
       ],
       "source": "Jolpica-F1"
@@ -235614,49 +235616,49 @@
         "pos": 1,
         "driver": "Andrea Kimi Antonelli",
         "team": "Mercedes",
-        "points": 390,
+        "points": 402,
         "wins": 9
       },
       {
         "pos": 2,
         "driver": "Max Verstappen",
         "team": "Red Bull",
-        "points": 279,
-        "wins": 3
+        "points": 304,
+        "wins": 4
       },
       {
         "pos": 3,
-        "driver": "George Russell",
-        "team": "Mercedes",
-        "points": 262,
-        "wins": 3
+        "driver": "Lewis Hamilton",
+        "team": "Ferrari",
+        "points": 267,
+        "wins": 1
       },
       {
         "pos": 4,
-        "driver": "Lewis Hamilton",
-        "team": "Ferrari",
-        "points": 261,
-        "wins": 1
+        "driver": "George Russell",
+        "team": "Mercedes",
+        "points": 264,
+        "wins": 3
       },
       {
         "pos": 5,
-        "driver": "Charles Leclerc",
-        "team": "Ferrari",
-        "points": 249,
-        "wins": 1
+        "driver": "Lando Norris",
+        "team": "McLaren",
+        "points": 264,
+        "wins": 3
       },
       {
         "pos": 6,
-        "driver": "Lando Norris",
-        "team": "McLaren",
-        "points": 246,
-        "wins": 3
+        "driver": "Charles Leclerc",
+        "team": "Ferrari",
+        "points": 250,
+        "wins": 1
       },
       {
         "pos": 7,
         "driver": "Oscar Piastri",
         "team": "McLaren",
-        "points": 152,
+        "points": 167,
         "wins": 0
       },
       {
@@ -235677,7 +235679,7 @@
         "pos": 10,
         "driver": "Pierre Gasly",
         "team": "Alpine F1 Team",
-        "points": 42,
+        "points": 52,
         "wins": 0
       },
       {
@@ -235691,7 +235693,7 @@
         "pos": 12,
         "driver": "Franco Colapinto",
         "team": "Alpine F1 Team",
-        "points": 27,
+        "points": 35,
         "wins": 0
       },
       {
@@ -235717,22 +235719,22 @@
       },
       {
         "pos": 16,
+        "driver": "Carlos Sainz",
+        "team": "Williams",
+        "points": 11,
+        "wins": 0
+      },
+      {
+        "pos": 17,
         "driver": "Esteban Ocon",
         "team": "Haas F1 Team",
         "points": 7,
         "wins": 0
       },
       {
-        "pos": 17,
+        "pos": 18,
         "driver": "Fernando Alonso",
         "team": "Aston Martin",
-        "points": 7,
-        "wins": 0
-      },
-      {
-        "pos": 18,
-        "driver": "Carlos Sainz",
-        "team": "Williams",
         "points": 7,
         "wins": 0
       },
@@ -240055,6 +240057,136 @@
               "points": 0
             }
           ]
+        },
+        {
+          "round": 21,
+          "standings": [
+            {
+              "driver": "Andrea Kimi Antonelli",
+              "pos": 1,
+              "points": 402
+            },
+            {
+              "driver": "Max Verstappen",
+              "pos": 2,
+              "points": 304
+            },
+            {
+              "driver": "Lewis Hamilton",
+              "pos": 3,
+              "points": 267
+            },
+            {
+              "driver": "George Russell",
+              "pos": 4,
+              "points": 264
+            },
+            {
+              "driver": "Lando Norris",
+              "pos": 5,
+              "points": 264
+            },
+            {
+              "driver": "Charles Leclerc",
+              "pos": 6,
+              "points": 250
+            },
+            {
+              "driver": "Oscar Piastri",
+              "pos": 7,
+              "points": 167
+            },
+            {
+              "driver": "Isack Hadjar",
+              "pos": 8,
+              "points": 122
+            },
+            {
+              "driver": "Liam Lawson",
+              "pos": 9,
+              "points": 89
+            },
+            {
+              "driver": "Pierre Gasly",
+              "pos": 10,
+              "points": 52
+            },
+            {
+              "driver": "Arvid Lindblad",
+              "pos": 11,
+              "points": 38
+            },
+            {
+              "driver": "Franco Colapinto",
+              "pos": 12,
+              "points": 35
+            },
+            {
+              "driver": "Oliver Bearman",
+              "pos": 13,
+              "points": 23
+            },
+            {
+              "driver": "Gabriel Bortoleto",
+              "pos": 14,
+              "points": 14
+            },
+            {
+              "driver": "Nico Hülkenberg",
+              "pos": 15,
+              "points": 14
+            },
+            {
+              "driver": "Carlos Sainz",
+              "pos": 16,
+              "points": 11
+            },
+            {
+              "driver": "Esteban Ocon",
+              "pos": 17,
+              "points": 7
+            },
+            {
+              "driver": "Fernando Alonso",
+              "pos": 18,
+              "points": 7
+            },
+            {
+              "driver": "Alexander Albon",
+              "pos": 19,
+              "points": 5
+            },
+            {
+              "driver": "Yuki Tsunoda",
+              "pos": 20,
+              "points": 1
+            },
+            {
+              "driver": "Ryo Hirakawa",
+              "pos": 21,
+              "points": 1
+            },
+            {
+              "driver": "Lance Stroll",
+              "pos": 22,
+              "points": 0
+            },
+            {
+              "driver": "Valtteri Bottas",
+              "pos": 23,
+              "points": 0
+            },
+            {
+              "driver": "Sergio Pérez",
+              "pos": 24,
+              "points": 0
+            },
+            {
+              "driver": "Rafael Camara",
+              "pos": 25,
+              "points": 0
+            }
+          ]
         }
       ]
     },
@@ -241839,23 +241971,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -241993,15 +242108,15 @@
       "sessionsWithResults": 56
     },
     "f1Official": {
-      "requests": 2,
-      "sessionsWithResults": 1,
+      "requests": 1,
+      "sessionsWithResults": 0,
       "errors": [
         "GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
       ]
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 24,
+      "sessions": 25,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
@@ -242381,7 +242496,7 @@
   },
   "failures": [
     "F2: Sección no encontrada: Race calendar",
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "F1 oficial: GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
   ]
 }
