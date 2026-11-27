@@ -4,7 +4,7 @@
 import fs from "node:fs";
 
 const SINCE = process.argv[2] ?? "2026-02-15";
-const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)", "Accept-Encoding": "identity" };
+const UA = { "User-Agent": "fierros-motor-ar/0.1 (+https://somosfierros.ar)", "Accept-Encoding": "identity" };
 const DELAY = 61_000;
 const OUT = "research/campeones/posts.json";
 const WEEKEND = /horario|cronograma|pole|«1»|gan[oó]|venci|triunf|profeta|se larga|largada|mejor del s[aá]bado|clasific|al frente|domin/i;

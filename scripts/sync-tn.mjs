@@ -6,7 +6,7 @@ import { apatSeason } from "../src/lib/sources/apat.mjs";
 import { repairMojibake } from "../src/lib/sources/common.mjs";
 import { speedhiveTn } from "../src/lib/sources/speedhive-tn.mjs";
 
-const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
+const UA = { "User-Agent": "fierros-motor-ar/0.1 (+https://somosfierros.ar)" };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function text(url, options = {}) {

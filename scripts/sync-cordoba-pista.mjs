@@ -11,7 +11,7 @@ import { protectSeason } from "../src/lib/sources/guard.mjs";
 
 if (process.env.DATABASE_URL) console.warn("Aviso: hay DATABASE_URL en el entorno, pero este script no lo usa (no escribe en el almacén).");
 
-const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
+const UA = { "User-Agent": "fierros-motor-ar/0.1 (+https://somosfierros.ar)" };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function text(url, options = {}) {

@@ -3,7 +3,7 @@ import { wikiRawUrl } from "./wiki-pages.mjs";
 
 // Entrada/salida de las fuentes dentro de Next: cada URL queda en la caché de datos con su propio tiempo de revalidación,
 // así el sitio sólo vuelve a pedir a cada fuente cuando corresponde.
-const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
+const UA = { "User-Agent": "fierros-motor-ar/0.1 (+https://somosfierros.ar)" };
 
 export type IoOptions = {
   revalidate?: number;

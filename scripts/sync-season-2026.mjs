@@ -14,7 +14,7 @@ import { mergeOnto } from "../src/lib/sources/season-merge.mjs";
 import { buildSeason } from "../src/lib/sources/season.mjs";
 import { wikiRawUrl } from "../src/lib/sources/wiki-pages.mjs";
 
-const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
+const UA = { "User-Agent": "fierros-motor-ar/0.1 (+https://somosfierros.ar)" };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // Tope por pedido (incluye leer el cuerpo). Sin esto, un servidor que acepta la conexión y no contesta colgaba la sincronización
 // entera: el 4/10/2026, con la ACTC dando 502, una corrida quedó 40 min trabada y frenó a las siguientes.
