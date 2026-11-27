@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T18:16:14.074Z",
+  "generatedAt": "2026-11-27T18:39:54.160Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -234574,7 +234574,189 @@
           "name": "Práctica 2",
           "start": "2026-11-27T17:00:00Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "number": "12",
+              "driver": "Kimi Antonelli",
+              "code": "ANT",
+              "team": "Mercedes",
+              "gap": "1:23.077"
+            },
+            {
+              "pos": 2,
+              "number": "63",
+              "driver": "George Russell",
+              "code": "RUS",
+              "team": "Mercedes",
+              "gap": "+0.127"
+            },
+            {
+              "pos": 3,
+              "number": "1",
+              "driver": "Lando Norris",
+              "code": "NOR",
+              "team": "McLaren",
+              "gap": "+0.445"
+            },
+            {
+              "pos": 4,
+              "number": "81",
+              "driver": "Oscar Piastri",
+              "code": "PIA",
+              "team": "McLaren",
+              "gap": "+0.472"
+            },
+            {
+              "pos": 5,
+              "number": "3",
+              "driver": "Max Verstappen",
+              "code": "VER",
+              "team": "Red Bull Racing",
+              "gap": "+0.499"
+            },
+            {
+              "pos": 6,
+              "number": "6",
+              "driver": "Isack Hadjar",
+              "code": "HAD",
+              "team": "Red Bull Racing",
+              "gap": "+0.506"
+            },
+            {
+              "pos": 7,
+              "number": "16",
+              "driver": "Charles Leclerc",
+              "code": "LEC",
+              "team": "Ferrari",
+              "gap": "+1.022"
+            },
+            {
+              "pos": 8,
+              "number": "44",
+              "driver": "Lewis Hamilton",
+              "code": "HAM",
+              "team": "Ferrari",
+              "gap": "+1.139"
+            },
+            {
+              "pos": 9,
+              "number": "30",
+              "driver": "Liam Lawson",
+              "code": "LAW",
+              "team": "Racing Bulls",
+              "gap": "+1.348"
+            },
+            {
+              "pos": 10,
+              "number": "41",
+              "driver": "Arvid Lindblad",
+              "code": "LIN",
+              "team": "Racing Bulls",
+              "gap": "+1.470"
+            },
+            {
+              "pos": 11,
+              "number": "5",
+              "driver": "Gabriel Bortoleto",
+              "code": "BOR",
+              "team": "Audi",
+              "gap": "+1.537"
+            },
+            {
+              "pos": 12,
+              "number": "10",
+              "driver": "Pierre Gasly",
+              "code": "GAS",
+              "team": "Alpine",
+              "gap": "+1.687"
+            },
+            {
+              "pos": 13,
+              "number": "27",
+              "driver": "Nico Hulkenberg",
+              "code": "HUL",
+              "team": "Audi",
+              "gap": "+1.794"
+            },
+            {
+              "pos": 14,
+              "number": "23",
+              "driver": "Alexander Albon",
+              "code": "ALB",
+              "team": "Williams",
+              "gap": "+2.199"
+            },
+            {
+              "pos": 15,
+              "number": "43",
+              "driver": "Franco Colapinto",
+              "code": "COL",
+              "team": "Alpine",
+              "gap": "+2.656"
+            },
+            {
+              "pos": 16,
+              "number": "55",
+              "driver": "Carlos Sainz",
+              "code": "SAI",
+              "team": "Williams",
+              "gap": "+2.762"
+            },
+            {
+              "pos": 17,
+              "number": "51",
+              "driver": "Rafael Camara",
+              "code": "CAM",
+              "team": "Haas F1 Team",
+              "gap": "+2.885"
+            },
+            {
+              "pos": 18,
+              "number": "87",
+              "driver": "Oliver Bearman",
+              "code": "BEA",
+              "team": "Haas F1 Team",
+              "gap": "+2.919"
+            },
+            {
+              "pos": 19,
+              "number": "14",
+              "driver": "Fernando Alonso",
+              "code": "ALO",
+              "team": "Aston Martin",
+              "gap": "+2.969"
+            },
+            {
+              "pos": 20,
+              "number": "18",
+              "driver": "Lance Stroll",
+              "code": "STR",
+              "team": "Aston Martin",
+              "gap": "+3.571"
+            },
+            {
+              "pos": 21,
+              "number": "77",
+              "driver": "Valtteri Bottas",
+              "code": "BOT",
+              "team": "Cadillac",
+              "gap": "+4.317"
+            },
+            {
+              "pos": 22,
+              "number": "11",
+              "driver": "Sergio Perez",
+              "code": "PER",
+              "team": "Cadillac",
+              "gap": "+4.434"
+            }
+          ],
+          "resultsSource": {
+            "name": "OpenF1",
+            "url": "https://api.openf1.org/v1/session_result?session_key=11422"
+          }
         },
         {
           "id": "f1-2026-22-thirdpractice",
@@ -241631,15 +241813,14 @@
     },
     "openf1": {
       "sessions": 131,
-      "requests": 12,
-      "sessionsWithResults": 57
+      "requests": 14,
+      "sessionsWithResults": 58
     },
     "f1Official": {
-      "requests": 2,
+      "requests": 1,
       "sessionsWithResults": 0,
       "errors": [
-        "GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
-        "GP de Qatar · Práctica 2: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
+        "GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado"
       ]
     },
     "f1Youtube": {
@@ -242023,10 +242204,9 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/20/driverstandings.json?limit=40: HTTP 429 (sin content-type)",
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/17/driverstandings.json?limit=40: HTTP 429 (sin content-type)",
     "F2: Sección no encontrada: Race calendar",
-    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
-    "F1 oficial: GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado; GP de Qatar · Práctica 2: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
+    "F1 oficial: GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
     "Se conservaron resultados de 6 sesiones que las fuentes dejaron de traer"
   ]
 }
