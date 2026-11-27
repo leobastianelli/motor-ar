@@ -14,7 +14,7 @@ import { categoriaDe, CATEGORIAS } from "./juego-categorias.mjs";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CACHE = process.env.JUEGO_CACHE ?? path.join(os.tmpdir(), "fierros-juego-cache");
 fs.mkdirSync(CACHE, { recursive: true });
-const UA = "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)";
+const UA = "fierros-motor-ar/0.1 (+https://somosfierros.ar)";
 const NOW_YEAR = 2026;
 
 // ---------------------------------------------------------------- red con caché

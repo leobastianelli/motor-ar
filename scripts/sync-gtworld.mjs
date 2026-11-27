@@ -11,7 +11,7 @@ try {
   // sin .env.local: sigue sin YouTube
 }
 
-const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
+const UA = { "User-Agent": "fierros-motor-ar/0.1 (+https://somosfierros.ar)" };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function text(url, options = {}) {

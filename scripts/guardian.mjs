@@ -30,7 +30,7 @@ import { loadSeason } from "./season-source.mjs";
 const DRY = process.argv.includes("--dry");
 const NOW = process.env.GUARDIAN_NOW ?? new Date().toISOString();
 const STATE_PATH = process.env.ALERT_STATE ?? ".alert-state.json";
-const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
+const UA = { "User-Agent": "fierros-motor-ar/0.1 (+https://somosfierros.ar)" };
 
 // Mira lo que el sitio muestra: la última versión del almacén (con DATABASE_URL); si no hay o falla, el archivo del repo.
 const { raw: snapshot, label: seasonLabel, createdAt: seasonCreatedAt } = await loadSeason(process.env.SEASON_FILE ?? "src/data/season-2026.json");

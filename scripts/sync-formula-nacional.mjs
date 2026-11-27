@@ -14,7 +14,7 @@ import { protectSeason, protectStandings } from "../src/lib/sources/guard.mjs";
 import { avisarSitio } from "./avisar-sitio.mjs";
 import { connect } from "./season-source.mjs";
 
-const UA = { "User-Agent": "fierros-motor-ar/0.1 (leonelbastianelli@gmail.com)" };
+const UA = { "User-Agent": "fierros-motor-ar/0.1 (+https://somosfierros.ar)" };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const jsonOnly = process.argv.includes("--json");
 
