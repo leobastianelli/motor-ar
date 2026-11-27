@@ -143,6 +143,8 @@ export function resolveDay(heading, end) {
 const KINDS = [
   [/^(gral\.?|general)\b/i, null], // repiten las prácticas sueltas, ordenadas por mejor vuelta
   [/^pr[aá]cticas? oficiales\b/i, null],
+  [/^pilotos autorizados/i, null], // lista de inscriptos, no es una sesión
+  [/^warm[\s-]*up/i, { kind: "practica", name: "Warm Up", slug: "wu" }],
   [/^tanda libre/i, { kind: "practica", name: "Tanda libre", slug: "tl" }],
   [/^pr[aá]ctica oficial\s*(\d)/i, (m) => ({ kind: "practica", name: `Práctica oficial ${m[1]}`, slug: `p${m[1]}` })],
   [/^(\d)\s*[°º]?\s*entrenamiento/i, (m) => ({ kind: "practica", name: `${m[1]}° Entrenamiento`, slug: `p${m[1]}` })],
