@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T10:15:59.692Z",
+  "generatedAt": "2026-11-27T11:06:38.506Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -241514,7 +241514,7 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (sin content-type)",
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/11/driverstandings.json?limit=40: HTTP 429 (sin content-type)",
     "F2: Sección no encontrada: Race calendar",
     "F1 oficial: GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
     "Se conservaron resultados de 6 sesiones que las fuentes dejaron de traer"
