@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T15:56:12.689Z",
+  "generatedAt": "2026-11-27T16:46:02.177Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -234178,7 +234178,167 @@
           "name": "Clasificación",
           "start": "2026-11-27T13:00:00.000Z",
           "timeKnown": true,
-          "durationMin": 60
+          "durationMin": 60,
+          "results": [
+            {
+              "pos": 1,
+              "number": "22",
+              "driver": "Ugo Ugochukwu",
+              "team": "Van Amersfoort Racing",
+              "gap": "1:35.818"
+            },
+            {
+              "pos": 2,
+              "number": "9",
+              "driver": "Gabriele Minì",
+              "team": "MP Motorsport",
+              "gap": "+0.044"
+            },
+            {
+              "pos": 3,
+              "number": "15",
+              "driver": "Alex Dunne",
+              "team": "Rodin Motorsport",
+              "gap": "+0.151"
+            },
+            {
+              "pos": 4,
+              "number": "10",
+              "driver": "Oliver Goethe",
+              "team": "MP Motorsport",
+              "gap": "+0.201"
+            },
+            {
+              "pos": 5,
+              "number": "5",
+              "driver": "Noel León",
+              "team": "Campos Racing",
+              "gap": "+0.372"
+            },
+            {
+              "pos": 6,
+              "number": "25",
+              "driver": "John Bennett",
+              "team": "Trident",
+              "gap": "+0.460"
+            },
+            {
+              "pos": 7,
+              "number": "6",
+              "driver": "Nikola Tsolov",
+              "team": "Campos Racing",
+              "gap": "+0.512"
+            },
+            {
+              "pos": 8,
+              "number": "2",
+              "driver": "Joshua Dürksen",
+              "team": "Invicta Racing",
+              "gap": "+0.611"
+            },
+            {
+              "pos": 9,
+              "number": "1",
+              "driver": "Freddie Slater",
+              "team": "Invicta Racing",
+              "gap": "+0.628"
+            },
+            {
+              "pos": 10,
+              "number": "14",
+              "driver": "Martinius Stenshorne",
+              "team": "Rodin Motorsport",
+              "gap": "+0.649"
+            },
+            {
+              "pos": 11,
+              "number": "3",
+              "driver": "Ritomo Miyata",
+              "team": "Hitech",
+              "gap": "+0.766"
+            },
+            {
+              "pos": 12,
+              "number": "23",
+              "driver": "Rafael Villagómez",
+              "team": "Van Amersfoort Racing",
+              "gap": "+0.940"
+            },
+            {
+              "pos": 13,
+              "number": "4",
+              "driver": "Roman Bilinski",
+              "team": "Hitech",
+              "gap": "+1.015"
+            },
+            {
+              "pos": 14,
+              "number": "12",
+              "driver": "Mari Boya",
+              "team": "PREMA Racing",
+              "gap": "+1.073"
+            },
+            {
+              "pos": 15,
+              "number": "24",
+              "driver": "Laurens van Hoepen",
+              "team": "Trident",
+              "gap": "+1.135"
+            },
+            {
+              "pos": 16,
+              "number": "7",
+              "driver": "Dino Beganovic",
+              "team": "DAMS Lucas Oil",
+              "gap": "+1.255"
+            },
+            {
+              "pos": 17,
+              "number": "20",
+              "driver": "Emerson Fittipaldi",
+              "team": "AIX Racing",
+              "gap": "+1.372"
+            },
+            {
+              "pos": 18,
+              "number": "16",
+              "driver": "Kush Maini",
+              "team": "ART Grand Prix",
+              "gap": "+1.607"
+            },
+            {
+              "pos": 19,
+              "number": "17",
+              "driver": "Tasanapol Inthraphuvasak",
+              "team": "ART Grand Prix",
+              "gap": "+1.646"
+            },
+            {
+              "pos": 20,
+              "number": "8",
+              "driver": "Sebastián Montoya",
+              "team": "DAMS Lucas Oil",
+              "gap": "+1.789"
+            },
+            {
+              "pos": 21,
+              "number": "11",
+              "driver": "Nicola Lacorte",
+              "team": "PREMA Racing",
+              "gap": "+1.987"
+            },
+            {
+              "pos": 22,
+              "number": "21",
+              "driver": "Nicolas Pino",
+              "team": "AIX Racing",
+              "gap": "+3.588"
+            }
+          ],
+          "resultsSource": {
+            "name": "FIA Formula 2 · clasificación oficial",
+            "url": "https://www.fiaformula2.com/en/racing/2026/lusail"
+          }
         },
         {
           "id": "f2-2026-13-sprint",
@@ -234400,7 +234560,13 @@
           "resultsSource": {
             "name": "OpenF1",
             "url": "https://api.openf1.org/v1/session_result?session_key=11421"
-          }
+          },
+          "videos": [
+            {
+              "id": "fHBZtHFSMUA",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-22-secondpractice",
@@ -241477,7 +241643,7 @@
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 25,
+      "sessions": 26,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
@@ -241856,8 +242022,9 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/17/driverstandings.json?limit=40: HTTP 429 (sin content-type)",
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/9/driverstandings.json?limit=40: HTTP 429 (sin content-type)",
     "F2: Sección no encontrada: Race calendar",
+    "OpenF1: No se pudo descargar https://api.openf1.org/v1/sessions?year=2026: HTTP 401 (application/octet-stream, application/json) (se conservan los resultados anteriores)",
     "F1 oficial: GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
     "Se conservaron resultados de 6 sesiones que las fuentes dejaron de traer"
   ]
