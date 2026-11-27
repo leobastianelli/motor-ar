@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T22:17:51.737Z",
+  "generatedAt": "2026-11-27T23:05:05.499Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -233806,6 +233806,112 @@
           }
         },
         {
+          "id": "formula-nacional-2026-9-wu",
+          "kind": "practica",
+          "name": "Warm Up",
+          "start": "2026-11-22T09:00:00-03:00",
+          "timeKnown": true,
+          "durationMin": 10,
+          "results": [
+            {
+              "pos": 1,
+              "driver": "Alejandro Guttlein",
+              "team": "Giavedoni Motor Sport",
+              "number": "33",
+              "gap": "1:31.008",
+              "laps": 4
+            },
+            {
+              "pos": 2,
+              "driver": "Bautista Della Santina",
+              "team": "Della Santina Competición",
+              "number": "118",
+              "gap": "+0.375",
+              "laps": 5
+            },
+            {
+              "pos": 3,
+              "driver": "Tomás Campra",
+              "team": "Giavedoni Motor Sport",
+              "number": "2",
+              "gap": "+0.624",
+              "laps": 4
+            },
+            {
+              "pos": 4,
+              "driver": "Renzo Sabatini",
+              "team": "Ferreira Motorsport",
+              "number": "36",
+              "gap": "+1.299",
+              "laps": 5
+            },
+            {
+              "pos": 5,
+              "driver": "Manuel Duarte",
+              "team": "MR Racing",
+              "number": "28",
+              "gap": "+2.218",
+              "laps": 5
+            },
+            {
+              "pos": 6,
+              "driver": "Facundo Medina",
+              "team": "Della Santina Competición",
+              "number": "111",
+              "gap": "+3.111",
+              "laps": 4
+            },
+            {
+              "pos": 7,
+              "driver": "Geraldine Ostapovich",
+              "team": "Pieraligi Sprint",
+              "number": "49",
+              "gap": "+6.544",
+              "laps": 5
+            },
+            {
+              "pos": 8,
+              "driver": "Tadeo Guttlein Rodriguez",
+              "team": "MR Racing",
+              "number": "59",
+              "gap": "+15.825",
+              "laps": 1
+            },
+            {
+              "pos": 9,
+              "driver": "Agustin Escobar",
+              "team": "JE Racing",
+              "number": "27",
+              "gap": ""
+            },
+            {
+              "pos": 10,
+              "driver": "Milton Cudina",
+              "team": "Cudina Competición",
+              "number": "32",
+              "gap": ""
+            },
+            {
+              "pos": 11,
+              "driver": "Enzo Pieraligi",
+              "team": "Pieraligi Sprint",
+              "number": "50",
+              "gap": ""
+            },
+            {
+              "pos": 12,
+              "driver": "Santino Roberi",
+              "team": "Buenos Aires Racing",
+              "number": "95",
+              "gap": ""
+            }
+          ],
+          "resultsSource": {
+            "name": "Fórmula Nacional Argentina (sitio oficial)",
+            "url": "https://formulanacional.com.ar/carreras.php?accion=tiempos&id=555"
+          }
+        },
+        {
           "id": "formula-nacional-2026-9-r2",
           "kind": "carrera",
           "name": "Carrera 2",
@@ -241675,17 +241781,11 @@
     },
     "formulaNacional": {
       "events": 10,
-      "errors": [
-        "fecha 9: sesión \"Pilotos autorizados\" no reconocida",
-        "fecha 9: sesión \"Warm Up\" no reconocida"
-      ],
+      "errors": [],
       "pc": {
-        "at": "2026-11-27T22:11:55.338Z",
-        "ok": false,
-        "errors": [
-          "fecha 9: sesión \"Pilotos autorizados\" no reconocida",
-          "fecha 9: sesión \"Warm Up\" no reconocida"
-        ]
+        "at": "2026-11-27T22:59:10.390Z",
+        "ok": true,
+        "errors": []
       }
     },
     "tc-pista": {
@@ -242189,11 +242289,9 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/21/driverstandings.json?limit=40: HTTP 429 (sin content-type)",
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/12/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "F2: Sección no encontrada: Race calendar",
-    "TN APAT: el calendario de APAT no trajo ninguna fecha (llegó HTML «One moment, please...», 12264 caracteres)",
-    "Fórmula Nacional: fecha 9: sesión \"Pilotos autorizados\" no reconocida",
-    "Fórmula Nacional: fecha 9: sesión \"Warm Up\" no reconocida",
+    "TN APAT: el calendario de APAT no trajo ninguna fecha (llegó HTML «One moment, please...», 12214 caracteres)",
     "Cronogramas (SoloTC: No se pudo descargar https://www.solotc.com.ar/wp-json/wp/v2/posts?categories=25,26,27,28,29,1180&search=cronograma&after=2025-12-01T00:00:00&per_page=100&page=1&_fields=id,date,link,title,content: HTTP 403 (application/json))",
     "F1 oficial: GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
     "Se conservaron resultados de 6 sesiones que las fuentes dejaron de traer"
