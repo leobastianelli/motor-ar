@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T19:08:32.578Z",
+  "generatedAt": "2026-11-27T22:17:52.604Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -212,6 +212,26 @@
       "teams": {},
       "firstSeen": "2026-06-06",
       "lastSeen": "2026-06-07"
+    },
+    {
+      "key": "agustin escobar",
+      "keys": [
+        "agustin escobar"
+      ],
+      "slug": "agustin-escobar",
+      "name": "Agustin Escobar",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "27"
+      },
+      "teams": {
+        "formula-nacional": "JE Racing"
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-11-22"
     },
     {
       "key": "agustin lingua",
@@ -449,7 +469,7 @@
         "formula-nacional": "Giavedoni Motor Sport"
       },
       "firstSeen": "2026-04-10",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-11-22"
     },
     {
       "key": "alejandro inella",
@@ -1067,6 +1087,26 @@
       "lastSeen": "2026-07-05"
     },
     {
+      "key": "ayrton perez",
+      "keys": [
+        "ayrton perez"
+      ],
+      "slug": "ayrton-perez",
+      "name": "Ayrton Perez",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "61"
+      },
+      "teams": {
+        "formula-nacional": "ARUS PEREZ Racing Team"
+      },
+      "firstSeen": "2026-11-21",
+      "lastSeen": "2026-11-21"
+    },
+    {
       "key": "bautista damiani",
       "keys": [
         "bautista damiani",
@@ -1110,7 +1150,7 @@
         "formula-nacional": "Della Santina Competición"
       },
       "firstSeen": "2026-04-03",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-11-22"
     },
     {
       "key": "bautista faccioli",
@@ -1130,7 +1170,7 @@
         "formula-nacional": "MR Racing"
       },
       "firstSeen": "2026-05-01",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-11-01"
     },
     {
       "key": "bautista roqueta",
@@ -2805,6 +2845,26 @@
       "lastSeen": "2026-09-06"
     },
     {
+      "key": "enzo pieraligi",
+      "keys": [
+        "enzo pieraligi"
+      ],
+      "slug": "enzo-pieraligi",
+      "name": "Enzo Pieraligi",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "50"
+      },
+      "teams": {
+        "formula-nacional": "Pieraligi Sprint"
+      },
+      "firstSeen": "2026-11-21",
+      "lastSeen": "2026-11-22"
+    },
+    {
       "key": "enzo raul tentella",
       "keys": [
         "enzo raul tentella"
@@ -3449,6 +3509,26 @@
       },
       "firstSeen": "2026-02-07",
       "lastSeen": "2026-11-01"
+    },
+    {
+      "key": "facundo medina",
+      "keys": [
+        "facundo medina"
+      ],
+      "slug": "facundo-medina",
+      "name": "Facundo Medina",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "111"
+      },
+      "teams": {
+        "formula-nacional": "Della Santina Competición"
+      },
+      "firstSeen": "2026-11-21",
+      "lastSeen": "2026-11-22"
     },
     {
       "key": "cifre faustino",
@@ -4622,6 +4702,26 @@
       "teams": {},
       "firstSeen": "2026-04-03",
       "lastSeen": "2026-09-27"
+    },
+    {
+      "key": "geraldine ostapovich",
+      "keys": [
+        "geraldine ostapovich"
+      ],
+      "slug": "geraldine-ostapovich",
+      "name": "Geraldine Ostapovich",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "49"
+      },
+      "teams": {
+        "formula-nacional": "Pieraligi Sprint"
+      },
+      "firstSeen": "2026-11-21",
+      "lastSeen": "2026-11-22"
     },
     {
       "key": "fuhr gerardo",
@@ -8884,7 +8984,7 @@
         "formula-nacional": "Pieraligi Sprint"
       },
       "firstSeen": "2026-04-10",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-11-01"
     },
     {
       "key": "duarte manuel",
@@ -8904,7 +9004,7 @@
         "formula-nacional": "MR Racing"
       },
       "firstSeen": "2026-10-10",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-11-22"
     },
     {
       "key": "agrelo marcelo",
@@ -10575,7 +10675,7 @@
         "formula-nacional": "Cudina Competición"
       },
       "firstSeen": "2026-06-05",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-11-22"
     },
     {
       "key": "eddy mion",
@@ -11931,7 +12031,7 @@
         "formula-nacional": "Ferreira Motorsport"
       },
       "firstSeen": "2026-04-10",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-11-22"
     },
     {
       "key": "renzo testa",
@@ -13010,7 +13110,7 @@
         "formula-nacional": "Buenos Aires Racing"
       },
       "firstSeen": "2026-04-10",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-11-22"
     },
     {
       "key": "rossi santino",
@@ -13439,6 +13539,26 @@
       "lastSeen": "2026-09-27"
     },
     {
+      "key": "guttlein rodriguez tadeo",
+      "keys": [
+        "guttlein rodriguez tadeo"
+      ],
+      "slug": "tadeo-guttlein-rodriguez",
+      "name": "Tadeo Guttlein Rodriguez",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "59"
+      },
+      "teams": {
+        "formula-nacional": "MR Racing"
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-11-21"
+    },
+    {
       "key": "falivene thiago",
       "keys": [
         "falivene thiago"
@@ -13718,7 +13838,7 @@
         "formula-nacional": "Giavedoni Motor Sport"
       },
       "firstSeen": "2026-04-10",
-      "lastSeen": "2026-10-11"
+      "lastSeen": "2026-11-22"
     },
     {
       "key": "dalmazzo tomas",
@@ -13759,6 +13879,26 @@
       },
       "firstSeen": "2026-02-21",
       "lastSeen": "2026-05-17"
+    },
+    {
+      "key": "lopez tomas",
+      "keys": [
+        "lopez tomas"
+      ],
+      "slug": "tomas-lopez",
+      "name": "Tomás Lopez",
+      "aliases": [],
+      "series": [
+        "formula-nacional"
+      ],
+      "numbers": {
+        "formula-nacional": "97"
+      },
+      "teams": {
+        "formula-nacional": "MR Racing"
+      },
+      "firstSeen": "2026-10-31",
+      "lastSeen": "2026-11-01"
     },
     {
       "key": "martin tomas",
