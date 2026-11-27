@@ -97,6 +97,20 @@ test("el encabezado de una sesión se lee con día, hora de inicio y de fin", ()
   assert.equal(parseHeading("Gral. Entrenamientos Sábado 11 de abril de 2026, 12:35hs").end, null);
 });
 
+test("fecha 9 (Olavarría): el Warm Up es una práctica y 'Pilotos autorizados' se ignora sin anotar problema", () => {
+  const head = (t) => `<h5><i class="fa fa-caret-down"></i>${t}</h5>`;
+  const row = "<table><tr><td>1</td><td>Alejandro Guttlein</td><td>Tito</td><td>8</td><td>1:16.250</td><td></td></tr></table>";
+  const html = head("Pilotos autorizados") + "<p>lista</p>" + head("Warm Up&nbsp;Domingo 22 de noviembre de 2026, 09:00 a 09:15hs") + row;
+  const t = parseTiempos(html, { y: 2026, m: 11, d: 22 });
+  assert.deepEqual(t.problems, []);
+  assert.equal(t.sessions.length, 1);
+  assert.equal(t.sessions[0].kind, "practica");
+  assert.equal(t.sessions[0].name, "Warm Up");
+  assert.equal(t.sessions[0].start, "2026-11-22T09:00:00-03:00");
+  assert.equal(t.sessions[0].durationMin, 15);
+  assert.equal(t.sessions[0].rows.length, 1);
+});
+
 test("un mes o un año mal escrito no mueve la sesión: manda el día del mes junto con el día de la semana", () => {
   const end = { y: 2026, m: 8, d: 9 };
   const bad = parseHeading("Clasificación Sábado 8 de noviembre 2025, 11:40 a 11:55hs.");
