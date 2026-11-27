@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T18:39:54.160Z",
+  "generatedAt": "2026-11-27T22:07:36.449Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -234756,7 +234756,13 @@
           "resultsSource": {
             "name": "OpenF1",
             "url": "https://api.openf1.org/v1/session_result?session_key=11422"
-          }
+          },
+          "videos": [
+            {
+              "id": "ZZ4ZgM25j1g",
+              "kind": "highlights"
+            }
+          ]
         },
         {
           "id": "f1-2026-22-thirdpractice",
@@ -241825,7 +241831,7 @@
     },
     "f1Youtube": {
       "scanned": 15,
-      "sessions": 26,
+      "sessions": 27,
       "channel": "https://www.youtube.com/@Formula1"
     },
     "fiaF2": {
@@ -242204,7 +242210,7 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/17/driverstandings.json?limit=40: HTTP 429 (sin content-type)",
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/7/driverstandings.json?limit=40: HTTP 429 (text/html; charset=UTF-8)",
     "F2: Sección no encontrada: Race calendar",
     "F1 oficial: GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
     "Se conservaron resultados de 6 sesiones que las fuentes dejaron de traer"
