@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-28T16:01:39.708Z",
+  "generatedAt": "2026-11-28T16:10:56.634Z",
   "events": [
     {
       "id": "tcm-2026-1",
@@ -242359,23 +242359,6 @@
         }
       }
     },
-    "nuevoCarShow": {
-      "events": 10,
-      "pdfs": 0,
-      "calendarioEstatico": false,
-      "rounds": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-      ],
-      "errors": []
-    },
     "rallyArgentino": {
       "events": 9,
       "filledResults": 7,
@@ -242900,9 +242883,10 @@
     }
   },
   "failures": [
-    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/7/driverstandings.json?limit=40: HTTP 429 (sin content-type)",
+    "F1: No se pudo descargar https://api.jolpi.ca/ergast/f1/2026/8/driverstandings.json?limit=40: HTTP 429 (sin content-type)",
     "F2: Sección no encontrada: Race calendar",
-    "TN APAT: el calendario de APAT no trajo ninguna fecha (llegó HTML «One moment, please...», 12229 caracteres)",
+    "TN APAT: el calendario de APAT no trajo ninguna fecha (llegó HTML «One moment, please...», 12144 caracteres)",
+    "Nuevo Car Show: Unexpected token '<', \"<html><hea\"... is not valid JSON",
     "Cronogramas (SoloTC: No se pudo descargar https://www.solotc.com.ar/wp-json/wp/v2/posts?categories=25,26,27,28,29,1180&search=cronograma&after=2025-12-01T00:00:00&per_page=100&page=1&_fields=id,date,link,title,content: HTTP 403 (application/json))",
     "F1 oficial: GP de Las Vegas · Práctica 1: la tabla oficial tiene filas pero ninguna coincide con el formato esperado",
     "Se conservaron resultados de 6 sesiones que las fuentes dejaron de traer"
