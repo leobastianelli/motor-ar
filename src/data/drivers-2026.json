@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-28T13:16:28.467Z",
+  "generatedAt": "2026-11-28T14:07:15.027Z",
   "drivers": [
     {
       "key": "adrian canavesio",
@@ -98,7 +98,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01",
+      "lastSeen": "2026-11-28",
       "formerSlugs": [
         "perca-z-adria-n"
       ]
@@ -175,7 +175,7 @@
         "tc-pista-pick-up": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-15"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "agustin carbo",
@@ -612,7 +612,7 @@
         "tn": "Honda Civic"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "alfonso grassi",
@@ -1128,7 +1128,7 @@
         "tc-pista": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-15"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "bautista della santina",
@@ -1320,7 +1320,7 @@
         "tn": "Chevrolet Cruze"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-11-01"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "braian reinoso",
@@ -3074,7 +3074,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "bastidas exequiel",
@@ -3234,7 +3234,7 @@
         "tcr-sa": "Paladini Racing"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-08",
+      "lastSeen": "2026-11-28",
       "formerSlugs": [
         "fabia-n-yannantuoni"
       ]
@@ -3381,7 +3381,7 @@
         "tc-pick-up": "Toyota"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-15"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "chapur facundo",
@@ -3404,7 +3404,7 @@
         "tc": "Torino"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-15"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "facundo garcia",
@@ -3508,7 +3508,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "facundo medina",
@@ -6074,7 +6074,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "jeremias scialchi",
@@ -6401,7 +6401,7 @@
         "tn": "Chevrolet Cruze"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "joel lance",
@@ -6444,7 +6444,7 @@
         "tc": "Dodge"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-15"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "barrio jorge",
@@ -6468,7 +6468,7 @@
         "tc": "Chevrolet"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-15"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "jorge loizate",
@@ -6770,7 +6770,7 @@
         "tc": "Mercedes-Benz"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-15"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "jose margara",
@@ -6957,7 +6957,7 @@
         "tn": "VW Vento GLI"
       },
       "firstSeen": "2026-02-14",
-      "lastSeen": "2026-11-01"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "cruz farias juan",
@@ -7931,7 +7931,7 @@
         "tcr-sa": "Honda Racing"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-15"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "julio olmedo",
@@ -8167,7 +8167,7 @@
         "tn": "Chevrolet Cruze"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01",
+      "lastSeen": "2026-11-28",
       "formerSlugs": [
         "leandro-gonza-lez"
       ]
@@ -8333,7 +8333,7 @@
         "tn": "Honda Civic"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "leonel pernia",
@@ -8357,7 +8357,7 @@
         "tcr-sa": "Honda Racing"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-08",
+      "lastSeen": "2026-11-28",
       "formerSlugs": [
         "leonel-perna-a"
       ]
@@ -8644,7 +8644,7 @@
         "nuevo-car-show": "Fiat Mobi"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-08"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "lucas valle",
@@ -8687,7 +8687,7 @@
         "tn": "Toyota Corolla"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "bosio luciano",
@@ -10192,7 +10192,7 @@
         "tn": "VW Vento"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01",
+      "lastSeen": "2026-11-28",
       "formerSlugs": [
         "mata-as-mua-oz-m"
       ]
@@ -10320,7 +10320,7 @@
         "tc": "Ford"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-15"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "longo mauricio",
@@ -10657,7 +10657,7 @@
         "nuevo-car-show": "Renault Clio"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01"
+      "lastSeen": "2026-11-28"
     },
     {
       "key": "miguel radomich",
@@ -13292,7 +13292,7 @@
         "tn": "VW Vento GLI"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01",
+      "lastSeen": "2026-11-28",
       "formerSlugs": [
         "gomez-sebastia-n"
       ]
@@ -13700,7 +13700,7 @@
         "tn": "Ford Focus"
       },
       "firstSeen": "2026-02-07",
-      "lastSeen": "2026-11-01",
+      "lastSeen": "2026-11-28",
       "formerSlugs": [
         "thiago-marta-nez"
       ]
